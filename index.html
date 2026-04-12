@@ -82,7 +82,7 @@
     /* ===== HERO ===== */
     .hero {
       padding: 100px 0 80px;
-      background: linear-gradient(135deg, #fff 55%, #EEF0FF 100%);
+      background: linear-gradient(135deg, #fff 40%, #EEF0FF 100%);
       position: relative; overflow: hidden;
     }
     .hero::before {
@@ -91,6 +91,150 @@
       width: 600px; height: 600px;
       background: radial-gradient(circle, #EEF0FF 0%, transparent 70%);
       pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .baidu-mockup {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(29,78,216,0.12), 0 4px 16px rgba(0,0,0,0.06);
+      padding: 28px 32px;
+      width: 100%;
+      max-width: 480px;
+      position: relative;
+      z-index: 1;
+    }
+    .baidu-mockup-topbar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .baidu-mockup-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #E5E7EB;
+    }
+    .baidu-mockup-logo {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .baidu-mockup-logo span {
+      font-size: 42px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #2932E1, #1D4ED8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 2px;
+    }
+    .baidu-mockup-search {
+      display: flex;
+      border: 2px solid #E5E7EB;
+      border-radius: 24px;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .baidu-mockup-search input {
+      flex: 1;
+      padding: 12px 18px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #374151;
+      background: transparent;
+    }
+    .baidu-mockup-search input::placeholder {
+      color: #9CA3AF;
+    }
+    .baidu-mockup-search button {
+      padding: 12px 24px;
+      background: #2932E1;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .baidu-mockup-search button:hover {
+      background: #1D4ED8;
+    }
+    .baidu-mockup-results {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .baidu-mockup-result-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #F9FAFB;
+      font-size: 13px;
+      color: #6B7280;
+    }
+    .baidu-mockup-ocpc {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #EFF6FF, #F0FDF4);
+      border: 1px solid #BFDBFE;
+    }
+    .ocpc-icon { font-size: 20px; }
+    .ocpc-text { display: flex; flex-direction: column; gap: 2px; }
+    .ocpc-text strong { font-size: 13px; color: #1E40AF; }
+    .ocpc-text span { font-size: 11px; color: #6B7280; }
+    .baidu-mockup-result-item .ad-tag {
+      background: #FEF3C7;
+      color: #D97706;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .hero-float-badge {
+      position: absolute;
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      font-size: 13px;
+      font-weight: 600;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 2;
+      animation: floatBadge 3s ease-in-out infinite;
+    }
+    .hero-float-badge.top-badge {
+      top: -10px; right: -10px;
+    }
+    .hero-float-badge.bottom-badge {
+      bottom: -10px; left: -10px;
+      animation-delay: 1.5s;
+    }
+    .hero-float-badge .badge-icon {
+      font-size: 18px;
+    }
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 6px;
@@ -426,6 +570,8 @@
     @media (max-width: 640px) {
       section { padding: 64px 0; }
       .hero { padding: 72px 0 56px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
       .form-row { grid-template-columns: 1fr; }
       .contact-form { padding: 24px; }
       .hero-stats { gap: 28px; }
@@ -439,15 +585,15 @@
 <!-- ===== NAV ===== -->
 <nav>
   <div class="container nav-inner">
-    <div class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <div class="dot"><span>BPP</span></div>
       Baidu PPC Pro
-    </div>
+    </a>
     <div class="nav-links">
       <a href="#whyus">Why Baidu PPC Pro</a>
-      <a href="#features">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#testimonials">Clients</a>
+      <a href="features.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="clients.html">Clients</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
@@ -462,33 +608,81 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
   <div class="container">
-    <div class="hero-badge">Your Gateway to China Digital Advertising</div>
-    <h1>
-      Your Single Point of Access to<br />China's <em>Digital Ad Market</em>
-    </h1>
-    <p class="hero-sub">
-      One interface, all platforms, zero complexity. We help international agencies navigate China's $100B digital advertising landscape without headache.
-    </p>
-    <div class="hero-cta-group">
-      <a href="#contact" class="btn-primary">Start Your Journey</a>
-      <a href="#pricing" class="btn-outline">Explore Services</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">$100</div>
-        <div class="stat-label">Account Setup from</div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Your Gateway to China Digital Advertising</div>
+        <h1>
+          Your Single Point of Access to<br />China's <em>Digital Ad Market</em>
+        </h1>
+        <p class="hero-sub">
+          One interface, all platforms, zero complexity. We help international agencies navigate China's $100B digital advertising landscape without headache.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#contact" class="btn-primary">Open Your Account Today</a>
+          <a href="#pricing" class="btn-outline">View Pricing</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">$100</div>
+            <div class="stat-label">Account Setup from</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">2.5%</div>
+            <div class="stat-label">Top-Up Fee from</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">72h</div>
+            <div class="stat-label">Account Activation</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100+</div>
+            <div class="stat-label">Global Clients Served</div>
+          </div>
+        </div>
       </div>
-      <div class="stat-item">
-        <div class="stat-num">2.5%</div>
-        <div class="stat-label">Top-Up Fee from</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">72h</div>
-        <div class="stat-label">Account Activation</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">100+</div>
-        <div class="stat-label">Global Clients Served</div>
+      <div class="hero-visual">
+        <div class="hero-float-badge top-badge">
+          <span class="badge-icon">🎯</span>
+          <span>Top 3 Placement</span>
+        </div>
+        <div class="baidu-mockup">
+          <div class="baidu-mockup-topbar">
+            <div class="baidu-mockup-dot"></div>
+            <div class="baidu-mockup-dot"></div>
+            <div class="baidu-mockup-dot"></div>
+          </div>
+          <div class="baidu-mockup-logo">
+            <span>百度</span>
+          </div>
+          <div class="baidu-mockup-search">
+            <input type="text" placeholder="Search on Baidu..." readonly>
+            <button>搜索</button>
+          </div>
+          <div class="baidu-mockup-results">
+            <div class="baidu-mockup-result-item">
+              <span class="ad-tag">Ad</span>
+              <span>Your Brand — #1 on Baidu</span>
+            </div>
+            <div class="baidu-mockup-result-item">
+              <span class="ad-tag">Ad</span>
+              <span>Your Brand — Sitelinks Extension</span>
+            </div>
+            <div class="baidu-mockup-result-item">
+              <span>— organic result example —</span>
+            </div>
+          </div>
+          <div class="baidu-mockup-ocpc">
+            <span class="ocpc-icon">⚡</span>
+            <div class="ocpc-text">
+              <strong>Maximum Conversion</strong>
+              <span>oCPC model — pay only for real conversions</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-float-badge bottom-badge">
+          <span class="badge-icon">📈</span>
+          <span>CPC from ¥0.30</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1014,8 +1208,8 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="#features">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="features.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="#whyus">About Us</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
