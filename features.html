@@ -54,19 +54,27 @@
     .section-header.center .section-sub { margin: 0 auto; }
 
     /* SERVICE DETAIL */
-    .service-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; padding: 72px 0; border-bottom: 1px solid var(--gray-200); }
-    .service-detail:nth-child(even) { background: transparent; }
-    .service-detail.reverse { direction: rtl; }
-    .service-detail.reverse > * { direction: ltr; }
-    .service-detail-icon { font-size: 3rem; margin-bottom: 20px; }
-    .service-detail h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 14px; color: var(--gray-800); }
-    .service-detail p { font-size: .95rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 20px; }
-    .service-features { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .service-detail {
+      padding: 80px 0;
+    }
+    .service-detail:nth-child(odd) { background: var(--gray-50); }
+    .service-detail-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .service-detail-inner.reverse { direction: rtl; }
+    .service-detail-inner.reverse > * { direction: ltr; }
+    .service-detail-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .service-detail h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: var(--gray-800); }
+    .service-detail p { font-size: .95rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 16px; }
+    .service-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .service-features li { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; color: var(--gray-600); }
     .service-features li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
-    .service-visual { background: var(--blue-light); border-radius: var(--radius); padding: 48px; display: flex; align-items: center; justify-content: center; min-height: 280px; }
-    .service-visual-icon { font-size: 5rem; opacity: .7; }
-    .service-cta { margin-top: 24px; display: inline-block; }
+    .service-visual { background: var(--blue-light); border-radius: var(--radius); padding: 48px; display: flex; align-items: center; justify-content: center; min-height: 260px; }
+    .service-visual-icon { font-size: 4.5rem; opacity: .6; }
+    .service-cta { margin-top: 20px; display: inline-block; }
     .btn-primary { background: var(--blue); color: #fff; padding: 14px 28px; border-radius: 10px; font-size: .95rem; font-weight: 600; box-shadow: 0 4px 14px rgba(41,50,225,.35); transition: background .2s, transform .15s; display: inline-block; }
     .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
     .btn-outline { border: 2px solid var(--gray-200); color: var(--gray-800); padding: 12px 24px; border-radius: 10px; font-size: .95rem; font-weight: 500; transition: border-color .2s, color .2s; display: inline-block; }
@@ -102,9 +110,9 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-mobile-toggle { display: block; }
-      .service-detail { grid-template-columns: 1fr; gap: 32px; }
-      .service-detail.reverse { direction: ltr; }
-      .service-visual { min-height: 200px; }
+      .service-detail-inner { grid-template-columns: 1fr; gap: 32px; }
+      .service-detail-inner.reverse { direction: ltr; }
+      .service-visual { min-height: 180px; }
       .process-grid { grid-template-columns: 1fr 1fr; }
       .footer-top { grid-template-columns: 1fr 1fr; }
     }
@@ -150,124 +158,148 @@
 </section>
 
 <!-- Service 1 -->
-<div class="service-detail">
-  <div>
-    <div class="service-detail-icon">🏦</div>
-    <h2>Baidu Account Opening</h2>
-    <p>We handle all paperwork, verification, and compliance checks required to open a verified Baidu Ads account for foreign entities — fast and hassle-free.</p>
-    <ul class="service-features">
-      <li>Full Baidu account registration & verification</li>
-      <li>Business qualification submission & translation</li>
-      <li>Foreign company entity compliance handling</li>
-      <li>Account activated within 72 hours</li>
-      <li>English onboarding guide included</li>
-    </ul>
-    <a href="index.html#contact" class="btn-primary service-cta">Open an Account →</a>
+<section class="service-detail">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div>
+        <div class="service-detail-icon">🏦</div>
+        <h2>Baidu Account Opening</h2>
+        <p>We handle all paperwork, verification, and compliance checks required to open a verified Baidu Ads account for foreign entities — fast and hassle-free.</p>
+        <ul class="service-features">
+          <li>Full Baidu account registration & verification</li>
+          <li>Business qualification submission & translation</li>
+          <li>Foreign company entity compliance handling</li>
+          <li>Account activated within 72 hours</li>
+          <li>English onboarding guide included</li>
+        </ul>
+        <a href="index.html#contact" class="btn-primary service-cta">Open an Account →</a>
+      </div>
+      <div class="service-visual">
+        <div class="service-visual-icon">🏦</div>
+      </div>
+    </div>
   </div>
-  <div class="service-visual">
-    <div class="service-visual-icon">🏦</div>
-  </div>
-</div>
+</section>
 
 <!-- Service 2 -->
-<div class="service-detail reverse">
-  <div>
-    <div class="service-detail-icon">💳</div>
-    <h2>Budget Top-Up & Funding</h2>
-    <p>Accept international wire transfers, SWIFT, and major currencies. We convert and top up your Baidu account balance with low fees starting at just 2.5%.</p>
-    <ul class="service-features">
-      <li>USD / EUR / GBP accepted</li>
-      <li>Same-day or next-day crediting</li>
-      <li>Volume discounts for large budgets</li>
-      <li>Full transaction receipt provided</li>
-      <li>No minimum top-up amount</li>
-    </ul>
-    <a href="index.html#contact" class="btn-primary service-cta">Top Up Now →</a>
+<section class="service-detail">
+  <div class="container">
+    <div class="service-detail-inner reverse">
+      <div>
+        <div class="service-detail-icon">💳</div>
+        <h2>Budget Top-Up & Funding</h2>
+        <p>Accept international wire transfers, SWIFT, and major currencies. We convert and top up your Baidu account balance with low fees starting at just 2.5%.</p>
+        <ul class="service-features">
+          <li>USD / EUR / GBP accepted</li>
+          <li>Same-day or next-day crediting</li>
+          <li>Volume discounts for large budgets</li>
+          <li>Full transaction receipt provided</li>
+          <li>No minimum top-up amount</li>
+        </ul>
+        <a href="index.html#contact" class="btn-primary service-cta">Top Up Now →</a>
+      </div>
+      <div class="service-visual">
+        <div class="service-visual-icon">💳</div>
+      </div>
+    </div>
   </div>
-  <div class="service-visual">
-    <div class="service-visual-icon">💳</div>
-  </div>
-</div>
+</section>
 
 <!-- Service 3 -->
-<div class="service-detail">
-  <div>
-    <div class="service-detail-icon">📊</div>
-    <h2>Campaign Management</h2>
-    <p>Our bilingual team — augmented by AI tools — sets up, monitors, and continuously optimizes your Baidu campaigns for maximum ROI.</p>
-    <ul class="service-features">
-      <li>AI-augmented bilingual campaign management</li>
-      <li>Keyword research & bidding strategy</li>
-      <li>Ad copywriting (CN + EN)</li>
-      <li>Weekly optimization & A/B testing</li>
-      <li>Monthly performance report</li>
-    </ul>
-    <a href="index.html#contact" class="btn-primary service-cta">Start Managing →</a>
+<section class="service-detail">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div>
+        <div class="service-detail-icon">📊</div>
+        <h2>Campaign Management</h2>
+        <p>Our bilingual team — augmented by AI tools — sets up, monitors, and continuously optimizes your Baidu campaigns for maximum ROI.</p>
+        <ul class="service-features">
+          <li>AI-augmented bilingual campaign management</li>
+          <li>Keyword research & bidding strategy</li>
+          <li>Ad copywriting (CN + EN)</li>
+          <li>Weekly optimization & A/B testing</li>
+          <li>Monthly performance report</li>
+        </ul>
+        <a href="index.html#contact" class="btn-primary service-cta">Start Managing →</a>
+      </div>
+      <div class="service-visual">
+        <div class="service-visual-icon">📊</div>
+      </div>
+    </div>
   </div>
-  <div class="service-visual">
-    <div class="service-visual-icon">📊</div>
-  </div>
-</div>
+</section>
 
 <!-- Service 4 -->
-<div class="service-detail reverse">
-  <div>
-    <div class="service-detail-icon">🌐</div>
-    <h2>Agency White-Label Support</h2>
-    <p>Running an agency? We offer white-label Baidu PPC services so you can resell to your clients under your own brand with full back-end support from us.</p>
-    <ul class="service-features">
-      <li>Resell under your own brand</li>
-      <li>Full back-end campaign operations</li>
-      <li>Dedicated account manager</li>
-      <li>Custom reporting with your branding</li>
-      <li>Competitive commission structure</li>
-    </ul>
-    <a href="index.html#contact" class="btn-primary service-cta">Partner With Us →</a>
+<section class="service-detail">
+  <div class="container">
+    <div class="service-detail-inner reverse">
+      <div>
+        <div class="service-detail-icon">🌐</div>
+        <h2>Agency White-Label Support</h2>
+        <p>Running an agency? We offer white-label Baidu PPC services so you can resell to your clients under your own brand with full back-end support from us.</p>
+        <ul class="service-features">
+          <li>Resell under your own brand</li>
+          <li>Full back-end campaign operations</li>
+          <li>Dedicated account manager</li>
+          <li>Custom reporting with your branding</li>
+          <li>Competitive commission structure</li>
+        </ul>
+        <a href="index.html#contact" class="btn-primary service-cta">Partner With Us →</a>
+      </div>
+      <div class="service-visual">
+        <div class="service-visual-icon">🌐</div>
+      </div>
+    </div>
   </div>
-  <div class="service-visual">
-    <div class="service-visual-icon">🌐</div>
-  </div>
-</div>
+</section>
 
 <!-- Service 5 -->
-<div class="service-detail">
-  <div>
-    <div class="service-detail-icon">📈</div>
-    <h2>Performance Reporting</h2>
-    <p>Receive clear, English-language reports covering impressions, clicks, CTR, CPC, conversions, and ROI — on a schedule that works for you.</p>
-    <ul class="service-features">
-      <li>Impressions, clicks, CTR, CPC metrics</li>
-      <li>Conversion tracking & attribution</li>
-      <li>ROI & ROAS analysis</li>
-      <li>Custom KPI dashboards</li>
-      <li>Weekly or monthly delivery</li>
-    </ul>
-    <a href="index.html#contact" class="btn-primary service-cta">Learn More →</a>
+<section class="service-detail">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div>
+        <div class="service-detail-icon">📈</div>
+        <h2>Performance Reporting</h2>
+        <p>Receive clear, English-language reports covering impressions, clicks, CTR, CPC, conversions, and ROI — on a schedule that works for you.</p>
+        <ul class="service-features">
+          <li>Impressions, clicks, CTR, CPC metrics</li>
+          <li>Conversion tracking & attribution</li>
+          <li>ROI & ROAS analysis</li>
+          <li>Custom KPI dashboards</li>
+          <li>Weekly or monthly delivery</li>
+        </ul>
+        <a href="index.html#contact" class="btn-primary service-cta">Learn More →</a>
+      </div>
+      <div class="service-visual">
+        <div class="service-visual-icon">📈</div>
+      </div>
+    </div>
   </div>
-  <div class="service-visual">
-    <div class="service-visual-icon">📈</div>
-  </div>
-</div>
+</section>
 
 <!-- Service 6 -->
-<div class="service-detail reverse">
-  <div>
-    <div class="service-detail-icon">🤖</div>
-    <h2>AI-Powered Optimization</h2>
-    <p>We leverage AI to deliver high-quality campaign management at lower costs — meaning lower service fees for you without sacrificing performance.</p>
-    <ul class="service-features">
-      <li>AI-driven keyword discovery</li>
-      <li>Automated bid optimization (oCPC)</li>
-      <li>Smart budget allocation</li>
-      <li>Predictive performance modeling</li>
-      <li>Lower fees through efficiency gains</li>
-    </ul>
-    <a href="index.html#contact" class="btn-primary service-cta">See How It Works →</a>
+<section class="service-detail">
+  <div class="container">
+    <div class="service-detail-inner reverse">
+      <div>
+        <div class="service-detail-icon">🤖</div>
+        <h2>AI-Powered Optimization</h2>
+        <p>We leverage AI to deliver high-quality campaign management at lower costs — meaning lower service fees for you without sacrificing performance.</p>
+        <ul class="service-features">
+          <li>AI-driven keyword discovery</li>
+          <li>Automated bid optimization (oCPC)</li>
+          <li>Smart budget allocation</li>
+          <li>Predictive performance modeling</li>
+          <li>Lower fees through efficiency gains</li>
+        </ul>
+        <a href="index.html#contact" class="btn-primary service-cta">See How It Works →</a>
+      </div>
+      <div class="service-visual">
+        <div class="service-visual-icon">🤖</div>
+      </div>
+    </div>
   </div>
-  <div class="service-visual">
-    <div class="service-visual-icon">🤖</div>
-  </div>
-</div>
+</section>
 
 <!-- How It Works -->
 <section>
