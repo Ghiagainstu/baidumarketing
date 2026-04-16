@@ -1,13 +1,6 @@
-# OS
-Thumbs.db
-Desktop.ini
-.DS_Store
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
 # WorkBuddy internal
 .workbuddy/
+
+# OS files
+Thumbs.db
+.DS_Store
