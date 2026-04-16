@@ -94,8 +94,8 @@
 
     [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
     [data-theme="dark"] .navbar { background: rgba(11,15,26,.85); backdrop-filter: blur(12px); border-bottom-color: var(--gray-200); }
-    [data-theme="dark"] .nav-logo { color: #F9FAFB; }
-    [data-theme="dark"] .nav-logo:hover { color: var(--blue); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; }
+    [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
     [data-theme="dark"] .nav-links { color: var(--gray-600); }
     [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
     [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
@@ -1022,12 +1022,87 @@
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
       .nav-mobile-toggle { display: block; }
       .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
       .footer-top { grid-template-columns: 1fr 1fr; }
       .hero-inner { gap: 40px; }
       .dashboard { max-width: 420px; }
+      /* Mobile nav links panel */
+      .nav-links.open {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        padding: 8px 0;
+        gap: 0;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: var(--shadow-md);
+        z-index: 100;
+      }
+      .nav-links.open a {
+        display: block;
+        padding: 14px 24px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--gray-800);
+        border-bottom: 1px solid var(--gray-100);
+        transition: background .15s;
+      }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover,
+      .nav-links.open a:active {
+        background: var(--blue-subtle);
+        color: var(--blue);
+      }
+      .nav-links.open a::after { display: none; }
+      /* Mobile CTA inside menu */
+      .nav-mobile-cta {
+        display: block;
+        margin: 12px 24px 20px;
+        padding: 12px 24px;
+        text-align: center;
+        border-radius: 8px;
+        background: var(--gradient-brand);
+        color: #fff;
+        font-weight: 600;
+        font-size: .95rem;
+      }
+      /* Mobile theme toggle inside menu */
+      .nav-mobile-theme {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        font-size: .9rem;
+        color: var(--gray-600);
+        cursor: pointer;
+        border: none;
+        background: none;
+        text-align: left;
+        transition: background .15s;
+      }
+      .nav-mobile-theme:hover { background: var(--blue-subtle); }
     }
+    [data-theme="dark"] .nav-links.open {
+      background: #0B0F1A;
+      border-bottom-color: var(--gray-200);
+      box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    }
+    [data-theme="dark"] .nav-links.open a {
+      color: var(--gray-700);
+      border-bottom-color: var(--gray-200);
+    }
+    [data-theme="dark"] .nav-links.open a:hover,
+    [data-theme="dark"] .nav-links.open a:active {
+      background: rgba(99,102,241,.12);
+      color: var(--blue);
+    }
+    [data-theme="dark"] .nav-mobile-theme:hover { background: rgba(99,102,241,.12); }
+
     @media (max-width: 640px) {
       section { padding: 64px 0; }
       .hero { padding: 72px 0 56px; }
@@ -1055,7 +1130,7 @@
       </svg>
       Baidu PPC Pro
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#whyus" class="active">Why Baidu PPC Pro</a>
       <a href="features.html">Services</a>
       <a href="pricing.html">Pricing</a>
@@ -1063,6 +1138,11 @@
       <a href="faq.html">FAQ</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-mobile-cta">Get Started →</a>
+      <button class="nav-mobile-theme" onclick="toggleTheme()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        Toggle Dark Mode
+      </button>
     </div>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -1804,40 +1884,23 @@
   // Mobile nav toggle
   let mobileNavOpen = false;
   function toggleMobileNav() {
-    const links = document.querySelector('.nav-links');
+    const links = document.getElementById('navLinks');
     const hamburger = document.querySelector('.hamburger-icon');
     const closeX = document.querySelector('.close-icon');
     const overlay = document.getElementById('navOverlay');
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     mobileNavOpen = !mobileNavOpen;
     if (mobileNavOpen) {
-      links.style.display = 'flex';
-      links.style.flexDirection = 'column';
-      links.style.position = 'absolute';
-      links.style.top = '64px';
-      links.style.left = '0';
-      links.style.width = '100%';
-      links.style.background = isDark ? '#0B0F1A' : '#ffffff';
-      links.style.padding = '16px 24px';
-      links.style.borderBottom = '1px solid ' + (isDark ? '#1F2937' : '#E5E7EB');
-      links.style.boxShadow = isDark ? '0 4px 12px rgba(0,0,0,.4)' : '0 4px 12px rgba(0,0,0,.08)';
+      links.classList.add('open');
       hamburger.style.display = 'none';
       closeX.style.display = 'block';
       overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
     } else {
-      links.style.display = '';
-      links.style.flexDirection = '';
-      links.style.position = '';
-      links.style.top = '';
-      links.style.left = '';
-      links.style.width = '';
-      links.style.background = '';
-      links.style.padding = '';
-      links.style.borderBottom = '';
-      links.style.boxShadow = '';
+      links.classList.remove('open');
       hamburger.style.display = 'block';
       closeX.style.display = 'none';
       overlay.classList.remove('active');
+      document.body.style.overflow = '';
     }
   }
   document.querySelectorAll('.nav-links a').forEach(link => {
