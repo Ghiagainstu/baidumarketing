@@ -238,9 +238,85 @@
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
       .nav-mobile-toggle { display: block; }
       .footer-top { grid-template-columns: 1fr 1fr; }
     }
+      /* Mobile nav links panel */
+      .nav-links.open {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        padding: 8px 0;
+        gap: 0;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: var(--shadow-md);
+        z-index: 100;
+      }
+      .nav-links.open a {
+        display: block;
+        padding: 14px 24px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--gray-800);
+        border-bottom: 1px solid var(--gray-100);
+        transition: background .15s;
+      }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover,
+      .nav-links.open a:active {
+        background: var(--blue-subtle);
+        color: var(--blue);
+      }
+      .nav-links.open a::after { display: none; }
+      /* Mobile CTA inside menu */
+      .nav-mobile-cta {
+        display: block;
+        margin: 12px 24px 20px;
+        padding: 12px 24px;
+        text-align: center;
+        border-radius: 8px;
+        background: var(--gradient-brand);
+        color: #fff;
+        font-weight: 600;
+        font-size: .95rem;
+      }
+      /* Mobile theme toggle inside menu */
+      .nav-mobile-theme {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        font-size: .9rem;
+        color: var(--gray-600);
+        cursor: pointer;
+        border: none;
+        background: none;
+        text-align: left;
+        transition: background .15s;
+      }
+      .nav-mobile-theme:hover { background: var(--blue-subtle); }
+    }
+    [data-theme="dark"] .nav-links.open {
+      background: #0B0F1A;
+      border-bottom-color: var(--gray-200);
+      box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    }
+    [data-theme="dark"] .nav-links.open a {
+      color: var(--gray-700);
+      border-bottom-color: var(--gray-200);
+    }
+    [data-theme="dark"] .nav-links.open a:hover,
+    [data-theme="dark"] .nav-links.open a:active {
+      background: rgba(99,102,241,.12);
+      color: var(--blue);
+    }
+    [data-theme="dark"] .nav-mobile-theme:hover { background: rgba(99,102,241,.12); }
+
     @media (max-width: 640px) {
       section { padding: 64px 0; }
       .page-hero { padding: 60px 0 40px; }
@@ -262,7 +338,7 @@
       </svg>
       Baidu PPC Pro
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="index.html#whyus">Why Baidu PPC Pro</a>
       <a href="features.html">Services</a>
       <a href="pricing.html" class="active">Pricing</a>
@@ -270,12 +346,14 @@
       <a href="faq.html">FAQ</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+    
+      <a href="contact.html" class="nav-mobile-cta">Get Started →</a>
+      <button class="nav-mobile-theme" onclick="toggleTheme()">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        Toggle Dark Mode
+      </button>
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    </button>
-    <a href="contact.html" class="nav-cta">Get Started →</a>
     <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
       <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
       <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
@@ -481,7 +559,7 @@
 
 <script>
   document.body.style.opacity='0';document.body.style.transition='opacity .5s ease';requestAnimationFrame(()=>{requestAnimationFrame(()=>{document.body.style.opacity='1'})});
-  let mobileNavOpen=false;function toggleMobileNav(){const l=document.querySelector('.nav-links'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay'),d=document.documentElement.getAttribute('data-theme')==='dark';mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){l.style.display='flex';l.style.flexDirection='column';l.style.position='absolute';l.style.top='64px';l.style.left='0';l.style.width='100%';l.style.background=d?'#0B0F1A':'#fff';l.style.padding='16px 24px';l.style.borderBottom='1px solid '+(d?'#1F2937':'#E5E7EB');l.style.boxShadow=d?'0 4px 12px rgba(0,0,0,.4)':'0 4px 12px rgba(0,0,0,.08)';h.style.display='none';c.style.display='block';o.classList.add('active')}else{l.style.display='';l.style.flexDirection='';l.style.position='';l.style.top='';l.style.left='';l.style.width='';l.style.background='';l.style.padding='';l.style.borderBottom='';l.style.boxShadow='';h.style.display='block';c.style.display='none';o.classList.remove('active')}}
+    let mobileNavOpen=false;function toggleMobileNav(){const links=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');h.style.display='none';c.style.display='block';o.classList.add('active');document.body.style.overflow='hidden'}else{links.classList.remove('open');h.style.display='block';c.style.display='none';o.classList.remove('active');document.body.style.overflow=''}}
   document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{if(mobileNavOpen)toggleMobileNav()})});
   function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!isOpen)item.classList.add('open')}
   const sO=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';sO.unobserve(en.target)}})},{threshold:.05});
