@@ -354,7 +354,7 @@
       </div>
 
       <div class="contact-form">
-        <form id="contactForm" onsubmit="handleSubmit(event)">
+        <form id="contactForm" data-netlify="true" name="contact" method="POST" netlify-honeypot="website" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name *</label>
@@ -472,7 +472,7 @@
 <script>
   document.body.style.opacity='0';document.body.style.transition='opacity .5s ease';requestAnimationFrame(()=>{requestAnimationFrame(()=>{document.body.style.opacity='1'})});
   let mobileNavOpen=false;function toggleMobileNav(){const l=document.querySelector('.nav-links'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay'),d=document.documentElement.getAttribute('data-theme')==='dark';mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){l.style.display='flex';l.style.flexDirection='column';l.style.position='absolute';l.style.top='64px';l.style.left='0';l.style.width='100%';l.style.background=d?'#0B0F1A':'#fff';l.style.padding='16px 24px';l.style.borderBottom='1px solid '+(d?'#1F2937':'#E5E7EB');l.style.boxShadow=d?'0 4px 12px rgba(0,0,0,.4)':'0 4px 12px rgba(0,0,0,.08)';h.style.display='none';c.style.display='block';o.classList.add('active')}else{l.style.display='';l.style.flexDirection='';l.style.position='';l.style.top='';l.style.left='';l.style.width='';l.style.background='';l.style.padding='';l.style.borderBottom='';l.style.boxShadow='';h.style.display='block';c.style.display='none';o.classList.remove('active')}}
-  function handleSubmit(e){e.preventDefault();if(document.getElementById('website').value)return;const email=document.getElementById('email').value;document.getElementById('successEmail').textContent=email;document.getElementById('contactForm').style.display='none';document.getElementById('formSuccess').style.display='block';const formData=new FormData(e.target);const subject=encodeURIComponent('New Baidu PPC Inquiry from '+formData.get('company'));const body=encodeURIComponent('Name: '+formData.get('fname')+' '+formData.get('lname')+'\nEmail: '+formData.get('email')+'\nCompany: '+formData.get('company')+'\nService: '+formData.get('service')+'\nBudget: '+formData.get('budget')+'\nMessage: '+formData.get('message'))}
+  function handleSubmit(e){e.preventDefault();if(document.getElementById('website').value)return;const form=e.target,formData=new FormData(form);fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(formData).toString()}).then(()=>{const email=document.getElementById('email').value;document.getElementById('successEmail').textContent=email;document.getElementById('contactForm').style.display='none';document.getElementById('formSuccess').style.display='block'}).catch(()=>{alert('Submission failed. Please try emailing us directly at baidu@baidumarketing.com.')})}
   const sO=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';sO.unobserve(en.target)}})},{threshold:.05});
   document.querySelectorAll('.section-header,.contact-wrapper,.contact-form,.contact-info').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)';sO.observe(el)});
   window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
