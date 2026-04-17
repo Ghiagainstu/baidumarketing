@@ -373,7 +373,7 @@
 <div style="position:absolute;bottom:-120px;left:-60px;width:350px;height:350px;background:radial-gradient(circle,rgba(124,58,237,.05) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a> / FAQ</div>
-    <div class="hero-badge" style="margin-bottom:16px;">26 Questions Answered</div>
+    <div class="hero-badge" style="margin-bottom:16px;">35 Questions Answered</div>
     <h1>Baidu SEM <em>FAQ</em></h1>
     <p>Everything you need to know about opening and managing a Baidu advertising account — from foreign company setup to compliance requirements.</p>
   </div>
@@ -382,7 +382,7 @@
 <section id="faq">
   <div class="container">
     <div class="section-header center">
-      <div class="section-label">26 Questions Answered</div>
+      <div class="section-label">35 Questions Answered</div>
       <h2 class="section-title">Frequently Asked Questions</h2>
     </div>
 
@@ -584,7 +584,7 @@
     <!-- Category: Baidu Feed Ads -->
     <div style="text-align:center;margin-bottom:28px;">
       <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(139,92,246,.1);color:#7C3AED;font-size:.78rem;font-weight:700;padding:6px 16px;border-radius:999px;letter-spacing:.04em;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Baidu Feed Ads</span>
-      <p style="font-size:.8rem;color:var(--gray-400);margin-top:6px;">6 questions</p>
+      <p style="font-size:.8rem;color:var(--gray-400);margin-top:6px;">8 questions</p>
     </div>
     <div class="faq-list">
       <div class="faq-item">
@@ -639,6 +639,24 @@
         </button>
         <div class="faq-answer">
           Yes. Baidu's user base is massive, and the targeting system works well with long-tail interests and behavioral signals. Even for smaller industries, the combination of broad reach and narrow targeting usually surfaces enough relevant prospects.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How does auto-targeting work for feed ads?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          You set basic criteria — age, gender, location — and Baidu's system handles the rest. It looks at your creative content, industry, and past campaign data to find high-quality audiences automatically. The idea is to save you from manual trial-and-error while keeping cost stable.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I optimize feed ad creatives?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Baidu provides built-in tools for images, video, and headlines — you don't need third-party software. The platform can also generate creatives automatically. Regular A/B testing on images and copy typically moves the needle more than any single creative tweak.
         </div>
       </div>
     </div>
@@ -703,6 +721,79 @@
         </button>
         <div class="faq-answer">
           No in-house work required. Baidu assigns a dedicated team to handle the full cycle — strategy, page design, creative production, and ongoing optimization. Even if this is your first brand campaign on Baidu, they handle the heavy lifting.
+        </div>
+      </div>
+    </div>
+
+    <div style="height:48px"></div>
+
+    <!-- Category: oCPC & Smart Bidding -->
+    <div style="text-align:center;margin-bottom:28px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.1);color:#2563EB;font-size:.78rem;font-weight:700;padding:6px 16px;border-radius:999px;letter-spacing:.04em;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>oCPC & Smart Bidding</span>
+      <p style="font-size:.8rem;color:var(--gray-400);margin-top:6px;">7 questions</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is oCPC and how is it different from manual bidding?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          oCPC (optimized cost-per-click) is Baidu's AI-driven bidding model. Instead of you setting bids for each keyword, the system estimates the conversion probability of every click in real time and adjusts the bid accordingly. It pushes harder on clicks likely to convert and backs off on those that aren't. The result: lower cost per conversion and more of them.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How many conversions do I need before oCPC works properly?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          oCPC runs in two stages. Stage one is a learning period — the system collects conversion data to build its model. You need enough conversions during this window (typically 30+ within a few days, depending on your industry) before the system promotes you to stage two, where automated bidding takes over. If you're not hitting that threshold, your account manager can suggest ways to widen targeting or lower conversion actions.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Why is my account stuck in oCPC stage one?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          The usual reasons are: not enough conversions coming in, conversion data isn't being passed back to Baidu correctly, or the conversion action you chose is too far down the funnel (e.g., "completed purchase" instead of "submitted lead form"). Switching to a shallower conversion action often helps the model learn faster.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          My ad spend is overshooting the oCPC target. What should I check?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          First, confirm whether you're still in the learning period (the first 3 days after launch). Overspending is normal there. If you're past that, check whether your target CPA is set too low relative to market rates, whether conversion tracking is accurate, and whether you recently changed campaign settings. Our team monitors this and adjusts as needed.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What happens when oCPC generates invalid leads?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Baidu offers an invalid-lead compensation policy for oCPC campaigns. If a lead doesn't result in a real inquiry or sale (wrong number, spam, etc.), you can report it. Baidu will investigate and, if confirmed, credit your account. The exact rules depend on your campaign settings and the type of conversion you selected.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          My oCPC conversion numbers don't match my own CRM data. Why?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Common causes include: a delay between Baidu's count and your CRM update, conversion tracking code placed on the wrong page, or duplicate conversions being counted. Start by checking the Baidu oCPC platform to see how many conversions were actually sent back. If the numbers still don't line up, your account manager can audit the tracking setup.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is shared budget and when should I use it?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Shared budget lets multiple campaigns draw from a single daily pool. If Campaign A hits its cap while Campaign B still has room, the system automatically shifts funds to A. This is useful when you have several campaigns targeting similar goals and don't want to micromanage individual budgets. It doesn't change your total daily spend — just how it's distributed.
         </div>
       </div>
     </div>
