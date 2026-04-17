@@ -805,6 +805,26 @@
     .author-name { font-weight: 600; font-size: .9rem; }
     .author-role { font-size: .8rem; color: var(--gray-400); }
 
+    /* ===== TEAM ===== */
+    .team-section { padding: 80px 0; background: #fff; }
+    .team-intro { max-width: 680px; margin: 0 auto 48px; text-align: center; }
+    .team-intro p { font-size: .95rem; color: var(--gray-600); line-height: 1.75; }
+    .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 800px; margin: 0 auto; }
+    .team-card { text-align: center; padding: 36px 24px; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); background: #fff; transition: transform .25s, box-shadow .25s; }
+    .team-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .team-card-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 3px solid var(--blue-light); }
+    .team-card-name { font-size: 1.15rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+    .team-card-role { font-size: .82rem; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 14px; }
+    .team-card-bio { font-size: .88rem; color: var(--gray-600); line-height: 1.7; }
+    [data-theme="dark"] .team-section { background: var(--gray-100); }
+    [data-theme="dark"] .team-card { background: var(--gray-100) !important; border-color: var(--gray-200); }
+    [data-theme="dark"] .team-card-name { color: var(--gray-800); }
+    [data-theme="dark"] .team-card-role { color: var(--blue); }
+    [data-theme="dark"] .team-card-bio { color: var(--gray-600); }
+    @media (max-width: 640px) {
+      .team-grid { grid-template-columns: 1fr; max-width: 360px; }
+    }
+
     /* ===== PRICING ===== */
     .pricing-grid {
       display: grid;
@@ -1137,6 +1157,7 @@
       <a href="pricing.html">Pricing</a>
       <a href="clients.html">Clients</a>
       <a href="faq.html">FAQ</a>
+      <a href="#team">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
       <a href="contact.html" class="nav-mobile-cta">Get Started →</a>
@@ -1619,6 +1640,31 @@
   </div>
 </section>
 
+<!-- ===== TEAM ===== -->
+<section id="team" class="team-section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label">Our Team</div>
+      <h2 class="section-title">The People Behind<br />Your China Campaigns</h2>
+      <p class="section-sub">Over 25 years of combined experience in Chinese digital advertising. Based in Shanghai, working with clients worldwide.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card team-card-reveal">
+        <img class="team-card-photo" src="assets/team/benny-cheuk.jpg" alt="Benny Cheuk" loading="lazy">
+        <h3 class="team-card-name">Benny Cheuk</h3>
+        <p class="team-card-role">Programmatic Expert, Trilingual</p>
+        <p class="team-card-bio">12+ years in programmatic advertising, specializing in DSP technology. Trilingual in English, Mandarin, and Cantonese. He bridges European and Chinese markets, helping international companies navigate China's programmatic buying with practical, culturally-aware strategies.</p>
+      </div>
+      <div class="team-card team-card-reveal">
+        <img class="team-card-photo" src="assets/team/yan-huo.jpg" alt="Yan Huo" loading="lazy">
+        <h3 class="team-card-name">Yan Huo</h3>
+        <p class="team-card-role">Account Manager</p>
+        <p class="team-card-bio">15+ years helping international companies navigate China's digital advertising landscape. Fluent English, expert at bridging cultural and technical gaps between global brands and Chinese platforms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FAQ ===== -->
 <section id="faq">
   <div class="container">
@@ -2045,7 +2091,7 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.features-grid, .whyus-grid, .testimonials-grid, .pricing-grid').forEach(grid => {
+  document.querySelectorAll('.features-grid, .whyus-grid, .testimonials-grid, .pricing-grid, .team-grid').forEach(grid => {
     const children = grid.children;
     Array.from(children).forEach((child, i) => {
       child.style.opacity = '0';
