@@ -172,8 +172,20 @@
     .blog-card-tag.search { background: rgba(59,130,246,.1); color: #2563EB; }
     .blog-card-tag.strategy { background: rgba(139,92,246,.1); color: #7C3AED; }
     .blog-card-tag.landing { background: rgba(245,158,11,.1); color: #D97706; }
+    .blog-card-tag.platform { background: rgba(236,72,153,.1); color: #DB2777; }
     .blog-card-title { font-size: 1.1rem; font-weight: 700; color: var(--gray-800); line-height: 1.4; margin-bottom: 10px; }
     .blog-card-excerpt { font-size: .88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
+    .blog-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; overflow: hidden; }
+    .blog-card-featured .featured-text { padding: 32px; display: flex; flex-direction: column; justify-content: center; }
+    .blog-card-featured .featured-text .blog-card-title { font-size: 1.35rem; }
+    .blog-card-featured .featured-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 32px; background: var(--blue-subtle); }
+    .blog-card-featured .stat-item { text-align: center; }
+    .blog-card-featured .stat-num { font-size: 1.6rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
+    .blog-card-featured .stat-label { font-size: .78rem; color: var(--gray-400); margin-top: 4px; }
+    @media (max-width: 768px) {
+      .blog-card-featured { grid-template-columns: 1fr; }
+      .blog-card-featured .featured-stats { grid-template-columns: repeat(3, 1fr); padding: 20px; }
+    }
     .blog-card-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--gray-100); font-size: .78rem; color: var(--gray-400); }
     .blog-card-meta .read-time { display: flex; align-items: center; gap: 4px; }
     @media (max-width: 768px) {
@@ -366,8 +378,37 @@
       <button data-filter="search">Search Ads</button>
       <button data-filter="strategy">Strategy</button>
       <button data-filter="landing">Landing Page</button>
+      <button data-filter="platform">Platform</button>
     </div>
     <div class="blog-grid" id="blogGrid">
+
+      <div class="blog-card blog-card-featured" data-category="platform">
+        <div class="featured-text">
+          <span class="blog-card-tag platform">Platform</span>
+          <h3 class="blog-card-title">Why Baidu? The Numbers Behind China's Largest Search Ecosystem</h3>
+          <p class="blog-card-excerpt">When international companies evaluate where to advertise in China, Baidu is hard to ignore. It's not just a search engine anymore — it's an ecosystem of apps and services that collectively reach over a billion users daily. Baidu App handles billions of searches, its feed distributes 15 billion content recommendations, and its map covers 3.4 billion POIs worldwide. Below are the key platforms and what their numbers mean for advertisers.</p>
+          <div class="blog-card-meta"><span>Apr 2025</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 5 min</span></div>
+        </div>
+        <div class="featured-stats">
+          <div class="stat-item"><div class="stat-num">708M</div><div class="stat-label">Baidu App<br>Monthly Active Users</div></div>
+          <div class="stat-item"><div class="stat-num">15B+</div><div class="stat-label">Daily Feed<br>Distributions</div></div>
+          <div class="stat-item"><div class="stat-num">3.4B</div><div class="stat-label">Global POI<br>Coverage</div></div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-category="platform">
+        <span class="blog-card-tag platform">Platform</span>
+        <h3 class="blog-card-title">Baidu's App Ecosystem: Where Your Ads Actually Show Up</h3>
+        <p class="blog-card-excerpt">Baidu advertising runs across a stack of products that most foreign marketers haven't heard of. Baidu App (708M MAU) is the main search and feed surface. Baidu Maps (3.4B global POIs) captures local intent — useful for brick-and-mortar. Baidu Tieba (80M DAU, 23M interest forums) is Reddit-like and good for niche targeting. Haokan Video (80 min avg. session) handles short-form video ads. Baidu Wenku (230M+ users, 2.8B AI interactions) reaches a professional/education audience. Each platform has its own ad format and targeting options, but they all share the same Baidu marketing account.</p>
+        <div class="blog-card-meta"><span>Apr 2025</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="platform">
+        <span class="blog-card-tag platform">Platform</span>
+        <h3 class="blog-card-title">Baidu User Data: What You Can Target That Google Doesn't Have</h3>
+        <p class="blog-card-excerpt">Baidu's targeting advantage comes from combining search history, feed browsing behavior, map queries, and content consumption across its ecosystem. That's different from Google, which in China has limited data reach. Baidu Netdisk (1 billion registered users, avg. 1 hour session) and Baidu Wenku (2.3B+ AI feature uses) add behavioral signals most platforms simply don't collect. For advertisers, this means you can target not just by keywords but by content affinity, geographic movement patterns (from Maps), and professional interests (from Wenku). The depth of intent data is Baidu's real edge.</p>
+        <div class="blog-card-meta"><span>Apr 2025</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min</span></div>
+      </div>
 
       <div class="blog-card" data-category="search">
         <span class="blog-card-tag search">Search Ads</span>
