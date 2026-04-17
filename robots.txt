@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /blog.html
 Allow: /
 
 Sitemap: https://baidumarketing.com/sitemap.xml

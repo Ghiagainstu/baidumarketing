@@ -158,11 +158,32 @@
     .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
     .breadcrumb a { color: var(--blue); }
 
-    /* COMING SOON */
-    .coming-soon { text-align: center; padding: 120px 0; }
-    .coming-soon-icon { margin-bottom: 24px; display: flex; align-items: center; justify-content: center; }
-    .coming-soon h2 { font-size: 2rem; font-weight: 800; color: var(--gray-800); margin-bottom: 12px; }
-    .coming-soon p { font-size: 1.1rem; color: var(--gray-600); max-width: 480px; margin: 0 auto 32px; line-height: 1.7; }
+    /* BLOG GRID */
+    .blog-section { padding: 80px 0; }
+    .blog-filter { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 48px; }
+    .blog-filter button { padding: 8px 18px; border-radius: 999px; border: 1px solid var(--gray-200); background: transparent; color: var(--gray-600); font-size: .85rem; font-weight: 500; cursor: pointer; transition: all .2s; }
+    .blog-filter button:hover { border-color: var(--blue); color: var(--blue); }
+    .blog-filter button.active { background: var(--gradient-brand); color: #fff; border-color: transparent; }
+    .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .blog-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 28px; transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .blog-card-tag { display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
+    .blog-card-tag.feed { background: rgba(16,185,129,.1); color: #059669; }
+    .blog-card-tag.search { background: rgba(59,130,246,.1); color: #2563EB; }
+    .blog-card-tag.strategy { background: rgba(139,92,246,.1); color: #7C3AED; }
+    .blog-card-tag.landing { background: rgba(245,158,11,.1); color: #D97706; }
+    .blog-card-title { font-size: 1.1rem; font-weight: 700; color: var(--gray-800); line-height: 1.4; margin-bottom: 10px; }
+    .blog-card-excerpt { font-size: .88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
+    .blog-card-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--gray-100); font-size: .78rem; color: var(--gray-400); }
+    .blog-card-meta .read-time { display: flex; align-items: center; gap: 4px; }
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-section { padding: 48px 0; }
+    }
+    [data-theme="dark"] .blog-card { background: var(--gray-100) !important; border-color: var(--gray-200); }
+    [data-theme="dark"] .blog-card-title { color: var(--gray-800); }
+    [data-theme="dark"] .blog-card-excerpt { color: var(--gray-600); }
+    [data-theme="dark"] .blog-card-meta { color: var(--gray-400); border-top-color: var(--gray-200); }
     .btn-primary { background: var(--gradient-brand); color: #fff; padding: 14px 28px; border-radius: 10px; font-size: .95rem; font-weight: 600; box-shadow: 0 4px 14px rgba(41,50,225,.35); transition: transform var(--transition-base), box-shadow var(--transition-base); display: inline-block; position: relative; overflow: hidden; }
     .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transition: left .6s ease; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(41,50,225,.4); }
@@ -337,12 +358,88 @@
   </div>
 </section>
 
-<section class="coming-soon">
+<section class="blog-section">
   <div class="container">
-    <div class="coming-soon-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2932E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
-    <h2>Coming Soon</h2>
-    <p>We're working on in-depth guides, case studies, and industry insights. Stay tuned for expert content on Baidu PPC advertising.</p>
-    <a href="contact.html" class="btn-primary">Get Notified When We Launch →</a>
+    <div class="blog-filter" id="blogFilter">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="feed">Feed Ads</button>
+      <button data-filter="search">Search Ads</button>
+      <button data-filter="strategy">Strategy</button>
+      <button data-filter="landing">Landing Page</button>
+    </div>
+    <div class="blog-grid" id="blogGrid">
+
+      <div class="blog-card" data-category="search">
+        <span class="blog-card-tag search">Search Ads</span>
+        <h3 class="blog-card-title">Why Baidu Ads Deliver Results for Foreign Businesses in China</h3>
+        <p class="blog-card-excerpt">Baidu handles over 6 billion searches a day, and its ad platform is built around that intent-based traffic. For foreign companies, the pitch is straightforward: people searching for your product category on Baidu already have purchase intent. The platform's AI-driven targeting tracks user behavior in real time and adjusts creatives automatically, which means lower wasted spend compared to audience guessing on social media.</p>
+        <div class="blog-card-meta"><span>Jan 2025</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="feed">
+        <span class="blog-card-tag feed">Feed Ads</span>
+        <h3 class="blog-card-title">How Baidu Feed Ads Work and Why They Matter</h3>
+        <p class="blog-card-excerpt">Baidu feed ads appear inside content streams on the Baidu App, homepage, and Tieba. Unlike traditional display, they're targeted using search history, browsing patterns, and behavioral signals. That gives them a big edge in reaching users who aren't actively searching but fit your customer profile. Daily active users on Baidu feed exceed 100 million, with user time-on-feed up 300% year over year.</p>
+        <div class="blog-card-meta"><span>Jan 2025</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="search">
+        <span class="blog-card-tag search">Search Ads</span>
+        <h3 class="blog-card-title">oCPC Explained: How AI Bidding Lowers Your Cost Per Lead</h3>
+        <p class="blog-card-excerpt">oCPC is Baidu's automated bidding model. Instead of you manually setting keyword bids, the system estimates each click's conversion probability and adjusts the bid in real time. It pushes harder on clicks likely to convert, backs off on ones that aren't. For advertisers tracking leads or phone calls, this typically lowers cost per acquisition by 20-40% compared to manual CPC bidding.</p>
+        <div class="blog-card-meta"><span>Dec 2024</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="feed">
+        <span class="blog-card-tag feed">Feed Ads</span>
+        <h3 class="blog-card-title">Native Ads vs Feed Ads: What's the Difference, and Which One Do You Need?</h3>
+        <p class="blog-card-excerpt">The terms get used interchangeably, but there's a distinction. Native advertising is a format — ads that blend into the surrounding content. Feed advertising is a placement — ads that show up inside scrolling content streams. Baidu feed ads are native in format and feed in placement. For most advertisers entering the Chinese market, Baidu feed is the natural starting point because it gives you access to search-intent data that platforms like WeChat or Douyin don't have.</p>
+        <div class="blog-card-meta"><span>Dec 2024</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="search">
+        <span class="blog-card-tag search">Search Ads</span>
+        <h3 class="blog-card-title">CPC, CPM, oCPA, oCPC — A Quick Guide to Baidu Pricing Models</h3>
+        <p class="blog-card-excerpt">CPC (cost per click) is the default for search ads: you pay when someone clicks. CPM (cost per mille) charges per thousand impressions and works for display or brand campaigns. oCPA and oCPC are AI-optimized variants where you set a target cost per acquisition or per click, and Baidu's system automatically adjusts bids to hit that target. For most lead-generation campaigns, oCPC delivers the best results because it factors in conversion probability.</p>
+        <div class="blog-card-meta"><span>Dec 2024</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="strategy">
+        <span class="blog-card-tag strategy">Strategy</span>
+        <h3 class="blog-card-title">Keyword Tools for Baidu: How to Research Chinese Search Terms</h3>
+        <p class="blog-card-excerpt">Before launching campaigns on Baidu, you need to know what Chinese users actually search for. Direct translations of English keywords often miss the mark. Baidu's built-in keyword planner shows search volume, competition level, and suggested bid for each term. Third-party tools like 5118 and Ahrefs (which added Baidu data) can supplement. The key thing for foreign advertisers: focus on high-intent, mid-tail keywords rather than broad head terms.</p>
+        <div class="blog-card-meta"><span>Dec 2024</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="strategy">
+        <span class="blog-card-tag strategy">Strategy</span>
+        <h3 class="blog-card-title">Digital Marketing in China: Why Online Beats Traditional for Lead Gen</h3>
+        <p class="blog-card-excerpt">Internet penetration in China passed 70% in 2023, with over 1 billion online users. Online advertising runs 24/7, reaches nationwide, and — unlike TV or print — gives you real-time data on what's working. For B2B companies targeting Chinese buyers, the combination of Baidu search ads (capture existing intent) and feed ads (build awareness) covers both ends of the funnel. Cost per qualified lead typically runs 60-80% lower than offline trade shows or print directories.</p>
+        <div class="blog-card-meta"><span>Dec 2024</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="landing">
+        <span class="blog-card-tag landing">Landing Page</span>
+        <h3 class="blog-card-title">Bounce Rate Kills Conversions: How to Fix Your Baidu Ads Landing Pages</h3>
+        <p class="blog-card-excerpt">A high bounce rate means users click your ad and leave without doing anything. On Baidu campaigns, the usual culprits are: slow page load (especially for overseas-hosted sites accessed from China), a landing page that doesn't match the ad copy, or no clear call-to-action. The fix: host in China or use a CDN, match your landing page headline to your ad headline, and put the lead form or phone number above the fold.</p>
+        <div class="blog-card-meta"><span>Dec 2024</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="feed">
+        <span class="blog-card-tag feed">Feed Ads</span>
+        <h3 class="blog-card-title">How to Build a Baidu Feed Ads Account Structure That Actually Works</h3>
+        <p class="blog-card-excerpt">A clean account structure makes optimization much easier. Start by separating campaigns by objective — brand awareness vs lead generation. Within each campaign, organize ad groups by targeting dimension: product category, audience segment, or geographic region. Baidu recommends keeping each ad group focused on a single theme with tightly related keywords. This keeps quality scores high and makes it easier to see which segments are performing.</p>
+        <div class="blog-card-meta"><span>Nov 2024</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min</span></div>
+      </div>
+
+      <div class="blog-card" data-category="landing">
+        <span class="blog-card-tag landing">Landing Page</span>
+        <h3 class="blog-card-title">Optimizing Your Feed Ad Landing Pages for More Conversions</h3>
+        <p class="blog-card-excerpt">A landing page bridges the gap between ad creative and your product or service. For Baidu feed campaigns, the landing page needs to load fast (under 3 seconds), match the creative's promise, and have a single clear action — fill out a form, call a number, or download a brochure. In practice, the biggest wins come from: adding trust signals (certifications, client logos), simplifying the form to 3-4 fields max, and testing different headlines. Small tweaks to landing pages regularly lift conversion rates by 15-30%.</p>
+        <div class="blog-card-meta"><span>Nov 2024</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min</span></div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -402,8 +499,10 @@
     let mobileNavOpen=false;function toggleMobileNav(){const links=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');h.style.display='none';c.style.display='block';o.classList.add('active');document.body.style.overflow='hidden'}else{links.classList.remove('open');h.style.display='block';c.style.display='none';o.classList.remove('active');document.body.style.overflow=''}}
   document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{if(mobileNavOpen)toggleMobileNav()})});
   const sO=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';sO.unobserve(en.target)}})},{threshold:.05});
-  document.querySelectorAll('.coming-soon').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)';sO.observe(el)});
+  document.querySelectorAll('.blog-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)';sO.observe(el)});
   window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
+  // Blog filter
+  document.getElementById('blogFilter').addEventListener('click',function(e){if(!e.target.matches('button'))return;const filter=e.target.dataset.filter;this.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');document.querySelectorAll('.blog-card').forEach(card=>{if(filter==='all'||card.dataset.category===filter){card.style.display='';requestAnimationFrame(()=>{card.style.opacity='1';card.style.transform='translateY(0)'})}else{card.style.display='none'}})});
   // Theme toggle
   function toggleTheme() {
     const html = document.documentElement;
