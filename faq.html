@@ -382,7 +382,7 @@
 <section id="faq">
   <div class="container">
     <div class="section-header center">
-      <div class="section-label">35 Questions Answered</div>
+      <div class="section-label">43 Questions Answered</div>
       <h2 class="section-title">Frequently Asked Questions</h2>
     </div>
 
@@ -794,6 +794,88 @@
         </button>
         <div class="faq-answer">
           Shared budget lets multiple campaigns draw from a single daily pool. If Campaign A hits its cap while Campaign B still has room, the system automatically shifts funds to A. This is useful when you have several campaigns targeting similar goals and don't want to micromanage individual budgets. It doesn't change your total daily spend — just how it's distributed.
+        </div>
+      </div>
+    </div>
+
+    <div style="height:48px"></div>
+
+    <!-- Category: SEM Optimization -->
+    <div style="text-align:center;margin-bottom:28px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(20,184,166,.1);color:#0F766E;font-size:.78rem;font-weight:700;padding:6px 16px;border-radius:999px;letter-spacing:.04em;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>SEM Optimization</span>
+      <p style="font-size:.8rem;color:var(--gray-400);margin-top:6px;">8 questions</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          My ads are showing but nobody is converting. What should I check first?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Start with the landing page. If it loads slowly (over 3 seconds), most visitors leave before they even read your offer. After that, check whether the page actually matches what your ad promised — if the ad says "Baidu advertising for healthcare brands" but the page talks about something generic, people bounce. Finally, look at whether the form or contact button is above the fold. If the user has to scroll to find a way to reach you, many won't bother.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          My keyword bids are high, but the ads aren't showing. Why?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Bid is only one factor. Baidu's auction combines your bid with quality score — a measure of how relevant your keyword, ad copy, and landing page are to each other. A high bid with a low quality score often loses to a lower bid with a high quality score. Check whether your ad copy and landing page actually address the search intent behind each keyword. Also confirm your daily budget hasn't been exhausted early in the day, which kills remaining impressions.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          My ad spend jumped 15–20% month over month but nothing changed on my end. What's going on?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          A few things to check in order. First, pull your search term report and look for broad-match terms that shouldn't be triggering your ads — these quietly drain budgets. Second, check if a competitor entered the auction and pushed up CPCs across your keywords. Third, look for invalid click spikes in your account dashboard. If the cost increase happened suddenly on a single day, it's often either a new competitor or an invalid-click event. Gradual increases over weeks usually point to new irrelevant terms creeping in.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Impressions are low and clicks are minimal. How do I get more volume?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          The short list: raise your daily budget (if it's running out before noon), loosen your keyword match types from exact to phrase or broad, expand your keyword list to include related terms, widen your geographic targeting, and increase your bidding time windows if you're running hour-of-day schedules. The fastest single lever is usually match type — switching even two or three keywords from exact to phrase match can double your eligible impressions.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I protect against click fraud and competitors clicking my ads?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Baidu has built-in invalid click filtering and will credit your account when it detects fraudulent activity. You can also check your visitor log in the Baidu backend to identify IPs with abnormally high click counts and no on-site activity, then block those IPs directly. For persistent competitors, IP exclusion and tighter audience targeting help limit exposure to known bad actors. It's not a perfect system, but the combination of Baidu's filters and active IP monitoring keeps fraud manageable.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How is Baidu SEM different from Google Ads? Can I just reuse my Google strategy?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Don't copy your Google setup directly. The interfaces look similar, but the behavior is different. Baidu's quality score algorithm weighs landing page loading speed more heavily because Chinese mobile users are sensitive to slow loads. Keyword match types behave differently — broad match on Baidu is broader than Google broad match. User intent behind certain queries also differs, so keywords that convert well in English markets may have completely different intent in Chinese. Start fresh with Chinese keyword research rather than translating your English keyword list.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is quality score and why does it affect how much I pay per click?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Quality score is Baidu's estimate of how relevant your keyword, ad, and landing page are to the user's search. A higher quality score means Baidu charges you less per click for the same ranking position. The formula: your actual CPC = (competitor bid × competitor quality score ÷ your quality score) + CNY 0.01. In competitive industries, improving quality score is often more cost-effective than raising your bid. Focus on tight keyword-to-ad-copy alignment and fast-loading, relevant landing pages.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          My feed ads are spending the budget fast but not generating leads. What should I look at?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          If budget depletes quickly with no conversions, oCPC is likely in learning mode or your target CPA is set too low for the market. Pause the campaign, check whether conversion tracking is firing correctly, and look at the targeting settings — overly broad interest targeting on feed ads often attracts volume without quality. Also review your creative: feed ad creatives need to stop the scroll within the first frame of a video or the first image. If the creative isn't doing that, the click-to-lead funnel breaks before it starts.
         </div>
       </div>
     </div>
