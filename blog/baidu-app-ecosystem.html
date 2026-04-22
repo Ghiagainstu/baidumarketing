@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baidu's App Ecosystem: Where Your Ads Actually Show Up — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Baidu App, Maps, Tieba, Haokan, Wenku — a complete breakdown of Baidu's advertising surfaces and what each one offers." />
+  <link rel="canonical" href="https://baidumarketing.com/blog/baidu-app-ecosystem.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232932E1'/><text x='16' y='21.5' text-anchor='middle' font-size='13' font-weight='800' fill='white'>BPP</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --blue: #2932E1; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF; --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --radius: 12px; --gradient-brand: linear-gradient(135deg, #2932E1, #4F46E5); --gradient-hero: linear-gradient(160deg, #fff 30%, #EEF0FF 100%); --font-display: 'Inter', system-ui, sans-serif; }
+    [data-theme="dark"] { --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; background: #0B0F1A; color: #E5E7EB; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #fff; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--gray-800); }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-weight: 600; }
+    .page-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .breadcrumb span { margin: 0 8px; }
+    .article-tag { display: inline-block; font-size: .75rem; font-weight: 700; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; margin-bottom: 16px; background: rgba(139,92,246,.1); color: #7C3AED; border: 1px solid rgba(139,92,246,.2); }
+    .article-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.2; color: var(--gray-800); margin-bottom: 20px; }
+    .article-meta { display: flex; gap: 16px; padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--gray-200); font-size: .85rem; color: var(--gray-400); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { font-size: 1.05rem; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 48px 0 20px; }
+    .article-content p { margin-bottom: 20px; }
+    .article-content ul { margin: 20px 0; padding-left: 24px; }
+    .article-content li { margin-bottom: 12px; }
+    .platform-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 32px 0; }
+    .platform-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; }
+    .platform-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+    .platform-card .metrics { font-size: .85rem; color: var(--gray-600); margin-bottom: 12px; }
+    .platform-card p { font-size: .9rem; color: var(--gray-700); margin: 0; }
+    .cta-section { background: var(--gradient-brand); border-radius: 20px; padding: 48px; text-align: center; color: #fff; margin: 60px 0; }
+    .cta-section h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; }
+    .cta-section p { opacity: .9; margin-bottom: 24px; }
+    .cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 8px; font-weight: 700; }
+    .related-section { border-top: 1px solid var(--gray-200); padding: 48px 0; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; margin-bottom: 8px; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); }
+    footer { background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 32px 0; }
+    .footer-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; }
+    .footer-brand { font-weight: 700; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--gray-600); font-size: .9rem; }
+    @media (max-width: 768px) { .platform-cards { grid-template-columns: 1fr; } .related-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="https://baidumarketing.com/" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#2932E1"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="white">BPP</text></svg>
+        Baidu PPC Pro
+      </a>
+      <div class="nav-links">
+        <a href="https://baidumarketing.com/features.html">Services</a>
+        <a href="https://baidumarketing.com/pricing.html">Pricing</a>
+        <a href="https://baidumarketing.com/blog.html">Blog</a>
+        <a href="https://baidumarketing.com/contact.html">Contact</a>
+      </div>
+      <a href="https://baidumarketing.com/contact.html" class="nav-cta">Get Started</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="https://baidumarketing.com/">Home</a><span>›</span><a href="https://baidumarketing.com/blog.html">Blog</a><span>›</span><span>Platform</span></div>
+      <span class="article-tag">Platform</span>
+      <h1 class="article-title">Baidu's App Ecosystem: Where Your Ads Actually Show Up</h1>
+      <div class="article-meta"><span>April 2025</span><span>4 min read</span></div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <div class="article-content">
+        <img src="https://baidumarketing.com/assets/blog-baidu-app-ecosystem.jpg" alt="Baidu app ecosystem" style="border-radius: 16px; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(0,0,0,.1);" />
+
+        <p>Baidu advertising runs across a stack of products that most foreign marketers haven't heard of. Here's the complete picture of where your ads can appear.</p>
+
+        <div class="platform-cards">
+          <div class="platform-card">
+            <h3>🔍 Baidu App</h3>
+            <div class="metrics">708M Monthly Active Users</div>
+            <p>The main search and feed surface. When most people talk about Baidu advertising, this is what they mean. Covers both search intent and feed discovery.</p>
+          </div>
+          <div class="platform-card">
+            <h3>🗺️ Baidu Maps</h3>
+            <div class="metrics">3.4B Global POIs Covered</div>
+            <p>Captures local intent searches. If you have physical locations or serve specific geographic areas, this is essential for reaching nearby customers.</p>
+          </div>
+          <div class="platform-card">
+            <h3>💬 Baidu Tieba</h3>
+            <div class="metrics">80M DAU, 23M Interest Forums</div>
+            <p>Reddit-like community platform. Good for niche targeting based on interests and communities. Often overlooked by international advertisers.</p>
+          </div>
+          <div class="platform-card">
+            <h3>🎬 Haokan Video</h3>
+            <div class="metrics">80 min Average Session Time</div>
+            <p>Short-form video platform. High engagement, good for brand awareness and product demos. Video ads perform well here.</p>
+          </div>
+          <div class="platform-card">
+            <h3>📚 Baidu Wenku</h3>
+            <div class="metrics">230M+ Users, 2.8B AI Interactions</div>
+            <p>Document sharing and professional content platform. Reaches a professional/education audience. Good for B2B targeting.</p>
+          </div>
+          <div class="platform-card">
+            <h3>📦 Baidu Netdisk</h3>
+            <div class="metrics">1B Registered Users, 1hr Avg. Session</div>
+            <p>Cloud storage platform with massive reach. Often forgotten but offers extended session times and unique audience segments.</p>
+          </div>
+        </div>
+
+        <h2>One Account, Multiple Surfaces</h2>
+
+        <p>The beauty of Baidu's ecosystem is integration. You set up one Baidu marketing account, and you can activate advertising across all these surfaces with a single login. Your targeting data flows between platforms — search behavior informs feed delivery, geographic data from Maps enhances all placements.</p>
+
+        <p>This is different from Google, where YouTube, Search, and Display often require separate account structures and have limited data sharing between properties.</p>
+
+        <h2>Which Platforms Should You Use?</h2>
+
+        <p>For most international advertisers entering the Chinese market, the priority is:</p>
+
+        <ol>
+          <li><strong>Baidu App (Search + Feed)</strong> — Your foundation. Highest volume, broadest reach.</li>
+          <li><strong>Baidu Maps</strong> — If you have local presence or serve specific regions.</li>
+          <li><strong>Haokan Video</strong> — If video content and brand awareness are priorities.</li>
+          <li><strong>Baidu Wenku</strong> — If you're targeting professionals or B2B audiences.</li>
+        </ol>
+
+        <div class="cta-section">
+          <h3>Need Help Navigating Baidu's Ecosystem?</h3>
+          <p>We manage campaigns across all Baidu surfaces for international brands.</p>
+          <a href="https://baidumarketing.com/contact.html" class="cta-btn">Talk to Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related-section">
+    <div class="container">
+      <div class="related-grid">
+        <a href="https://baidumarketing.com/blog/baidu-ecosystem-numbers.html" class="related-card"><h4>Why Baidu? The Numbers</h4><p>Key metrics for China's largest search ecosystem.</p></a>
+        <a href="https://baidumarketing.com/blog/baidu-feed-ads-explained.html" class="related-card"><h4>How Baidu Feed Ads Work</h4><p>Discovery advertising on Baidu's content stream.</p></a>
+        <a href="https://baidumarketing.com/blog/baidu-ads-foreign-business.html" class="related-card"><h4>Why Baidu for Foreign Businesses</h4><p>The case for Baidu advertising internationally.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Baidu PPC Pro</div>
+      <div class="footer-links"><a href="https://baidumarketing.com/features.html">Services</a><a href="https://baidumarketing.com/pricing.html">Pricing</a><a href="https://baidumarketing.com/blog.html">Blog</a></div>
+    </div>
+  </footer>
+</body>
+</html>

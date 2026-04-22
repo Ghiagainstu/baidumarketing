@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Native Ads vs Feed Ads — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Native advertising is a format, feed advertising is a placement. Here's the difference and which one you need." />
+  <link rel="canonical" href="https://baidumarketing.com/blog/native-ads-vs-feed-ads.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232932E1'/><text x='16' y='21.5' text-anchor='middle' font-size='13' font-weight='800' fill='white'>BPP</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --blue: #2932E1; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF; --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --radius: 12px; --gradient-brand: linear-gradient(135deg, #2932E1, #4F46E5); --gradient-hero: linear-gradient(160deg, #fff 30%, #EEF0FF 100%); --font-display: 'Inter', system-ui, sans-serif; }
+    [data-theme="dark"] { --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; background: #0B0F1A; color: #E5E7EB; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #fff; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--gray-800); }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-weight: 600; }
+    .page-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .breadcrumb span { margin: 0 8px; }
+    .article-tag { display: inline-block; font-size: .75rem; font-weight: 700; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; margin-bottom: 16px; background: rgba(236,72,153,.1); color: #EC4899; border: 1px solid rgba(236,72,153,.2); }
+    .article-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.2; color: var(--gray-800); margin-bottom: 20px; }
+    .article-meta { display: flex; gap: 16px; padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--gray-200); font-size: .85rem; color: var(--gray-400); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { font-size: 1.05rem; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 48px 0 20px; }
+    .article-content p { margin-bottom: 20px; }
+    .article-content ul { margin: 20px 0; padding-left: 24px; }
+    .article-content li { margin-bottom: 12px; }
+    .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; }
+    .concept-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; }
+    .concept-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
+    .concept-card .def { font-size: .85rem; color: var(--gray-600); margin-bottom: 16px; font-style: italic; }
+    .concept-card ul { margin: 0; padding-left: 16px; }
+    .concept-card li { font-size: .9rem; margin-bottom: 8px; }
+    .venn-box { background: var(--blue-subtle); border: 2px solid var(--blue-glow); border-radius: var(--radius); padding: 24px; margin: 32px 0; text-align: center; }
+    .venn-box h3 { color: var(--blue); margin-bottom: 12px; }
+    .cta-section { background: var(--gradient-brand); border-radius: 20px; padding: 48px; text-align: center; color: #fff; margin: 60px 0; }
+    .cta-section h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; }
+    .cta-section p { opacity: .9; margin-bottom: 24px; }
+    .cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 8px; font-weight: 700; }
+    .related-section { border-top: 1px solid var(--gray-200); padding: 48px 0; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; margin-bottom: 8px; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); }
+    footer { background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 32px 0; }
+    .footer-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; }
+    @media (max-width: 768px) { .concept-grid { grid-template-columns: 1fr; } .related-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="https://baidumarketing.com/" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#2932E1"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="white">BPP</text></svg>
+        Baidu PPC Pro
+      </a>
+      <div class="nav-links">
+        <a href="https://baidumarketing.com/features.html">Services</a>
+        <a href="https://baidumarketing.com/pricing.html">Pricing</a>
+        <a href="https://baidumarketing.com/blog.html">Blog</a>
+        <a href="https://baidumarketing.com/contact.html">Contact</a>
+      </div>
+      <a href="https://baidumarketing.com/contact.html" class="nav-cta">Get Started</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="https://baidumarketing.com/">Home</a><span>›</span><a href="https://baidumarketing.com/blog.html">Blog</a><span>›</span><span>Feed Ads</span></div>
+      <span class="article-tag">Feed Ads</span>
+      <h1 class="article-title">Native Ads vs Feed Ads: What's the Difference?</h1>
+      <div class="article-meta"><span>December 2024</span><span>3 min read</span></div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <div class="article-content">
+        <img src="https://baidumarketing.com/assets/blog-native-vs-feed.jpg" alt="Native ads vs feed ads" style="border-radius: 16px; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(0,0,0,.1);" />
+
+        <p>The terms get used interchangeably, but there's a distinction worth understanding.</p>
+
+        <div class="concept-grid">
+          <div class="concept-card">
+            <h3>📝 Native Advertising</h3>
+            <div class="def">"A format — ads that blend into surrounding content"</div>
+            <ul>
+              <li>Matches the visual style of the page</li>
+              <li>Uses "sponsored" or similar labeling</li>
+              <li>Can appear anywhere</li>
+            </ul>
+          </div>
+          <div class="concept-card">
+            <h3>📰 Feed Advertising</h3>
+            <div class="def">"A placement — ads in scrolling content streams"</div>
+            <ul>
+              <li>Appears in content feeds</li>
+              <li>Targeted by behavior, not just keywords</li>
+              <li>Format varies by platform</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="venn-box">
+          <h3>Where They Overlap</h3>
+          <p>Baidu feed ads are <strong>native in format</strong> (they look like regular content) <strong>and feed in placement</strong> (they appear in scrolling content streams).</p>
+        </div>
+
+        <h2>For Most Advertisers</h2>
+
+        <p>When people talk about "native ads on Baidu," they usually mean Baidu feed ads — the native-format ads that appear in Baidu's content streams. This is typically what international advertisers should start with because:</p>
+
+        <ul>
+          <li>It gives you access to search-intent data that platforms like WeChat or Douyin don't have</li>
+          <li>The targeting combines search behavior with content consumption</li>
+          <li>The native format performs better than display banner ads</li>
+          <li>It bridges the gap between search (high intent) and social (discovery)</li>
+        </ul>
+
+        <h2>The Practical Answer</h2>
+
+        <p>Don't get hung up on the terminology. What matters is:</p>
+        <ol>
+          <li>Are you reaching users with purchase intent? (Search)</li>
+          <li>Are you reaching users in discovery mode? (Feed)</li>
+          <li>Do you need brand awareness? (Display/Video)</li>
+        </ol>
+        <p>Most effective Baidu campaigns combine all three, with feed ads serving as the discovery layer that feeds users into the search pipeline.</p>
+
+        <div class="cta-section">
+          <h3>Need Help Planning Your Baidu Ad Strategy?</h3>
+          <p>We design multi-format campaigns for international brands.</p>
+          <a href="https://baidumarketing.com/contact.html" class="cta-btn">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related-section">
+    <div class="container">
+      <div class="related-grid">
+        <a href="https://baidumarketing.com/blog/baidu-feed-ads-explained.html" class="related-card"><h4>How Baidu Feed Ads Work</h4><p>Deep dive into Baidu's feed advertising.</p></a>
+        <a href="https://baidumarketing.com/blog/baidu-feed-account-structure.html" class="related-card"><h4>Feed Account Structure</h4><p>Building effective feed campaigns.</p></a>
+        <a href="https://baidumarketing.com/blog/baidu-pricing-models.html" class="related-card"><h4>Baidu Pricing Models</h4><p>CPC, CPM, oCPC explained.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Baidu PPC Pro</div>
+      <div class="footer-links"><a href="https://baidumarketing.com/features.html">Services</a><a href="https://baidumarketing.com/pricing.html">Pricing</a><a href="https://baidumarketing.com/blog.html">Blog</a></div>
+    </div>
+  </footer>
+</body>
+</html>
