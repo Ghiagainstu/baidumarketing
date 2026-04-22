@@ -1758,7 +1758,7 @@
             <div class="ch-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2932E1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></div>
             <div>
               <div class="ch-label">Email Us</div>
-              <div class="ch-value">baidu@baidumarketing.com</div>
+              <div class="ch-value"><span class="obf-email" data-u="baidu" data-d="baidumarketing.com"></span></div>
             </div>
           </div>
           <div class="contact-highlight">
@@ -1874,7 +1874,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:baidu@baidumarketing.com">baidu@baidumarketing.com</a></li>
+          <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
           <li><a href="contact.html">Submit a Request</a></li>
         </ul>
       </div>
@@ -1889,7 +1889,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
       <div class="footer-social">
-        <a href="mailto:baidu@baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
 
 
       </div>
@@ -2145,6 +2145,19 @@
   // Back to top visibility
   window.addEventListener('scroll', () => {
     document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600);
+  });
+
+  // Obfuscated email rendering
+  document.querySelectorAll('.obf-email').forEach(function(el){
+    el.textContent = el.dataset.u + '@' + el.dataset.d;
+  });
+  document.querySelectorAll('.obf-email-link').forEach(function(el){
+    var addr = el.dataset.u + '@' + el.dataset.d;
+    el.href = 'mailto:' + addr;
+    if(!el.textContent) el.textContent = addr;
+  });
+  document.querySelectorAll('.obf-email-icon').forEach(function(el){
+    el.href = 'mailto:' + el.dataset.u + '@' + el.dataset.d;
   });
 </script>
 

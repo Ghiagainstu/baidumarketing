@@ -263,7 +263,7 @@
       <li>Request a copy of your data</li>
       <li>Object to the processing of your data</li>
     </ul>
-    <p>To exercise any of these rights, please contact us at <a href="mailto:baidu@baidumarketing.com">baidu@baidumarketing.com</a>.</p>
+    <p>To exercise any of these rights, please contact us at <a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a>.</p>
 
     <h2>8. Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Your continued use of our services after any changes constitutes your acceptance of the revised policy.</p>
@@ -271,7 +271,7 @@
     <h2>9. Contact Us</h2>
     <p>If you have any questions about this Privacy Policy, please contact us at:</p>
     <ul>
-      <li>Email: <a href="mailto:baidu@baidumarketing.com">baidu@baidumarketing.com</a></li>
+      <li>Email: <a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
       <li>Website: <a href="contact.html">Contact Page</a></li>
     </ul>
   </div>
@@ -310,7 +310,7 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Baidu PPC Pro. All rights reserved.</span>
-      <a href="mailto:baidu@baidumarketing.com" style="color:var(--gray-400);transition:color .2s;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" style="color:var(--gray-400);transition:color .2s;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
     </div>
   </footer>
   <script>
@@ -330,6 +330,9 @@
   })();
     let mobileNavOpen=false;function toggleMobileNav(){const links=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');h.style.display='none';c.style.display='block';document.body.style.overflow='hidden'}else{links.classList.remove('open');h.style.display='block';c.style.display='none';document.body.style.overflow=''}}
   document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{if(mobileNavOpen)toggleMobileNav()})});
+  document.querySelectorAll('.obf-email').forEach(function(el){el.textContent=el.dataset.u+'@'+el.dataset.d});
+  document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
+  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
   </script>
 </body>
 </html>
