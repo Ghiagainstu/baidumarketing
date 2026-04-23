@@ -73,6 +73,43 @@
     .back-to-top.visible { opacity: 1; pointer-events: auto; }
     .theme-toggle { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; }
     @media (max-width: 768px) { .stats-grid, .related-grid { grid-template-columns: 1fr; } .footer-top { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } .nav-links, .nav-cta, .theme-toggle { display: none; } }
+    /* 新增样式 */
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+    .callout p { font-size: .92rem; margin: 0; color: #1F2937; line-height: 1.6; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.douyin { background: #FFF0F0; border-color: #FCA5A5; color: #991B1B; }
+    .platform-pill.wechat { background: #F0FDF4; border-color: #86EFAC; color: #166534; }
+    .platform-pill.xhs { background: #FFF1F2; border-color: #FECDD3; color: #9F1239; }
+    .chart-section { background: var(--gray-50); border-radius: 16px; padding: 32px; margin: 40px 0; border: 1px solid var(--gray-200); }
+    .chart-title { font-size: 1.1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; text-align: center; }
+    .donut-row { display: flex; justify-content: center; gap: 40px; align-items: center; flex-wrap: wrap; }
+    .donut-chart { width: 160px; height: 160px; position: relative; }
+    .donut-legend { display: flex; flex-direction: column; gap: 12px; }
+    .legend-item { display: flex; align-items: center; gap: 10px; font-size: .9rem; }
+    .legend-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+    .legend-label { color: var(--gray-700); }
+    .legend-value { font-weight: 700; color: var(--gray-800); margin-left: auto; }
+    .bar-chart { margin-top: 32px; }
+    .bar-row { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .bar-label { width: 100px; font-size: .85rem; font-weight: 600; color: var(--gray-700); flex-shrink: 0; }
+    .bar-track { flex: 1; height: 24px; background: var(--gray-200); border-radius: 12px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 12px; display: flex; align-items: center; padding-left: 12px; font-size: .75rem; font-weight: 700; color: #fff; }
+    .bar-value { width: 60px; text-align: right; font-size: .85rem; font-weight: 700; color: var(--blue); flex-shrink: 0; }
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h4 { font-size: 1.05rem; font-weight: 700; color: #1F2937; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { padding-left: 20px; }
+    .takeaway-box li { font-size: .9rem; color: #374151; margin-bottom: 8px; line-height: 1.6; }
+    .payment-icons { display: flex; justify-content: center; gap: 32px; margin: 24px 0; flex-wrap: wrap; }
+    .payment-icon { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .payment-icon .icon-circle { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
+    .payment-icon span { font-size: .8rem; font-weight: 600; color: var(--gray-600); }
+    @media (max-width: 640px) { .platform-pills { flex-direction: column; } .donut-row { flex-direction: column; } }
   </style>
 </head>
 <body>
@@ -108,16 +145,59 @@
   <div class="container">
     <article class="article-content">
       <div class="stats-grid">
-        <div class="stat-box"><div class="stat-num">1.125B</div><div class="stat-label">Internet users<br>80.1% penetration</div></div>
-        <div class="stat-box"><div class="stat-num">32.5h</div><div class="stat-label">Avg. weekly<br>time online</div></div>
-        <div class="stat-box"><div class="stat-num">99.6%</div><div class="stat-label">Access via<br>mobile phone</div></div>
+        <div class="stat-box"><div class="stat-num">1.125B 👥</div><div class="stat-label">Internet users<br>80.1% penetration</div></div>
+        <div class="stat-box"><div class="stat-num">⏱️ 32.5h</div><div class="stat-label">Avg. weekly<br>time online</div></div>
+        <div class="stat-box"><div class="stat-num">📱 99.6%</div><div class="stat-label">Access via<br>mobile phone</div></div>
+      </div>
+
+      <!-- 配图：环形图展示三大核心数据 -->
+      <div class="chart-section">
+        <div class="chart-title">📊 China's Digital Landscape at a Glance</div>
+        <div class="donut-row">
+          <svg class="donut-chart" viewBox="0 0 160 160">
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#E5E7EB" stroke-width="20"/>
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#2932E1" stroke-width="20" stroke-dasharray="377 377" stroke-dashoffset="0" transform="rotate(-90 80 80)"/>
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#10B981" stroke-width="20" stroke-dasharray="377 377" stroke-dashoffset="-238" transform="rotate(-90 80 80)"/>
+            <circle cx="80" cy="80" r="60" fill="none" stroke="#F59E0B" stroke-width="20" stroke-dasharray="377 377" stroke-dashoffset="-330" transform="rotate(-90 80 80)"/>
+            <text x="80" y="75" text-anchor="middle" font-size="20" font-weight="800" fill="#2932E1">1.125B</text>
+            <text x="80" y="95" text-anchor="middle" font-size="10" fill="#9CA3AF">Users</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2932E1"></span><span class="legend-label">Internet Penetration</span><span class="legend-value">80.1%</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#10B981"></span><span class="legend-label">Mobile Access</span><span class="legend-value">99.6%</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#F59E0B"></span><span class="legend-label">Mobile Payment</span><span class="legend-value">90.3%</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#6366F1"></span><span class="legend-label">Weekly Online Time</span><span class="legend-value">32.5h</span></div>
+          </div>
+        </div>
+        <div class="bar-chart">
+          <div class="bar-row">
+            <span class="bar-label">Daily Usage</span>
+            <div class="bar-track"><div class="bar-fill" style="width:75%;background:linear-gradient(90deg,#2932E1,#6366F1)">4.6h/day</div></div>
+            <span class="bar-value">4.6h</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Mobile Pay</span>
+            <div class="bar-track"><div class="bar-fill" style="width:90.3%;background:linear-gradient(90deg,#10B981,#34D399)">90.3%</div></div>
+            <span class="bar-value">90.3%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Penetration</span>
+            <div class="bar-track"><div class="bar-fill" style="width:80.1%;background:linear-gradient(90deg,#F59E0B,#FBBF24)">80.1%</div></div>
+            <span class="bar-value">80.1%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-insight">
+        <span class="callout-icon">🔍</span>
+        <p><strong>Source:</strong> CNNIC 57th Statistical Report (February 2026). These aren't estimates — they're official government data. Use them to back up every China strategy pitch.</p>
       </div>
 
       <p>China's internet population hit <strong>1.125 billion</strong> in late 2025, with an 80.1% penetration rate. That number alone doesn't tell you much. What matters for advertisers: 99.6% of those users are on mobile, they spend an average of 32.5 hours online per week, and 90.3% use mobile payment.</p>
 
       <p>The CNNIC 57th Statistical Report (published February 2026) puts real data behind the "huge market" pitch. Here are the figures worth building campaigns around.</p>
 
-      <h2>The Mobile-First Reality</h2>
+      <h2>📱 The Mobile-First Reality</h2>
 
       <p>Mobile isn't just dominant in China — it's effectively the only channel that matters. 99.6% of internet users access the web via mobile phone. That means:</p>
       <ul>
@@ -127,19 +207,44 @@
         <li>Hosting in China or via CDN is essential for fast mobile load times</li>
       </ul>
 
-      <h2>Time Spent Online: 32.5 Hours Per Week</h2>
+      <h2>⏱️ Time Spent Online: 32.5 Hours Per Week</h2>
 
       <p>That's roughly 4.5 hours per day. Chinese internet users are spending more time online than ever before. But here's the nuance: that time is fragmented across multiple platforms rather than concentrated on any single one.</p>
 
-      <p>The implication for advertisers: you need to be present across multiple touchpoints, not just Baidu search. A comprehensive China strategy includes Baidu search for high-intent capture, Baidu feed for discovery and awareness, and potentially Douyin or Xiaohongshu for certain audiences.</p>
+      <p>The implication for advertisers: you need to be present across multiple touchpoints, not just Baidu search.</p>
 
-      <h2>Mobile Payment: 90.3% Adoption</h2>
+      <div class="platform-pills">
+        <span class="platform-pill baidu">🔍 Baidu Search — high-intent capture</span>
+        <span class="platform-pill douyin">🎵 Douyin — discovery & awareness</span>
+        <span class="platform-pill wechat">💬 WeChat — ecosystem & mini-programs</span>
+        <span class="platform-pill xhs">📕 Xiaohongshu — lifestyle & Gen Z</span>
+      </div>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <p><strong>Pro tip:</strong> Fragmented user attention means your brand needs to be discoverable across these touchpoints. Mass reach on Baidu alone misses the majority of the user journey.</p>
+      </div>
+
+      <h2>💳 Mobile Payment: 90.3% Adoption</h2>
+
+      <p>Mobile payment penetration at 90.3% means the path from discovery to purchase is shorter than almost anywhere else in the world. When someone sees your ad on Baidu, decides they want your product, and has WeChat Pay or Alipay already set up — the conversion barrier is minimal.</p>
+
+      <div class="payment-icons">
+        <div class="payment-icon">
+          <div class="icon-circle" style="background:#F0FDF4;">💚</div>
+          <span>WeChat Pay</span>
+        </div>
+        <div class="payment-icon">
+          <div class="icon-circle" style="background:#F0F9FF;">💙</div>
+          <span>Alipay</span>
+        </div>
+      </div>
 
       <p>Mobile payment penetration at 90.3% means the path from discovery to purchase is shorter than almost anywhere else in the world. When someone sees your ad on Baidu, decides they want your product, and has WeChat Pay or Alipay already set up — the conversion barrier is minimal.</p>
 
       <p>For e-commerce advertisers, this is crucial. For B2B service providers, it means your lead capture forms should integrate with WeChat for instant follow-up capability.</p>
 
-      <h2>What This Means for Your Budget</h2>
+      <h2>💰 What This Means for Your Budget</h2>
 
       <p>If you're allocating spend to China, these numbers suggest a few things:</p>
 
@@ -150,6 +255,17 @@
       <p><strong>The addressable market is massive but fragmented.</strong> 1.125 billion users sounds like everyone, but they're distributed across dozens of platforms and content types. Niche targeting on the right platforms beats mass reach on Baidu alone.</p>
 
       <p>The data makes the case for digital-first spend. The question is whether your current structure can execute across the fragmented Chinese digital landscape — and that's where a partner with deep platform knowledge becomes essential.</p>
+
+      <div class="takeaway-box">
+        <h4>🎯 Key Takeaways for Advertisers</h4>
+        <ul>
+          <li>📱 <strong>Mobile-first is non-negotiable</strong> — 99.6% access via mobile, desktop campaigns leave money on the table</li>
+          <li>🔀 <strong>Cross-platform presence compounds</strong> — users are on Baidu, Douyin, WeChat, and Xiaohongshu simultaneously</li>
+          <li>💳 <strong>Conversion barrier is minimal</strong> — 90.3% mobile payment adoption means faster path from ad to purchase</li>
+          <li>⏰ <strong>Fragmented attention</strong> — 32.5h/week sounds like a lot, but it's spread across dozens of platforms</li>
+          <li>🎯 <strong>Niche targeting wins</strong> — 1.125B users are distributed, not uniform</li>
+        </ul>
+      </div>
     </article>
 
     <div class="article-cta">
