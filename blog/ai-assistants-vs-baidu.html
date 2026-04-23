@@ -108,6 +108,33 @@
     [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
     .theme-toggle .icon-sun { display: none; }
     .theme-toggle .icon-moon { display: block; }
+    /* 新增样式 */
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+    .callout p { font-size: .92rem; margin: 0; color: #1F2937; line-height: 1.6; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #C2410C; }
+    .platform-pill.kimi { background: #F0F9FF; border-color: #7DD3FC; color: #0369A1; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #6D28D9; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.baidu-ai { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .geo-audit-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .geo-audit-card { background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 12px; padding: 20px; }
+    .geo-audit-card .step-num { font-size: 1.5rem; font-weight: 800; color: #2932E1; margin-bottom: 8px; }
+    .geo-audit-card h4 { font-size: .95rem; font-weight: 700; color: #1F2937; margin-bottom: 8px; }
+    .geo-audit-card p { font-size: .82rem; color: #4B5563; line-height: 1.5; }
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h4 { font-size: 1.05rem; font-weight: 700; color: #1F2937; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { padding-left: 20px; }
+    .takeaway-box li { font-size: .9rem; color: #374151; margin-bottom: 8px; line-height: 1.6; }
+    @media (max-width: 640px) {
+      .geo-audit-grid { grid-template-columns: 1fr; }
+      .platform-pills { flex-direction: column; }
+    }
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } .timeline { flex-direction: column; gap: 24px; } .timeline::before { display: none; } .timeline-item { flex-direction: row; padding-top: 0; padding-left: 64px; } .timeline-dot { position: absolute; left: 0; top: 50%; transform: translateY(-50%); } .timeline-desc { text-align: left; max-width: none; } .feature-grid { grid-template-columns: 1fr; } }
     @media (max-width: 768px) {
       .nav-links, .nav-cta, .theme-toggle { display: none; }
@@ -162,9 +189,9 @@
   <div class="container">
     <article class="article-content">
       <div class="stats-grid">
-        <div class="stat-box"><div class="stat-num">Yes</div><div class="stat-label">AI will run ads eventually</div></div>
-        <div class="stat-box"><div class="stat-num">No</div><div class="stat-label">It won't be Baidu-style chaos</div></div>
-        <div class="stat-box"><div class="stat-num">Now</div><div class="stat-label">Organic window is still open</div></div>
+        <div class="stat-box"><div class="stat-num">✅ Yes</div><div class="stat-label">📢 AI will run ads eventually</div></div>
+        <div class="stat-box"><div class="stat-num">🚫 No</div><div class="stat-label">🛡️ It won't be Baidu-style chaos</div></div>
+        <div class="stat-box"><div class="stat-num">🚀 Now</div><div class="stat-label">🟢 Organic window is still open</div></div>
       </div>
 
       <!-- 配图 -->
@@ -200,17 +227,34 @@
         </svg>
       </div>
 
+      <div class="callout callout-insight">
+        <span class="callout-icon">🤔</span>
+        <p><strong>Key question:</strong> Once Chinese AI chatbots start running ads, will we end up with another Baidu — buried in sketchy promotions and useless results?</p>
+      </div>
+
       <p>There's a debate raging right now: once Chinese AI chatbots start running ads, will we end up with another Baidu — buried in sketchy promotions and useless results?</p>
 
       <p>My take: yes to the ads, no to the garbage. And that distinction matters more than people think.</p>
 
-      <h2>Ads Are Coming — That's Not the Debate</h2>
+      <div class="platform-pills">
+        <span class="platform-pill doubao">🦅 Doubao (ByteDance) — 300M+ MAU, fastest growing</span>
+        <span class="platform-pill kimi">🌙 Kimi (Moonshot) — researchers & Gen Z favorite</span>
+        <span class="platform-pill tongyi">🏢 Tongyi (Alibaba) — enterprise strength</span>
+        <span class="platform-pill baidu-ai">🧠 Baidu AI (Ernie) — search integration</span>
+      </div>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <p><strong>Bottom line:</strong> Ads are coming (the math demands it), but AI platforms can't afford the chaos of old-school search. Trust is their core asset — once burned, users switch instantly.</p>
+      </div>
+
+      <h2>📢 Ads Are Coming — That's Not the Debate</h2>
 
       <p>Let's get the obvious out of the way. Running an AI model is expensive. Every single query burns GPU cycles and electricity. The more users you get, the more money you bleed. ByteDance's Doubao just landed the Spring Festival Gala sponsorship deal, which means user growth is about to explode — and so are losses.</p>
 
       <p>No company on earth can sustain that without revenue. So yes, Doubao and its competitors will roll out advertising. Not because they're greedy, but because the math demands it. This isn't a moral question. It's arithmetic.</p>
 
-      <h2>But It Won't Be Baidu-Style Chaos</h2>
+      <h2>🛡️ But It Won't Be Baidu-Style Chaos</h2>
 
       <p>Here's where people get it wrong. They hear "AI ads" and picture the Baidu of 2015 — hospitals with fake credentials showing up at the top of every search, loan sharks disguised as financial services. That version of ad-supported search was a trust disaster, and it left scars.</p>
 
@@ -281,16 +325,16 @@
         </div>
       </div>
 
-      <h2>Three Phases of Opportunity</h2>
+      <h2>⏳ Three Phases of Opportunity</h2>
 
       <p>If you're running a business or managing a brand in China, here's the timeline you need to work with:</p>
 
       <!-- 时间线图表 -->
       <div class="timeline-section">
-        <div class="timeline-title">The GEO Timeline: Three Phases</div>
+        <div class="timeline-title">⏰ The GEO Timeline: Three Phases</div>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-dot">1</div>
+            <div class="timeline-dot">🔵</div>
             <div>
               <div class="timeline-label">Free Ride</div>
               <div class="timeline-desc">Organic mentions only. No pay-to-play. Pure content quality competition.</div>
@@ -298,7 +342,7 @@
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-dot">2</div>
+            <div class="timeline-dot">🟡</div>
             <div>
               <div class="timeline-label">Paid Placement</div>
               <div class="timeline-desc">Ad backends launch. Optimization shifts from keywords to model trust scores.</div>
@@ -306,7 +350,7 @@
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-dot">3</div>
+            <div class="timeline-dot">🟢</div>
             <div>
               <div class="timeline-label">Full Integration</div>
               <div class="timeline-desc">AI becomes default commerce interface. Conversational, native, helpful ads.</div>
@@ -316,24 +360,27 @@
         </div>
       </div>
 
-      <h3>Phase 1: The Free Ride (Right Now)</h3>
+      <h3>1️⃣ Phase 1: The Free Ride (Right Now)</h3>
       <p>AI platforms aren't running ads at scale yet. When Doubao or Kimi recommends your brand, it's doing so purely based on the quality and structure of your content. No pay-to-play. This is the window.</p>
 
       <p>The play here is straightforward: make sure these AI models know who you are. Feed them structured data. Publish factual, detailed content — not fluff pieces, but actual product specs, case studies, white papers. When someone asks "what's the standard in [your industry]?", you want the AI citing your materials.</p>
 
       <p>Every organic mention you earn now is future ad spend you won't have to pay later.</p>
 
-      <h3>Phase 2: Paid Placement (Next 1–2 Years)</h3>
+      <h3>2️⃣ Phase 2: Paid Placement (Next 1–2 Years)</h3>
       <p>Once the ad backends go live — imagine a "Doubao Ads Manager" opening for registration — the game changes. Traditional search engine marketing skills will become less useful. What replaces them is something people are calling generative engine marketing, or GEM.</p>
 
-      <p>You'll still be able to pay for visibility. But the optimization targets shift from keyword bids to model trust scores. The question becomes: how do you make an AI confident enough to recommend you?</p>
+      <div class="callout callout-insight">
+        <span class="callout-icon">🤖</span>
+        <p><strong>Key insight:</strong> Optimization shifts from keyword bids to <strong>model trust scores</strong>. The question becomes: how do you make an AI confident enough to recommend you?</p>
+      </div>
 
-      <h3>Phase 3: Full Integration (2–3 Years Out)</h3>
+      <h3>3️⃣ Phase 3: Full Integration (2–3 Years Out)</h3>
       <p>AI assistants become the default interface for commerce. Searching for a product, comparing options, making a purchase — all through conversation. Advertising adapts to fit that flow. Native, conversational, helpful.</p>
 
       <p>The brands that built authority in Phase 1 will have structural advantages that paid placement alone can't replicate.</p>
 
-      <h2>What This Means for You</h2>
+      <h2>🎯 What This Means for You</h2>
 
       <p>The shift from search to AI assistants isn't just a technology change — it's a fundamental repositioning of how brands build visibility. The companies that understand this early, that start building AI-readable authority today, will have a compounding advantage that's nearly impossible to replicate later.</p>
 
@@ -341,7 +388,7 @@
 
       <blockquote>If you're not thinking about how AI models perceive your brand, you're already behind. The question is how far.</blockquote>
 
-      <h2>The Anatomy of an AI Recommendation</h2>
+      <h2>🧠 The Anatomy of an AI Recommendation</h2>
 
       <p>To understand how to optimize for GEO, you need to understand how AI models actually generate recommendations. It's not magic — it's pattern matching at scale.</p>
 
@@ -354,7 +401,7 @@
         <li><strong>Retrieval-time signals:</strong> Some AI systems also pull from real-time sources. If your brand has a strong presence on Zhihu, Baidu Baike, or industry databases, these can surface in live queries.</li>
       </ul>
 
-      <h3>What Actually Moves the Needle</h3>
+      <h3>📊 What Actually Moves the Needle</h3>
 
       <p>Based on observations of how Chinese AI assistants respond to queries, here's what seems to influence recommendations:</p>
 
@@ -364,7 +411,12 @@
 
       <p><strong>Citations beget citations.</strong> If your brand gets mentioned by an authoritative source — a government body, a respected industry publication, an academic paper — other sources tend to follow. Early mentions from credible entities compound over time.</p>
 
-      <h2>Case Study: How One Foreign Brand Got Left Behind</h2>
+      <div class="callout callout-insight">
+        <span class="callout-icon">📊</span>
+        <p><strong>What moves the needle:</strong> Platform authority (Baidu Baike) > traffic. Recency signals vary by query. Citations beget citations — earn one credible mention and others follow.</p>
+      </div>
+
+      <h2>📋 Case Study: How One Foreign Brand Got Left Behind</h2>
 
       <p>Here's a real pattern we've observed. A European industrial equipment manufacturer launched in China in 2018. They did everything "right" by 2018 standards:</p>
 
@@ -379,26 +431,37 @@
 
       <p>The manufacturer had paid for every click. Their competitors owned the conversation.</p>
 
-      <h2>The GEO Playbook for Foreign Brands</h2>
+      <h2>🚀 The GEO Playbook for Foreign Brands</h2>
 
       <p>If you're a foreign company trying to build AI visibility in China, here's the practical roadmap:</p>
 
-      <h3>Month 1-2: Foundation</h3>
+      <h3>📅 Month 1-2: Foundation</h3>
       <p><strong>Claim your Baidu Baike page.</strong> This is non-negotiable. Baidu Baike is one of the most-cited sources in Chinese AI responses. Create a detailed, accurate entry for your company. Include product categories, certifications, case studies, and contact information. If you have a Chinese subsidiary or local office, mention it explicitly.</p>
 
       <p><strong>Establish a Zhihu presence.</strong> Zhihu is China's largest Q&A platform, roughly analogous to a combination of Quora and Medium. Create an official account. Publish answers to questions your target customers are asking. Focus on being genuinely helpful, not promotional — Zhihu's community penalizes obvious advertising.</p>
 
-      <h3>Month 3-4: Content Expansion</h3>
+      <h3>📝 Month 3-4: Content Expansion</h3>
       <p><strong>Develop Chinese-language thought leadership.</strong> Write about your industry from a position of expertise. "10 things to consider when buying [product category]" performs well. "How [your industry] in China differs from Western markets" establishes authority. "Case study: how [similar company] solved [specific problem]" builds credibility.</p>
 
       <p><strong>Get mentioned in Chinese media.</strong> Reach out to industry publications. Offer to contribute guest articles. If your company has news — a new product, an award, a significant partnership — issue a press release in Chinese through a distribution service.</p>
 
-      <h3>Month 5+: Compound Growth</h3>
+      <h3>📈 Month 5+: Compound Growth</h3>
       <p><strong>Build relationships with Chinese influencers in your space.</strong> This doesn't mean paying for sponsored posts. It means engaging authentically with analysts, journalists, and thought leaders who cover your industry. When they mention your brand organically, AI models take note.</p>
 
       <p><strong>Monitor and iterate.</strong> Regularly ask Chinese AI assistants questions about your industry and see how you stack up against competitors. The landscape is shifting rapidly — what works today may need adjustment in six months.</p>
 
-      <h2>Common Mistakes to Avoid</h2>
+      <div class="takeaway-box">
+        <h4>📋 GEO Playbook Takeaways</h4>
+        <ul>
+          <li>🤔 <strong>Phase 1 (Now):</strong> Organic only — build authority before ads launch</li>
+          <li>📝 <strong>Foundation:</strong> Claim Baidu Baike + establish Zhihu presence</li>
+          <li>📈 <strong>Content:</strong> Native Chinese thought leadership, not machine translation</li>
+          <li>🤝 <strong>Relationships:</strong> Earn mentions from credible sources — citations beget citations</li>
+          <li>📊 <strong>Monitor:</strong> Regularly test AI visibility and iterate</li>
+        </ul>
+      </div>
+
+      <h2>⚠️ Common Mistakes to Avoid</h2>
 
       <p><strong>Machine translation is not a content strategy.</strong> Running English content through automated translation tools produces garbled, unnatural Chinese. Chinese readers can spot it immediately, and it damages rather than enhances your brand perception. Invest in native Chinese writers who understand your industry.</p>
 
@@ -406,7 +469,7 @@
 
       <p><strong>One-time efforts don't compound.</strong> GEO is not a campaign — it's a practice. A single Baidu Baike entry won't move the needle. Consistent, ongoing presence across multiple authoritative platforms is what builds the kind of signals AI models learn to trust.</p>
 
-      <h2>The Window Is Closing</h2>
+      <h2>🔐 The Window Is Closing</h2>
 
       <p>Here's the uncomfortable truth: the GEO window won't stay open forever. Right now, the space is relatively uncrowded. Most foreign brands haven't figured this out. Most Chinese brands are still figuring it out.</p>
 
