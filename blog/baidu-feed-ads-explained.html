@@ -58,7 +58,12 @@
   
     /* Theme toggle button */
     .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; color: var(--gray-600); }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
     .icon-sun { display: none; }
     [data-theme="dark"] .icon-moon { display: none; }
     [data-theme="dark"] .icon-sun { display: block; }
