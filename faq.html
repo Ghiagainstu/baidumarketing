@@ -229,6 +229,17 @@
     .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
     .footer-social a svg { width: 18px; height: 18px; }
 
+    /* FAQ ANSWER STRONG */
+    .faq-answer strong { color: var(--gray-800); }
+    [data-theme="dark"] .faq-answer strong { color: var(--gray-700); }
+
+    /* FAQ CTA STATS */
+    .faq-cta-stats { display: flex; justify-content: center; gap: 40px; margin-bottom: 8px; }
+    .faq-cta-stat { text-align: center; }
+    .faq-cta-num { font-size: 2rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
+    .faq-cta-label { font-size: .78rem; color: var(--gray-400); line-height: 1.4; margin-top: 4px; }
+    @media (max-width: 640px) { .faq-cta-stats { gap: 24px; } .faq-cta-num { font-size: 1.6rem; } }
+
     /* BACK TO TOP */
     .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
     .back-to-top.visible { opacity: 1; pointer-events: auto; }
@@ -375,8 +386,8 @@
   <div class="container">
     <div class="breadcrumb"><a href="index">Home</a> / FAQ</div>
     <div class="hero-badge" style="margin-bottom:16px;">45 Questions Answered</div>
-    <h1>Baidu SEM <em>FAQ</em></h1>
-    <p>Everything you need to know about opening and managing a Baidu advertising account — from foreign company setup to compliance requirements.</p>
+    <h1>Baidu SEM <em>FAQ</em> 💡</h1>
+    <p>45 questions answered. From account setup to oCPC optimization — everything you need to run Baidu ads as a foreign business, in plain English.</p>
   </div>
 </section>
 
@@ -384,7 +395,7 @@
   <div class="container">
     <div class="section-header center">
       <div class="section-label">45 Questions Answered</div>
-      <h2 class="section-title">Frequently Asked Questions</h2>
+      <h2 class="section-title">Frequently Asked Questions ❓</h2>
     </div>
 
     <!-- Category: Account & Setup -->
@@ -395,7 +406,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Can I open a Baidu account without a Chinese domestic company?
+          🏢 Can I open a Baidu account without a Chinese domestic company?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -404,7 +415,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Is there a difference between foreign and Chinese domestic Baidu accounts?
+          🔄 Is there a difference between foreign and Chinese domestic Baidu accounts?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -413,7 +424,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What documents do I need to open a Baidu account?
+          📋 What documents do I need to open a Baidu account?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -437,30 +448,30 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Are there fees besides the advertising budget?
+          💰 Are there fees besides the advertising budget?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <strong>Yes.</strong> There is an annual account authentication fee of CNY 600. For new users, this fee is refunded to your ad account after the first year — effectively making it free for the first year.
+          <strong>Yes.</strong> There is an annual account authentication fee of <strong>CNY 600</strong>. For new users, this fee is refunded to your ad account after the first year — effectively making it free for the first year.
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What is the minimum top-up amount?
+          💳 What is the minimum top-up amount?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Baidu's official rule is a minimum top-up of <strong>CNY 2,400</strong>. However, to save on transaction fees and reduce transfer time, we recommend a single top-up of CNY 10,000 or more.
+          Baidu's official rule is a minimum top-up of <strong>CNY 2,400</strong>. However, to save on transaction fees and reduce transfer time, we recommend a single top-up of <strong>CNY 10,000</strong> or more.
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How much does it cost to open a Baidu account?
+          🧾 How much does it cost to open a Baidu account?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <strong>Pre-paid advertising fee:</strong> minimum CNY 2,400<br>
-          <strong>Service fee:</strong> starting from USD 100, which includes document translation, document review, and submission handling<br><br>
+          <strong>Pre-paid advertising fee:</strong> minimum <strong>CNY 2,400</strong><br>
+          <strong>Service fee:</strong> starting from <strong>USD 100</strong>, which includes document translation, document review, and submission handling<br><br>
           If you have difficulty providing the required documents, we are happy to assist.
         </div>
       </div>
@@ -476,7 +487,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Does Baidu support post-payment (pay later)?
+          🚫 Does Baidu support post-payment (pay later)?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -485,7 +496,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How does Baidu advertising charge?
+          🧮 How does Baidu advertising charge?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -496,12 +507,12 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How much does each click cost? What is the minimum monthly budget?
+          📊 How much does each click cost? What is the minimum monthly budget?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <strong>Cost per click:</strong> There is no uniform price. Low-competition keywords may cost a few yuan per click. In highly competitive industries, popular keywords can cost dozens to over CNY 100 per click.<br>
-          <strong>Minimum monthly budget:</strong> The minimum daily budget is CNY 50, which means the theoretical monthly minimum is CNY 1,500. The actual cost depends on search volume for your target keywords. There is no upper cap.
+          <strong>Cost per click:</strong> There is no uniform price. Low-competition keywords may cost a few yuan per click. In highly competitive industries, popular keywords can cost dozens to over <strong>CNY 100</strong> per click.<br>
+          <strong>Minimum monthly budget:</strong> The minimum daily budget is <strong>CNY 50</strong>, which means the theoretical monthly minimum is <strong>CNY 1,500</strong>. The actual cost depends on search volume for your target keywords. There is no upper cap.
         </div>
       </div>
     </div>
@@ -516,7 +527,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Can I run ads if my account shows "Failed Review"?
+          ⛔ Can I run ads if my account shows "Failed Review"?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -525,7 +536,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What are the common reasons for ad rejection?
+          🚩 What are the common reasons for ad rejection?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -539,7 +550,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What are common prohibited words in Baidu ads?
+          🚷 What are common prohibited words in Baidu ads?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -554,7 +565,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What should I do if my ad fails review?
+          🔧 What should I do if my ad fails review?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -568,7 +579,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Do healthcare/finance industries have special requirements?
+          🏥 Do healthcare/finance industries have special requirements?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -590,7 +601,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Since feed ads push content to users proactively, won't that attract a lot of irrelevant traffic?
+          🎯 Since feed ads push content to users proactively, won't that attract a lot of irrelevant traffic?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -599,16 +610,16 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          We have a small budget. Is the barrier to entry for feed ads high?
+          📉 We have a small budget. Is the barrier to entry for feed ads high?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          It's low. You can pay per click or per impression, and the minimum daily spend is CNY 50. You stay in control of spending the whole time, which makes it easy to test the waters without committing heavily.
+          It's low. You can pay per click or per impression, and the minimum daily spend is <strong>CNY 50</strong>. You stay in control of spending the whole time, which makes it easy to test the waters without committing heavily.
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          We don't have anyone on the team who knows creative or campaign management. Can we still run feed ads?
+          👥 We don't have anyone on the team who knows creative or campaign management. Can we still run feed ads?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -617,7 +628,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Do feed ads feel intrusive and annoy users?
+          😊 Do feed ads feel intrusive and annoy users?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -626,7 +637,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How do I know if feed ads are working? Can I actually see the data?
+          📈 How do I know if feed ads are working? Can I actually see the data?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -635,7 +646,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Our industry has a niche audience. Can feed ads still reach the right people?
+          🎯 Our industry has a niche audience. Can feed ads still reach the right people?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -644,7 +655,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How does auto-targeting work for feed ads?
+          🤖 How does auto-targeting work for feed ads?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -653,7 +664,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How do I optimize feed ad creatives?
+          🎨 How do I optimize feed ad creatives?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -672,7 +683,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What's the difference between Brand Zone and regular search ads? What am I actually paying for?
+          ⭐ What's the difference between Brand Zone and regular search ads? What am I actually paying for?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -681,7 +692,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Is Brand Zone expensive? Can smaller businesses afford it?
+          💸 Is Brand Zone expensive? Can smaller businesses afford it?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -690,7 +701,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Can Brand Zone reach our target customers specifically, or will a lot of impressions go to waste?
+          🎯 Can Brand Zone reach our target customers specifically, or will a lot of impressions go to waste?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -699,7 +710,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Can we decide what goes into the brand zone display? What if we need to change it later?
+          ✏️ Can we decide what goes into the brand zone display? What if we need to change it later?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -708,7 +719,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How do we measure whether Brand Zone is actually helping the brand?
+          📊 How do we measure whether Brand Zone is actually helping the brand?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -717,7 +728,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          We've never run Brand Zone before. Do we need to design and manage it ourselves?
+          🛠️ We've never run Brand Zone before. Do we need to design and manage it ourselves?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -736,7 +747,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What is oCPC and how is it different from manual bidding?
+          🤖 What is oCPC and how is it different from manual bidding?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -745,16 +756,16 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How many conversions do I need before oCPC works properly?
+          📏 How many conversions do I need before oCPC works properly?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          oCPC runs in two stages. Stage one is a learning period — the system collects conversion data to build its model. You need enough conversions during this window (typically 30+ within a few days, depending on your industry) before the system promotes you to stage two, where automated bidding takes over. If you're not hitting that threshold, your account manager can suggest ways to widen targeting or lower conversion actions.
+          oCPC runs in two stages. Stage one is a learning period — the system collects conversion data to build its model. You need enough conversions during this window (typically <strong>30+ within a few days</strong>, depending on your industry) before the system promotes you to stage two, where automated bidding takes over. If you're not hitting that threshold, your account manager can suggest ways to widen targeting or lower conversion actions.
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Why is my account stuck in oCPC stage one?
+          🔄 Why is my account stuck in oCPC stage one?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -763,16 +774,16 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          My ad spend is overshooting the oCPC target. What should I check?
+          ⚠️ My ad spend is overshooting the oCPC target. What should I check?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          First, confirm whether you're still in the learning period (the first 3 days after launch). Overspending is normal there. If you're past that, check whether your target CPA is set too low relative to market rates, whether conversion tracking is accurate, and whether you recently changed campaign settings. Our team monitors this and adjusts as needed.
+          First, confirm whether you're still in the learning period (the first <strong>3 days</strong> after launch). Overspending is normal there. If you're past that, check whether your target CPA is set too low relative to market rates, whether conversion tracking is accurate, and whether you recently changed campaign settings. Our team monitors this and adjusts as needed.
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What happens when oCPC generates invalid leads?
+          🛡️ What happens when oCPC generates invalid leads?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -781,7 +792,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          My oCPC conversion numbers don't match my own CRM data. Why?
+          🔗 My oCPC conversion numbers don't match my own CRM data. Why?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -790,7 +801,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What is shared budget and when should I use it?
+          💡 What is shared budget and when should I use it?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -809,16 +820,16 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          My ads are showing but nobody is converting. What should I check first?
+          🔍 My ads are showing but nobody is converting. What should I check first?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Start with the landing page. If it loads slowly (over 3 seconds), most visitors leave before they even read your offer. After that, check whether the page actually matches what your ad promised — if the ad says "Baidu advertising for healthcare brands" but the page talks about something generic, people bounce. Finally, look at whether the form or contact button is above the fold. If the user has to scroll to find a way to reach you, many won't bother.
+          Start with the landing page. If it loads slowly (over <strong>3 seconds</strong>), most visitors leave before they even read your offer. After that, check whether the page actually matches what your ad promised — if the ad says "Baidu advertising for healthcare brands" but the page talks about something generic, people bounce. Finally, look at whether the form or contact button is <strong>above the fold</strong>. If the user has to scroll to find a way to reach you, many won't bother.
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          My keyword bids are high, but the ads aren't showing. Why?
+          📈 My keyword bids are high, but the ads aren't showing. Why?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -827,7 +838,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          My ad spend jumped 15–20% month over month but nothing changed on my end. What's going on?
+          📉 My ad spend jumped 15–20% month over month but nothing changed on my end. What's going on?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -836,7 +847,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Impressions are low and clicks are minimal. How do I get more volume?
+          📊 Impressions are low and clicks are minimal. How do I get more volume?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -845,7 +856,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How do I protect against click fraud and competitors clicking my ads?
+          🛡️ How do I protect against click fraud and competitors clicking my ads?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -854,7 +865,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How is Baidu SEM different from Google Ads? Can I just reuse my Google strategy?
+          🌐 How is Baidu SEM different from Google Ads? Can I just reuse my Google strategy?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -863,7 +874,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What is quality score and why does it affect how much I pay per click?
+          ⭐ What is quality score and why does it affect how much I pay per click?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -872,7 +883,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          My feed ads are spending the budget fast but not generating leads. What should I look at?
+          🧲 My feed ads are spending the budget fast but not generating leads. What should I look at?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
@@ -881,27 +892,32 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Search engine usage in China seems to be declining. Should I still invest in Baidu search ads?
+          📉 Search engine usage in China seems to be declining. Should I still invest in Baidu search ads?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          The CNNIC 57th Statistical Report (Feb 2026) shows search engine usage dropped from 79.2% to 69.5% of Chinese internet users between 2021 and 2025. That's a real shift, but context matters. There are still 782 million people using search in China — an audience larger than any in Europe. The drop reflects attention spreading to short video and AI tools, not search going away. For advertisers, this means search-only campaigns now cover less of the funnel than before. The practical response is to run Baidu search alongside feed placements, so you capture both active intent (search) and passive discovery (feed). Pulling back entirely from search because of the percentage drop would be a mistake.
+          The CNNIC 57th Statistical Report (Feb 2026) shows search engine usage dropped from <strong>79.2%</strong> to <strong>69.5%</strong> of Chinese internet users between 2021 and 2025. That's a real shift, but context matters. There are still <strong>782 million</strong> people using search in China — an audience larger than any in Europe. The drop reflects attention spreading to short video and AI tools, not search going away. For advertisers, this means search-only campaigns now cover less of the funnel than before. The practical response is to run Baidu search alongside feed placements, so you capture both active intent (search) and passive discovery (feed). Pulling back entirely from search because of the percentage drop would be a mistake.
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          With generative AI growing fast in China, will AI tools hurt Baidu ad performance?
+          🧠 With generative AI growing fast in China, will AI tools hurt Baidu ad performance?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Generative AI usage in China reached 602 million users (42.8% penetration) as of late 2025, with time spent on AI tools up 176.7% year over year, according to CNNIC. This is a real behavioral shift — some informational queries that previously went to search now go to AI chatbots. However, purchase-intent searches ("buy industrial equipment," "find a supplier for X") still run on search engines because AI tools don't serve ads or close transactions. Baidu has also integrated its own AI products (Ernie Bot, AI search summaries) directly into its search results, so Baidu ad placements remain visible even in AI-augmented search results. Watch this space, but no need to panic yet.
+          Generative AI usage in China reached <strong>602 million</strong> users (<strong>42.8%</strong> penetration) as of late 2025, with time spent on AI tools up <strong>176.7% year over year</strong>, according to CNNIC. This is a real behavioral shift — some informational queries that previously went to search now go to AI chatbots. However, purchase-intent searches ("buy industrial equipment," "find a supplier for X") still run on search engines because AI tools don't serve ads or close transactions. Baidu has also integrated its own AI products (Ernie Bot, AI search summaries) directly into its search results, so Baidu ad placements remain visible even in AI-augmented search results. Watch this space, but no need to panic yet.
         </div>
       </div>
     </div>
 
     <!-- CTA -->
     <div style="text-align:center;margin-top:56px;">
-      <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Still have questions?</h2>
+      <div class="faq-cta-stats">
+        <div class="faq-cta-stat"><div class="faq-cta-num">45</div><div class="faq-cta-label">Questions<br>Answered</div></div>
+        <div class="faq-cta-stat"><div class="faq-cta-num">8</div><div class="faq-cta-label">Topic<br>Categories</div></div>
+        <div class="faq-cta-stat"><div class="faq-cta-num">24/7</div><div class="faq-cta-label">Expert<br>Support</div></div>
+      </div>
+      <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;margin-top:32px;">Still have questions? 🙋</h2>
       <p style="font-size:.95rem;color:var(--gray-600);margin-bottom:24px;">Get a personalized answer — tell us what you need.</p>
       <a href="contact" class="btn-primary" style="display:inline-block;">Contact Us →</a>
     </div>
