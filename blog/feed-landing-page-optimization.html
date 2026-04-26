@@ -6,7 +6,7 @@
   <title>Feed Ad Landing Page Optimization — Baidu PPC Pro Blog</title>
   <meta name="description" content="Optimizing landing pages for Baidu feed campaigns. Small tweaks lift conversions 15-30%." />
   <link rel="canonical" href="https://baidumarketing.com/blog/feed-landing-page-optimization" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232932E1'/><text x='16' y="21.5" text-anchor="middle" font-size="13" font-weight="800" fill="white">BPP</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -60,20 +60,23 @@
     .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 99; }
     .nav-overlay.open { display: block; }
     /* ── Footer ── */
-    footer { background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 64px 0 32px; }
-    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1140px; margin: 0 auto; padding: 0 24px 48px; border-bottom: 1px solid var(--gray-200); }
-    .footer-brand h3 { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 14px; }
-    .footer-brand p { font-size: .9rem; color: var(--gray-600); line-height: 1.6; }
-    .footer-col h4 { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--gray-400); margin-bottom: 16px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul li a { font-size: .9rem; color: var(--gray-600); transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--blue); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; max-width: 1140px; margin: 0 auto; padding: 24px 24px 0; }
-    .footer-copy { font-size: .85rem; color: var(--gray-400); }
-    .footer-social { display: flex; gap: 12px; }
-    .footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: var(--gray-100); border: 1px solid var(--gray-200); }
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); max-width: 1140px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; max-width: 1140px; margin: 0 auto; padding: 24px 24px 0; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); transition: background .2s; }
+    .footer-social a:hover { background: rgba(255,255,255,.15); }
     .footer-social a svg { width: 16px; height: 16px; }
+    [data-theme="dark"] footer { background: #070B14 !important; border-top-color: var(--gray-200); }
+    [data-theme="dark"] .footer-brand h3 { color: #fff; }
+    [data-theme="dark"] .footer-col h4 { color: #fff; }
     @media (max-width: 768px) {
       .wins-grid { grid-template-columns: 1fr; }
       .related-grid { grid-template-columns: 1fr; }
