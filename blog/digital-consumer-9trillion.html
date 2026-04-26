@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/blog/digital-consumer-9trillion" />
+  <meta property="og:title" content="China&#39;s Digital Consumer: 9.37 Trillion Yuan and 958 Million Shoppers" />
+  <meta property="og:description" content="China&#39;s digital consumption hit 9.37 trillion yuan in H1 2025. Here&#39;s what the CNNIC data means for your marketing budget." />
+  <meta property="og:image" content="https://baidumarketing.com/assets/blog-digital-consumer-infographic.jpg" />
+
   <title>China's Digital Consumer: 9.37T Yuan — Baidu PPC Pro Blog</title>
   <meta name="description" content="China's digital consumption hit 9.37 trillion yuan in H1 2025 alone. Here's what the CNNIC data means for your marketing budget." />
-  <link rel="canonical" href="https://baidumarketing.com/blog/digital-consumer-9trillion" />
+  <link rel="canonical" href="../digital-consumer-9trillion" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232932E1'/><text x='16' y='21.5' text-anchor='middle' font-size='13' font-weight='800' fill='white'>BPP</text></svg>" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -65,12 +73,74 @@
     .related-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; }
     .related-card h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin-bottom: 8px; }
     .related-card p { font-size: .8rem; color: var(--gray-600); }
-    footer { background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 32px 0; }
-    .footer-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
-    .footer-brand { font-weight: 700; color: var(--gray-800); }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { color: var(--gray-600); font-size: .9rem; }
+    
+    
+    
+    
+    
     @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .related-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  
+        .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; color: var(--gray-600); }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+        footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); max-width: 1140px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; max-width: 1140px; margin: 0 auto; padding: 24px 24px 0; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); transition: background .2s; }
+    .footer-social a:hover { background: rgba(255,255,255,.15); }
+    .footer-social a svg { width: 16px; height: 16px; }
+    [data-theme="dark"] footer { background: #070B14 !important; border-top-color: var(--gray-200); }
+    [data-theme="dark"] .footer-brand h3 { color: #fff; }
+    [data-theme="dark"] .footer-col h4 { color: #fff; }
+        .nav-links.open { display: flex !important; }
+    .nav-mobile-toggle { display: none; }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 99; }
+    .nav-overlay.active { display: block; }
+    .nav-mobile-theme { display: none; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: #fff; flex-direction: column; padding: 80px 24px 24px; box-shadow: -4px 0 24px rgba(0,0,0,.1); gap: 16px; z-index: 101; overflow-y: auto; }
+      .nav-mobile-toggle { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: none; background: transparent; cursor: pointer; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border: 1px solid var(--gray-200); border-radius: 8px; font-size: .85rem; color: var(--gray-600); background: transparent; cursor: pointer; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      [data-theme="dark"] .nav-links { background: #111827; }
+      [data-theme="dark"] .nav-links a { color: #E5E7EB; }
+    }
+        /* Phase 2 - Callout Cards */
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    [data-theme="dark"] .callout-warning { background: rgba(245,158,11,.1); border-color: rgba(245,158,11,.25); }
+    [data-theme="dark"] .callout-tip { background: rgba(16,185,129,.1); border-color: rgba(16,185,129,.25); }
+    [data-theme="dark"] .callout-insight { background: rgba(41,50,225,.12); border-color: rgba(41,50,225,.3); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+    .callout div { font-size: .95rem; line-height: 1.6; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    /* Phase 2 - Takeaway Box */
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    [data-theme="dark"] .takeaway-box { background: linear-gradient(135deg, rgba(41,50,225,.08) 0%, rgba(79,70,229,.08) 100%); border-color: rgba(41,50,225,.25); }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    /* Phase 2 - Responsive */
+    @media (max-width: 768px) {
+      .callout { flex-direction: column; gap: 8px; }
+      .callout-icon { font-size: 1.1rem; }
+      .takeaway-box { padding: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -84,7 +154,7 @@
       </svg>
       Baidu PPC Pro
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="../why-baidu-ppc-pro">Why Baidu PPC Pro</a>
       <a href="../features">Services</a>
       <a href="../pricing">Pricing</a>
@@ -93,14 +163,27 @@
       <a href="../about">About</a>
       <a href="../blog" class="active">Blog</a>
       <a href="../contact">Contact</a>
+      <button class="nav-mobile-theme" onclick="toggleTheme()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        Toggle Dark Mode
+      </button>
     </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <a href="../contact" class="nav-cta">Get Started &rarr;</a>
+    <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu">
+      <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
+      <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
   </div>
 </nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
 
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="https://baidumarketing.com/">Home</a><span>›</span><a href="https://baidumarketing.com/blog">Blog</a><span>›</span><span>Market Insights</span></div>
+      <div class="breadcrumb"><a href="../index">Home</a><span>›</span><a href="../blog">Blog</a><span>›</span><span>Market Insights</span></div>
       <span class="article-tag">Market Insights</span>
       <h1 class="article-title">China's Digital Consumer: 9.37 Trillion Yuan and 958 Million Shoppers</h1>
       <div class="article-meta">
@@ -119,6 +202,11 @@
           <div class="number">¥9.37T</div>
           <div class="label">Digital Consumption in H1 2025</div>
           <div class="sublabel">That's ~$1.3 trillion USD — in just six months</div>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">✅</span>
+          <div><strong>Scale Perspective:</strong> ¥9.37T in six months equals roughly the entire GDP of Italy. If China's digital economy were a country, it would rank among the world's top 10 economies.</div>
+        </div>
         </div>
 
         <p>CNNIC released their 57th Statistical Report, and the headline numbers are staggering. But what do they actually mean for someone trying to reach Chinese consumers? Let's break it down.</p>
@@ -142,7 +230,7 @@
           </div>
         </div>
 
-        <h2>What the Numbers Tell Us</h2>
+        <h2>📊 What the Numbers Tell Us</h2>
 
         <p>The 9.37 trillion yuan figure covers the first half of 2025 alone. Extrapolating to a full year puts digital consumption somewhere around 19-20 trillion yuan — roughly the entire GDP of Italy.</p>
 
@@ -172,12 +260,12 @@
           </div>
         </div>
 
-        <div class="insight-box">
-          <h3>For B2B Advertisers</h3>
-          <p>The 45.5% of SMEs operating online means your target customers are already doing product research digitally. They search Baidu for solutions, read Zhihu for opinions, and compare vendors via content — all before they ever talk to a salesperson.</p>
+        <div class="callout callout-insight">
+          <span class="callout-icon">💡</span>
+          <div><strong>For B2B Advertisers:</strong> The 45.5% of SMEs operating online means your target customers are already doing product research digitally. They search Baidu for solutions, read Zhihu for opinions, and compare vendors via content — all before they ever talk to a salesperson.</div>
         </div>
 
-        <h2>What This Means for Budget Allocation</h2>
+        <h2>💰 What This Means for Budget Allocation</h2>
 
         <p>If you're still allocating major budget to trade shows, print directories, or offline channels in China, the data suggests a rethink. Online advertising:</p>
 
@@ -190,10 +278,20 @@
 
         <p>The question isn't whether to go digital. It's which platforms and how to build a presence that captures the high-intent searches and AI-assisted discovery that's driving the market.</p>
 
-        <div class="cta-section">
+                <div class="takeaway-box">
+          <h3>📋 Key Takeaways</h3>
+          <ul>
+            <li>China's H1 2025 digital consumption hit ¥9.37T (~$1.3T USD) — extrapolate to ¥19-20T for full year</li>
+            <li>958M digital consumers, 83.2% buying online, 90.3% using mobile payment</li>
+            <li>99.6% of internet users access via mobile — mobile-first isn't optional</li>
+            <li>45.5% of 64.69M SMEs operate online, creating a massive B2B digital buyer pool</li>
+            <li>Online advertising runs 24/7 with real-time data, at a fraction of trade show costs</li>
+          </ul>
+        </div>
+<div class="cta-section">
           <h3>Ready to Reach China's Digital Consumers?</h3>
           <p>We help international brands build effective digital strategies for the Chinese market.</p>
-          <a href="https://baidumarketing.com/contact" class="cta-btn">Start a Conversation</a>
+          <a href="../contact" class="cta-btn">Start a Conversation</a>
         </div>
       </div>
     </div>
@@ -202,15 +300,15 @@
   <section class="related-section">
     <div class="container">
       <div class="related-grid">
-        <a href="https://baidumarketing.com/blog/china-internet-numbers-2025" class="related-card">
+        <a href="../china-internet-numbers-2025" class="related-card">
           <h4>China Internet in Numbers 2025</h4>
           <p>The full CNNIC report breakdown: 1.125 billion users and what they mean for advertisers.</p>
         </a>
-        <a href="https://baidumarketing.com/blog/baidu-ecosystem-numbers" class="related-card">
+        <a href="../baidu-ecosystem-numbers" class="related-card">
           <h4>Why Baidu? The Numbers</h4>
           <p>China's largest search ecosystem by the numbers: 708M MAU, 15B daily distributions.</p>
         </a>
-        <a href="https://baidumarketing.com/blog/digital-marketing-china" class="related-card">
+        <a href="../digital-marketing-china" class="related-card">
           <h4>Digital Marketing in China</h4>
           <p>Why online beats traditional for B2B lead generation in 2025.</p>
         </a>
@@ -219,59 +317,90 @@
   </section>
 
   <footer>
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <h3>
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>
-          Baidu PPC Pro
-        </h3>
-        <p>We help international agencies and brands access China&#39;s $100B+ digital advertising market with compliance, clarity, and zero guesswork.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="../features">Services</a></li>
-          <li><a href="../pricing">Pricing</a></li>
-          <li><a href="../about">About</a></li>
-          <li><a href="../faq">FAQ</a></li>
-          <li><a href="../blog">Blog</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
-          <li><a href="../contact">Submit a Request</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="../privacy">Privacy Policy</a></li>
-          <li><a href="../terms">Terms of Service</a></li>
-        </ul>
-      </div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>
+        Baidu PPC Pro
+      </h3>
+      <p>We help international agencies and brands access China&#39;s $100B+ digital advertising market with compliance, clarity, and zero guesswork &#8212; one platform, end to end.</p>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">&#169; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
-      <div class="footer-social">
-        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
-        </a>
-      </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../features">Services</a></li>
+        <li><a href="../pricing">Pricing</a></li>
+        <li><a href="../clients">Clients</a></li>
+        <li><a href="../about">About</a></li>
+        <li><a href="../faq">FAQ</a></li>
+        <li><a href="../blog">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
+        <li><a href="../contact">Submit a Request</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="../privacy">Privacy Policy</a></li>
+        <li><a href="../terms">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy;  <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+      </a>
     </div>
   </div>
 </footer>
 
   <script>
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  </script>
-<script>
-  document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
-  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
+let mobileNavOpen = false;
+function toggleMobileNav() {
+  const links = document.getElementById('navLinks');
+  const hamburger = document.querySelector('.hamburger-icon');
+  const closeX = document.querySelector('.close-icon');
+  const overlay = document.getElementById('navOverlay');
+  mobileNavOpen = !mobileNavOpen;
+  if (mobileNavOpen) {
+    links.classList.add('open');
+    hamburger.style.display = 'none';
+    closeX.style.display = 'block';
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  } else {
+    links.classList.remove('open');
+    hamburger.style.display = 'block';
+    closeX.style.display = 'none';
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
+});
+function toggleTheme() {
+  var t = document.documentElement;
+  var isDark = t.getAttribute('data-theme') === 'dark';
+  t.setAttribute('data-theme', isDark ? '' : 'dark');
+  try { localStorage.setItem('theme', isDark ? '' : 'dark'); } catch(e) {}
+}
+(function() {
+  var saved;
+  try { saved = localStorage.getItem('theme'); } catch(e) {}
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
+document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
 </script>
 </body>
 </html>
