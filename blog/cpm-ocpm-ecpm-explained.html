@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>CPM vs oCPM vs eCPM: The 3 Metrics Every Baidu Advertiser Must Understand — Baidu PPC Pro Blog</title>
+  <meta name="description" content="CPM, oCPM, and eCPM look similar but live at completely different levels of the ad system. Advertisers bid with oCPM, the system ranks by eCPM, and what you actually pay shows up as CPM. Here's why that distinction matters for your Baidu campaigns." />
+  <link rel="canonical" href="https://baidumarketing.com/blog/cpm-ocpm-ecpm-explained" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/blog/cpm-ocpm-ecpm-explained" />
+  <meta property="og:title" content="CPM vs oCPM vs eCPM: The 3 Metrics Every Baidu Advertiser Must Understand" />
+  <meta property="og:description" content="CPM, oCPM, and eCPM look similar but live at completely different levels of the ad system. Advertisers bid with oCPM, the system ranks by eCPM, and what you actually pay shows up as CPM. Here's why that distinction matters for your Baidu campaigns." />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CPM vs oCPM vs eCPM: The 3 Metrics Every Baidu Advertiser Must Understand" />
+  <meta name="twitter:description" content="CPM, oCPM, and eCPM look similar but live at completely different levels of the ad system. Advertisers bid with oCPM, the system ranks by eCPM, and what you actually pay shows up as CPM. Here's why that distinction matters for your Baidu campaigns." />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --gradient-surface: linear-gradient(135deg, #F9FAFB 0%, #F3F4FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      --gradient-surface: linear-gradient(135deg, #111827 0%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; }
+    [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
+    [data-theme="dark"] .nav-links { color: var(--gray-600); }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
+    [data-theme="dark"] .close-icon line { stroke: #D1D5DB; }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; }
+    [data-theme="dark"] .footer-brand h3 { color: #fff; }
+    [data-theme="dark"] .footer-col h4 { color: #fff; }
+    [data-theme="dark"] .footer-copy { color: var(--gray-400); }
+    [data-theme="dark"] .article-content h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-content h3 { color: #E5E7EB; }
+    [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-content li { color: var(--gray-600); }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb a { color: var(--blue); }
+    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
+    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
+    [data-theme="dark"] .comparison-table { background: var(--gray-100); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .highlight-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .highlight-card h4 { color: var(--gray-800); }
+    [data-theme="dark"] .highlight-card p { color: var(--gray-600); }
+    [data-theme="dark"] .cta-section { background: rgba(11,15,26,.95); }
+    [data-theme="dark"] .back-to-top { background: var(--gray-200) !important; color: var(--gray-600); }
+    [data-theme="dark"] .back-to-top:hover { background: var(--blue) !important; color: #fff; }
+
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand h3 svg { flex-shrink: 0; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    .article-hero { padding: 80px 0 48px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); max-width: 800px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: .85rem; color: var(--gray-400); }
+    .article-meta .read-time { display: flex; align-items: center; gap: 4px; }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
+    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; }
+    .article-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+    .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
+    .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
+    .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
+    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    .highlight-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .highlight-card h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+    .highlight-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+
+    .cta-section { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); border-radius: var(--radius-lg); padding: 48px; margin: 48px 0; text-align: center; }
+    .cta-section h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: rgba(255,255,255,.8); max-width: 520px; margin: 0 auto 24px; line-height: 1.6; }
+    .cta-button { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
+    [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+    .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); }
+    .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+
+    .svg-chart { display: flex; justify-content: center; margin: 24px 0; }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .article-hero { padding: 56px 0 32px; }
+      .article-section { padding: 32px 0 56px; }
+      .cta-section { padding: 32px 24px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; background: #fff; }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: .9rem; color: var(--gray-600); cursor: pointer; border: none; background: none; text-align: left; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .comparison-table { font-size: .8rem; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+    [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "CPM vs oCPM vs eCPM: The 3 Metrics Every Baidu Advertiser Must Understand",
+    "description": "CPM, oCPM, and eCPM look similar but live at completely different levels of the ad system. Advertisers bid with oCPM, the system ranks by eCPM, and what you actually pay shows up as CPM.",
+    "url": "https://baidumarketing.com/blog/cpm-ocpm-ecpm-explained",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2026-05-02",
+    "dateModified": "2026-05-02",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro",
+      "url": "https://baidumarketing.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://baidumarketing.com/assets/og-brand-default.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://baidumarketing.com/blog/cpm-ocpm-ecpm-explained"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="../index" class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs>
+        <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+        <path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/>
+        <text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text>
+      </svg>
+      Baidu PPC Pro
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="../why-baidu-ppc-pro">Why Baidu PPC Pro</a>
+      <a href="../features">Services</a>
+      <a href="../pricing">Pricing</a>
+      <a href="../clients">Clients</a>
+      <a href="../faq">FAQ</a>
+      <a href="../about">About</a>
+      <a href="../blog" class="active">Blog</a>
+      <a href="../contact">Contact</a>
+      <button class="nav-mobile-theme" onclick="toggleTheme()">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        Toggle Dark Mode
+      </button>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="../contact" class="nav-cta">Get Started &rarr;</a>
+    <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
+      <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
+      <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+<main>
+  <section class="article-hero">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="../index">Home</a> / <a href="../blog">Blog</a> / CPM, oCPM & eCPM</div>
+      <h1>CPM vs oCPM vs eCPM: The 3 Metrics Every Baidu Advertiser Must Understand</h1>
+      <div class="article-meta">
+        <span>May 2, 2026</span>
+        <span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 5 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+
+        <p>If you've spent any time inside a Baidu ad account, you've seen these three acronyms: CPM, oCPM, eCPM. They look almost identical. And that's the problem — most advertisers treat them as if they're the same thing.</p>
+
+        <p>Someone will tell you "oCPM is just a cost metric." Someone else will say "eCPM is basically the same as CPM." Neither is right. And when you confuse them, you make bad decisions about your budget.</p>
+
+        <p>Here's the shortest version: <strong>advertisers bid using oCPM, the platform ranks ads by eCPM, and what you actually end up paying shows up as CPM.</strong> Three different layers, one price tag.</p>
+
+        <p>Let's unpack each one.</p>
+
+        <div class="takeaway-box">
+          <h3>💡 One-Liner Summary</h3>
+          <ul>
+            <li><strong>CPM</strong> = what you pay (the cost you see)</li>
+            <li><strong>oCPM</strong> = what you bid (what you tell the system)</li>
+            <li><strong>eCPM</strong> = what the system uses (how ads get ranked)</li>
+          </ul>
+        </div>
+
+        <h2>📊 The Three Layers</h2>
+
+        <p>Think of them as operating at three different levels of the ad system:</p>
+
+        <div class="svg-chart">
+          <svg width="680" height="360" viewBox="0 0 680 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Layer 3: Surface -->
+            <rect x="40" y="260" width="600" height="80" rx="12" fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5"/>
+            <text x="350" y="300" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#2932E1">CPM — Surface (What You Pay)</text>
+            <text x="350" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#4B5563">The actual cost per thousand impressions — dynamic in auction, fixed in brand buys</text>
+
+            <!-- Layer 2: Middle -->
+            <rect x="40" y="140" width="600" height="80" rx="12" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.5"/>
+            <text x="350" y="180" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#7C3AED">oCPM — Middle (What You Bid)</text>
+            <text x="350" y="200" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#4B5563">Your "conversation" with the system — tells the platform your expected price for traffic</text>
+
+            <!-- Layer 1: Bottom -->
+            <rect x="40" y="20" width="600" height="80" rx="12" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+            <text x="350" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#D97706">eCPM — Core (What the System Uses)</text>
+            <text x="350" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#4B5563">The system's ranking engine — determines who gets traffic and at what position</text>
+
+            <!-- Arrows -->
+            <path d="M310 100 L310 140" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+            <path d="M310 220 L310 260" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+            <defs>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#9CA3AF"/>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">🎯</span>
+          <div><strong>Bottom line:</strong> You bid via oCPM, the engine ranks by eCPM, and the market price surfaces as CPM. Get this chain right and you stop guessing why your traffic costs what it does.</div>
+        </div>
+
+        <h2>🔵 CPM: Not Just "How Expensive Traffic Is"</h2>
+
+        <p><strong>CPM</strong> = Cost Per Mille — the cost per thousand impressions.</p>
+
+        <p>Most people read CPM as "this is what traffic costs." That's not wrong, but it's incomplete. In auction-based ad systems like Baidu, CPM is a <strong>dynamic</strong> number that changes in real time based on competition, ad quality, and time of day. In brand advertising (fixed-price buys), it's exactly what it says — a flat rate per 1,000 impressions.</p>
+
+        <p>What you need to know: CPM is an <strong>outcome</strong>, not a lever you pull. You don't "set CPM" — the market calculates it. Trying to optimize CPM directly is like trying to control room temperature by staring at a thermometer.</p>
+
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div><strong>Common mistake:</strong> "My CPM is too high, I need to lower it." That's like saying your speedometer is too high. CPM is a signal. The question is <em>why</em> it's high — your bid, your targeting, or your ad quality.</div>
+        </div>
+
+        <h2>🟣 oCPM: Your Conversation With the System</h2>
+
+        <p><strong>oCPM</strong> = Optimized Cost Per Mille — the bidding method used by most major Chinese ad platforms (Baidu included).</p>
+
+        <p>oCPM is where you tell the platform: "This is roughly what I'm willing to pay to show my ad 1,000 times." But unlike traditional bidding, oCPM is smart — the platform uses your conversion data to adjust bids in real time, aiming to get you more conversions at your target cost.</p>
+
+        <p>Think of oCPM as the input. It's your <strong>bidding strategy</strong>, not a cost metric. If you're running lead-gen or ecommerce campaigns on Baidu, this is likely the model you should be using.</p>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">✅</span>
+          <div><strong>Pro tip:</strong> oCPM works best when you have enough conversion data (30+ conversions per week per ad group). Without that, the system doesn't have enough signal to optimize effectively.</div>
+        </div>
+
+        <h2>🟡 eCPM: The Engine Nobody Sees</h2>
+
+        <p><strong>eCPM</strong> = Effective Cost Per Mille — the metric Baidu (and every other auction platform) uses to rank competing ads.</p>
+
+        <p>Here's the formula: <code>eCPM = bid × quality score</code>. Your ad's position in the auction is determined by eCPM, not by your bid alone. A lower bid with great ad relevance can beat a higher bid with poor quality.</p>
+
+        <p>eCPM is the <strong>unseen ranking system</strong>. You never "set" eCPM — it's calculated by the platform in real time for every single auction. And it's the single biggest factor in whether your ad shows up at all.</p>
+
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚡</span>
+          <div><strong>This is where most optimization effort should go.</strong> Instead of obsessing over CPM, focus on improving your quality score — relevant ad copy, tight keyword targeting, good landing pages. That's what pushes eCPM up and your actual cost down.</div>
+        </div>
+
+        <h2>🔁 How They Connect</h2>
+
+        <p>Here's the simplest way to visualize it:</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Who Controls It</th>
+              <th>What It Does</th>
+              <th>Can You Optimize It?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>oCPM</strong></td>
+              <td>You (the advertiser)</td>
+              <td>Sets your bidding strategy</td>
+              <td>✅ Set target bids and budgets</td>
+            </tr>
+            <tr>
+              <td><strong>eCPM</strong></td>
+              <td>The system</td>
+              <td>Ranks ads in the auction</td>
+              <td>🟡 Indirectly, via quality score</td>
+            </tr>
+            <tr>
+              <td><strong>CPM</strong></td>
+              <td>The market</td>
+              <td>Reflects what you actually pay</td>
+              <td>❌ It's an output, not a lever</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>In a single sentence: <strong>you bid with oCPM, the system ranks by eCPM, and the resulting market price shows up as CPM.</strong> Each metric lives at a different layer of the same stack, and treating them as interchangeable will cost you money.</p>
+
+        <div class="takeaway-box">
+          <h3>📋 Key Takeaways</h3>
+          <ul>
+            <li>Stop trying to "lower CPM" — instead, optimize your oCPM bid and improve your quality score</li>
+            <li>oCPM is a bidding <em>strategy</em>, not a cost metric — use it when you have enough conversion data</li>
+            <li>eCPM determines ad rank — better ad relevance and landing pages improve it more than higher bids</li>
+            <li>The three metrics form a chain: your input (oCPM) → system ranking (eCPM) → market cost (CPM)</li>
+          </ul>
+        </div>
+
+        <h2>🤔 Still Unsure Which Model Fits Your Campaign?</h2>
+
+        <p>That's fair. Getting the bidding strategy right on Baidu is one of the most common pain points for foreign advertisers. The platform's auction mechanics are different from Google Ads, and the terminology alone can trip you up.</p>
+
+        <p>This is where it helps to work with people who've been inside the system. At Baidu PPC Pro, we've helped agencies and brands set up and optimize hundreds of Baidu campaigns — including choosing the right bidding model, structuring accounts for maximum eCPM, and cutting wasted spend.</p>
+
+        <div class="cta-section">
+          <h3>🚀 Stop Guessing. Start Converting.</h3>
+          <p>Whether you're new to Baidu ads or looking to improve an existing campaign, we can help you get the metrics working in your favor.</p>
+          <a href="../contact" class="cta-button">Talk to Our Team &rarr;</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>
+          Baidu PPC Pro
+        </h3>
+        <p>We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../features">Services</a></li>
+          <li><a href="../pricing">Pricing</a></li>
+          <li><a href="../about">About Us</a></li>
+          <li><a href="../faq">FAQ</a></li>
+          <li><a href="../blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
+          <li><a href="../contact">Submit a Request</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../privacy">Privacy Policy</a></li>
+          <li><a href="../terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+  let mobileNavOpen=false;function toggleMobileNav(){const links=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');h.style.display='none';c.style.display='block';o.classList.add('active');document.body.style.overflow='hidden'}else{links.classList.remove('open');h.style.display='block';c.style.display='none';o.classList.remove('active');document.body.style.overflow=''}}
+  document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{if(mobileNavOpen)toggleMobileNav()})});
+  function toggleTheme(){const html=document.documentElement;const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next);}
+  (function(){const saved=localStorage.getItem('theme');if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}})();
+  document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
+  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
+  window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
+</script>
+
+</body>
+</html>
