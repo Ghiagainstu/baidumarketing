@@ -180,6 +180,19 @@
     @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
 
     .nav-mobile-cta,.nav-mobile-theme{display:none}
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
+    [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+    .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); }
+    .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+    .stat-sub { font-size: .72rem; color: var(--gray-400); margin-top: 2px; }
+
+    .blockquote-highlight { border-left: 3px solid var(--blue); background: var(--blue-subtle); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; font-style: italic; color: var(--gray-600); line-height: 1.7; font-size: .95rem; }
+    [data-theme="dark"] .blockquote-highlight { background: rgba(99,102,241,.08); }
+
+    .svg-chart-wrapper { display: flex; justify-content: center; margin: 20px 0; overflow: hidden; border-radius: 12px; }
+    .svg-chart-wrapper svg { max-width: 100%; height: auto; }
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 768px) {
       .article-hero { padding: 56px 0 32px; }
@@ -261,7 +274,29 @@
 
         <p>If you have run Baidu PPC for more than a few months, you have probably noticed the same trend: CPCs creeping up year after year. It is not your imagination — competition drives cost higher across every major Chinese ad platform.</p>
 
-        <p>One of our clients saw this firsthand. Q1 2019 versus Q1 2018, same budget, 20% fewer clicks. The CPC had climbed 20% year over year. But here is the thing that surprised them: lead volume stayed flat. Higher CPC did not mean worse results — it meant the market had shifted and their account structure had not kept up.</p>
+<div class="blockquote-highlight">"In Q1 2019 with the same level spending, the clicks were 20% less than Q1 2018. However, high CPC isn't 100% a bad thing. We brought better quality traffic — the leads number stayed the same." — Client case</div>
+
+        <p>One of our clients saw this firsthand. Same budget, year over year, 20% fewer clicks. The CPC had climbed 20%.</p>
+
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-value">Same</div>
+    <div class="stat-label">Budget</div>
+    <div class="stat-sub">Q1 2018 vs Q1 2019</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">-20%</div>
+    <div class="stat-label">Clicks</div>
+    <div class="stat-sub">CPC rose 20% YoY</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">Flat</div>
+    <div class="stat-label">Lead Volume</div>
+    <div class="stat-sub">Better traffic quality</div>
+  </div>
+</div>
+
+<p>But here is the thing that surprised them: lead volume stayed flat. Higher CPC did not mean worse results — it meant the market had shifted and their account structure had not kept up.</p>
 
         <p>Competition is not necessarily bad. It keeps you alert. But you do need practical tactics to keep CPCs under control. Here are eight that work.</p>
 
@@ -280,6 +315,28 @@
 
         <h2>3. Use Geo Targeting by City Tier</h2>
         <p>Not all cities in China cost the same. Tier 1 cities (Beijing, Shanghai, Guangzhou, Shenzhen) have the highest CPCs because competition is fiercest and disposable income is higher. Tier 2, 3, and 4 cities can cost 30-50% less per click, depending on the industry.</p>
+
+<div class="svg-chart-wrapper">
+<svg width="680" height="200" viewBox="0 0 680 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text x="340" y="28" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600" fill="#374151">Relative CPC by City Tier</text>
+  <!-- Tier 1 bar -->
+  <rect x="60" y="60" width="180" height="36" rx="6" fill="#2932E1" opacity="0.85"/>
+  <text x="145" y="83" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">Tier 1 (baseline 100%)</text>
+  <!-- Tier 2 bar -->
+  <rect x="60" y="112" width="120" height="36" rx="6" fill="#4F46E5" opacity="0.75"/>
+  <text x="115" y="135" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">Tier 2 (~65%)</text>
+  <!-- Tier 3-4 bar -->
+  <rect x="60" y="164" width="90" height="36" rx="6" fill="#7C3AED" opacity="0.65"/>
+  <text x="100" y="187" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">Tier 3-4 (~50%)</text>
+  <!-- Legend -->
+  <text x="560" y="76" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#9CA3AF">Higher competition</text>
+  <text x="560" y="176" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#9CA3AF">Lower competition</text>
+  <line x1="530" y1="78" x2="550" y2="78" stroke="#D1D5DB" stroke-width="1"/>
+  <line x1="530" y1="178" x2="550" y2="178" stroke="#D1D5DB" stroke-width="1"/>
+  <polyline points="530,80 538,78 530,76" fill="none" stroke="#9CA3AF" stroke-width="1"/>
+  <polyline points="530,180 538,178 530,176" fill="none" stroke="#9CA3AF" stroke-width="1"/>
+</svg>
+</div>
         <p>Split your campaigns by city tier. Run separate ad groups for Tier 1 versus Tier 2-4. This does two things: it lowers your blended CPC, and it gives you per-city performance data so you can allocate budget to the regions that actually convert.</p>
 
         <div class="callout callout-tip">
