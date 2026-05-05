@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>How Much Does Baidu PPC Cost? Pricing, CPC, and Budget Guide — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Baidu PPC uses a prepaid model starting from $1,000 initial top-up. Learn how CPC is calculated, what you actually pay for, budget controls, and how Baidu filters malicious clicks automatically." />
+  <link rel="canonical" href="https://baidumarketing.com/blog/how-much-does-baidu-ppc-cost" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/blog/how-much-does-baidu-ppc-cost" />
+  <meta property="og:title" content="How Much Does Baidu PPC Cost? Pricing, CPC, and Budget Guide" />
+  <meta property="og:description" content="Baidu PPC uses a prepaid model starting from $1,000 initial top-up. Learn how CPC is calculated, what you actually pay for, and how budget controls work." />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How Much Does Baidu PPC Cost? Pricing, CPC, and Budget Guide" />
+  <meta name="twitter:description" content="Baidu PPC uses a prepaid model starting from $1,000 initial top-up. Learn how CPC is calculated, what you actually pay for, and budget controls." />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; }
+    [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
+    [data-theme="dark"] .nav-links { color: var(--gray-600); }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
+    [data-theme="dark"] .close-icon line { stroke: #D1D5DB; }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; }
+    [data-theme="dark"] .article-content h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-content h3 { color: #E5E7EB; }
+    [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb a { color: var(--blue); }
+    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
+    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .comparison-table { background: var(--gray-100); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .cta-section { background: rgba(11,15,26,.95); }
+    [data-theme="dark"] .related-section { background: var(--gray-100); }
+    [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .related-card h4 { color: var(--gray-800); }
+    [data-theme="dark"] .related-card p { color: var(--gray-600); }
+
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border:1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand h3 svg { flex-shrink: 0; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    .article-hero { padding: 80px 0 48px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); max-width: 800px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: .85rem; color: var(--gray-400); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
+    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; }
+    .article-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
+    .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
+    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    .cta-section { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); border-radius: var(--radius-lg); padding: 48px; margin: 48px 0; text-align: center; }
+    .cta-section h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: rgba(255,255,255,.8); max-width: 520px; margin: 0 auto 24px; line-height: 1.6; }
+    .cta-button { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
+    [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+    .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
+    .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+    .stat-sub { font-size: .72rem; color: var(--gray-400); margin-top: 2px; }
+
+    .blockquote-highlight { border-left: 3px solid var(--blue); background: var(--blue-subtle); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; font-style: italic; color: var(--gray-600); line-height: 1.7; font-size: .95rem; }
+    [data-theme="dark"] .blockquote-highlight { background: rgba(99,102,241,.08); }
+
+    .svg-chart-wrapper { display: flex; justify-content: center; margin: 20px 0; overflow: hidden; border-radius: 12px; }
+    .svg-chart-wrapper svg { max-width: 100%; height: auto; }
+
+    .related-section { padding: 48px 0 80px; background: var(--gray-50); }
+    .related-section h2 { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; transition: transform .25s, box-shadow .25s; display: block; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .related-card span { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #0284C7; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin: 8px 0; line-height: 1.4; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) {
+      .article-hero { padding: 56px 0 32px; }
+      .article-section { padding: 32px 0 56px; }
+      .cta-section { padding: 32px 24px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; background: #fff; }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: .9rem; color: var(--gray-600); cursor: pointer; border: none; background: none; text-align: left; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How Much Does Baidu PPC Cost? Pricing, CPC, and Budget Guide",
+    "description": "Baidu PPC uses a prepaid model starting from $1,000 initial top-up. Learn how CPC is calculated, what you actually pay for, budget controls, and how Baidu filters malicious clicks automatically.",
+    "url": "https://baidumarketing.com/blog/how-much-does-baidu-ppc-cost",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2018-12-04",
+    "dateModified": "2018-12-04",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro",
+      "url": "https://baidumarketing.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://baidumarketing.com/assets/og-brand-default.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://baidumarketing.com/blog/how-much-does-baidu-ppc-cost"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav><div class="container nav-inner">
+  <a href="../index" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="l" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#l)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</a>
+  <div class="nav-links" id="navLinks">
+    <a href="../why-baidu-ppc-pro">Why Baidu PPC Pro</a><a href="../features">Services</a><a href="../pricing">Pricing</a><a href="../clients">Clients</a><a href="../faq">FAQ</a><a href="../about">About</a><a href="../blog" class="active">Blog</a><a href="../contact">Contact</a>
+    <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>Toggle Dark Mode</button>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+  <a href="../contact" class="nav-cta">Get Started &rarr;</a>
+  <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div></nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+<main>
+  <section class="article-hero">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="../index">Home</a> / <a href="../blog">Blog</a> / Baidu PPC Cost</div>
+      <h1>How Much Does Baidu PPC Cost? Pricing, CPC, and Budget Guide</h1>
+      <div class="article-meta"><span>Dec 4, 2018</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 7 min read</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span></div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+
+        <p>The first question any advertiser asks about a new channel is: "How much does it cost?" With Baidu PPC, the answer is more nuanced than a flat number. Baidu operates on a prepaid model with a starting top-up, variable CPCs determined by a quality score auction, and built-in protection against click fraud. Here is the full breakdown.</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">$1,000</div>
+            <div class="stat-label">Minimum Top-Up</div>
+            <div class="stat-sub">Varies by region</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">$142</div>
+            <div class="stat-label">Service Fee</div>
+            <div class="stat-sub">One-time setup fee</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">CPC Only</div>
+            <div class="stat-label">Billing Model</div>
+            <div class="stat-sub">No cost for impressions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">Free</div>
+            <div class="stat-label">Shangdun Tool</div>
+            <div class="stat-sub">Malicious click protection</div>
+          </div>
+        </div>
+
+        <h2>Baidu PPC Is Prepaid — Not Postpaid</h2>
+
+        <p>Unlike Google Ads, which bills you after the fact, Baidu PPC operates on a prepaid model. You deposit funds into your account, and costs are deducted as clicks occur. When your balance hits zero, your ads stop serving until you top up again.</p>
+
+        <p>The initial setup requires two payments:</p>
+
+        <ul>
+          <li><strong>First minimum top-up:</strong> Starting from $1,000 USD. The exact amount depends on your industry, region, and account type.</li>
+          <li><strong>Service fee:</strong> A one-time charge starting from $142 USD. This covers account creation, compliance review, and initial configuration.</li>
+        </ul>
+
+        <p>These figures are starting points — some industries or regions may have different minimums. We can check the exact requirements for your specific situation.</p>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">&#128161;</span>
+          <div>
+            <strong>Tip:</strong> The prepaid model means your budget is always under your control. There is no risk of running up a large postpaid bill. Once the funds run out, the ads stop. This is a safeguard, not a limitation.
+          </div>
+        </div>
+
+        <h2>What Do You Actually Pay For?</h2>
+
+        <p>Baidu charges on a <strong>cost-per-click (CPC)</strong> basis. Your ads can be displayed thousands of times — Baidu will not charge you a single yuan for impressions. You only pay when a user clicks on your ad.</p>
+
+        <blockquote class="blockquote-highlight">
+          Baidu charges for clicks only, not impressions. Your ads can display as many times as budget and competition allow — you only pay when someone clicks.
+        </blockquote>
+
+        <p>This is an advantage for overseas brands entering the Chinese market. Your budget is spent on engaged users who have actively expressed interest in your offering by clicking. Impression-based models often waste budget on users who never intended to buy.</p>
+
+        <h2>How Is Cost Per Click Calculated?</h2>
+
+        <p>The actual CPC you pay depends on Baidu's auction system. The formula is:</p>
+
+        <div class="svg-chart-wrapper">
+          <svg width="640" height="130" viewBox="0 0 640 130" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="620" height="110" rx="12" fill="#EEF0FF" stroke="#C7D2FE" stroke-width="1"/>
+            <text x="320" y="35" text-anchor="middle" font-family="system-ui" font-size="10" fill="#6B7280">Actual CPC Formula (Baidu)</text>
+            <text x="30" y="65" font-family="monospace" font-size="15" fill="#2932E1" font-weight="700">Actual CPC =</text>
+            <text x="195" y="65" font-family="monospace" font-size="13" fill="#374151">Next Rank Competitor CPC</text>
+            <text x="195" y="85" font-family="monospace" font-size="13" fill="#6B7280">&times; Next Rank Quality Score</text>
+            <line x1="195" y1="92" x2="510" y2="92" stroke="#D1D5DB" stroke-width="1"/>
+            <text x="260" y="112" font-family="monospace" font-size="14" fill="#2932E1" font-weight="700">Your Quality Score</text>
+            <text x="530" y="85" font-family="monospace" font-size="15" fill="#374151" font-weight="700">+ 0.01</text>
+          </svg>
+        </div>
+
+        <p>Let's break down each component:</p>
+
+        <ul>
+          <li><strong>Next Rank Competitor CPC:</strong> The maximum bid of the advertiser ranked immediately below you. This is what sets the floor for your CPC.</li>
+          <li><strong>Next Rank Quality Score:</strong> The quality score of the advertiser below you. A lower QS next to you means your CPC is bid against a lower base.</li>
+          <li><strong>Your Quality Score:</strong> Your own quality score. A higher QS reduces your actual CPC. Baidu's QS factors in expected CTR, landing page experience, ad relevance, and account history.</li>
+          <li><strong>+ 0.01:</strong> Baidu adds one cent (0.01 yuan) to the calculation to ensure you are paying just above the next bidder's threshold.</li>
+        </ul>
+
+        <p><strong>Special case:</strong> If you rank last among all PPC results, or if yours is the only ad listed, the actual CPC defaults to the keyword's minimum display price. This minimum varies by keyword but is typically low for less competitive terms.</p>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">&#128300;</span>
+          <div>
+            <strong>Insight:</strong> The quality score plays an outsized role in your actual costs on Baidu. Two advertisers bidding the same amount on the same keyword can pay very different actual CPCs — the one with the higher QS pays less. Improving ad relevance and landing page experience is one of the most effective ways to reduce costs.
+          </div>
+        </div>
+
+        <h2>Does Baidu Provide a Detailed Fee Breakdown?</h2>
+
+        <p>Yes. Inside the Baidu ad platform, you can generate keyword-level reports showing spending and clicks. These reports can be customized by date range, campaign, ad group, and keyword. You can see exactly how much each keyword spent, how many clicks it received, and what your average CPC was.</p>
+
+        <p>Reports are exportable for further analysis. This transparency allows you to audit your spending and adjust bids at a granular level.</p>
+
+        <h2>Can You Adjust Your Budget?</h2>
+
+        <p>Yes. Baidu provides multiple layers of budget control:</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Control Layer</th><th>What It Does</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Daily budget cap</td><td>Limits spending per day per campaign</td><td>Set a $50/day cap on your lead-gen campaign</td></tr>
+            <tr><td>Account-level cap</td><td>Caps total spending across all campaigns</td><td>Prevents overspending on high-volume days</td></tr>
+            <tr><td>Geographic targeting</td><td>Limits ads to specific cities or provinces</td><td>Target only Beijing and Shanghai</td></tr>
+            <tr><td>Time-of-day scheduling</td><td>Shows ads only during selected hours</td><td>Run ads only 9AM-6PM on weekdays</td></tr>
+            <tr><td>Keyword count management</td><td>Controls how many keywords compete</td><td>Start small, expand as you optimize</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">&#128161;</span>
+          <div>
+            <strong>Tip:</strong> For overseas brands new to Baidu, we recommend starting with a single campaign targeting one or two cities using daily budget caps. This minimizes risk while you learn which keywords and ad copy resonate with the Chinese audience.
+          </div>
+        </div>
+
+        <h2>What About Malicious Clicks?</h2>
+
+        <p>This is one of the most common concerns for advertisers new to Baidu. Here is how Baidu handles it:</p>
+
+        <p>Malicious clicks — whether from competitors clicking your ads to drain your budget, from cheating software, or from repeated manual clicking — are automatically filtered by Baidu's system. You will not be charged for these clicks.</p>
+
+        <p>Baidu analyzes clicks across multiple dimensions to detect abnormal patterns:</p>
+
+        <ul>
+          <li>Rapid repeated clicks from the same IP address within a short time window</li>
+          <li>Clicks that follow an unnatural pattern (e.g., exactly every 30 seconds)</li>
+          <li>Clicks with no subsequent on-site activity (quick bounce + no conversion)</li>
+          <li>Clicks from IP addresses with a history of fraudulent activity</li>
+        </ul>
+
+        <p>For additional protection, Baidu provides a free tool called <strong>Baidu Shangdun</strong> (百度商盾). This tool is specifically designed to diagnose, identify, and invalidate suspicious clicks. It gives advertisers visibility into click patterns and allows manual IP blacklisting.</p>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">&#128300;</span>
+          <div>
+            <strong>Insight:</strong> In our experience managing hundreds of Baidu accounts, the actual cost of malicious clicks is far lower than most advertisers fear. Baidu's automated filtering catches the vast majority before they affect your spend. Shangdun acts as a second line of defense for peace of mind.
+          </div>
+        </div>
+
+        <h2>Cost Comparison: Baidu vs Google Ads</h2>
+
+        <p>While exact CPCs vary by industry, here is a general comparison to frame expectations:</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Factor</th><th>Baidu PPC</th><th>Google Ads</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Billing model</td><td>Prepaid (top-up first)</td><td>Postpaid (bill after)</td></tr>
+            <tr><td>Initial investment</td><td>$1,000 + $142 service fee</td><td>$0 (no minimum)</td></tr>
+            <tr><td>CPC formula</td><td>Next rank CPC &times; QS / Your QS + 0.01</td><td>Ad Rank-based (similar but different math)</td></tr>
+            <tr><td>Charge for impressions</td><td>No</td><td>No (standard search ads)</td></tr>
+            <tr><td>Malicious click protection</td><td>Auto-filter + free Shangdun tool</td><td>Auto-filter + manual invalid click review</td></tr>
+            <tr><td>Budget flexibility</td><td>Daily/weekly caps, geographic, time-based</td><td>Daily/monthly caps, geographic, time-based</td></tr>
+          </tbody>
+        </table>
+
+        <div class="takeaway-box">
+          <h3>&#9989; Key Takeaways</h3>
+          <ul>
+            <li>Baidu uses a prepaid model: deposit funds first, then pay per click.</li>
+            <li>Minimum starting cost: $1,000 top-up + $142 service fee (varies by region).</li>
+            <li>You only pay for clicks — impressions are free.</li>
+            <li>Actual CPC = (next bidder CPC &times; next QS) / your QS + 0.01.</li>
+            <li>Higher quality scores = lower CPCs. Optimize your ads and landing pages.</li>
+            <li>Baidu automatically filters malicious clicks. Shangdun provides extra protection.</li>
+            <li>Budget is fully controllable through caps, targeting, and scheduling.</li>
+          </ul>
+        </div>
+
+        <div class="cta-section">
+          <h3>Need Help Estimating Your Baidu PPC Budget?</h3>
+          <p>Every industry is different. We can help you estimate realistic costs, set up your account, and optimize your campaigns to get the most out of every dollar.</p>
+          <a href="../contact" class="cta-button">Get a Budget Estimate &rarr;</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+  <section class="related-section">
+    <div class="container">
+      <h2>Related Articles</h2>
+      <div class="related-grid">
+        <a href="../blog/baidu-ad-billing-models-explained" class="related-card">
+          <span>Strategy</span>
+          <h4>&#128176; Baidu PPC Billing Models Explained: CPM, oCPM, CPC, and More</h4>
+          <p>Understand all Baidu billing models and which one fits your campaign goals.</p>
+        </a>
+        <a href="../blog/cpm-ocpm-ecpm-explained" class="related-card">
+          <span>Strategy</span>
+          <h4>&#128202; CPM vs oCPM vs eCPM: Baidu Billing Models Demystified</h4>
+          <p>What each pricing model means and how to choose the right one for your objective.</p>
+        </a>
+        <a href="../blog/ocpc-explained" class="related-card">
+          <span>Strategy</span>
+          <h4>&#129302; oCPC Explained: How AI Bidding Lowers Your Cost Per Lead</h4>
+          <p>Baidu's AI bidding model typically lowers CPA by 20-40% for lead-gen campaigns.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fl" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fl)"/><text x="16" y="21.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="800" fill="white">BPP</text></svg>Baidu PPC Pro</h3>
+        <p>We help overseas brands navigate Baidu advertising with transparent pricing, compliant campaigns, and zero guesswork. $100B+ in managed media spend across our team.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../features">Baidu PPC Setup</a></li>
+          <li><a href="../features">Keyword Research</a></li>
+          <li><a href="../features">Landing Page Localization</a></li>
+          <li><a href="../features">Compliance & Verification</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../blog">Blog</a></li>
+          <li><a href="../faq">FAQ</a></li>
+          <li><a href="../about">About Us</a></li>
+          <li><a href="../contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../privacy">Privacy Policy</a></li>
+          <li><a href="../terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2018&ndash;<script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="https://www.baidu.com/s?wd=Baidu+PPC+Pro" target="_blank" rel="noopener" aria-label="Baidu">
+          <svg viewBox="0 0 24 24" fill="#9CA3AF" stroke="none"><circle cx="12" cy="12" r="10" fill="#9CA3AF"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="white">B</text></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+(function(){const t=document.getElementById('backToTop');window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)});const s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}document.querySelectorAll('.nav-links a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop()||a.getAttribute('href')===location.pathname.split('/').pop().replace('.html',''))a.classList.add('active')});document.querySelectorAll('.nav-links.open a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop()||a.getAttribute('href')===location.pathname.split('/').pop().replace('.html',''))a.classList.add('active')})})();
+function toggleTheme(){const d=document.documentElement.getAttribute('data-theme');const n=d==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n)}
+function toggleMobileNav(){const n=document.getElementById('navLinks');const o=document.getElementById('navOverlay');const h=document.querySelector('.hamburger-icon');const c=document.querySelector('.close-icon');n.classList.toggle('open');o.classList.toggle('active');h.style.display=n.classList.contains('open')?'none':'block';c.style.display=n.classList.contains('open')?'block':'none'}
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{const n=document.getElementById('navLinks');const o=document.getElementById('navOverlay');const h=document.querySelector('.hamburger-icon');const c=document.querySelector('.close-icon');if(n.classList.contains('open')){n.classList.remove('open');o.classList.remove('active');h.style.display='block';c.style.display='none'}})});
+</script>
+
+</body>
+</html>
