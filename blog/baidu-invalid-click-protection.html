@@ -187,12 +187,23 @@
     .footer-col ul li a:hover { color: #fff; }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
     .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    .footer-social a svg { width: 18px; height: 18px; }
 
     [data-theme="dark"] footer { background: #070B14; }
+
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 16px rgba(41,50,225,.3); transition: transform var(--transition-base), opacity var(--transition-base); z-index: 50; opacity: 0; pointer-events: none; }
+    .back-to-top:hover { transform: translateY(-3px); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top svg { width: 20px; height: 20px; }
 
     .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all var(--transition-base); color: var(--gray-600); }
     .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
     .theme-toggle svg { width: 18px; height: 18px; }
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
     [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
     [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
     .theme-toggle .icon-sun { display: none; }
@@ -218,8 +229,7 @@
   </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
+  <nav><div class="container nav-inner">
       <a href="../index" class="nav-logo">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
           <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs>
@@ -533,7 +543,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="white">BPP</text></svg> Baidu PPC Pro</h3>
-          <p>We help international agencies and brands access China's digital advertising market with compliance, clarity, and zero guesswork.</p>
+          <p>We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork.</p>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
@@ -563,9 +573,12 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+        <div class="footer-social"><a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a></div>
       </div>
     </div>
   </footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
 
   <script>
     function toggleTheme() {
@@ -591,6 +604,8 @@
       else { links.classList.remove('open'); h.style.display = 'block'; c.style.display = 'none'; o.classList.remove('active'); document.body.style.overflow = ''; }
     }
     document.querySelectorAll('.nav-links a').forEach(a => { a.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); }); });
+
+    window.addEventListener('scroll', function(){var b=document.getElementById('backToTop');if(b){if(window.scrollY>400)b.classList.add('visible');else b.classList.remove('visible')}});
 
     document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
   </script>
