@@ -246,4 +246,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-brand-protection-guide</loc>
+    <lastmod>2019-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
