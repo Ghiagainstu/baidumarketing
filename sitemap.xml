@@ -264,4 +264,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-ppc-account-status-guide</loc>
+    <lastmod>2020-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

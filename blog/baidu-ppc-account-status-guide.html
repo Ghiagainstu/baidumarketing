@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Understanding Baidu PPC Account Status: All 5 States Explained — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Baidu PPC accounts display 5 possible statuses before and during promotion. Learn what each status means, why it happens, and exactly what action to take to get your campaigns running." />
+  <link rel="canonical" href="https://baidumarketing.com/blog/baidu-ppc-account-status-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/blog/baidu-ppc-account-status-guide" />
+  <meta property="og:title" content="Understanding Baidu PPC Account Status: All 5 States Explained" />
+  <meta property="og:description" content="Baidu PPC accounts display 5 possible statuses before and during promotion. Learn what each status means and what action to take to get your campaigns running." />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Understanding Baidu PPC Account Status: All 5 States Explained" />
+  <meta name="twitter:description" content="Baidu PPC accounts display 5 possible statuses before and during promotion. Learn what each status means and what action to take." />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; }
+    [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
+    [data-theme="dark"] .nav-links { color: var(--gray-600); }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
+    [data-theme="dark"] .close-icon line { stroke: #D1D5DB; }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; }
+    [data-theme="dark"] .article-content h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-content h3 { color: #E5E7EB; }
+    [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb a { color: var(--blue); }
+    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
+    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .comparison-table { background: var(--gray-100); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .cta-section { background: rgba(11,15,26,.95); }
+    [data-theme="dark"] .related-section { background: var(--gray-100); }
+    [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .related-card h4 { color: var(--gray-800); }
+    [data-theme="dark"] .related-card p { color: var(--gray-600); }
+
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border:1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand h3 svg { flex-shrink: 0; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    .article-hero { padding: 80px 0 48px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); max-width: 800px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: .85rem; color: var(--gray-400); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
+    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; }
+    .article-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+
+    .status-card { border-radius: 12px; padding: 20px 24px; margin: 20px 0; border-left: 4px solid var(--blue); background: var(--blue-subtle); }
+    [data-theme="dark"] .status-card { background: rgba(99,102,241,.08); }
+    .status-card h3 { margin: 0 0 8px 0 !important; border: none !important; padding: 0 !important; }
+    .status-badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: .75rem; font-weight: 700; margin-bottom: 8px; }
+    .badge-pending { background: #FEF3C7; color: #92400E; }
+    [data-theme="dark"] .badge-pending { background: rgba(251,191,36,.2); color: #FCD34D; }
+    .badge-warning { background: #FEE2E2; color: #991B1B; }
+    [data-theme="dark"] .badge-warning { background: rgba(239,68,68,.2); color: #FCA5A5; }
+    .badge-info { background: #DBEAFE; color: #1E40AF; }
+    [data-theme="dark"] .badge-info { background: rgba(59,130,246,.2); color: #93C5FD; }
+    .badge-success { background: #D1FAE5; color: #065F46; }
+    [data-theme="dark"] .badge-success { background: rgba(52,211,153,.2); color: #6EE7B7; }
+    .badge-danger { background: #FEE2E2; color: #991B1B; }
+    [data-theme="dark"] .badge-danger { background: rgba(239,68,68,.2); color: #FCA5A5; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
+    .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
+    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    .cta-section { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); border-radius: var(--radius-lg); padding: 48px; margin: 48px 0; text-align: center; }
+    .cta-section h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: rgba(255,255,255,.8); max-width: 520px; margin: 0 auto 24px; line-height: 1.6; }
+    .cta-button { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
+    [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+    .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
+    .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+    .stat-sub { font-size: .72rem; color: var(--gray-400); margin-top: 2px; }
+
+    .blockquote-highlight { border-left: 3px solid var(--blue); background: var(--blue-subtle); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; font-style: italic; color: var(--gray-600); line-height: 1.7; font-size: .95rem; }
+    [data-theme="dark"] .blockquote-highlight { background: rgba(99,102,241,.08); }
+
+    .svg-chart-wrapper { display: flex; justify-content: center; margin: 20px 0; overflow: hidden; border-radius: 12px; }
+    .svg-chart-wrapper svg { max-width: 100%; height: auto; }
+
+    .related-section { padding: 48px 0 80px; background: var(--gray-50); }
+    .related-section h2 { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; transition: transform .25s, box-shadow .25s; display: block; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .related-card span { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #0284C7; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin: 8px 0; line-height: 1.4; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) {
+      .article-hero { padding: 56px 0 32px; }
+      .article-section { padding: 32px 0 56px; }
+      .cta-section { padding: 32px 24px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; background: #fff; }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: .9rem; color: var(--gray-600); cursor: pointer; border: none; background: none; text-align: left; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Understanding Baidu PPC Account Status: All 5 States Explained",
+    "description": "Baidu PPC accounts display 5 possible statuses before and during promotion. Learn what each status means, why it happens, and exactly what action to take to get your campaigns running.",
+    "url": "https://baidumarketing.com/blog/baidu-ppc-account-status-guide",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2020-09-09",
+    "dateModified": "2020-09-09",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro",
+      "url": "https://baidumarketing.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://baidumarketing.com/assets/og-brand-default.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://baidumarketing.com/blog/baidu-ppc-account-status-guide"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav><div class="container nav-inner">
+  <a href="../index" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="l" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#l)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</a>
+  <div class="nav-links" id="navLinks">
+    <a href="../why-baidu-ppc-pro">Why Baidu PPC Pro</a><a href="../features">Services</a><a href="../pricing">Pricing</a><a href="../clients">Clients</a><a href="../faq">FAQ</a><a href="../about">About</a><a href="../blog" class="active">Blog</a><a href="../contact">Contact</a>
+    <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>Toggle Dark Mode</button>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+  <a href="../contact" class="nav-cta">Get Started &rarr;</a>
+  <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div></nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+<main>
+  <section class="article-hero">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="../index">Home</a> / <a href="../blog">Blog</a> / Account Status</div>
+      <h1>Understanding Baidu PPC Account Status: All 5 States Explained</h1>
+      <div class="article-meta"><span>Sep 9, 2020</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6 min read</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span></div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+
+        <p>Before your Baidu PPC account goes live, and throughout your campaign lifecycle, you will see different status labels inside the account dashboard. Each status tells you whether your ads can serve, what is blocking them, and what action you need to take.</p>
+
+        <p>We have managed hundreds of Baidu accounts for overseas brands. The pattern is consistent: most campaign launch delays come from not understanding what a specific status actually requires you to do. This guide breaks down all five Baidu PPC account statuses, what triggers each one, how long each typically lasts, and the exact steps to move to the next stage.</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">5</div>
+            <div class="stat-label">Account Statuses</div>
+            <div class="stat-sub">Full breakdown below</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">1-3</div>
+            <div class="stat-label">Days to Verify</div>
+            <div class="stat-sub">After payment arrives</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">24h</div>
+            <div class="stat-label">Top-Up Activation</div>
+            <div class="stat-sub">Ads resume after recharge</div>
+          </div>
+        </div>
+
+        <h2>Quick Reference: All 5 Account Statuses</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Status</th><th>Can Ads Serve?</th><th>Action Required</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="status-badge badge-pending">The funds have not arrived</span></td><td>No</td><td>Complete payment and wait for confirmation</td></tr>
+            <tr><td><span class="status-badge badge-warning">Zero balance</span></td><td>No</td><td>Top up the account immediately</td></tr>
+            <tr><td><span class="status-badge badge-info">Under review</span></td><td>No</td><td>Wait for Baidu to complete verification</td></tr>
+            <tr><td><span class="status-badge badge-success">Activate</span></td><td>Yes (if campaigns are also active)</td><td>Check campaign and ad group levels</td></tr>
+            <tr><td><span class="status-badge badge-danger">Rejected</span></td><td>No</td><td>Fix compliance issues and resubmit</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. The Funds Have Not Arrived (资金未到账)</h2>
+
+        <div class="status-card">
+          <span class="status-badge badge-pending">Pending</span>
+          <h3>What this status means</h3>
+          <p style="margin-bottom:0">Your account has not been successfully topped up, and identity verification has not been completed. Baidu requires both payment and verification before activating your account.</p>
+        </div>
+
+        <h3>Why this happens</h3>
+        <ul>
+          <li>You have not yet made the initial payment (first top-up + service fee).</li>
+          <li>You made the payment, but Baidu has not yet confirmed receipt of funds. Bank transfers, especially international wire transfers, can take 1-3 business days to arrive and be matched to your account.</li>
+          <li>Your verification documents were submitted but payment has not been received yet, so the review cannot proceed.</li>
+        </ul>
+
+        <h3>What to do</h3>
+        <p>If you have <strong>not yet paid</strong>: complete the payment as soon as possible. Baidu will not begin identity verification until payment is received. The initial top-up amount plus the one-time service fee must both be paid.</p>
+
+        <p>If you <strong>have already paid</strong>: wait patiently. Payment confirmation typically takes 1-3 business days. Make sure you included the correct reference number with your transfer so Baidu can match the payment to your account.</p>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">&#128161;</span>
+          <div>
+            <strong>Tip:</strong> Always include your Baidu account ID or the reference number provided by your account manager in the wire transfer notes. This speeds up payment matching and reduces the chance of your account sitting in "funds not arrived" status for an extra day.
+          </div>
+        </div>
+
+        <h3>How long does this status last?</h3>
+        <p>Typically 1-3 business days after Baidu receives your payment. Once payment is confirmed, the system automatically begins identity verification and moves the account to "Under review".</p>
+
+        <h2>2. Zero Balance (余额为零)</h2>
+
+        <div class="status-card">
+          <span class="status-badge badge-warning">Warning</span>
+          <h3>What this status means</h3>
+          <p style="margin-bottom:0">Your account has no remaining balance for promotion. In this state, keywords and ad copies will not be displayed, regardless of your campaign settings.</p>
+        </div>
+
+        <h3>Why this happens</h3>
+        <ul>
+          <li>Your campaign spent the remaining budget and the account balance reached zero.</li>
+          <li>You paused your top-up and did not notice the balance running out.</li>
+          <li>Your automatic top-up failed (expired card, insufficient funds in the linked account).</li>
+        </ul>
+
+        <h3>What to do</h3>
+        <p>Top up the account as soon as possible. Baidu recommends maintaining a buffer balance so that your campaigns do not stop mid-day. For ongoing campaigns, we suggest keeping at least 20-30% of your monthly budget as a buffer in the account.</p>
+
+        <div class="callout callout-warning">
+          <span class="callout-icon">&#9888;&#65039;</span>
+          <div>
+            <strong>Warning:</strong> When your account hits zero balance, your ads stop serving immediately. There is no grace period. If you are running time-sensitive promotions, set up a minimum balance alert or use Baidu's automatic top-up feature (available for some account types).
+          </div>
+        </div>
+
+        <h3>How long does this status last?</h3>
+        <p>Until you top up. Ads resume serving within hours after your new payment is confirmed and the account has sufficient balance.</p>
+
+        <h2>3. Under Review (审核中)</h2>
+
+        <div class="status-card">
+          <span class="status-badge badge-info">In Progress</span>
+          <h3>What this status means</h3>
+          <p style="margin-bottom:0">The system (and sometimes a human reviewer) is verifying your account information, business license, identity documents, and the initial set of ads and keywords you submitted.</p>
+        </div>
+
+        <h3>Why this happens</h3>
+        <ul>
+          <li>You just completed your first payment and Baidu initiated the identity verification process.</li>
+          <li>You submitted new ad copy or landing pages that triggered a compliance review.</li>
+          <li>You changed your business information or added a new domain to your account.</li>
+        </ul>
+
+        <h3>What to do</h3>
+        <p>Wait for the verification result. Baidu will notify you through the account dashboard and, in most cases, by email. The review result will tell you whether your account is approved or if there are specific issues to fix.</p>
+
+        <p>Do not submit duplicate review requests. This can actually slow down the process. One submission is sufficient. If it has been more than 5 business days with no response, contact Baidu support or your account manager.</p>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">&#128300;</span>
+          <div>
+            <strong>Insight:</strong> Baidu's review process has two layers: an automated system scan (which takes hours) and a manual review for borderline cases (which can take 2-5 business days). Accounts in regulated industries (healthcare, finance, education) typically take longer because they require additional manual review.
+          </div>
+        </div>
+
+        <h3>How long does this status last?</h3>
+        <p>Typically 1-3 business days for standard reviews. Regulated industries may take 5-7 business days. You will receive a system notification once the review is complete.</p>
+
+        <h2>4. Activate (激活)</h2>
+
+        <div class="status-card">
+          <span class="status-badge badge-success">Active</span>
+          <h3>What this status means</h3>
+          <p style="margin-bottom:0">Your account is approved and available for promotion. However, whether your ads actually serve depends on the status of your campaigns, ad groups, keywords, and creatives. Account-level "Activate" does not guarantee that all your ads are running.</p>
+        </div>
+
+        <h3>Why this happens</h3>
+        <ul>
+          <li>You passed the initial review and your account is now live.</li>
+          <li>You fixed a previous "Rejected" status and your account was re-activated.</li>
+          <li>You topped up after a "Zero balance" status and the account re-activated.</li>
+        </ul>
+
+        <h3>What to do</h3>
+        <p>Check the status at every level of your account. "Activate" at the account level is necessary but not sufficient for your ads to serve. You also need:</p>
+        <ul>
+          <li><strong>Campaign level:</strong> Campaign must be enabled and not paused.</li>
+          <li><strong>Ad group level:</strong> Ad group must be enabled.</li>
+          <li><strong>Keyword level:</strong> Keywords must have sufficient quality score and bid to trigger ads.</li>
+          <li><strong>Creative level:</strong> Ad copy must be approved and not under review.</li>
+        </ul>
+
+        <blockquote class="blockquote-highlight">
+          "Activate" at the account level means Baidu trusts your business identity. It does not mean your ads are currently serving. Always check campaign, ad group, keyword, and creative statuses separately.
+        </blockquote>
+
+        <h3>How long does this status last?</h3>
+        <p>Indefinitely, as long as you maintain a positive balance, comply with Baidu policies, and do not let your campaigns pause due to budget exhaustion.</p>
+
+        <h2>5. Rejected (被拒)</h2>
+
+        <div class="status-card">
+          <span class="status-badge badge-danger">Rejected</span>
+          <h3>What this status means</h3>
+          <p style="margin-bottom:0">Your account information does not comply with Baidu's advertising regulations. You are not authorized to promote. This is the only status that requires you to take corrective action before Baidu will review again.</p>
+        </div>
+
+        <h3>Why this happens</h3>
+        <ul>
+          <li>Your business license is expired or does not match the information you submitted.</li>
+          <li>Your website landing page contains content that violates Baidu advertising policies (prohibited products, misleading claims, unverified health claims).</li>
+          <li>You are in a restricted industry and did not obtain the required pre-approval or special license.</li>
+          <li>Your identity documents (ID card, passport) are unclear, expired, or do not match the business registration.</li>
+        </ul>
+
+        <h3>What to do</h3>
+        <p>Read the rejection reason carefully. Baidu provides specific feedback in the account dashboard explaining which part of your application failed compliance. Common rejection reasons include:</p>
+        <ul>
+          <li>Business license copy is unclear or expired</li>
+          <li>Landing page URL is inaccessible or contains prohibited content</li>
+          <li>Ad copy uses superlative claims ("best", "number one") without proof</li>
+          <li>Website does not have an ICP (Internet Content Provider)备案 number displayed</li>
+        </ul>
+
+        <p>After you fix the issues, resubmit the account information. Baidu will re-authenticate the account. If the second review passes, your account status changes to "Activate".</p>
+
+        <div class="callout callout-warning">
+          <span class="callout-icon">&#9888;&#65039;</span>
+          <div>
+            <strong>Warning:</strong> If your account is rejected, do not keep submitting the same information without fixing the underlying issue. Repeated submissions with the same compliance problem can lead to a longer review delay or, in serious cases, a permanent rejection.
+          </div>
+        </div>
+
+        <h3>How long does this status last?</h3>
+        <p>Until you fix the compliance issues and resubmit. The re-review typically takes 1-3 business days after you submit corrected information.</p>
+
+        <h2>Status Flow: How Accounts Move Between States</h2>
+
+        <div class="svg-chart-wrapper">
+          <svg width="680" height="320" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEF3C7"/><stop offset="100%" stop-color="#FDE68A"/></linearGradient>
+              <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEE2E2"/><stop offset="100%" stop-color="#FCA5A5"/></linearGradient>
+              <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#DBEAFE"/><stop offset="100%" stop-color="#93C5FD"/></linearGradient>
+              <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D1FAE5"/><stop offset="100%" stop-color="#6EE7B7"/></linearGradient>
+              <linearGradient id="g5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEE2E2"/><stop offset="100%" stop-color="#F87171"/></linearGradient>
+            </defs>
+            <!-- Funds Not Arrived -->
+            <rect x="20" y="40" width="120" height="60" rx="10" fill="url(#g1)" stroke="#F59E0B" stroke-width="1.5"/>
+            <text x="80" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">Funds Not</text>
+            <text x="80" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">Arrived</text>
+            <!-- Arrow -->
+            <path d="M145 70 L195 70" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+            <!-- Under Review -->
+            <rect x="200" y="40" width="120" height="60" rx="10" fill="url(#g3)" stroke="#3B82F6" stroke-width="1.5"/>
+            <text x="260" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#1E40AF">Under</text>
+            <text x="260" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#1E40AF">Review</text>
+            <!-- Arrow -->
+            <path d="M325 70 L375 70" stroke="#6B7280" stroke-width="2"/>
+            <!-- Activate -->
+            <rect x="380" y="40" width="120" height="60" rx="10" fill="url(#g4)" stroke="#10B981" stroke-width="1.5"/>
+            <text x="440" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#065F46">Activate</text>
+            <text x="440" y="84" text-anchor="middle" font-size="10" font-weight="600" fill="#065F46">Ads Can Serve</text>
+            <!-- Zero Balance branch -->
+            <path d="M440 100 L440 140 L300 140 L300 200 L350 200" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <rect x="280" y="190" width="140" height="50" rx="10" fill="url(#g2)" stroke="#EF4444" stroke-width="1.5"/>
+            <text x="350" y="215" text-anchor="middle" font-size="11" font-weight="700" fill="#991B1B">Zero Balance</text>
+            <text x="350" y="229" text-anchor="middle" font-size="9" fill="#991B1B">Top up to resume</text>
+            <!-- Rejected -->
+            <path d="M325 70 L325 200" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <rect x="200" y="190" width="120" height="50" rx="10" fill="url(#g5)" stroke="#EF4444" stroke-width="1.5"/>
+            <text x="260" y="215" text-anchor="middle" font-size="11" font-weight="700" fill="#991B1B">Rejected</text>
+            <text x="260" y="229" text-anchor="middle" font-size="9" fill="#991B1B">Fix &amp; resubmit</text>
+            <!-- Back to Under Review from Rejected -->
+            <path d="M200 215 L185 215 L185 100 L195 100" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <!-- Back to Activate from Zero Balance -->
+            <path d="M280 215 L265 215 L265 100 L375 100" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <!-- Arrow markers -->
+            <defs>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/></marker>
+            </defs>
+            <!-- Legend -->
+            <text x="540" y="50" font-size="11" font-weight="700" fill="#374151">Legend</text>
+            <line x1="530" y1="60" x2="550" y2="60" stroke="#6B7280" stroke-width="1.5"/>
+            <text x="555" y="64" font-size="10" fill="#6B7280">Normal flow</text>
+            <line x1="530" y1="80" x2="550" y2="80" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <text x="555" y="84" font-size="10" fill="#6B7280">Exception path</text>
+          </svg>
+        </div>
+
+        <h2>Common Troubleshooting Scenarios</h2>
+
+        <p>Here are the most frequent questions we hear from advertisers about account status, and how to resolve them.</p>
+
+        <h3>My account has been "Under review" for 5+ days. What should I do?</h3>
+        <p>First, check the account dashboard for any specific feedback or pending action items. If there is nothing obvious, contact Baidu support through the help desk inside the account. Have your account ID and the date you submitted your documents ready. For overseas advertisers, the review can take longer because additional checks are required for international business licenses.</p>
+
+        <h3>I topped up, but my status is still "Zero balance". Why?</h3>
+        <p>This usually means the payment has not been matched to your account yet. Check whether you included the correct reference number. If the payment was made more than 3 business days ago and the status has not updated, contact Baidu support with your payment receipt.</p>
+
+        <h3>My account status is "Activate" but my ads are not showing. What is wrong?</h3>
+        <p>Account-level status is only one piece. Check each level: campaign (enabled?), ad group (enabled?), keywords (sufficient bid and quality score?), and creatives (approved?). One paused campaign or one disapproved ad copy can prevent your entire account from serving ads.</p>
+
+        <h3>Can I run ads while "Under review"?</h3>
+        <p>No. Your ads will not serve until the review is complete and your account status changes to "Activate". This is why starting the application process early is critical if you have a fixed launch date.</p>
+
+        <div class="takeaway-box">
+          <h3>&#9989; Key Takeaways</h3>
+          <ul>
+            <li>Five statuses exist: Funds Not Arrived, Zero Balance, Under Review, Activate, and Rejected.</li>
+            <li>"Activate" at account level does not guarantee ads are serving — check campaign, ad group, keyword, and creative levels.</li>
+            <li>Most delays come from incomplete documentation or missing payment reference numbers.</li>
+            <li>"Rejected" status requires you to fix specific compliance issues before resubmitting.</li>
+            <li>Maintain a buffer balance to avoid "Zero Balance" disrupting your campaigns.</li>
+          </ul>
+        </div>
+
+        <div class="cta-section">
+          <h3>Stuck on Account Verification?</h3>
+          <p>We have helped hundreds of overseas brands navigate Baidu's account setup and compliance requirements. From initial application to first campaign launch, we handle the process so you don't have to.</p>
+          <a href="../contact" class="cta-button">Get Help With Your Account &rarr;</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+  <section class="related-section">
+    <div class="container">
+      <h2>Related Articles</h2>
+      <div class="related-grid">
+        <a href="../blog/baidu-mcc-account-guide" class="related-card">
+          <span>Platform</span>
+          <h4>&#128421;&#65039; Baidu MCC Account: Complete Guide to Managing Multiple Accounts</h4>
+          <p>Set up My Client Center to manage multiple Baidu PPC accounts from one dashboard.</p>
+        </a>
+        <a href="../blog/baidu-brand-plus-verification" class="related-card">
+          <span>Platform</span>
+          <h4>&#128274; Baidu Brand Plus Verification: Step-by-Step Guide</h4>
+          <p>Get the blue "V" badge on your Baidu ads to build trust with Chinese consumers.</p>
+        </a>
+        <a href="../blog/baidu-keyword-research-guide" class="related-card">
+          <span>Search Ads</span>
+          <h4>&#128270; Baidu Keyword Research: Tools, Match Types, and Bidding Strategy</h4>
+          <p>Find the right keywords, choose match types, and set bids that deliver ROI.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fl" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fl)"/><text x="16" y="21.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="800" fill="white">BPP</text></svg>Baidu PPC Pro</h3>
+        <p>We help overseas brands navigate Baidu advertising with transparent pricing, compliant campaigns, and zero guesswork. $100B+ in managed media spend across our team.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../features">Baidu PPC Setup</a></li>
+          <li><a href="../features">Keyword Research</a></li>
+          <li><a href="../features">Landing Page Localization</a></li>
+          <li><a href="../features">Compliance & Verification</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../blog">Blog</a></li>
+          <li><a href="../faq">FAQ</a></li>
+          <li><a href="../about">About Us</a></li>
+          <li><a href="../contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../privacy">Privacy Policy</a></li>
+          <li><a href="../terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2018&ndash;<script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="https://www.baidu.com/s?wd=Baidu+PPC+Pro" target="_blank" rel="noopener" aria-label="Baidu">
+          <svg viewBox="0 0 24 24" fill="#9CA3AF" stroke="none"><circle cx="12" cy="12" r="10" fill="#9CA3AF"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="white">B</text></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+(function(){const t=document.getElementById('backToTop');window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)});const s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}document.querySelectorAll('.nav-links a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop()||a.getAttribute('href')===location.pathname.split('/').pop().replace('.html',''))a.classList.add('active')});document.querySelectorAll('.nav-links.open a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop()||a.getAttribute('href')===location.pathname.split('/').pop().replace('.html',''))a.classList.add('active')})})();
+function toggleTheme(){const d=document.documentElement.getAttribute('data-theme');const n=d==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n)}
+function toggleMobileNav(){const n=document.getElementById('navLinks');const o=document.getElementById('navOverlay');const h=document.querySelector('.hamburger-icon');const c=document.querySelector('.close-icon');n.classList.toggle('open');o.classList.toggle('active');h.style.display=n.classList.contains('open')?'none':'block';c.style.display=n.classList.contains('open')?'block':'none'}
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{const n=document.getElementById('navLinks');const o=document.getElementById('navOverlay');const h=document.querySelector('.hamburger-icon');const c=document.querySelector('.close-icon');if(n.classList.contains('open')){n.classList.remove('open');o.classList.remove('active');h.style.display='block';c.style.display='none'}})});
+(function(){const e=document.getElementById('backToTop');if(e){const h=window.location.hostname==='baidumarketing.com'?'mailto:'+atob('aW5mb0BiYWlkdW1hcmtldGluZy5jb20='):'#contact';e.title='Back to top'}})();
+</script>
+
+</body>
+</html>
