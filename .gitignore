@@ -1,6 +1,14 @@
 # WorkBuddy internal
 .workbuddy/
 
+# Temp files from docx processing
+temp_*/
+
+# Utility scripts
+enhance-batch.mjs
+fix-footer-batch.mjs
+fix-takeaway-batch.mjs
+
 # OS files
 Thumbs.db
 .DS_Store
