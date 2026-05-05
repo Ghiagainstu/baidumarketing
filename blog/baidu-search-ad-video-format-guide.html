@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Baidu Search Ad Video Format Guide: Specs, Settings, and Best Practices — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Baidu search ads now prioritize video format over static images. Complete guide to video specs, account/campaign/ad group settings, Baidu's free video library, and why video CTR beats Big Image." />
+  <link rel="canonical" href="https://baidumarketing.com/blog/baidu-search-ad-video-format-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/blog/baidu-search-ad-video-format-guide" />
+  <meta property="og:title" content="Baidu Search Ad Video Format Guide: Specs, Settings, and Best Practices" />
+  <meta property="og:description" content="Baidu search ads now prioritize video format over static images. Complete guide to video specs, settings, and free Baidu video library." />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Baidu Search Ad Video Format Guide: Specs, Settings, and Best Practices" />
+  <meta name="twitter:description" content="Baidu search ads now prioritize video format. Complete guide to video specs, settings, and free Baidu video library." />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; }
+    [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
+    [data-theme="dark"] .nav-links { color: var(--gray-600); }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
+    [data-theme="dark"] .close-icon line { stroke: #D1D5DB; }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; }
+    [data-theme="dark"] .article-content h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-content h3 { color: #E5E7EB; }
+    [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb a { color: var(--blue); }
+    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
+    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .comparison-table { background: var(--gray-100); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .cta-section { background: rgba(11,15,26,.95); }
+    [data-theme="dark"] .related-section { background: var(--gray-100); }
+    [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .related-card h4 { color: var(--gray-800); }
+    [data-theme="dark"] .related-card p { color: var(--gray-600); }
+
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border:1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand h3 svg { flex-shrink: 0; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    .article-hero { padding: 80px 0 48px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); max-width: 800px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: .85rem; color: var(--gray-400); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
+    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; }
+    .article-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
+    .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
+    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    .cta-section { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); border-radius: var(--radius-lg); padding: 48px; margin: 48px 0; text-align: center; }
+    .cta-section h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: rgba(255,255,255,.8); max-width: 520px; margin: 0 auto 24px; line-height: 1.6; }
+    .cta-button { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
+    [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+    .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
+    .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+    .stat-sub { font-size: .72rem; color: var(--gray-400); margin-top: 2px; }
+
+    .blockquote-highlight { border-left: 3px solid var(--blue); background: var(--blue-subtle); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; font-style: italic; color: var(--gray-600); line-height: 1.7; font-size: .95rem; }
+    [data-theme="dark"] .blockquote-highlight { background: rgba(99,102,241,.08); }
+
+    .svg-chart-wrapper { display: flex; justify-content: center; margin: 20px 0; overflow: hidden; border-radius: 12px; }
+    .svg-chart-wrapper svg { max-width: 100%; height: auto; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; font-size: .78rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.15); border-color: rgba(99,102,241,.3); color: #818CF8; }
+    .platform-pill.video { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    [data-theme="dark"] .platform-pill.video { background: rgba(244,63,94,.12); border-color: rgba(244,63,94,.3); color: #FB7185; }
+    .platform-pill.search { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+    [data-theme="dark"] .platform-pill.search { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); color: #FCD34D; }
+
+    .spec-box { background: var(--blue-subtle); border-radius: 12px; padding: 20px 24px; margin: 20px 0; border: 1px solid var(--blue-light); }
+    [data-theme="dark"] .spec-box { background: rgba(99,102,241,.06); border-color: rgba(99,102,241,.15); }
+    .spec-box h4 { font-size: .95rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
+    .spec-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--gray-200); font-size: .85rem; }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-label { color: var(--gray-400); }
+    .spec-value { color: var(--gray-700); font-weight: 600; text-align: right; }
+    [data-theme="dark"] .spec-value { color: var(--gray-700); }
+
+    .related-section { padding: 48px 0 80px; background: var(--gray-50); }
+    .related-section h2 { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; transition: transform .25s, box-shadow .25s; display: block; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .related-card span { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #0284C7; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin: 8px 0; line-height: 1.4; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) {
+      .article-hero { padding: 56px 0 32px; }
+      .article-section { padding: 32px 0 56px; }
+      .cta-section { padding: 32px 24px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; background: #fff; }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: .9rem; color: var(--gray-600); cursor: pointer; border: none; background: none; text-align: left; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Baidu Search Ad Video Format Guide: Specs, Settings, and Best Practices",
+    "description": "Baidu search ads now prioritize video format over static images. Complete guide to video specs, account/campaign/ad group settings, Baidu's free video library, and why video CTR beats Big Image.",
+    "url": "https://baidumarketing.com/blog/baidu-search-ad-video-format-guide",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2021-09-10",
+    "dateModified": "2021-09-10",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro",
+      "url": "https://baidumarketing.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://baidumarketing.com/assets/og-brand-default.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://baidumarketing.com/blog/baidu-search-ad-video-format-guide"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav><div class="container nav-inner">
+  <a href="../index" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="l" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#l)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</a>
+  <div class="nav-links" id="navLinks">
+    <a href="../why-baidu-ppc-pro">Why Baidu PPC Pro</a><a href="../features">Services</a><a href="../pricing">Pricing</a><a href="../clients">Clients</a><a href="../faq">FAQ</a><a href="../about">About</a><a href="../blog" class="active">Blog</a><a href="../contact">Contact</a>
+    <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>Toggle Dark Mode</button>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+  <a href="../contact" class="nav-cta">Get Started &rarr;</a>
+  <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div></nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+<main>
+  <section class="article-hero">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="../index">Home</a> / <a href="../blog">Blog</a> / Video Format Guide</div>
+      <h1>Baidu Search Ad Video Format Guide: Specs, Settings, and Best Practices</h1>
+      <div class="article-meta"><span>Sep 10, 2021</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6 min read</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span></div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+
+        <p>Video is no longer an optional format on Baidu search ads — it is becoming the default. Baidu's algorithm now gives more display opportunities to video creatives than to traditional Big Image (large static image) formats. In our campaigns, video consistently outperforms static images on click-through rate, making it one of the most effective levers available in the Baidu PPC account today.</p>
+
+        <p>This guide covers everything you need to know: the exact video specifications, where to set up video in your account, the three levels of video deployment, and how to use Baidu's free video resources if you do not have your own assets.</p>
+
+        <div class="platform-pills">
+          <span class="platform-pill baidu">🔵 Baidu PPC</span>
+          <span class="platform-pill video">🎬 Search Video Ads</span>
+          <span class="platform-pill search">🔍 Paid Search</span>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">≤500MB</div>
+            <div class="stat-label">Max Video Size</div>
+            <div class="stat-sub">MP4, FLV, MOV, and more</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">≥6s</div>
+            <div class="stat-label">Min Duration</div>
+            <div class="stat-sub">No maximum limit</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">16:9</div>
+            <div class="stat-label">Desktop Spec</div>
+            <div class="stat-sub">≥1280×720</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">9:16</div>
+            <div class="stat-label">Mobile Spec</div>
+            <div class="stat-sub">Also supports 1:1</div>
+          </div>
+        </div>
+
+        <h2>🎬 Why Video on Search Ads?</h2>
+
+        <p>Baidu has supported video creatives in paid search for years, but adoption remained low among advertisers. The landscape changed when short video exploded in China — Douyin (TikTok), Kuaishou, and WeChat Channels trained users to expect video content everywhere, including search results.</p>
+
+        <p>Baidu responded by adapting its search ad algorithm to favor video formats. From our experience managing Baidu accounts for overseas brands, we see two clear trends:</p>
+
+        <ul>
+          <li><strong>More impressions for video:</strong> Baidu gives priority display to video creatives over static Big Image assets. A video ad is more likely to be shown in a prominent position than an equivalent image ad.</li>
+          <li><strong>Higher CTR:</strong> Video creatives consistently outperform static images on click-through rate. Users are simply more likely to engage with a moving image than a static one.</li>
+        </ul>
+
+        <blockquote class="blockquote-highlight">
+          If you are still only using static images on Baidu search ads, you are leaving engagement and impressions on the table. Video is not the future — it is the current standard that most advertisers have not caught up to yet.
+        </blockquote>
+
+        <h2>⚙️ How to Set Up Video Ads</h2>
+
+        <p>Video creative settings are found under the creative management section inside your Baidu paid search account. You can deploy video at three levels, each offering different degrees of control:</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Level</th><th>Scope</th><th>Best For</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Account level</td><td>Video applies to every ad across all campaigns</td><td>Brand awareness; one consistent video asset</td></tr>
+            <tr><td>Campaign level</td><td>Different videos per campaign</td><td>Campaign-specific messaging (e.g., one video for brand, another for product launch)</td></tr>
+            <tr><td>Ad group level</td><td>Different videos per ad group</td><td>Granular targeting; match video content to keyword themes</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">✅</span>
+          <div>
+            <strong>Recommendation:</strong> Start at the campaign level. Account-level is too broad (all your ads show the same video), and ad group level requires too many video assets. Campaign-level gives you meaningful control without overwhelming your production pipeline.
+          </div>
+        </div>
+
+        <h2>📐 Video Specifications</h2>
+
+        <p>Getting the specs right is critical. Baidu accepts a wide range of formats but has strict requirements for size, duration, and dimensions.</p>
+
+        <div class="spec-box">
+          <h4>Supported Formats</h4>
+          <div class="spec-row">
+            <span class="spec-label">Formats</span>
+            <span class="spec-value">MP4, FLV, MOV, M3U8, 3GP, AVI, MPG, ASF, WMV, MKV, TS, WEBM, MXF</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Max File Size</span>
+            <span class="spec-value">500MB</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Minimum Duration</span>
+            <span class="spec-value">6 seconds</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Desktop</span>
+            <span class="spec-value">16:9, ≥1280×720</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Mobile (vertical)</span>
+            <span class="spec-value">9:16, ≥720×1280</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Mobile (square)</span>
+            <span class="spec-value">1:1, ≥800×800</span>
+          </div>
+        </div>
+
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div>
+            <strong>Note on mobile:</strong> Baidu's mobile search traffic now accounts for over 80% of total search queries. If you can only produce one video, prioritize the mobile 9:16 vertical format. It reaches the largest audience segment and performs better in feed-style placements.
+          </div>
+        </div>
+
+        <h2>🎥 What If You Do Not Have Video Assets?</h2>
+
+        <p>Lacking video production capability is not a barrier to running video search ads on Baidu. The platform offers two free resources:</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Resource</th><th>What It Does</th><th>How to Access</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Baidu Video Pool</strong></td><td>A library of free stock videos and pre-made templates you can use directly in your ads</td><td>Accessible from the creative section of your Baidu account</td></tr>
+            <tr><td><strong>Baidu Video Editor</strong></td><td>An online editor that can resize, trim, and reformat your existing videos to meet Baidu's spec requirements</td><td>Available inside the ad creation workflow</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">💡</span>
+          <div>
+            <strong>Practical tip:</strong> If your existing ad video does not fit Baidu's 16:9 or 9:16 aspect ratio, try the Baidu video editor before outsourcing the work. It handles common adjustments like cropping, adding background fill, and format conversion. In most cases, it can fix spec mismatches in under a minute.
+          </div>
+        </div>
+
+        <h2>✨ Video Best Practices for Baidu Search</h2>
+
+        <p>Based on our campaign experience, here are the approaches that deliver the best results:</p>
+
+        <ul>
+          <li><strong>Keep it short and front-loaded:</strong> The first 2-3 seconds are critical. Hook the viewer immediately with your key message or a visually compelling frame. Baidu auto-plays video without sound by default, so make sure your message is clear even without audio.</li>
+          <li><strong>Match video content to keyword intent:</strong> A user searching for "industrial air compressor" wants to see a product demo, not a brand story. Align your creative with what the searcher expects to find.</li>
+          <li><strong>Add text overlays:</strong> Since Baidu search ads often play without sound, include on-screen text that communicates your value proposition. Use bold, high-contrast text that is readable on mobile screens.</li>
+          <li><strong>Test at least 2-3 variations:</strong> Run A/B tests with different video creatives to identify which style drives the highest CTR. Compare product demos vs. testimonial-style vs. animated explainer formats.</li>
+        </ul>
+
+        <div class="takeaway-box">
+          <h3>✅ Key Takeaways</h3>
+          <ul>
+            <li>Baidu's algorithm now prioritizes video over static Big Image in search ad placements.</li>
+            <li>Video consistently delivers higher CTR than static image creatives in our campaigns.</li>
+            <li>Video can be set at account, campaign, or ad group level — start with campaign-level.</li>
+            <li>Specs: MP4, ≤500MB, ≥6s duration, 16:9 (desktop) or 9:16/1:1 (mobile).</li>
+            <li>Baidu offers a free video pool (stock footage) and video editor (format conversion).</li>
+            <li>Prioritize mobile 9:16 vertical format — it reaches the largest audience.</li>
+          </ul>
+        </div>
+
+        <div class="cta-section">
+          <h3>Ready to Add Video to Your Baidu Campaigns?</h3>
+          <p>We help overseas brands produce and deploy video creatives that meet Baidu's specs and deliver results. From concept to creative to campaign — we can handle it all.</p>
+          <a href="../contact" class="cta-button">Get Started with Video Ads &rarr;</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+  <section class="related-section">
+    <div class="container">
+      <h2>Related Articles</h2>
+      <div class="related-grid">
+        <a href="../blog/baidu-paid-search-video-ads" class="related-card">
+          <span>Platform</span>
+          <h4>🎥 Baidu Paid Search Video Ads: A Complete Overview</h4>
+          <p>How Baidu search video ads work, their advantages, and best practices for deployment.</p>
+        </a>
+        <a href="../blog/baidu-feed-ads-explained" class="related-card">
+          <span>Feed Ads</span>
+          <h4>📰 How Baidu Feed Ads Work and Why They Matter</h4>
+          <p>Reach 100M+ daily active users with feed ad placements powered by search intent data.</p>
+        </a>
+        <a href="../blog/baidu-v-sign-verification-guide" class="related-card">
+          <span>Platform</span>
+          <h4>✅ What Is the Baidu V Sign and Why Your Account Needs It</h4>
+          <p>V1/V2/V3 verification levels and how to get your account approved for video ads.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fl" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fl)"/><text x="16" y="21.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="800" fill="white">BPP</text></svg>Baidu PPC Pro</h3>
+        <p>We help overseas brands navigate Baidu advertising with transparent pricing, compliant campaigns, and zero guesswork. $100B+ in managed media spend across our team.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../features">Baidu PPC Setup</a></li>
+          <li><a href="../features">Keyword Research</a></li>
+          <li><a href="../features">Landing Page Localization</a></li>
+          <li><a href="../features">Compliance & Verification</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../blog">Blog</a></li>
+          <li><a href="../faq">FAQ</a></li>
+          <li><a href="../about">About Us</a></li>
+          <li><a href="../contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../privacy">Privacy Policy</a></li>
+          <li><a href="../terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2018&ndash;<script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="https://www.baidu.com/s?wd=Baidu+PPC+Pro" target="_blank" rel="noopener" aria-label="Baidu">
+          <svg viewBox="0 0 24 24" fill="#9CA3AF" stroke="none"><circle cx="12" cy="12" r="10" fill="#9CA3AF"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="white">B</text></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+(function(){const t=document.getElementById('backToTop');window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)});const s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}document.querySelectorAll('.nav-links a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop()||a.getAttribute('href')===location.pathname.split('/').pop().replace('.html',''))a.classList.add('active')});document.querySelectorAll('.nav-links.open a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop()||a.getAttribute('href')===location.pathname.split('/').pop().replace('.html',''))a.classList.add('active')})})();
+function toggleTheme(){const d=document.documentElement.getAttribute('data-theme');const n=d==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n)}
+function toggleMobileNav(){const n=document.getElementById('navLinks');const o=document.getElementById('navOverlay');const h=document.querySelector('.hamburger-icon');const c=document.querySelector('.close-icon');n.classList.toggle('open');o.classList.toggle('active');h.style.display=n.classList.contains('open')?'none':'block';c.style.display=n.classList.contains('open')?'block':'none'}
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{const n=document.getElementById('navLinks');const o=document.getElementById('navOverlay');const h=document.querySelector('.hamburger-icon');const c=document.querySelector('.close-icon');if(n.classList.contains('open')){n.classList.remove('open');o.classList.remove('active');h.style.display='block';c.style.display='none'}})});
+</script>
+
+</body>
+</html>
