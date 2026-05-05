@@ -37,7 +37,9 @@
     .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); }
     .nav-logo:hover { color: var(--blue); }
     .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
-    .nav-links a { transition: color var(--transition-base); }
+    .nav-links a { transition: color var(--transition-base);
+      white-space: nowrap;
+      flex-shrink: 0; }
     .nav-links a:hover { color: var(--blue); }
     .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; }
     .page-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
