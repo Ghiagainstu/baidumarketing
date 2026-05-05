@@ -180,6 +180,34 @@
     .svg-chart-wrapper { display: flex; justify-content: center; margin: 20px 0; overflow: hidden; border-radius: 12px; }
     .svg-chart-wrapper svg { max-width: 100%; height: auto; }
 
+    .tip-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .tip-card { border-radius: 12px; padding: 18px 20px; border: 1px solid var(--gray-200); background: var(--gray-50); }
+    [data-theme="dark"] .tip-card { background: var(--gray-100); border-color: var(--gray-200); }
+    .tip-card .tip-icon { font-size: 1.2rem; margin-bottom: 6px; }
+    .tip-card h4 { font-size: .9rem; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+    .tip-card p { font-size: .82rem; color: var(--gray-600); line-height: 1.5; margin: 0; }
+    @media (max-width: 640px) { .tip-cards { grid-template-columns: 1fr; } }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; font-size: .78rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.15); border-color: rgba(99,102,241,.3); color: #818CF8; }
+    .platform-pill.ppc { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    [data-theme="dark"] .platform-pill.ppc { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); color: #6EE7B7; }
+    .platform-pill.search { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+    [data-theme="dark"] .platform-pill.search { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); color: #FCD34D; }
+
+    .visual-gauge { background: var(--blue-subtle); border-radius: 12px; padding: 24px; margin: 24px 0; border: 1px solid var(--blue-light); }
+    [data-theme="dark"] .visual-gauge { background: rgba(99,102,241,.06); border-color: rgba(99,102,241,.15); }
+    .visual-gauge h4 { font-size: .9rem; font-weight: 600; color: var(--gray-700); margin-bottom: 12px; text-align: center; }
+    .gauge-bar { display: flex; align-items: center; justify-content: center; gap: 4px; margin: 8px 0; }
+    .gauge-seg { height: 28px; border-radius: 4px; flex: 1; max-width: 48px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+    .gauge-seg.low { background: #F87171; }
+    .gauge-seg.med { background: #FBBF24; }
+    .gauge-seg.high { background: #60A5FA; }
+    .gauge-seg.top { background: #34D399; }
+    .gauge-labels { display: flex; justify-content: space-between; font-size: .72rem; color: var(--gray-400); margin-top: 4px; }
+
     .related-section { padding: 48px 0 80px; background: var(--gray-50); }
     .related-section h2 { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -277,6 +305,12 @@
 
         <p>This guide breaks down each term using plain language and real examples so you can navigate the Baidu PPC dashboard with confidence.</p>
 
+        <div class="platform-pills">
+          <span class="platform-pill baidu">🔵 Baidu PPC</span>
+          <span class="platform-pill ppc">🖱️ CPC Model</span>
+          <span class="platform-pill search">🔍 Search Advertising</span>
+        </div>
+
         <div class="stats-grid">
           <div class="stat-card">
             <div class="stat-value">QS</div>
@@ -300,7 +334,7 @@
           </div>
         </div>
 
-        <h2>What Is Quality Score?</h2>
+        <h2>🎯 What Is Quality Score?</h2>
 
         <p>Quality Score is Baidu's rating of how relevant your keywords, ad copy, and landing page are to the users who see your ads. Think of it as Baidu's answer to the question: "Does this ad serve our users well?"</p>
 
@@ -310,7 +344,7 @@
           Quality Score is not a vanity metric. It directly impacts your ad position and cost. A higher QS means better placement at a lower price — the single most effective lever for improving campaign efficiency.
         </blockquote>
 
-        <h3>What Determines Quality Score?</h3>
+        <h3>📋 What Determines Quality Score?</h3>
 
         <p>Baidu's Quality Score is based on four factors:</p>
 
@@ -333,16 +367,56 @@
           </div>
         </div>
 
-        <h3>How to Improve Quality Score</h3>
+        <div class="visual-gauge">
+          <h4>📊 Quality Score Scale: How Your Score Impacts Cost</h4>
+          <div class="gauge-bar">
+            <div class="gauge-seg low">1</div>
+            <div class="gauge-seg low">2</div>
+            <div class="gauge-seg low">3</div>
+            <div class="gauge-seg med">4</div>
+            <div class="gauge-seg med">5</div>
+            <div class="gauge-seg med">6</div>
+            <div class="gauge-seg high">7</div>
+            <div class="gauge-seg high">8</div>
+            <div class="gauge-seg top">9</div>
+            <div class="gauge-seg top">10</div>
+          </div>
+          <div class="gauge-labels"><span>⚠️ Poor — High CPC</span><span>⚡ Good — Moderate CPC</span><span>🏆 Excellent — Lowest CPC</span></div>
+        </div>
 
-        <ul>
-          <li><strong>Write relevant ad copy:</strong> Include the target keyword in your headline and description. Make sure the ad directly addresses the user's search intent.</li>
-          <li><strong>Group keywords by theme:</strong> Don't stuff 50 unrelated keywords into one ad group. Each ad group should contain keywords that share a common search intent.</li>
-          <li><strong>Optimize your landing page:</strong> The page users land on should clearly reflect the ad's message. A mismatch between your ad copy and landing page content is the quickest way to tank your QS.</li>
-          <li><strong>Pause low-performing keywords:</strong> Keywords with consistently low CTR and high cost drag down your account average. Pause them or tighten match types.</li>
-        </ul>
+        <h3>⚡ How to Improve Quality Score</h3>
 
-        <h2>What Is Ranking (Ad Position)?</h2>
+        <div class="tip-cards">
+          <div class="tip-card">
+            <div class="tip-icon">✍️</div>
+            <h4>Write Relevant Ad Copy</h4>
+            <p>Include the target keyword in your headline and description. The ad must directly address the user's search intent.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">📂</div>
+            <h4>Group Keywords by Theme</h4>
+            <p>Don't stuff 50 unrelated keywords into one ad group. Each group should share a common search intent.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">🌐</div>
+            <h4>Optimize Landing Page</h4>
+            <p>The landing page must deliver on the ad's promise. A mismatch between ad copy and page content is the fastest way to tank your QS.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">⏸️</div>
+            <h4>Pause Low Performers</h4>
+            <p>Keywords with consistently low CTR and high cost drag down your entire account average. Pause them or tighten match types.</p>
+          </div>
+        </div>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">💡</span>
+          <div>
+            <strong>QS Impact:</strong> Two advertisers bidding the same amount on the same keyword can pay very different CPCs. The one with QS 10 might pay <strong>¥2.50</strong> per click while the one with QS 5 pays <strong>¥5.00</strong> — a 2x difference caused entirely by Quality Score. Investing time in QS optimization is the highest-ROI activity in Baidu PPC management.
+          </div>
+        </div>
+
+        <h2>📊 What Is Ranking (Ad Position)?</h2>
 
         <p>Ranking refers to where your ad appears among the paid search results. Historically, Baidu displayed ads on both the left side (top 5 positions) and right side of the search results page. Since mid-2016, Baidu has removed all right-side ad positions. Today, all paid results appear on the left, and the number of ad slots is limited.</p>
 
@@ -366,7 +440,7 @@
 
         <p>A better ranking brings more attention from searchers. Users naturally scan top-to-bottom, so the #1 position typically receives the highest CTR, which in turn feeds back into a higher Quality Score — creating a virtuous cycle.</p>
 
-        <h2>What Is Bidding Price?</h2>
+        <h2>💰 What Is Bidding Price?</h2>
 
         <p>Your bidding price is the maximum amount you are willing to pay for a single click on your ad. This is a ceiling, not the actual amount you pay.</p>
 
@@ -379,7 +453,7 @@
 
         <p>Bidding is one of several factors that affect your ranking, but it is not the only one. A lower bid combined with a high quality score can outrank a higher bid with a low quality score. This is why optimizing Quality Score is often more cost-effective than simply raising your bids.</p>
 
-        <h2>What Is CPC (Cost Per Click)?</h2>
+        <h2>💲 What Is CPC (Cost Per Click)?</h2>
 
         <p>CPC is the actual price you pay when a user clicks your ad. Unlike your bid — which is a fixed amount you set — CPC is a dynamic number calculated based on the real-time auction conditions at the moment of the search.</p>
 
@@ -407,7 +481,7 @@
           </div>
         </div>
 
-        <h2>Putting It All Together: A Worked Example</h2>
+        <h2>🔢 Putting It All Together: A Worked Example</h2>
 
         <p>Here is how the three terms interact in a real scenario:</p>
 
