@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Baidu URL Wildcards: Complete Tracking Guide — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Master Baidu URL wildcards to track keywords, campaigns, and ad groups. Complete guide with all 9 parameters, usage examples, and UTM integration tips." />
+  <link rel="canonical" href="https://baidumarketing.com/blog/baidu-url-wildcard-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/blog/baidu-url-wildcard-guide" />
+  <meta property="og:title" content="Baidu URL Wildcards: Complete Tracking Guide" />
+  <meta property="og:description" content="Master Baidu URL wildcards to track keywords, campaigns, and ad groups. Complete guide with all 9 parameters, usage examples, and UTM integration tips." />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Baidu URL Wildcards: Complete Tracking Guide" />
+  <meta name="twitter:description" content="Learn how Baidu URL wildcards work to track keywords, campaigns, and ad groups. Complete guide with all 9 supported parameters, usage examples, and UTM integration tips." />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --gradient-surface: linear-gradient(135deg, #F9FAFB 0%, #F3F4FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      --gradient-surface: linear-gradient(135deg, #111827 0%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; backdrop-filter: blur(12px); border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; white-space: nowrap; flex-shrink: 0; }
+    [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
+    [data-theme="dark"] .nav-links { color: var(--gray-600); }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
+    [data-theme="dark"] .close-icon line { stroke: #D1D5DB; }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .article-hero p { color: var(--gray-600); }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+    [data-theme="dark"] .article-section h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-section h3 { color: var(--gray-800); }
+    [data-theme="dark"] .article-section p { color: var(--gray-600); }
+    [data-theme="dark"] .article-section ul li { color: var(--gray-600); }
+    [data-theme="dark"] .callout { background: var(--gray-100) !important; border-color: var(--gray-200); }
+    [data-theme="dark"] .callout.tip { border-left-color: #10B981; }
+    [data-theme="dark"] .callout.warning { border-left-color: #F59E0B; }
+    [data-theme="dark"] .callout.insight { border-left-color: var(--blue); }
+    [data-theme="dark"] .callout p { color: var(--gray-600); }
+    [data-theme="dark"] .takeaway { background: rgba(99,102,241,.08) !important; border-color: rgba(99,102,241,.15); }
+    [data-theme="dark"] .takeaway h3 { color: var(--blue); }
+    [data-theme="dark"] .takeaway li { color: var(--gray-600); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-100); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .comparison-table tr:nth-child(even) td { background: var(--gray-50); }
+    [data-theme="dark"] .comparison-table th { color: var(--gray-800); }
+    [data-theme="dark"] .stats-grid .stat-card { background: var(--gray-100) !important; }
+    [data-theme="dark"] .stats-grid .stat-value { color: var(--blue); }
+    [data-theme="dark"] .stats-grid .stat-label { color: var(--gray-400); }
+    [data-theme="dark"] .blockquote-highlight { background: var(--gray-100) !important; border-left-color: var(--blue); }
+    [data-theme="dark"] .blockquote-highlight p { color: var(--gray-700); }
+    [data-theme="dark"] .blockquote-highlight cite { color: var(--gray-400); }
+    [data-theme="dark"] .cta-section { background: var(--gray-100) !important; }
+    [data-theme="dark"] .cta-section h2 { color: #F9FAFB; }
+    [data-theme="dark"] .cta-section p { color: var(--gray-600); }
+    [data-theme="dark"] .related-section { background: var(--gray-50); }
+    [data-theme="dark"] .related-section h2 { color: #F9FAFB; }
+    [data-theme="dark"] .related-card { background: var(--gray-100) !important; border-color: var(--gray-200); }
+    [data-theme="dark"] .related-card h3 { color: var(--gray-800); }
+    [data-theme="dark"] .related-card p { color: var(--gray-600); }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; border-top-color: var(--gray-200); }
+    [data-theme="dark"] .footer-brand h3 { color: #fff; }
+    [data-theme="dark"] .footer-col h4 { color: #fff; }
+    [data-theme="dark"] .footer-links a { color: var(--gray-400); }
+    [data-theme="dark"] .footer-copy { color: var(--gray-400); }
+    [data-theme="dark"] .footer-social a { background: rgba(255,255,255,.06); }
+    [data-theme="dark"] .footer-social a:hover { background: var(--blue); }
+    [data-theme="dark"] .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    [data-theme="dark"] .back-to-top { background: var(--gray-200) !important; color: var(--gray-600); }
+    [data-theme="dark"] .back-to-top:hover { background: var(--blue) !important; color: #fff; }
+    [data-theme="dark"] .nav-mobile-cta,.nav-mobile-theme{display:none}
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); white-space: nowrap; flex-shrink: 0; }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-cta:active { transform: translateY(0) scale(.97); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    /* ARTICLE HERO */
+    .article-hero { padding: 72px 0 56px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero .breadcrumb { font-size: .82rem; color: var(--gray-400); margin-bottom: 16px; }
+    .article-hero .breadcrumb a { color: var(--blue); }
+    .article-hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); margin-bottom: 12px; }
+    .article-hero p { font-size: 1rem; color: var(--gray-600); max-width: 680px; line-height: 1.7; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: .82rem; color: var(--gray-400); margin-top: 20px; }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-meta svg { width: 14px; height: 14px; flex-shrink: 0; stroke: currentColor; }
+
+    /* ARTICLE CONTENT */
+    .article-content { max-width: 760px; margin: 0 auto; padding: 48px 0 56px; }
+    .article-content h2 { font-size: 1.6rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; line-height: 1.3; }
+    .article-content h3 { font-size: 1.2rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; line-height: 1.4; }
+    .article-content p { font-size: .95rem; color: var(--gray-600); margin-bottom: 16px; line-height: 1.75; }
+    .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
+    .article-content li { font-size: .95rem; color: var(--gray-600); margin-bottom: 8px; line-height: 1.7; }
+    .article-content strong { color: var(--gray-800); font-weight: 600; }
+    .article-content code { background: var(--gray-100); padding: 2px 8px; border-radius: 4px; font-size: .85rem; color: var(--blue); border: 1px solid var(--gray-200); word-break: break-all; }
+
+    /* CALL OUT */
+    .callout { border: 1px solid var(--gray-200); border-left: 4px solid var(--blue); border-radius: var(--radius); padding: 20px 24px; margin: 24px 0; background: var(--gray-50); }
+    .callout.tip { border-left-color: #10B981; }
+    .callout.warning { border-left-color: #F59E0B; }
+    .callout.insight { border-left-color: var(--blue); }
+    .callout .callout-title { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: .9rem; color: var(--gray-800); margin-bottom: 6px; }
+    .callout p { font-size: .9rem !important; color: var(--gray-600) !important; margin-bottom: 0 !important; }
+
+    /* TAKEAWAY */
+    .takeaway { border: 1px solid var(--blue-glow); background: var(--blue-subtle); border-radius: var(--radius-lg); padding: 28px 32px; margin: 32px 0; }
+    .takeaway h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .takeaway ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .takeaway li { font-size: .9rem; color: var(--gray-600); display: flex; align-items: flex-start; gap: 10px; margin: 0; }
+    .takeaway li::before { content: '✓'; color: #fff; background: var(--blue); width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    /* COMPARISON TABLE */
+    .comparison-table-wrapper { overflow-x: auto; margin: 24px 0; border-radius: var(--radius); border: 1px solid var(--gray-200); }
+    .comparison-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    .comparison-table th { background: var(--gray-100); color: var(--gray-800); font-weight: 600; padding: 12px 16px; text-align: left; border-bottom: 2px solid var(--gray-200); }
+    .comparison-table td { padding: 10px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); vertical-align: top; }
+    .comparison-table tr:nth-child(even) td { background: var(--gray-50); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* STATS GRID */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px 16px; text-align: center; }
+    .stat-card .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1.1; }
+    .stat-card .stat-label { font-size: .78rem; color: var(--gray-400); margin-top: 6px; font-weight: 500; }
+
+    /* BLOCKQUOTE */
+    .blockquote-highlight { border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+    .blockquote-highlight p { font-size: .95rem !important; color: var(--gray-700); font-style: italic; line-height: 1.7 !important; margin-bottom: 8px !important; }
+    .blockquote-highlight cite { display: block; font-size: .82rem; color: var(--gray-400); font-style: normal; margin-top: 4px; }
+
+    /* SVG CHART CONTAINER */
+    .svg-chart { margin: 28px 0; text-align: center; }
+    .svg-chart svg { max-width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--gray-200); background: #fff; }
+    [data-theme="dark"] .svg-chart svg { background: #111827; border-color: var(--gray-200); }
+
+    /* CTA */
+    .cta-section { text-align: center; background: var(--gray-50); border-radius: var(--radius-xl); padding: 48px 32px; margin: 48px 0 24px; border: 1px solid var(--gray-200); }
+    .cta-section h2 { font-size: 1.5rem; font-weight: 800; color: var(--gray-800); margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: var(--gray-600); max-width: 500px; margin: 0 auto 24px; }
+    .cta-section .cta-btn { display: inline-block; background: var(--gradient-brand); color: #fff; padding: 14px 36px; border-radius: 8px; font-size: .95rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+    .cta-section .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(41,50,225,.35); }
+
+    /* RELATED */
+    .related-section { background: var(--gray-50); padding: 56px 0; margin-top: 16px; }
+    .related-section h2 { font-size: 1.4rem; font-weight: 700; color: var(--gray-800); margin-bottom: 28px; text-align: center; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; transition: box-shadow var(--transition-smooth); }
+    .related-card:hover { box-shadow: var(--shadow-md); }
+    .related-card .related-tag { font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--blue); margin-bottom: 8px; }
+    .related-card h3 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin-bottom: 6px; }
+    .related-card h3 a { transition: color var(--transition-base); }
+    .related-card h3 a:hover { color: var(--blue); }
+    .related-card p { font-size: .82rem; color: var(--gray-400); line-height: 1.6; }
+
+    /* FOOTER */
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: .82rem; color: #6B7280; }
+    .footer-links a:hover { color: #fff; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    /* BACK TO TOP */
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-mobile-cta,.nav-mobile-theme{display:none !important}
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; background: #fff; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; }
+      [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); transition: background .15s; white-space: nowrap; }
+      [data-theme="dark"] .nav-links.open a { color: #D1D5DB; border-bottom-color: var(--gray-200); }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.1); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .article-content { padding: 32px 0 40px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .cta-section { padding: 32px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .article-hero h1 { font-size: 1.5rem; }
+      .article-hero { padding: 48px 0 36px; }
+      .article-meta { flex-direction: column; gap: 8px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .stat-card .stat-value { font-size: 1.4rem; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .comparison-table th, .comparison-table td { padding: 8px 10px; font-size: .78rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="../index" class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logoGrad)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>
+        Baidu PPC Pro
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../why-baidu-ppc-pro">Why Baidu PPC Pro</a>
+        <a href="../features">Services</a>
+        <a href="../pricing">Pricing</a>
+        <a href="../clients">Clients</a>
+        <a href="../faq">FAQ</a>
+        <a href="../about">About</a>
+        <a href="../blog">Blog</a>
+        <a href="../contact">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="2" rx="1" fill="#1F2937"/><rect x="3" y="11" width="18" height="2" rx="1" fill="#1F2937"/><rect x="3" y="17" width="18" height="2" rx="1" fill="#1F2937"/></svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" style="display:none"><line x1="6" y1="6" x2="18" y2="18" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="6" x2="6" y2="18" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true" onclick="toggleMobileNav()"></div>
+  </nav>
+
+  <main>
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="../blog">← Back to Blog</a></div>
+        <h1>How to Track Every Click: A Complete Guide to Baidu URL Wildcards</h1>
+        <p>URL wildcards let you pass keyword IDs, campaign IDs, and other tracking data through your landing page URLs. Here is everything you need to know about the 9 supported wildcard parameters.</p>
+        <div class="article-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May 19, 2023</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> 6 min read</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <div class="container">
+      <article class="article-content">
+
+        <p>Every click on your Baidu ads carries information. Which keyword triggered it? Which ad group? Which campaign? The answer to each question lives inside Baidu's platform — but getting it into your analytics system requires URL wildcards.</p>
+
+        <p>Baidu supports <strong>9 active wildcard parameters</strong> that can be inserted into keyword landing page URLs, creative URLs, and mobile URLs. When a user clicks your ad, each wildcard is replaced with its corresponding value in real-time, allowing your analytics platform to attribute conversions back to the correct keywords, ad groups, and campaigns.</p>
+
+        <p>Here is a complete breakdown of every wildcard parameter, how to use them, and the best practices we have developed from managing millions of dollars in Baidu ad spend.</p>
+
+        <!-- STATS GRID -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">9</div>
+            <div class="stat-label">Active Wildcards</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">7</div>
+            <div class="stat-label">Retired (Deprecated)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">2</div>
+            <div class="stat-label">Encoding Options</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Automated Replacement</div>
+          </div>
+        </div>
+
+        <h2>What Are Baidu URL Wildcards?</h2>
+
+        <p>URL wildcards are placeholder parameters that Baidu automatically replaces with live values when an ad is clicked. Think of them as dynamic variables — you insert the placeholder into your landing page URL, and Baidu fills in the actual value at the moment of the click.</p>
+
+        <p>The basic concept is similar to Google Ads ValueTrack parameters, though the specific parameters and their behavior differ significantly. Baidu wildcards support tracking at every level of the account hierarchy — from the account ID down to the specific keyword variant.</p>
+
+        <div class="callout insight">
+          <div class="callout-title">💡 Key Insight</div>
+          <p>URL wildcards work in keyword landing page URLs, creative (ad) landing page URLs, mobile URLs, and path sub-chains in additional creatives. They do <strong>not</strong> work in display URLs.</p>
+        </div>
+
+        <h2>Complete Wildcard Reference</h2>
+
+        <p>Here is every active wildcard parameter supported by Baidu search marketing, with its replacement value and typical use case.</p>
+
+        <!-- COMPARISON TABLE -->
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Replaced With</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>{userid}</code></td>
+                <td>Account ID (globally unique)</td>
+                <td>Multi-account tracking</td>
+              </tr>
+              <tr>
+                <td><code>{planid}</code></td>
+                <td>Campaign ID (globally unique)</td>
+                <td>Campaign-level attribution</td>
+              </tr>
+              <tr>
+                <td><code>{unitid}</code></td>
+                <td>Ad group ID (globally unique)</td>
+                <td>Ad group performance</td>
+              </tr>
+              <tr>
+                <td><code>{keywordid}</code></td>
+                <td>Keyword ID (globally unique)</td>
+                <td>Keyword-level ROI tracking</td>
+              </tr>
+              <tr>
+                <td><code>{creative}</code></td>
+                <td>Creative (ad) ID</td>
+                <td>Ad copy testing</td>
+              </tr>
+              <tr>
+                <td><code>{matchtype}</code></td>
+                <td>1 = exact, 2 = phrase</td>
+                <td>Match type performance</td>
+              </tr>
+              <tr>
+                <td><code>{dongtai}</code></td>
+                <td>1 = dynamic ad, 0 = standard</td>
+                <td>Dynamic ad monitoring</td>
+              </tr>
+              <tr>
+                <td><code>{crowdid}</code></td>
+                <td>Audience package ID (0 = none)</td>
+                <td>Audience targeting validation</td>
+              </tr>
+              <tr>
+                <td><code>{trig_flag}</code></td>
+                <td>at / zx / nm</td>
+                <td>Traffic expansion tracking</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Keyword Encoding Parameters</h3>
+
+        <p>Two additional parameters handle keyword encoding for landing pages that use different character encodings. This is critical for Chinese-language keywords.</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Encoding</th>
+                <th>Example Output</th>
+                <th>Use When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>{kw_enc}</code></td>
+                <td>GBK → URL-encoded</td>
+                <td><code>%CF%CA%BB%A8</code></td>
+                <td>Landing page uses GBK encoding</td>
+              </tr>
+              <tr>
+                <td><code>{kw_enc_utf8}</code></td>
+                <td>UTF-8 → URL-encoded</td>
+                <td><code>%E9%B2%9C%E8%8A%B1</code></td>
+                <td>Landing page uses UTF-8 encoding</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-title">⚠️ Important Note on Encoding</div>
+          <p>Baidu's default Chinese character encoding is GBK, not UTF-8. If your landing page uses UTF-8 (as most modern websites do), use <code>{kw_enc_utf8}</code> instead of <code>{kw_enc}</code>. Using the wrong encoding will produce garbled characters that break your analytics data.</p>
+        </div>
+
+        <h2>How URL Wildcards Work: A Practical Example</h2>
+
+        <p>Let's walk through a real scenario. Your original keyword landing page URL is:</p>
+
+        <p><code>http://www.yoursite.com</code></p>
+
+        <p>After adding several wildcard parameters, the URL becomes:</p>
+
+        <p><code>http://www.yoursite.com/?a_keywordid={keywordid}&a_creative={creative}&a_matchtype={matchtype}&a_dongtai={dongtai}</code></p>
+
+        <p>When a user clicks your ad, Baidu replaces each wildcard with its actual value. The resulting request sent to your server looks like:</p>
+
+        <p><code>http://www.yoursite.com/?a_keywordid=123456789&a_creative=98765432&a_matchtype=1&a_dongtai=0</code></p>
+
+        <p>Your analytics platform can now tell you exactly which keyword (ID 123456789) triggered the click, which creative (98765432) was shown, that it was an exact match (1), and that it was not a dynamic ad (0).</p>
+
+        <!-- SVG FLOW CHART -->
+        <div class="svg-chart">
+          <svg viewBox="0 0 680 240" width="680" height="240">
+            <defs>
+              <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2932E1"/>
+                <stop offset="100%" stop-color="#4F46E5"/>
+              </linearGradient>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#9CA3AF"/></marker>
+            </defs>
+            <!-- Step 1: URL -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="40" y="20" width="160" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="120" y="35" text-anchor="middle">URL Contains</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="120" y="55" text-anchor="middle">{keywordid} {creative}</text>
+            <!-- Arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="200" y1="45" x2="260" y2="45"/>
+            <!-- Step 2: Click -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="260" y="20" width="140" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="330" y="35" text-anchor="middle">User Clicks Ad</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="330" y="55" text-anchor="middle">Baidu receives click</text>
+            <!-- Arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="400" y1="45" x2="460" y2="45"/>
+            <!-- Step 3: Replace -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="460" y="20" width="180" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="550" y="35" text-anchor="middle">Wildcard Replacement</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="550" y="55" text-anchor="middle">Baidu fills in live values</text>
+            <!-- Down arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="550" y1="70" x2="550" y2="120"/>
+            <!-- Step 4: Redirect -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="460" y="120" width="180" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="550" y="135" text-anchor="middle">Redirect to LP</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="550" y="155" text-anchor="middle">URL with real parameters</text>
+            <!-- Left arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="460" y1="145" x2="400" y2="145"/>
+            <!-- Step 5: Server -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="260" y="120" width="140" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="330" y="135" text-anchor="middle">Your Server</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="330" y="155" text-anchor="middle">Captures tracking data</text>
+            <!-- Left arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="260" y1="145" x2="200" y2="145"/>
+            <!-- Step 6: Analytics -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="40" y="120" width="160" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="120" y="135" text-anchor="middle">Analytics Platform</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="120" y="155" text-anchor="middle">Attribution &amp; Optimization</text>
+          </svg>
+        </div>
+
+        <h2>Combining Baidu Wildcards with Google UTM Parameters</h2>
+
+        <p>If you use Google Analytics or another UTM-based analytics platform, the Baidu URL wildcard system works seamlessly alongside standard UTM parameters. You can mix them in the same URL:</p>
+
+        <p><code>https://www.yoursite.com/?utm_source=baidu&utm_medium=cpc&utm_campaign={planid}&utm_term={kw_enc_utf8}&utm_content={creative}</code></p>
+
+        <p>This approach gives you the best of both worlds — standardized UTM reporting in your analytics dashboard, combined with Baidu-specific tracking parameters that can be processed by your own server-side logic or a third-party attribution tool.</p>
+
+        <div class="callout tip">
+          <div class="callout-title">✅ Pro Tip</div>
+          <p>Always include <code>{keywordid}</code> and <code>{planid}</code> as a minimum baseline. These two parameters alone let you attribute conversions to the keyword and campaign level, which covers 90% of use cases.</p>
+        </div>
+
+        <h2>Deprecated Wildcards (No Longer Supported)</h2>
+
+        <p>Baidu has retired several wildcards as the platform evolved. If you see these in older account configurations, remove them — they no longer pass any value:</p>
+
+        <p><code>{pagenum}</code>, <code>{adposition}</code>, <code>{mediatype}</code>, <code>{placement}</code>, <code>{bidurl}</code>, <code>{haoci}</code>, <code>{abtest}</code></p>
+
+        <div class="callout warning">
+          <div class="callout-title">⚠️ Warning</div>
+          <p>Using deprecated wildcards will not cause errors, but they will not populate any values either. This creates a false sense of tracking coverage — your analytics reports will show clicks with missing campaign data, which is worse than having no tracking at all.</p>
+        </div>
+
+        <h2>7 Rules for Using URL Wildcards Correctly</h2>
+
+        <ol>
+          <li><strong>Wildcards are case-sensitive.</strong> <code>{Creative}</code> does not work — use <code>{creative}</code> (all lowercase). Baidu performs no case normalization on parameter names.</li>
+          <li><strong>Multiple identical wildcards repeat the same value.</strong> If you include <code>{keywordid}</code> twice in the same URL, both instances will be replaced with the same keyword ID.</li>
+          <li><strong>Invalid wildcards are silently ignored.</strong> If you submit a mistyped parameter, Baidu leaves it as plain text in the URL — no error message, no warning.</li>
+          <li><strong>Wildcards do not affect URL connectivity.</strong> Baidu does not validate whether the final URL is reachable. Ensure your landing page handles all possible parameter combinations.</li>
+          <li><strong>Display URLs do not support wildcards.</strong> They only work in landing page URLs, mobile URLs, and path sub-chains.</li>
+          <li><strong>Test with a single parameter first.</strong> Deploy one wildcard, verify it works in your analytics, then add more. Debugging 9 parameters at once is painful.</li>
+          <li><strong>Use query parameter prefixes.</strong> Instead of bare IDs (<code>?123</code>), use named parameters (<code>?kw_id=123</code>). This prevents conflicts with other URL parameters.</li>
+        </ol>
+
+        <h2>Encoding Considerations for Chinese Keywords</h2>
+
+        <p>One of the most common mistakes we see is choosing the wrong encoding parameter for Chinese keywords. The default Baidu encoding is GBK, but most modern landing pages use UTF-8. Using <code>{kw_enc}</code> on a UTF-8 landing page produces garbled, double-encoded characters that are useless for analytics.</p>
+
+        <p>Here is how to choose:</p>
+
+        <ul>
+          <li><strong>Your landing page uses GBK:</strong> Use <code>{kw_enc}</code>. After URL-decoding, the keyword will be in GBK format.</li>
+          <li><strong>Your landing page uses UTF-8 (most common):</strong> Use <code>{kw_enc_utf8}</code>. After URL-decoding, the keyword will be in UTF-8 format.</li>
+          <li><strong>Not sure which encoding your landing page uses:</strong> Check the <code>&lt;meta charset&gt;</code> tag in your page HTML. If it says <code>utf-8</code> (or <code>UTF-8</code>), use <code>{kw_enc_utf8}</code>.</li>
+        </ul>
+
+        <!-- BLOCKQUOTE -->
+        <div class="blockquote-highlight">
+          <p>"Getting URL wildcards right is one of the highest-ROI technical changes you can make to a Baidu PPC account. Without proper tracking parameters, every optimization decision is based on guesswork."</p>
+          <cite>— Baidu PPC Pro Team</cite>
+        </div>
+
+        <h2>Audience and Traffic Expansion Tracking</h2>
+
+        <p>Two advanced parameters deserve special attention because they unlock insights that most advertisers miss:</p>
+
+        <h3><code>{crowdid}</code> — Audience Targeting Validation</h3>
+        <p>When you target specific audience packages, <code>{crowdid}</code> returns the audience package ID that the clicked user matched, or <code>0</code> if no audience was matched. This is invaluable for verifying that your audience targeting is actually firing — you can compare the proportion of clicks with crowdid > 0 against your intended targeting coverage.</p>
+
+        <h3><code>{trig_flag}</code> — Traffic Expansion Monitoring</h3>
+        <p>This parameter tells you whether a click came from automatic traffic expansion. It returns three possible values: <code>at</code> (automatic traffic expansion), <code>zx</code> (smart matching), or <code>nm</code> (normal traffic). If you are testing traffic expansion features, this parameter is essential for measuring the incremental value versus the cost.</p>
+
+        <!-- TAKEAWAY -->
+        <div class="takeaway">
+          <h3>📋 Key Takeaways</h3>
+          <ul>
+            <li>Baidu supports 9 active URL wildcard parameters across the full account hierarchy</li>
+            <li>Minimum recommended setup: <code>{keywordid}</code> for keyword attribution + <code>{planid}</code> for campaign attribution</li>
+            <li>Combine Baidu wildcards with Google UTM parameters for dual-platform tracking</li>
+            <li>Paired parameters are case-sensitive — always use lowercase</li>
+            <li>Use <code>{kw_enc_utf8}</code> for UTF-8 landing pages, <code>{kw_enc}</code> for GBK</li>
+            <li>Replace all 7 deprecated wildcards with active alternatives</li>
+            <li>Test one parameter at a time to isolate configuration issues</li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+          <h2>Need Help Setting Up Baidu Tracking?</h2>
+          <p>Our team has implemented URL wildcard tracking for hundreds of Baidu PPC accounts. We can audit your current setup, recommend the right parameters, and help you integrate with your analytics platform.</p>
+          <a href="../contact" class="cta-btn">Talk to Our Team →</a>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- RELATED -->
+    <section class="related-section">
+      <div class="container">
+        <h2>📖 Related Articles</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <div class="related-tag">Platform</div>
+            <h3><a href="../blog/baidu-keyword-match-types-guide">🔍 Baidu Keyword Match Types: A Complete Guide</a></h3>
+            <p>Understand exact, phrase and broad match in Baidu PPC, including setup, best practices, and impact on campaign performance.</p>
+          </div>
+          <div class="related-card">
+            <div class="related-tag">Platform</div>
+            <h3><a href="../blog/baidu-mcc-account-guide">📱 Managing Multiple Baidu PPC Accounts with MCC</a></h3>
+            <p>How to set up and manage multiple Baidu PPC accounts using the MCC (My Client Center) structure.</p>
+          </div>
+          <div class="related-card">
+            <div class="related-tag">Strategy</div>
+            <h3><a href="../blog/baidu-ppc-terms-explained">🧠 Baidu PPC Terms Explained: Quality Score, Ranking &amp; CPC</a></h3>
+            <p>A deep dive into the key metrics that determine your Baidu ad performance and costs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="g2" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#g2)"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg> Baidu PPC Pro</h3>
+          <p>Your trusted partner for Baidu PPC advertising. We help global brands access China's $100B+ digital advertising market with transparent pricing, local expertise, and data-driven strategies.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../why-baidu-ppc-pro">Why Baidu PPC Pro</a></li>
+            <li><a href="../features">Features</a></li>
+            <li><a href="../pricing">Pricing</a></li>
+            <li><a href="../clients">Clients</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about">About Us</a></li>
+            <li><a href="../blog">Blog</a></li>
+            <li><a href="../faq">FAQ</a></li>
+            <li><a href="../contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy">Privacy Policy</a></li>
+            <li><a href="../terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2018-<script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+        <div class="footer-links">
+          <div class="footer-social">
+            <a href="https://www.baidu.com/s?wd=Baidu+PPC+Pro" target="_blank" rel="noopener" aria-label="Baidu">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M4.5 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm15 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-3.5 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm7 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const d = document.documentElement;
+      const t = d.getAttribute('data-theme');
+      const next = t === 'dark' ? 'light' : 'dark';
+      d.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+    (function() { const t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
+
+    // Mobile nav toggle
+    function toggleMobileNav() {
+      const links = document.getElementById('navLinks');
+      const overlay = document.getElementById('navOverlay');
+      const hamburger = document.querySelector('.hamburger-icon');
+      const close = document.querySelector('.close-icon');
+      const isOpen = links.classList.toggle('open');
+      overlay.classList.toggle('active');
+      hamburger.style.display = isOpen ? 'none' : 'block';
+      close.style.display = isOpen ? 'block' : 'none';
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+      if (window.innerWidth <= 900) toggleMobileNav();
+    }));
+
+    // Back to top
+    window.addEventListener('scroll', () => {
+      document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Baidu URL Wildcards: Complete Tracking Guide",
+    "description": "Learn how Baidu URL wildcards work to track keywords, campaigns, and ad groups. Complete guide with all 9 supported parameters, usage examples, and UTM integration tips.",
+    "url": "https://baidumarketing.com/blog/baidu-url-wildcard-guide",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2023-05-19",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://baidumarketing.com/blog/baidu-url-wildcard-guide"
+    }
+  }
+  </script>
+</body>
+</html>
