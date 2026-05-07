@@ -1,315 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://baidumarketing.com/</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://baidumarketing.com</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/" />
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://baidumarketing.com/why-baidu-ppc-pro</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://baidumarketing.com/about</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/about" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/about" />
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/features</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/features" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/features" />
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/pricing</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/pricing" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/pricing" />
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/clients</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/clients" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/clients" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/faq</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/about</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/faq" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/faq" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/contact</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/contact" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/contact" />
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/blog</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/blog" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/blog" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/why-baidu-ppc-pro</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/why-baidu-ppc-pro" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/why-baidu-ppc-pro" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/china-geo</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/china-geo" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/china-geo" />
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/privacy</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/privacy" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/privacy" />
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/terms</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://baidumarketing.com/terms" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/terms" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/8-ways-lower-baidu-cpc</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/blog/ai-assistants-vs-baidu</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/blog/baidu-2025-earnings-geo</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-ads-foreign-business</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-app-ecosystem</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-ecosystem-numbers</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-feed-account-structure</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-feed-ads-explained</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-pricing-models</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-user-data-targeting</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/china-internet-numbers-2025</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/digital-consumer-9trillion</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/digital-marketing-china</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/feed-landing-page-optimization</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/keyword-research-baidu</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/landing-page-bounce-rate</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/native-ads-vs-feed-ads</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/ocpc-explained</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/search-vs-ai-usage</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-vs-google-ppc-differences</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/cpm-ocpm-ecpm-explained</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/rising-cpm-bad-baidu</loc>
-    <lastmod>2026-05-03</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/blog/baidu-ad-billing-models-explained</loc>
-    <lastmod>2026-05-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/8-ways-lower-baidu-cpc</loc>
-    <lastmod>2019-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-audience-targeting-guide</loc>
-    <lastmod>2019-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-brand-zone-generic-keywords</loc>
-    <lastmod>2020-06-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-mcc-account-guide</loc>
-    <lastmod>2019-12-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-shared-budget-guide</loc>
-    <lastmod>2023-03-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-paid-search-video-ads</loc>
-    <lastmod>2021-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-ppc-different-domain</loc>
-    <lastmod>2020-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-invalid-click-protection</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-brand-protection-guide</loc>
-    <lastmod>2019-02-07</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/blog/baidu-ad-display-name-update</loc>
-    <lastmod>2021-11-10</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://baidumarketing.com/blog/baidu-v-sign-verification-guide</loc>
-    <lastmod>2019-06-11</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://baidumarketing.com/blog/baidu-ads-foreign-business</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://baidumarketing.com/blog/baidu-ppc-account-status-guide</loc>
-    <lastmod>2020-09-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://baidumarketing.com/blog/baidu-app-ecosystem</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://baidumarketing.com/blog/can-i-do-baidu-ppc</loc>
-    <lastmod>2018-11-13</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://baidumarketing.com/blog/baidu-audience-targeting-guide</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://baidumarketing.com/blog/how-much-does-baidu-ppc-cost</loc>
-    <lastmod>2018-12-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://baidumarketing.com/blog/baidu-brand-protection-guide</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://baidumarketing.com/blog/baidu-ppc-terms-explained</loc>
-    <lastmod>2019-01-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://baidumarketing.com/blog/baidu-brand-zone-generic-keywords</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://baidumarketing.com/blog/baidu-search-ad-video-format-guide</loc>
-    <lastmod>2021-09-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://baidumarketing.com/blog/baidu-ecosystem-numbers</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-feed-account-structure</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-feed-ads-explained</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-invalid-click-protection</loc>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/blog/baidu-keyword-match-types-guide</loc>
-    <lastmod>2019-04-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-mcc-account-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-paid-search-video-ads</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-ppc-account-status-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-ppc-different-domain</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-ppc-terms-explained</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-pricing-models</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-search-ad-video-format-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-shared-budget-guide</loc>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baidumarketing.com/blog/baidu-url-wildcard-guide</loc>
-    <lastmod>2023-05-19</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://baidumarketing.com/china-geo</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://baidumarketing.com/blog/baidu-user-data-targeting</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-v-sign-verification-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-vs-google-ppc-differences</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/can-i-do-baidu-ppc</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/china-internet-numbers-2025</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/cpm-ocpm-ecpm-explained</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/digital-consumer-9trillion</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/digital-marketing-china</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/feed-landing-page-optimization</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/how-much-does-baidu-ppc-cost</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/keyword-research-baidu</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/landing-page-bounce-rate</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/native-ads-vs-feed-ads</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/ocpc-explained</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/rising-cpm-bad-baidu</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/search-vs-ai-usage</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/about</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/about" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/features</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/features" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/pricing" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/clients</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/clients" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/faq</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/faq" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/contact" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/blog</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/blog" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/why-baidu-ppc-pro</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/why-baidu-ppc-pro" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/china-geo</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/china-geo" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/privacy" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/ja/terms</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://baidumarketing.com/ja/terms" />
     <priority>0.8</priority>
   </url>
 </urlset>
