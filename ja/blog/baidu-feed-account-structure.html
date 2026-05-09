@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>フィード広告アカウント構造ガイド — Baidu PPC Pro Blog</title>
+  <meta name="description" content="百度フィード広告のアカウント構造を効果的に構築する方法。キャンペーン階層、ベストプラクティス、よくあるミスを解説。" />
+  <link rel="canonical" href="https://baidumarketing.com/ja/blog/baidu-feed-account-structure" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/ja/blog/baidu-feed-account-structure" />
+  <meta property="og:title" content="フィード広告アカウント構造：効果的な構築ガイド" />
+  <meta property="og:description" content="百度フィード広告のアカウント構造の構築方法を解説。階層、ベストプラクティス、よくあるミスを網羅。" />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="フィード広告アカウント構造ガイド" />
+  <meta name="twitter:description" content="百度フィード広告のアカウント構造を効果的に構築する方法。" />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --blue: #2932E1; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF; --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --radius: 12px; --gradient-brand: linear-gradient(135deg, #2932E1, #4F46E5); --gradient-hero: linear-gradient(160deg, #fff 30%, #EEF0FF 100%); --font-display: 'Inter', system-ui, sans-serif; }
+    [data-theme="dark"] { --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; background: #0B0F1A; color: #E5E7EB; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #fff; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--gray-800); }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-weight: 600; }
+    .page-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .breadcrumb span { margin: 0 8px; }
+    .article-tag { display: inline-block; font-size: .75rem; font-weight: 700; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; margin-bottom: 16px; background: rgba(236,72,153,.1); color: #EC4899; border: 1px solid rgba(236,72,153,.2); }
+    .article-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.2; color: var(--gray-800); margin-bottom: 20px; }
+    .article-meta { display: flex; gap: 16px; padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--gray-200); font-size: .85rem; color: var(--gray-400); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { font-size: 1.05rem; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 48px 0 20px; }
+    .article-content p { margin-bottom: 20px; }
+    .article-content ul { margin: 20px 0; padding-left: 24px; }
+    .article-content li { margin-bottom: 12px; }
+    .nav-right-group { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .lang-switch { position: relative; }
+    .lang-switch-btn { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; font-size: .9rem; color: var(--gray-600); line-height: 1; }
+    .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .lang-switch-menu { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; box-shadow: var(--shadow-md); min-width: 150px; opacity: 0; pointer-events: none; transform: translateY(-4px); transition: opacity .2s, transform .2s; z-index: 200; }
+    .lang-switch-menu.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .lang-switch-item { display: block; padding: 10px 16px; font-size: .9rem; color: var(--gray-700); white-space: nowrap; }
+    .lang-switch-item:hover { background: var(--blue-light); color: var(--blue); }
+    [data-theme="dark"] .lang-switch-menu { background: #0B0F1A; border-color: var(--gray-200); }
+    [data-theme="dark"] .lang-switch-item { color: var(--gray-700); }
+    [data-theme="dark"] .lang-switch-item:hover { background: rgba(99,102,241,.12); color: var(--blue); }
+    .theme-toggle { background: none; border: 1.5px solid var(--gray-200); border-radius: 8px; width: 38px; height: 38px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--gray-600); margin-left: 8px; flex-shrink: 0; }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .icon-sun, .icon-moon { display: block; }
+    [data-theme="dark"] .icon-moon, .icon-sun { display: none; }
+    .nav-mobile-toggle { display: none; background: none; border: 1.5px solid var(--gray-200); border-radius: 8px; width: 38px; height: 38px; cursor: pointer; align-items: center; justify-content: center; margin-left: 8px; }
+    .nav-mobile-cta,.nav-mobile-theme { display: none; }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 99; }
+    .nav-overlay.open { display: block; }
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); max-width: 1140px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; max-width: 1140px; margin: 0 auto; padding: 24px 24px 0; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); transition: background .2s; }
+    .footer-social a:hover { background: rgba(255,255,255,.15); }
+    .footer-social a svg { width: 16px; height: 16px; }
+    [data-theme="dark"] footer { background: #070B14 !important; }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
+    .takeaway-box ul { margin: 0; padding-left: 20px; }
+    .takeaway-box li { margin-bottom: 8px; font-size: .95rem; color: var(--gray-700); }
+    .chart-container { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; margin: 28px 0; }
+    .chart-title { font-size: .9rem; font-weight: 700; color: var(--gray-700); margin-bottom: 16px; text-align: center; }
+    .cta-section { background: var(--gradient-brand); border-radius: 20px; padding: 48px; text-align: center; color: #fff; margin: 60px 0; }
+    .cta-section h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; }
+    .cta-section p { opacity: .9; margin-bottom: 24px; }
+    .cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 8px; font-weight: 700; }
+    .related-section { border-top: 1px solid var(--gray-200); padding: 48px 0; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; margin-bottom: 8px; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); }
+    @media (max-width: 768px) {
+      .related-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; position: fixed; top: 64px; right: 0; bottom: 0; width: 260px; background: #fff; flex-direction: column; padding: 24px; gap: 0; z-index: 100; overflow-y: auto; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--gray-100); font-size: 1rem; }
+      .lang-switch { display: none; }
+      .nav-mobile-toggle { display: flex; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 10px; margin-top: 12px; padding: 12px 0; font-size: .9rem; color: var(--gray-600); background: none; border: none; cursor: pointer; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"百度フィード広告アカウント構造ガイド","description":"百度フィード広告のアカウント構造を効果的に構築する方法。","url":"https://baidumarketing.com/ja/blog/baidu-feed-account-structure","image":"https://baidumarketing.com/assets/og-brand-default.png","datePublished":"2025-01-01","dateModified":"2025-01-01","publisher":{"@type":"Organization","name":"Baidu PPC Pro","url":"https://baidumarketing.com","logo":{"@type":"ImageObject","url":"https://baidumarketing.com/assets/og-brand-default.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://baidumarketing.com/ja/blog/baidu-feed-account-structure"}}
+  </script>
+</head>
+<body>
+  <nav>
+  <div class="nav-inner">
+    <a href="../../ja/index" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="l" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#l)"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</a>
+    <div class="nav-links" id="navLinks">
+      <a href="../../ja/why-baidu-ppc-pro">Baidu PPC Proとは</a><a href="../../ja/features">サービス</a><a href="../../ja/pricing">料金プラン</a><a href="../../ja/clients">実績</a><a href="../../ja/faq">よくある質問</a><a href="../../ja/about">会社概要</a><a href="../../ja/blog" class="active">ブログ</a><a href="../../ja/contact">お問い合わせ</a>
+      <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>ダークモード切替</button>
+    </div>
+    <div class="nav-right-group">
+    <div class="lang-switch"><button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="lang-switch-menu" id="langSwitchMenu"><a href="../../index" lang="en" class="lang-switch-item">🇺🇸 English</a><a href="../../ja/index" lang="ja" class="lang-switch-item">🇯🇵 日本語</a></div></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+    <a href="../../ja/contact" class="nav-cta">今すぐ始める →</a>
+    </div>
+    <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../../ja/index">ホーム</a><span>›</span><a href="../../ja/blog">ブログ</a><span>›</span><span>フィード広告</span></div>
+      <span class="article-tag">フィード広告</span>
+      <h1 class="article-title">百度フィード広告アカウント構造ガイド</h1>
+      <div class="article-meta"><span>2024年11月</span><span>読了時間 約4分</span></div>
+    </div>
+  </section>
+
+  <main>
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+        <img src="https://baidumarketing.com/assets/blog-feed-account-structure.jpg" alt="フィード広告アカウント構造" style="border-radius: 16px; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(0,0,0,.1);" />
+
+        <p>整理されたアカウント構造は最適化を格段に容易にします。百度フィードキャンペーンを成功に導くための組織化方法をご紹介します。</p>
+
+        <h2>🏗️ 階層構造</h2>
+
+        <div class="chart-container">
+          <div class="chart-title">百度フィード広告 — アカウント階層</div>
+          <svg viewBox="0 0 600 220" style="width:100%;max-width:600px;display:block;margin:0 auto;">
+            <rect x="170" y="10" width="260" height="44" rx="8" fill="#2932E1"/>
+            <text x="300" y="37" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700" fill="#fff">キャンペーン — 目的別</text>
+            <line x1="300" y1="54" x2="300" y2="74" stroke="#C7D2FE" stroke-width="2"/>
+            <line x1="100" y1="74" x2="500" y2="74" stroke="#C7D2FE" stroke-width="2"/>
+            <line x1="100" y1="74" x2="100" y2="90" stroke="#C7D2FE" stroke-width="2"/>
+            <line x1="300" y1="74" x2="300" y2="90" stroke="#C7D2FE" stroke-width="2"/>
+            <line x1="500" y1="74" x2="500" y2="90" stroke="#C7D2FE" stroke-width="2"/>
+            <rect x="10" y="90" width="180" height="44" rx="8" fill="#EEF0FF" stroke="#A5B4FC" stroke-width="1.5"/>
+            <text x="100" y="116" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#3730A3">広告グループ — カテゴリ</text>
+            <rect x="210" y="90" width="180" height="44" rx="8" fill="#EEF0FF" stroke="#A5B4FC" stroke-width="1.5"/>
+            <text x="300" y="116" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#3730A3">広告グループ — オーディエンス</text>
+            <rect x="410" y="90" width="180" height="44" rx="8" fill="#EEF0FF" stroke="#A5B4FC" stroke-width="1.5"/>
+            <text x="500" y="116" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#3730A3">広告グループ — 地域</text>
+            <line x1="100" y1="134" x2="100" y2="154" stroke="#E5E7EB" stroke-width="1.5"/>
+            <line x1="300" y1="134" x2="300" y2="154" stroke="#E5E7EB" stroke-width="1.5"/>
+            <line x1="500" y1="134" x2="500" y2="154" stroke="#E5E7EB" stroke-width="1.5"/>
+            <rect x="15" y="154" width="170" height="40" rx="6" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+            <text x="100" y="178" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#4B5563">広告 — 見出し・画像・CTA</text>
+            <rect x="215" y="154" width="170" height="40" rx="6" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+            <text x="300" y="178" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#4B5563">広告 — 見出し・画像・CTA</text>
+            <rect x="415" y="154" width="170" height="40" rx="6" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+            <text x="500" y="178" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#4B5563">広告 — 見出し・画像・CTA</text>
+            <text x="598" y="37" text-anchor="end" font-family="Inter,system-ui,sans-serif" font-size="10" fill="#9CA3AF" font-weight="600">レベル1</text>
+            <text x="598" y="116" text-anchor="end" font-family="Inter,system-ui,sans-serif" font-size="10" fill="#9CA3AF" font-weight="600">レベル2</text>
+            <text x="598" y="178" text-anchor="end" font-family="Inter,system-ui,sans-serif" font-size="10" fill="#9CA3AF" font-weight="600">レベル3</text>
+          </svg>
+        </div>
+
+        <h2>✅ ベストプラクティス</h2>
+        <div class="callout callout-insight">
+          <span class="callout-icon">💡</span>
+          <div><strong>構造が重要な理由：</strong>適切に組織化されたアカウントは百度のアルゴリズムがより高速に最適化でき、無駄な支出を削減し、パフォーマンスレポートが明確になります。</div>
+        </div>
+        <ul>
+          <li>🎯 <strong>目的別にキャンペーンを分ける。</strong>ブランド認知はリーチとインプレッション、リード獲得はコンバージョンに最適化。混在はアルゴリズムを混乱させます。</li>
+          <li>📌 <strong>広告グループはテーマを絞る。</strong>各グループは1つのテーマに関連するターゲティングに集中。品質スコアが高く保たれます。</li>
+          <li>🧪 <strong>広告グループごとに複数クリエイティブをテスト。</strong>百度のシステムが最適な組み合わせを学習できます。</li>
+        </ul>
+        <div class="callout callout-tip">
+          <span class="callout-icon">🔑</span>
+          <div><strong>プロのコツ：全レベルでの除外キーワード</strong><br>キャンペーンレベルで除外キーワードを設定し、ブランド認知支出がブランド検索キャンペーンを侵食しないようにしましょう。毎月見直しと更新を。</div>
+        </div>
+
+        <h2>⚠️ 避けるべきよくあるミス</h2>
+        <ul>
+          <li>❌ <strong>1つの広告グループにキーワードが多すぎる。</strong>50キーワードを1グループでターゲットすると、どれが効果的か判断できません。</li>
+          <li>🔀 <strong>1つのキャンペーンに目的が混在。</strong>クリックとコンバージョンの両方を最適化しようとすると、アルゴリズムが一つを選びます。</li>
+          <li>🖼️ <strong>広告グループに1つのクリエイティブだけ。</strong>代替案がなければ改善できません。</li>
+        </ul>
+
+        <div class="takeaway-box">
+          <h3>📝 重要ポイント</h3>
+          <ul>
+            <li>目的別にキャンペーンを整理——ブランド認知とリード獲得は絶対に混在させない</li>
+            <li>広告グループは単一のターゲティング軸でテーマを絞る</li>
+            <li>広告グループごとに最低3つのクリエイティブをテスト</li>
+            <li>キャンペーンレベルで除外キーワードを適用、毎月見直す</li>
+            <li>キーワードの詰め込みを避け、1グループ10〜15キーワードが最適</li>
+          </ul>
+        </div>
+
+        <div class="cta-section">
+          <h3>🤝 アカウント設定のお手伝いが必要ですか？</h3>
+          <p>国際ブランド向けに百度フィードキャンペーンを構築・最適化します。</p>
+          <a href="../../ja/contact" class="cta-btn">今すぐ始める</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  </main>
+
+  <section class="related-section">
+    <div class="container">
+      <div class="related-grid">
+        <a href="../../ja/blog/baidu-feed-ads-explained" class="related-card"><h4>百度フィード広告の仕組み</h4><p>フィード広告の基礎。</p></a>
+        <a href="../../ja/blog/feed-landing-page-optimization" class="related-card"><h4>LP最適化ガイド</h4><p>フィード広告LPの最適化。</p></a>
+        <a href="../../ja/blog/native-ads-vs-feed-ads" class="related-card"><h4>ネイティブ vs フィード広告</h4><p>違いを理解する。</p></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fl" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fl)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</h3>
+        <p>国際的な広告代理店やブランドが、コンプライアンスを遵守しながら中国の1,000億ドル以上のデジタル広告市場にアクセスできるよう支援します。</p>
+      </div>
+      <div class="footer-col">
+        <h4>クイックリンク</h4>
+        <ul><li><a href="../../ja/features">サービス</a></li><li><a href="../../ja/pricing">料金プラン</a></li><li><a href="../../ja/clients">実績</a></li><li><a href="../../ja/about">会社概要</a></li><li><a href="../../ja/faq">よくある質問</a></li><li><a href="../../ja/blog">ブログ</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>お問い合わせ</h4>
+        <ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="../../ja/contact">お問い合わせを送信</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>リーガル</h4>
+        <ul><li><a href="../../ja/privacy">プライバシーポリシー</a></li><li><a href="../../ja/terms">利用規約</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+      </div>
+    </div>
+</footer>
+<script>
+  document.querySelectorAll('.obf-email-link').forEach(function(e){var a=e.dataset.u+'@'+e.dataset.d;e.href='mailto:'+a;if(!e.textContent.trim())e.textContent=a});
+  document.querySelectorAll('.obf-email-icon').forEach(function(e){e.href='mailto:'+e.dataset.u+'@'+e.dataset.d});
+  function toggleTheme(){var t=document.documentElement;var d=t.getAttribute('data-theme')==='dark';t.setAttribute('data-theme',d?'':'dark');try{localStorage.setItem('theme',d?'':'dark')}catch(e){}}
+  (function(){try{var s=localStorage.getItem('theme');if(s==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}})();
+  function toggleMobileNav(){var l=document.getElementById('navLinks');var o=document.getElementById('navOverlay');var t=document.getElementById('navToggle');var open=l.classList.toggle('open');o.classList.toggle('open',open);t.querySelector('.hamburger-icon').style.display=open?'none':'block';t.querySelector('.close-icon').style.display=open?'block':'none';document.body.style.overflow=open?'hidden':'';}
+  function toggleLangMenu(){const m=document.getElementById('langSwitchMenu');if(m)m.classList.toggle('open')}
+  document.addEventListener('click',function(e){const sw=document.querySelector('.lang-switch');if(sw&&!sw.contains(e.target)){const m=document.getElementById('langSwitchMenu');if(m)m.classList.remove('open')}});
+</script>
+</body>
+</html>

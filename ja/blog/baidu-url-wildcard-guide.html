@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Baidu URLワイルドカード完全ガイド：全9パラメータの使い方 — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Baidu URLワイルドカードを使いこなしてキーワード、キャンペーン、広告グループを正確にトラッキング。全9つのサポートパラメータ、実践例、UTM連携手順を網羅した完全ガイド。" />
+  <link rel="canonical" href="https://baidumarketing.com/ja/blog/baidu-url-wildcard-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/ja/blog/baidu-url-wildcard-guide" />
+  <meta property="og:title" content="Baidu URLワイルドカード完全ガイド：全9パラメータの使い方" />
+  <meta property="og:description" content="Baidu URLワイルドカードを使いこなしてキーワード、キャンペーン、広告グループを正確にトラッキング。全9つのサポートパラメータ、実践例、UTM連携手順を網羅した完全ガイド。" />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Baidu URLワイルドカード完全ガイド：全9パラメータの使い方" />
+  <meta name="twitter:description" content="Baidu URLワイルドカードでキーワード、キャンペーン、広告グループを正確にトラッキング。全9パラメータのリファレンス、実践例、UTM連携ノウハウを解説。" />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --gradient-surface: linear-gradient(135deg, #F9FAFB 0%, #F3F4FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      --gradient-surface: linear-gradient(135deg, #111827 0%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; backdrop-filter: blur(12px); border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; white-space: nowrap; flex-shrink: 0; }
+    [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
+    [data-theme="dark"] .nav-links { color: var(--gray-600); }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
+    [data-theme="dark"] .close-icon line { stroke: #D1D5DB; }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .article-hero p { color: var(--gray-600); }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+    [data-theme="dark"] .article-section h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-section h3 { color: var(--gray-800); }
+    [data-theme="dark"] .article-section p { color: var(--gray-600); }
+    [data-theme="dark"] .article-section ul li { color: var(--gray-600); }
+    [data-theme="dark"] .callout { background: var(--gray-100) !important; border-color: var(--gray-200); }
+    [data-theme="dark"] .callout.tip { border-left-color: #10B981; }
+    [data-theme="dark"] .callout.warning { border-left-color: #F59E0B; }
+    [data-theme="dark"] .callout.insight { border-left-color: var(--blue); }
+    [data-theme="dark"] .callout p { color: var(--gray-600); }
+    [data-theme="dark"] .takeaway { background: rgba(99,102,241,.08) !important; border-color: rgba(99,102,241,.15); }
+    [data-theme="dark"] .takeaway h3 { color: var(--blue); }
+    [data-theme="dark"] .takeaway li { color: var(--gray-600); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-100); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .comparison-table tr:nth-child(even) td { background: var(--gray-50); }
+    [data-theme="dark"] .comparison-table th { color: var(--gray-800); }
+    [data-theme="dark"] .stats-grid .stat-card { background: var(--gray-100) !important; }
+    [data-theme="dark"] .stats-grid .stat-value { color: var(--blue); }
+    [data-theme="dark"] .stats-grid .stat-label { color: var(--gray-400); }
+    [data-theme="dark"] .blockquote-highlight { background: var(--gray-100) !important; border-left-color: var(--blue); }
+    [data-theme="dark"] .blockquote-highlight p { color: var(--gray-700); }
+    [data-theme="dark"] .blockquote-highlight cite { color: var(--gray-400); }
+    [data-theme="dark"] .cta-section { background: var(--gray-100) !important; }
+    [data-theme="dark"] .cta-section h2 { color: #F9FAFB; }
+    [data-theme="dark"] .cta-section p { color: var(--gray-600); }
+    [data-theme="dark"] .related-section { background: var(--gray-50); }
+    [data-theme="dark"] .related-section h2 { color: #F9FAFB; }
+    [data-theme="dark"] .related-card { background: var(--gray-100) !important; border-color: var(--gray-200); }
+    [data-theme="dark"] .related-card h3 { color: var(--gray-800); }
+    [data-theme="dark"] .related-card p { color: var(--gray-600); }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; border-top-color: var(--gray-200); }
+    [data-theme="dark"] .footer-brand h3 { color: #fff; }
+    [data-theme="dark"] .footer-col h4 { color: #fff; }
+    [data-theme="dark"] .footer-links a { color: var(--gray-400); }
+    [data-theme="dark"] .footer-copy { color: var(--gray-400); }
+    [data-theme="dark"] .footer-social a { background: rgba(255,255,255,.06); }
+    [data-theme="dark"] .footer-social a:hover { background: var(--blue); }
+    [data-theme="dark"] .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    [data-theme="dark"] .back-to-top { background: var(--gray-200) !important; color: var(--gray-600); }
+    [data-theme="dark"] .back-to-top:hover { background: var(--blue) !important; color: #fff; }
+    [data-theme="dark"] .nav-mobile-cta,.nav-mobile-theme{display:none}
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); white-space: nowrap; flex-shrink: 0; }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-cta:active { transform: translateY(0) scale(.97); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    /* ARTICLE HERO */
+    .article-hero { padding: 72px 0 56px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero .breadcrumb { font-size: .82rem; color: var(--gray-400); margin-bottom: 16px; }
+    .article-hero .breadcrumb a { color: var(--blue); }
+    .article-hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); margin-bottom: 12px; }
+    .article-hero p { font-size: 1rem; color: var(--gray-600); max-width: 680px; line-height: 1.7; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: .82rem; color: var(--gray-400); margin-top: 20px; }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-meta svg { width: 14px; height: 14px; flex-shrink: 0; stroke: currentColor; }
+
+    /* ARTICLE CONTENT */
+    .article-content { max-width: 760px; margin: 0 auto; padding: 48px 0 56px; }
+    .article-content h2 { font-size: 1.6rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; line-height: 1.3; }
+    .article-content h3 { font-size: 1.2rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; line-height: 1.4; }
+    .article-content p { font-size: .95rem; color: var(--gray-600); margin-bottom: 16px; line-height: 1.75; }
+    .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
+    .article-content li { font-size: .95rem; color: var(--gray-600); margin-bottom: 8px; line-height: 1.7; }
+    .article-content strong { color: var(--gray-800); font-weight: 600; }
+    .article-content code { background: var(--gray-100); padding: 2px 8px; border-radius: 4px; font-size: .85rem; color: var(--blue); border: 1px solid var(--gray-200); word-break: break-all; }
+
+    /* CALL OUT */
+    .callout { border: 1px solid var(--gray-200); border-left: 4px solid var(--blue); border-radius: var(--radius); padding: 20px 24px; margin: 24px 0; background: var(--gray-50); }
+    .callout.tip { border-left-color: #10B981; }
+    .callout.warning { border-left-color: #F59E0B; }
+    .callout.insight { border-left-color: var(--blue); }
+    .callout .callout-title { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: .9rem; color: var(--gray-800); margin-bottom: 6px; }
+    .callout p { font-size: .9rem !important; color: var(--gray-600) !important; margin-bottom: 0 !important; }
+
+    /* TAKEAWAY */
+    .takeaway { border: 1px solid var(--blue-glow); background: var(--blue-subtle); border-radius: var(--radius-lg); padding: 28px 32px; margin: 32px 0; }
+    .takeaway h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .takeaway ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .takeaway li { font-size: .9rem; color: var(--gray-600); display: flex; align-items: flex-start; gap: 10px; margin: 0; }
+    .takeaway li::before { content: '✓'; color: #fff; background: var(--blue); width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    /* COMPARISON TABLE */
+    .comparison-table-wrapper { overflow-x: auto; margin: 24px 0; border-radius: var(--radius); border: 1px solid var(--gray-200); }
+    .comparison-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    .comparison-table th { background: var(--gray-100); color: var(--gray-800); font-weight: 600; padding: 12px 16px; text-align: left; border-bottom: 2px solid var(--gray-200); }
+    .comparison-table td { padding: 10px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); vertical-align: top; }
+    .comparison-table tr:nth-child(even) td { background: var(--gray-50); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* STATS GRID */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px 16px; text-align: center; }
+    .stat-card .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1.1; }
+    .stat-card .stat-label { font-size: .78rem; color: var(--gray-400); margin-top: 6px; font-weight: 500; }
+
+    /* BLOCKQUOTE */
+    .blockquote-highlight { border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+    .blockquote-highlight p { font-size: .95rem !important; color: var(--gray-700); font-style: italic; line-height: 1.7 !important; margin-bottom: 8px !important; }
+    .blockquote-highlight cite { display: block; font-size: .82rem; color: var(--gray-400); font-style: normal; margin-top: 4px; }
+
+    /* SVG CHART CONTAINER */
+    .svg-chart { margin: 28px 0; text-align: center; }
+    .svg-chart svg { max-width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--gray-200); background: #fff; }
+    [data-theme="dark"] .svg-chart svg { background: #111827; border-color: var(--gray-200); }
+
+    /* CTA */
+    .cta-section { text-align: center; background: var(--gray-50); border-radius: var(--radius-xl); padding: 48px 32px; margin: 48px 0 24px; border: 1px solid var(--gray-200); }
+    .cta-section h2 { font-size: 1.5rem; font-weight: 800; color: var(--gray-800); margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: var(--gray-600); max-width: 500px; margin: 0 auto 24px; }
+    .cta-section .cta-btn { display: inline-block; background: var(--gradient-brand); color: #fff; padding: 14px 36px; border-radius: 8px; font-size: .95rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+    .cta-section .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(41,50,225,.35); }
+
+    /* RELATED */
+    .related-section { background: var(--gray-50); padding: 56px 0; margin-top: 16px; }
+    .related-section h2 { font-size: 1.4rem; font-weight: 700; color: var(--gray-800); margin-bottom: 28px; text-align: center; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .related-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; transition: box-shadow var(--transition-smooth); }
+    .related-card:hover { box-shadow: var(--shadow-md); }
+    .related-card .related-tag { font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--blue); margin-bottom: 8px; }
+    .related-card h3 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin-bottom: 6px; }
+    .related-card h3 a { transition: color var(--transition-base); }
+    .related-card h3 a:hover { color: var(--blue); }
+    .related-card p { font-size: .82rem; color: var(--gray-400); line-height: 1.6; }
+
+    /* FOOTER */
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: .82rem; color: #6B7280; }
+    .footer-links a:hover { color: #fff; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    /* BACK TO TOP */
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-mobile-cta,.nav-mobile-theme{display:none !important}
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; background: #fff; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; }
+      [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); transition: background .15s; white-space: nowrap; }
+      [data-theme="dark"] .nav-links.open a { color: #D1D5DB; border-bottom-color: var(--gray-200); }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.1); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .article-content { padding: 32px 0 40px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .cta-section { padding: 32px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .article-hero h1 { font-size: 1.5rem; }
+      .article-hero { padding: 48px 0 36px; }
+      .article-meta { flex-direction: column; gap: 8px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .stat-card .stat-value { font-size: 1.4rem; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .comparison-table th, .comparison-table td { padding: 8px 10px; font-size: .78rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="../../ja/index" class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logoGrad)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>
+        Baidu PPC Pro
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../../ja/why-baidu-ppc-pro">Baidu PPC Proとは</a>
+        <a href="../../ja/features">サービス</a>
+        <a href="../../ja/pricing">料金プラン</a>
+        <a href="../../ja/clients">実績</a>
+        <a href="../../ja/faq">よくある質問</a>
+        <a href="../../ja/about">会社概要</a>
+        <a href="../../ja/blog" class="active">ブログ</a>
+        <a href="../../ja/contact">お問い合わせ</a>
+      </div>
+      <div class="nav-right-group">
+        <div class="lang-switch">
+          <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 ▼</button>
+          <div class="lang-switch-menu">
+            <a href="../../index" lang="en" class="lang-switch-item">🇺🇸 English</a>
+            <a href="../../ja/index" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
+          </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="ダークモード切替" onclick="toggleTheme()">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="../../ja/contact" class="nav-cta">今すぐ始める →</a>
+      </div>
+      <button class="nav-mobile-toggle" id="navToggle" aria-label="メニューを開く" onclick="toggleMobileNav()">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="2" rx="1" fill="#1F2937"/><rect x="3" y="11" width="18" height="2" rx="1" fill="#1F2937"/><rect x="3" y="17" width="18" height="2" rx="1" fill="#1F2937"/></svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" style="display:none"><line x1="6" y1="6" x2="18" y2="18" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="6" x2="6" y2="18" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true" onclick="toggleMobileNav()"></div>
+  </nav>
+
+  <main>
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="../../ja/blog">← ブログに戻る</a></div>
+        <h1>クリックを正確に追跡する方法：Baidu URLワイルドカード完全ガイド</h1>
+        <p>URLワイルドカードを使えば、キーワードIDやキャンペーンIDなどのトラッキングデータをランディングページURLに自動的に渡せます。本記事ではBaiduがサポートする9つのワイルドカードパラメータをすべて解説します。</p>
+        <div class="article-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2023年5月19日</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> 読了時間：約6分</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro チーム</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <div class="container">
+      <article class="article-content">
+
+        <p>Baiduの広告がクリックされるたびに、そこにはさまざまな情報が含まれています。どのキーワードがクリックのきっかけだったのか？どの広告グループか？どのキャンペーンか？これらの答えはBaiduのプラットフォーム内に存在しますが、それを自社の分析システムに取り込むにはURLワイルドカードが必要です。</p>
+
+        <p>Baiduは<strong>9つの有効なワイルドカードパラメータ</strong>をサポートしており、これらをキーワードのランディングページURLやクリエイティブURL、モバイルURLに挿入できます。ユーザーが広告をクリックすると、各ワイルドカードはリアルタイムで対応する値に置き換えられ、分析プラットフォームがコンバージョンを正しいキーワードや広告グループ、キャンペーンに紐付けて計測できるようになります。</p>
+
+        <p>ここでは、すべてのワイルドカードパラメータの詳細、その使い方、そして数百万ドル規模のBaidu広告費を管理してきた私たちが培ったベストプラクティスをご紹介します。</p>
+
+        <!-- STATS GRID -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">9</div>
+            <div class="stat-label">有効なワイルドカード</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">7</div>
+            <div class="stat-label">廃止（非推奨）</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">2</div>
+            <div class="stat-label">エンコード方式</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">自動置換</div>
+          </div>
+        </div>
+
+        <h2>Baidu URLワイルドカードとは</h2>
+
+        <p>URLワイルドカードは、広告がクリックされたときにBaiduが自動的に実際の値に置き換えるプレースホルダーパラメータです。動的変数のようなものだと考えてください。ランディングページURLにプレースホルダーを埋め込んでおくと、クリック発生時にBaiduが実際の値を自動入力します。</p>
+
+        <p>基本的なコンセプトはGoogle AdsのValueTrackパラメータに似ていますが、具体的なパラメータや動作は大きく異なります。Baiduのワイルドカードは、アカウントIDから個別のキーワードバリアントまで、アカウント階層のすべてのレベルでトラッキングをサポートします。</p>
+
+        <div class="callout insight">
+          <div class="callout-title">💡 重要な洞察</div>
+          <p>URLワイルドカードは、キーワードのランディングページURL、クリエイティブ（広告）のランディングページURL、モバイルURL、および追加クリエイティブのパスサブチェーンで機能します。表示URLでは動作しない点に注意してください。</p>
+        </div>
+
+        <h2>ワイルドカード完全リファレンス</h2>
+
+        <p>以下がBaidu検索マーケティングがサポートするすべての有効なワイルドカードパラメータと、その置換値、および代表的なユースケースです。</p>
+
+        <!-- COMPARISON TABLE -->
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>パラメータ</th>
+                <th>置換後の値</th>
+                <th>最適な用途</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>{userid}</code></td>
+                <td>アカウントID（グローバル一意）</td>
+                <td>マルチアカウント管理</td>
+              </tr>
+              <tr>
+                <td><code>{planid}</code></td>
+                <td>キャンペーンID（グローバル一意）</td>
+                <td>キャンペーン単位の属性分析</td>
+              </tr>
+              <tr>
+                <td><code>{unitid}</code></td>
+                <td>広告グループID（グローバル一意）</td>
+                <td>広告グループのパフォーマンス分析</td>
+              </tr>
+              <tr>
+                <td><code>{keywordid}</code></td>
+                <td>キーワードID（グローバル一意）</td>
+                <td>キーワード単位のROI計測</td>
+              </tr>
+              <tr>
+                <td><code>{creative}</code></td>
+                <td>クリエイティブ（広告）ID</td>
+                <td>広告コピーのテスト</td>
+              </tr>
+              <tr>
+                <td><code>{matchtype}</code></td>
+                <td>1=完全一致、2=フレーズ一致</td>
+                <td>マッチタイプ別パフォーマンス分析</td>
+              </tr>
+              <tr>
+                <td><code>{dongtai}</code></td>
+                <td>1=動的広告、0=標準</td>
+                <td>動的広告の監視</td>
+              </tr>
+              <tr>
+                <td><code>{crowdid}</code></td>
+                <td>オーディエンスパッケージID（0=該当なし）</td>
+                <td>オーディエンスターゲティングの検証</td>
+              </tr>
+              <tr>
+                <td><code>{trig_flag}</code></td>
+                <td>at / zx / nm</td>
+                <td>トラフィック拡張の追跡</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>キーワードエンコードパラメータ</h3>
+
+        <p>ランディングページが異なる文字エンコーディングを使用する場合に備えて、キーワードエンコード用の2つの追加パラメータが用意されています。これは中国語のキーワードを扱う際に特に重要です。</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>パラメータ</th>
+                <th>エンコード方式</th>
+                <th>出力例</th>
+                <th>使用シーン</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>{kw_enc}</code></td>
+                <td>GBK → URLエンコード</td>
+                <td><code>%CF%CA%BB%A8</code></td>
+                <td>ランディングページがGBKエンコード</td>
+              </tr>
+              <tr>
+                <td><code>{kw_enc_utf8}</code></td>
+                <td>UTF-8 → URLエンコード</td>
+                <td><code>%E9%B2%9C%E8%8A%B1</code></td>
+                <td>ランディングページがUTF-8エンコード</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-title">⚠️ エンコードに関する重要事項</div>
+          <p>Baiduのデフォルトの中国語文字エンコーディングはGBKであり、UTF-8ではありません。ランディングページがUTF-8を使用している場合（ほとんどのモダンなWebサイトはUTF-8です）、<code>{kw_enc}</code>ではなく<code>{kw_enc_utf8}</code>を使用してください。間違ったエンコーディングを使用すると文字化けが発生し、分析データが破損します。</p>
+        </div>
+
+        <h2>URLワイルドカードの動作：実践例</h2>
+
+        <p>実際のシナリオを見てみましょう。元のキーワードランディングページURLは次のとおりです。</p>
+
+        <p><code>http://www.yoursite.com</code></p>
+
+        <p>いくつかのワイルドカードパラメータを追加すると、URLは次のようになります。</p>
+
+        <p><code>http://www.yoursite.com/?a_keywordid={keywordid}&a_creative={creative}&a_matchtype={matchtype}&a_dongtai={dongtai}</code></p>
+
+        <p>ユーザーが広告をクリックすると、Baiduが各ワイルドカードを実際の値に置き換えます。サーバーに送信されるリクエストは次のようになります。</p>
+
+        <p><code>http://www.yoursite.com/?a_keywordid=123456789&a_creative=98765432&a_matchtype=1&a_dongtai=0</code></p>
+
+        <p>これで分析プラットフォームは、どのキーワード（ID 123456789）がクリックを発生させたか、どのクリエイティブ（98765432）が表示されたか、完全一致（1）であったか、動的広告ではなかったか（0）を正確に把握できます。</p>
+
+        <!-- SVG FLOW CHART -->
+        <div class="svg-chart">
+          <svg viewBox="0 0 680 240" width="680" height="240">
+            <defs>
+              <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2932E1"/>
+                <stop offset="100%" stop-color="#4F46E5"/>
+              </linearGradient>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#9CA3AF"/></marker>
+            </defs>
+            <!-- Step 1: URL -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="40" y="20" width="160" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="120" y="35" text-anchor="middle">URLに含まれる</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="120" y="55" text-anchor="middle">{keywordid} {creative}</text>
+            <!-- Arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="200" y1="45" x2="260" y2="45"/>
+            <!-- Step 2: Click -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="260" y="20" width="140" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="330" y="35" text-anchor="middle">ユーザーが広告をクリック</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="330" y="55" text-anchor="middle">Baiduがクリックを受信</text>
+            <!-- Arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="400" y1="45" x2="460" y2="45"/>
+            <!-- Step 3: Replace -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="460" y="20" width="180" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="550" y="35" text-anchor="middle">ワイルドカード置換</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="550" y="55" text-anchor="middle">Baiduが実際の値で置換</text>
+            <!-- Down arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="550" y1="70" x2="550" y2="120"/>
+            <!-- Step 4: Redirect -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="460" y="120" width="180" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="550" y="135" text-anchor="middle">LPへリダイレクト</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="550" y="155" text-anchor="middle">実パラメータ付きURL</text>
+            <!-- Left arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="460" y1="145" x2="400" y2="145"/>
+            <!-- Step 5: Server -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="260" y="120" width="140" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="330" y="135" text-anchor="middle">サーバー</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="330" y="155" text-anchor="middle">トラッキングデータを取得</text>
+            <!-- Left arrow -->
+            <line stroke="#9CA3AF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" x1="260" y1="145" x2="200" y2="145"/>
+            <!-- Step 6: Analytics -->
+            <rect fill="#EEF0FF" stroke="#2932E1" stroke-width="1.5" rx="10" x="40" y="120" width="160" height="50"/>
+            <text font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#1F2937" x="120" y="135" text-anchor="middle">分析プラットフォーム</text>
+            <text font-family="Inter,system-ui,sans-serif" font-size="13" fill="#4B5563" x="120" y="155" text-anchor="middle">属性分析と最適化</text>
+          </svg>
+        </div>
+
+        <h2>BaiduワイルドカードとGoogle UTMパラメータの併用</h2>
+
+        <p>Google Analyticsやその他のUTMベースの分析プラットフォームを使用している場合、BaiduのURLワイルドカードは標準のUTMパラメータとシームレスに併用できます。同じURL内で混在させることが可能です。</p>
+
+        <p><code>https://www.yoursite.com/?utm_source=baidu&utm_medium=cpc&utm_campaign={planid}&utm_term={kw_enc_utf8}&utm_content={creative}</code></p>
+
+        <p>このアプローチにより、分析ダッシュボードでの標準化されたUTMレポートと、サーバーサイドのロジックやサードパーティの属性分析ツールで処理できるBaidu固有のトラッキングパラメータの両方を活用できます。</p>
+
+        <div class="callout tip">
+          <div class="callout-title">✅ プロのコツ</div>
+          <p>最低限、<code>{keywordid}</code>と<code>{planid}</code>は必ず含めましょう。この2つのパラメータだけで、キーワードとキャンペーンレベルでのコンバージョン属性分析が可能になり、ほとんどのユースケースの90％をカバーできます。</p>
+        </div>
+
+        <h2>廃止されたワイルドカード（サポート終了）</h2>
+
+        <p>Baiduはプラットフォームの進化に伴い、いくつかのワイルドカードを廃止しました。古いアカウント設定でこれらを見つけた場合は削除してください。現在は値が一切渡されません。</p>
+
+        <p><code>{pagenum}</code>, <code>{adposition}</code>, <code>{mediatype}</code>, <code>{placement}</code>, <code>{bidurl}</code>, <code>{haoci}</code>, <code>{abtest}</code></p>
+
+        <div class="callout warning">
+          <div class="callout-title">⚠️ 警告</div>
+          <p>廃止されたワイルドカードを使用してもエラーは発生しませんが、値が入ることもありません。これによりトラッキングが機能しているという誤った安心感が生まれ、キャンペーンデータが欠落したままの分析レポートが作られることになります。これはトラッキングがない状態よりも悪い結果を招きます。</p>
+        </div>
+
+        <h2>URLワイルドカードを正しく使うための7つのルール</h2>
+
+        <ol>
+          <li><strong>ワイルドカードは大文字小文字を区別します。</strong><code>{Creative}</code>は動作しません。<code>{creative}</code>（すべて小文字）を使用してください。Baiduはパラメータ名の大文字小正規化を行いません。</li>
+          <li><strong>同一のワイルドカードを複数使用しても同じ値が繰り返されます。</strong>同じURL内に<code>{keywordid}</code>を2回含めると、両方とも同じキーワードIDに置き換えられます。</li>
+          <li><strong>無効なワイルドカードは黙って無視されます。</strong>誤ったパラメータを送信しても、BaiduはそのままプレーンテキストとしてURLに残します。エラーメッセージも警告も表示されません。</li>
+          <li><strong>ワイルドカードはURLの接続性に影響しません。</strong>Baiduは最終URLが到達可能かどうかを検証しません。ランディングページがすべてのパラメータの組み合わせを処理できることを確認してください。</li>
+          <li><strong>表示URLではワイルドカードは使用できません。</strong>ランディングページURL、モバイルURL、パスサブチェーンでのみ機能します。</li>
+          <li><strong>まず1つのパラメータでテストしてください。</strong>1つのワイルドカードをデプロイして動作を確認し、その後で追加していきましょう。9つのパラメータを同時にデバッグするのは困難です。</li>
+          <li><strong>クエリパラメータのプレフィックスを使用しましょう。</strong>ベアID（<code>?123</code>）ではなく、名前付きパラメータ（<code>?kw_id=123</code>）を使用してください。これにより、他のURLパラメータとの競合を防げます。</li>
+        </ol>
+
+        <h2>中国語キーワードのエンコードに関する注意点</h2>
+
+        <p>私たちが最もよく目にするミスの1つは、中国語キーワードに対して誤ったエンコードパラメータを選択することです。BaiduのデフォルトエンコーディングはGBKですが、ほとんどのモダンなランディングページはUTF-8を使用しています。UTF-8のランディングページで<code>{kw_enc}</code>を使用すると、二重エンコードされた文字化けデータが生成され、分析にはまったく役立ちません。</p>
+
+        <p>選択の基準は以下のとおりです。</p>
+
+        <ul>
+          <li><strong>ランディングページがGBKを使用：</strong><code>{kw_enc}</code>を使用します。URLデコード後、キーワードはGBK形式になります。</li>
+          <li><strong>ランディングページがUTF-8を使用（最も一般的）：</strong><code>{kw_enc_utf8}</code>を使用します。URLデコード後、キーワードはUTF-8形式になります。</li>
+          <li><strong>ランディングページのエンコーディングが不明：</strong>ページHTMLの<code>&lt;meta charset&gt;</code>タグを確認してください。<code>utf-8</code>（または<code>UTF-8</code>）と記載があれば<code>{kw_enc_utf8}</code>を使用します。</li>
+        </ul>
+
+        <!-- BLOCKQUOTE -->
+        <div class="blockquote-highlight">
+          <p>"URLワイルドカードを正しく設定することは、Baidu PPCアカウントにおいて最もROIの高い技術的改善の1つです。適切なトラッキングパラメータなしには、すべての最適化判断が推測に基づくものになってしまいます。"</p>
+          <cite>— Baidu PPC Pro チーム</cite>
+        </div>
+
+        <h2>オーディエンスとトラフィック拡張のトラッキング</h2>
+
+        <p>特に注目すべき2つの高度なパラメータがあります。多くの広告主が見逃しているインサイトを引き出せるからです。</p>
+
+        <h3><code>{crowdid}</code> — オーディエンスターゲティングの検証</h3>
+        <p>特定のオーディエンスパッケージをターゲットしている場合、<code>{crowdid}</code>はクリックしたユーザーがマッチしたオーディエンスパッケージIDを返します。該当するオーディエンスがない場合は<code>0</code>を返します。これは、オーディエンスターゲティングが実際に機能しているかを検証する上で非常に貴重です。crowdidが0より大きいクリックの割合を確認し、意図したターゲティングカバレッジと比較できます。</p>
+
+        <h3><code>{trig_flag}</code> — トラフィック拡張の監視</h3>
+        <p>このパラメータは、クリックが自動トラフィック拡張から発生したかどうかを示します。3つの値が返されます。<code>at</code>（自動トラフィック拡張）、<code>zx</code>（スマートマッチング）、<code>nm</code>（通常トラフィック）です。トラフィック拡張機能をテストしている場合、このパラメータは追加コストに対する増分価値を測定するために不可欠です。</p>
+
+        <!-- TAKEAWAY -->
+        <div class="takeaway">
+          <h3>📋 重要なポイント</h3>
+          <ul>
+            <li>Baiduはアカウント階層全体で9つの有効なURLワイルドカードパラメータをサポート</li>
+            <li>最低限推奨する設定：キーワード属性分析用<code>{keywordid}</code>＋キャンペーン属性分析用<code>{planid}</code></li>
+            <li>BaiduワイルドカードとGoogle UTMパラメータを組み合わせてデュアルプラットフォームのトラッキングを実現</li>
+            <li>すべてのパラメータは大文字小文字を区別するため、常に小文字を使用</li>
+            <li>UTF-8ランディングページには<code>{kw_enc_utf8}</code>、GBKには<code>{kw_enc}</code>を使用</li>
+            <li>廃止された7つのワイルドカードはすべて有効な代替パラメータに置き換える</li>
+            <li>設定の問題を特定するため、1つのパラメータずつテストする</li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+          <h2>Baiduのトラッキング設定にお困りですか？</h2>
+          <p>当社のチームは、数百ものBaidu PPCアカウントにURLワイルドカードトラッキングを導入してきました。現在の設定を監査し、適切なパラメータを推奨し、お客様の分析プラットフォームとの統合を支援します。</p>
+          <a href="../../ja/contact" class="cta-btn">無料で相談する →</a>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- RELATED -->
+    <section class="related-section">
+      <div class="container">
+        <h2>📖 関連記事</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <div class="related-tag">プラットフォーム</div>
+            <h3><a href="../../ja/blog/baidu-keyword-match-types-guide">🔍 Baiduキーワードマッチタイプ完全ガイド</a></h3>
+            <p>Baidu PPCにおける完全一致、フレーズ一致、部分一致の違いと、キャンペーンパフォーマンスへの影響を解説します。</p>
+          </div>
+          <div class="related-card">
+            <div class="related-tag">プラットフォーム</div>
+            <h3><a href="../../ja/blog/baidu-mcc-account-guide">📱 MCCによる複数Baidu PPCアカウント管理</a></h3>
+            <p>MCC（My Client Center）構造を使って複数のBaidu PPCアカウントを設定・管理する方法を解説します。</p>
+          </div>
+          <div class="related-card">
+            <div class="related-tag">戦略</div>
+            <h3><a href="../../ja/blog/baidu-ppc-terms-explained">🧠 Baidu PPC用語解説：品質スコア、ランキング、CPC</a></h3>
+            <p>Baidu広告のパフォーマンスとコストを左右する主要指標を詳しく解説します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="g2" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#g2)"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg> Baidu PPC Pro</h3>
+          <p>Baidu PPC広告の信頼できるパートナーとして、グローバルブランドが中国の1,000億ドル以上のデジタル広告市場に参入するのを支援しています。透明性のある料金、現地の専門知識、データ駆動型の戦略を提供します。</p>
+        </div>
+        <div class="footer-col">
+          <h4>サービス</h4>
+          <ul>
+            <li><a href="../../ja/why-baidu-ppc-pro">Baidu PPC Proとは</a></li>
+            <li><a href="../../ja/features">サービス</a></li>
+            <li><a href="../../ja/pricing">料金プラン</a></li>
+            <li><a href="../../ja/clients">実績</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>会社情報</h4>
+          <ul>
+            <li><a href="../../ja/about">会社概要</a></li>
+            <li><a href="../../ja/blog">ブログ</a></li>
+            <li><a href="../../ja/faq">よくある質問</a></li>
+            <li><a href="../../ja/contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>法的情報</h4>
+          <ul>
+            <li><a href="../../ja/privacy">プライバシーポリシー</a></li>
+            <li><a href="../../ja/terms">利用規約</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2018-<script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+        <div class="footer-links">
+          <div class="footer-social"><a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a></div>
+      </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="トップに戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const d = document.documentElement;
+      const t = d.getAttribute('data-theme');
+      const next = t === 'dark' ? 'light' : 'dark';
+      d.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+    (function() { const t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
+
+    // Lang switch
+    function toggleLangMenu() {
+      const m = document.querySelector('.lang-switch-menu');
+      m.classList.toggle('open');
+    }
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.lang-switch')) {
+        document.querySelector('.lang-switch-menu')?.classList.remove('open');
+      }
+    });
+
+    // Mobile nav toggle
+    function toggleMobileNav() {
+      const links = document.getElementById('navLinks');
+      const overlay = document.getElementById('navOverlay');
+      const hamburger = document.querySelector('.hamburger-icon');
+      const close = document.querySelector('.close-icon');
+      const isOpen = links.classList.toggle('open');
+      overlay.classList.toggle('active');
+      hamburger.style.display = isOpen ? 'none' : 'block';
+      close.style.display = isOpen ? 'block' : 'none';
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+      if (window.innerWidth <= 900) toggleMobileNav();
+    }));
+
+    // Back to top
+    window.addEventListener('scroll', () => {
+      document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Baidu URLワイルドカード完全ガイド：全9パラメータの使い方",
+    "description": "Baidu URLワイルドカードを使いこなしてキーワード、キャンペーン、広告グループを正確にトラッキング。全9つのサポートパラメータ、実践例、UTM連携手順を網羅した完全ガイド。",
+    "url": "https://baidumarketing.com/ja/blog/baidu-url-wildcard-guide",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2023-05-19",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://baidumarketing.com/ja/blog/baidu-url-wildcard-guide"
+    }
+  }
+  </script>
+</body>
+</html>

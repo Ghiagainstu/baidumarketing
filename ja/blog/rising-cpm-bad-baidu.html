@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>CPM上昇は本当に悪いニュースなのか？— Baidu PPC Pro Blog</title>
+  <meta name="description" content="ほとんどの広告主はCPM上昇にパニックを起こします。しかし実際のキャンペーン事例では、CPMが28→36円に上昇した一方で、CPAは120→72円に改善。CPM上昇が良い結果を意味するケースとは。" />
+  <link rel="canonical" href="https://baidumarketing.com/ja/blog/rising-cpm-bad-baidu" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/ja/blog/rising-cpm-bad-baidu" />
+  <meta property="og:title" content="CPM上昇は本当に悪いニュースなのか？実戦事例が示す真実" />
+  <meta property="og:description" content="ほとんどの広告主はCPM上昇にパニックを起こします。しかし実際のキャンペーン事例では、CPMが28→36元に上昇した一方で、CPAは120→72元に改善。CPM上昇が良い結果を意味するケースとは。" />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CPM上昇は本当に悪いニュースなのか？実戦事例が示す真実" />
+  <meta name="twitter:description" content="ほとんどの広告主はCPM上昇にパニックを起こします。実際のキャンペーン事例を解説。" />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; }
+    [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
+    [data-theme="dark"] .nav-links { color: var(--gray-600); }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
+    [data-theme="dark"] .close-icon line { stroke: #D1D5DB; }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; }
+    [data-theme="dark"] .footer-brand h3 { color: #fff; }
+    [data-theme="dark"] .footer-col h4 { color: #fff; }
+    [data-theme="dark"] .article-content h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-content h3 { color: #E5E7EB; }
+    [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb a { color: var(--blue); }
+    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
+    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
+    [data-theme="dark"] .comparison-table { background: var(--gray-100); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .case-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .case-card h4 { color: var(--gray-800); }
+    [data-theme="dark"] .case-card p { color: var(--gray-600); }
+    [data-theme="dark"] .cta-section { background: rgba(11,15,26,.95); }
+
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    .nav-right-group { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .lang-switch { position: relative; }
+    .lang-switch-btn { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; font-size: .9rem; color: var(--gray-600); transition: all var(--transition-base); line-height: 1; }
+    .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .lang-switch-menu { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; box-shadow: var(--shadow-md); min-width: 150px; opacity: 0; pointer-events: none; transform: translateY(-4px); transition: opacity .2s ease, transform .2s ease; z-index: 200; }
+    .lang-switch-menu.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .lang-switch-item { display: block; padding: 10px 16px; font-size: .9rem; color: var(--gray-700); transition: background .15s; white-space: nowrap; }
+    .lang-switch-item:hover { background: var(--blue-light); color: var(--blue); }
+    .lang-switch-item:first-child { border-radius: 7px 7px 0 0; }
+    .lang-switch-item:last-child { border-radius: 0 0 7px 7px; }
+    [data-theme="dark"] .lang-switch-btn { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    [data-theme="dark"] .lang-switch-menu { background: #0B0F1A; border-color: var(--gray-200); }
+    [data-theme="dark"] .lang-switch-item { color: var(--gray-700); }
+    [data-theme="dark"] .lang-switch-item:hover { background: rgba(99,102,241,.12); color: var(--blue); }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand h3 svg { flex-shrink: 0; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    .article-hero { padding: 80px 0 48px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); max-width: 800px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: .85rem; color: var(--gray-400); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
+    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; }
+    .article-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+    .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
+    .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
+    .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
+    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    .case-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .case-card h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+    .case-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+
+    .cta-section { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); border-radius: var(--radius-lg); padding: 48px; margin: 48px 0; text-align: center; }
+    .cta-section h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: rgba(255,255,255,.8); max-width: 520px; margin: 0 auto 24px; line-height: 1.6; }
+    .cta-button { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    .highlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .highlight-item { padding: 16px; border-radius: 10px; background: var(--blue-subtle); border: 1px solid var(--blue-light); text-align: center; }
+    .highlight-item .value { font-size: 1.6rem; font-weight: 800; color: var(--blue); }
+    .highlight-item .label { font-size: .78rem; color: var(--gray-400); margin-top: 4px; }
+    .highlight-item.positive { background: #D1FAE5; border-color: #6EE7B7; }
+    .highlight-item.positive .value { color: #059669; }
+    .highlight-item.negative { background: #FEF3C7; border-color: #FCD34D; }
+    .highlight-item.negative .value { color: #D97706; }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .article-hero { padding: 56px 0 32px; }
+      .article-section { padding: 32px 0 56px; }
+      .cta-section { padding: 32px 24px; }
+      .highlight-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .lang-switch { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; background: #fff; }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); white-space: nowrap; }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: .9rem; color: var(--gray-600); cursor: pointer; border: none; background: none; text-align: left; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
+    [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
+    @media (max-width: 640px) {
+      .highlight-grid { grid-template-columns: 1fr; }
+    }
+    .related-section { padding: 48px 0 80px; background: var(--gray-50); }
+    .related-section h2 { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; transition: transform .25s, box-shadow .25s; display: block; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .related-card span { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #0284C7; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin: 8px 0; line-height: 1.4; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+    [data-theme="dark"] .related-section { background: var(--gray-100); }
+    [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .related-card h4 { color: var(--gray-800); }
+    [data-theme="dark"] .related-card p { color: var(--gray-600); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "CPM上昇は本当に悪いニュースなのか？実戦事例が示す真実",
+    "description": "ほとんどの広告主はCPM上昇にパニックを起こします。しかし実際のキャンペーン事例では、CPMが28→36元に上昇した一方で、CPAは120→72元に改善。CPM上昇が良い結果を意味するケースとは。",
+    "url": "https://baidumarketing.com/ja/blog/rising-cpm-bad-baidu",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2026-05-03",
+    "dateModified": "2026-05-03",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro",
+      "url": "https://baidumarketing.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://baidumarketing.com/assets/og-brand-default.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://baidumarketing.com/ja/blog/rising-cpm-bad-baidu"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="../../ja/index" class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs>
+        <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+        <path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/>
+        <text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text>
+      </svg>
+      Baidu PPC Pro
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="../../ja/why-baidu-ppc-pro">Baidu PPC Proとは</a>
+      <a href="../../ja/features">サービス</a>
+      <a href="../../ja/pricing">料金プラン</a>
+      <a href="../../ja/clients">実績</a>
+      <a href="../../ja/faq">よくある質問</a>
+      <a href="../../ja/about">会社概要</a>
+      <a href="../../ja/blog" class="active">ブログ</a>
+      <a href="../../ja/contact">お問い合わせ</a>
+      <button class="nav-mobile-theme" onclick="toggleTheme()">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        ダークモード切替
+      </button>
+    </div>
+    <div class="nav-right-group">
+    <div class="lang-switch">
+      <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">
+        🇯🇵
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="lang-switch-menu" id="langSwitchMenu">
+          <a href="../../index" lang="en" class="lang-switch-item">🇺🇸 English</a>
+          <a href="../../ja/index" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
+      </div>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="../../ja/contact" class="nav-cta">今すぐ始める →</a>
+    </div>
+    <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
+      <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
+      <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+<main>
+  <section class="article-hero">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="../../ja/index">ホーム</a> / <a href="../../ja/blog">ブログ</a> / CPM上昇</div>
+      <h1>CPM上昇は本当に悪いニュースなのか？</h1>
+      <div class="article-meta">
+        <span>2026年5月3日</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 読了時間 約5分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+
+        <p>CPM（インプレッション単価）が上昇し始めると、ほとんどの広告主は同じ反射反応を示します——トラフィックが高騰している、環境が悪化している、キャンペーンが失敗に向かっている——と。常識的に聞こえます。しかし実際のキャンペーン運用では、常識はしばしば誤りです。</p>
+
+        <p>CPMの上昇には複数の意味があり、そのうちの一つは「キャンペーンが実際に改善している」というサインです。それを証明する実際のキャンペーン事例をご紹介します。</p>
+
+        <h2>📦 実際のキャンペーン、開始から終了まで</h2>
+
+        <p>ある小売ブランド向けにECオフサイトトラフィックキャンペーンを実施しました。最初の2週間の数値は以下の通りです：</p>
+
+        <div class="highlight-grid">
+          <div class="highlight-item">
+            <div class="value">CNY 28</div>
+            <div class="label">CPM</div>
+          </div>
+          <div class="highlight-item">
+            <div class="value">1.79%</div>
+            <div class="label">CTR</div>
+          </div>
+          <div class="highlight-item">
+            <div class="value">2.54%</div>
+            <div class="label">CVR</div>
+          </div>
+          <div class="highlight-item">
+            <div class="value">CNY 120</div>
+            <div class="label">CPA</div>
+          </div>
+        </div>
+
+        <p>ほとんどの基準で妥当な数字です。しかしCPAはまだやや高く、目標はボリュームを犠牲にせずにそれを引き下げることでした。</p>
+
+        <p>まず、パフォーマンスの高いクリエイティブを分析したところ、共通の問題が見つかりました：最初の3秒での離脱率が高く、10秒視聴率と完了率も低い。つまり、クリエイティブのフックが弱いということです。最初の修正として、冒頭のシーケンスを再構成し、クリックのピークをより早いタイミングに移動させ、それらのシーンを多様化しました。</p>
+
+        <p>次に、広告を実際に目にしているユーザーと、実際にクリックしてコンバージョンしているユーザーを比較しました。ミスマッチは明らかでした——露出されたオーディエンスのかなりの部分が何の関与もせずにスワイプしていました。そこで2つ目の修正として、オーディエンスターゲティングを絞り込みました。</p>
+
+        <p>両方の変更を反映した新しい広告プランを立ち上げ、2日間運用しました。結果は以下の通りです：</p>
+
+        <div class="highlight-grid">
+          <div class="highlight-item negative">
+            <div class="value">CNY 36</div>
+            <div class="label">CPM（29%上昇）</div>
+          </div>
+          <div class="highlight-item positive">
+            <div class="value">3.1%</div>
+            <div class="label">CTR（73%上昇）</div>
+          </div>
+          <div class="highlight-item positive">
+            <div class="value">3.79%</div>
+            <div class="label">CVR（49%上昇）</div>
+          </div>
+          <div class="highlight-item positive">
+            <div class="value">CNY 72</div>
+            <div class="label">CPA（40%低下）</div>
+          </div>
+        </div>
+
+        <p>CPMは28から36に上昇しました。この数字だけを切り取って見ると、確かにトラフィックは高くなりました。しかし他のすべての指標は正しい方向に動きました。コンバージョン率は49%向上し、獲得単価は40%低下しました。</p>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">🎯</span>
+          <div><strong>重要なポイント：</strong>高いCPMと高いコンバージョン率の組み合わせは、システムがより質の高いトラフィックプールに広告を配信していることを意味します。インプレッションコストの上昇は、それ自体でペイしているのです。</div>
+        </div>
+
+        <h2>📉 CPM上昇が悪いサインであるケース</h2>
+
+        <p>もちろん、すべてのCPM上昇が良いとは限りません。違いは、関連する指標が何を示しているかにあります：</p>
+
+        <p><strong>悪いCPM上昇：</strong>CPMが上がり、CTRが横ばいまたは低下、CVRが横ばいまたは低下、CPAが上昇。これはオーディエンスターゲティングが不正確か、広告の品質が低下したことを意味します。システムは、ユーザーが求めてない広告を表示するためにより高い料金を請求しているのです。</p>
+
+        <p><strong>良いCPM上昇：</strong>CPMが上がり、CTRとCVRも上昇、CPAは低下。これは広告品質が向上し、システムがより良い掲載順位を与え、インプレッションコストの上昇を効率改善が十分に上回っていることを意味します。</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>シナリオ</th>
+              <th>CPM</th>
+              <th>CTR</th>
+              <th>CVR</th>
+              <th>CPA</th>
+              <th>判定</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>悪い</strong></td>
+              <td>上昇</td>
+              <td>横ばい/低下</td>
+              <td>横ばい/低下</td>
+              <td>上昇</td>
+              <td>ターゲティングかクリエイティブを修正</td>
+            </tr>
+            <tr>
+              <td><strong>良い</strong></td>
+              <td>上昇</td>
+              <td>上昇</td>
+              <td>上昇</td>
+              <td>低下</td>
+              <td>成功パターン</td>
+            </tr>
+            <tr>
+              <td><strong>中立</strong></td>
+              <td>上昇</td>
+              <td>上昇</td>
+              <td>横ばい</td>
+              <td>横ばい</td>
+              <td>経過観察、おそらく問題なし</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div><strong>CPMを単独で判断してはいけません。</strong>一つの指標だけでパニックになることは、実際には機能しているキャンペーンを潰す最も早い方法です。判断を下す前に、必ずCPMとCTR、CVR、CPAを組み合わせて評価しましょう。</div>
+        </div>
+
+        <h2>🔍 実際に効果のあった改善策</h2>
+
+        <p>上記の事例では、2つの具体的な最適化が改善をもたらしました。どの百度フィードキャンペーンでも覚えておく価値があります：</p>
+
+        <div class="case-card">
+          <h4>✅ 改善策 #1：クリエイティブの再構成</h4>
+          <p>最初の3秒の離脱率が高い場合、クリエイティブのフックが機能していません。冒頭を再構成し、クリック率の高いビジュアルをより早い時点に配置し、複数の冒頭バリエーションをテストしましょう。小さなクリエイティブの変更でCTRが50%以上変動することがあります。</p>
+        </div>
+
+        <div class="case-card">
+          <h4>✅ 改善策 #2：オーディエンスの絞り込み</h4>
+          <p>露出層とコンバージョン層の属性が一致しない場合、購入する可能性のない人々に費用を費やしていることになります。実際にコンバージョンするセグメントにターゲティングを絞り込みましょう——総インプレッション数が減っても構いません。</p>
+        </div>
+
+        <div class="takeaway-box">
+          <h3>📋 重要ポイント</h3>
+          <ul>
+            <li>CPM上昇は自動的に悪いわけではない——CTR、CVR、CPAと併せて読むこと</li>
+            <li>クリエイティブの品質とオーディエンスの精度が、CPM上昇が効果を生むかどうかを決定する</li>
+            <li>良いCPM上昇＝インプレッション単価は上がるが、コンバージョン効率が向上しCPAは低下</li>
+            <li>悪いCPM上昇＝インプレッション単価が上がり、コンバージョン指標は横ばいまたは低下</li>
+            <li>システムは優れた広告をプレミアムトラフィックプールに押し上げる——広告品質に投資しよう</li>
+          </ul>
+        </div>
+
+        <h2>🤔 CPM上昇が良いのか悪いのか判断できない？</h2>
+
+        <p>まさにそのような疑問が、プロのキャンペーン運用と自己流の試行錯誤を分けるポイントです。CPMをクリエイティブパフォーマンス、オーディエンスデータ、コンバージョンパスと併せて総合的に読むこと——それがプロのキャンペーン管理が日々行っていることです。</p>
+
+        <p>Baidu PPC Proでは、キャンペーンを全体として監査します。一つの数字だけでなく、指標のチェーン全体を見ます。お客様の百度キャンペーンが稼働しているけれど、数字が良いニュースなのか悪いニュースなのか判断できない場合、私たちがお手伝いします。</p>
+
+        <div class="cta-section">
+          <h3>🚀 キャンペーンヘルスチェックを受ける</h3>
+          <p>お客様の百度アカウントをレビューし、コストトレンドが健全かどうかを判断し、修正すべき点を正確にお伝えします。</p>
+          <a href="../../ja/contact" class="cta-button">監査をリクエスト →</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+<section class="related-section">
+  <div class="container">
+    <h2>📚 関連記事</h2>
+    <div class="related-grid">
+      <a href="../../ja/blog/cpm-ocpm-ecpm-explained" class="related-card">
+        <span>検索広告</span>
+        <h4>CPM vs oCPM vs eCPM：百度広告主が理解すべき3つの指標</h4>
+        <p>広告主はoCPMで入札し、システムはeCPMで順位付けし、支払うのはCPMとして表示される。これらを混同すると予算を無駄にする。</p>
+      </a>
+      <a href="../../ja/blog/baidu-ad-billing-models-explained" class="related-card">
+        <span>検索広告</span>
+        <h4>百度広告の課金モデル：CPM、CPC、oCPMの使い分け</h4>
+        <p>ブランドにはCPM、検索意図にはCPC、コンバージョンにはoCPM。間違ったモデルを選ぶと予算が無駄になる。</p>
+      </a>
+      <a href="../../ja/blog/ocpc-explained" class="related-card">
+        <span>検索広告</span>
+        <h4>oCPC解説：AI入札がリード単価を下げる仕組み</h4>
+        <p>oCPCは各クリックのコンバージョン確率を推定し、リアルタイムで入札を調整。手動CPC比でCPAを20〜40%削減。</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>
+          Baidu PPC Pro
+        </h3>
+        <p>国際的な広告代理店やブランドが、コンプライアンスを遵守しながら中国の1,000億ドル以上のデジタル広告市場にアクセスできるよう支援します。</p>
+      </div>
+      <div class="footer-col">
+        <h4>クイックリンク</h4>
+        <ul>
+          <li><a href="../../ja/features">サービス</a></li>
+          <li><a href="../../ja/pricing">料金プラン</a></li>
+          <li><a href="../../ja/about">会社概要</a></li>
+          <li><a href="../../ja/faq">よくある質問</a></li>
+          <li><a href="../../ja/blog">ブログ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>お問い合わせ</h4>
+        <ul>
+          <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
+          <li><a href="../../ja/contact">お問い合わせを送信</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>リーガル</h4>
+        <ul>
+          <li><a href="../../ja/privacy">プライバシーポリシー</a></li>
+          <li><a href="../../ja/terms">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+  let mobileNavOpen=false;function toggleMobileNav(){const links=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');h.style.display='none';c.style.display='block';o.classList.add('active');document.body.style.overflow='hidden'}else{links.classList.remove('open');h.style.display='block';c.style.display='none';o.classList.remove('active');document.body.style.overflow=''}}
+  document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{if(mobileNavOpen)toggleMobileNav()})});
+  function toggleTheme(){const html=document.documentElement;const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next);}
+  (function(){const saved=localStorage.getItem('theme');if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}})();
+  function toggleLangMenu(){const menu=document.getElementById('langSwitchMenu');if(menu)menu.classList.toggle('open');}
+  document.addEventListener('click',function(e){const sw=document.querySelector('.lang-switch');if(sw&&!sw.contains(e.target)){const menu=document.getElementById('langSwitchMenu');if(menu)menu.classList.remove('open');}});
+  document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
+  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
+  window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>百度PPCの費用はいくら？料金・CPC・予算ガイド — Baidu PPC Pro Blog</title>
+  <meta name="description" content="百度PPCはプリペイドモデルで最低1,000ドルの初期チャージから始まります。CPCの計算方法、実際の費用、予算管理、悪意クリック対策まで詳しく解説。" />
+  <link rel="canonical" href="https://baidumarketing.com/ja/blog/how-much-does-baidu-ppc-cost" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/ja/blog/how-much-does-baidu-ppc-cost" />
+  <meta property="og:title" content="百度PPCの費用はいくら？料金・CPC・予算ガイド" />
+  <meta property="og:description" content="百度PPCはプリペイドモデルで最低1,000ドルの初期チャージから。CPC計算方法、予算管理、悪意クリック対策を解説。" />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="百度PPCの費用はいくら？料金・CPC・予算ガイド" />
+  <meta name="twitter:description" content="百度PPCの費用構造を詳しく解説。プリペイドモデル、CPC計算、予算管理。" />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; }
+    [data-theme="dark"] .nav-links { color: var(--gray-600); }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; }
+    [data-theme="dark"] .article-content h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-content h3 { color: #E5E7EB; }
+    [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
+    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
+    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .comparison-table { background: var(--gray-100); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .cta-section { background: rgba(11,15,26,.95); }
+    [data-theme="dark"] .related-section { background: var(--gray-100); }
+    [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .related-card h4 { color: var(--gray-800); }
+    [data-theme="dark"] .related-card p { color: var(--gray-600); }
+
+    .nav-right-group { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .lang-switch { position: relative; }
+    .lang-switch-btn { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; font-size: .9rem; color: var(--gray-600); transition: all var(--transition-base); line-height: 1; }
+    .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .lang-switch-menu { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; box-shadow: var(--shadow-md); min-width: 150px; opacity: 0; pointer-events: none; transform: translateY(-4px); transition: opacity .2s ease, transform .2s ease; z-index: 200; }
+    .lang-switch-menu.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .lang-switch-item { display: block; padding: 10px 16px; font-size: .9rem; color: var(--gray-700); transition: background .15s; white-space: nowrap; }
+    .lang-switch-item:hover { background: var(--blue-light); color: var(--blue); }
+    .lang-switch-item:first-child { border-radius: 7px 7px 0 0; }
+    .lang-switch-item:last-child { border-radius: 0 0 7px 7px; }
+    [data-theme="dark"] .lang-switch-btn { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    [data-theme="dark"] .lang-switch-menu { background: #0B0F1A; border-color: var(--gray-200); }
+    [data-theme="dark"] .lang-switch-item { color: var(--gray-700); }
+    [data-theme="dark"] .lang-switch-item:hover { background: rgba(99,102,241,.12); color: var(--blue); }
+
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border:1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    .article-hero { padding: 80px 0 48px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); max-width: 800px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: .85rem; color: var(--gray-400); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
+    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; }
+    .article-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
+    .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
+    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .cta-section { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); border-radius: var(--radius-lg); padding: 48px; margin: 48px 0; text-align: center; }
+    .cta-section h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: rgba(255,255,255,.8); max-width: 520px; margin: 0 auto 24px; line-height: 1.6; }
+    .cta-button { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
+    [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+    .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
+    .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+    .stat-sub { font-size: .72rem; color: var(--gray-400); margin-top: 2px; }
+    .blockquote-highlight { border-left: 3px solid var(--blue); background: var(--blue-subtle); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; font-style: italic; color: var(--gray-600); line-height: 1.7; font-size: .95rem; }
+    [data-theme="dark"] .blockquote-highlight { background: rgba(99,102,241,.08); }
+    .svg-chart-wrapper { display: flex; justify-content: center; margin: 20px 0; overflow: hidden; border-radius: 12px; }
+    .svg-chart-wrapper svg { max-width: 100%; height: auto; }
+    .related-section { padding: 48px 0 80px; background: var(--gray-50); }
+    .related-section h2 { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; transition: transform .25s, box-shadow .25s; display: block; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .related-card span { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #0284C7; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin: 8px 0; line-height: 1.4; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:active { transform: scale(.92); }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) {
+      .article-hero { padding: 56px 0 32px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .lang-switch { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; background: #fff; }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); white-space: nowrap; }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: .9rem; color: var(--gray-600); cursor: pointer; border: none; background: none; text-align: left; }
+      .footer-top { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "百度PPCの費用はいくら？料金・CPC・予算ガイド",
+    "description": "百度PPCはプリペイドモデルで最低1,000ドルの初期チャージから始まります。CPC計算方法、予算管理、悪意クリック対策まで詳しく解説。",
+    "url": "https://baidumarketing.com/ja/blog/how-much-does-baidu-ppc-cost",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2018-12-04",
+    "dateModified": "2018-12-04",
+    "author": { "@type": "Organization", "name": "Baidu PPC Pro Team" },
+    "publisher": { "@type": "Organization", "name": "Baidu PPC Pro", "url": "https://baidumarketing.com", "logo": { "@type": "ImageObject", "url": "https://baidumarketing.com/assets/og-brand-default.png", "width": 1200, "height": 630 } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://baidumarketing.com/ja/blog/how-much-does-baidu-ppc-cost" }
+  }
+  </script>
+</head>
+<body>
+
+<nav><div class="container nav-inner">
+  <a href="../../ja/index" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="l" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#l)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</a>
+  <div class="nav-links" id="navLinks">
+    <a href="../../ja/why-baidu-ppc-pro">Baidu PPC Proとは</a><a href="../../ja/features">サービス</a><a href="../../ja/pricing">料金プラン</a><a href="../../ja/clients">実績</a><a href="../../ja/faq">よくある質問</a><a href="../../ja/about">会社概要</a><a href="../../ja/blog" class="active">ブログ</a><a href="../../ja/contact">お問い合わせ</a>
+    <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>ダークモード切替</button>
+  </div>
+  <div class="nav-right-group">
+  <div class="lang-switch">
+    <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="lang-switch-menu" id="langSwitchMenu">
+      <a href="../../index" lang="en" class="lang-switch-item">🇺🇸 English</a>
+      <a href="../../ja/index" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
+    </div>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+  <a href="../../ja/contact" class="nav-cta">今すぐ始める →</a>
+  </div>
+  <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div></nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+<main>
+  <section class="article-hero">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="../../ja/index">ホーム</a> / <a href="../../ja/blog">ブログ</a> / 百度PPC費用</div>
+      <h1>百度PPCの費用はいくら？料金・CPC・予算ガイド</h1>
+      <div class="article-meta"><span>2018年12月4日</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 読了時間 約7分</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Proチーム</span></div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+
+        <p>どの新チャネルについても、広告主が最初に尋ねる質問は「費用はいくら？」です。百度PPCの場合、答えは単一の数字よりも複雑です。百度はプリペイドモデル（最低チャージ額あり）、品質スコアオークションで決まる変動CPC、クリック詐欺に対する保護機能を備えています。以下が完全な内訳です。</p>
+
+        <div class="stats-grid">
+          <div class="stat-card"> <div class="stat-value">$1,000</div> <div class="stat-label">最低チャージ額</div> <div class="stat-sub">地域により変動</div> </div>
+          <div class="stat-card"> <div class="stat-value">$142</div> <div class="stat-label">サービス料</div> <div class="stat-sub">初回設定費</div> </div>
+          <div class="stat-card"> <div class="stat-value">CPCのみ</div> <div class="stat-label">課金モデル</div> <div class="stat-sub">表示は無料</div> </div>
+          <div class="stat-card"> <div class="stat-value">無料</div> <div class="stat-label">商盾ツール</div> <div class="stat-sub">悪意クリック対策</div> </div>
+        </div>
+
+        <h2>百度PPCはプリペイドモデル</h2>
+        <p>Google広告が後払いなのに対し、百度PPCはプリペイドモデルを採用しています。アカウントに資金を入金し、クリックが発生するごとに費用が差し引かれます。残高がゼロになると、チャージするまで広告は停止します。</p>
+        <p>初期設定には2つの支払いが必要です：</p>
+        <ul>
+          <li><strong>初回最低チャージ：</strong>$1,000 USDから。正確な額は業種、地域、アカウントタイプによって異なります。</li>
+          <li><strong>サービス料：</strong>一回限りの料金で$142 USDから。アカウント作成、コンプライアンス審査、初期設定を含みます。</li>
+        </ul>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">💡</span>
+          <div><strong>ヒント：</strong>プリペイドモデルでは予算を常に自分でコントロールできます。多額の後払い請求のリスクはありません。残高がなくなれば広告は停止します。これは制限ではなく保護機能です。</div>
+        </div>
+
+        <h2>実際に支払うものは？</h2>
+        <p>百度は<strong>クリック単価（CPC）</strong>ベースで課金します。広告が数千回表示されても、インプレッションに対しては1銭も請求されません。ユーザーが広告をクリックした時だけ支払います。</p>
+
+        <blockquote class="blockquote-highlight">百度はクリックに対してのみ課金し、インプレッションには課金しません。予算と競合が許す限り広告は何度でも表示され、誰かがクリックした時だけ支払います。</blockquote>
+
+        <p>これは中国市場に参入する海外ブランドにとって有利です。予算は、提供内容に積極的な関心を示したユーザーにのみ使われます。</p>
+
+        <h2>CPCはどのように計算されるか</h2>
+        <p>実際のCPCは百度のオークションシステムに依存します。計算式は：</p>
+
+        <div class="svg-chart-wrapper"><svg width="640" height="130" viewBox="0 0 640 130"><rect x="10" y="10" width="620" height="110" rx="12" fill="#EEF0FF" stroke="#C7D2FE" stroke-width="1"/><text x="320" y="35" text-anchor="middle" font-family="system-ui" font-size="10" fill="#6B7280">実際のCPC計算式（百度）</text><text x="30" y="65" font-family="monospace" font-size="15" fill="#2932E1" font-weight="700">Actual CPC =</text><text x="195" y="65" font-family="monospace" font-size="13" fill="#374151">下位競合CPC</text><text x="195" y="85" font-family="monospace" font-size="13" fill="#6B7280">× 下位品質スコア</text><line x1="195" y1="92" x2="510" y2="92" stroke="#D1D5DB" stroke-width="1"/><text x="260" y="112" font-family="monospace" font-size="14" fill="#2932E1" font-weight="700">自社の品質スコア</text><text x="530" y="85" font-family="monospace" font-size="15" fill="#374151" font-weight="700">+ 0.01</text></svg></div>
+
+        <p>各要素の説明：</p>
+        <ul>
+          <li><strong>下位競合CPC：</strong>直下の競合の最高入札額。これがCPCの下限となります。</li>
+          <li><strong>下位品質スコア：</strong>下位競合の品質スコア。これが低いとCPCも低くなります。</li>
+          <li><strong>自社の品質スコア：</strong>高ければ実際のCPCが下がります。CTR、ランディングページ体験、広告関連性、アカウント履歴が影響。</li>
+          <li><strong>+ 0.01：</strong>百度が最低保証として1銭（0.01元）を加算。</li>
+        </ul>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">🔬</span>
+          <div><strong>インサイト：</strong>品質スコアは実際のコストに非常に大きな影響を与えます。同じキーワードに同じ金額で入札しても、品質スコアが高い広告主は低いCPCを実現できます。広告関連性とランディングページ体験の改善は、コスト削減に最も効果的な方法の一つです。</div>
+        </div>
+
+        <h2>詳細な費用明細は確認できる？</h2>
+        <p>はい。百度広告プラットフォーム内で、キーワードレベルの支出・クリックレポートを生成できます。期間、キャンペーン、広告グループ、キーワードごとにカスタマイズ可能。正確な支出と平均CPCを確認できます。</p>
+
+        <h2>予算の調整は可能？</h2>
+        <table class="comparison-table">
+          <thead><tr><th>制御層</th><th>機能</th><th>例</th></tr></thead>
+          <tbody>
+            <tr><td>日別予算上限</td><td>キャンペーンごとの1日あたりの支出制限</td><td>リード獲得キャンペーンに$50/日の上限</td></tr>
+            <tr><td>アカウントレベル上限</td><td>全キャンペーンの総支出制限</td><td>高トラフィック日の過剰支出を防止</td></tr>
+            <tr><td>地域ターゲティング</td><td>特定都市や省に広告を限定</td><td>北京と上海のみをターゲット</td></tr>
+            <tr><td>時間帯設定</td><td>選択した時間帯のみ広告表示</td><td>平日9時〜18時のみ配信</td></tr>
+          </tbody>
+        </table>
+
+        <h2>悪意クリックへの対策</h2>
+        <p>百度は複数の観点からクリックを分析し、異常パターンを検出します。同一IPからの短時間での連続クリック、不自然なパターンのクリック、サイト内アクションのないクリックなどは自動的にフィルタリングされ、課金されません。さらに、<strong>百度商盾</strong>という無料ツールで手動IPブラックリストなど追加保護が可能です。</p>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">🔬</span>
+          <div><strong>インサイト：</strong>数百の百度アカウントを管理してきた経験から、悪意クリックの実際のコストはほとんどの広告主が恐れるよりはるかに低いです。百度の自動フィルタリングが大部分を捕捉します。</div>
+        </div>
+
+        <h2>費用比較：百度 vs Google広告</h2>
+        <table class="comparison-table">
+          <thead><tr><th>要素</th><th>百度PPC</th><th>Google広告</th></tr></thead>
+          <tbody>
+            <tr><td>課金モデル</td><td>プリペイド（事前チャージ）</td><td>ポストペイド（後払い）</td></tr>
+            <tr><td>初期投資</td><td>$1,000 + $142 サービス料</td><td>$0（最低額なし）</td></tr>
+            <tr><td>インプレッション課金</td><td>なし</td><td>なし（標準検索広告）</td></tr>
+            <tr><td>悪意クリック対策</td><td>自動フィルター＋無料商盾</td><td>自動フィルター＋手動審査</td></tr>
+          </tbody>
+        </table>
+
+        <div class="takeaway-box">
+          <h3>✅ 重要ポイント</h3>
+          <ul>
+            <li>百度はプリペイドモデル：事前に資金を入金し、クリックごとに支払う</li>
+            <li>最低初期費用：$1,000チャージ＋$142サービス料</li>
+            <li>クリックに対してのみ支払い、インプレッションは無料</li>
+            <li>品質スコアが高いほどCPCは低くなる</li>
+            <li>悪意クリックは自動フィルタリング、商盾で追加保護も可能</li>
+            <li>予算は上限設定、地域設定、時間帯設定で完全にコントロール可能</li>
+          </ul>
+        </div>
+
+        <div class="cta-section">
+          <h3>百度PPC予算の見積もりが必要ですか？</h3>
+          <p>私たちが現実的なコスト見積もり、アカウント設定、キャンペーン最適化を支援します。</p>
+          <a href="../../ja/contact" class="cta-button">予算見積もりを依頼する →</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+  <section class="related-section">
+    <div class="container">
+      <h2>関連記事</h2>
+      <div class="related-grid">
+        <a href="../../ja/blog/baidu-ad-billing-models-explained" class="related-card">
+          <span>戦略</span>
+          <h4>百度広告課金モデル解説：CPM、oCPM、CPCなど</h4>
+          <p>全課金モデルを理解しキャンペーン目標に合ったものを選択。</p>
+        </a>
+        <a href="../../ja/blog/cpm-ocpm-ecpm-explained" class="related-card">
+          <span>戦略</span>
+          <h4>CPM vs oCPM vs eCPM：百度課金モデル徹底解説</h4>
+          <p>各価格モデルの意味と最適な選択方法。</p>
+        </a>
+        <a href="../../ja/blog/ocpc-explained" class="related-card">
+          <span>戦略</span>
+          <h4>oCPC解説：AI入札でリード単価を下げる</h4>
+          <p>百度のAI入札モデルでCPAを20〜40%削減。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<footer><div class="container">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fl" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fl)"/><text x="16" y="21.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="800" fill="white">BPP</text></svg>Baidu PPC Pro</h3>
+      <p>国際的な広告代理店やブランドが、コンプライアンスを遵守しながら中国の1,000億ドル以上のデジタル広告市場にアクセスできるよう支援します。</p>
+    </div>
+    <div class="footer-col">
+      <h4>サービス</h4>
+      <ul><li><a href="../../ja/features">Baidu PPC設定</a></li><li><a href="../../ja/features">キーワードリサーチ</a></li><li><a href="../../ja/features">LPローカライズ</a></li><li><a href="../../ja/features">コンプライアンス＆認証</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>リソース</h4>
+      <ul><li><a href="../../ja/blog">ブログ</a></li><li><a href="../../ja/faq">よくある質問</a></li><li><a href="../../ja/about">会社概要</a></li><li><a href="../../ja/contact">お問い合わせ</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>リーガル</h4>
+      <ul><li><a href="../../ja/privacy">プライバシーポリシー</a></li><li><a href="../../ja/terms">利用規約</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2018&ndash;<script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+    <div class="footer-social"><a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a></div>
+  </div>
+</div></footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+<script>
+(function(){const t=document.getElementById('backToTop');window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)});const s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}}})();
+function toggleTheme(){const d=document.documentElement.getAttribute('data-theme');const n=d==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n)}
+function toggleMobileNav(){const n=document.getElementById('navLinks');const o=document.getElementById('navOverlay');const h=document.querySelector('.hamburger-icon');const c=document.querySelector('.close-icon');n.classList.toggle('open');o.classList.toggle('active');h.style.display=n.classList.contains('open')?'none':'block';c.style.display=n.classList.contains('open')?'block':'none'}
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{const n=document.getElementById('navLinks');const o=document.getElementById('navOverlay');if(n.classList.contains('open')){n.classList.remove('open');o.classList.remove('active')}})});
+function toggleLangMenu(){const m=document.getElementById('langSwitchMenu');if(m)m.classList.toggle('open')}
+document.addEventListener('click',function(e){const sw=document.querySelector('.lang-switch');if(sw&&!sw.contains(e.target)){const m=document.getElementById('langSwitchMenu');if(m)m.classList.remove('open')}});
+</script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Baidu共有予算ガイド：キャンペーン間の広告費の無駄をなくす — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Baiduがキャンペーン間で共有できる予算機能を解説。キャンペーンごとに手動配分する代わりに、システムが未活用の予算を高パフォーマンスのキャンペーンに自動再配分。仕組みと活用シーンを紹介。" />
+  <link rel="canonical" href="https://baidumarketing.com/ja/blog/baidu-shared-budget-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/ja/blog/baidu-shared-budget-guide" />
+  <meta property="og:title" content="Baidu共有予算ガイド：キャンペーン間の広告費の無駄をなくす" />
+  <meta property="og:description" content="Baiduがキャンペーン間で共有できる予算機能を解説。キャンペーンごとに手動配分する代わりに、システムが未活用の予算を高パフォーマンスのキャンペーンに自動再配分。" />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Baidu共有予算ガイド：キャンペーン間の広告費の無駄をなくす" />
+  <meta name="twitter:description" content="Baidu共有予算機能の解説。手動配分から解放され、システムが未活用予算を高パフォーマンスキャンペーンに自動再配分する仕組みを詳しく紹介。" />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    :root {
+      --blue: #2932E1; --blue-dark: #1E25AF; --blue-deep: #151B8A;
+      --blue-light: #EEF0FF; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF;
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow-md: 0 4px 16px rgba(0,0,0,.10); --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --shadow-blue: 0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%);
+      --gradient-hero: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%);
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
+    [data-theme="dark"] body { background-color: #0B0F1A; color: #E5E7EB; }
+    [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-logo { color: #818CF8; }
+    [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
+    [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
+    [data-theme="dark"] .close-icon line { stroke: #D1D5DB; }
+    [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
+    [data-theme="dark"] footer { background: #070B14 !important; }
+    [data-theme="dark"] .article-content h2 { color: #F9FAFB; }
+    [data-theme="dark"] .article-content h3 { color: #E5E7EB; }
+    [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-hero { background: var(--gradient-hero); }
+    [data-theme="dark"] .article-hero h1 { color: #F9FAFB; }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
+    [data-theme="dark"] .breadcrumb a { color: var(--blue); }
+    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
+    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .comparison-table { background: var(--gray-100); }
+    [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
+    [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .cta-section { background: rgba(11,15,26,.95); }
+    [data-theme="dark"] .related-section { background: var(--gray-100); }
+    [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .related-card h4 { color: var(--gray-800); }
+    [data-theme="dark"] .related-card p { color: var(--gray-600); }
+
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all .2s; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); }
+    .nav-logo:hover { color: var(--blue); }
+    .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
+    .nav-links a { position: relative; transition: color var(--transition-base); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; left: 0; }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+    .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+    footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
+    .footer-col h4 { color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-social { display: flex; gap: 14px; align-items: center; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social a svg { width: 18px; height: 18px; }
+
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    .article-hero { padding: 80px 0 48px; background: var(--gradient-hero); position: relative; overflow: hidden; }
+    .article-hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: var(--gray-800); max-width: 800px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: .85rem; color: var(--gray-400); }
+    .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--blue); }
+    .article-section { padding: 48px 0 80px; }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
+    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; }
+    .article-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+    .article-content ul { margin: 12px 0 20px; padding-left: 24px; }
+    .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
+    .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
+    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    .cta-section { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); border-radius: var(--radius-lg); padding: 48px; margin: 48px 0; text-align: center; }
+    .cta-section h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .cta-section p { font-size: .95rem; color: rgba(255,255,255,.8); max-width: 520px; margin: 0 auto 24px; line-height: 1.6; }
+    .cta-button { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
+    [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+    .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
+    .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+
+    .blockquote-highlight { border-left: 3px solid var(--blue); background: var(--blue-subtle); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; font-style: italic; color: var(--gray-600); line-height: 1.7; font-size: .95rem; }
+    [data-theme="dark"] .blockquote-highlight { background: rgba(99,102,241,.08); }
+
+    .svg-chart-wrapper { display: flex; justify-content: center; margin: 20px 0; overflow: hidden; border-radius: 12px; }
+    .svg-chart-wrapper svg { max-width: 100%; height: auto; }
+
+    .related-section { padding: 48px 0 80px; background: var(--gray-50); }
+    .related-section h2 { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .related-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; transition: transform .25s, box-shadow .25s; display: block; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .related-card span { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #0284C7; }
+    .related-card h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin: 8px 0; line-height: 1.4; }
+    .related-card p { font-size: .8rem; color: var(--gray-600); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) {
+      .article-hero { padding: 56px 0 32px; }
+      .article-section { padding: 32px 0 56px; }
+      .cta-section { padding: 32px 24px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; background: #fff; }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100);
+        white-space: nowrap; }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .nav-mobile-theme { display: flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: .9rem; color: var(--gray-600); cursor: pointer; border: none; background: none; text-align: left; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200);
+        white-space: nowrap; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Baidu共有予算ガイド：キャンペーン間の広告費の無駄をなくす",
+    "description": "Baiduがキャンペーン間で共有できる予算機能を解説。キャンペーンごとに手動配分する代わりに、システムが未活用の予算を高パフォーマンスのキャンペーンに自動再配分。",
+    "url": "https://baidumarketing.com/ja/blog/baidu-shared-budget-guide",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2023-03-22",
+    "dateModified": "2023-03-22",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro",
+      "url": "https://baidumarketing.com",
+      "logo": { "@type": "ImageObject", "url": "https://baidumarketing.com/assets/og-brand-default.png", "width": 1200, "height": 630 }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://baidumarketing.com/ja/blog/baidu-shared-budget-guide" }
+  }
+  </script>
+</head>
+<body>
+
+<nav><div class="container nav-inner">
+<a href="../../ja/index" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="l" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#l)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</a>
+<div class="nav-links" id="navLinks">
+<a href="../../ja/why-baidu-ppc-pro">Baidu PPC Proとは</a><a href="../../ja/features">サービス</a><a href="../../ja/pricing">料金プラン</a><a href="../../ja/clients">実績</a><a href="../../ja/faq">よくある質問</a><a href="../../ja/about">会社概要</a><a href="../../ja/blog" class="active">ブログ</a><a href="../../ja/contact">お問い合わせ</a>
+<button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>ダークモード切替</button>
+</div>
+<div class="nav-right-group">
+  <div class="lang-switch">
+    <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 ▼</button>
+    <div class="lang-switch-menu">
+      <a href="../../index" lang="en" class="lang-switch-item">🇺🇸 English</a>
+      <a href="../../ja/index" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
+    </div>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="ダークモード切替" onclick="toggleTheme()"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+  <a href="../../ja/contact" class="nav-cta">今すぐ始める →</a>
+</div>
+<button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="メニュー"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div></nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+<main>
+  <section class="article-hero">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="../../ja/index">ホーム</a> / <a href="../../ja/blog">ブログ</a> / 共有予算</div>
+      <h1>Baidu共有予算ガイド：キャンペーン間の広告費の無駄をなくす</h1>
+      <div class="article-meta"><span>2023年3月22日</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 読了時間：約5分</span>
+    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro チーム</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+
+        <p>Baiduの検索広告キャンペーンを運用していると、こんな問題に直面したことはありませんか？キャンペーンAが午後2時には日次予算に達して配信停止、一方キャンペーンBは深夜になっても予算の60％しか消化していない。すでに業務時間外なので、Bに割り当てた予算は使われず、Aは貴重なトラフィックを逃し続ける——そんな経験です。</p>
+
+        <p>Baiduにはこの問題を解決する新機能があります。<strong>共有予算（Shared Budget）</strong>です。各キャンペーンに個別の日次上限を設定する代わりに、1つの共有予算プールを設定すると、Baiduが自動的にキャンペーン間で予算を配分します。システムはパフォーマンスの低いキャンペーンから予算を引き揚げ、最も必要としているキャンペーンにリアルタイムで振り分けます。あなたが手を動かす必要は一切ありません。</p>
+
+        <div class="blockquote-highlight">「共有予算とは、同一アカウント内の複数キャンペーンで共有する単一の日次予算です。システムは未活用の予算を、予算上限に達したキャンペーンに自動的に再配分できます。」— Baidu公式ドキュメント</div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">自動</div>
+            <div class="stat-label">再配分</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">安定</div>
+            <div class="stat-label">oCPC配信</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">削減</div>
+            <div class="stat-label">手動作業</div>
+          </div>
+        </div>
+
+        <h2>Baiduが共有予算を導入した理由</h2>
+        <p>oCPC入札の普及に伴い、多くの広告主が複数のキャンペーンを1つのoCPC入札戦略に紐付けるようになりました。これらのキャンペーンは統一された目標CPAを共有しますが、それぞれに個別の日次予算上限が設定されています。その結果、高パフォーマンスのキャンペーンが上限に達して配信を停止する一方、同じ戦略内の弱いキャンペーンには予算が余っているという事態が発生します。1つのキャンペーンがトラフィック不足に陥り、別のキャンペーンが予算を十分に活用できない状態では、oCPCモデルは効果的に最適化できません。コンバージョンパフォーマンスは不安定になり、トラフィックとコストは日々変動します。</p>
+
+        <p>共有予算は、キャンペーン間で予算をプールすることでこの問題を解決します。システムは全体像を把握し、総日次予算の範囲内で最も良い結果を生む場所に広告費を配分します。</p>
+
+        <h2>2つの大きなメリット</h2>
+
+        <h3>1. よりスムーズなoCPC配信</h3>
+        <p>oCPC入札戦略に共有予算を割り当てると、スマート入札モデルは人為的なキャンペーン単位の上限に妨げられることなく、コンバージョン機会を探索できます。同じコンバージョン単価の期待値のもとで、予算がキャンペーン間で柔軟にシフトします。質が高くボリュームのあるキャンペーンが日中に遮断されることがなくなります。結果として、より安定したトラフィック、一貫性のあるコンバージョン数、そしてコストの急激な変動の抑制が実現します。</p>
+
+        <div class="callout callout-insight">
+          <span class="callout-icon">🎯</span>
+          <div><strong>重要なポイント：</strong>共有予算は特にoCPC広告主にとって価値が高い機能です。これがないと、キャンペーン単位の予算上限が戦略レベルの最適化ロジックと衝突するため、入札モデルは一貫した結果を出せません。</div>
+        </div>
+
+        <h3>2. 予算管理にかかる時間の削減</h3>
+        <p>多くの運用担当者は、同じマーケティング目標に対して異なるターゲティング、クリエイティブ、ランディングページの組み合わせをテストするために複数のキャンペーンを運用しています。日次予算を4～5のテストキャンペーンに手動で分割するのは面倒で非効率です。どのキャンペーンが後半により多くの予算を必要とするかは、常に推測に過ぎません。</p>
+        <p>共有予算を使用すれば、システムがインテリジェントに配分を行います。同じビジネス目標のもとで、質の高い広告が自動的に多くの露出を獲得します。これは特にホリデープロモーションやセール時期に有効で、トラフィックが予測不能に急増する中で手動調整が追いつかない状況を回避できます。</p>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">✅</span>
+          <div><strong>使用すべきシーン：</strong>共有予算は、同じコンバージョン目標を共有する複数のキャンペーンがある場合に最適です。特にそれらが同じoCPC入札戦略に属している場合に効果を発揮します。ブランド認知とダイレクトレスポンスのように根本的に目的が異なるキャンペーンには使用しないでください。その場合は個別の予算管理が必要です。</div>
+        </div>
+
+        <h2>共有予算 vs キャンペーン別予算</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>機能</th>
+              <th>キャンペーン別予算</th>
+              <th>共有予算</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>予算上限</td>
+              <td>キャンペーン単位の固定上限</td>
+              <td>共有プール、自動配分</td>
+            </tr>
+            <tr>
+              <td>oCPC互換性</td>
+              <td>配信が不安定になる可能性</td>
+              <td>oCPC戦略向けに設計</td>
+            </tr>
+            <tr>
+              <td>運用担当者の負担</td>
+              <td>毎日の監視が必要</td>
+              <td>週単位の時間を削減</td>
+            </tr>
+            <tr>
+              <td>最適な用途</td>
+              <td>独立した目標を持つキャンペーン</td>
+              <td>1つのコンバージョン目標を共有するキャンペーン</td>
+            </tr>
+            <tr>
+              <td>ホリデー/プロモーション</td>
+              <td>手動調整が必要</td>
+              <td>トラフィック急増に自動対応</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div><strong>注意点：</strong>キャンペーンを共有予算に移行すると、個別のキャンペーン単位の上限はプールによって上書きされます。共有予算の総額を正しく設定してください。低すぎると、すべてのキャンペーンが同時に配信不足になる可能性があります。</div>
+        </div>
+
+        <h2>設定すべきタイミング</h2>
+        <p>共有予算は、設定して終わりという機能ではありません。適切なプールサイズを選択し、どのキャンペーンを含めるかを判断する必要があります。実践的なアプローチをご紹介します。</p>
+        <ul>
+          <li><strong>oCPC戦略グループから始める</strong> — 同じoCPC戦略に紐付けられたキャンペーンは、共有予算の最有力候補です。戦略レベルの最適化ロジックが正しく機能するには、予算の柔軟性が不可欠です。</li>
+          <li><strong>A/Bテストキャンペーンを追加する</strong> — 同じ目標に対して異なるアプローチをテストする並行キャンペーンを実行している場合、予算を推測で分割する代わりに共有予算を使いましょう。</li>
+          <li><strong>ピークシーズンに活用する</strong> — 大型セールの前に共有予算に切り替えましょう。システムは需要の急増に人間よりも迅速に対応できます。</li>
+        </ul>
+
+        <div class="takeaway-box">
+          <h3>📋 重要なポイント</h3>
+          <ul>
+            <li>共有予算は複数キャンペーンで日次予算をプールし、Baiduが自動配分する</li>
+            <li>oCPC戦略にとって重要：キャンペーン単位の予算上限はモデルの最適化ロジックを阻害する</li>
+            <li>手動の予算管理を削減——特にホリデー/プロモーション時期に価値が高い</li>
+            <li>同じコンバージョン目標を共有するキャンペーンに最適。目的が異なるキャンペーンには非推奨</li>
+            <li>総プール額は慎重に設定——低すぎると全キャンペーンが配信不足になる</li>
+          </ul>
+        </div>
+
+        <h2>🤔 あなたのアカウント構造に共有予算は適していますか？</h2>
+
+        <p>Baiduで共有予算を設定するには、キャンペーン同士がアカウント構造内でどのように相互作用するかを理解する必要があります。適切でないキャンペーンを共有プールに移行するとパフォーマンスが低下し、プールサイズを誤ると予算を無駄にする可能性があります。</p>
+
+        <p>Baidu PPC Proでは、アカウント構造を監査し、キャンペーンの目標に合った予算戦略を提案します。複数のキャンペーンをoCPCで運用していて配信の不安定さを感じているなら、共有予算が解決策になる可能性が高いです。私たちが正しく実装するお手伝いをします。</p>
+
+        <div class="cta-section">
+          <h3>🚀 Baiduの予算戦略を最適化する</h3>
+          <p>あなたのアカウント構造について教えてください。共有予算がキャンペーンに適しているかどうかを判断し、設定をサポートします。</p>
+          <a href="../../ja/contact" class="cta-button">お問い合わせ →</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+<section class="related-section">
+  <div class="container">
+    <h2>📚 こちらもおすすめ</h2>
+    <div class="related-grid">
+      <a href="../../ja/blog/baidu-ad-billing-models-explained" class="related-card">
+        <span>検索広告</span>
+        <h4>Baidu広告課金モデル：CPM、CPC、oCPMの使い分け</h4>
+        <p>ブランドにはCPM、検索意図にはCPC、コンバージョンにはoCPM。間違ったモデルを選ぶと予算を無駄にします。</p>
+      </a>
+      <a href="../../ja/blog/8-ways-lower-baidu-cpc" class="related-card">
+        <span>検索広告</span>
+        <h4>成果を犠牲にせずBaidu CPCを下げる8つの方法</h4>
+        <p>ロングテールキーワード、地域ターゲティング、ブランド保護まで。</p>
+      </a>
+      <a href="../../ja/blog/baidu-mcc-account-guide" class="related-card">
+        <span>検索広告</span>
+        <h4>Baidu MCCアカウント：複数PPCアカウントの管理方法</h4>
+        <p>1つのダッシュボードで最大500アカウント。アカウントタイプ、登録手順、よくある問題。</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container">
+<div class="footer-top">
+<div class="footer-brand"><h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</h3><p>国際的な代理店やブランドが、中国の1,000億ドル以上のデジタル広告市場にコンプライアンス、透明性、確かな知識を持って参入するのを支援します。</p></div>
+<div class="footer-col"><h4>クイックリンク</h4><ul><li><a href="../../ja/features">サービス</a></li><li><a href="../../ja/pricing">料金プラン</a></li><li><a href="../../ja/about">会社概要</a></li><li><a href="../../ja/faq">よくある質問</a></li><li><a href="../../ja/blog">ブログ</a></li></ul></div>
+<div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="../../ja/contact">リクエストを送信</a></li></ul></div>
+<div class="footer-col"><h4>法的情報</h4><ul><li><a href="../../ja/privacy">プライバシーポリシー</a></li><li><a href="../../ja/terms">利用規約</a></li></ul></div>
+</div>
+<div class="footer-bottom">
+<div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+<div class="footer-social"><a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a></div>
+</div>
+</div></footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="トップに戻る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+<script>
+let mobileNavOpen=false;function toggleMobileNav(){const l=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){l.classList.add('open');h.style.display='none';c.style.display='block';o.classList.add('active');document.body.style.overflow='hidden'}else{l.classList.remove('open');h.style.display='block';c.style.display='none';o.classList.remove('active');document.body.style.overflow=''}}
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{if(mobileNavOpen)toggleMobileNav()})});
+function toggleTheme(){const h=document.documentElement;const n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);}
+(function(){const s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}})();
+// Lang switch
+function toggleLangMenu() {
+  const m = document.querySelector('.lang-switch-menu');
+  m.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.lang-switch')) {
+    document.querySelector('.lang-switch-menu')?.classList.remove('open');
+  }
+});
+document.querySelectorAll('.obf-email-link').forEach(function(e){var a=e.dataset.u+'@'+e.dataset.d;e.href='mailto:'+a;if(!e.textContent.trim())e.textContent=a});
+document.querySelectorAll('.obf-email-icon').forEach(function(e){e.href='mailto:'+e.dataset.u+'@'+e.dataset.d});
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
+</script>
+</body>
+</html>
