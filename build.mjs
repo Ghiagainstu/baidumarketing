@@ -83,7 +83,9 @@ function generateNavHTML(langCode) {
   const langItems = LANG_CFG.languages
     .filter(l => l.active)
     .map(l => {
-      const link = l.code === 'en' ? `${langPrefix}index.html` : `${langPrefix}${l.dir}/index.html`;
+      const link = l.dir 
+        ? `${isDefault ? '' : '../'}${l.dir}/`
+        : (isDefault ? '/' : '../');
       return `          <a href="${link}" lang="${l.code}" class="lang-switch-item">${l.flag} ${l.nativeLabel}</a>`;
     })
     .join('\n');
