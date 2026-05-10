@@ -79,6 +79,7 @@
     .nav-links a:hover::after{width:100%;left:0}
     .nav-links a.active{color:var(--blue);font-weight:600}
     .nav-links a.active::after{width:100%;left:0}
+    html[lang="ja"] .nav-links { gap: 20px; font-size: .82rem; }
     .nav-cta{background:var(--gradient-brand);color:#fff;padding:10px 22px;border-radius:8px;font-size:.9rem;font-weight:600;transition:transform var(--transition-base),box-shadow var(--transition-base)}
     .nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(41,50,225,.35)}
     .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer}
@@ -91,7 +92,7 @@
     .lang-switch-btn{background:transparent;border:1px solid var(--gray-200);border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer;color:var(--gray-600)}
     .lang-switch-btn:hover{border-color:var(--blue);color:var(--blue)}
     .lang-switch-menu{display:none;position:absolute;top:100%;right:0;background:#fff;border:1px solid var(--gray-200);border-radius:8px;box-shadow:var(--shadow-md);min-width:140px;z-index:200;margin-top:4px}
-    .lang-switch-menu.show{display:block}
+    .lang-switch-menu.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
     .lang-switch-item{display:block;padding:10px 14px;font-size:.85rem;color:var(--gray-700);transition:background .2s}
     .lang-switch-item:hover{background:var(--blue-subtle);color:var(--blue)}
     [data-theme="dark"] .lang-switch-btn{border-color:var(--gray-300);color:var(--gray-600)}
@@ -170,30 +171,49 @@
     .related-card p{font-size:.8rem;color:var(--gray-600);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
     @media(max-width:768px){.related-grid{grid-template-columns:1fr}}
 
-    .nav-mobile-cta,.nav-mobile-theme{display:none}
-    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}.nav-right-group .lang-switch{display:none}}
-    @media(max-width:768px){
-      .article-hero{padding:56px 0 32px}
-      .article-section{padding:32px 0 56px}
-      .cta-section{padding:32px 24px}
-      .nav-links{display:none}
-      .nav-cta{display:none}
-      .theme-toggle{display:none}
-      .nav-mobile-toggle{display:block}
-      .nav-links.open{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;width:100%;padding:8px 0;gap:0;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-md);z-index:100;background:#fff}
-      .nav-links.open a{display:block;padding:14px 24px;font-size:1rem;font-weight:500;color:var(--gray-800);
-        white-space: nowrap;border-bottom:1px solid var(--gray-100)}
-      .nav-links.open a:last-child{border-bottom:none}
-      .nav-links.open a:hover,.nav-links.open a:active{background:var(--blue-subtle);color:var(--blue)}
-      .nav-links.open a::after{display:none}
-      .nav-mobile-theme{display:flex;align-items:center;gap:8px;padding:12px 24px;font-size:.9rem;color:var(--gray-600);cursor:pointer;border:none;background:none;text-align:left}
-      .footer-top{grid-template-columns:1fr}
-      .footer-bottom{flex-direction:column;text-align:center}
+    .nav-mobile-cta, .nav-mobile-theme { display: none; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .theme-toggle { display: none; }
+      .lang-switch { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        padding: 8px 0;
+        gap: 0;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: var(--shadow-md);
+        z-index: 100;
+        background: #fff;
+      }
+      .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open a:hover, .nav-links.open a:active { background: var(--blue-subtle); color: var(--blue); }
+      .nav-links.open a::after { display: none; }
+      .nav-mobile-theme {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        font-size: .9rem;
+        color: var(--gray-600);
+        cursor: pointer;
+        border: none;
+        background: none;
+        text-align: left;
+      }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
     }
-    [data-theme="dark"] .nav-links.open{background:#0B0F1A;border-bottom-color:var(--gray-200)}
-    [data-theme="dark"] .nav-links.open a{color:var(--gray-700);
-        white-space: nowrap;border-bottom-color:var(--gray-200)}
-    [data-theme="dark"] .nav-links.open a:hover,[data-theme="dark"] .nav-links.open a:active{background:rgba(99,102,241,.12);color:var(--blue)}
+    [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); }
+    [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
   </style>
   <script type="application/ld+json">
   {
@@ -225,7 +245,7 @@
 </div>
 <div class="nav-right-group">
   <div class="lang-switch">
-    <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 ▼</button>
+    <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
     <div class="lang-switch-menu" id="langMenu">
       <a href="../../index.html" lang="en" class="lang-switch-item">🇺🇸 English</a>
       <a href="../../ja/index.html" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
@@ -242,7 +262,7 @@
   <section class="article-hero">
     <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none" aria-hidden="true"></div>
     <div class="container">
-      <div class="breadcrumb"><a href="../../ja/index">ホーム</a> / <a href="../../ja/blog.html">ブログ</a> / ドメイン設定</div>
+      <div class="breadcrumb"><a href="../../ja/index.html">ホーム</a> / <a href="../../ja/blog.html">ブログ</a> / ドメイン設定</div>
       <h1>百度PPCアカウントで別のドメインを使用できますか？</h1>
       <div class="article-meta"><span>2020年3月11日</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4分で読める</span>
     <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro Team</span>
@@ -360,7 +380,7 @@
         <div class="cta-section">
           <h3>🚀 ドメインの問題を解決しませんか？</h3>
           <p>トラッキング設定、ドメイン変更、マルチアカウントのいずれをお考えかお聞かせください。百度の要件をご案内します。</p>
-          <a href="../../ja/contact" class="cta-button">今すぐ無料相談 →</a>
+          <a href="../../ja/contact.html" class="cta-button">今すぐ無料相談 →</a>
         </div>
 
       </article>
@@ -394,9 +414,9 @@
 <footer><div class="container">
 <div class="footer-top">
 <div class="footer-brand"><h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</h3><p>私たちは海外の代理店やブランドが、コンプライアンスと透明性をもって中国の1,000億ドル以上のデジタル広告市場にアクセスできるようサポートします。</p></div>
-<div class="footer-col"><h4>クイックリンク</h4><ul><li><a href="../../ja/features">Baidu PPC運用代行</a></li><li><a href="../../ja/pricing">料金プラン</a></li><li><a href="../../ja/about">会社概要</a></li><li><a href="../../ja/faq">よくある質問</a></li><li><a href="../../ja/blog.html">ブログ</a></li></ul></div>
-<div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="../../ja/contact">お問い合わせフォーム</a></li></ul></div>
-<div class="footer-col"><h4>法的情報</h4><ul><li><a href="../../ja/privacy">プライバシーポリシー</a></li><li><a href="../../ja/terms">利用規約</a></li></ul></div>
+<div class="footer-col"><h4>クイックリンク</h4><ul><li><a href="../../ja/features.html">Baidu PPC運用代行</a></li><li><a href="../../ja/pricing.html">料金プラン</a></li><li><a href="../../ja/about.html">会社概要</a></li><li><a href="../../ja/faq.html">よくある質問</a></li><li><a href="../../ja/blog.html">ブログ</a></li></ul></div>
+<div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="../../ja/contact.html">お問い合わせフォーム</a></li></ul></div>
+<div class="footer-col"><h4>法的情報</h4><ul><li><a href="../../ja/privacy.html">プライバシーポリシー</a></li><li><a href="../../ja/terms.html">利用規約</a></li></ul></div>
 </div>
 <div class="footer-bottom">
 <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>

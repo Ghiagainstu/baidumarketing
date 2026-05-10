@@ -104,6 +104,7 @@
     .nav-links a:hover::after { width: 100%; left: 0; }
     .nav-links a.active { color: var(--blue); font-weight: 600; }
     .nav-links a.active::after { width: 100%; left: 0; }
+    html[lang="ja"] .nav-links { gap: 20px; font-size: .82rem; }
     .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
     .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
     .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
@@ -256,7 +257,7 @@
 </div>
 <div class="nav-right-group">
   <div class="lang-switch">
-    <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 ▼</button>
+    <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
     <div class="lang-switch-menu">
       <a href="../../index.html" lang="en" class="lang-switch-item">🇺🇸 English</a>
       <a href="../../ja/index.html" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
@@ -273,7 +274,7 @@
   <section class="article-hero">
     <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
     <div class="container">
-      <div class="breadcrumb"><a href="../../ja/index">ホーム</a> / <a href="../../ja/blog.html">ブログ</a> / Baidu CPC削減</div>
+      <div class="breadcrumb"><a href="../../ja/index.html">ホーム</a> / <a href="../../ja/blog.html">ブログ</a> / Baidu CPC削減</div>
       <h1>成果を犠牲にせずBaidu CPCを下げる8つの方法</h1>
       <div class="article-meta"><span>2019年5月6日</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 読了時間：約7分</span>
     <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro チーム</span>
@@ -452,7 +453,7 @@
         <div class="cta-section">
           <h3>🚀 CPC監査を依頼する</h3>
           <p>Baiduアカウントをレビューし、最もコストの高いキーワードを特定し、どの対策から着手すべきかをご提案します。</p>
-          <a href="../../ja/contact" class="cta-button">監査をリクエスト →</a>
+          <a href="../../ja/contact.html" class="cta-button">監査をリクエスト →</a>
         </div>
 
       </article>
@@ -486,9 +487,9 @@
 <footer><div class="container">
 <div class="footer-top">
 <div class="footer-brand"><h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</h3><p>国際的な代理店やブランドが、中国の1,000億ドル以上のデジタル広告市場にコンプライアンスと透明性を持って参入するのを支援します。</p></div>
-<div class="footer-col"><h4>クイックリンク</h4><ul><li><a href="../../ja/features">サービス</a></li><li><a href="../../ja/pricing">料金プラン</a></li><li><a href="../../ja/about">会社概要</a></li><li><a href="../../ja/faq">よくある質問</a></li><li><a href="../../ja/blog.html">ブログ</a></li></ul></div>
-<div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="../../ja/contact">リクエストを送信</a></li></ul></div>
-<div class="footer-col"><h4>法的情報</h4><ul><li><a href="../../ja/privacy">プライバシーポリシー</a></li><li><a href="../../ja/terms">利用規約</a></li></ul></div>
+<div class="footer-col"><h4>クイックリンク</h4><ul><li><a href="../../ja/features.html">サービス</a></li><li><a href="../../ja/pricing.html">料金プラン</a></li><li><a href="../../ja/about.html">会社概要</a></li><li><a href="../../ja/faq.html">よくある質問</a></li><li><a href="../../ja/blog.html">ブログ</a></li></ul></div>
+<div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="../../ja/contact.html">リクエストを送信</a></li></ul></div>
+<div class="footer-col"><h4>法的情報</h4><ul><li><a href="../../ja/privacy.html">プライバシーポリシー</a></li><li><a href="../../ja/terms.html">利用規約</a></li></ul></div>
 </div>
 <div class="footer-bottom">
 <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>

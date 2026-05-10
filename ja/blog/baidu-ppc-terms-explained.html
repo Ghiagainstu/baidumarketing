@@ -104,6 +104,7 @@
     .nav-links a:hover::after { width: 100%; left: 0; }
     .nav-links a.active { color: var(--blue); font-weight: 600; }
     .nav-links a.active::after { width: 100%; left: 0; }
+    html[lang="ja"] .nav-links { gap: 20px; font-size: .82rem; }
     .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
     .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
     .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
@@ -297,7 +298,7 @@
   </div>
   <div class="nav-right-group">
     <div class="lang-switch">
-      <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 ▼</button>
+      <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="言語">🇯🇵 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
       <div class="lang-switch-menu" id="langMenu">
         <a href="../../index.html" lang="en" class="lang-switch-item">🇺🇸 English</a>
         <a href="../../ja/index.html" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
@@ -314,7 +315,7 @@
   <section class="article-hero">
     <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
     <div class="container">
-      <div class="breadcrumb"><a href="../../ja/index">ホーム</a> / <a href="../../ja/blog.html">ブログ</a> / 百度PPC用語</div>
+      <div class="breadcrumb"><a href="../../ja/index.html">ホーム</a> / <a href="../../ja/blog.html">ブログ</a> / 百度PPC用語</div>
       <h1>百度PPC用語解説：品質スコア、ランキング、入札、CPC</h1>
       <div class="article-meta"><span>2019年1月9日</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 7分で読める</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro Team</span></div>
     </div>
@@ -538,7 +539,7 @@
         <div class="cta-section">
           <h3>百度PPCアカウントの最適化にお困りですか？</h3>
           <p>これらの用語を理解することと、競争圧力、季節変動、進化するキーワードを持つ実際のアカウントに適用することは別の話です。海外ブランドの百度キャンペーン構築・最適化をサポートします。</p>
-          <a href="../../ja/contact" class="cta-button">今すぐ無料相談 →</a>
+          <a href="../../ja/contact.html" class="cta-button">今すぐ無料相談 →</a>
         </div>
 
       </article>
@@ -579,26 +580,26 @@
       <div class="footer-col">
         <h4>サービス</h4>
         <ul>
-          <li><a href="../../ja/features">Baidu PPC運用代行</a></li>
-          <li><a href="../../ja/features">キーワード調査</a></li>
-          <li><a href="../../ja/features">ランディングページローカライズ</a></li>
-          <li><a href="../../ja/features">コンプライアンス・認証</a></li>
+          <li><a href="../../ja/features.html">Baidu PPC運用代行</a></li>
+          <li><a href="../../ja/features.html">キーワード調査</a></li>
+          <li><a href="../../ja/features.html">ランディングページローカライズ</a></li>
+          <li><a href="../../ja/features.html">コンプライアンス・認証</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>リソース</h4>
         <ul>
           <li><a href="../../ja/blog.html">ブログ</a></li>
-          <li><a href="../../ja/faq">よくある質問</a></li>
-          <li><a href="../../ja/about">会社概要</a></li>
-          <li><a href="../../ja/contact">お問い合わせ</a></li>
+          <li><a href="../../ja/faq.html">よくある質問</a></li>
+          <li><a href="../../ja/about.html">会社概要</a></li>
+          <li><a href="../../ja/contact.html">お問い合わせ</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>法的情報</h4>
         <ul>
-          <li><a href="../../ja/privacy">プライバシーポリシー</a></li>
-          <li><a href="../../ja/terms">利用規約</a></li>
+          <li><a href="../../ja/privacy.html">プライバシーポリシー</a></li>
+          <li><a href="../../ja/terms.html">利用規約</a></li>
         </ul>
       </div>
     </div>
