@@ -64,6 +64,31 @@
     .cta-section h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; }
     .cta-section p { opacity: .9; margin-bottom: 24px; }
     .cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 32px; border-radius: 8px; font-weight: 700; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 32px 0; }
+    .stat-card { background: var(--blue-subtle); border: 1px solid var(--blue-glow); border-radius: var(--radius); padding: 20px; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
+    .stat-card .lbl { font-size: .78rem; color: var(--gray-600); margin-top: 4px; }
+    @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; font-size: .78rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.maps { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.ai { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    .platform-pill.b2b { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+    .platform-pill.biz { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; padding-left: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
     .related-section { border-top: 1px solid var(--gray-200); padding: 48px 0; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .related-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; }
@@ -132,6 +157,20 @@
       <p>While many are still sending greetings, sharp business owners have already taken action. Baidu's marketing platform rolled out a series of key upgrades in the past year, precisely addressing the dual goals of "smoother customer acquisition" and "stable growth" for 2026. While some are still watching from the sidelines, others have already gained a head start using these new tools.</p>
       <p>The real gap is rarely about whether to act — it's about how you play the game. Today, we break down the major new opportunities on Baidu's marketing platform that deserve your focus in 2026.</p>
 
+      <div class="platform-pills">
+        <span class="platform-pill maps">🗺️ Local Business</span>
+        <span class="platform-pill ai">🤖 AI Digital Human</span>
+        <span class="platform-pill b2b">🏭 B2B Procurement</span>
+        <span class="platform-pill biz">📊 Smart Marketing</span>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card"><div class="num">7.08億</div><div class="lbl">Baidu App MAU</div></div>
+        <div class="stat-card"><div class="num">150億+</div><div class="lbl">Daily Feed</div></div>
+        <div class="stat-card"><div class="num">¥15K</div><div class="lbl">Daily Sales Case</div></div>
+        <div class="stat-card"><div class="num">600+</div><div class="lbl">B2B Leads Case</div></div>
+      </div>
+
       <h2>1. Local Business: "Tailwind" Starts the Moment Customers Search</h2>
       <p>For local businesses, nothing is more frustrating than having potential customers within a 3-mile radius who can't find you online. When customers search "restaurant near me" or "dental clinic" on a maps app, does your business appear as just another pin on the map, or does it stand out as a trusted, premium storefront?</p>
       <p><strong>What's new:</strong> Baidu Maps Store Membership was fully upgraded in early 2025, with significantly lowered entry barriers. More small and medium businesses can now acquire customers through Maps — a core high-intent scenario — at a lower cost. Members get access to full-storefront decoration, search display priority, and exclusive data reports, transforming Maps from a "navigation tool" into a "decision and transaction entry point."</p>
@@ -148,7 +187,12 @@
 
       <h2>2. E-Commerce Live Streaming: Don't Fight in the Red Ocean</h2>
       <p>E-commerce sellers: are you still grinding it out? Rising traffic costs, limited host endurance, and orders stopping the moment you go offline — these are real pain points. But pain points are exactly where new rules of the game get rewritten. For sellers determined to break through, these very challenges point to an untapped incremental market that most are ignoring.</p>
-      <p><strong>What's new:</strong> Baidu's e-commerce ecosystem is in a period of rapid growth with active resource support — including traffic and rebate incentives. The accompanying <strong>"HuiBoXing" AI digital human streaming tool</strong> revolutionizes the cost and labor ceiling of traditional streaming. Merchants can achieve 24/7 brand presentation and product sales through AI digital humans, without the high costs of human hosts, equipment, or venues. This shifts the focus from "labor consumption" to "strategy and operations."</p>
+      <p><strong>What's new:</strong> Baidu's e-commerce ecosystem is in a period of rapid growth with active resource support — including traffic and rebate incentives. The accompanying <strong>"HuiBoXing" AI digital human streaming tool</strong> revolutionizes the cost and labor ceiling of traditional streaming. Merchants can achieve 24/7 brand presentation and product sales through AI digital humans, without the high costs of human hosts, equipment, or venues.</p>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">🤖</span>
+        <div><strong>Zero-cost AI streaming:</strong> No complex equipment or expensive host required. Provide a 3-5 minute product presentation recording, and HuiBoXing creates an AI digital human avatar. Once live, the digital human adjusts its pitch in real time, proactively guiding users to place orders — enabling 24/7 brand exposure and sales at a fraction of traditional costs.</div>
+      </div>
       <h3>How to use it</h3>
       <ul>
         <li><strong>Full-funnel content seeding:</strong> Leverage Baidu's big data and precision audience tags to intelligently recommend your products through information feeds to high-potential users who might be interested, completing early-stage seeding. Products can also be displayed in live streams, creating a "recommendation seeding + live conversion" traffic loop.</li>
@@ -161,7 +205,7 @@
         <p>This brand quickly adapted its proven e-commerce model from other platforms to Baidu e-commerce. By combining "real-host streaming + massive content assets" with official coaching, it completed cold-start in just <strong>4 days</strong>, achieving stable daily sales above <strong>15,000 yuan</strong>. ROI has remained at a healthy <strong>1:1.5</strong> or better long-term, successfully opening up an entirely new incremental market.</p>
       </div>
 
-      <h2>3. B2B Business: From "Waiting for Inquiries" to "Locking in Opportunities"</h2>
+      <h2>🔧 3. B2B Business: From "Waiting for Inquiries" to "Locking in Opportunities"</h2>
       <p>When trade show foot traffic keeps shrinking and sales teams spend more on travel with fewer quality leads, B2B growth seems to have hit a ceiling. The traditional "hit the road + run trade shows" model has high costs and low efficiency — it can no longer sustain growth.</p>
       <p><strong>What's new:</strong> The Baidu AiCaiGou platform is systematically solving B2B online marketing pain points through product matrix upgrades. The <strong>B2B Industry AI Agent</strong> acts as a professional "front-end sales consultant," answering technical parameter and application scenario questions in real time, completing initial screening. <strong>ShangJiTong</strong> guarantees a steady stream of potential procurement leads. The <strong>"AiCaiGou × Baidu Maps" joint membership</strong> covers online search scenarios before procurement managers conduct site visits. This combined approach enables full-funnel empowerment from "traffic exposure" to "opportunity conversion."</p>
       <h3>How to use it</h3>
@@ -177,7 +221,7 @@
         <p>A national high-tech sensor enterprise deeply cultivated the AiCaiGou platform and continuously optimized its storefront content and rankings. Over five years, it accumulated more than <strong>600 precision sales leads</strong>, validating that building trust through professional content can drive sustainable long-term growth.</p>
       </div>
 
-      <h2>4. All-Industry Efficiency: AI Rebuilds the Entire Marketing Funnel</h2>
+      <h2>🤖 4. All-Industry Efficiency: AI Rebuilds the Entire Marketing Funnel</h2>
       <p>Don't know how to structure campaigns? Don't have compelling creative assets? Account optimization consumes massive time, and professional marketing operations staff are too expensive? For businesses of any size — especially SMEs — the ultimate challenge of marketing is maximizing output while controlling costs.</p>
       <p><strong>What's new:</strong> In 2026, these challenges are meeting systematic solutions. The <strong>Baidu Search Advertising</strong> platform has completed a comprehensive AI-powered upgrade, deeply injecting AI capabilities into every stage from strategy to conversion. AI is helping level the playing field in promotion and operations, allowing business owners to focus more on business strategy itself.</p>
       <h3>How to use it</h3>
@@ -191,8 +235,17 @@
 
       <h2>Conclusion</h2>
       <p>We all wish for a smooth road ahead. But the real "tailwind" for your business starts with choosing the right navigation.</p>
-      <p>Baidu's new opportunities for 2026 are precisely the "smart navigation" for your next journey — helping you drive more stably and faster on the "certain demand" highway. Becoming a "smart adopter" is the wisest route planning you can make right now.</p>
-      <p>The map has been unfolded. Action determines the future.</p>
+      <p>Baidu's new opportunities for 2026 are precisely the "smart navigation" for your next journey — helping you drive more stably and faster on the "certain demand" highway.</p>
+
+      <div class="takeaway-box">
+        <h3>✅ Key Takeaways</h3>
+        <ul>
+          <li><strong>Local Business:</strong> Baidu Maps Store Membership gives SMEs premium storefront visibility with direct call-to-action buttons.</li>
+          <li><strong>E-Commerce:</strong> HuiBoXing AI digital human streaming enables 24/7 sales at near-zero marginal cost.</li>
+          <li><strong>B2B:</strong> AiCaiGou + B2B AI Agent + ShangJiTong guarantee steady procurement leads.</li>
+          <li><strong>AI-Powered:</strong> AI-assisted campaign setup + Merchant AI Agent level the playing field for all advertisers.</li>
+        </ul>
+      </div>
 
       <div class="cta-section">
         <h3>Ready to Explore Baidu's 2026 Opportunities?</h3>
