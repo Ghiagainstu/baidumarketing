@@ -12,3 +12,4 @@ fix-takeaway-batch.mjs
 # OS files
 Thumbs.db
 .DS_Store
+node_modules/
