@@ -103,7 +103,6 @@
     [data-theme="dark"] .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
     [data-theme="dark"] .back-to-top { background: var(--gray-200) !important; color: var(--gray-600); }
     [data-theme="dark"] .back-to-top:hover { background: var(--blue) !important; color: #fff; }
-    [data-theme="dark"] .nav-mobile-cta,.nav-mobile-theme{display:none}
 
     .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
     .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
@@ -318,14 +317,12 @@
     .back-to-top:active { transform: scale(.92); }
     .back-to-top svg { width: 20px; height: 20px; }
 
-    .nav-mobile-cta,.nav-mobile-theme{display:none}
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-cta { display: none; }
       .theme-toggle { display: none; }
       .lang-switch { display: none; }
       .nav-mobile-toggle { display: block; }
-      .nav-mobile-cta,.nav-mobile-theme{display:none !important}
       .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; background: #fff; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; }
       [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
       .nav-links.open a { display: block; padding: 14px 24px; font-size: 1rem; font-weight: 500; color: var(--gray-800); border-bottom: 1px solid var(--gray-100); transition: background .15s; white-space: nowrap; }
@@ -372,7 +369,6 @@
       <a href="about.html">会社概要</a>
       <a href="blog.html">ブログ</a>
       <a href="contact.html">お問い合わせ</a>
-      <a href="contact.html" class="nav-mobile-cta">今すぐ始める →</a>
       <button class="nav-mobile-theme" onclick="toggleTheme()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         ダークモード切替
