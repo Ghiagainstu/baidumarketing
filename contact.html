@@ -131,6 +131,8 @@
     [data-theme="dark"] .form-success h3 { color: #F9FAFB; }
     [data-theme="dark"] .form-success p { color: var(--gray-600); }
     /* Theme toggle */
+
+    .hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden; }
     .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
     .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
     .theme-toggle svg { width: 18px; height: 18px; }
@@ -605,7 +607,7 @@
               <option>Over $50,000 / month</option>
             </select>
           </div>
-          <div class="form-group" style="display:none;" aria-hidden="true">
+          <div class="hp-field" aria-hidden="true">
             <label for="website">Website</label>
             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
           </div>
@@ -733,7 +735,8 @@
       'Budget: ' + budget + '\n' +
       'Message: ' + message
     );
-    window.location.href = 'mailto:baidu@baidumarketing.com?subject=' + subject + '&body=' + body;
+    const emailAddr = document.querySelector('.obf-email').dataset.u + '@' + document.querySelector('.obf-email').dataset.d;
+    window.location.href = 'mailto:' + emailAddr + '?subject=' + subject + '&body=' + body;
   }
   // Language switcher
   function toggleLangMenu() {
