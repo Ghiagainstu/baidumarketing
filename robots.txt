@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://baidumarketing.com/sitemap.xml
+Sitemap: https://www.baidumarketing.com/sitemap.xml

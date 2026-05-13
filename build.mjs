@@ -69,14 +69,14 @@ function generateNavHTML(langCode) {
   const langPrefix = isDefault ? '' : '../';
 
   const links = [
-    { href: `${prefix}why-baidu-ppc-pro.html`, label: nav.links.why },
-    { href: `${prefix}features.html`, label: nav.links.services },
-    { href: `${prefix}pricing.html`, label: nav.links.pricing },
-    { href: `${prefix}clients.html`, label: nav.links.clients },
-    { href: `${prefix}faq.html`, label: nav.links.faq },
-    { href: `${prefix}about.html`, label: nav.links.about },
-    { href: `${prefix}blog.html`, label: nav.links.blog },
-    { href: `${prefix}contact.html`, label: nav.links.contact },
+    { href: `${prefix}why-baidu-ppc-pro`, label: nav.links.why },
+    { href: `${prefix}features`, label: nav.links.services },
+    { href: `${prefix}pricing`, label: nav.links.pricing },
+    { href: `${prefix}clients`, label: nav.links.clients },
+    { href: `${prefix}faq`, label: nav.links.faq },
+    { href: `${prefix}about`, label: nav.links.about },
+    { href: `${prefix}blog`, label: nav.links.blog },
+    { href: `${prefix}contact`, label: nav.links.contact },
   ];
 
   // Build language switcher dropdown items
@@ -136,7 +136,7 @@ function generateFooterHTML(langCode) {
   const langDir = getLangDir(langCode);
   const isDefault = langDir === '';
   const prefix = '';
-  const aboutLink = `${prefix}about.html`;
+  const aboutLink = `${prefix}about`;
 
   return `  <div class="container">
     <div class="footer-top">
