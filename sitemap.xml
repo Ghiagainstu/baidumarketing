@@ -461,4 +461,16 @@
     <loc>https://www.baidumarketing.com/ja/blog/baidu-2026-new-opportunities</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/2020-baidu-b2b-industry-insights</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/2020-baidu-b2b-industry-insights</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/2020-baidu-b2b-industry-insights</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>

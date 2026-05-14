@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <title>2020年Baidu B2B業界インサイト：中国工業検索データが明かす実態 — Baidu PPC Pro Blog</title>
+  <meta name="description" content="Baiduの2020年B2B業界レポートは数百万件の産業検索クエリを分析。中国の主要B2Bセグメント、購買行動、プラットフォーム競争の最新データを解説します。" />
+  <link rel="canonical" href="https://baidumarketing.com/ja/blog/2020-baidu-b2b-industry-insights" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/ja/blog/2020-baidu-b2b-industry-insights" />
+  <meta property="og:title" content="2020年Baidu B2B業界インサイト：中国工業検索データが明かす実態" />
+  <meta property="og:description" content="Baiduの2020年B2B業界レポートは数百万件の産業検索クエリを分析。中国の主要B2Bセグメント、購買行動、プラットフォーム競争の最新データを解説します。" />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="2020年Baidu B2B業界インサイト：中国工業検索データが明かす実態" />
+  <meta name="twitter:description" content="Baiduの2020年B2B業界レポートは数百万件の産業検索クエリを分析。中国の主要B2Bセグメント、購買行動、プラットフォーム競争の最新データを解説します。" />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-display);color:var(--gray-900);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:root{
+  --blue:#2932E1;--blue-dark:#1E25AF;--blue-deep:#151B8A;
+  --blue-light:#EEF0FF;--blue-glow:#D4D8FF;--blue-subtle:#F5F6FF;
+  --gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-300:#D1D5DB;
+  --gray-400:#9CA3AF;--gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--gray-900:#111827;
+  --radius:12px;--radius-lg:16px;--radius-xl:24px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 16px rgba(0,0,0,.10);--shadow-lg:0 12px 40px rgba(0,0,0,.12);
+  --shadow-blue:0 8px 32px rgba(41,50,225,.18);
+  --gradient-brand:linear-gradient(135deg,#2932E1 0%,#4F46E5 50%,#7C3AED 100%);
+  --gradient-hero:linear-gradient(160deg,#fff 30%,#EEF0FF 60%,#E0E7FF 100%);
+  --gradient-surface:linear-gradient(135deg,#F9FAFB 0%,#F3F4FF 100%);
+  --font-display:'Inter',system-ui,-apple-system,sans-serif;
+  --transition-base:0.2s cubic-bezier(0.4,0,0.2,1);
+  --transition-smooth:0.4s cubic-bezier(0.16,1,0.3,1);
+}
+[data-theme="dark"]{
+  --blue:#6366F1;--blue-dark:#818CF8;--blue-deep:#4F46E5;
+  --blue-light:rgba(99,102,241,.12);--blue-glow:rgba(99,102,241,.15);--blue-subtle:rgba(99,102,241,.06);
+  --gray-50:#0B0F1A;--gray-100:#111827;--gray-200:#1F2937;--gray-300:#374151;
+  --gray-400:#6B7280;--gray-600:#9CA3AF;--gray-700:#D1D5DB;--gray-800:#E5E7EB;--gray-900:#F9FAFB;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.3);--shadow-md:0 4px 16px rgba(0,0,0,.4);--shadow-lg:0 12px 40px rgba(0,0,0,.5);
+  --shadow-blue:0 8px 32px rgba(99,102,241,.2);
+  --gradient-hero:linear-gradient(160deg,#0F172A 30%,#131C38 60%,#1E1B4B 100%);
+  --gradient-surface:linear-gradient(135deg,#111827 0%,#1E1B4B 100%);
+  background-color:#0B0F1A;color:#E5E7EB
+}
+[data-theme="dark"] body{background-color:#0B0F1A;color:#E5E7EB}
+[data-theme="dark"] nav{background:rgba(11,15,26,.85);backdrop-filter:blur(12px);border-bottom-color:var(--gray-200)}
+[data-theme="dark"] .nav-logo{color:#818CF8}
+[data-theme="dark"] .nav-logo:hover{color:#F9FAFB}
+[data-theme="dark"] .nav-links{color:var(--gray-600)}
+[data-theme="dark"] .nav-links a:hover{color:var(--blue)}
+[data-theme="dark"] .hamburger-icon rect{fill:#D1D5DB}
+[data-theme="dark"] .close-icon line{stroke:#D1D5DB}
+[data-theme="dark"] footer{background:#070B14!important;border-top-color:var(--gray-200)}
+[data-theme="dark"] .footer-copy{color:var(--gray-400)}
+[data-theme="dark"] .footer-links a{color:var(--gray-400)}
+[data-theme="dark"] .back-to-top{background:var(--gray-200)!important;color:var(--gray-600)}
+[data-theme="dark"] .back-to-top:hover{background:var(--blue)!important;color:#fff}
+[data-theme="dark"] .nav-overlay{background:rgba(0,0,0,.7)}
+[data-theme="dark"] .article-hero{background:var(--gradient-hero)}
+[data-theme="dark"] .article-title{color:#F9FAFB}
+[data-theme="dark"] .article-meta{color:var(--gray-400)}
+[data-theme="dark"] .article-section{background:var(--gray-50)}
+[data-theme="dark"] .article-content p{color:var(--gray-600)}
+[data-theme="dark"] .article-content h2{color:#F9FAFB}
+[data-theme="dark"] .article-content h3{color:#F9FAFB}
+[data-theme="dark"] .callout.tip{background:rgba(99,102,241,.1);border-left-color:var(--blue)}
+[data-theme="dark"] .callout.warning{background:rgba(239,68,68,.1);border-left-color:#EF4444}
+[data-theme="dark"] .takeaway{background:var(--gray-100);border-color:var(--gray-200)}
+[data-theme="dark"] .takeaway h4{color:#F9FAFB}
+[data-theme="dark"] .takeaway li{color:var(--gray-600)}
+[data-theme="dark"] .comparison-table{background:var(--gray-100);border-color:var(--gray-200)}
+[data-theme="dark"] .comparison-table th{background:var(--gray-200);color:var(--gray-800)}
+[data-theme="dark"] .comparison-table td{color:var(--gray-600);border-bottom-color:var(--gray-200)}
+[data-theme="dark"] .blockquote-highlight{background:var(--gray-100);border-left-color:var(--blue)}
+[data-theme="dark"] .blockquote-highlight cite{color:var(--gray-400)}
+[data-theme="dark"] .related-card{background:var(--gray-100)!important;border-color:var(--gray-200)}
+[data-theme="dark"] .related-card h4{color:var(--gray-800)}
+[data-theme="dark"] .theme-toggle .icon-sun{display:none}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="dark"] .theme-toggle .icon-sun{display:block}
+[data-theme="dark"] .lang-switch-btn{border-color:var(--gray-200);color:var(--gray-600)}
+[data-theme="dark"] .lang-switch-menu{background:#0B0F1A;border-color:var(--gray-200)}
+[data-theme="dark"] .lang-switch-item{color:var(--gray-700)}
+[data-theme="dark"] .lang-switch-item:hover{background:rgba(99,102,241,.12);color:var(--blue)}
+[data-theme="dark"] .stats-grid .stat-card{background:var(--gray-100);border-color:var(--gray-200)}
+[data-theme="dark"] .stats-grid .stat-number{color:#F9FAFB}
+[data-theme="dark"] .stats-grid .stat-label{color:var(--gray-600)}
+[data-theme="dark"] .callout code{background:var(--gray-200)}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--gray-200);background:transparent;cursor:pointer;transition:all .2s;color:var(--gray-600);flex-shrink:0}
+.theme-toggle:hover{border-color:var(--blue);color:var(--blue);transform:rotate(15deg)}
+.theme-toggle svg{width:18px;height:18px}
+.theme-toggle .icon-sun{display:none}
+.theme-toggle .icon-moon{display:block}
+.nav-right-group{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.lang-switch{position:relative}
+.lang-switch-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;border:1px solid var(--gray-200);background:transparent;cursor:pointer;font-size:.9rem;color:var(--gray-600);transition:all var(--transition-base);line-height:1}
+.lang-switch-btn:hover{border-color:var(--blue);color:var(--blue)}
+.lang-switch-menu{position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--gray-200);border-radius:8px;box-shadow:var(--shadow-md);min-width:150px;opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .2s,transform .2s;z-index:200}
+.lang-switch-menu.open{opacity:1;pointer-events:auto;transform:translateY(0)}
+.lang-switch-item{display:block;padding:10px 16px;font-size:.9rem;color:var(--gray-700);transition:background .15s;white-space:nowrap}
+.lang-switch-item:hover{background:var(--blue-light);color:var(--blue)}
+.lang-switch-item:first-child{border-radius:7px 7px 0 0}
+.lang-switch-item:last-child{border-radius:0 0 7px 7px}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-200)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:var(--gray-800);transition:color var(--transition-base);white-space:nowrap;flex-shrink:0}
+.nav-logo:hover{color:var(--blue)}
+.nav-logo svg{flex-shrink:0}
+.nav-links{display:flex;gap:28px;font-size:.9rem;color:var(--gray-600)}
+.nav-links a{position:relative;transition:color var(--transition-base)}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:50%;width:0;height:2px;background:var(--blue);border-radius:1px;transition:width var(--transition-smooth),left var(--transition-smooth)}
+.nav-links a:hover{color:var(--blue)}
+.nav-links a:hover::after{width:100%;left:0}
+.nav-links a.active{color:var(--blue);font-weight:600}
+.nav-links a.active::after{width:100%;left:0}
+.nav-mobile-cta,.nav-mobile-theme{display:none}
+.nav-cta{background:var(--gradient-brand);color:#fff;padding:10px 22px;border-radius:8px;font-size:.9rem;font-weight:600;transition:transform var(--transition-base),box-shadow var(--transition-base);position:relative;overflow:hidden}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(41,50,225,.35)}
+.nav-cta:active{transform:translateY(0) scale(.97)}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer}
+.nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);backdrop-filter:blur(2px);z-index:99;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-overlay.active{opacity:1;pointer-events:auto}
+.article-hero{padding:80px 0 40px;background:var(--gradient-hero);position:relative;overflow:hidden}
+.article-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.2;letter-spacing:-.02em;color:var(--gray-800);margin-bottom:12px}
+.article-meta{display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-size:.82rem;color:var(--gray-400)}
+.article-meta span{display:inline-flex;align-items:center;gap:6px}
+.article-meta svg{width:14px;height:14px;flex-shrink:0}
+.article-section{padding:64px 0}
+.article-content p{margin-bottom:20px;font-size:.95rem;line-height:1.8;color:var(--gray-600)}
+.article-content h2{font-size:1.5rem;font-weight:700;margin:40px 0 16px;color:var(--gray-800);padding-bottom:8px;border-bottom:2px solid var(--blue-light)}
+.article-content h3{font-size:1.15rem;font-weight:600;margin:28px 0 12px;color:var(--gray-700)}
+.article-content ul,.article-content ol{margin-bottom:20px;padding-left:24px}
+.article-content ul li,.article-content ol li{margin-bottom:8px;font-size:.95rem;color:var(--gray-600);line-height:1.7}
+.article-content a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+.article-content a:hover{color:var(--blue-dark)}
+.article-content blockquote:not(.blockquote-highlight){border-left:3px solid var(--blue-light);padding:12px 20px;margin:20px 0;background:var(--gray-50);border-radius:0 8px 8px 0}
+.callout{padding:20px 24px;margin:24px 0;border-radius:12px;border-left:4px solid;font-size:.9rem;line-height:1.7}
+.callout.tip{background:var(--blue-subtle);border-left-color:var(--blue)}
+.callout.warning{background:rgba(239,68,68,.06);border-left-color:#EF4444}
+.callout strong{display:block;margin-bottom:4px}
+.takeaway{border:1px solid var(--gray-200);border-radius:12px;padding:24px;margin:24px 0;background:var(--gray-50)}
+.takeaway h4{font-size:1rem;font-weight:700;margin-bottom:12px;color:var(--gray-800)}
+.takeaway ul{list-style:none;padding:0}
+.takeaway li{padding:6px 0;font-size:.9rem;color:var(--gray-600);line-height:1.6}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
+.stat-card{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:20px;text-align:center;transition:transform .2s,box-shadow .2s}
+.stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.stat-icon{font-size:1.5rem;margin-bottom:6px}
+.stat-number{font-size:1.4rem;font-weight:800;color:var(--gray-900)}
+.stat-label{font-size:.78rem;color:var(--gray-400);line-height:1.4;margin-top:4px}
+.comparison-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.9rem;border:1px solid var(--gray-200);border-radius:12px;overflow:hidden}
+.comparison-table th{background:var(--gray-100);padding:12px 16px;text-align:left;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)}
+.comparison-table td{padding:12px 16px;border-bottom:1px solid var(--gray-100);color:var(--gray-600)}
+.comparison-table tr:last-child td{border-bottom:none}
+.blockquote-highlight{border-left:4px solid var(--blue);background:var(--gray-50);padding:20px 24px;margin:24px 0;border-radius:0 12px 12px 0;font-size:.95rem;line-height:1.7;color:var(--gray-600);font-style:italic}
+.blockquote-highlight cite{display:block;margin-top:8px;font-size:.82rem;color:var(--gray-400);font-style:normal}
+.cta-section{text-align:center;padding:64px 0;background:var(--gray-50)}
+.cta-section h2{font-size:1.8rem;font-weight:800;margin-bottom:12px;color:var(--gray-800)}
+.cta-section p{font-size:1rem;color:var(--gray-600);margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-button{display:inline-block;background:var(--gradient-brand);color:#fff;padding:14px 32px;border-radius:10px;font-size:.95rem;font-weight:600;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(41,50,225,.4)}
+.related-section{padding:64px 0;background:var(--gray-50)}
+.related-section h2{font-size:1.5rem;font-weight:700;margin-bottom:24px;text-align:center;color:var(--gray-800)}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.related-card{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:20px;transition:transform .2s,box-shadow .2s}
+.related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.related-card h4{font-size:.95rem;font-weight:600;margin-bottom:8px;color:var(--gray-800)}
+.related-card p{font-size:.82rem;color:var(--gray-400);line-height:1.5}
+footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand h3{color:#fff;font-size:1.1rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.footer-brand p{font-size:.85rem;line-height:1.7;color:#9CA3AF;max-width:280px}
+.footer-col h4{color:#fff;font-size:.85rem;font-weight:600;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{font-size:.85rem;color:#9CA3AF;transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.82rem;color:#6B7280}
+.footer-social{display:flex;gap:14px;align-items:center}
+.footer-social a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .2s,transform .2s}
+.footer-social a:hover{background:var(--blue);transform:translateY(-2px)}
+.footer-social a:hover svg{fill:#fff!important;stroke:#fff!important}
+.footer-social a svg{width:18px;height:18px}
+.back-to-top{position:fixed;bottom:32px;right:32px;z-index:90;width:44px;height:44px;border-radius:50%;background:var(--gradient-brand);color:#fff;border:none;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px rgba(41,50,225,.35);opacity:0;pointer-events:none;transition:opacity .3s,transform var(--transition-base),box-shadow var(--transition-base)}
+.back-to-top.visible{opacity:1;pointer-events:auto}
+.back-to-top:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(41,50,225,.45)}
+.back-to-top:active{transform:scale(.92)}
+.back-to-top svg{width:20px;height:20px}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .theme-toggle{display:none}
+  .lang-switch{display:none}
+  .nav-mobile-toggle{display:block}
+  .nav-links.open{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:#fff;padding:8px 0;gap:0;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-md);z-index:100}
+  .nav-links.open a{display:block;padding:14px 24px;font-size:1rem;font-weight:500;color:var(--gray-800);border-bottom:1px solid var(--gray-100);transition:background .15s;white-space:nowrap}
+  .nav-links.open a:last-child{border-bottom:none}
+  .nav-links.open a:hover,.nav-links.open a:active{background:var(--blue-subtle);color:var(--blue)}
+  .nav-links.open a::after{display:none}
+  /* Mobile CTA inside menu */
+  .nav-mobile-cta{display:block;margin:12px 24px 20px;padding:12px 24px;text-align:center;border-radius:8px;background:var(--gradient-brand);color:#fff;font-weight:600;font-size:.95rem}
+  /* Mobile theme toggle inside menu */
+  .nav-mobile-theme{display:flex;align-items:center;gap:8px;padding:12px 24px;font-size:.9rem;color:var(--gray-600);cursor:pointer;border:none;background:none;text-align:left;transition:background .15s}
+  .nav-mobile-theme:hover{background:var(--blue-subtle)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .related-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+[data-theme="dark"] .nav-links.open{background:#0B0F1A;border-bottom-color:var(--gray-200)}
+[data-theme="dark"] .nav-links.open a{color:var(--gray-700);border-bottom-color:var(--gray-200)}
+[data-theme="dark"] .nav-links.open a:hover{background:rgba(99,102,241,.12);color:var(--blue)}
+[data-theme="dark"] .nav-mobile-theme:hover{background:rgba(99,102,241,.12)}
+@media(max-width:640px){
+  section{padding:64px 0}
+  .article-hero{padding:56px 0 32px}
+  .stats-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":"2020年Baidu B2B業界インサイト：中国工業検索データが明かす実態",
+  "description":"Baiduの2020年B2B業界レポートは数百万件の産業検索クエリを分析。中国の主要B2Bセグメント、購買行動、プラットフォーム競争の最新データを解説します。",
+  "url":"https://baidumarketing.com/ja/blog/2020-baidu-b2b-industry-insights",
+  "image":"https://baidumarketing.com/assets/og-brand-default.png",
+  "datePublished":"2020-07-09",
+  "publisher":{
+    "@type":"Organization",
+    "name":"Baidu PPC Pro",
+    "url":"https://baidumarketing.com",
+    "logo":{"@type":"ImageObject","url":"https://baidumarketing.com/assets/og-brand-default.png","width":1200,"height":630}
+  },
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://baidumarketing.com/ja/blog/2020-baidu-b2b-industry-insights"}
+}
+</script>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <a href="/ja/index" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#lg)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg> Baidu PPC Pro</a>
+    <div class="nav-links" id="navLinks">
+      <a href="/ja/why-baidu-ppc-pro.html">Baidu PPC Proとは</a>
+      <a href="/ja/features.html">サービス</a>
+      <a href="/ja/pricing.html">料金プラン</a>
+      <a href="/ja/clients.html">実績</a>
+      <a href="/ja/faq.html">FAQ</a>
+      <a href="/ja/about.html">会社概要</a>
+      <a href="/ja/blog" class="active">ブログ</a>
+      <a href="/ja/contact.html">お問い合わせ</a>
+      <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> ダークモード切替</button>
+    </div>
+    <div class="nav-right-group">
+      <div class="lang-switch"><button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="Language">JP <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+        <div class="lang-switch-menu" id="langSwitchMenu"><a href="/" lang="en" class="lang-switch-item">English</a><a href="/ja/index" lang="ja" class="lang-switch-item">日本語</a></div></div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+      <a href="/ja/contact.html" class="nav-cta">今すぐ始める</a></div>
+    <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+<main>
+<section class="article-hero">
+  <div class="container">
+    <h1 class="article-title">2020年Baidu B2B業界インサイト：中国工業検索データが明かす実態</h1>
+    <div class="article-meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jul 9, 2020</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> 7 min</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span>
+    </div>
+  </div>
+</section>
+
+<section class="article-section">
+  <div class="container">
+    <article class="article-content">
+# 2020年Baidu B2B業界インサイト：中国工業検索データが明かす実態
+
+> Baiduが2020年に処理した数百万件のB2B産業検索クエリ。そのデータから、中国のビジネスバイヤーがどのように製品を調査し、どの業界が需要を牽引し、プラットフォーム競争がどうなっているのかが浮き彫りになりました。データが示す事実と、海外企業にとっての意味を解説します。
+
+## 全体像：B2B検索需要は急回復
+
+Baiduの2020年B2B業界レポートで最も注目すべき点：2020年初頭の落ち込みから、B2B検索需要は急速に回復しました。2020年4月までに、前年比のB2B検索ボリュームはすでに2019年の水準を上回っていました。企業は購買を止めたわけではなく、サプライヤー調査を予想以上に早くオンラインへ移行させたのです。
+
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-icon">📱</div>
+    <div class="stat-number">70%</div>
+    <div class="stat-label">モバイル端末からのB2B検索トラフィック</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">💻</div>
+    <div class="stat-number">30%</div>
+    <div class="stat-label">PCからのB2B検索トラフィック</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">📊</div>
+    <div class="stat-number">78%</div>
+    <div class="stat-label">総合型B2Bプラットフォームの検索シェア</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">🏭</div>
+    <div class="stat-number">TOP 3</div>
+    <div class="stat-label">機械工業・建材・電気設備 — 最大のB2Bセグメント</div>
+  </div>
+</div>
+
+モバイルとPCの比率も重要な示唆を与えます。B2B検索トラフィックの約70%がモバイル端末から来ており、中国のビジネスバイヤーは工場の現場、建設サイト、外回りの合間にスマートフォンでサプライヤー調査を行っているのです。ただし30%はデスクトップからの検索であり、全市場をカバーするには両チャネルでのキャンペーン展開が必要です。
+
+## 中国B2Bトップ10セグメント：需要の所在
+
+Baiduの検索データは10の主要B2B業界カテゴリを特定しました。これらでプラットフォーム上の産業購買意図の大部分を占めています。
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>順位</th>
+      <th>業界</th>
+      <th>検索クエリ例</th>
+      <th>集中度</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>機械工業</td>
+      <td>ダイヤフラムポンプ、昇降機、脱硫塔</td>
+      <td>高</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>建材・内装</td>
+      <td>ロックウールパネル、ジオテキスタイル、鋼製グレーチング</td>
+      <td>高</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>水回り・電気設備</td>
+      <td>発電機、ケーブルラック、ガスボイラー</td>
+      <td>中</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>電子・計測機器</td>
+      <td>電磁流量計、バスウェイシステム</td>
+      <td>中</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>冶金・鉄鋼</td>
+      <td>継目無鋼管、超音波検層管</td>
+      <td>非常に高い（80%以上）</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>化学・エネルギー</td>
+      <td>掘削流体、難燃剤、紫外線吸収剤</td>
+      <td>中</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>防犯・照明</td>
+      <td>スチールフェンス、バスシェルター、街灯メーカー</td>
+      <td>中</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>金物・工具</td>
+      <td>カップリング、リニアガイド、電動バタフライバルブ</td>
+      <td>非常に高い（80%以上）</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>自動車部品</td>
+      <td>ナンバープレート認識、冷蔵トラック</td>
+      <td>非常に高い（80%以上）</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>食品・農業</td>
+      <td>農業用温室、ヒル養殖、ミストシステム</td>
+      <td>非常に高い（80%以上）</td>
+    </tr>
+  </tbody>
+</table>
+
+注目すべきパターン：冶金、金物、自動車部品、農業の4つのカテゴリでは、上位10のサブセグメントだけで全検索ボリュームの80%以上を占めています。これらの業界に参入する場合、主要サブセグメントを絞ったキーワード戦略が、数百のロングテールキーワードに予算を分散するよりもはるかに費用対効果が高いことを意味します。
+
+<div class="callout tip">
+  <strong>💡 競争優位のヒント:</strong> サブセグメント集中度が高い業界（冶金、金物、自動車部品、農業）では、広告予算の70%を上位10のサブカテゴリキーワードに集中させ、残り30%をニッチ用語に振り分けます。この手法は通常、広範なカテゴリ入札より2〜3倍高いROASを生み出します。
+</div>
+
+## 中国のB2Bバイヤーは実際どう検索し、どう決めるのか
+
+検索行動を理解することは、単なる広告運用と収益性の高い広告運用の違いを生みます。Baiduのレポートは、中国のB2Bバイヤーが最初の検索から最終購入までにたどる正確な経路を示しています。
+
+### 検索ジャーニー：3段階
+
+**段階1 — 認知**：バイヤーは一般的なB2B用語から検索を始めます。まだ広く情報を集めている段階です。この時期にクリックされるのはBaidu百科、Baidu知恵袋のQ&A、百家号の業界コンテンツです。まだサプライヤーに連絡する準備はできていません。
+
+**段階2 — 比較**：検索は特定のメーカーや調達元に絞られます。「工場直販」「メーカー」「卸売サプライヤー」といった用語が中心になります。バイヤーはB2Bプラットフォーム、企業Webサイト、技術サポートページをクリックします。
+
+**段階3 — 決定**：最終段階です。価格、最低注文数量、配送条件などの取引用語で検索します。問い合わせのためにAiCaiGou（愛購買）、1688.com、サプライヤーサイトを訪問します。
+
+広告主にとっての教訓：検索キャンペーンはバイヤーの段階に合わせる必要があります。広範な業界キーワードと取引志向のキーワードは、異なるランディングページと異なるCTAにつなげるべきです。
+
+### バイヤーが最も重視すること
+
+全業界を通じて、B2B購買決定を左右する最大の要因は一つ：**価格**です。中国のビジネスバイヤーは、仕様やサプライヤーの評判、納品条件よりも先に価格を調べます。
+
+しかし二次的な関心事は業界によって異なります：
+- **建材・金属**：口コミ評価、返品・修理対応
+- **機械・電気・電子**：中古販売・レンタルの選択肢
+- **全業界共通**：取引チャネルの信頼性と支払いの安全性
+
+### バイヤーはいつ、どこで検索するか
+
+**時間パターン**：PC検索は平日の業務時間にピークを迎えます。モバイル検索はより均等に分布し、週末や夜間も含まれます。つまり、B2Bキャンペーンは週を通して配信し、競合が見落としがちな週末のモバイルトラフィックを獲得する予算配分が有効です。
+
+**地域パターン**：華東地域が全B2B検索需要の50%を占めます。華北と華南がそれぞれ約12%、華中10%、西南（5%）、東北（5%）、西北（4%）と続きます。華南の中では広東省一省でその地域のB2B活動の大半を占めています。
+
+<blockquote class="blockquote-highlight">
+  「需要は経済活動が最も活発な華東地域に集中しています。しかし業界によって地域パターンは異なります——物流・自動車部品は広東、湖北、四川、河北で需要が突出し、家電は広東、四川、河南で需要がピークに達します」
+  <cite>— 2020年Baidu B2B業界インサイトレポート</cite>
+</blockquote>
+
+## B2Bプラットフォームの勢力図：勝者は誰か
+
+BaiduのレポートはB2Bプラットフォームを2つのモデルに分類しています：
+- **総合型プラットフォーム**（検索関心の78%）：1688.com、AiCaiGou（Baiduの自社プラットフォーム）、HC360.com — 幅広いカテゴリをカバーするワンストッププラットフォーム
+- **垂直型プラットフォーム**（22%）：より深い専門知識を持つ業界特化型マーケットプレイス
+
+1688.comは検索ボリュームとブランド認知度の両方でトップです。しかしAiCaiGouは高成長のスイートスポットにあります——高い検索シェアと、ビジネスバイヤーの間で急速に高まる認知度を兼ね備えています。中国市場に参入する海外企業にとって、AiCaiGouは戦略的機会です。Baiduの検索エコシステムと深く統合されており、マーケットプレイス上だけでなく、中国最大の検索エンジンのオーガニック検索結果や広告にも自社製品が表示されるからです。
+
+## B2Bマーケティング5ステップ：Baiduのフルファネルアプローチ
+
+レポートは、B2B企業がBaiduのプラットフォーム上で需要を獲得し販売につなげるための体系的なアプローチを示しています：
+
+**ステップ1：精密ターゲティング** — 検索広告、ブランドゾーン、フィード広告、ディスプレイ広告を使い、製品カテゴリを検索した瞬間の高意欲バイヤーを獲得します。
+
+**ステップ2：ナレッジマーケティング** — Baidu百科の項目、Baidu知恵袋の回答、短尺動画コンテンツを通じて権威性を構築します。中国のB2Bバイヤーは認知・比較段階でこれらのコンテンツソースに大きく依存しています。
+
+**ステップ3：フルファネルWebサイト** — BaiduのJimuyu（基木魚）プラットフォームを使い、リード獲得機能を組み込んだ高コンバージョンのランディングページを構築・ホスティングします。別途ホスティングやCMSは不要です。
+
+**ステップ4：プライベートドメイン運営** — 企業百家号アカウントとライブ配信を活用し、リピートバイヤーの直接オーディエンスを構築します。これはBaiduエコシステム内の自社チャネルです。
+
+**ステップ5：リード運営** — AiCaiGouの問い合わせシステムを通じてプラットフォームトラフィックを適格リードに変換し、リアルタイムのリード通知とCRM連携を実現します。
+
+## AiCaiGou：知られざる最速成長B2Bプラットフォーム
+
+AiCaiGou（愛購買）はBaiduのB2B調達プラットフォームです。レポートは国際ブランドが注目すべき理由をいくつか挙げています：
+
+- **Baiduエコシステムとの統合**：AiCaiGouに掲載された製品は、Baiduのオーガニック検索と有料検索の両方に表示されます——GoogleでAmazonの商品リストがランクインするようなものです
+- **成長するDAUと加盟企業数**：デイリーアクティブユーザーと登録企業数は一貫して増加傾向
+- **デュアルシナリオカバレッジ**：バイヤーはアクティブ検索とパッシブな閲覧レコメンデーションの両方から製品にアクセス
+- **季節ピーク**：問い合わせボリュームのピークは3〜6月と9〜12月で、中国の産業調達サイクルと一致
+- **主要地域**：広東省、浙江省、江蘇省、山東省、河北省
+
+<div class="callout warning">
+  <strong>⚠️ 重要:</strong> AiCaiGouのトップ10業界カテゴリは、B2B検索需要全体とほぼ完全に一致しています——機械、建材、電気、電子、金属、化学、防犯、金物、自動車部品、農業。自社製品がこれらのカテゴリに該当する場合、中国で最もトラフィックの多いB2Bチャネルで競争していることになります。参加しないことは、参加している競合に可視性を奪われることを意味します。
+</div>
+
+## 海外B2B企業にとっての意味
+
+Baiduのレポートデータは、中国市場に参入または拡大する国際ブランドに明確な戦略ロードマップを提供します：
+
+1. **モバイルファーストのキャンペーンは必須** — バイヤーの70%がスマートフォンで検索
+2. **価格透明性が勝利の鍵** — 中国のB2Bバイヤーは何よりも先に価格を調べる
+3. **華東地域から始め、その後に拡大** — 需要の50%が長江デルタ地域から
+4. **3つの検索段階をすべてカバー** — 認知・比較・決定で異なるキーワードとLPを用意
+5. **週末モバイルキャンペーンに隠れた価値** — 競合が少なく、本物の購買意図がある
+6. **AiCaiGou + Baidu検索が最強の組み合わせ** — マーケットプレイスと検索エンジンのデュアルカバレッジ
+
+<div class="takeaway">
+  <h4>🎯 重要ポイント</h4>
+  <ul>
+    <li>✅ B2B検索需要は2020年に急回復し、2019年の水準を上回った</li>
+    <li>✅ 10の主要B2Bセグメント — 機械工業と建材が大きくリード</li>
+    <li>✅ 70%のモバイルトラフィック — モバイル最適化されたキャンペーンとLPが必須</li>
+    <li>✅ 価格が全B2Bカテゴリで最大の決定要因</li>
+    <li>✅ 華東地域が全B2B検索需要の50% — ここから始めるべき</li>
+    <li>✅ B2Bバイヤーは3段階の検索ジャーニー：認知→比較→決定</li>
+    <li>✅ AiCaiGouは最も急成長しているB2Bプラットフォーム、Baidu検索と深く統合</li>
+    <li>✅ 総合型プラットフォーム（78%）が垂直型（22%）を大きく上回る</li>
+    <li>✅ BPPは中国ビジネスライセンスなしでBaidu検索とAiCaiGouのプレゼンスを構築可能</li>
+  </ul>
+</div>
+
+---
+
+B2B検索データが描く姿は明確です：中国の産業バイヤーはオンラインで、モバイルで検索し、Baiduを主要なリサーチツールとして使用しています。Baidu検索とAiCaiGouの両方に存在感を構築し、バイヤージャーニーの各段階に合わせたモバイル最適化キャンペーンとコンテンツを展開する企業が、この需要の最大シェアを獲得します。
+
+**中国のB2Bバイヤーに自社製品を届ける準備はできていますか？** BPPはBaidu広告アカウントの開設、キャンペーン管理、AiCaiGouストアフロント作成まで対応——中国ビジネスライセンス不要です。[お問い合わせ](https://baidumarketing.com/contact)はこちらから。
+
+> 📄 **出典**: 本記事はBaidu検索ビッグデータが発表した「2020年百度B2B行業洞察報告」（2020年Baidu B2B業界インサイトレポート）のデータに基づいています。
+
+---
+
+**By Baidu PPC Pro Team**
+</article>
+  </div>
+</section>
+
+<!-- Related section -->
+<section class="related-section">
+  <div class="container">
+    <h2>関連記事</h2>
+    <div class="related-grid">
+      <a href="baidu-mcc-account-guide" class="related-card"><h4>Baidu MCC Account Guide</h4><p>Manage multiple Baidu accounts from one dashboard.</p></a>
+      <a href="baidu-search-ad-video-format-guide" class="related-card"><h4>Baidu Search Ad Video Formats</h4><p>Video ad types and specs for Baidu search campaigns.</p></a>
+      <a href="baidu-ppc-terms-explained" class="related-card"><h4>Baidu PPC Terms Explained</h4><p>Common Baidu terminology explained for newcomers.</p></a>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <h2>中国のB2Bバイヤーにリーチしませんか？</h2>
+    <p>BPPチームがBaiduキャンペーンを設定します。中国法人は不要です。</p>
+    <a href="/ja/contact.html" class="cta-button">無料相談はこちら →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fl" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fl)"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="white">BPP</text></svg> Baidu PPC Pro</h3>
+        <p>We help international agencies and brands access China's digital advertising market with compliance, clarity, and zero guesswork.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/ja/why-baidu-ppc-pro.html">Why Baidu PPC Pro</a></li>
+          <li><a href="/ja/features.html">Services</a></li>
+          <li><a href="/ja/pricing.html">Pricing</a></li>
+          <li><a href="/ja/about.html">About</a></li>
+          <li><a href="/ja/faq.html">FAQ</a></li>
+          <li><a href="/ja/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
+          <li><a href="/ja/contact.html">Submit a Request</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/ja/privacy.html">Privacy Policy</a></li>
+          <li><a href="/ja/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+function toggleTheme(){var e=document.documentElement,t=e.getAttribute('data-theme')==='dark'?'light':'dark';e.setAttribute('data-theme',t),localStorage.setItem('theme',t),document.querySelector('meta[name=\"theme-color\"]').content=t==='dark'?'#0B0F1A':'#FFFFFF'}
+(function(){var e=localStorage.getItem('theme');if(e==='dark'||(!e&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark'),document.querySelector('meta[name=\"theme-color\"]').content='#0B0F1A'}})();
+function toggleLangMenu(){var e=document.getElementById('langSwitchMenu');e&&e.classList.toggle('open')}
+document.addEventListener('click',function(e){var t=document.querySelector('.lang-switch');t&&!t.contains(e.target)&&(e=document.getElementById('langSwitchMenu'))&&e.classList.remove('open')});
+var mobileNavOpen=!1;
+function toggleMobileNav(){var e=document.getElementById('navLinks'),t=document.querySelector('.hamburger-icon'),n=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen,mobileNavOpen?(e.classList.add('open'),t.style.display='none',n.style.display='block',o.classList.add('active'),document.body.style.overflow='hidden'):(e.classList.remove('open'),t.style.display='block',n.style.display='none',o.classList.remove('active'),document.body.style.overflow='')}
+document.querySelectorAll('.nav-links a').forEach(function(e){e.addEventListener('click',function(){mobileNavOpen&&toggleMobileNav()})});
+document.querySelectorAll('.obf-email').forEach(function(e){e.textContent=e.dataset.u+'@'+e.dataset.d});
+document.querySelectorAll('.obf-email-link').forEach(function(e){var t=e.dataset.u+'@'+e.dataset.d;e.href='mailto:'+t;if(!e.textContent)e.textContent=t});
+document.querySelectorAll('.obf-email-icon').forEach(function(e){e.href='mailto:'+e.dataset.u+'@'+e.dataset.d});
+window.addEventListener('scroll',function(){document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
+</script>
+</body>
+</html>

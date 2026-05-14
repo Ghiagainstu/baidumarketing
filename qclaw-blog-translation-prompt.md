@@ -269,7 +269,19 @@ BPP (Baidu PPC Pro) 帮助海外企业在百度投放广告。目标读者是海
 
 ## 输出格式
 
-输出为 **Markdown 格式**，保存到 Obsidian vault 的 `BPP-Blogs/` 文件夹。
+输出为 **Markdown 格式**，保存到 Obsidian vault 对应分类文件夹下。
+
+分类文件夹对照：
+| 分类 | Obsidian 文件夹 |
+|------|----------------|
+| Market Insights | `E:/Obsidian/Baidu/01-Market-Insights/` |
+| Search Ads | `E:/Obsidian/Baidu/03-Search-Ads/` |
+| Feed Ads | `E:/Obsidian/Baidu/04-Feed-Ads/` |
+| Strategy | `E:/Obsidian/Baidu/05-Strategy/` |
+| Landing Page | `E:/Obsidian/Baidu/06-Landing-Page/` |
+| Platform | `E:/Obsidian/Baidu/02-Platform/` |
+
+文件名格式：`bpp-{序号}-{slug}-jp.md`（日文翻译）
 
 Markdown frontmatter 必须包含：
 ```yaml
@@ -327,7 +339,7 @@ language: ja
     ↓
 [发给 qclaw] → 翻译成日文 Markdown
     ↓
-保存到 Obsidian vault（BPP-Blogs/ 文件夹）
+保存到 Obsidian vault 对应分类文件夹（见第四部分表格）
     ↓
 [自动脚本] → Markdown → HTML（保留视觉元素）
     ↓
