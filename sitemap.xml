@@ -473,4 +473,12 @@
     <loc>https://www.baidumarketing.com/ko/blog/2020-baidu-b2b-industry-insights</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-search-ads-1-1-desktop-images</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-search-ads-1-1-desktop-images</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>
