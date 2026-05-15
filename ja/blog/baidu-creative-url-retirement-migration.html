@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="color-scheme" content="light dark">
+  <title>Baidu、クリエイティブ層URLの提供終了——広告主向け移行ガイド — Baidu PPC Pro Blog</title>
+  <meta name="description" content="2025年6月5日より、Baiduはクリエイティブ層でのLP URL設定をサポートしなくなります。ご自身のシナリオを確認し、ダウンタイムなしで移行する方法をご紹介。海外広告主向け完全ガイド。">
+  <link rel="canonical" href="https://baidumarketing.com/ja/blog/baidu-creative-url-retirement-migration" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://baidumarketing.com/ja/blog/baidu-creative-url-retirement-migration" />
+  <meta property="og:title" content="Baidu、クリエイティブ層URLの提供終了——広告主向け移行ガイド" />
+  <meta property="og:description" content="2025年6月5日より、Baiduはクリエイティブ層でのLP URL設定をサポートしなくなります。ご自身のシナリオを確認し、ダウンタイムなしで移行する方法をご紹介。" />
+  <meta property="og:site_name" content="Baidu PPC Pro" />
+  <meta property="og:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Baidu、クリエイティブ層URLの提供終了——広告主向け移行ガイド" />
+  <meta name="twitter:description" content="2025年6月5日より、Baiduはクリエイティブ層でのLP URL設定をサポートしなくなります。ご自身のシナリオを確認し、ダウンタイムなしで移行する方法をご紹介。" />
+  <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#111827;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+    :root{
+      --blue:#2932E1;--blue-dark:#1E25AF;--blue-deep:#151B8A;--blue-light:#EEF0FF;--blue-glow:#D4D8FF;--blue-subtle:#F5F6FF;
+      --gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--gray-900:#111827;
+      --radius:12px;--radius-lg:16px;--radius-xl:24px;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 16px rgba(0,0,0,.10);--shadow-lg:0 12px 40px rgba(0,0,0,.12);--shadow-blue:0 8px 32px rgba(41,50,225,.18);
+      --gradient-brand:linear-gradient(135deg,#2932E1 0%,#4F46E5 50%,#7C3AED 100%);
+      --gradient-hero:linear-gradient(160deg,#ffffff 30%,#EEF0FF 60%,#E0E7FF 100%);
+      --gradient-surface:linear-gradient(135deg,#F9FAFB 0%,#F3F4FF 100%);
+      --font-display:'Inter',system-ui,-apple-system,sans-serif;
+      --transition-base:0.2s cubic-bezier(0.4, 0, 0.2, 1);--transition-smooth:0.4s cubic-bezier(0.16, 1, 0.3, 1);--transition-bounce:0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    [data-theme="dark"]{
+      --blue:#6366F1;--blue-dark:#818CF8;--blue-deep:#4F46E5;--blue-light:rgba(99,102,241,.12);--blue-glow:rgba(99,102,241,.15);--blue-subtle:rgba(99,102,241,.06);
+      --gray-50:#0B0F1A;--gray-100:#111827;--gray-200:#1F2937;--gray-300:#374151;--gray-400:#6B7280;--gray-600:#9CA3AF;--gray-700:#D1D5DB;--gray-800:#E5E7EB;--gray-900:#F9FAFB;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.3);--shadow-md:0 4px 16px rgba(0,0,0,.4);--shadow-lg:0 12px 40px rgba(0,0,0,.5);--shadow-blue:0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero:linear-gradient(160deg,#0F172A 30%,#131C38 60%,#1E1B4B 100%);--gradient-surface:linear-gradient(135deg,#111827 0%,#1E1B4B 100%);
+      background-color:#0B0F1A;color:#E5E7EB;
+    }
+    [data-theme="dark"] body{background-color:#0B0F1A;color:#E5E7EB}
+
+    section{padding:96px 0}
+    section:nth-child(even){background:var(--gray-50)}
+    [data-theme="dark"] section:nth-child(even){background:var(--gray-50)}
+
+    /* Nav */
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-200)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:var(--gray-800);transition:color var(--transition-base)}
+    .nav-logo:hover{color:var(--blue)}
+    .nav-logo svg{flex-shrink:0}
+    .nav-links{display:flex;gap:28px;font-size:.9rem;color:var(--gray-600)}
+    .nav-links a{position:relative;transition:color var(--transition-base)}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:50%;width:0;height:2px;background:var(--blue);border-radius:1px;transition:width var(--transition-smooth),left var(--transition-smooth)}
+    .nav-links a:hover{color:var(--blue)}
+    .nav-links a:hover::after{width:100%;left:0}
+    .nav-links a.active{color:var(--blue);font-weight:600}
+    .nav-links a.active::after{width:100%;left:0}
+    .nav-mobile-cta,.nav-mobile-theme{display:none}
+    .nav-cta{background:var(--gradient-brand);color:#fff;padding:10px 22px;border-radius:8px;font-size:.9rem;font-weight:600;transition:transform var(--transition-base),box-shadow var(--transition-base);position:relative;overflow:hidden}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(41,50,225,.35)}
+    .nav-cta:active{transform:translateY(0) scale(.97)}
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer}
+    .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);backdrop-filter:blur(2px);z-index:99;opacity:0;pointer-events:none;transition:opacity .3s}
+    .nav-overlay.active{opacity:1;pointer-events:auto}
+    [data-theme="dark"] nav{background:rgba(11,15,26,.85);backdrop-filter:blur(12px);border-bottom-color:var(--gray-200)}
+    [data-theme="dark"] .nav-logo{color:#818CF8}
+    [data-theme="dark"] .nav-logo:hover{color:#F9FAFB}
+    [data-theme="dark"] .nav-links{color:var(--gray-600)}
+    [data-theme="dark"] .nav-links a:hover{color:var(--blue)}
+
+    /* Language Switcher */
+    .nav-right-group{display:flex;align-items:center;gap:8px;flex-shrink:0}
+    .lang-switch{position:relative}
+    .lang-switch-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;border:1px solid var(--gray-200);background:transparent;cursor:pointer;font-size:.9rem;color:var(--gray-600);transition:all var(--transition-base);line-height:1}
+    .lang-switch-btn:hover{border-color:var(--blue);color:var(--blue)}
+    .lang-switch-menu{position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--gray-200);border-radius:8px;box-shadow:var(--shadow-md);min-width:150px;opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .2s ease,transform .2s ease;z-index:200}
+    .lang-switch-menu.open{opacity:1;pointer-events:auto;transform:translateY(0)}
+    .lang-switch-item{display:block;padding:10px 16px;font-size:.9rem;color:var(--gray-700);transition:background .15s;white-space:nowrap}
+    .lang-switch-item:hover{background:var(--blue-light);color:var(--blue)}
+    .lang-switch-item:first-child{border-radius:7px 7px 0 0}
+    .lang-switch-item:last-child{border-radius:0 0 7px 7px}
+    [data-theme="dark"] .lang-switch-btn{border-color:var(--gray-200);color:var(--gray-600)}
+    [data-theme="dark"] .lang-switch-btn:hover{border-color:var(--blue);color:var(--blue)}
+    [data-theme="dark"] .lang-switch-menu{background:#0B0F1A;border-color:var(--gray-200)}
+    [data-theme="dark"] .lang-switch-item{color:var(--gray-700)}
+    [data-theme="dark"] .lang-switch-item:hover{background:rgba(99,102,241,.12);color:var(--blue)}
+    @media (max-width:900px){.lang-switch{display:none}}
+
+    /* Theme Toggle */
+    .theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--gray-200);background:transparent;cursor:pointer;transition:all var(--transition-base);color:var(--gray-600)}
+    .theme-toggle:hover{border-color:var(--blue);color:var(--blue);transform:rotate(15deg)}
+    .theme-toggle svg{width:18px;height:18px}
+    [data-theme="dark"] .theme-toggle .icon-sun{display:block}
+    [data-theme="dark"] .theme-toggle .icon-moon{display:none}
+    .theme-toggle .icon-sun{display:none}
+    .theme-toggle .icon-moon{display:block}
+
+    /* Article Hero */
+    .article-hero{background:var(--gradient-hero);padding:80px 0 48px;text-align:center}
+    .article-hero .article-title{font-size:2.5rem;font-weight:800;color:var(--gray-900);line-height:1.2;margin-bottom:16px;max-width:800px;margin-left:auto;margin-right:auto}
+    .article-meta{display:flex;justify-content:center;gap:20px;font-size:.88rem;color:var(--gray-600);flex-wrap:wrap}
+    .article-meta span{display:inline-flex;align-items:center;gap:6px}
+    [data-theme="dark"] .article-hero{background:var(--gradient-hero)}
+    [data-theme="dark"] .article-hero .article-title{color:#F9FAFB}
+    [data-theme="dark"] .article-meta{color:var(--gray-600)}}
+
+    /* Article Content */
+    .article-section{padding:48px 0 80px}
+    .article-content{max-width:820px;margin:0 auto;padding:0 24px}
+    .article-content h2{font-size:1.6rem;font-weight:700;color:var(--gray-900);margin:40px 0 16px;line-height:1.3}
+    .article-content h3{font-size:1.25rem;font-weight:700;color:var(--gray-900);margin:32px 0 12px}
+    .article-content p{margin-bottom:16px;line-height:1.75;color:var(--gray-700)}
+    .article-content a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+    .article-content a:hover{color:var(--blue-dark)}
+    .article-content ul,.article-content ol{margin:12px 0 20px 24px;line-height:1.75;color:var(--gray-700)}
+    .article-content li{margin-bottom:8px}
+    .article-content pre{background:var(--gray-100);border-radius:var(--radius);padding:20px;overflow-x:auto;margin:20px 0;font-size:.88rem;line-height:1.6}
+    .article-content code{font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.88em}
+    .article-content pre code{background:none;padding:0;color:var(--gray-700)}
+    [data-theme="dark"] .article-content p{color:var(--gray-600)}
+    [data-theme="dark"] .article-content h2{color:#F9FAFB}
+    [data-theme="dark"] .article-content h3{color:#F9FAFB}
+    [data-theme="dark"] .article-content ul,.article-content ol{color:var(--gray-600)}}
+
+    /* Stats Grid */
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:28px 0}
+    .stat-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:24px;text-align:center;transition:transform var(--transition-base),box-shadow var(--transition-base)}
+    .stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+    .stat-icon{font-size:2rem;margin-bottom:8px}
+    .stat-number{font-size:1.5rem;font-weight:800;color:var(--blue);margin-bottom:4px}
+    .stat-label{font-size:.85rem;color:var(--gray-600)}
+    [data-theme="dark"] .stat-card{background:var(--gray-100);border-color:var(--gray-200)}}
+
+    /* Comparison Table */
+    .comparison-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.92rem}
+    .comparison-table th{background:var(--blue);color:#fff;padding:12px 16px;text-align:left;font-weight:600}
+    .comparison-table td{padding:10px 16px;border-bottom:1px solid var(--gray-200)}
+    .comparison-table tr:nth-child(even){background:var(--gray-50)}
+    [data-theme="dark"] .comparison-table th{background:var(--blue)}
+    [data-theme="dark"] .comparison-table td{border-bottom-color:var(--gray-200)}
+    [data-theme="dark"] .comparison-table tr:nth-child(even){background:var(--gray-100)}}
+
+    /* Callout */
+    .callout{padding:16px 20px;border-radius:var(--radius);margin:20px 0;font-size:.92rem;line-height:1.65}
+    .callout.tip{background:rgba(41,50,225,.08);border-left:4px solid var(--blue);color:var(--blue-deep)}
+    .callout.warning{background:rgba(245,158,11,.1);border-left:4px solid #F59E0B;color:#92400E}
+    [data-theme="dark"] .callout.tip{background:rgba(99,102,241,.12);color:var(--blue)}
+    [data-theme="dark"] .callout.warning{background:rgba(245,158,11,.12);color:#FBBF24}}
+
+    /* Takeaway */
+    .takeaway{background:var(--blue-light);border:1px solid rgba(41,50,225,.15);border-radius:var(--radius-lg);padding:24px 28px;margin:28px 0}
+    .takeaway h4{font-size:1.05rem;font-weight:700;color:var(--blue-deep);margin-bottom:12px}
+    .takeaway ul{margin-left:20px;color:var(--gray-700);line-height:1.7}
+    .takeaway li{margin-bottom:6px}
+    [data-theme="dark"] .takeaway{background:rgba(99,102,241,.1);border-color:rgba(99,102,241,.2)}
+    [data-theme="dark"] .takeaway h4{color:var(--blue)}
+    [data-theme="dark"] .takeaway ul{color:var(--gray-600)}}
+
+    /* Related Section */
+    .related-section{background:var(--gray-50);padding:64px 0;border-top:1px solid var(--gray-200)}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px}
+    .related-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:24px;transition:transform var(--transition-base),box-shadow var(--transition-base)}
+    .related-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+    .related-card h4{font-size:1rem;font-weight:600;margin-bottom:8px}
+    .related-card h4 a{color:var(--gray-900)}
+    .related-card p{font-size:.85rem;color:var(--gray-600);line-height:1.6}
+    [data-theme="dark"] .related-section{background:var(--gray-100)}
+    [data-theme="dark"] .related-card{background:var(--gray-100);border-color:var(--gray-200)}
+    [data-theme="dark"] .related-card h4 a{color:#F9FAFB}}
+
+    /* Back to Top */
+    .back-to-top{position:fixed;bottom:32px;right:32px;z-index:90;width:44px;height:44px;border-radius:50%;background:var(--gradient-brand);color:#fff;border:none;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px rgba(41,50,225,.35);opacity:0;pointer-events:none;transition:opacity .3s,transform var(--transition-base),box-shadow var(--transition-base)}
+    .back-to-top.visible{opacity:1;pointer-events:auto}
+    .back-to-top:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(41,50,225,.45)}
+    .back-to-top svg{width:20px;height:20px}
+
+    /* Footer */
+    footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .footer-brand h3{color:#fff;font-size:1.1rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .footer-brand h3 svg{flex-shrink:0}
+    .footer-brand p{font-size:.85rem;line-height:1.7;color:#9CA3AF;max-width:280px}
+    .footer-col h4{color:#fff;font-size:.85rem;font-weight:600;margin-bottom:14px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .footer-col ul li a{font-size:.85rem;color:#9CA3AF;transition:color .2s}
+    .footer-col ul li a:hover{color:#fff}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:12px}
+    .footer-copy{font-size:.82rem;color:#6B7280}
+    .footer-social{display:flex;gap:14px;align-items:center}
+    .footer-social a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .2s,transform .2s}
+    .footer-social a:hover{background:var(--blue);transform:translateY(-2px)}
+    .footer-social a:hover svg{fill:#fff!important;stroke:#fff!important}
+    .footer-social a svg{width:18px;height:18px}
+    [data-theme="dark"] footer{background:#070B14}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Baidu、クリエイティブ層URLの提供終了——広告主向け移行ガイド",
+    "description": "2025年6月5日より、Baiduはクリエイティブ層でのLP URL設定をサポートしなくなります。ご自身のシナリオを確認し、ダウンタイムなしで移行する方法をご紹介。",
+    "url": "https://baidumarketing.com/ja/blog/baidu-creative-url-retirement-migration",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2025-05-22",
+    "dateModified": "2025-05-22",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro",
+      "url": "https://baidumarketing.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://baidumarketing.com/assets/og-brand-default.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://baidumarketing.com/ja/blog/baidu-creative-url-retirement-migration"
+    }
+  }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="/ja/index" class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs>
+          <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+          <text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text>
+        </svg>
+        Baidu PPC Pro
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="/ja/why-baidu-ppc-pro">Why Baidu PPC Pro</a>
+        <a href="/ja/features">Services</a>
+        <a href="/ja/pricing">Pricing</a>
+        <a href="/ja/clients">Clients</a>
+        <a href="/ja/faq">FAQ</a>
+        <a href="/ja/about">About</a>
+        <a href="/ja/blog" class="active">Blog</a>
+        <a href="/ja/contact">Contact</a>
+        <button class="nav-mobile-theme" onclick="toggleTheme()">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          Toggle Dark Mode
+        </button>
+      </div>
+      <div class="nav-right-group">
+        <div class="lang-switch">
+          <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="Language">
+            🇯🇵
+
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="lang-switch-menu" id="langSwitchMenu">
+            <a href="/index" lang="en" class="lang-switch-item">🇺🇸 English</a>
+            <a href="/ja/index" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
+          </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="/ja/contact" class="nav-cta">Get Started &rarr;</a>
+      </div>
+      <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
+        <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
+        <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <h1 class="article-title">Baidu、クリエイティブ層URLの提供終了——広告主向け移行ガイド</h1>
+        <div class="article-meta">
+          <span>📅 2025年5月22日</span>
+          <span>🕐 4 min read</span>
+          <span>✍️ By Baidu PPC Pro Team</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
+        <p>プラットフォームの移行作業は、面倒なものだ。しかし、BaiduがURL管理システムの冗長な層を削除すると、結果はよりシンプルなキャンペーン構造になる——移行期間を乗り越えれば。</p>
+        <p><strong>2025年6月5日</strong>より、Baiduはクリエイティブ層でのLP URL設定をサポートしなくなる。以下に知っておくべきことと、対応するべきことをまとめる。</p>
+
+        <h2>Baiduがこれを行う理由</h2>
+        <p>BaiduのURL優先順位システムは3層構造：</p>
+        <pre>キーワードURL &gt; クリエイティブURL &gt; 広告グループURL</pre>
+        <p>実際には、多くの広告主が同一広告グループ内の全クリエイティブに同じURLを設定している。クリエイティブ層URLは冗長であり、複雑さを増すだけで価値を加えていない。これを削除することで、プラットフォームが簡素化され、Baiduのクリック→コンバージョン予測モデルの精度が向上する。</p>
+
+        <h2>移行スケジュール</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📢</div>
+            <div class="stat-number">5月22日</div>
+            <div class="stat-label">下線予告発表</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🚫</div>
+            <div class="stat-number">6月5日</div>
+            <div class="stat-label">新規追加/編集禁止</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🗑️</div>
+            <div class="stat-number">移行期間</div>
+            <div class="stat-label">既存URLは有効、削除可</div>
+          </div>
+        </div>
+
+        <h2>どのシナリオに該当するか？</h2>
+        <table class="comparison-table">
+          <thead><tr><th>シナリオ</th><th>現在の設定</th><th>必要な対応</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1</strong></td><td>クリエイティブURL = 広告グループURL</td><td>✅ 対応不要。</td></tr>
+            <tr><td><strong>2</strong></td><td>クリエイティブURL = 広告グループURL + トラッキングパラメータ</td><td>⚠️ 広告グループ層で <code>{creative}</code> ワイルドカードを使用し、各クリエイティブを追跡。</td></tr>
+            <tr><td><strong>3</strong></td><td>クリエイティブURL ≠ 広告グループURL、ただし全クリエイティブで同じURL</td><td>⚠️ URLを広告グループ層に移動。</td></tr>
+            <tr><td><strong>4</strong></td><td>各クリエイティブで異なるURL</td><td>🔧 再編成：1製品=1広告グループ。URLはキーワード層または広告グループ層で設定。</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>💡 移行期限：</strong> 2025年6月5日。この日以降、クリエイティブ層URLの新規追加・編集は不可。既存URLは引き続き配信されるが、修正不可——削除のみ可能。今すぐ移行を開始し、強制的な停止を回避してください。
+        </div>
+
+        <h2>6月5日以降の変更点</h2>
+        <ul>
+          <li>❌ 新規クリエイティブ層URLの追加不可</li>
+          <li>❌ 既存クリエイティブ層URLの編集不可</li>
+          <li>✅ 既存クリエイティブ層URLの削除可</li>
+          <li>✅ 既存URLは削除まで引き続き配信</li>
+          <li>✅ 広告グループ層・キーワード層URLは完全サポート</li>
+        </ul>
+
+        <h2>実践的な移行ステップ</h2>
+        <ol>
+          <li><strong>アカウントを監査。</strong> 全キャンペーンをエクスポートし、各広告グループがどのシナリオに該当するか確認。</li>
+          <li><strong>シナリオ1アカウント：</strong> 対応不要。広告グループ層URLを既に統一的に使用している。</li>
+          <li><strong>シナリオ2アカウント：</strong> 広告グループURLに <code>{creative}</code> ワイルドカードを追加。これにより、クリエイティブ層URLフィールドなしでクリエイティブ別追跡を維持。</li>
+          <li><strong>シナリオ3アカウント：</strong> クリエイティブURLを広告グループ層にコピー。その後、クリエイティブ層URLを削除。</li>
+          <li><strong>シナリオ4アカウント：</strong> これが最も大規模な移行。各広告グループが1製品=1LPを表すようにキャンペーンを再編成。例外はキーワード層でURL設定。</li>
+        </ol>
+
+        <h2>海外広告主にとっての意味</h2>
+        <p>Baidu PPCを運用する国際ブランドにとって、これは好意的な変更だ。クリエイティブURLは海外マーケティングチームを混乱させる不要な複雑さだった。削除により：</p>
+        <ul>
+          <li><strong>よりシンプルなキャンペーン構造。</strong> 設定・管理するフィールドが1つ減る。</li>
+          <li><strong>より良いパフォーマンス予測。</strong> Baiduのモデルがよりクリーンなデータを取得。</li>
+          <li><strong>設定エラーの減少。</strong> 重複が減れば、URL不一致も減る。</li>
+        </ul>
+        <p>しかし移行には、Baiduプラットフォームを理解し、アカウントにアクセスできる担当者が必要。</p>
+
+        <h2>BPPの対応</h2>
+        <div class="takeaway">
+          <h4>🎯 移行チェックリスト</h4>
+          <ul>
+            <li>✅ アカウントを監査し、該当シナリオを確認</li>
+            <li>✅ 6月5日までに移行完了し、中断を回避</li>
+            <li>✅ BPP管理アカウントでは移行作業を完全代行</li>
+          </ul>
+        </div>
+        <p>BPPがBaiduアカウントを運用している場合、このようなプラットフォーム移行もBPPが対応——中国語の公式発表を読む必要や移行手順を調べる必要はありません。</p>
+        <p>自身または他業者でBaidu広告を運用している場合、今すぐクリエイティブURL設定を監査することをお勧めします。特にシナリオ4アカウントは再編成に時間が必要。</p>
+        <p><strong>適切に管理されたBaiduアカウントは、プラットフォーム変更時に壊れない——適応する。</strong></p>
+        <p><a href="https://baidumarketing.com/ja/contact">BPPチームに問い合わせる →</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="related-section">
+    <div class="container">
+      <h3 class="section-title" style="font-size:1.3rem;font-weight:700;margin-bottom:8px">関連記事</h3>
+      <div class="related-grid">
+        <div class="related-card">
+          <h4><a href="/ja/blog/baidu-search-ads-1-1-desktop-images">🖼️ Baidu検索広告、デスクトップでも1:1画像をサポート</a></h4>
+          <p class="blog-card-excerpt">Baidu検索広告で1:1正方形画像がモバイル・デスクトップ両方で使用可能に。</p>
+        </div>
+        <div class="related-card">
+          <h4><a href="/ja/blog/baidu-advertiser-consultation">📞 Baidu広告主コンサルテーション：準備方法</a></h4>
+          <p class="blog-card-excerpt">Baiduの審査チームが電話する場合があります。スムーズに通過するための準備方法。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="white">BPP</text></svg> Baidu PPC Pro</h3>
+          <p>適正、透明性、推測なし——国際ブランドのためのBaidu広告アクセスをサポートします。</p>
+        </div>
+        <div class="footer-col">
+          <h4>クイックリンク</h4>
+          <ul>
+            <li><a href="/ja/why-baidu-ppc-pro">Why Baidu PPC Pro</a></li>
+            <li><a href="/ja/features">Services</a></li>
+            <li><a href="/ja/pricing">Pricing</a></li>
+            <li><a href="/ja/about">About</a></li>
+            <li><a href="/ja/faq">FAQ</a></li>
+            <li><a href="/ja/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>お問い合わせ</h4>
+          <ul>
+            <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
+            <li><a href="/ja/contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>法的情報</h4>
+          <ul>
+            <li><a href="/ja/privacy">Privacy Policy</a></li>
+            <li><a href="/ja/terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+        <div class="footer-social">
+          <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next);document.querySelector('meta[name="theme-color"]').content=next==='dark'?'#0B0F1A':'#FFFFFF'}
+    (function(){const saved=localStorage.getItem('theme');if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.querySelector('meta[name="theme-color"]').content='#0B0F1A'}})();
+    function toggleLangMenu(){const menu=document.getElementById('langSwitchMenu');if(menu)menu.classList.toggle('open')}
+    document.addEventListener('click',function(e){const sw=document.querySelector('.lang-switch');if(sw&&!sw.contains(e.target)){const menu=document.getElementById('langSwitchMenu');if(menu)menu.classList.remove('open')}});
+    let mobileNavOpen=false;
+    function toggleMobileNav(){const links=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');h.style.display='none';c.style.display='block';o.classList.add('active');document.body.style.overflow='hidden'}else{links.classList.remove('open');h.style.display='block';c.style.display='none';o.classList.remove('active');document.body.style.overflow=''}}
+    document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{if(mobileNavOpen)toggleMobileNav()})});
+    window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
+    document.querySelectorAll('.obf-email').forEach(function(el){el.textContent=el.dataset.u+'@'+el.dataset.d});
+    document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
+    document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
+  </script>
+</body>
+</html>
