@@ -505,4 +505,16 @@
     <loc>https://www.baidumarketing.com/ja/blog/baidu-conflicting-negative-keywords-feature</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-ads-campaign-upgrade-2025</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baidumarketing.com/blog/baidu-custom-form-retirement</loc>
+    <lastmod>2024-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
