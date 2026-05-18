@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "buildCommand": null,
   "installCommand": null,
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/(.*)",
