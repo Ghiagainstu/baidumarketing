@@ -1,0 +1,5 @@
+Contact: mailto:baidu@baidumarketing.com
+Expires: 2027-05-18T23:59:59Z
+Preferred-Languages: en
+Canonical: https://www.baidumarketing.com/.well-known/security.txt
+Policy: https://www.baidumarketing.com/privacy

@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#FFFFFF" />
   <meta name="color-scheme" content="light dark" />
   <title>Our Services — Full-Service Baidu Advertising — Baidu PPC Pro</title>
-  <meta name="description" content="Full-service Baidu advertising for global companies. Account opening, budget top-up, campaign management, white-label support, and AI-powered optimization." />
+  <link rel="canonical" href="https://www.baidumarketing.com/features" />
+<meta name="description" content="Full-service Baidu advertising for global companies. Account opening, budget top-up, campaign management, white-label support, and AI-powered optimization." />
   
   <link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/features/" />
   <link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/features/" />
@@ -537,14 +538,14 @@
       <a href="blog">Blog</a>
       <a href="contact">Contact</a>
       <a href="contact.html" class="nav-mobile-cta">Get Started →</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()">
+      <button class="nav-mobile-theme">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         Toggle Dark Mode
       </button>
     </div>
     <div class="nav-right-group">
     <div class="lang-switch">
-      <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="Language">
+      <button class="lang-switch-btn" aria-label="Language">
         🇺🇸
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
       </button>
@@ -553,20 +554,20 @@
           <a href="ja/" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
       </div>
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </button>
     <a href="contact.html" class="nav-cta">Get Started →</a>
     </div>
-    <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu">
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu">
       <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
       <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
   </div>
 </nav>
 <main>
-<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <section class="page-hero">
 <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
@@ -1384,7 +1385,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-copy">© <span id="copyrightYear"></span> Baidu PPC Pro. All rights reserved.</div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>
@@ -1392,7 +1393,7 @@
   </div>
 </footer>
 
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
