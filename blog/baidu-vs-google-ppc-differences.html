@@ -178,7 +178,7 @@
     [data-theme="dark"] .nav-overlay { background: rgba(0,0,0,.7); }
 
     /* Page Hero (博客文章) */
-    .page-hero { padding: 80px 0 40px; background: var(--gradient-hero); }
+    .article-hero { padding: 80px 0 40px; background: var(--gradient-hero); }
     .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
     .breadcrumb a { color: var(--blue); }
     .breadcrumb span { margin: 0 8px; }
@@ -297,12 +297,7 @@
     }
     .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
     .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
-    /* Mobile Nav */
+    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle/* Mobile Nav */
     .nav-links.open { display: flex !important; }
     .nav-mobile-theme { display: none; }
     @media (max-width: 900px) {
@@ -458,7 +453,7 @@
   </nav>
   <div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
 
-  <section class="page-hero">
+  <section class="article-hero">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog">Blog</a><span>›</span><span>Platform Comparison</span></div>
       <span class="article-tag">Platform Comparison</span>

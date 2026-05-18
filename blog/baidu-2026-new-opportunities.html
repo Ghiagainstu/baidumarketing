@@ -38,7 +38,7 @@
     .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
     .nav-links a:hover { color: var(--blue); }
     .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-weight: 600; }
-    .page-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
+    .article-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
     .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
     .breadcrumb a { color: var(--blue); }
     .breadcrumb span { margin: 0 8px; }
@@ -112,6 +112,16 @@
     .footer-social a svg { width: 18px; height: 18px; }
     [data-theme="dark"] footer { background: #070B14 !important; }
     @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  
+    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
+    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
   </style>
   <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -123,6 +133,8 @@
   "datePublished":"2026-05-10","dateModified":"2026-05-10",
   "publisher":{"@type":"Organization","name":"Baidu PPC Pro","url":"https://baidumarketing.com","logo":{"@type":"ImageObject","url":"https://baidumarketing.com/assets/og-brand-default.png","width":1200,"height":630}},
   "mainEntityOfPage":{"@type":"WebPage","@id":"https://baidumarketing.com/blog/baidu-2026-new-opportunities"}}
+  
+(function(){const t=document.getElementById('backToTop');if(t)window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)})})();
   </script>
 </head>
 <body>
@@ -135,7 +147,7 @@
     <a href="/contact" class="nav-cta">Get Started &rarr;</a>
   </div>
 </nav>
-<section class="page-hero">
+<section class="article-hero">
   <div class="container">
     <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog">Blog</a><span>›</span><span>Platform</span></div>
     <span class="article-tag">Platform</span>
@@ -290,5 +302,10 @@
 document.querySelectorAll('.obf-email-link').forEach(function(e){var a=e.dataset.u+'@'+e.dataset.d;e.href='mailto:'+a;if(!e.textContent.trim())e.textContent=a});
 document.querySelectorAll('.obf-email-icon').forEach(function(e){e.href='mailto:'+e.dataset.u+'@'+e.dataset.d});
 </script>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 </body>
 </html>

@@ -57,19 +57,20 @@
     .theme-toggle { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; border:1px solid var(--gray-200); background:transparent; cursor:pointer; color:var(--gray-600); }
     .theme-toggle:hover { border-color:var(--blue); color:var(--blue); transform:rotate(15deg); }
     .theme-toggle svg { width:18px; height:18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display:block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display:none; }
-    .theme-toggle .icon-sun { display:none; }
-    .theme-toggle .icon-moon { display:block; }
-      
-    @media (max-width:900px) {
+    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle@media (max-width:900px) {
       .nav-links { display:none; position:fixed; top:0; right:0; width:280px; height:100vh; background:#fff; flex-direction:column; padding:80px 24px 24px; box-shadow:-4px 0 24px rgba(0,0,0,.1); gap:16px; z-index:101; overflow-y:auto; }
       .nav-links.open { display:flex !important; }
       .mobile-nav-toggle { display:flex; align-items:center; justify-content:center; width:40px; height:40px; border:none; background:transparent; cursor:pointer; }
       .nav-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:99; }
       .nav-overlay.active { display:block; }
     }
-      </style>
+      
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
+  </style>
 
   <meta property="og:title" content="Baidu Moves Brand Info to Account Level: Why It Matters for Ad Relevance and CTR — Baidu PPC Pro">
   <meta property="og:description" content="--- status: published title: " baidu="" moves="" brand="" info="" to="" account="" level:="" why="" it="" matters="" for="" ad="" relevance="" and="" ctr"="" created:="" 2026-05-17="" source_url:="" "local"="" cat"="">
@@ -80,7 +81,40 @@
   <meta name="twitter:title" content="Baidu Moves Brand Info to Account Level: Why It Matters for Ad Relevance and CTR — Baidu PPC Pro">
   <meta name="twitter:description" content="--- status: published title: " baidu="" moves="" brand="" info="" to="" account="" level:="" why="" it="" matters="" for="" ad="" relevance="" and="" ctr"="" created:="" 2026-05-17="" source_url:="" "local"="" cat"="">
   <meta name="twitter:image" content="https://www.baidumarketing.com/assets/og-brand-default.png">
-      </head>
+      
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Baidu Moves Brand Info to Account Level: Why It Matters for Ad Relevance and CTR — Baidu PPC Pro",
+    "description": "--- status: published title: &quot;Baidu Moves Brand Info to Account Level: Why It Matters for Ad Relevance and CTR&quot;",
+    "url": "",
+    "image": "https://baidumarketing.com/assets/og-brand-default.png",
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro",
+      "url": "https://baidumarketing.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://baidumarketing.com/assets/og-brand-default.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": ""
+    }
+  }
+  </script>
+
+</head>
 <body>
     <nav>
     <div class="nav-inner">
@@ -182,7 +216,9 @@
       <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy">Privacy Policy</a></li><li><a href="terms">Terms of Service</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())
+(function(){const t=document.getElementById('backToTop');if(t)window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)})})();
+  </script> Baidu PPC Pro. All rights reserved.</div>
     </div>
   </footer>
   <script>
@@ -198,5 +234,10 @@
     document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
   
   </script>
+
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
 
 </body></html>

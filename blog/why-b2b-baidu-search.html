@@ -18,6 +18,8 @@
   <meta name="twitter:image" content="https://baidumarketing.com/assets/og-brand-default.png">
   <script type="application/ld+json">
   { "@context":"https://schema.org","@type":"BlogPosting","headline":"Why Baidu Search Is the Most Underrated B2B Channel for International Brands","description":"","datePublished":"2026-05-10","author":{"@type":"Organization","name":"Baidu PPC Pro Team"},"publisher":{"@type":"Organization","name":"Baidu PPC Pro"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://baidumarketing.com/blog/why-b2b-baidu-search"} }
+  
+(function(){const t=document.getElementById('backToTop');if(t)window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)})})();
   </script>
   <meta name="theme-color" content="#1a56db">
   <meta name="color-scheme" content="light dark">
@@ -109,6 +111,12 @@
     body.dark footer { background:#111827; }
     body.dark .footer-top { border-bottom-color:var(--gray-700); }
     @media(max-width:768px) { .footer-top { grid-template-columns:1fr; gap:24px; } }
+  
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
   </style>
 </head>
 <body>
@@ -292,5 +300,10 @@
     function toggleNav() { document.getElementById('mobilePanel').classList.toggle('open'); document.getElementById('navOverlay').classList.toggle('open'); }
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
   </script>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 </body>
 </html>

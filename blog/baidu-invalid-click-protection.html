@@ -207,12 +207,7 @@
     .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
     .theme-toggle svg { width: 18px; height: 18px; }
     .nav-mobile-cta,.nav-mobile-theme{display:none}
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
-    @media (max-width: 900px) {
+    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle@media (max-width: 900px) {
       .nav-links { display: none; flex-direction: column; position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: #fff; padding: 80px 32px 32px; box-shadow: -4px 0 24px rgba(0,0,0,.15); z-index: 100; gap: 8px; }
       .nav-links.open { display: flex; }
       .nav-mobile-toggle { display: block; }

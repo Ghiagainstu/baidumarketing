@@ -37,7 +37,7 @@
     .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
     .nav-links a:hover { color: var(--blue); }
     .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-weight: 600; }
-    .page-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
+    .article-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
     .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
     .breadcrumb a { color: var(--blue); }
     .breadcrumb span { margin: 0 8px; }
@@ -69,9 +69,7 @@
     /* ── Nav extras ── */
     .theme-toggle { background: none; border: 1.5px solid var(--gray-200); border-radius: 8px; width: 38px; height: 38px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--gray-600); margin-left: 8px; flex-shrink: 0; }
     .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .icon-sun, .icon-moon { display: block; }
-    [data-theme="dark"] .icon-moon, .icon-sun { display: none; }
-    .nav-mobile-toggle { display: none; background: none; border: 1.5px solid var(--gray-200); border-radius: 8px; width: 38px; height: 38px; cursor: pointer; align-items: center; justify-content: center; margin-left: 8px; }
+    [data-theme="dark"] .icon-sun,[data-theme="dark"] .icon-moon,.nav-mobile-toggle { display: none; background: none; border: 1.5px solid var(--gray-200); border-radius: 8px; width: 38px; height: 38px; cursor: pointer; align-items: center; justify-content: center; margin-left: 8px; }
     .nav-mobile-cta, .nav-mobile-theme { display: none; }
     .nav-mobile-cta,.nav-mobile-theme { display: none; }
     .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 99; }
@@ -106,6 +104,12 @@
       .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
       .footer-brand { grid-column: 1 / -1; }
     }
+  
+    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
+    .back-to-top:active { transform: scale(.92); }
+    .back-to-top svg { width: 20px; height: 20px; }
   </style>
 
   <script type="application/ld+json">
@@ -134,6 +138,8 @@
     "@id": "https://baidumarketing.com/blog/feed-landing-page-optimization"
   }
 }
+  
+(function(){const t=document.getElementById('backToTop');if(t)window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)})})();
   </script>
 </head>
 <body>
@@ -175,7 +181,7 @@
 </nav>
 <div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
 
-  <section class="page-hero">
+  <section class="article-hero">
     <div class="container">
       <div class="breadcrumb"><a href="https://baidumarketing.com/.html">Home</a><span>›</span><a href="https://baidumarketing.com/blog.html">Blog</a><span>›</span><span>Landing Page</span></div>
       <span class="article-tag">Landing Page</span>
@@ -188,7 +194,7 @@
   <section class="article-section">
     <div class="container">
       <article class="article-content">
-        <img src="https://baidumarketing.com/assets/blog-feed-landing-optimization.jpg" alt="Feed ad landing page optimization" style="border-radius: 16px; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(0,0,0,.1);" />
+        
 
         <p>A landing page bridges the gap between ad creative and your product or service. For Baidu feed campaigns, small tweaks regularly lift conversion rates by 15-30%.</p>
 
@@ -314,5 +320,10 @@
   // Mobile nav
   function toggleMobileNav(){var l=document.getElementById('navLinks');var o=document.getElementById('navOverlay');var t=document.getElementById('navToggle');var open=l.classList.toggle('open');o.classList.toggle('open',open);t.querySelector('.hamburger-icon').style.display=open?'none':'block';t.querySelector('.close-icon').style.display=open?'block':'none';document.body.style.overflow=open?'hidden':'';}
 </script>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 </body>
 </html>

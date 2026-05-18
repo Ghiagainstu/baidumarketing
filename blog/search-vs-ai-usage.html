@@ -64,7 +64,7 @@
     .nav-links a:hover { color: var(--blue); }
     .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); }
     .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
-    .page-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
+    .article-hero { padding: 60px 0 40px; background: var(--gradient-hero); }
     .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
     .breadcrumb a { color: var(--blue); }
     .breadcrumb span { color: var(--gray-400); margin: 0 8px; }
@@ -123,11 +123,7 @@
         .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; color: var(--gray-600); }
     .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
     .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-        footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
+    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-togglefooter { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); max-width: 1140px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
     .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
     .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
@@ -250,7 +246,7 @@
 </nav>
 <div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
 
-  <section class="page-hero">
+  <section class="article-hero">
     <div class="container">
       <div class="breadcrumb">
         <a href="/">Home</a><span>›</span><a href="/blog">Blog</a><span>›</span><span>Market Insights</span>
@@ -268,7 +264,7 @@
   <section class="article-section">
     <div class="container">
       <article class="article-content">
-        <img src="https://baidumarketing.com/assets/blog-search-vs-ai-chart.jpg" alt="Search usage declining while AI adoption grows" style="border-radius: 16px; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(0,0,0,.1);" />
+        
 
         <p>Here's a headline that got a lot of clicks recently: "Search engine usage in China dropped from 79.2% to 69.5%." The implication was clear — search is dying, AI is taking over, and anyone still investing in search advertising is living in the past.</p>
 
