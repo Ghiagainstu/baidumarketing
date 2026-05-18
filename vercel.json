@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "buildCommand": null,
+  "installCommand": null,
   "headers": [
     {
       "source": "/(.*)",
