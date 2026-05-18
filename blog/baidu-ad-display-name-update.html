@@ -236,6 +236,11 @@
     .back-to-top.visible { opacity: 1; pointer-events: auto; }
     .back-to-top svg { width: 20px; height: 20px; }
 
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
     @media (max-width: 900px) {
       .nav-links { display: none; flex-direction: column; position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: #fff; padding: 80px 32px 32px; box-shadow: -4px 0 24px rgba(0,0,0,.15); z-index: 100; gap: 8px; }
       .nav-links.open { display: flex; }

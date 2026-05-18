@@ -89,6 +89,11 @@
     
     
     
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
     @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .related-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
   
         .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; color: var(--gray-600); }
@@ -144,6 +149,11 @@
     .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
     .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
     /* Phase 2 - Responsive */
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
     @media (max-width: 768px) {
       .callout { flex-direction: column; gap: 8px; }
       .callout-icon { font-size: 1.1rem; }

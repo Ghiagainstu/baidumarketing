@@ -1402,14 +1402,14 @@
       <a href="/blog">Blog</a>
       <a href="/contact">Contact</a>
       <a href="/contact" class="nav-mobile-cta">Get Started →</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()">
+      <button class="nav-mobile-theme" id="mobileThemeBtn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         Toggle Dark Mode
       </button>
     </div>
     <div class="nav-right-group">
     <div class="lang-switch">
-      <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="Language">
+      <button class="lang-switch-btn" id="langSwitchBtn" aria-label="Language">
         🇺🇸
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
       </button>
@@ -1821,7 +1821,7 @@
     <!-- Top 5 Questions -->
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question">
           Can I open a Baidu account without a Chinese domestic company?
           <span class="faq-icon">+</span>
         </button>
@@ -1830,7 +1830,7 @@
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question">
           How much does it cost to open a Baidu account?
           <span class="faq-icon">+</span>
         </button>
@@ -1842,7 +1842,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question">
           How does Baidu advertising charge?
           <span class="faq-icon">+</span>
         </button>
@@ -1853,7 +1853,7 @@
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question">
           What are the common reasons for ad rejection?
           <span class="faq-icon">+</span>
         </button>
@@ -1867,7 +1867,7 @@
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question">
           Do healthcare/finance industries have special requirements?
           <span class="faq-icon">+</span>
         </button>
@@ -1930,7 +1930,7 @@
       </div>
 
       <div class="contact-form">
-        <form id="contactForm" onsubmit="handleSubmit(event)">
+        <form id="contactForm">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name *</label>
@@ -2032,7 +2032,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-copy">© <span id="copyrightYear"></span> Baidu PPC Pro. All rights reserved.</div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>
@@ -2044,280 +2044,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script>
-  // ===== PAGE FADE-IN =====
-  document.body.style.opacity = '0';
-  document.body.style.transition = 'opacity 0.5s ease';
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      document.body.style.opacity = '1';
-    });
-  });
-
-  // Theme toggle
-  function toggleTheme() {
-    const html = document.documentElement;
-    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#0B0F1A' : '#FFFFFF';
-  }
-  (function() {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      document.querySelector('meta[name="theme-color"]').content = '#0B0F1A';
-    }
-  })();
-
-  // Mobile nav toggle
-  let mobileNavOpen = false;
-  function toggleMobileNav() {
-    const links = document.getElementById('navLinks');
-    const hamburger = document.querySelector('.hamburger-icon');
-    const closeX = document.querySelector('.close-icon');
-    const overlay = document.getElementById('navOverlay');
-    mobileNavOpen = !mobileNavOpen;
-    if (mobileNavOpen) {
-      links.classList.add('open');
-      hamburger.style.display = 'none';
-      closeX.style.display = 'block';
-      overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    } else {
-      links.classList.remove('open');
-      hamburger.style.display = 'block';
-      closeX.style.display = 'none';
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (mobileNavOpen) toggleMobileNav();
-    });
-  });
-
-  // Language switcher
-  function toggleLangMenu() {
-    const menu = document.getElementById('langSwitchMenu');
-    if (menu) menu.classList.toggle('open');
-  }
-  document.addEventListener('click', function(e) {
-    const sw = document.querySelector('.lang-switch');
-    if (sw && !sw.contains(e.target)) {
-      const menu = document.getElementById('langSwitchMenu');
-      if (menu) menu.classList.remove('open');
-    }
-  });
-
-  // FAQ accordion
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
-
-  // Form submit mock
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (document.getElementById('website').value) return;
-    const email = document.getElementById('email').value;
-    document.getElementById('successEmail').textContent = email;
-    document.getElementById('contactForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-    const formData = new FormData(e.target);
-    const subject = encodeURIComponent('New Baidu PPC Inquiry from ' + formData.get('company'));
-    const body = encodeURIComponent(
-      'Name: ' + formData.get('fname') + ' ' + formData.get('lname') + '\n' +
-      'Email: ' + formData.get('email') + '\n' +
-      'Company: ' + formData.get('company') + '\n' +
-      'Service: ' + formData.get('service') + '\n' +
-      'Budget: ' + formData.get('budget') + '\n' +
-      'Message: ' + formData.get('message')
-    );
-    const emailAddr = document.querySelector('.obf-email').dataset.u + '@' + document.querySelector('.obf-email').dataset.d;
-    window.location.href = 'mailto:' + emailAddr + '?subject=' + subject + '&body=' + body;
-  }
-
-  // ===== COUNTER ANIMATION =====
-  function animateCounter(el) {
-    const target = parseFloat(el.dataset.target);
-    const prefix = el.dataset.prefix || '';
-    const suffix = el.dataset.suffix || '';
-    const decimals = parseInt(el.dataset.decimals) || 0;
-    const duration = 1500;
-    const start = performance.now();
-
-    function easeOutExpo(t) {
-      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-    }
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = easeOutExpo(progress);
-      const current = target * eased;
-
-      if (decimals > 0) {
-        el.textContent = prefix + current.toFixed(decimals) + suffix;
-      } else {
-        el.textContent = prefix + Math.round(current) + suffix;
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-    requestAnimationFrame(update);
-  }
-
-  // ===== DASHBOARD KPI ANIMATION =====
-  function animateKPIs() {
-    const kpis = {
-      spend:       { target: 48650,  format: v => '¥' + v.toLocaleString() },
-      conversions: { target: 1283,   format: v => v.toLocaleString() },
-      cpc:         { target: 0.45,   format: v => '¥' + v.toFixed(2), decimals: 2 },
-      ctr:         { target: 4.8,    format: v => v.toFixed(1) + '%', decimals: 1 },
-    };
-    const duration = 1800;
-    const startTime = performance.now();
-
-    function easeOutExpo(t) {
-      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-    }
-
-    function update() {
-      const elapsed = performance.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = easeOutExpo(progress);
-
-      for (const [key, config] of Object.entries(kpis)) {
-        const el = document.querySelector(`[data-kpi="${key}"]`);
-        if (el) {
-          const current = config.target * eased;
-          const decimals = config.decimals || 0;
-          const value = decimals > 0 ? parseFloat(current.toFixed(decimals)) : Math.round(current);
-          el.textContent = config.format(value);
-        }
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-    requestAnimationFrame(update);
-  }
-
-  // ===== DASHBOARD CHART LINE ANIMATION =====
-  function animateChartLine() {
-    const line = document.querySelector('.chart-line');
-    const area = document.querySelector('.chart-area');
-    if (!line || !area) return;
-
-    const lineLength = line.getTotalLength();
-    line.style.strokeDasharray = lineLength;
-    line.style.strokeDashoffset = lineLength;
-    line.style.transition = 'stroke-dashoffset 2s cubic-bezier(.16,1,.3,1)';
-
-    area.style.opacity = '0';
-    area.style.transition = 'opacity 1s ease .8s';
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        line.style.strokeDashoffset = '0';
-        area.style.opacity = '1';
-      });
-    });
-  }
-
-  // ===== STAGGER SCROLL ANIMATIONS =====
-  const staggerObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const items = entry.target.querySelectorAll('[data-stagger]');
-        items.forEach((item, i) => {
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-          }, i * 80);
-        });
-        staggerObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.features-grid, .whyus-grid, .testimonials-grid, .pricing-grid, .team-grid').forEach(grid => {
-    const children = grid.children;
-    Array.from(children).forEach((child, i) => {
-      child.style.opacity = '0';
-      child.style.transform = 'translateY(24px)';
-      child.style.transition = 'opacity .5s cubic-bezier(.16,1,.3,1), transform .5s cubic-bezier(.16,1,.3,1)';
-      child.dataset.stagger = i;
-    });
-    staggerObserver.observe(grid);
-  });
-
-  // ===== SECTION FADE-IN =====
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        sectionObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.05 });
-
-  document.querySelectorAll('.section-header, .contact-wrapper, .faq-list, #trusted').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1)';
-    sectionObserver.observe(el);
-  });
-
-  // ===== COUNTER TRIGGER =====
-  let counterTriggered = false;
-  const heroStatsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !counterTriggered) {
-        counterTriggered = true;
-        document.querySelectorAll('.stat-num[data-target]').forEach((el, i) => {
-          setTimeout(() => animateCounter(el), i * 200);
-        });
-        heroStatsObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  const heroStats = document.querySelector('.hero-stats');
-  if (heroStats) heroStatsObserver.observe(heroStats);
-
-  // Trigger Dashboard animations on page load
-  setTimeout(() => {
-    animateKPIs();
-    animateChartLine();
-  }, 600);
-
-  // Back to top visibility
-  window.addEventListener('scroll', () => {
-    document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600);
-  });
-
-  // Obfuscated email rendering
-  document.querySelectorAll('.obf-email').forEach(function(el){
-    el.textContent = el.dataset.u + '@' + el.dataset.d;
-  });
-  document.querySelectorAll('.obf-email-link').forEach(function(el){
-    var addr = el.dataset.u + '@' + el.dataset.d;
-    el.href = 'mailto:' + addr;
-    if(!el.textContent) el.textContent = addr;
-  });
-  document.querySelectorAll('.obf-email-icon').forEach(function(el){
-    el.href = 'mailto:' + el.dataset.u + '@' + el.dataset.d;
-  });
-</script>
+<script src="/assets/js/main.js" defer></script>
 
 </body>
 </html>

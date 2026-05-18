@@ -375,6 +375,11 @@
     .back-to-top svg { width: 20px; height: 20px; }
 
     /* Responsive */
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
     @media (max-width: 768px) {
       section { padding: 64px 0; }
       .footer-top { grid-template-columns: 1fr; gap: 30px; }

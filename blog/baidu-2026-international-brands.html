@@ -54,6 +54,11 @@
     @media(max-width:900px) { .nav-links,.nav-right-group .nav-cta,.lang-switch { display:none; } .nav-toggle { display:block; } }
     .theme-toggle { background:none; border:1px solid var(--gray-200); border-radius:var(--radius); padding:6px 8px; cursor:pointer; display:flex; align-items:center; }
     .theme-toggle svg { width:18px; height:18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+
     body.dark { background:var(--gray-800); color:var(--gray-300); }
     body.dark nav { background:var(--gray-800); }
     body.dark .nav-links a { color:var(--gray-300); }

@@ -79,6 +79,11 @@
     .footer-brand { font-weight: 700; }
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { color: var(--gray-600); font-size: .9rem; }
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
     @media (max-width: 768px) { .platforms-grid { grid-template-columns: 1fr; } .related-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
   
     .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
@@ -149,7 +154,7 @@
 
   <section class="article-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="https://baidumarketing.com/.html">Home</a><span>›</span><a href="https://baidumarketing.com/blog.html">Blog</a><span>›</span><span>Platform</span></div>
+      <div class="breadcrumb"><a href="../index">Home</a><span>›</span><a href="../blog">Blog</a><span>›</span><span>Platform</span></div>
       <span class="article-tag">Platform</span>
       <h1 class="article-title">Why Baidu? The Numbers Behind China's Largest Search Ecosystem</h1>
       <div class="article-meta">
@@ -239,7 +244,7 @@
         <div class="cta-section">
           <h3>Ready to Reach 708 Million Users?</h3>
           <p>We help international brands set up and optimize Baidu campaigns.</p>
-          <a href="https://baidumarketing.com/contact.html" class="cta-btn">Get Started</a>
+          <a href="../contact" class="cta-btn">Get Started</a>
         </div>
       </article>
     </div>
@@ -249,15 +254,15 @@
   <section class="related-section">
     <div class="container">
       <div class="related-grid">
-        <a href="https://baidumarketing.com/blog/baidu-app-ecosystem.html" class="related-card">
+        <a href="../baidu-app-ecosystem" class="related-card">
           <h4>Baidu's App Ecosystem</h4>
           <p>Where your ads actually show up across the Baidu platform stack.</p>
         </a>
-        <a href="https://baidumarketing.com/blog/baidu-feed-ads-explained.html" class="related-card">
+        <a href="../baidu-feed-ads-explained" class="related-card">
           <h4>How Baidu Feed Ads Work</h4>
           <p>The discovery complement to search advertising.</p>
         </a>
-        <a href="https://baidumarketing.com/blog/baidu-ads-foreign-business.html" class="related-card">
+        <a href="../baidu-ads-foreign-business" class="related-card">
           <h4>Why Baidu Ads for Foreign Businesses</h4>
           <p>The case for Baidu advertising for international brands.</p>
         </a>

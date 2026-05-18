@@ -57,6 +57,11 @@
     .theme-toggle { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; border:1px solid var(--gray-200); background:transparent; cursor:pointer; color:var(--gray-600); }
     .theme-toggle:hover { border-color:var(--blue); color:var(--blue); transform:rotate(15deg); }
     .theme-toggle svg { width:18px; height:18px; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+
     [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle@media (max-width:900px) {
       .nav-links { display:none; position:fixed; top:0; right:0; width:280px; height:100vh; background:#fff; flex-direction:column; padding:80px 24px 24px; box-shadow:-4px 0 24px rgba(0,0,0,.1); gap:16px; z-index:101; overflow-y:auto; }
       .nav-links.open { display:flex !important; }

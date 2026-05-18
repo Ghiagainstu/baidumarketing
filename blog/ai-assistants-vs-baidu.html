@@ -143,6 +143,11 @@
       .platform-pills { flex-direction: column; }
     }
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } .timeline { flex-direction: column; gap: 24px; } .timeline::before { display: none; } .timeline-item { flex-direction: row; padding-top: 0; padding-left: 64px; } .timeline-dot { position: absolute; left: 0; top: 50%; transform: translateY(-50%); } .timeline-desc { text-align: left; max-width: none; } .feature-grid { grid-template-columns: 1fr; } }
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
     @media (max-width: 768px) {
       .nav-links, .nav-cta, .theme-toggle { display: none; }
       .nav-mobile-toggle { display: block; background: none; border: none; cursor: pointer; }

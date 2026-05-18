@@ -203,6 +203,11 @@
 
     .nav-mobile-cta,.nav-mobile-theme{display:none}
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
     @media (max-width: 768px) {
       .article-hero { padding: 56px 0 32px; }
       .article-section { padding: 32px 0 56px; }
