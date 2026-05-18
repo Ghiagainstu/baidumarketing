@@ -677,29 +677,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <script>
-    function toggleTheme() {
-      const d = document.documentElement;
-      const t = d.getAttribute('data-theme');
-      const next = t === 'dark' ? 'light' : 'dark';
-      d.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    }
-    (function() { const t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
-
-    let mobileNavOpen = false;
-    function toggleMobileNav() {
-      const links = document.getElementById('navLinks'), h = document.querySelector('.hamburger-icon'), c = document.querySelector('.close-icon'), o = document.getElementById('navOverlay');
-      mobileNavOpen = !mobileNavOpen;
-      if (mobileNavOpen) { links.classList.add('open'); h.style.display = 'none'; c.style.display = 'block'; o.classList.add('active'); document.body.style.overflow = 'hidden'; }
-      else { links.classList.remove('open'); h.style.display = 'block'; c.style.display = 'none'; o.classList.remove('active'); document.body.style.overflow = ''; }
-    }
-    document.querySelectorAll('.nav-links a').forEach(a => { a.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); }); });
-
-    document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
-
-    window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400); });
-  </script>
+  
 
   <script type="application/ld+json">
   {
@@ -714,5 +692,6 @@
     }
   }
   </script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

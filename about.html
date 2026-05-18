@@ -627,34 +627,8 @@
 <!-- BACK TO TOP -->
 <button class="back-to-top" id="backToTop">↑</button>
 
-<script>
-  // Dark mode
-  function toggleTheme(){const t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t)}
-  if(localStorage.getItem('theme')==='dark'||(!localStorage.getItem('theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}
-  if(document.documentElement.getAttribute('data-theme')==='dark'){document.querySelector('meta[name="theme-color"]').content='#0B0F1A'}
-  // Mobile nav
-  let mobileNavOpen=false;function toggleMobileNav(){const links=document.getElementById('navLinks'),hamburger=document.querySelector('.hamburger-icon'),closeX=document.querySelector('.close-icon'),overlay=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');hamburger.style.display='none';closeX.style.display='block';overlay.classList.add('active');document.body.style.overflow='hidden'}else{links.classList.remove('open');hamburger.style.display='block';closeX.style.display='none';overlay.classList.remove('active');document.body.style.overflow=''}}
-  document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{if(mobileNavOpen)toggleMobileNav()})});
-  // Back to top
-  window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
-  // Obfuscated email
-  document.querySelectorAll('.obf-email').forEach(function(el){el.textContent=el.dataset.u+'@'+el.dataset.d});
-  document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
-  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
-  // Language switcher
-  function toggleLangMenu() {
-    const menu = document.getElementById('langSwitchMenu');
-    if (menu) menu.classList.toggle('open');
-  }
-  document.addEventListener('click', function(e) {
-    const sw = document.querySelector('.lang-switch');
-    if (sw && !sw.contains(e.target)) {
-      const menu = document.getElementById('langSwitchMenu');
-      if (menu) menu.classList.remove('open');
-    }
-  });
 
-</script>
 
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

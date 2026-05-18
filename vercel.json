@@ -14,7 +14,7 @@
         { "key": "X-XSS-Protection", "value": "1; mode=block" },
         {
           "key": "Content-Security-Policy-Report-Only",
-          "value": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+          "value": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://gs.statcounter.com; script-src 'self' 'unsafe-inline' https://www.statcounter.com https://gs.statcounter.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
         },
         { "key": "Access-Control-Allow-Origin", "value": "https://www.baidumarketing.com" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
