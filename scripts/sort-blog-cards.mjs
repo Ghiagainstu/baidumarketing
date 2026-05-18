@@ -12,6 +12,7 @@ const ROOT = 'C:\\Users\\HYE\\WorkBuddy\\20260411211839';
 const files = [
   `${ROOT}\\blog.html`,
   `${ROOT}\\ja\\blog.html`,
+  `${ROOT}\\ko\\blog.html`,
 ];
 
 // 解析各种日期格式，返回 Date 对象（无法解析返回 null）
