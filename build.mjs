@@ -62,35 +62,32 @@ function generateNavHTML(langCode) {
   const nav = readJSON(`nav-${langCode}.json`);
   const langDir = getLangDir(langCode);
   const isDefault = langDir === '';
-  // Nav/footer links: always use same-directory prefix + .html suffix
-  // (All language pages live in the same directory, no cross-directory linking needed)
-  const prefix = '';
-  // Language switcher links: need ../ for non-default languages (cross-directory: from /ja/ to /)
-  const langPrefix = isDefault ? '' : '../';
+  // Nav/footer links: absolute path + .html suffix (required for subdirectory pages like ja/blog/)
+  const absPrefix = langCode === 'en' ? '/' : `/${langDir}/`;
+  // Language switcher links: absolute paths
+  const langPrefix = ''; // not used — lang switcher uses absolute paths directly
 
   const links = [
-    { href: `${prefix}why-baidu-ppc-pro`, label: nav.links.why },
-    { href: `${prefix}features`, label: nav.links.services },
-    { href: `${prefix}pricing`, label: nav.links.pricing },
-    { href: `${prefix}clients`, label: nav.links.clients },
-    { href: `${prefix}faq`, label: nav.links.faq },
-    { href: `${prefix}about`, label: nav.links.about },
-    { href: `${prefix}blog`, label: nav.links.blog },
-    { href: `${prefix}contact`, label: nav.links.contact },
+    { href: `${absPrefix}why-baidu-ppc-pro.html`, label: nav.links.why },
+    { href: `${absPrefix}features.html`, label: nav.links.services },
+    { href: `${absPrefix}pricing.html`, label: nav.links.pricing },
+    { href: `${absPrefix}clients.html`, label: nav.links.clients },
+    { href: `${absPrefix}faq.html`, label: nav.links.faq },
+    { href: `${absPrefix}about.html`, label: nav.links.about },
+    { href: `${absPrefix}blog.html`, label: nav.links.blog },
+    { href: `${absPrefix}contact.html`, label: nav.links.contact },
   ];
 
-  // Build language switcher dropdown items
+  // Build language switcher dropdown items (absolute paths)
   const langItems = LANG_CFG.languages
     .filter(l => l.active)
     .map(l => {
-      const link = l.dir 
-        ? `${isDefault ? '' : '../'}${l.dir}/`
-        : (isDefault ? '/' : '../');
+      const link = l.code === 'en' ? '/' : `/${l.dir}/`;
       return `          <a href="${link}" lang="${l.code}" class="lang-switch-item">${l.flag} ${l.nativeLabel}</a>`;
     })
     .join('\n');
 
-  return `    <a href="${prefix}index.html" class="nav-logo">
+  return `    <a href="${absPrefix}index.html" class="nav-logo">
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs>
         <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
@@ -101,7 +98,7 @@ function generateNavHTML(langCode) {
     </a>
     <div class="nav-links" id="navLinks">
 ${links.map(l => `      <a href="${l.href}">${l.label}</a>`).join('\n')}
-      <a href="${prefix}contact.html" class="nav-mobile-cta">${nav.cta}</a>
+      <a href="${absPrefix}contact.html" class="nav-mobile-cta">${nav.cta}</a>
       <button class="nav-mobile-theme" onclick="toggleTheme()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         ${nav.themeToggle}
@@ -121,7 +118,7 @@ ${langItems}
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </button>
-    <a href="${prefix}contact.html" class="nav-cta">${nav.cta}</a>
+    <a href="${absPrefix}contact.html" class="nav-cta">${nav.cta}</a>
     </div>
     <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu">
       <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
@@ -134,9 +131,8 @@ ${langItems}
 function generateFooterHTML(langCode) {
   const ftr = readJSON(`footer-${langCode}.json`);
   const langDir = getLangDir(langCode);
-  const isDefault = langDir === '';
-  const prefix = '';
-  const aboutLink = `${prefix}about`;
+  const absPrefix = langCode === 'en' ? '/' : `/${langDir}/`;
+  const aboutLink = `${absPrefix}about.html`;
 
   return `  <div class="container">
     <div class="footer-top">
@@ -150,25 +146,25 @@ function generateFooterHTML(langCode) {
       <div class="footer-col">
         <h4>${ftr.quickLinks}</h4>
         <ul>
-          <li><a href="${prefix}features.html">${ftr.links.services}</a></li>
-          <li><a href="${prefix}pricing.html">${ftr.links.pricing}</a></li>
+          <li><a href="${absPrefix}features.html">${ftr.links.services}</a></li>
+          <li><a href="${absPrefix}pricing.html">${ftr.links.pricing}</a></li>
           <li><a href="${aboutLink}">${ftr.links.about}</a></li>
-          <li><a href="${prefix}faq.html">${ftr.links.faq}</a></li>
-          <li><a href="${prefix}blog.html">${ftr.links.blog}</a></li>
+          <li><a href="${absPrefix}faq.html">${ftr.links.faq}</a></li>
+          <li><a href="${absPrefix}blog.html">${ftr.links.blog}</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>${ftr.contact}</h4>
         <ul>
           <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
-          <li><a href="${prefix}contact.html">${ftr.links.contact}</a></li>
+          <li><a href="${absPrefix}contact.html">${ftr.links.contact}</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>${ftr.legal}</h4>
         <ul>
-          <li><a href="${prefix}privacy.html">${ftr.links.privacy}</a></li>
-          <li><a href="${prefix}terms.html">${ftr.links.terms}</a></li>
+          <li><a href="${absPrefix}privacy.html">${ftr.links.privacy}</a></li>
+          <li><a href="${absPrefix}terms.html">${ftr.links.terms}</a></li>
         </ul>
       </div>
     </div>
