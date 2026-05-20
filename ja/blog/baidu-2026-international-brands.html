@@ -128,7 +128,47 @@
     body.dark footer { background:#111827; }
     body.dark .footer-top { border-bottom-color:var(--gray-700); }
     @media(max-width:768px) { .footer-top { grid-template-columns:1fr; gap:24px; } }
-  </style>
+  
+    /* 基础深色模式支持 — 确保文字可见 */
+    [data-theme="dark"] body {
+      background-color: #0B0F1A;
+      color: #E5E7EB;
+    }
+    [data-theme="dark"] nav {
+      background: rgba(11,15,26,.92);
+      border-bottom-color: #1F2937;
+    }
+    [data-theme="dark"] .nav-logo {
+      color: #D1D5DB;
+    }
+    [data-theme="dark"] .nav-links {
+      color: #9CA3AF;
+    }
+    [data-theme="dark"] .article-hero {
+      background: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+    }
+    [data-theme="dark"] .article-title {
+      color: #F9FAFB;
+    }
+    [data-theme="dark"] .article-content {
+      color: #D1D5DB;
+    }
+    [data-theme="dark"] footer {
+      background: #070B14;
+    }
+    [data-theme="dark"] .footer-col h4,
+    [data-theme="dark"] .footer-brand h3 {
+      color: #F9FAFB;
+    }
+    [data-theme="dark"] .footer-col ul li a,
+    [data-theme="dark"] .footer-brand p {
+      color: #9CA3AF;
+    }
+    [data-theme="dark"] .footer-col ul li a:hover {
+      color: #fff;
+    }
+    
+</style>
 </head>
 <body>
   <nav>
