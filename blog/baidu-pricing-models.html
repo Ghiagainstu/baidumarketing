@@ -27,7 +27,16 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --blue: #2932E1; --blue-glow: #D4D8FF; --blue-subtle: #F5F6FF; --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB; --gray-400: #9CA3AF; --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --radius: 12px; --gradient-brand: linear-gradient(135deg, #2932E1, #4F46E5); --gradient-hero: linear-gradient(160deg, #fff 30%, #EEF0FF 100%); --font-display: 'Inter', system-ui, sans-serif; }
-    [data-theme="dark"] { --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; background: #0B0F1A; color: #E5E7EB; }
+        [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
     body { font-family: var(--font-display); color: var(--gray-900); background: #fff; line-height: 1.7; }
     a { color: inherit; text-decoration: none; }
     .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
@@ -72,16 +81,6 @@
     @media (max-width: 768px) { .pricing-cards { grid-template-columns: 1fr; } .related-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
   
     /* Theme toggle button */
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; color: var(--gray-600); }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
-    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle[data-theme="dark"][data-theme="dark"]/* Nav mobile */
-    .nav-links.open { display: flex !important; }
     .nav-mobile-toggle { display: none; }
     .nav-mobile-cta, .nav-mobile-theme { display: none; }
     .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 99; }
@@ -133,12 +132,12 @@
     .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
 
     /* Phase 2 - Takeaway Box */
-    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
-    [data-theme="dark"] .takeaway-box { background: linear-gradient(135deg, rgba(41,50,225,.08) 0%, rgba(79,70,229,.08) 100%); border-color: rgba(41,50,225,.25); }
-    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
-    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
-    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    [data-theme="dark"] .takeaway-box-box { background: linear-gradient(135deg, rgba(41,50,225,.08) 0%, rgba(79,70,229,.08) 100%); border-color: rgba(41,50,225,.25); }
+    .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .takeaway-box-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
     /* Phase 2 - Responsive */
     @media (max-width: 768px) {
@@ -146,7 +145,7 @@
       .callout-icon { font-size: 1.1rem; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .stat-value { font-size: 1.5rem; }
-      .takeaway-box { padding: 20px; }
+      .takeaway-box-box { padding: 20px; }
     }
   
     .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
@@ -179,11 +178,11 @@
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
-.takeaway { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-.takeaway strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
-.takeaway p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-.takeaway ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-.takeaway ul li { color: #fff !important; margin-bottom: 6px; }
+.takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
+.takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
+.takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
+.takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
+.takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -222,7 +221,8 @@
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
-  </style>
+      [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
+</style>
 
   <script type="application/ld+json">
   {
@@ -275,15 +275,9 @@
       <a href="/about.html">About</a>
       <a href="/blog.html">Blog</a>
       <a href="/contact.html">Contact</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        Toggle Dark Mode
-      </button>
+      
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    </button>
+    
     <a href="/contact.html" class="nav-cta">Get Started &rarr;</a>
     <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu">
       <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
@@ -374,7 +368,7 @@
             </div>
 
         
-        <div class="takeaway">
+        <div class="takeaway-box">
           <h3>📋 Key Takeaways</h3>
           <ul>
               <li>Start new campaigns with CPC to gather data, then switch to oCPC</li>
@@ -475,29 +469,4 @@
     link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
   });
 
-  // Dark mode
-  function toggleTheme() {
-    var t = document.documentElement;
-    var isDark = t.getAttribute('data-theme') === 'dark';
-    t.setAttribute('data-theme', isDark ? '' : 'dark');
-    try { localStorage.setItem('theme', isDark ? '' : 'dark'); } catch(e) {}
-  }
-  (function() {
-    var saved;
-    try { saved = localStorage.getItem('theme'); } catch(e) {}
-    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  })();
-
-  // Obfuscated email
-  document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
-  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
-</script>
-
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
-
-</body>
-</html>
+  // Dark mode

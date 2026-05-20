@@ -75,14 +75,6 @@
     @media (max-width: 768px) { .platform-cards { grid-template-columns: 1fr; } .related-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
   
     /* Theme toggle button */
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; color: var(--gray-600); }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-    .icon-sun { display: none; }
     [data-theme="dark"] .icon-moon { display: none; }
     [data-theme="dark"] .icon-sun { display: block; }
     /* Nav mobile */
@@ -215,10 +207,7 @@
       <a href="/ja/about.html">会社概要</a>
       <a href="/ja/blog.html">ブログ</a>
       <a href="/ja/contact.html">お問い合わせ</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        Toggle Dark Mode
-      </button>
+      
     </div>
     <div class="nav-right-group">
       <div class="lang-switch">
@@ -228,10 +217,7 @@
           <a href="/ja/" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
         </div>
       </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
+      
       <a href="/ja/contact.html" class="nav-cta">今すぐ始める →</a>
     </div>
     <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu">
@@ -419,30 +405,4 @@
     link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
   });
 
-  // Dark mode
-  function toggleTheme() {
-    var t = document.documentElement;
-    var isDark = t.getAttribute('data-theme') === 'dark';
-    t.setAttribute('data-theme', isDark ? '' : 'dark');
-    try { localStorage.setItem('theme', isDark ? '' : 'dark'); } catch(e) {}
-  }
-  (function() {
-    var saved;
-    try { saved = localStorage.getItem('theme'); } catch(e) {}
-    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  })();
-
-  // Language switch
-  function toggleLangMenu() {
-    const menu = document.querySelector('.lang-switch-menu');
-    menu.classList.toggle('open');
-  }
-
-  // Obfuscated email
-  document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
-  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
-</script>
-</body>
-</html>
+  // Dark mode

@@ -55,30 +55,15 @@
       --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    [data-theme="dark"] {
-      --blue: #6366F1;
-      --blue-dark: #818CF8;
-      --blue-deep: #4F46E5;
-      --blue-light: rgba(99,102,241,.12);
-      --blue-glow: rgba(99,102,241,.15);
-      --blue-subtle: rgba(99,102,241,.06);
-      --gray-50: #0B0F1A;
-      --gray-100: #111827;
-      --gray-200: #1F2937;
-      --gray-300: #374151;
-      --gray-400: #6B7280;
-      --gray-600: #9CA3AF;
-      --gray-700: #D1D5DB;
-      --gray-800: #E5E7EB;
-      --gray-900: #F9FAFB;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,.3);
-      --shadow-md: 0 4px 16px rgba(0,0,0,.4);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+        [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
       --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
       --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
-      --gradient-surface: linear-gradient(135deg, #111827 0%, #1E1B4B 100%);
-      background-color: #0B0F1A;
-      color: #E5E7EB;
+      background-color: #0B0F1A; color: #E5E7EB;
     }
     [data-theme="dark"] nav { background: rgba(11,15,26,.85); backdrop-filter: blur(12px); border-bottom-color: var(--gray-200); }
     .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
@@ -125,10 +110,6 @@
     .back-to-top { position: fixed; bottom: 32px; right: 32px; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .3s; }
     .back-to-top { position: fixed; bottom: 32px; right: 32px; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .3s; }
     .back-to-top.visible { opacity: 1; pointer-events: auto; }
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; color: var(--gray-600); }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-togglefooter { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); max-width: 1140px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
     .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
     .footer-brand p { font-size: .85rem; line-height: 1.7; color: #9CA3AF; max-width: 280px; }
@@ -152,10 +133,6 @@
     .nav-overlay.active { display: block; }
     .nav-mobile-theme { display: none; }
 
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
     @media (max-width: 900px) {
       .nav-links { display: none; position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: #fff; flex-direction: column; padding: 80px 24px 24px; box-shadow: -4px 0 24px rgba(0,0,0,.1); gap: 16px; z-index: 101; overflow-y: auto; }
       .nav-mobile-toggle { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: none; background: transparent; cursor: pointer; }
@@ -193,10 +170,10 @@
     .bar-track { flex: 1; height: 24px; background: var(--gray-200); border-radius: 12px; overflow: hidden; }
     .bar-fill { height: 100%; border-radius: 12px; display: flex; align-items: center; padding-left: 12px; font-size: .75rem; font-weight: 700; color: #fff; }
     .bar-value { width: 60px; text-align: right; font-size: .85rem; font-weight: 700; color: var(--blue); flex-shrink: 0; }
-    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
-    .takeaway-box h4 { font-size: 1.05rem; font-weight: 700; color: #1F2937; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-    .takeaway-box ul { padding-left: 20px; }
-    .takeaway-box li { font-size: .9rem; color: #374151; margin-bottom: 8px; line-height: 1.6; }
+    .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box-box h4 { font-size: 1.05rem; font-weight: 700; color: #1F2937; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .takeaway-box-box ul { padding-left: 20px; }
+    .takeaway-box-box li { font-size: .9rem; color: #374151; margin-bottom: 8px; line-height: 1.6; }
     .payment-icons { display: flex; justify-content: center; gap: 32px; margin: 24px 0; flex-wrap: wrap; }
     .payment-icon { display: flex; flex-direction: column; align-items: center; gap: 8px; }
     .payment-icon .icon-circle { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
@@ -227,11 +204,11 @@
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
-.takeaway { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-.takeaway strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
-.takeaway p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-.takeaway ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-.takeaway ul li { color: #fff !important; margin-bottom: 6px; }
+.takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
+.takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
+.takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
+.takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
+.takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -320,15 +297,9 @@
       <a href="/about.html">About</a>
       <a href="/blog" class="active">Blog</a>
       <a href="/contact.html">Contact</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        Toggle Dark Mode
-      </button>
+      
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    </button>
+    
     <a href="/contact.html" class="nav-cta">Get Started &rarr;</a>
     <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu">
       <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
@@ -466,7 +437,7 @@
 
       <p>The data makes the case for digital-first spend. The question is whether your current structure can execute across the fragmented Chinese digital landscape — and that's where a partner with deep platform knowledge becomes essential.</p>
 
-      <div class="takeaway">
+      <div class="takeaway-box">
         <h4>🎯 Key Takeaways for Advertisers</h4>
         <ul>
           <li>📱 <strong>Mobile-first is non-negotiable</strong> — 99.6% access via mobile, desktop campaigns leave money on the table</li>
@@ -557,14 +528,4 @@ function toggleMobileNav() {
   closeX.style.display = mobileNavOpen ? 'block' : 'none';
   overlay.classList.toggle('active', mobileNavOpen);
   document.body.style.overflow = mobileNavOpen ? 'hidden' : '';
-}
-function toggleTheme() {
-  const t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', t);
-  localStorage.setItem('theme', t);
-}
-(function() { const t = localStorage.getItem('theme') || 'light'; document.documentElement.setAttribute('data-theme', t); })();
-document.querySelectorAll('.obf-email').forEach(function(el){el.textContent=el.dataset.u+'@'+el.dataset.d});document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
-</script>
-</body>
-</html>
+}

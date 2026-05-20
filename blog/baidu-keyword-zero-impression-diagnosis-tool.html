@@ -62,10 +62,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .article-content a { color: #2932E1; border-bottom: 1px solid rgba(41,50,225,.3); transition: border-color .2s; }
 .article-content a:hover { border-color: #2932E1; }
 .callout { padding: 20px 24px; border-radius: 10px; margin: 28px 0; font-size: .95rem; line-height: 1.7; }
-.callout.tip { background: #EEF0FF; border-left: 4px solid #2932E1; }
-.takeaway { background: #F0FDF4; border: 1px solid #86EFAC; border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
-.takeaway h4 { font-size: 1rem; margin-bottom: 12px; }
-.takeaway ul { margin: 0 0 0 20px; }
+.callout.callout-tip { background: #EEF0FF; border-left: 4px solid #2932E1; }
+.takeaway-box { background: #F0FDF4; border: 1px solid #86EFAC; border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
+.takeaway-box h4 { font-size: 1rem; margin-bottom: 12px; }
+.takeaway-box ul { margin: 0 0 0 20px; }
 /* Footer */
 footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
@@ -88,16 +88,6 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 [data-theme="dark"] .article-content { color: #D1D5DB; }
 [data-theme="dark"] footer { background: #070B14; }
 
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
-    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle
-    .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
     .back-to-top.visible { opacity: 1; pointer-events: auto; }
     .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
     .back-to-top:active { transform: scale(.92); }
@@ -127,11 +117,11 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
-.takeaway { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-.takeaway strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
-.takeaway p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-.takeaway ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-.takeaway ul li { color: #fff !important; margin-bottom: 6px; }
+.takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
+.takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
+.takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
+.takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
+.takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -170,7 +160,11 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
-  </style>
+      [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
+    [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+</style>
 </head>
 <body>
 <nav>
@@ -220,7 +214,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       <h2>What the Tool Does</h2>
       <p>The Keyword Zero-Impression Diagnosis tool examines why your keywords are not showing ads. It runs across five dimensions:</p>
 
-      <div class="callout tip">
+      <div class="callout callout-tip">
         <strong>&#128161; Five Diagnostic Dimensions</strong><br/>
         1. Task creation &amp; query setup<br/>
         2. Detailed diagnosis results<br/>
@@ -259,7 +253,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       </ol>
       <p>Together, these cover the main failure modes in Baidu search advertising.</p>
 
-      <div class="takeaway">
+      <div class="takeaway-box">
         <h4>&#127919; Key Takeaway</h4>
         <ul>
           <li>&#9989;&#65039; Baidu's diagnosis tools are genuinely useful for performance optimization</li>

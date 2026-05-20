@@ -89,14 +89,6 @@
     [data-theme="dark"] .lang-switch-menu { background: var(--gray-100); border-color: var(--gray-200); }
     [data-theme="dark"] .lang-switch-item:hover { background: var(--gray-200); }
 
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 
     .nav-right-group { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
     .lang-switch { position: relative; flex-shrink: 0; }
@@ -270,10 +262,7 @@
             <a href="/ja/" lang="ja" class="lang-switch-item current">🇯🇵 日本語</a>
           </div>
         </div>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ切替">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
+        
         <a href="/ja/contact.html" class="nav-cta">今すぐ始める →</a>
       </div>
       <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="メニュー">
@@ -587,36 +576,4 @@
     if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
     else if (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.setAttribute('data-theme', 'dark');
   })();
-
-  function toggleTheme() {
-    const html = document.documentElement;
-    const isDark = html.hasAttribute('data-theme') && html.getAttribute('data-theme') === 'dark';
-    if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-    else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
-  }
-
-  function toggleLangMenu() {
-    const menu = document.getElementById('langMenu');
-    if (menu) menu.classList.toggle('open');
-  }
-
-  document.addEventListener('click', function(e) {
-    const menu = document.getElementById('langMenu');
-    if (menu && menu.classList.contains('open') && !e.target.closest('.lang-switch')) {
-      menu.classList.remove('open');
-    }
-  });
-
-  function toggleMobileNav() { /* placeholder for mobile nav */ }
-  function closeMobileNav() { }
-
-  function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
-  window.addEventListener('scroll', function() {
-    const btn = document.getElementById('backToTop');
-    if (window.scrollY > 400) btn.classList.add('visible');
-    else btn.classList.remove('visible');
-  });
-  </script>
-</body>
-</html>
+

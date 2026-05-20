@@ -37,33 +37,32 @@
     .callout-warning { background:#FEF3C7; border:1px solid #FCD34D; }
     .callout-tip { background:#D1FAE5; border:1px solid #6EE7B7; }
     .callout-insight { background:rgba(41,50,225,.06); border:1px solid rgba(41,50,225,.18); }
-    .takeaway-box { background:linear-gradient(135deg,#EEF0FF 0%,#F5F3FF 100%); border:1px solid #C7D2FE; border-radius:12px; padding:24px; margin:32px 0; }
-    .takeaway-box h3, .takeaway-box h4 { font-size:1rem; font-weight:700; margin-bottom:12px; color:var(--blue); }
-    .takeaway-box ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
-    .takeaway-box ul li { font-size:.9rem; padding-left:20px; position:relative; }
-    .takeaway-box ul li::before { content:'✓'; position:absolute; left:0; color:var(--blue); font-weight:700; }
+    .takeaway-box-box { background:linear-gradient(135deg,#EEF0FF 0%,#F5F3FF 100%); border:1px solid #C7D2FE; border-radius:12px; padding:24px; margin:32px 0; }
+    .takeaway-box-box h3, .takeaway-box-box h4 { font-size:1rem; font-weight:700; margin-bottom:12px; color:var(--blue); }
+    .takeaway-box-box ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
+    .takeaway-box-box ul li { font-size:.9rem; padding-left:20px; position:relative; }
+    .takeaway-box-box ul li::before { content:'✓'; position:absolute; left:0; color:var(--blue); font-weight:700; }
     footer { background:var(--gray-800); color:#D1D5DB; padding:56px 0 24px; }
     .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,.1); max-width:1140px; margin:0 auto; padding-left:24px; padding-right:24px; }
     .footer-col h4 { color:#fff; font-size:.85rem; font-weight:600; margin-bottom:14px; }
     .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
     .footer-col ul li a { font-size:.85rem; color:#9CA3AF; }
     .footer-bottom { display:flex; justify-content:space-between; align-items:center; max-width:1140px; margin:0 auto; padding:24px 24px 0; }
-    [data-theme="dark"] { --gray-50:#1F2937; --gray-100:#374151; --gray-700:#D1D5DB; --gray-900:#F9FAFB; }
+        [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
     [data-theme="dark"] .stat-card { background:var(--gray-100); border-color:var(--gray-200); }
     [data-theme="dark"] footer { background:#070B14 !important; }
     @media (max-width:900px) { .nav-links { display:none; } .mobile-nav-toggle { display:flex; } }
 
   
-    .theme-toggle { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; border:1px solid var(--gray-200); background:transparent; cursor:pointer; color:var(--gray-600); }
-    .theme-toggle:hover { border-color:var(--blue); color:var(--blue); transform:rotate(15deg); }
-    .theme-toggle svg { width:18px; height:18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
-    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle@media (max-width:900px) {
-      .nav-links { display:none; position:fixed; top:0; right:0; width:280px; height:100vh; background:#fff; flex-direction:column; padding:80px 24px 24px; box-shadow:-4px 0 24px rgba(0,0,0,.1); gap:16px; z-index:101; overflow-y:auto; }
       .nav-links.open { display:flex !important; }
       .mobile-nav-toggle { display:flex; align-items:center; justify-content:center; width:40px; height:40px; border:none; background:transparent; cursor:pointer; }
       .nav-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:99; }
@@ -100,11 +99,11 @@
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
-.takeaway { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-.takeaway strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
-.takeaway p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-.takeaway ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-.takeaway ul li { color: #fff !important; margin-bottom: 6px; }
+.takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
+.takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
+.takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
+.takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
+.takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -143,7 +142,11 @@
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
-  </style>
+      [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
+    [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+</style>
 
   <meta property="og:title" content="Baidu Feed Ads: Now Track Every Change With Upgraded History Records — Baidu PPC Pro">
   <meta property="og:description" content="Baidu Feed Ads: Now Track Every Change With Upgraded History Records The Problem: What Changed, and When? Something shifted in your Baidu campaign. Perform">
@@ -202,10 +205,7 @@
         <a href="/blog.html">Blog</a>
         <a href="/contact.html">Contact</a>
       </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button><a href="contact" class="nav-cta">Get Started →</a>
+      <a href="contact" class="nav-cta">Get Started →</a>
       <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu" onclick="toggleMobileNav()"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button>
     </div>
   </nav>
@@ -264,14 +264,14 @@
     <tr><td>Client reporting</td><td>"We made optimizations" (vague)</td><td>"On Nov 28 we adjusted bids +15% on 12 keywords" (specific)</td></tr>
   </tbody>
 </table>
-<div class="callout tip">
+<div class="callout callout-tip">
   <strong>💡 Pro Tip:</strong> Make it a habit to check history records before making big optimization moves. If performance shifted and you don't know why, the answer is probably in the last 7 days of operation records. Export and review them.
 </div>
 <h2>📊 The Barrier for International Brands</h2>
 <p>The history records feature lives inside Baidu's advertising backend. To use it, you need: 1. A Baidu advertising account 2. Access to the Chinese-language feed ad platform 3. The ability to interpret Chinese operation logs and translate them into actionable insights </p>
 <p>For overseas teams, even knowing this feature exists is rare — let alone using it proactively. </p>
 <h2>🔧 How BPP Turns History Into Action</h2>
-<div class="takeaway">
+<div class="takeaway-box">
   <h4>🎯 How BPP Handles This</h4>
   <ul>
     <ul><li>✅ We maintain a weekly operation log for your Baidu campaigns — in English, not Chinese</li>
@@ -283,7 +283,7 @@
 <strong>Want full visibility into every change made to your Baidu campaigns?</strong>
 <p>→ <a href="https://baidumarketing.com/contact">Contact BPP</a> </p>
 
-    <div class="takeaway">
+    <div class="takeaway-box">
       <h3>📝 Key Takeaways</h3>
       <ul>
         <li>Baidu continues to evolve its advertising platform with user-friendly upgrades</li>

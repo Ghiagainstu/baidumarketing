@@ -37,30 +37,15 @@
       --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    [data-theme="dark"] {
-      --blue: #6366F1;
-      --blue-dark: #818CF8;
-      --blue-deep: #4F46E5;
-      --blue-light: rgba(99,102,241,.12);
-      --blue-glow: rgba(99,102,241,.15);
-      --blue-subtle: rgba(99,102,241,.06);
-      --gray-50: #0B0F1A;
-      --gray-100: #111827;
-      --gray-200: #1F2937;
-      --gray-300: #374151;
-      --gray-400: #6B7280;
-      --gray-600: #9CA3AF;
-      --gray-700: #D1D5DB;
-      --gray-800: #E5E7EB;
-      --gray-900: #F9FAFB;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,.3);
-      --shadow-md: 0 4px 16px rgba(0,0,0,.4);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+        [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
       --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
       --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
-      --gradient-surface: linear-gradient(135deg, #111827 0%, #1E1B4B 100%);
-      background-color: #0B0F1A;
-      color: #E5E7EB;
+      background-color: #0B0F1A; color: #E5E7EB;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -221,11 +206,11 @@
     .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     /* Takeaway */
-    .takeaway { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-    .takeaway strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
-    .takeaway p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-    .takeaway ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-    .takeaway ul li { color: #fff !important; margin-bottom: 6px; }
+    .takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
+    .takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
+    .takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
+    .takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
+    .takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
     /* Blockquote */
     .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -280,21 +265,6 @@
     [data-theme="dark"] footer { background: #070B14; }
 
     /* Theme Toggle */
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border:1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all var(--transition-base); color: var(--gray-600); }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-    @media (max-width: 900px) {
-      .nav-links { display: none; flex-direction: column; position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: #fff; padding: 80px 32px 32px; box-shadow: -4px 0 24px rgba(0,0,0,.15); z-index: 100; gap: 8px; }
-      .nav-links.open { display: flex; }
-      .nav-mobile-toggle { display: block; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .related-grid { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 30px; }
-    }
     @media (max-width: 640px) {
       .article-title { font-size: 1.8rem; }
       .stats-grid { grid-template-columns: 1fr; }
@@ -327,11 +297,11 @@
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
-.takeaway { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-.takeaway strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
-.takeaway p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-.takeaway ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-.takeaway ul li { color: #fff !important; margin-bottom: 6px; }
+.takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
+.takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
+.takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
+.takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
+.takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -370,7 +340,11 @@
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
-  </style>
+      [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
+    [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+</style>
 
   <meta property="og:title" content="Baidu Streamlines Ad Creation Workflow: 3 Upgrades That Save Time and Improve Creative Quality" />
   <meta property="og:description" content="Baidu rolled out a trio of upgrades to its ad creation platform on October 16, 2025. Learn how these upgrades help overseas advertisers save time and improve ad quality." />
@@ -423,10 +397,7 @@
         <a href="/about.html">About</a>
         <a href="/blog.html" class="active">Blog</a>
         <a href="/contact.html">Contact</a>
-        <button class="nav-mobile-theme" onclick="toggleTheme()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          Toggle Dark Mode
-        </button>
+        
       </div>
       <div class="nav-right-group">
       <div class="lang-switch">
@@ -439,10 +410,7 @@
             <a href="/ja/index.html" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
         </div>
       </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
+      
       <a href="/contact.html" class="nav-cta">Get Started →</a>
       </div>
       <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu" onclick="toggleMobileNav()">
@@ -575,31 +543,4 @@
       mobileNavOpen = !mobileNavOpen;
       if (mobileNavOpen) { links.classList.add('open'); overlay.classList.add('active'); } 
       else { links.classList.remove('open'); overlay.classList.remove('active'); }
-    }
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      if (current === 'dark') { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-      else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
-    }
-    function toggleLangMenu() {
-      const menu = document.getElementById('langSwitchMenu');
-      if (menu) menu.classList.toggle('open');
-    }
-    (function(){ var t=document.documentElement, s; try { s=localStorage.getItem('theme'); } catch(e){} if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)) t.setAttribute('data-theme','dark'); })();
-    document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
-    document.addEventListener('click', function(e) {
-      const sw = document.querySelector('.lang-switch');
-      if (sw && !sw.contains(e.target)) {
-        const menu = document.getElementById('langSwitchMenu');
-        if (menu) menu.classList.remove('open');
-      }
-    });
-  </script>
-
-
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
-
-</body></html>
+    }

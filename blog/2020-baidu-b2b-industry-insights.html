@@ -43,17 +43,16 @@ img{max-width:100%;display:block}
   --transition-base:0.2s cubic-bezier(0.4,0,0.2,1);
   --transition-smooth:0.4s cubic-bezier(0.16,1,0.3,1);
 }
-[data-theme="dark"]{
-  --blue:#6366F1;--blue-dark:#818CF8;--blue-deep:#4F46E5;
-  --blue-light:rgba(99,102,241,.12);--blue-glow:rgba(99,102,241,.15);--blue-subtle:rgba(99,102,241,.06);
-  --gray-50:#0B0F1A;--gray-100:#111827;--gray-200:#1F2937;--gray-300:#374151;
-  --gray-400:#6B7280;--gray-600:#9CA3AF;--gray-700:#D1D5DB;--gray-800:#E5E7EB;--gray-900:#F9FAFB;
-  --shadow-sm:0 1px 3px rgba(0,0,0,.3);--shadow-md:0 4px 16px rgba(0,0,0,.4);--shadow-lg:0 12px 40px rgba(0,0,0,.5);
-  --shadow-blue:0 8px 32px rgba(99,102,241,.2);
-  --gradient-hero:linear-gradient(160deg,#0F172A 30%,#131C38 60%,#1E1B4B 100%);
-  --gradient-surface:linear-gradient(135deg,#111827 0%,#1E1B4B 100%);
-  background-color:#0B0F1A;color:#E5E7EB
-}
+    [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+      --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
+      --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
+      background-color: #0B0F1A; color: #E5E7EB;
+    }
 [data-theme="dark"] body{background-color:#0B0F1A;color:#E5E7EB}
 [data-theme="dark"] nav{background:rgba(11,15,26,.85);backdrop-filter:blur(12px);border-bottom-color:var(--gray-200)}
 [data-theme="dark"] .nav-logo{color:#818CF8}
@@ -75,11 +74,11 @@ img{max-width:100%;display:block}
 [data-theme="dark"] .article-content p{color:var(--gray-600)}
 [data-theme="dark"] .article-content h2{color:#F9FAFB}
 [data-theme="dark"] .article-content h3{color:#F9FAFB}
-[data-theme="dark"] .callout.tip{background:rgba(99,102,241,.1);border-left-color:var(--blue)}
+[data-theme="dark"] .callout.callout-tip{background:rgba(99,102,241,.1);border-left-color:var(--blue)}
 [data-theme="dark"] .callout.warning{background:rgba(239,68,68,.1);border-left-color:#EF4444}
-[data-theme="dark"] .takeaway{background:var(--gray-100);border-color:var(--gray-200)}
-[data-theme="dark"] .takeaway h4{color:#F9FAFB}
-[data-theme="dark"] .takeaway li{color:var(--gray-600)}
+[data-theme="dark"] .takeaway-box{background:var(--gray-100);border-color:var(--gray-200)}
+[data-theme="dark"] .takeaway-box h4{color:#F9FAFB}
+[data-theme="dark"] .takeaway-box li{color:var(--gray-600)}
 [data-theme="dark"] .comparison-table{background:var(--gray-100);border-color:var(--gray-200)}
 [data-theme="dark"] .comparison-table th{background:var(--gray-200);color:var(--gray-800)}
 [data-theme="dark"] .comparison-table td{color:var(--gray-600);border-bottom-color:var(--gray-200)}
@@ -87,24 +86,12 @@ img{max-width:100%;display:block}
 [data-theme="dark"] .blockquote-highlight cite{color:var(--gray-400)}
 [data-theme="dark"] .related-card{background:var(--gray-100)!important;border-color:var(--gray-200)}
 [data-theme="dark"] .related-card h4{color:var(--gray-800)}
-[data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle[data-theme="dark"] .lang-switch-btn{border-color:var(--gray-200);color:var(--gray-600)}
-[data-theme="dark"] .lang-switch-menu{background:#0B0F1A;border-color:var(--gray-200)}
 [data-theme="dark"] .lang-switch-item{color:var(--gray-700)}
 [data-theme="dark"] .lang-switch-item:hover{background:rgba(99,102,241,.12);color:var(--blue)}
 [data-theme="dark"] .stats-grid .stat-card{background:var(--gray-100);border-color:var(--gray-200)}
 [data-theme="dark"] .stats-grid .stat-number{color:#F9FAFB}
 [data-theme="dark"] .stats-grid .stat-label{color:var(--gray-600)}
 [data-theme="dark"] .callout code{background:var(--gray-200)}
-.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--gray-200);background:transparent;cursor:pointer;transition:all .2s;color:var(--gray-600);flex-shrink:0}
-.theme-toggle:hover{border-color:var(--blue);color:var(--blue);transform:rotate(15deg)}
-.theme-toggle svg{width:18px;height:18px}
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
-.theme-toggle.theme-toggle.nav-right-group{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.lang-switch{position:relative}
 .lang-switch-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;border:1px solid var(--gray-200);background:transparent;cursor:pointer;font-size:.9rem;color:var(--gray-600);transition:all var(--transition-base);line-height:1}
 .lang-switch-btn:hover{border-color:var(--blue);color:var(--blue)}
 .lang-switch-menu{position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--gray-200);border-radius:8px;box-shadow:var(--shadow-md);min-width:150px;opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .2s,transform .2s;z-index:200}
@@ -149,13 +136,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .article-content a:hover{color:var(--blue-dark)}
 .article-content blockquote:not(.blockquote-highlight){border-left:3px solid var(--blue-light);padding:12px 20px;margin:20px 0;background:var(--gray-50);border-radius:0 8px 8px 0}
 .callout{padding:20px 24px;margin:24px 0;border-radius:12px;border-left:4px solid;font-size:.9rem;line-height:1.7}
-.callout.tip{background:var(--blue-subtle);border-left-color:var(--blue)}
+.callout.callout-tip{background:var(--blue-subtle);border-left-color:var(--blue)}
 .callout.warning{background:rgba(239,68,68,.06);border-left-color:#EF4444}
 .callout strong{display:block;margin-bottom:4px}
-.takeaway{border:1px solid var(--gray-200);border-radius:12px;padding:24px;margin:24px 0;background:var(--gray-50)}
-.takeaway h4{font-size:1rem;font-weight:700;margin-bottom:12px;color:var(--gray-800)}
-.takeaway ul{list-style:none;padding:0}
-.takeaway li{padding:6px 0;font-size:.9rem;color:var(--gray-600);line-height:1.6}
+.takeaway-box{border:1px solid var(--gray-200);border-radius:12px;padding:24px;margin:24px 0;background:var(--gray-50)}
+.takeaway-box h4{font-size:1rem;font-weight:700;margin-bottom:12px;color:var(--gray-800)}
+.takeaway-box ul{list-style:none;padding:0}
+.takeaway-box li{padding:6px 0;font-size:.9rem;color:var(--gray-600);line-height:1.6}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
 .stat-card{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:20px;text-align:center;transition:transform .2s,box-shadow .2s}
 .stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
@@ -203,8 +190,6 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 @media(max-width:900px){
   .nav-links{display:none}
   .nav-cta{display:none}
-  .theme-toggle{display:none}
-  .lang-switch{display:none}
   .nav-mobile-toggle{display:block}
   .nav-links.open{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:#fff;padding:8px 0;gap:0;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-md);z-index:100}
   .nav-links.open a{display:block;padding:14px 24px;font-size:1rem;font-weight:500;color:var(--gray-800);border-bottom:1px solid var(--gray-100);transition:background .15s;white-space:nowrap}
@@ -256,11 +241,11 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
-.takeaway { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-.takeaway strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
-.takeaway p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-.takeaway ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-.takeaway ul li { color: #fff !important; margin-bottom: 6px; }
+.takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
+.takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
+.takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
+.takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
+.takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -299,7 +284,11 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
-  </style>
+      [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
+    [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+</style>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -336,7 +325,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
       <a href="/about.html">About</a>
       <a href="/blog.html" class="active">Blog</a>
       <a href="/contact.html">Contact</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> Toggle Dark Mode</button>
+      
     </div>
     <div class="nav-right-group">
       <div class="lang-switch">
@@ -346,10 +335,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
           <a href="/ja/index.html" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
         </div>
       </div>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
+      
       <a href="/contact.html" class="nav-cta">Get Started &rarr;</a>
     </div>
     <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
@@ -487,7 +473,7 @@ Baidu's search data identified ten dominant B2B industry categories. Together th
 
 One pattern worth noting: in four categories — metallurgy, hardware, auto parts, and agriculture — the top 10 sub-segments alone capture over 80% of all search volume. This means if you sell into these categories, a tightly focused keyword strategy covering the leading sub-segments is far more cost-effective than spreading your budget across hundreds of long-tail terms.
 
-<div class="callout tip">
+<div class="callout callout-tip">
   <strong>💡 Competitive Advantage:</strong> For industries with high sub-segment concentration (metallurgy, hardware, auto parts, agriculture), concentrate 70% of your ad budget on the top 10 sub-category keywords. The remaining 30% can cover niche terms. This targeting approach typically produces 2-3x better ROAS than broad-category bidding.
 </div>
 
@@ -557,7 +543,7 @@ AiCaiGou (爱采购) is Baidu's own B2B procurement platform, and the report hig
 - **Seasonal peaks**: Inquiry volume peaks in March-June and September-December, aligned with China's industrial procurement cycles
 - **Top regions**: Guangdong, Zhejiang, Jiangsu, Shandong, and Hebei lead in platform usage
 
-<div class="callout warning">
+<div class="callout callout-warning">
   <strong>⚠️ Important:</strong> AiCaiGou's top 10 industry categories mirror the overall B2B search demand almost exactly — machinery, building materials, electrical, electronics, metals, chemicals, security, hardware, auto parts, and agriculture. If your product falls into one of these categories, you are competing in the highest-traffic B2B channel in China. Not being there means losing visibility to competitors who are.
 </div>
 
@@ -572,7 +558,7 @@ The data from Baidu's report offers a clear strategic roadmap for international 
 5. **Weekend mobile campaigns have hidden value** — less competition, real buyer intent
 6. **AiCaiGou + Baidu Search is the strongest combination** — dual coverage across marketplace and search engine
 
-<div class="takeaway">
+<div class="takeaway-box">
   <h4>🎯 Key Takeaways</h4>
   <ul>
     <li>✅ B2B search demand on Baidu recovered strongly in 2020, surpassing 2019 levels</li>
@@ -672,18 +658,4 @@ The B2B search data paints a clear picture: Chinese industrial buyers are online
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script>
-function toggleTheme(){var e=document.documentElement,t=e.getAttribute('data-theme')==='dark'?'light':'dark';e.setAttribute('data-theme',t),localStorage.setItem('theme',t),document.querySelector('meta[name=\"theme-color\"]').content=t==='dark'?'#0B0F1A':'#FFFFFF'}
-(function(){var e=localStorage.getItem('theme');if(e==='dark'||(!e&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark'),document.querySelector('meta[name=\"theme-color\"]').content='#0B0F1A'}})();
-function toggleLangMenu(){var e=document.getElementById('langSwitchMenu');e&&e.classList.toggle('open')}
-document.addEventListener('click',function(e){var t=document.querySelector('.lang-switch');t&&!t.contains(e.target)&&(e=document.getElementById('langSwitchMenu'))&&e.classList.remove('open')});
-var mobileNavOpen=!1;
-function toggleMobileNav(){var e=document.getElementById('navLinks'),t=document.querySelector('.hamburger-icon'),n=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen,mobileNavOpen?(e.classList.add('open'),t.style.display='none',n.style.display='block',o.classList.add('active'),document.body.style.overflow='hidden'):(e.classList.remove('open'),t.style.display='block',n.style.display='none',o.classList.remove('active'),document.body.style.overflow='')}
-document.querySelectorAll('.nav-links a').forEach(function(e){e.addEventListener('click',function(){mobileNavOpen&&toggleMobileNav()})});
-document.querySelectorAll('.obf-email').forEach(function(e){e.textContent=e.dataset.u+'@'+e.dataset.d});
-document.querySelectorAll('.obf-email-link').forEach(function(e){var t=e.dataset.u+'@'+e.dataset.d;e.href='mailto:'+t;if(!e.textContent)e.textContent=t});
-document.querySelectorAll('.obf-email-icon').forEach(function(e){e.href='mailto:'+e.dataset.u+'@'+e.dataset.d});
-window.addEventListener('scroll',function(){document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
-</script>
-</body>
-</html>
+<script>

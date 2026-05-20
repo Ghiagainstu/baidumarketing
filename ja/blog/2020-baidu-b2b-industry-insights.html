@@ -90,10 +90,6 @@ img{max-width:100%;display:block}
 [data-theme="dark"] .blockquote-highlight cite{color:var(--gray-400)}
 [data-theme="dark"] .related-card{background:var(--gray-100)!important;border-color:var(--gray-200)}
 [data-theme="dark"] .related-card h4{color:var(--gray-800)}
-[data-theme="dark"] .theme-toggle .icon-sun{display:none}
-[data-theme="dark"] .theme-toggle .icon-moon{display:none}
-[data-theme="dark"] .theme-toggle .icon-sun{display:block}
-[data-theme="dark"] .lang-switch-btn{border-color:var(--gray-200);color:var(--gray-600)}
 [data-theme="dark"] .lang-switch-menu{background:#0B0F1A;border-color:var(--gray-200)}
 [data-theme="dark"] .lang-switch-item{color:var(--gray-700)}
 [data-theme="dark"] .lang-switch-item:hover{background:rgba(99,102,241,.12);color:var(--blue)}
@@ -101,12 +97,6 @@ img{max-width:100%;display:block}
 [data-theme="dark"] .stats-grid .stat-number{color:#F9FAFB}
 [data-theme="dark"] .stats-grid .stat-label{color:var(--gray-600)}
 [data-theme="dark"] .callout code{background:var(--gray-200)}
-.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--gray-200);background:transparent;cursor:pointer;transition:all .2s;color:var(--gray-600);flex-shrink:0}
-.theme-toggle:hover{border-color:var(--blue);color:var(--blue);transform:rotate(15deg)}
-.theme-toggle svg{width:18px;height:18px}
-.theme-toggle .icon-sun{display:none}
-.theme-toggle .icon-moon{display:block}
-.nav-right-group{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .lang-switch{position:relative}
 .lang-switch-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;border:1px solid var(--gray-200);background:transparent;cursor:pointer;font-size:.9rem;color:var(--gray-600);transition:all var(--transition-base);line-height:1}
 .lang-switch-btn:hover{border-color:var(--blue);color:var(--blue)}
@@ -206,8 +196,6 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 @media(max-width:900px){
   .nav-links{display:none}
   .nav-cta{display:none}
-  .theme-toggle{display:none}
-  .lang-switch{display:none}
   .nav-mobile-toggle{display:block}
   .nav-links.open{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:#fff;padding:8px 0;gap:0;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-md);z-index:100}
   .nav-links.open a{display:block;padding:14px 24px;font-size:1rem;font-weight:500;color:var(--gray-800);border-bottom:1px solid var(--gray-100);transition:background .15s;white-space:nowrap}
@@ -268,12 +256,12 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
       <a href="/ja/about.html">会社概要</a>
       <a href="/ja/blog.html" class="active">ブログ</a>
       <a href="/ja/contact.html">お問い合わせ</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> ダークモード切替</button>
+      
     </div>
     <div class="nav-right-group">
       <div class="lang-switch"><button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="Language">JP <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="lang-switch-menu" id="langSwitchMenu"><a href="/" lang="en" class="lang-switch-item">English</a><a href="/ja/index.html" lang="ja" class="lang-switch-item">日本語</a></div></div>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+      
       <a href="/ja/contact.html" class="nav-cta">今すぐ始める</a></div>
     <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
   </div>
@@ -592,18 +580,4 @@ B2B検索データが描く姿は明確です：中国の産業バイヤーは�
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script>
-function toggleTheme(){var e=document.documentElement,t=e.getAttribute('data-theme')==='dark'?'light':'dark';e.setAttribute('data-theme',t),localStorage.setItem('theme',t),document.querySelector('meta[name=\"theme-color\"]').content=t==='dark'?'#0B0F1A':'#FFFFFF'}
-(function(){var e=localStorage.getItem('theme');if(e==='dark'||(!e&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark'),document.querySelector('meta[name=\"theme-color\"]').content='#0B0F1A'}})();
-function toggleLangMenu(){var e=document.getElementById('langSwitchMenu');e&&e.classList.toggle('open')}
-document.addEventListener('click',function(e){var t=document.querySelector('.lang-switch');t&&!t.contains(e.target)&&(e=document.getElementById('langSwitchMenu'))&&e.classList.remove('open')});
-var mobileNavOpen=!1;
-function toggleMobileNav(){var e=document.getElementById('navLinks'),t=document.querySelector('.hamburger-icon'),n=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen,mobileNavOpen?(e.classList.add('open'),t.style.display='none',n.style.display='block',o.classList.add('active'),document.body.style.overflow='hidden'):(e.classList.remove('open'),t.style.display='block',n.style.display='none',o.classList.remove('active'),document.body.style.overflow='')}
-document.querySelectorAll('.nav-links a').forEach(function(e){e.addEventListener('click',function(){mobileNavOpen&&toggleMobileNav()})});
-document.querySelectorAll('.obf-email').forEach(function(e){e.textContent=e.dataset.u+'@'+e.dataset.d});
-document.querySelectorAll('.obf-email-link').forEach(function(e){var t=e.dataset.u+'@'+e.dataset.d;e.href='mailto:'+t;if(!e.textContent)e.textContent=t});
-document.querySelectorAll('.obf-email-icon').forEach(function(e){e.href='mailto:'+e.dataset.u+'@'+e.dataset.d});
-window.addEventListener('scroll',function(){document.getElementById('backToTop').classList.toggle('visible',window.scrollY>600)});
-</script>
-</body>
-</html>
+<script>

@@ -82,8 +82,6 @@
     [data-theme="dark"] .lang-switch-menu { background: #0B0F1A; border-color: var(--gray-200); }
     [data-theme="dark"] .lang-switch-item { color: var(--gray-700); }
     [data-theme="dark"] .lang-switch-item:hover { background: rgba(99,102,241,.12); color: var(--blue); }
-    .theme-toggle { background: none; border: 1.5px solid var(--gray-200); border-radius: 8px; width: 38px; height: 38px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--gray-600); margin-left: 8px; flex-shrink: 0; }
-    .theme-toggle svg { width: 18px; height: 18px; }
     [data-theme="dark"] .icon-sun, .icon-moon { display: block; }
     [data-theme="dark"] .icon-moon, .icon-sun { display: none; }
     .nav-mobile-toggle { display: none; background: none; border: 1.5px solid var(--gray-200); border-radius: 8px; width: 38px; height: 38px; cursor: pointer; align-items: center; justify-content: center; margin-left: 8px; }
@@ -143,7 +141,7 @@
     <a href="/ja/" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logoGrad)"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</a>
     <div class="nav-links" id="navLinks">
       <a href="/ja/why-baidu-ppc-pro.html">選ばれる理由</a><a href="/ja/features.html">サービス</a><a href="/ja/pricing.html">料金プラン</a><a href="/ja/clients.html">実績</a><a href="/ja/faq.html">よくある質問</a><a href="/ja/about.html">会社概要</a><a href="/ja/blog.html" class="active">ブログ</a><a href="/ja/contact.html">お問い合わせ</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>ダークモード切替</button>
+      
     </div>
     <div class="nav-right-group">
     <div class="lang-switch">
@@ -153,7 +151,7 @@
         <a href="/ja/" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
       </div>
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+    
     <a href="/ja/contact.html" class="nav-cta">今すぐ始める →</a>
     </div>
     <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
@@ -271,12 +269,4 @@
 </footer>
 <script>
   document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
-  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
-  function toggleTheme(){var t=document.documentElement;var isDark=t.getAttribute('data-theme')==='dark';t.setAttribute('data-theme',isDark?'':'dark');try{localStorage.setItem('theme',isDark?'':'dark')}catch(e){}}
-  (function(){try{var s=localStorage.getItem('theme');if(s==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}})();
-  function toggleMobileNav(){var l=document.getElementById('navLinks');var o=document.getElementById('navOverlay');var t=document.getElementById('navToggle');var open=l.classList.toggle('open');o.classList.toggle('open',open);t.querySelector('.hamburger-icon').style.display=open?'none':'block';t.querySelector('.close-icon').style.display=open?'block':'none';document.body.style.overflow=open?'hidden':'';}
-  function toggleLangMenu(){const m=document.getElementById('langSwitchMenu');if(m)m.classList.toggle('open')}
-  document.addEventListener('click',function(e){const sw=document.querySelector('.lang-switch');if(sw&&!sw.contains(e.target)){const m=document.getElementById('langSwitchMenu');if(m)m.classList.remove('open')}});
-</script>
-</body>
-</html>
+  document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});

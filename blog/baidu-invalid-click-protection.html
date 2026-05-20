@@ -59,30 +59,15 @@
       --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    [data-theme="dark"] {
-      --blue: #6366F1;
-      --blue-dark: #818CF8;
-      --blue-deep: #4F46E5;
-      --blue-light: rgba(99,102,241,.12);
-      --blue-glow: rgba(99,102,241,.15);
-      --blue-subtle: rgba(99,102,241,.06);
-      --gray-50: #0B0F1A;
-      --gray-100: #111827;
-      --gray-200: #1F2937;
-      --gray-300: #374151;
-      --gray-400: #6B7280;
-      --gray-600: #9CA3AF;
-      --gray-700: #D1D5DB;
-      --gray-800: #E5E7EB;
-      --gray-900: #F9FAFB;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,.3);
-      --shadow-md: 0 4px 16px rgba(0,0,0,.4);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
+        [data-theme="dark"] {
+      --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
+      --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
+      --gray-50: #0B0F1A; --gray-100: #111827; --gray-200: #1F2937; --gray-300: #374151;
+      --gray-400: #6B7280; --gray-600: #9CA3AF; --gray-700: #D1D5DB; --gray-800: #E5E7EB; --gray-900: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3); --shadow-md: 0 4px 16px rgba(0,0,0,.4); --shadow-lg: 0 12px 40px rgba(0,0,0,.5);
       --shadow-blue: 0 8px 32px rgba(99,102,241,.2);
       --gradient-hero: linear-gradient(160deg, #0F172A 30%, #131C38 60%, #1E1B4B 100%);
-      --gradient-surface: linear-gradient(135deg, #111827 0%, #1E1B4B 100%);
-      background-color: #0B0F1A;
-      color: #E5E7EB;
+      background-color: #0B0F1A; color: #E5E7EB;
     }
 
     nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
@@ -156,14 +141,14 @@
     [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.15); }
     [data-theme="dark"] .callout p { color: var(--gray-600); }
 
-    .takeaway { background: var(--gradient-surface); padding: 30px; border-radius: var(--radius-lg); margin: 40px 0; border: 1px solid var(--gray-200); }
-    .takeaway h3 { font-size: 1.2rem; font-weight: 700; color: var(--blue); margin-bottom: 16px; }
-    .takeaway ul { list-style: none; padding: 0; }
-    .takeaway li { padding: 8px 0; padding-left: 28px; position: relative; color: var(--gray-700); }
-    .takeaway li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 1.1rem; }
+    .takeaway-box { background: var(--gradient-surface); padding: 30px; border-radius: var(--radius-lg); margin: 40px 0; border: 1px solid var(--gray-200); }
+    .takeaway-box h3 { font-size: 1.2rem; font-weight: 700; color: var(--blue); margin-bottom: 16px; }
+    .takeaway-box ul { list-style: none; padding: 0; }
+    .takeaway-box li { padding: 8px 0; padding-left: 28px; position: relative; color: var(--gray-700); }
+    .takeaway-box li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 1.1rem; }
 
-    [data-theme="dark"] .takeaway { background: var(--gradient-surface); border-color: var(--gray-200); }
-    [data-theme="dark"] .takeaway li { color: var(--gray-600); }
+    [data-theme="dark"] .takeaway-box { background: var(--gradient-surface); border-color: var(--gray-200); }
+    [data-theme="dark"] .takeaway-box li { color: var(--gray-600); }
 
     blockquote { background: var(--gray-50); border-left: 4px solid var(--blue); padding: 24px 30px; margin: 30px 0; border-radius: 0 var(--radius) var(--radius) 0; font-style: italic; color: var(--gray-700); font-size: 1.05rem; line-height: 1.8; }
 
@@ -203,17 +188,7 @@
     .back-to-top.visible { opacity: 1; pointer-events: auto; }
     .back-to-top svg { width: 20px; height: 20px; }
 
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all var(--transition-base); color: var(--gray-600); }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
     .nav-mobile-cta,.nav-mobile-theme{display:none}
-    [data-theme="dark"] .theme-toggle[data-theme="dark"] .theme-toggle.theme-toggle.theme-toggle@media (max-width: 900px) {
-      .nav-links { display: none; flex-direction: column; position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: #fff; padding: 80px 32px 32px; box-shadow: -4px 0 24px rgba(0,0,0,.15); z-index: 100; gap: 8px; }
       .nav-links.open { display: flex; }
       .nav-mobile-toggle { display: block; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -254,11 +229,11 @@
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
-.takeaway { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-.takeaway strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
-.takeaway p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-.takeaway ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-.takeaway ul li { color: #fff !important; margin-bottom: 6px; }
+.takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
+.takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; opacity: .85; }
+.takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
+.takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
+.takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -297,7 +272,11 @@
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
-  </style>
+      [data-theme="dark"] .article-content p { color: var(--gray-600); }
+    [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
+    [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
+    [data-theme="dark"] .article-meta { color: var(--gray-400); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -319,10 +298,7 @@
         <a href="/blog" class="active">Blog</a>
         <a href="/contact.html">Contact</a>
       </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
+      
       <a href="/contact.html" class="nav-cta">Get Started &rarr;</a>
       <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
         <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
@@ -562,7 +538,7 @@
         <h3>5. Work with Experts Who Monitor for You</h3>
         <p>This is where we come in. Our team monitors accounts daily, spots anomalies early, and adjusts protection settings before budget is wasted.</p>
 
-        <div class="takeaway">
+        <div class="takeaway-box">
           <h3>Key Takeaways</h3>
           <ul>
             <li>Invalid clicks are real—but you don't pay for them if Baidu's system catches them</li>
@@ -651,62 +627,4 @@
 
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
 
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#0B0F1A' : '#FFFFFF';
-    }
-    (function() {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.querySelector('meta[name="theme-color"]').content = '#0B0F1A';
-      }
-    })();
-
-    let mobileNavOpen = false;
-    function toggleMobileNav() {
-      const links = document.getElementById('navLinks'), h = document.querySelector('.hamburger-icon'), c = document.querySelector('.close-icon'), o = document.getElementById('navOverlay');
-      mobileNavOpen = !mobileNavOpen;
-      if (mobileNavOpen) { links.classList.add('open'); h.style.display = 'none'; c.style.display = 'block'; o.classList.add('active'); document.body.style.overflow = 'hidden'; }
-      else { links.classList.remove('open'); h.style.display = 'block'; c.style.display = 'none'; o.classList.remove('active'); document.body.style.overflow = ''; }
-    }
-    document.querySelectorAll('.nav-links a').forEach(a => { a.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); }); });
-
-    window.addEventListener('scroll', function(){var b=document.getElementById('backToTop');if(b){if(window.scrollY>400)b.classList.add('visible');else b.classList.remove('visible')}});
-
-    document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Baidu Invalid Click Protection: How We Safeguard Your Ad Budget",
-      "description": "Learn how Baidu's intelligent filtering system protects your PPC budget from invalid clicks and bot traffic. Discover Business Shield tool and best practices for advertisers.",
-      "url": "https://baidumarketing.com/blog/baidu-invalid-click-protection",
-      "image": "https://baidumarketing.com/assets/og-brand-default.png",
-      "datePublished": "2020-08-17",
-      "dateModified": "2020-08-17",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Baidu PPC Pro",
-        "url": "https://baidumarketing.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://baidumarketing.com/assets/og-brand-default.png",
-          "width": 1200,
-          "height": 630
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://baidumarketing.com/blog/baidu-invalid-click-protection"
-      }
-    }
-  </script>
-</body>
-</html>
+  <script>

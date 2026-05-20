@@ -113,14 +113,6 @@
     [data-theme="dark"] .nav-mobile-cta,.nav-mobile-theme{display:none}
 
     .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all 0.2s ease; color: var(--gray-600); flex-shrink: 0; }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
     /* NAV */
     nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
@@ -252,8 +244,6 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-cta { display: none; }
-      .theme-toggle { display: none; }
-      .nav-mobile-toggle { display: block; }
       .nav-mobile-cta,.nav-mobile-theme{display:none !important}
       .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; background: #fff; padding: 8px 0; gap: 0; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-md); z-index: 100; }
       [data-theme="dark"] .nav-links.open { background: #0B0F1A; border-bottom-color: var(--gray-200); }
@@ -307,10 +297,7 @@
             <a href="/ja/" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
           </div>
         </div>
-        <button class="theme-toggle" id="themeToggle" aria-label="ダークモード切替" onclick="toggleTheme()">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
+        
         <a href="/ja/contact.html" class="nav-cta">今すぐ始める →</a>
       </div>
       <button class="nav-mobile-toggle" id="navToggle" aria-label="メニューを開く" onclick="toggleMobileNav()">
@@ -702,71 +689,4 @@
   </button>
 
   <script>
-    // Theme toggle
-    function toggleTheme() {
-      const d = document.documentElement;
-      const t = d.getAttribute('data-theme');
-      const next = t === 'dark' ? 'light' : 'dark';
-      d.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    }
-    (function() { const t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
-
-    // Lang switch
-    function toggleLangMenu() {
-      const m = document.querySelector('.lang-switch-menu');
-      m.classList.toggle('open');
-    }
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.lang-switch')) {
-        document.querySelector('.lang-switch-menu')?.classList.remove('open');
-      }
-    });
-
-    // Mobile nav toggle
-    function toggleMobileNav() {
-      const links = document.getElementById('navLinks');
-      const overlay = document.getElementById('navOverlay');
-      const hamburger = document.querySelector('.hamburger-icon');
-      const close = document.querySelector('.close-icon');
-      const isOpen = links.classList.toggle('open');
-      overlay.classList.toggle('active');
-      hamburger.style.display = isOpen ? 'none' : 'block';
-      close.style.display = isOpen ? 'block' : 'none';
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    }
-    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
-      if (window.innerWidth <= 900) toggleMobileNav();
-    }));
-
-    // Back to top
-    window.addEventListener('scroll', () => {
-      document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
-    });
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Baidu URLワイルドカード完全ガイド：全9パラメータの使い方",
-    "description": "Baidu URLワイルドカードを使いこなしてキーワード、キャンペーン、広告グループを正確にトラッキング。全9つのサポートパラメータ、実践例、UTM連携手順を網羅した完全ガイド。",
-    "url": "https://baidumarketing.com/ja/blog/baidu-url-wildcard-guide",
-    "image": "https://baidumarketing.com/assets/og-brand-default.png",
-    "datePublished": "2023-05-19",
-    "author": {
-      "@type": "Organization",
-      "name": "Baidu PPC Pro"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Baidu PPC Pro"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://baidumarketing.com/ja/blog/baidu-url-wildcard-guide"
-    }
-  }
-  </script>
-</body>
-</html>
+    // Theme toggle

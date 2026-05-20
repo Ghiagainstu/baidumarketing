@@ -207,14 +207,6 @@
     .back-to-top.visible { opacity: 1; pointer-events: auto; }
     .back-to-top svg { width: 20px; height: 20px; }
 
-    .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; transition: all var(--transition-base); color: var(--gray-600); }
-    .theme-toggle:hover { border-color: var(--blue); color: var(--blue); transform: rotate(15deg); }
-    .theme-toggle svg { width: 18px; height: 18px; }
-    .nav-mobile-cta,.nav-mobile-theme{display:none}
-    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
 
     @media (max-width: 900px) {
       .nav-links { display: none; flex-direction: column; position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: #fff; padding: 80px 32px 32px; box-shadow: -4px 0 24px rgba(0,0,0,.15); z-index: 100; gap: 8px; }
@@ -274,10 +266,7 @@
             <a href="/ja/" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
           </div>
         </div>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
+        
         <a href="/ja/contact.html" class="nav-cta">今すぐ始める →</a>
       </div>
       <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
@@ -607,74 +596,4 @@
 
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
 
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#0B0F1A' : '#FFFFFF';
-    }
-    (function() {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.querySelector('meta[name="theme-color"]').content = '#0B0F1A';
-      }
-    })();
-
-    let mobileNavOpen = false;
-    function toggleMobileNav() {
-      const links = document.getElementById('navLinks'), h = document.querySelector('.hamburger-icon'), c = document.querySelector('.close-icon'), o = document.getElementById('navOverlay');
-      mobileNavOpen = !mobileNavOpen;
-      if (mobileNavOpen) { links.classList.add('open'); h.style.display = 'none'; c.style.display = 'block'; o.classList.add('active'); document.body.style.overflow = 'hidden'; }
-      else { links.classList.remove('open'); h.style.display = 'block'; c.style.display = 'none'; o.classList.remove('active'); document.body.style.overflow = ''; }
-    }
-    document.querySelectorAll('.nav-links a').forEach(a => { a.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); }); });
-
-    window.addEventListener('scroll', function(){var b=document.getElementById('backToTop');if(b){if(window.scrollY>400)b.classList.add('visible');else b.classList.remove('visible')}});
-
-    document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
-
-    function toggleLangMenu() {
-      const menu = document.getElementById('langMenu');
-      menu.classList.toggle('open');
-    }
-    document.addEventListener('click', function(e) {
-      const menu = document.getElementById('langMenu');
-      const btn = document.querySelector('.lang-switch-btn');
-      if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
-        menu.classList.remove('open');
-      }
-    });
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "百度の無効クリック保護：広告予算を守る仕組み",
-      "description": "百度の高度なフィルタリングシステムがPPC予算を無効クリックやボットトラフィックからどのように保護するかを解説。商盾ツールと広告主向けベストプラクティスをご紹介します。",
-      "url": "https://baidumarketing.com/ja/blog/baidu-invalid-click-protection",
-      "image": "https://baidumarketing.com/assets/og-brand-default.png",
-      "datePublished": "2020-08-17",
-      "dateModified": "2020-08-17",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Baidu PPC Pro",
-        "url": "https://baidumarketing.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://baidumarketing.com/assets/og-brand-default.png",
-          "width": 1200,
-          "height": 630
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://baidumarketing.com/ja/blog/baidu-invalid-click-protection"
-      }
-    }
-  </script>
-</body>
-</html>
+  <script>
