@@ -293,7 +293,86 @@
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
-  </style>
+      /* Language switcher in nav */
+    .nav-right-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .lang-switch { position: relative; }
+    .lang-switch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-200);
+      background: transparent;
+      cursor: pointer;
+      font-size: .9rem;
+      color: var(--gray-600);
+      transition: all var(--transition-base);
+      line-height: 1;
+    }
+    .lang-switch-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    .lang-switch-menu {
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      box-shadow: var(--shadow-md);
+      min-width: 150px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-4px);
+      transition: opacity .2s ease, transform .2s ease;
+      z-index: 200;
+    }
+    .lang-switch-menu.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .lang-switch-item {
+      display: block;
+      padding: 10px 16px;
+      font-size: .9rem;
+      color: var(--gray-700);
+      transition: background .15s;
+      white-space: nowrap;
+    }
+    .lang-switch-item:hover {
+      background: var(--blue-light);
+      color: var(--blue);
+    }
+    .lang-switch-item:first-child { border-radius: 7px 7px 0 0; }
+    .lang-switch-item:last-child { border-radius: 0 0 7px 7px; }
+    [data-theme="dark"] .lang-switch-btn {
+      border-color: var(--gray-200);
+      color: var(--gray-600);
+    }
+    [data-theme="dark"] .lang-switch-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    [data-theme="dark"] .lang-switch-menu {
+      background: #0B0F1A;
+      border-color: var(--gray-200);
+    }
+    [data-theme="dark"] .lang-switch-item {
+      color: var(--gray-700);
+    }
+    [data-theme="dark"] .lang-switch-item:hover {
+      background: rgba(99,102,241,.12);
+      color: var(--blue);
+    }
+</style>
 </head>
 <body>
   <nav>
