@@ -416,7 +416,29 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+    <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())
+  function toggleLangMenu() {
+    const menu = document.getElementById('langSwitchMenu');
+    if (menu) menu.classList.toggle('active');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('langSwitchMenu');
+    const btn = document.querySelector('.lang-switch-btn');
+    if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove('active');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = document.documentElement.lang || 'en';
+    document.querySelectorAll('.lang-switch-item').forEach(function(item) {
+      if (item.getAttribute('lang') === currentLang) {
+        item.style.fontWeight = '600';
+        item.style.pointerEvents = 'none';
+        item.style.opacity = '0.5';
+      }
+    });
+  });
+</script> Baidu PPC Pro. All rights reserved.</div>
     <div class="footer-social">
       <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>

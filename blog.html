@@ -1056,7 +1056,29 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
 </button>
 
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js" defer>
+  function toggleLangMenu() {
+    const menu = document.getElementById('langSwitchMenu');
+    if (menu) menu.classList.toggle('active');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('langSwitchMenu');
+    const btn = document.querySelector('.lang-switch-btn');
+    if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove('active');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = document.documentElement.lang || 'en';
+    document.querySelectorAll('.lang-switch-item').forEach(function(item) {
+      if (item.getAttribute('lang') === currentLang) {
+        item.style.fontWeight = '600';
+        item.style.pointerEvents = 'none';
+        item.style.opacity = '0.5';
+      }
+    });
+  });
+</script>
 
 
 

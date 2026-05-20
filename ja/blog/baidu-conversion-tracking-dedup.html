@@ -175,6 +175,28 @@
     (function(){ var t=document.documentElement, s; try { s=localStorage.getItem('theme'); } catch(e){} if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)) t.setAttribute('data-theme','dark'); })();
     document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
   
-  </script>
+  
+  function toggleLangMenu() {
+    const menu = document.getElementById('langSwitchMenu');
+    if (menu) menu.classList.toggle('active');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('langSwitchMenu');
+    const btn = document.querySelector('.lang-switch-btn');
+    if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove('active');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = document.documentElement.lang || 'en';
+    document.querySelectorAll('.lang-switch-item').forEach(function(item) {
+      if (item.getAttribute('lang') === currentLang) {
+        item.style.fontWeight = '600';
+        item.style.pointerEvents = 'none';
+        item.style.opacity = '0.5';
+      }
+    });
+  });
+</script>
 
 </body></html>

@@ -374,6 +374,28 @@
 <script>
 document.querySelectorAll('.obf-email-link').forEach(function(e){var a=e.dataset.u+'@'+e.dataset.d;e.href='mailto:'+a;if(!e.textContent.trim())e.textContent=a});
 document.querySelectorAll('.obf-email-icon').forEach(function(e){e.href='mailto:'+e.dataset.u+'@'+e.dataset.d});
+
+  function toggleLangMenu() {
+    const menu = document.getElementById('langSwitchMenu');
+    if (menu) menu.classList.toggle('active');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('langSwitchMenu');
+    const btn = document.querySelector('.lang-switch-btn');
+    if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove('active');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = document.documentElement.lang || 'en';
+    document.querySelectorAll('.lang-switch-item').forEach(function(item) {
+      if (item.getAttribute('lang') === currentLang) {
+        item.style.fontWeight = '600';
+        item.style.pointerEvents = 'none';
+        item.style.opacity = '0.5';
+      }
+    });
+  });
 </script>
 
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
