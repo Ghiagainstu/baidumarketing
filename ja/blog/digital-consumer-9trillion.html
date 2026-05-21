@@ -1546,6 +1546,6 @@ function toggleMobileNav() {
   const o = document.getElementById('navOverlay');
   mobileNavOpen = !mobileNavOpen;
   if (mobileNavOpen) { links.classList.add('open'); h.style.display = 'none'; c.style.display = 'block'; o.classList.add('active'); document.body.style.overflow = 'hidden'; }
-  else { links.classList.remove('open'); h.style.display = 'block'; c.style.display = 'none'; o.classList.remove('active'); document.body.style.overflow = ''; }
+  else { links.classList.remove('open'); h.style.display = 'block'; c.style.display = 'none'; o.classList.remove('open'); document.body.style.overflow = ''; }
 }
 document.querySelectorAll('.nav-links a').forEach(l => { l.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); }); });

@@ -1582,7 +1582,7 @@
     if (mobileNavOpen) {
       links.classList.add('open'); hamburger.style.display = 'none'; closeX.style.display = 'block'; overlay.classList.add('active'); document.body.style.overflow = 'hidden';
     } else {
-      links.classList.remove('open'); hamburger.style.display = 'block'; closeX.style.display = 'none'; overlay.classList.remove('active'); document.body.style.overflow = '';
+      links.classList.remove('open'); hamburger.style.display = 'block'; closeX.style.display = 'none'; overlay.classList.remove('open'); document.body.style.overflow = '';
     }
   }
   document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); }); });

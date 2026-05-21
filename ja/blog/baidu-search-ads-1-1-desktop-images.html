@@ -1412,7 +1412,7 @@
       const overlay = document.getElementById('navOverlay');
       mobileNavOpen = !mobileNavOpen;
       if (mobileNavOpen) { links.classList.add('open'); overlay.classList.add('active'); } 
-      else { links.classList.remove('open'); overlay.classList.remove('active'); }
+      else { links.classList.remove('open'); overlay.classList.remove('open'); }
     }
     (function(){ var t=document.documentElement, s; try { s=localStorage.getItem('theme'); } catch(e){} if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)) t.setAttribute('data-theme','dark'); })();
     document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent.trim())el.textContent=a});
@@ -1420,13 +1420,13 @@
   
   function toggleLangMenu() {
     const menu = document.getElementById('langSwitchMenu');
-    if (menu) menu.classList.toggle('active');
+    if (menu) menu.classList.toggle('open');
   }
   document.addEventListener('click', function(e) {
     const menu = document.getElementById('langSwitchMenu');
     const btn = document.querySelector('.lang-switch-btn');
     if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.remove('active');
+      menu.classList.remove('open');
     }
   });
   document.addEventListener('DOMContentLoaded', function() {
