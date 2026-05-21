@@ -379,7 +379,7 @@ function listPages(langCode) {
 }
 
 function generateSitemap() {
-  const baseURL = 'https://baidumarketing.com';
+  const baseURL = 'https://www.baidumarketing.com';
   const lines = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',

@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.baidumarketing.com/</loc>
-      <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/" />
+    <loc>https://www.baidumarketing.com</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/" />
     <priority>1.0</priority>
   </url>
@@ -74,6 +74,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/2020-baidu-b2b-industry-insights</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/8-ways-lower-baidu-cpc</loc>
     <priority>0.6</priority>
   </url>
@@ -82,7 +86,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/b2b-lead-generation-framework</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-2025-earnings-geo</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-2026-international-brands</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-2026-new-opportunities</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -90,7 +106,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-ad-creation-workflow-simplified-creative-upgrade</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-ad-display-name-update</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-ad-performance-diagnostic-tool</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-ads-campaign-upgrade-2025</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -106,11 +134,39 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-brand-info-account-level</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-brand-protection-guide</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-brand-zh-cn-keywords</loc>
+    <loc>https://www.baidumarketing.com/blog/baidu-brand-zone-generic-keywords</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-brand-zone-material-pre-review</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-click-fraud-ipv4-blocking</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-conflicting-negative-keywords-feature</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-conversion-tracking-dedup</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-creative-url-retirement-migration</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-custom-form-retirement</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -126,6 +182,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-feed-ads-history-operation-records-upgrade</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-inactive-keyword-cleanup-2025</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-invalid-click-protection</loc>
     <priority>0.6</priority>
   </url>
@@ -134,7 +198,23 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-keyword-zero-impression-diagnosis-tool</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-landing-page-audit-rejection-reasons</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-landing-page-report</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-mcc-account-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-ocpc-skip-data-accumulation</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -159,6 +239,14 @@
   </url>
   <url>
     <loc>https://www.baidumarketing.com/blog/baidu-search-ad-video-format-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-search-ads-1-1-desktop-images</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-search-device-bid-coefficient-retirement</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -190,6 +278,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/chinese-consumers-decision-journey</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/cpm-ocpm-ecpm-explained</loc>
     <priority>0.6</priority>
   </url>
@@ -199,6 +291,10 @@
   </url>
   <url>
     <loc>https://www.baidumarketing.com/blog/digital-marketing-china</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/faq-international-brands</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -226,7 +322,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/blog/rising-cpm-baidu-ad</loc>
+    <loc>https://www.baidumarketing.com/blog/rising-cpm-bad-baidu</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -234,68 +330,72 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-2026-new-opportunities</loc>
+    <loc>https://www.baidumarketing.com/blog/why-b2b-baidu-search</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/ja/</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/" />
+    <loc>https://www.baidumarketing.com/ja</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/about</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/about" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/about" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/features</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/features" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/features" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/pricing</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/pricing" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/pricing" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/clients</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/clients" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/clients" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/faq</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/faq" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/contact</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/contact" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/contact" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/blog</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/why-baidu-ppc-pro</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/why-baidu-ppc-pro" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/why-baidu-ppc-pro" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/china-geo</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/china-geo" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/china-geo" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/privacy</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/privacy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/privacy" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/terms</loc>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/terms" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/terms" />
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/2020-baidu-b2b-industry-insights</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/blog/8-ways-lower-baidu-cpc</loc>
@@ -306,7 +406,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/b2b-lead-generation-framework</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-2025-earnings-geo</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-2026-international-brands</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-2026-new-opportunities</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -314,7 +426,15 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-ad-creation-workflow-simplified-creative-upgrade</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-ad-display-name-update</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-ad-performance-diagnostic-tool</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -330,11 +450,31 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-brand-info-account-level</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-brand-protection-guide</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-brand-zh-cn-keywords</loc>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-brand-zone-generic-keywords</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-click-fraud-ipv4-blocking</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-conflicting-negative-keywords-feature</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-conversion-tracking-dedup</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-creative-url-retirement-migration</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -350,6 +490,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-feed-ads-history-operation-records-upgrade</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-inactive-keyword-cleanup-2025</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-invalid-click-protection</loc>
     <priority>0.6</priority>
   </url>
@@ -358,7 +506,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-landing-page-audit-rejection-reasons</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-landing-page-report</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-mcc-account-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-ocpc-skip-data-accumulation</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -383,6 +543,14 @@
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-search-ad-video-format-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-search-ads-1-1-desktop-images</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-search-device-bid-coefficient-retirement</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -414,6 +582,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/chinese-consumers-decision-journey</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/cpm-ocpm-ecpm-explained</loc>
     <priority>0.6</priority>
   </url>
@@ -423,6 +595,10 @@
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/blog/digital-marketing-china</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/faq-international-brands</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -450,7 +626,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/ja/blog/rising-cpm-baidu-ad</loc>
+    <loc>https://www.baidumarketing.com/ja/blog/rising-cpm-bad-baidu</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -458,391 +634,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-2026-new-opportunities</loc>
+    <loc>https://www.baidumarketing.com/ja/blog/why-b2b-baidu-search</loc>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/2020-baidu-b2b-industry-insights</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/2020-baidu-b2b-industry-insights</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/2020-baidu-b2b-industry-insights</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-search-ads-1-1-desktop-images</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-creative-url-retirement-migration</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-search-ads-1-1-desktop-images</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-creative-url-retirement-migration</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-inactive-keyword-cleanup-2025</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-inactive-keyword-cleanup-2025</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-conflicting-negative-keywords-feature</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-conflicting-negative-keywords-feature</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-ads-campaign-upgrade-2025</loc>
-    <lastmod>2025-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-custom-form-retirement</loc>
-    <lastmod>2024-07-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-brand-zone-material-pre-review</loc>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-keyword-zero-impression-diagnosis-tool</loc>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-ad-creation-workflow-simplified-creative-upgrade</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-brand-info-account-level</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/ja/blog/baidu-brand-info-account-level</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/why-b2b-baidu-search</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/ja/blog/why-b2b-baidu-search</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/chinese-consumers-decision-journey</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/ja/blog/chinese-consumers-decision-journey</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/b2b-lead-generation-framework</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/ja/blog/b2b-lead-generation-framework</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/baidu-2026-international-brands</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/ja/blog/baidu-2026-international-brands</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/blog/faq-international-brands</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baidumarketing.com/ja/blog/faq-international-brands</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-ad-creation-workflow-simplified-creative-upgrade.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-ad-performance-diagnostic-tool.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-ads-campaign-upgrade-2025.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-brand-info-account-level.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-click-fraud-ipv4-blocking.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-conversion-tracking-dedup.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-creative-url-retirement-migration.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-custom-form-retirement.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-feed-ads-history-operation-records-upgrade.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-inactive-keyword-cleanup-2025.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-landing-page-audit-rejection-reasons.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-landing-page-report.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-ocpc-skip-data-accumulation.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-search-ads-1-1-desktop-images.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/baidu-search-device-bid-coefficient-retirement.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/blog/faq-international-brands.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-ad-performance-diagnostic-tool.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/china-internet-numbers-2025.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-brand-info-account-level.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-click-fraud-ipv4-blocking.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-conversion-tracking-dedup.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-creative-url-retirement-migration.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-feed-ads-history-operation-records-upgrade.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-audience-targeting-guide.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-landing-page-audit-rejection-reasons.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-landing-page-report.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-ocpc-skip-data-accumulation.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-search-ads-1-1-desktop-images.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/baidu-search-device-bid-coefficient-retirement.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ja/blog/faq-international-brands.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-ad-performance-diagnostic-tool.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-brand-info-account-level.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-click-fraud-ipv4-blocking.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-conversion-tracking-dedup.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-feed-ads-history-operation-records-upgrade.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-landing-page-audit-rejection-reasons.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-landing-page-report.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-ocpc-skip-data-accumulation.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-search-device-bid-coefficient-retirement.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/baidu-2026-new-opportunities.html</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
