@@ -195,7 +195,7 @@
       gap: 8px;
       flex-shrink: 0;
     }
-    .lang-switch { position: relative; z-index: 50; }
+    .lang-switch { position: relative; z-index: 9999 !important; }
     .lang-switch-btn {
       display: inline-flex;
       align-items: center;
@@ -209,7 +209,7 @@
       color: var(--gray-600);
       transition: all var(--transition-base);
       line-height: 1;
-    z-index: 51; }
+    z-index: 51;  pointer-events: auto !important;}
     .lang-switch-btn:hover {
       border-color: var(--blue);
       color: var(--blue);
@@ -1494,7 +1494,7 @@
       gap: 8px;
       flex-shrink: 0;
     }
-    .lang-switch { position: relative; z-index: 50; }
+    .lang-switch { position: relative; z-index: 9999 !important; }
     .lang-switch-btn {
       display: inline-flex;
       align-items: center;

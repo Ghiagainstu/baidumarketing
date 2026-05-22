@@ -177,7 +177,7 @@
       gap: 8px;
       flex-shrink: 0;
     }
-    .lang-switch { position: relative; z-index: 50; }
+    .lang-switch { position: relative; z-index: 9999 !important; }
     .lang-switch-btn {
       display: inline-flex;
       align-items: center;
@@ -191,7 +191,7 @@
       color: var(--gray-600);
       transition: all var(--transition-base);
       line-height: 1;
-    z-index: 51; }
+    z-index: 51;  pointer-events: auto !important;}
     .lang-switch-btn:hover {
       border-color: var(--blue);
       color: var(--blue);
@@ -1245,7 +1245,7 @@
     [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
     
     .nav-right-group { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-    .lang-switch { position: relative; z-index: 50; }
+    .lang-switch { position: relative; z-index: 9999 !important; }
     .lang-switch-btn { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; font-size: .9rem; color: var(--gray-600); transition: all var(--transition-base); line-height: 1; }
     .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
     .lang-switch-menu { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; box-shadow: var(--shadow-md); min-width: 150px; opacity: 0; pointer-events: none; transform: translateY(-4px); transition: opacity .2s ease, transform .2s ease; z-index: 200; }
