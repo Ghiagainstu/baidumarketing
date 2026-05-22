@@ -356,13 +356,13 @@
   <script src="/assets/js/main.js" defer></script>
 <script>function toggleLangMenu() {
     const menu = document.getElementById('langSwitchMenu');
-    if (menu) menu.classList.toggle('active');
+    if (menu) menu.classList.toggle('open');
   }
   document.addEventListener('click', function(e) {
     const menu = document.getElementById('langSwitchMenu');
     const btn = document.querySelector('.lang-switch-btn');
     if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.remove('active');
+      menu.classList.remove('open');
     }
   });
   document.addEventListener('DOMContentLoaded', function() {
