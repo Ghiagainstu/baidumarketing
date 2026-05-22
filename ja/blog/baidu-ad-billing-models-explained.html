@@ -79,7 +79,7 @@
     body { font-family: system-ui, -apple-system, sans-serif; color: var(--gray-900); line-height: 1.6; }
     a { color: var(--blue); text-decoration: none; }
     .nav-inner { max-width: 1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
-    .nav-links { display:flex; gap:24px; align-items:center; }
+    .nav-links { display:flex; gap:24px; align-items:center; } html[lang="ja"] .nav-links { gap:20px; font-size:.82rem; }
     .nav-links a { color: var(--gray-700); font-size:.9rem; }
     .nav-links a:hover { color: var(--blue); }
     .nav-cta { background: var(--blue); color:#fff; padding:8px 20px; border-radius:8px; font-size:.85rem; font-weight:600; }
@@ -161,7 +161,7 @@
         <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="言語">&#x1f1ef;&#x1f1f5;<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="lang-switch-menu" id="langSwitchMenu">
             <a href="/blog/baidu-ad-billing-models-explained" lang="en" class="lang-switch-item">&#x1f1fa;&#x1f1f8; English</a>
-            <a href="/ja/blog/baidu-ad-billing-models-explained" lang="ja" class="lang-switch-item">&#x1f1ef;&#x1f1f5; 日本語</a>
+            <a href="/ja/blog/baidu-ad-billing-models-explained.html" lang="ja" class="lang-switch-item">&#x1f1ef;&#x1f1f5; 日本語</a>
         </div>
       </div>
       <a href="/ja/contact.html" class="nav-cta">今すぐ始める →</a>
@@ -174,7 +174,7 @@
   <section class="article-hero">
     <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
     <div class="container">
-      <div class="breadcrumb"><a href="/ja/">ホーム</a> / <a href="/ja/blog">ブログ</a> / 課金モデル</div>
+      <div class="breadcrumb"><a href="/ja/">ホーム</a> / <a href="/ja/blog.html">ブログ</a> / 課金モデル</div>
       <h1 class="article-title">百度広告の課金モデル——CPM・CPC・oCPMの特徴と使い分け方</h1>
       <div class="article-meta"><span>2026年5月3日</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>読了時間 約5分</span>
     <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro チーム</span>
@@ -348,17 +348,17 @@
   <div class="container">
     <h2>📚 おすすめの記事</h2>
     <div class="related-grid">
-      <a href="/ja/blog/cpm-ocpm-ecpm-explained" class="related-card">
+      <a href="/ja/blog/cpm-ocpm-ecpm-explained.html" class="related-card">
         <span>検索広告</span>
         <h4>CPM vs oCPM vs eCPM——百度広告主が必ず理解すべき3つの指標</h4>
         <p>広告主はoCPMで入札し、システムがeCPMで順位ををつけ、表示されるのはCPM単価。混乱したままでは予算を無駄にします。</p>
       </a>
-      <a href="/ja/blog/rising-cpm-bad-baidu" class="related-card">
+      <a href="/ja/blog/rising-cpm-bad-baidu.html" class="related-card">
         <span>検索広告</span>
         <h4>CPM上昇は百度キャンペーンにとって本当に悪いニュースなのか？</h4>
         <p>実際のキャンペーン事例：CPMは28元から36元に上昇しましたが、CPAは120元から72元に下落しました。</p>
       </a>
-      <a href="/ja/blog/ocpc-explained" class="related-card">
+      <a href="/ja/blog/ocpc-explained.html" class="related-card">
         <span>検索広告</span>
         <h4>oCPCを解説——AI入札でリード単価を引き下げる方法</h4>
         <p>oCPCは各クリックのコンバージョン確率を推定し、入札額をリアルタイムで調整します。手動CPCよりCPAを20〜40%引き下げます。</p>
@@ -404,7 +404,7 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
-      <div class="footer-lang"><a href="/blog/baidu-ad-billing-models-explained">English</a> | <a href="/ja/blog/baidu-ad-billing-models-explained">日本語</a></div>
+      <div class="footer-lang"><a href="/blog/baidu-ad-billing-models-explained">English</a> | <a href="/ja/blog/baidu-ad-billing-models-explained.html">日本語</a></div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

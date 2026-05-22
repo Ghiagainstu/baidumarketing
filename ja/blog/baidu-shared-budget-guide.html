@@ -79,7 +79,7 @@
     body { font-family: system-ui, -apple-system, sans-serif; color: var(--gray-900); line-height: 1.6; }
     a { color: var(--blue); text-decoration: none; }
     .nav-inner { max-width: 1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
-    .nav-links { display:flex; gap:24px; align-items:center; }
+    .nav-links { display:flex; gap:24px; align-items:center; } html[lang="ja"] .nav-links { gap:20px; font-size:.82rem; }
     .nav-links a { color: var(--gray-700); font-size:.9rem; }
     .nav-links a:hover { color: var(--blue); }
     .nav-cta { background: var(--blue); color:#fff; padding:8px 20px; border-radius:8px; font-size:.85rem; font-weight:600; }
@@ -153,7 +153,7 @@
         <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="言語">&#x1f1ef;&#x1f1f5;<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="lang-switch-menu" id="langSwitchMenu">
             <a href="/blog/baidu-shared-budget-guide" lang="en" class="lang-switch-item">&#x1f1fa;&#x1f1f8; English</a>
-            <a href="/ja/blog/baidu-shared-budget-guide" lang="ja" class="lang-switch-item">&#x1f1ef;&#x1f1f5; 日本語</a>
+            <a href="/ja/blog/baidu-shared-budget-guide.html" lang="ja" class="lang-switch-item">&#x1f1ef;&#x1f1f5; 日本語</a>
         </div>
       </div>
       <a href="/ja/contact.html" class="nav-cta">今すぐ始める →</a>
@@ -166,7 +166,7 @@
   <section class="article-hero">
     <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(41,50,225,.06) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
     <div class="container">
-      <div class="breadcrumb"><a href="/ja/">ホーム</a> / <a href="/ja/blog">ブログ</a> / 共有予算</div>
+      <div class="breadcrumb"><a href="/ja/">ホーム</a> / <a href="/ja/blog.html">ブログ</a> / 共有予算</div>
       <h1 class="article-title">Baidu共有予算ガイド：キャンペーン間の広告費の無駄をなくす</h1>
       <div class="article-meta"><span>2023年3月22日</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 読了時間：約5分</span>
     <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro チーム</span>
@@ -307,17 +307,17 @@
   <div class="container">
     <h2>📚 こちらもおすすめ</h2>
     <div class="related-grid">
-      <a href="/ja/blog/baidu-ad-billing-models-explained" class="related-card">
+      <a href="/ja/blog/baidu-ad-billing-models-explained.html" class="related-card">
         <span>検索広告</span>
         <h4>Baidu広告課金モデル：CPM、CPC、oCPMの使い分け</h4>
         <p>ブランドにはCPM、検索意図にはCPC、コンバージョンにはoCPM。間違ったモデルを選ぶと予算を無駄にします。</p>
       </a>
-      <a href="/ja/blog/8-ways-lower-baidu-cpc" class="related-card">
+      <a href="/ja/blog/8-ways-lower-baidu-cpc.html" class="related-card">
         <span>検索広告</span>
         <h4>成果を犠牲にせずBaidu CPCを下げる8つの方法</h4>
         <p>ロングテールキーワード、地域ターゲティング、ブランド保護まで。</p>
       </a>
-      <a href="/ja/blog/baidu-mcc-account-guide" class="related-card">
+      <a href="/ja/blog/baidu-mcc-account-guide.html" class="related-card">
         <span>検索広告</span>
         <h4>Baidu MCCアカウント：複数PPCアカウントの管理方法</h4>
         <p>1つのダッシュボードで最大500アカウント。アカウントタイプ、登録手順、よくある問題。</p>
@@ -363,7 +363,7 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
-      <div class="footer-lang"><a href="/blog/baidu-shared-budget-guide">English</a> | <a href="/ja/blog/baidu-shared-budget-guide">日本語</a></div>
+      <div class="footer-lang"><a href="/blog/baidu-shared-budget-guide">English</a> | <a href="/ja/blog/baidu-shared-budget-guide.html">日本語</a></div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

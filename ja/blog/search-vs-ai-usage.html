@@ -79,7 +79,7 @@
     body { font-family: system-ui, -apple-system, sans-serif; color: var(--gray-900); line-height: 1.6; }
     a { color: var(--blue); text-decoration: none; }
     .nav-inner { max-width: 1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
-    .nav-links { display:flex; gap:24px; align-items:center; }
+    .nav-links { display:flex; gap:24px; align-items:center; } html[lang="ja"] .nav-links { gap:20px; font-size:.82rem; }
     .nav-links a { color: var(--gray-700); font-size:.9rem; }
     .nav-links a:hover { color: var(--blue); }
     .nav-cta { background: var(--blue); color:#fff; padding:8px 20px; border-radius:8px; font-size:.85rem; font-weight:600; }
@@ -161,7 +161,7 @@
         <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="言語">&#x1f1ef;&#x1f1f5;<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="lang-switch-menu" id="langSwitchMenu">
             <a href="/blog/search-vs-ai-usage" lang="en" class="lang-switch-item">&#x1f1fa;&#x1f1f8; English</a>
-            <a href="/ja/blog/search-vs-ai-usage" lang="ja" class="lang-switch-item">&#x1f1ef;&#x1f1f5; 日本語</a>
+            <a href="/ja/blog/search-vs-ai-usage.html" lang="ja" class="lang-switch-item">&#x1f1ef;&#x1f1f5; 日本語</a>
         </div>
       </div>
       <a href="/ja/contact.html" class="nav-cta">今すぐ始める →</a>
@@ -173,7 +173,7 @@
   <section class="page-hero">
     <div class="container">
       <div class="breadcrumb">
-        <a href="/ja/">ホーム</a><span>›</span><a href="/ja/blog">ブログ</a><span>›</span><span>市場インサイト</span>
+        <a href="/ja/">ホーム</a><span>›</span><a href="/ja/blog.html">ブログ</a><span>›</span><span>市場インサイト</span>
       </div>
       <span class="article-tag">市場インサイト</span>
       <h1 class="article-title">検索利用率69.5%への低下——検索は死にかけているのか？実は違う</h1>
@@ -315,15 +315,15 @@
     <div class="container">
       <h3 class="related-title">関連記事</h3>
       <div class="related-grid">
-        <a href="/ja/blog/baidu-2025-earnings-geo" class="related-card">
+        <a href="/ja/blog/baidu-2025-earnings-geo.html" class="related-card">
           <h4>百度の利益が76%減少——そしてそれは朗報である理由</h4>
           <p>百度の2025年決算が示す、中国デジタルマーケティングにおけるAIシフトの影響。</p>
         </a>
-        <a href="/ja/blog/digital-consumer-9trillion" class="related-card">
+        <a href="/ja/blog/digital-consumer-9trillion.html" class="related-card">
           <h4>中国のデジタル消費者：9.37兆元と9億5,800万人の購買層</h4>
           <p>CNNICデータの詳細：これらの数字が広告予算に与える意味。</p>
         </a>
-        <a href="/ja/blog/baidu-feed-ads-explained" class="related-card">
+        <a href="/ja/blog/baidu-feed-ads-explained.html" class="related-card">
           <h4>百度フィード広告の仕組みとその重要性</h4>
           <p>中国市場における検索広告を補完する発見型広告。</p>
         </a>
@@ -368,7 +368,7 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
-      <div class="footer-lang"><a href="/blog/search-vs-ai-usage">English</a> | <a href="/ja/blog/search-vs-ai-usage">日本語</a></div>
+      <div class="footer-lang"><a href="/blog/search-vs-ai-usage">English</a> | <a href="/ja/blog/search-vs-ai-usage.html">日本語</a></div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>
