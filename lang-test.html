@@ -12,7 +12,7 @@
 <h2>语言切换测试</h2>
 <div class="nav-right-group">
   <div class="lang-switch">
-    <button class="lang-switch-btn" onclick="toggleLangMenu()">🇺🇸 Language ▼</button>
+    <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()">🇺🇸 Language ▼</button>
     <div class="lang-switch-menu" id="langSwitchMenu">
       <a href="#" class="lang-switch-item">🇺🇸 English</a>
       <a href="#" class="lang-switch-item">🇯🇵 日本語</a>
