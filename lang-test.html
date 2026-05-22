@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Lang Test</title>
+<style>
+.nav-right-group{display:flex;align-items:center;gap:8px;}
+.lang-switch{position:relative;}
+.lang-switch-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;border:1px solid #ccc;background:#fff;cursor:pointer;font-size:.9rem;}
+.lang-switch-menu{position:absolute;top:100%;right:0;background:#fff;border:1px solid #ccc;border-radius:8px;min-width:150px;opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .2s,transform .2s;z-index:9999;}
+.lang-switch-menu.open{opacity:1;pointer-events:auto;transform:translateY(0);}
+.lang-switch-item{display:block;padding:10px 16px;text-decoration:none;color:#333;}
+.lang-switch-item:hover{background:#f0f0ff;}
+</style></head>
+<body style="padding:40px;font-family:sans-serif">
+<h2>语言切换测试</h2>
+<div class="nav-right-group">
+  <div class="lang-switch">
+    <button class="lang-switch-btn" onclick="toggleLangMenu()">🇺🇸 Language ▼</button>
+    <div class="lang-switch-menu" id="langSwitchMenu">
+      <a href="#" class="lang-switch-item">🇺🇸 English</a>
+      <a href="#" class="lang-switch-item">🇯🇵 日本語</a>
+    </div>
+  </div>
+</div>
+<script>
+function toggleLangMenu(){var m=document.getElementById('langSwitchMenu');if(m)m.classList.toggle('open');}
+document.addEventListener('click',function(e){var m=document.getElementById('langSwitchMenu');var b=document.querySelector('.lang-switch-btn');if(m&&b&&!b.contains(e.target)&&!m.contains(e.target))m.classList.remove('open');});
+</script>
+</body></html>
