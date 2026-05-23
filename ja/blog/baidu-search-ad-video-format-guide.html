@@ -425,10 +425,74 @@
 </button>
 
 <script>
-  function toggleLangMenu() { var m = document.getElementById('langSwitchMenu'); if (m) m.classList.toggle('open'); }
-  document.addEventListener('click', function(e) { var m = document.getElementById('langSwitchMenu'); var b = document.querySelector('.lang-switch-btn'); if (m && b && !b.contains(e.target) && !m.contains(e.target)) m.classList.remove('open'); });
+function toggleLangMenu() {
+  const menu = document.getElementById('langSwitchMenu');
+  if (menu) menu.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('langSwitchMenu');
+  const btn = document.querySelector('.lang-switch-btn');
+  if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const currentLang = document.documentElement.lang || 'en';
+  document.querySelectorAll('.lang-switch-item').forEach(function(item) {
+    if (item.getAttribute('lang') === currentLang) {
+      item.style.fontWeight = '600';
+      item.style.pointerEvents = 'none';
+      item.style.opacity = '0.5';
+    }
+  });
+});
 
-(function(){const t=document.getElementById('backToTop');window.addEventListener('scroll',()=>{t.classList.toggle('visible',window.scrollY>400)});const s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.setAttribute('data-theme','dark')}document.querySelectorAll('.nav-links a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop()||a.getAttribute('href')===location.pathname.split('/').pop().replace('.html',''))a.classList.add('active')});document.querySelectorAll('.nav-links.open a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop()||a.getAttribute('href')===location.pathname.split('/').pop().replace('.html',''))a.classList.add('active')})})();
+function toggleTheme() {
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#0B0F1A' : '#FFFFFF';
+}
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.querySelector('meta[name="theme-color"]').content = '#0B0F1A';
+  }
+})();
+
+let mobileNavOpen = false;
+function toggleMobileNav() {
+  const links = document.getElementById('navLinks');
+  const hamburger = document.querySelector('.hamburger-icon');
+  const closeX = document.querySelector('.close-icon');
+  const overlay = document.getElementById('navOverlay');
+  mobileNavOpen = !mobileNavOpen;
+  if (mobileNavOpen) {
+    links.classList.add('open');
+    hamburger.style.display = 'none';
+    closeX.style.display = 'block';
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  } else {
+    links.classList.remove('open');
+    hamburger.style.display = 'block';
+    closeX.style.display = 'none';
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
+});
+
+document.querySelectorAll('.obf-email').forEach(function(el){el.textContent=el.dataset.u+'@'+el.dataset.d});
+document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
+document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
+
+window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600); });
+
 </script>
 </body>
 </html>
