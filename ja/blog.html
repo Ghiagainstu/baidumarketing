@@ -476,12 +476,12 @@
 <section class="blog-section">
   <div class="container">
     <div class="blog-filter" id="blogFilter">
-      <button class="active" data-filter="all">🌐 All</button>
+      <button class="active" data-filter="all">🌐 すべて</button>
       <button data-filter="insights">📊 市場インサイト</button>
-      <button data-filter="feed">📰 Feed Ads</button>
+      <button data-filter="feed">📰 フィード広告</button>
       <button data-filter="search">🔍 検索広告</button>
-      <button data-filter="strategy">🧠 Strategy</button>
-      <button data-filter="landing">⚡ Landing Page</button>
+      <button data-filter="strategy">🧠 戦略</button>
+      <button data-filter="landing">⚡ ランディングページ</button>
       <button data-filter="platform">📱 プラットフォーム</button>
     </div>
     <div class="blog-grid" id="blogGrid"><article class="blog-card" data-category="insights">
@@ -1093,4 +1093,31 @@ window.addEventListener('scroll', () => { document.getElementById('backToTop').c
 
 
 
+
+<script>
+// Blog category filter
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('[data-filter]');
+  const blogCards = document.querySelectorAll('.blog-card');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+      
+      // Update active state
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Filter cards
+      blogCards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
 </body></html>
