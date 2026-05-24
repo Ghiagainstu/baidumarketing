@@ -757,6 +757,7 @@ document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.datas
 document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
 window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600); });</script>
 
+<script>
   // ====== Counter Animation (easeOutExpo) ======
   function easeOutExpo(x) {
     return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
@@ -835,5 +836,6 @@ window.addEventListener('scroll', () => { document.getElementById('backToTop').c
 
     statEls.forEach(el => statObserver.observe(el));
   }
+</script>
 </body>
 </html>
