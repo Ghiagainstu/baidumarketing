@@ -1975,5 +1975,60 @@ document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.datas
 document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
 window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600); });</script>
 
+
+  // ====== Counter Animation (easeOutExpo) ======
+  function easeOutExpo(x) {
+    return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+  }
+
+  function animateCounter(el, target, prefix, suffix, decimals) {
+    const duration = 2000;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutExpo(progress);
+      const current = eased * target;
+
+      if (decimals > 0) {
+        el.textContent = prefix + current.toFixed(decimals) + suffix;
+      } else {
+        el.textContent = prefix + Math.floor(current) + suffix;
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = prefix + (decimals > 0 ? target.toFixed(decimals) : Math.floor(target)) + suffix;
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  // Also handle .stat-num elements
+  const statEls = document.querySelectorAll('.stat-num');
+  if (statEls.length > 0) {
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          if (el.dataset.counted) return;
+          el.dataset.counted = 'true';
+
+          const target = parseFloat(el.dataset.target);
+          const prefix = el.dataset.prefix || '';
+          const suffix = el.dataset.suffix || '';
+          const decimals = parseInt(el.dataset.decimals) || 0;
+
+          animateCounter(el, target, prefix, suffix, decimals);
+          statObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    statEls.forEach(el => statObserver.observe(el));
+  }
 </body>
 </html>
