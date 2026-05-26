@@ -229,6 +229,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200);
         white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
+    .nav-mobile-panel { display: none; }
     .related-section { padding: 48px 0 80px; background: var(--gray-50); }
     .related-section h2 { font-size: 1.25rem; font-weight: 700; color: var(--gray-800); margin-bottom: 24px; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -337,19 +338,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
 </div></nav>
   <div class="nav-overlay" id="navOverlay" aria-hidden="true" onclick="toggleNav()"></div>
-  <div class="nav-mobile-panel" id="mobilePanel">
-    <a href="why-baidu-ppc-pro">Why Baidu PPC Pro</a>
-    <a href="features">Services</a>
-    <a href="pricing">Pricing</a>
-    <a href="clients">Clients</a>
-    <a href="faq">FAQ</a>
-    <a href="about">About</a>
-    <a href="blog">Blog</a>
-    <a href="contact">Contact</a>
-  </div>
   <main>
     <article class="article-content">
-      <div class="article-category search">Search Ads</div>
       <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog">Blog</a></div>
       <h1 class="article-title">Why Baidu Search Is the Most Underrated B2B Channel for International Brands</h1>
       <div class="article-meta">
@@ -478,22 +468,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-  const btn = document.querySelector('.lang-switch-btn');
-  if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
-    menu.classList.remove('open');
-  }
-});
-document.addEventListener('DOMContentLoaded', function() {
-  const currentLang = document.documentElement.lang || 'en';
-  document.querySelectorAll('.lang-switch-item').forEach(function(item) {
-    if (item.getAttribute('lang') === currentLang) {
-      item.style.fontWeight = '600';
-      item.style.pointerEvents = 'none';
-      item.style.opacity = '0.5';
-    }
-  });
-});
 
+<script>
 function toggleTheme() {
   const html = document.documentElement;
   const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
