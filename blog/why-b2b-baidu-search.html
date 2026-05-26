@@ -313,6 +313,38 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+.callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
+.callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
+.callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+[data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
+[data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+[data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+
+/* Stats Grid */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+.stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
+[data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+.stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); }
+.stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+
+/* Takeaway Box */
+.takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+.takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+.takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+.takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+[data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+
+/* Platform Pills */
+.platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+.platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+.platform-pill.google { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+.platform-pill.linkedin { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+
       [data-theme="dark"] .article-content p { color: var(--gray-600); }
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
@@ -357,7 +389,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     <div class="container">
       <article class="article-content">
 
-<h2>The B2B Traffic Problem No One Talks About</h2>
+<h2>🔍 The B2B Traffic Problem No One Talks About</h2>
 
 <p>Every B2B marketing director we speak to at BPP has a version of the same complaint: "We are spending on LinkedIn, on Google Ads, on trade shows — the pipeline is moving, but the cost per lead keeps creeping up."</p>
 
@@ -371,9 +403,24 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <hr>
 
-<h2>Why B2B and Search Are a Natural Fit</h2>
+<h2>📊 Why B2B and Search Are a Natural Fit</h2>
 
 <p>72% of B2B buyers start their supplier search on a search engine (Salesforce research). In China, that search engine is Baidu — with over 700 million monthly active users and a 97.5% reach among Chinese internet users.</p>
+
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-value">700M+</div>
+    <div class="stat-label">Monthly Active Users</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">97.5%</div>
+    <div class="stat-label">Internet Reach</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">72%</div>
+    <div class="stat-label">B2B Buyers Start with Search</div>
+  </div>
+</div>
 
 <p>The behavior is fundamentally different from social media. On LinkedIn or WeChat, you are interrupting someone's feed. On Baidu, someone is actively typing "industrial pump supplier China" or "CNC machining parts manufacturer." They are not browsing. They are buying.</p>
 
@@ -389,16 +436,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <hr>
 
-<h2>The Real Problem: You Need a Chinese Entity</h2>
+<h2>⚠️ The Real Problem: You Need a Chinese Entity</h2>
+
+<div class="callout callout-warning">
+  <span class="callout-icon">⚠️</span>
+  <div><strong>Structural Barrier:</strong> Baidu advertising requires a Chinese business entity, bank account, and phone number — none of which most international B2B brands have.</div>
+</div>
 
 <p>Here is where most international B2B companies hit the wall.</p>
 
 <p>Everything described above — the targeting, the ad formats, the AI tools, the bidding — requires an active Baidu advertising account. And a Baidu advertising account requires:</p>
 
-<li>A mainland Chinese business license</li>
-<li>A mainland Chinese bank account for billing</li>
-<li>A Chinese phone number for account verification</li>
-<li>A registered local entity or a trusted partner to hold the account</li>
+<ul>
+  <li>A mainland Chinese business license</li>
+  <li>A mainland Chinese bank account for billing</li>
+  <li>A Chinese phone number for account verification</li>
+  <li>A registered local entity or a trusted partner to hold the account</li>
+</ul>
 
 <p>Most overseas B2B brands have none of these. And even the ones that do — through a WFOE or joint venture — face the operational reality of managing campaigns in a fully Chinese-language dashboard across time zones.</p>
 
@@ -408,7 +462,12 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <hr>
 
-<h2>How BPP Gets B2B Brands on Baidu</h2>
+<h2>🚀 How BPP Gets B2B Brands on Baidu</h2>
+
+<div class="callout callout-tip">
+  <span class="callout-icon">✅</span>
+  <div><strong>How BPP Helps:</strong> We hold the Chinese entity credentials, bank accounts, and compliance infrastructure — so you don't have to.</div>
+</div>
 
 <p>We hold the Chinese entity credentials, the bank accounts, and the compliance infrastructure. Your brand gets access to Baidu's B2B ecosystem — search ads, AiCaiGou marketplace listings, audience targeting — without needing to register a company in China.</p>
 
@@ -418,13 +477,24 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <hr>
 
-<h2>What This Looks Like in Practice</h2>
+<h2>📈 What This Looks Like in Practice</h2>
 
 <p>A manufacturer of industrial components came to us spending heavily on Google Ads and trade fairs. Their Google CPA was climbing, and trade fair ROI was declining as attendance dropped post-pandemic.</p>
 
 <p>We opened their Baidu account, structured their campaigns around high-intent long-tail keywords in their category, and deployed oCPC bidding with conversion tracking tied to inquiry form submissions. Within 8 weeks, their cost per qualified lead on Baidu was 40% lower than their Google equivalent. Within 6 months, Baidu became their primary lead source.</p>
 
 <p>No WFOE. No Chinese bank account. Just a functioning Baidu campaign managed by a team that lives in the platform.</p>
+
+<div class="takeaway-box">
+  <h3>📋 Key Takeaways</h3>
+  <ul>
+    <li>Baidu Search is the most cost-effective B2B channel for reaching Chinese buyers</li>
+    <li>72% of B2B buyers start with search — in China, that means Baidu</li>
+    <li>Intent-based targeting delivers higher quality leads than social media</li>
+    <li>oCPC bidding typically reduces CPA by 20-40% vs manual CPC</li>
+    <li>BPP provides full Baidu access without requiring a Chinese entity</li>
+  </ul>
+</div>
 
 <hr>
 
