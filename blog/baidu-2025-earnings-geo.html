@@ -306,6 +306,26 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
+/* Revenue Bar Chart */
+.revenue-bar-chart { display: flex; flex-direction: column; gap: 16px; padding: 20px 0; margin: 20px 0; }
+.revenue-bar-item { display: flex; align-items: center; gap: 12px; }
+.revenue-bar-label { font-size: .85rem; font-weight: 600; color: var(--gray-700); min-width: 120px; }
+.revenue-bar-track { flex: 1; height: 32px; background: var(--gray-100); border-radius: 16px; overflow: hidden; }
+.revenue-bar-fill { height: 100%; border-radius: 16px; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; font-size: .75rem; font-weight: 700; color: #fff; transition: width 0.5s ease; }
+.revenue-bar-value { font-size: .85rem; font-weight: 700; color: var(--gray-800); min-width: 80px; text-align: right; }
+[data-theme="dark"] .revenue-bar-label { color: var(--gray-600); }
+[data-theme="dark"] .revenue-bar-track { background: var(--gray-200); }
+[data-theme="dark"] .revenue-bar-value { color: var(--gray-700); }
+
+/* Budget Bar Item */
+.budget-bar-item { background: var(--gray-50); border-radius: 12px; padding: 16px 20px; margin: 12px 0; border: 1px solid var(--gray-200); }
+.budget-bar-label { display: flex; justify-content: space-between; align-items: center; font-size: .9rem; font-weight: 600; color: var(--gray-700); margin-bottom: 8px; }
+.budget-bar-track { height: 8px; background: var(--gray-200); border-radius: 4px; overflow: hidden; }
+.budget-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+[data-theme="dark"] .budget-bar-item { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .budget-bar-label { color: var(--gray-600); }
+[data-theme="dark"] .budget-bar-track { background: var(--gray-200); }
+
       [data-theme="dark"] .article-content p { color: var(--gray-600); }
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
