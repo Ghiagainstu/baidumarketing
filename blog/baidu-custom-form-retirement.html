@@ -103,6 +103,17 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 [data-theme="dark"] .callout.tip { background: rgba(99,102,241,.12); }
 [data-theme="dark"] .takeaway { background: #1F2937; border-color: #374151; }
 [data-theme="dark"] footer { background: #070B14; }
+
+/* CTA Button */
+.cta-btn { display: inline-block; background: var(--blue); color: #fff !important; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none !important; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(41,50,225,.35); background: var(--blue-dark); color: #fff !important; }
+[data-theme="dark"] .cta-btn { background: var(--blue); }
+[data-theme="dark"] .cta-btn:hover { background: var(--blue-dark); }
+
+/* CTA Box */
+.cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
+.cta-box h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; color: #fff; }
+.cta-box p { font-size: 1rem; margin-bottom: 24px; opacity: .9; color: #fff; }
 </style>
 </head>
 <body>
@@ -134,10 +145,12 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
   <section class="article-hero">
     <div class="container">
       <h1 class="article-title">Baidu Retires Custom Form Creative Component: What Advertisers Need to Know</h1>
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog">Blog</a></div>
       <div class="article-meta">
-        <span>📅 Jul 24, 2024</span>
-        <span>⏱️ 6 min read</span>
-        <span>✍️ By Baidu PPC Pro Team</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jul 24, 2024</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6 min read</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> Search Ads</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span>
       </div>
     </div>
   </section>
