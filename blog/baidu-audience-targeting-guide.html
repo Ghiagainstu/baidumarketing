@@ -306,6 +306,39 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 /* ===== End of supplemental CSS ===== */
 
+/* Category Grid (App Targeting) — Enhanced */
+.app-target-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 32px 0; }
+.app-target-col {
+  background: linear-gradient(180deg, var(--blue-subtle) 0%, #FFFFFF 100%);
+  border: 1px solid var(--gray-200); border-radius: var(--radius-lg);
+  padding: 28px 28px 20px; position: relative; overflow: hidden;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.app-target-col::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gradient-brand); opacity: 0;
+  transition: opacity .25s ease;
+}
+.app-target-col:hover { border-color: var(--blue-glow); box-shadow: var(--shadow-blue); }
+.app-target-col:hover::before { opacity: 1; }
+.app-target-col h4 { font-size: 1.05rem; font-weight: 700; color: var(--gray-800); margin-bottom: 16px; }
+.app-tag-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.app-tag {
+  display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: .82rem;
+  background: #fff; border: 1px solid var(--gray-200); color: var(--gray-700);
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.app-tag:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* Dark mode overrides for App Targeting */
+[data-theme="dark"] .app-target-col { background: linear-gradient(180deg, rgba(99,102,241,.06) 0%, var(--gray-50) 100%); border-color: var(--gray-200); }
+[data-theme="dark"] .app-target-col h4 { color: var(--gray-800); }
+[data-theme="dark"] .app-target-col:hover { border-color: rgba(99,102,241,.2); box-shadow: 0 2px 8px rgba(99,102,241,.1); }
+[data-theme="dark"] .app-tag { background: var(--gray-100); border-color: var(--gray-200); color: var(--gray-700); }
+[data-theme="dark"] .app-tag:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+@media (max-width: 768px) { .app-target-grid { grid-template-columns: 1fr; } }
+
       [data-theme="dark"] .article-content p { color: var(--gray-600); }
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
@@ -438,36 +471,35 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h3>3. App Targeting (Mobile Only)</h3>
         <p>For mobile campaigns, you can target users by the types of apps they have installed. You cannot target specific apps, but you can target app categories:</p>
 
-        <div class="category-grid">
-          <div class="category-col">
-            <h4>Office & Daily Apps</h4>
-            <ul>
-              <li>Efficiency office</li>
-              <li>Education & training</li>
-              <li>Travel & navigation</li>
-              <li>Financial management</li>
-              <li>Online shopping</li>
-              <li>Beauty care</li>
-              <li>Food & catering</li>
-              <li>Medical health</li>
-              <li>Social communication</li>
-              <li>News & reading</li>
-            </ul>
+        <div class="app-target-grid">
+          <div class="app-target-col">
+            <h4>📱 Office & Daily Apps</h4>
+            <div class="app-tag-grid">
+              <span class="app-tag">Efficiency office</span>
+              <span class="app-tag">Education & training</span>
+              <span class="app-tag">Travel & navigation</span>
+              <span class="app-tag">Financial management</span>
+              <span class="app-tag">Online shopping</span>
+              <span class="app-tag">Beauty care</span>
+              <span class="app-tag">Medical health</span>
+              <span class="app-tag">Social communication</span>
+              <span class="app-tag">News & reading</span>
+            </div>
           </div>
-          <div class="category-col">
-            <h4>Game Categories</h4>
-            <ul>
-              <li>Casual puzzle</li>
-              <li>Sports competition</li>
-              <li>Action shooting</li>
-              <li>Chess & board games</li>
-              <li>Role-playing (RPG)</li>
-              <li>Strategy games</li>
-              <li>Racing</li>
-              <li>Nutrition & fitness</li>
-              <li>Cosplay & dress-up</li>
-              <li>Other games</li>
-            </ul>
+          <div class="app-target-col">
+            <h4>🎮 Game Categories</h4>
+            <div class="app-tag-grid">
+              <span class="app-tag">Casual puzzle</span>
+              <span class="app-tag">Sports competition</span>
+              <span class="app-tag">Action shooting</span>
+              <span class="app-tag">Chess & board games</span>
+              <span class="app-tag">Role-playing (RPG)</span>
+              <span class="app-tag">Strategy games</span>
+              <span class="app-tag">Racing</span>
+              <span class="app-tag">Nutrition & fitness</span>
+              <span class="app-tag">Cosplay & dress-up</span>
+              <span class="app-tag">Other games</span>
+            </div>
           </div>
         </div>
 
