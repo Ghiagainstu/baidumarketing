@@ -313,6 +313,16 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+/* Funnel chart */
+.chart-box { margin: 32px 0; padding: 24px; background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); }
+.funnel { display: flex; flex-direction: column; gap: 12px; }
+.funnel-item { display: flex; align-items: center; gap: 16px; }
+.funnel-label { min-width: 160px; font-size: .85rem; font-weight: 600; color: var(--gray-700); text-align: right; }
+.funnel-bar { height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .9rem; font-weight: 700; color: #fff; min-width: 120px; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%); }
+.funnel-bar:first-child { background: linear-gradient(135deg, var(--blue) 0%, #6366F1 100%); }
+[data-theme="dark"] .chart-box { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .funnel-label { color: var(--gray-600); }
+
 </style>
 
   <script type="application/ld+json">
@@ -437,11 +447,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
             </div>
             <div class="funnel-item">
               <div class="funnel-label">Digital Consumers</div>
-              <div class="funnel-bar" style="width: 85%; background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);">958M (85.1%)</div>
+              <div class="funnel-bar" style="width: 85%;">958M (85.1%)</div>
             </div>
             <div class="funnel-item">
               <div class="funnel-label">Mobile Payment Users</div>
-              <div class="funnel-bar" style="width: 80%; background: linear-gradient(135deg, #10B981 0%, #059669 100%);">902M (80.2%)</div>
+              <div class="funnel-bar" style="width: 80%;">902M (80.2%)</div>
             </div>
           </div>
         </div>
