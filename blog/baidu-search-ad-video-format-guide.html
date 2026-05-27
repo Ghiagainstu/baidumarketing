@@ -310,6 +310,85 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+/* ===== Stats Grid Enhancement ===== */
+.stat-value {
+  font-size: 2.4rem; font-weight: 800; color: var(--blue);
+  background: linear-gradient(135deg, var(--blue) 0%, #4F46E5 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin-bottom: 4px; line-height: 1.2;
+}
+.stat-label { font-size: .88rem; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+.stat-sub { font-size: .78rem; color: var(--gray-400); line-height: 1.5; }
+.stat-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--blue-subtle) 100%);
+  padding: 32px 20px 28px; border-radius: var(--radius);
+  text-align: center; border: 1px solid var(--gray-200);
+  position: relative; overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.stat-card::before {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 60%; height: 3px; border-radius: 0 0 3px 3px;
+  background: var(--gradient-brand); opacity: 0;
+  transition: opacity .25s ease, width .25s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-blue); border-color: var(--blue-glow);
+}
+.stat-card:hover::before { opacity: 1; width: 80%; }
+.stat-card:nth-child(1) .stat-value { background: linear-gradient(135deg, #2932E1, #4F46E5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.stat-card:nth-child(2) .stat-value { background: linear-gradient(135deg, #4F46E5, #7C3AED); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.stat-card:nth-child(3) .stat-value { background: linear-gradient(135deg, #2563EB, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.stat-card:nth-child(4) .stat-value { background: linear-gradient(135deg, #7C3AED, #A855F7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* ===== Spec Box Enhancement ===== */
+.spec-box {
+  background: linear-gradient(180deg, var(--blue-subtle) 0%, #FFFFFF 50%);
+  border: 1px solid var(--blue-glow); border-radius: var(--radius-lg);
+  padding: 32px; margin: 32px 0; overflow: hidden;
+  box-shadow: 0 2px 12px rgba(41,50,225,.06);
+}
+.spec-box h4 {
+  font-size: 1.1rem; font-weight: 700; color: var(--gray-800);
+  margin: 0 0 20px; display: flex; align-items: center; gap: 8px;
+}
+.spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.spec-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px; border-radius: 10px;
+  background: #fff; border: 1px solid var(--gray-200);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.spec-row:hover { border-color: var(--blue-glow); box-shadow: 0 2px 8px rgba(41,50,225,.08); }
+.spec-row:nth-child(5), .spec-row:nth-child(6) { grid-column: span 2; }
+.spec-icon {
+  width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0;
+  display: grid; place-items: center; font-size: 1.2rem;
+  background: var(--blue-subtle);
+}
+.spec-body { flex: 1; min-width: 0; }
+.spec-label { display: block; font-size: .75rem; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+.spec-value { display: block; font-size: .92rem; font-weight: 600; color: var(--gray-800); word-break: break-word; }
+
+/* Dark mode overrides for enhancements */
+[data-theme="dark"] .stat-card { background: linear-gradient(180deg, var(--gray-100) 0%, rgba(99,102,241,.06) 100%); border-color: var(--gray-200); }
+[data-theme="dark"] .stat-label { color: var(--gray-700); }
+[data-theme="dark"] .stat-sub { color: var(--gray-400); }
+[data-theme="dark"] .stat-value { background: linear-gradient(135deg, #818CF8, #A78BFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+[data-theme="dark"] .spec-box { background: linear-gradient(180deg, rgba(99,102,241,.06) 0%, var(--gray-50) 50%); border-color: var(--gray-200); }
+[data-theme="dark"] .spec-box h4 { color: var(--gray-800); }
+[data-theme="dark"] .spec-row { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .spec-row:hover { border-color: rgba(99,102,241,.2); box-shadow: 0 2px 8px rgba(99,102,241,.1); }
+[data-theme="dark"] .spec-icon { background: rgba(99,102,241,.12); }
+[data-theme="dark"] .spec-label { color: var(--gray-400); }
+[data-theme="dark"] .spec-value { color: var(--gray-700); }
+
+@media (max-width: 768px) {
+  .spec-grid { grid-template-columns: 1fr; }
+  .spec-row:nth-child(5), .spec-row:nth-child(6) { grid-column: span 1; }
+}
 </style>
   <script type="application/ld+json">
   {
@@ -458,30 +537,50 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <p>Getting the specs right is critical. Baidu accepts a wide range of formats but has strict requirements for size, duration, and dimensions.</p>
 
         <div class="spec-box">
-          <h4>Supported Formats</h4>
-          <div class="spec-row">
-            <span class="spec-label">Formats</span>
-            <span class="spec-value">MP4, FLV, MOV, M3U8, 3GP, AVI, MPG, ASF, WMV, MKV, TS, WEBM, MXF</span>
-          </div>
-          <div class="spec-row">
-            <span class="spec-label">Max File Size</span>
-            <span class="spec-value">500MB</span>
-          </div>
-          <div class="spec-row">
-            <span class="spec-label">Minimum Duration</span>
-            <span class="spec-value">6 seconds</span>
-          </div>
-          <div class="spec-row">
-            <span class="spec-label">Desktop</span>
-            <span class="spec-value">16:9, ≥1280×720</span>
-          </div>
-          <div class="spec-row">
-            <span class="spec-label">Mobile (vertical)</span>
-            <span class="spec-value">9:16, ≥720×1280</span>
-          </div>
-          <div class="spec-row">
-            <span class="spec-label">Mobile (square)</span>
-            <span class="spec-value">1:1, ≥800×800</span>
+          <h4>📐 Supported Formats</h4>
+          <div class="spec-grid">
+            <div class="spec-row">
+              <div class="spec-icon">🎬</div>
+              <div class="spec-body">
+                <span class="spec-label">Formats</span>
+                <span class="spec-value">MP4, FLV, MOV, M3U8, 3GP, AVI, MPG, ASF, WMV, MKV, TS, WEBM, MXF</span>
+              </div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-icon">💾</div>
+              <div class="spec-body">
+                <span class="spec-label">Max File Size</span>
+                <span class="spec-value">500MB</span>
+              </div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-icon">⏱️</div>
+              <div class="spec-body">
+                <span class="spec-label">Minimum Duration</span>
+                <span class="spec-value">6 seconds</span>
+              </div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-icon">🖥️</div>
+              <div class="spec-body">
+                <span class="spec-label">Desktop</span>
+                <span class="spec-value">16:9, ≥1280×720</span>
+              </div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-icon">📱</div>
+              <div class="spec-body">
+                <span class="spec-label">Mobile (vertical)</span>
+                <span class="spec-value">9:16, ≥720×1280</span>
+              </div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-icon">🔲</div>
+              <div class="spec-body">
+                <span class="spec-label">Mobile (square)</span>
+                <span class="spec-value">1:1, ≥800×800</span>
+              </div>
+            </div>
           </div>
         </div>
 
