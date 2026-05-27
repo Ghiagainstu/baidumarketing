@@ -374,7 +374,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
   <section class="article-section">
     <div class="container">
       <article class="article-content">
-        <div class="stats-grid">
+        <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr); gap: 16px;">
   <div class="stat-card">
     <div class="stat-icon">🌐</div>
     <div class="stat-number">IPv4 + IPv6</div>
@@ -389,10 +389,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <strong>How it works:</strong>
 <ol>
   <li>Identify suspicious IPs from your click data (repeated clicks, zero conversions, abnormal patterns)</li>
-  <li>Add them to 商盾's manual block list</li>
+  <li>Add them to Business Shield's manual block list</li>
   <li>Those IPs stop seeing your search ads — across both PC and mobile</li>
 </ol>
-<strong>Important limitation:</strong> 商盾 blocks based on the IP the user connects to Baidu with. Due to Baidu's IPv6 rollout (mandated by China's Ministry of Industry), there are edge cases where a user may access Baidu via IPv6 but your landing page via IPv4. In those cases, the block may not apply — use real-time IP click blocking as a supplementary measure for those gaps.
+<strong>Important limitation:</strong> Business Shield blocks based on the IP the user connects to Baidu with. Due to Baidu's IPv6 rollout (mandated by China's Ministry of Industry), there are edge cases where a user may access Baidu via IPv6 but your landing page via IPv4. In those cases, the block may not apply — use real-time IP click blocking as a supplementary measure for those gaps.
 <div class="callout callout-tip">
   <strong>💡 Pro Tip:</strong> Don't wait for obvious fraud patterns. Set up a weekly audit of your IP click logs. Look for single IPs showing &gt;5 clicks with zero conversions, or IPs from regions outside your targeting. Block early and proactively.
 </div>
@@ -400,7 +400,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>lives inside Baidu's advertising backend. Using it requires:</p>
 <ol>
   <li>A Baidu advertising account</li>
-  <li>Access to the 商盾 tool (Chinese interface)</li>
+  <li>Access to the Business Shield tool (Chinese interface)</li>
   <li>Regular monitoring of IP logs and knowledge of what patterns indicate fraud vs. genuine interest</li>
 </ol>
 <p>For overseas teams running Baidu campaigns remotely, IP log analysis is rarely a priority — until the budget starts vanishing. </p>
@@ -408,7 +408,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <div class="takeaway-box">
   <h4>🎯 How BPP Handles Click Fraud</h4>
   <ul><li>✅ We monitor your Baidu IP click logs weekly — identifying suspicious patterns before they drain your budget</li>
-    <li>✅ We maintain and update your 商盾 block list proactively — adding IPv4 and IPv6 blocks as threats emerge</li>
+    <li>✅ We maintain and update your Business Shield block list proactively — adding IPv4 and IPv6 blocks as threats emerge</li>
     <li>✅ We combine manual IP blocking with real-time click protection for layered defense</li>
     <li>✅ You get a monthly click fraud report in English — with blocked IPs, saved budget estimates, and ongoing threats</li></ul>
 </div>

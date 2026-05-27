@@ -310,6 +310,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+/* Option Cards */
+.platforms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 32px 0; }
+.platform-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; text-align: center; transition: transform .25s, box-shadow .25s; }
+.platform-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.platform-card .icon { font-size: 2rem; margin-bottom: 12px; }
+.platform-card .name { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
+.platform-card .desc { font-size: .85rem; color: var(--gray-600); }
+[data-theme="dark"] .platform-card { background: var(--gray-100); border-color: var(--gray-200); }
+
 </style>
   <script type="application/ld+json">
   {
@@ -377,18 +386,21 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
         <p>Here are the three ways to use a different domain, and when each one applies.</p>
 
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">Tracking</div>
-            <div class="stat-label">URL Setup</div>
+        <div class="platforms-grid">
+          <div class="platform-card">
+            <div class="icon">🔗</div>
+            <div class="name">Tracking URL</div>
+            <div class="desc">Add a third-party tracking domain to your ads</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">Domain</div>
-            <div class="stat-label">Change Request</div>
+          <div class="platform-card">
+            <div class="icon">🔄</div>
+            <div class="name">Domain Change</div>
+            <div class="desc">Request to change your account's registered domain</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">New</div>
-            <div class="stat-label">Account</div>
+          <div class="platform-card">
+            <div class="icon">➕</div>
+            <div class="name">New Account</div>
+            <div class="desc">Open a separate account for a different domain</div>
           </div>
         </div>
 
