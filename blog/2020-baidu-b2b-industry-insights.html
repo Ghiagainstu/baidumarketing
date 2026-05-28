@@ -242,6 +242,23 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 }
 .breadcrumb{font-size:.85rem;color:var(--gray-400);margin-bottom:20px}
 .breadcrumb a{color:var(--blue)}
+
+/* Process Steps */
+.process-steps { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
+.process-step { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--gray-50); border-radius: 12px; border: 1px solid var(--gray-200); transition: transform .2s, box-shadow .2s; }
+.process-step:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.process-step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--gradient-brand); color: #fff; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .9rem; }
+.process-step-content h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+.process-step-content p { font-size: .85rem; color: var(--gray-600); margin: 0; }
+[data-theme="dark"] .process-step { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .process-step-content h4 { color: var(--gray-800); }
+
+/* CTA Box */
+.cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
+.cta-box h2, .cta-box h3 { font-size: 2rem !important; font-weight: 700 !important; margin-bottom: 16px !important; color: #fff !important; }
+.cta-box p { font-size: 1.05rem !important; margin-bottom: 30px !important; opacity: .9; color: #fff !important; }
+.cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 </style>
 <script type="application/ld+json">
 {
@@ -480,15 +497,43 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 
 <p>The report outlines a structured approach for B2B companies to capture demand and convert it into sales on Baidu's platform:</p>
 
-<strong>Step 1: Precision Targeting</strong> — Use search ads, brand zone, feed ads, and display to capture high-intent buyers at the exact moment they search for your product category.
-
-<strong>Step 2: Knowledge Marketing</strong> — Build authority through Baidu Baike entries, Baidu Zhidao answers, and short-form video content. Chinese B2B buyers rely heavily on these content sources during the awareness and comparison phases.
-
-<strong>Step 3: Full-Funnel Website</strong> — Use Baidu's Jimuyu (基木鱼) platform to build and host high-converting landing pages with built-in lead capture. No separate hosting or CMS needed.
-
-<strong>Step 4: Private Domain Operations</strong> — Use Baijiahao business accounts and live streaming to build a direct audience of repeat buyers. This is your owned channel within Baidu's ecosystem.
-
-<strong>Step 5: Lead Operations</strong> — Convert platform traffic into qualified leads through AiCaiGou's inquiry system, with real-time lead notifications and CRM integration.
+<div class="process-steps">
+  <div class="process-step">
+    <div class="process-step-num">1</div>
+    <div class="process-step-content">
+      <h4>Precision Targeting</h4>
+      <p>Use search ads, brand zone, feed ads, and display to capture high-intent buyers at the exact moment they search for your product category.</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">2</div>
+    <div class="process-step-content">
+      <h4>Knowledge Marketing</h4>
+      <p>Build authority through Baidu Baike entries, Baidu Zhidao answers, and short-form video content. Chinese B2B buyers rely heavily on these during awareness and comparison phases.</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">3</div>
+    <div class="process-step-content">
+      <h4>Full-Funnel Website</h4>
+      <p>Use Baidu's Jimuyu platform to build and host high-converting landing pages with built-in lead capture. No separate hosting or CMS needed.</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">4</div>
+    <div class="process-step-content">
+      <h4>Private Domain Operations</h4>
+      <p>Use Baijiahao business accounts and live streaming to build a direct audience of repeat buyers. This is your owned channel within Baidu's ecosystem.</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">5</div>
+    <div class="process-step-content">
+      <h4>Lead Operations</h4>
+      <p>Convert platform traffic into qualified leads through AiCaiGou's inquiry system, with real-time lead notifications and CRM integration.</p>
+    </div>
+  </div>
+</div>
 
 <h2>AiCaiGou: The Fastest-Growing B2B Platform You May Not Know About</h2>
 
@@ -500,7 +545,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 <p>- <strong>Seasonal peaks</strong>: Inquiry volume peaks in March-June and September-December, aligned with China's industrial procurement cycles</p>
 <p>- <strong>Top regions</strong>: Guangdong, Zhejiang, Jiangsu, Shandong, and Hebei lead in platform usage</p>
 
-<div class="callout warning">
+<div class="callout callout-warning">
   <strong>⚠️ Important:</strong> AiCaiGou's top 10 industry categories mirror the overall B2B search demand almost exactly — machinery, building materials, electrical, electronics, metals, chemicals, security, hardware, auto parts, and agriculture. If your product falls into one of these categories, you are competing in the highest-traffic B2B channel in China. Not being there means losing visibility to competitors who are.
 </div>
 
@@ -561,7 +606,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
   <div class="container">
     <h2>Ready to Reach China's B2B Buyers?</h2>
     <p>Let our team set up your Baidu campaigns. No Chinese business license needed.</p>
-    <a href="../contact" class="cta-button">Get a Free Strategy Session →</a>
+    <a href="/contact" class="cta-btn">Get a Free Strategy Session →</a>
   </div>
 </section>
 
