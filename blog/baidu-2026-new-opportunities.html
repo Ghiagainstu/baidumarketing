@@ -244,7 +244,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 40px 0; }
 .stat-card {
   background: linear-gradient(180deg, #FFFFFF 0%, var(--blue-subtle) 100%);
-  padding: 36px 24px 32px; border-radius: var(--radius-lg); text-align: center;
+  padding: 28px 16px 28px; border-radius: var(--radius-lg); text-align: center;
   border: 1.5px solid var(--gray-200); position: relative; overflow: hidden;
   transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .3s ease, border-color .3s ease;
 }
@@ -260,10 +260,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 }
 .stat-card:hover::before { opacity: 1; width: 85%; }
 .stat-value {
-  font-size: 2.8rem; font-weight: 900; line-height: 1.1;
+  font-size: 2rem; font-weight: 900; line-height: 1.15;
   background: linear-gradient(135deg, var(--blue) 0%, #4F46E5 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text; margin-bottom: 6px; letter-spacing: -.02em;
+  word-break: break-word; overflow-wrap: break-word;
 }
 .stat-card:nth-child(1) .stat-value { background: linear-gradient(135deg, #2932E1, #4F46E5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .stat-card:nth-child(2) .stat-value { background: linear-gradient(135deg, #4F46E5, #7C3AED); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
