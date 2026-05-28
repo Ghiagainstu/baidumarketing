@@ -351,6 +351,29 @@ function syncNavFooter(langCode) {
     }
   }
 
+  // Also sync blog pages
+  const blogDir = langDir ? path.join(ROOT, langDir, 'blog') : path.join(ROOT, 'blog');
+  if (fs.existsSync(blogDir)) {
+    const posts = fs.readdirSync(blogDir).filter(f => f.endsWith('.html'));
+    for (const post of posts) {
+      const filePath = langDir ? `${langDir}/blog/${post}` : `blog/${post}`;
+      let html = readFile(filePath);
+      let modified = false;
+
+      // Replace footer section
+      const footerMatch = html.match(/<footer>[\s\S]*?<\/footer>/);
+      if (footerMatch) {
+        html = html.replace(footerMatch[0], `<footer>\n${footerHTML}\n</footer>`);
+        modified = true;
+      }
+
+      if (modified) {
+        writeFile(filePath, html);
+        count++;
+      }
+    }
+  }
+
   console.log(`  ✅ ${count} pages updated for '${langCode}'`);
   return count;
 }
