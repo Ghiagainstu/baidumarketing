@@ -88,8 +88,8 @@
     [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
     [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
     [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
-    [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-    [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box ul li { color: var(--gray-700); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
@@ -159,11 +159,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
     .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
-    .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
-    .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
-    .takeaway-box-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
-    .takeaway-box-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
-    .takeaway-box-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3, .takeaway-box h4 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; color: var(--gray-700); font-weight: 500; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
     .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
     .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
@@ -243,14 +243,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
-
-/* Takeaway */
-.takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
-.takeaway-box h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #fff; }
-.takeaway-box strong { display: block; font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; color: #fff; }
-.takeaway-box p { margin-bottom: 0 !important; color: #fff !important; font-size: 1.05rem !important; line-height: 1.7 !important; }
-.takeaway-box ul { margin: 12px 0 0 0; padding-left: 20px; color: #fff !important; }
-.takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -386,21 +378,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     <div class="stat-label">Smart pages, store pages, app download, video pages</div>
   </div>
 </div>
-<strong>Supported page types:</strong>
-<ul><li>Smart single pages (智能单页)</li>
-<li>Store pages (门店页)</li>
-<li>App download pages (应用下载页)</li>
-<li>Video pages (视频页)</li></ul>
+<h3>Supported Page Types</h3>
+<ul>
+<li>Smart single pages</li>
+<li>Store pages</li>
+<li>App download pages</li>
+<li>Video pages</li>
+</ul>
 <h2>💡 Why This Matters for Campaign Launch Speed</h2>
 <p>Every day your landing page sits in "rejected" status is a day you are burning budget on an underperforming page — or not spending at all. </p>
 <div class="callout callout-tip">
-  <strong>💡 Pro Tip:</strong> Before submitting a 基木鱼 page for review, check that all images have proper licensing, all claims are substantiated, and there are no competing brand names in the copy. The most common rejection reasons are misleading claims and unlicensed copyrighted images.
+  <strong>💡 Pro Tip:</strong> Before submitting a Jimuyu page for review, check that all images have proper licensing, all claims are substantiated, and there are no competing brand names in the copy. The most common rejection reasons are misleading claims and unlicensed copyrighted images.
 </div>
 <h2>📊 The Barrier for International Brands</h2>
 <p>is a mainland-China product. To use it, you need:</p>
 <ol>
   <li>A verified Baidu advertising account (Chinese business license required)</li>
-  <li>Access to the 基木鱼 platform (Chinese interface)</li>
+  <li>Access to the Jimuyu platform (Chinese interface)</li>
   <li>Understanding of Baidu's content compliance rules (which differ from Google/Facebook)</li>
 </ol>
 <p>For overseas companies, all three are blockers. And even if you get past them, the audit rejection → fix → resubmit cycle can take 2-3 weeks if you are doing it remotely. </p>
@@ -427,6 +421,30 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
      </ul>
    </div></article>
  </main>
+
+  <section class="related-section">
+    <div class="container">
+      <h2>More from the Blog</h2>
+      <div class="related-grid">
+        <a href="/blog/baidu-brand-zone-material-pre-review" class="related-card">
+          <span>Strategy</span>
+          <h4>🛡️ Baidu Brand Zone Material Pre-Review</h4>
+          <p>How to prepare brand zone materials that pass Baidu's pre-review process.</p>
+        </a>
+        <a href="/blog/baidu-2026-international-brands" class="related-card">
+          <span>Market Insights</span>
+          <h4>🚀 Baidu's 2026 Upgrades for International Brands</h4>
+          <p>What changed and how to adapt your Baidu PPC strategy for 2026.</p>
+        </a>
+        <a href="/blog/how-much-does-baidu-ppc-cost" class="related-card">
+          <span>Pricing</span>
+          <h4>💰 How Much Does Baidu PPC Cost?</h4>
+          <p>The CPC formula and how Quality Score directly impacts your actual cost per click.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
     <footer>
   <div class="container">
     <div class="footer-top">
