@@ -327,7 +327,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
 .stat-card { background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); }
 [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
-.stat-value { font-size: 1.8rem; font-weight: 800; color: var(--blue); }
+.stat-number { font-size: 1.8rem; font-weight: 800; color: var(--blue); }
 .stat-label { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
 
 /* Takeaway Box */
@@ -344,6 +344,21 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
 .platform-pill.google { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
 .platform-pill.linkedin { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+
+/* Feature Grid */
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 32px 0; }
+.feature-card { padding: 28px 24px; background: var(--gray-50); border-radius: var(--radius); border: 1px solid var(--gray-200); text-align: center; transition: transform .2s, box-shadow .2s; }
+.feature-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.feature-icon { font-size: 2.2rem; margin-bottom: 14px; line-height: 1; }
+.feature-card h4 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 10px; }
+.feature-card p { font-size: .85rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+[data-theme="dark"] .feature-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .feature-card h4 { color: var(--gray-800); }
+@media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } }
+
+/* Stats Grid - 3 columns */
+.stats-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0; }
+@media (max-width: 640px) { .stats-grid-3 { grid-template-columns: 1fr; } }
 
       [data-theme="dark"] .article-content p { color: var(--gray-600); }
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
@@ -407,17 +422,17 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>72% of B2B buyers start their supplier search on a search engine (Salesforce research). In China, that search engine is Baidu — with over 700 million monthly active users and a 97.5% reach among Chinese internet users.</p>
 
-<div class="stats-grid">
+<div class="stats-grid stats-grid-3">
   <div class="stat-card">
-    <div class="stat-value">700M+</div>
+    <div class="stat-number">700M+</div>
     <div class="stat-label">Monthly Active Users</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value">97.5%</div>
+    <div class="stat-number">97.5%</div>
     <div class="stat-label">Internet Reach</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value">72%</div>
+    <div class="stat-number">72%</div>
     <div class="stat-label">B2B Buyers Start with Search</div>
   </div>
 </div>
@@ -426,13 +441,28 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>Baidu's B2B search ecosystem has matured significantly over the past decade. The platform now offers:</p>
 
-<strong>Intent-based targeting that social platforms cannot match.</strong> Baidu's smart bidding system analyzes search queries, device type, time of day, user history, and geographic signals to predict which searchers are most likely to convert. A procurement manager searching for "high-pressure valve specifications" at 9 PM on a weekday is not window shopping — and Baidu's algorithm knows it.
+<div class="feature-grid">
+  <div class="feature-card">
+    <div class="feature-icon">🎯</div>
+    <h4>Intent-Based Targeting</h4>
+    <p>Baidu's smart bidding analyzes search queries, device, time, history, and geo signals. A procurement manager searching "high-pressure valve specs" at 9 PM is not window shopping.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">📊</div>
+    <h4>Rich B2B Ad Formats</h4>
+    <p>Product parameter tables, project case galleries, factory walkthrough videos, and technical documentation — all visible in search results before a single click.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">⚙️</div>
+    <h4>Flexible Bidding</h4>
+    <p>Manual CPC for core keywords. oCPC automates bidding by conversion probability. BPP clients see 20-40% lower CPA with oCPC vs manual.</p>
+  </div>
+</div>
 
-<strong>Rich ad formats built for B2B decision cycles.</strong> B2B purchases require comparing specifications, verifying credentials, and evaluating case studies. Baidu search ads support product parameter tables, project case galleries, factory walkthrough videos, and detailed technical documentation — all visible in the search results before a single click. This front-loads the trust-building that usually takes sales teams weeks.
-
-<strong>Flexible bidding that matches B2B economics.</strong> Manual CPC bidding keeps you in control of core product keywords. oCPC (optimized cost per click) automates bidding based on conversion probability — set a target cost per lead, and the system adjusts bids in real time. BPP clients typically see 20% to 40% lower cost per acquisition with oCPC compared to manual bidding.
-
-<strong>AI tools that replace the team you cannot hire.</strong> Baidu's QingGe platform generates keyword strategies and creative copy from natural language descriptions of your business. QingDuo produces B2B product marketing images — including parameter tables and comparison charts — in minutes. GuanXingPan provides market intelligence on industry search trends and competitive landscapes. And Baidu's AI-powered chatbot handles after-hours inquiries, so leads do not go cold overnight.
+<div class="callout callout-insight">
+  <span class="callout-icon">🤖</span>
+  <div><strong>AI Tools:</strong> QingGe generates keyword strategies from natural language. QingDuo produces B2B marketing images in minutes. GuanXingPan provides market intelligence on search trends. And Baidu's AI chatbot handles after-hours inquiries so leads don't go cold.</div>
+</div>
 
 <hr>
 
@@ -485,7 +515,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>No WFOE. No Chinese bank account. Just a functioning Baidu campaign managed by a team that lives in the platform.</p>
 
-<div class="takeaway-box-box">
+<div class="takeaway-box">
   <h3>📋 Key Takeaways</h3>
   <ul>
     <li>Baidu Search is the most cost-effective B2B channel for reaching Chinese buyers</li>
@@ -507,18 +537,73 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
   </div>
 </section>
 </main>
-  <footer><div class="container">
-<div class="footer-top">
-<div class="footer-brand"><h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>Baidu PPC Pro</h3><p>We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork.</p></div>
-<div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/features">Services</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/about">About Us</a></li><li><a href="/faq">FAQ</a></li><li><a href="/blog">Blog</a></li></ul></div>
-<div class="footer-col"><h4>Contact</h4><ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="/contact">Submit a Request</a></li></ul></div>
-<div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li></ul></div>
-</div>
-<div class="footer-bottom">
-<div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
-<div class="footer-social"><a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a></div>
-</div>
-</div></footer>
+
+  <section class="related-section">
+    <div class="container">
+      <h2>More from the Blog</h2>
+      <div class="related-grid">
+        <a href="/blog/b2b-lead-generation-framework" class="related-card">
+          <span>Strategy</span>
+          <h4>📋 B2B Lead Generation Framework for China</h4>
+          <p>A step-by-step framework for generating B2B leads through Baidu's ecosystem.</p>
+        </a>
+        <a href="/blog/baidu-2026-international-brands" class="related-card">
+          <span>Market Insights</span>
+          <h4>🚀 Baidu's 2026 Upgrades for International Brands</h4>
+          <p>What changed and how to adapt your Baidu PPC strategy for 2026.</p>
+        </a>
+        <a href="/blog/how-much-does-baidu-ppc-cost" class="related-card">
+          <span>Pricing</span>
+          <h4>💰 How Much Does Baidu PPC Cost?</h4>
+          <p>The CPC formula and how Quality Score directly impacts your actual cost per click.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>
+          Baidu PPC Pro
+        </h3>
+        <p>We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/features">Services</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
+          <li><a href="/contact">Submit a Request</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script>
 function toggleLangMenu() {
