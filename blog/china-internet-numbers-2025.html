@@ -194,10 +194,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
     .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
     .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
-    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
-    .platform-pill.search { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
-    .platform-pill.feed { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
-    .platform-pill.display { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+.platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+.platform-pill.search { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+.platform-pill.feed { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+.platform-pill.display { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+.platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+.platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+.platform-pill.xhs { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
 
     .nav-mobile-cta,.nav-mobile-theme{display:none}
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
@@ -479,18 +482,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
       <p>Mobile payment penetration at 90.3% means the path from discovery to purchase is shorter than almost anywhere else in the world. When someone sees your ad on Baidu, decides they want your product, and has WeChat Pay or Alipay already set up — the conversion barrier is minimal.</p>
 
-      <div class="payment-icons">
-        <div class="payment-icon">
-          <div class="icon-circle" style="background:#F0FDF4;">💚</div>
-          <span>WeChat Pay</span>
-        </div>
-        <div class="payment-icon">
-          <div class="icon-circle" style="background:#F0F9FF;">💙</div>
-          <span>Alipay</span>
-        </div>
+      <div class="platform-pills">
+        <span class="platform-pill wechat">💬 WeChat Pay</span>
+        <span class="platform-pill baidu">💙 Alipay</span>
       </div>
-
-      <p>Mobile payment penetration at 90.3% means the path from discovery to purchase is shorter than almost anywhere else in the world. When someone sees your ad on Baidu, decides they want your product, and has WeChat Pay or Alipay already set up — the conversion barrier is minimal.</p>
 
       <p>For e-commerce advertisers, this is crucial. For B2B service providers, it means your lead capture forms should integrate with WeChat for instant follow-up capability.</p>
 
@@ -520,7 +515,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <div class="cta-box">
         <h3>Ready to Reach China's Digital Consumers?</h3>
         <p>We help international brands build effective Baidu advertising campaigns.</p>
-        <a href="/contact">Contact BPP</a>
+        <a href="/contact" class="cta-btn">→ Contact BPP</a>
       </div>
     </article>
   </main>
