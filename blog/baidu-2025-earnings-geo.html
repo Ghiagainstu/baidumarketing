@@ -354,6 +354,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .rev-bar-label { font-size: .85rem; font-weight: 600; color: var(--gray-700); min-width: 120px; }
 .rev-bar-track { flex: 1; height: 32px; background: var(--gray-100); border-radius: 16px; overflow: hidden; }
 .rev-bar-fill { height: 100%; border-radius: 16px; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; font-size: .75rem; font-weight: 700; color: #fff; transition: width .6s ease; }
+.rev-bar-value { font-size: .85rem; font-weight: 700; color: var(--gray-800); min-width: 80px; text-align: right; flex-shrink: 0; }
 .rev-bar-fill.blue { background: linear-gradient(90deg, #2932E1, #6366F1); }
 .rev-bar-fill.red { background: linear-gradient(90deg, #DC2626, #EF4444); }
 .rev-bar-fill.green { background: linear-gradient(90deg, #059669, #10B981); }
@@ -668,7 +669,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </div>
         <div class="rev-bar-row">
           <span class="rev-bar-label">Net Profit</span>
-          <div class="rev-bar-track"><div class="rev-bar-fill amber" style="width:4%">5.6B ↓↓</div></div>
+          <div class="rev-bar-track"><div class="rev-bar-fill amber" style="width:20%"></div></div><span class="rev-bar-value">5.6B ↓↓</span>
         </div>
       </div>
 
