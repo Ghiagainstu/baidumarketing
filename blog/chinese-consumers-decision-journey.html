@@ -88,6 +88,19 @@
     [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
     [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
     [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+
+    /* Journey Flow */
+    .journey-flow { margin: 24px 0; }
+    .journey-flow-label { font-size: .85rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .journey-flow-steps { display: flex; flex-wrap: wrap; align-items: center; gap: 0; }
+    .journey-step { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 8px; padding: 8px 14px; font-size: .82rem; font-weight: 600; color: var(--gray-700); white-space: nowrap; }
+    .journey-arrow { color: var(--blue); font-size: 1rem; margin: 0 4px; flex-shrink: 0; }
+    .journey-step:first-child { border-left: 3px solid var(--blue); }
+    .journey-step:last-child { background: linear-gradient(135deg, #EEF0FF, #F5F3FF); border-color: #C7D2FE; color: var(--blue-dark); }
+    [data-theme="dark"] .journey-step { background: var(--gray-100); border-color: var(--gray-200); color: var(--gray-700); }
+    [data-theme="dark"] .journey-step:last-child { background: rgba(99,102,241,.12); border-color: rgba(99,102,241,.3); color: var(--blue); }
+    [data-theme="dark"] .journey-flow-label { color: var(--blue); }
+    @media (max-width: 640px) { .journey-flow-steps { gap: 6px; } .journey-arrow { display: none; } .journey-step { font-size: .75rem; padding: 6px 10px; } }
     [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -452,11 +465,42 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
   <div><strong>Key Insight:</strong> The pattern is consistent across industries. Chinese consumers use Baidu as the backbone of their research process — it is the first stop and the return point.</div>
 </div>
 
-<p>For tourism, the journey looks like this: destination search → information gathering → trip planning → booking → in-destination navigation → post-trip sharing.</p>
+<div class="journey-flow">
+  <div class="journey-flow-label">✈️ Tourism</div>
+  <div class="journey-flow-steps">
+    <span class="journey-step">Destination Search</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Info Gathering</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Trip Planning</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Booking</span><span class="journey-arrow">→</span>
+    <span class="journey-step">In-Destination</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Post-Trip Sharing</span>
+  </div>
+</div>
 
-<p>For a luxury watch brand, it might be: brand comparison → specification research → price verification → authorized dealer location → purchase → ownership experience sharing.</p>
+<div class="journey-flow">
+  <div class="journey-flow-label">⌚ Luxury Watch</div>
+  <div class="journey-flow-steps">
+    <span class="journey-step">Brand Comparison</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Spec Research</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Price Verification</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Dealer Location</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Purchase</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Ownership Sharing</span>
+  </div>
+</div>
 
-<p>For an education institution: program search → ranking comparison → alumni review → application requirements → tuition calculation → enrollment → community sharing.</p>
+<div class="journey-flow">
+  <div class="journey-flow-label">🎓 Education</div>
+  <div class="journey-flow-steps">
+    <span class="journey-step">Program Search</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Ranking Comparison</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Alumni Review</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Application Requirements</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Tuition Calculation</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Enrollment</span><span class="journey-arrow">→</span>
+    <span class="journey-step">Community Sharing</span>
+  </div>
+</div>
 
 <p><strong>The implication for overseas brands:</strong> if you are not visible at the critical research moments on Baidu, you do not exist for the Chinese consumer.</p>
 
