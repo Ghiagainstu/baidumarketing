@@ -318,14 +318,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
 
     /* Process Steps */
-    .process-steps { display: flex; flex-direction: column; gap: 0; margin: 32px 0; position: relative; }
-    .process-step { display: flex; align-items: flex-start; gap: 16px; padding: 20px 0; position: relative; }
-    .process-step:not(:last-child) { border-left: 2px solid var(--blue-light); margin-left: 23px; padding-left: 32px; }
-    .process-step:last-child { margin-left: 23px; padding-left: 32px; }
-    .process-step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--gradient-brand); color: #fff; font-weight: 800; font-size: 1.1rem; display: grid; place-items: center; flex-shrink: 0; position: absolute; left: 0; }
-    .process-step-content h4 { font-size: 1.05rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+    .process-steps { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
+    .process-step { display: flex; align-items: flex-start; gap: 20px; position: relative; padding-left: 68px; min-height: 56px; }
+    .process-step-num { position: absolute; left: 0; top: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--gradient-brand); color: #fff; font-weight: 800; font-size: 1.1rem; display: grid; place-items: center; flex-shrink: 0; z-index: 2; }
+    .process-step:not(:first-child)::before { content: ''; position: absolute; left: 23px; top: -16px; width: 2px; height: 16px; background: var(--blue-light); z-index: 1; }
+    .process-step-content h4 { font-size: 1.05rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; padding-top: 2px; }
     .process-step-content p { font-size: .9rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
-    [data-theme="dark"] .process-step { border-left-color: var(--gray-200); }
+    [data-theme="dark"] .process-step::before { background: var(--gray-200); }
     [data-theme="dark"] .process-step-content h4 { color: var(--gray-900); }
 
     /* Funnel Stages */
