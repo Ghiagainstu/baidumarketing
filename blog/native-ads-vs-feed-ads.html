@@ -312,6 +312,33 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+    /* Concept Grid - Native vs Feed */
+    .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; }
+    .concept-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 28px; position: relative; overflow: hidden; transition: transform .25s, box-shadow .25s; }
+    .concept-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.1); }
+    .concept-card:first-child { border-top: 4px solid #3B82F6; }
+    .concept-card:last-child { border-top: 4px solid #10B981; }
+    .concept-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--gray-800); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .concept-card .def { font-size: .95rem; font-style: italic; color: var(--gray-500); margin-bottom: 20px; padding: 12px 16px; background: var(--gray-50); border-radius: 8px; border-left: 3px solid var(--gray-300); line-height: 1.6; }
+    .concept-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .concept-card ul li { font-size: .9rem; color: var(--gray-600); line-height: 1.5; padding-left: 24px; position: relative; }
+    .concept-card ul li::before { content: '✓'; position: absolute; left: 0; color: #10B981; font-weight: 700; }
+    .concept-card:first-child ul li::before { color: #3B82F6; }
+    [data-theme="dark"] .concept-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .concept-card h3 { color: var(--gray-800); }
+    [data-theme="dark"] .concept-card .def { background: var(--gray-50); color: var(--gray-500); border-left-color: var(--gray-300); }
+    [data-theme="dark"] .concept-card ul li { color: var(--gray-600); }
+    @media (max-width: 640px) { .concept-grid { grid-template-columns: 1fr; } }
+
+    /* Venn Box */
+    .venn-box { background: linear-gradient(135deg, #EEF0FF 0%, #ECFDF5 100%); border: 1px solid #C7D2FE; border-radius: var(--radius-lg); padding: 24px 28px; margin: 24px 0; text-align: center; }
+    .venn-box h3 { font-size: 1.1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 12px; }
+    .venn-box p { font-size: .95rem; color: var(--gray-600); line-height: 1.7; margin: 0; }
+    .venn-box strong { color: var(--blue); }
+    [data-theme="dark"] .venn-box { background: rgba(99,102,241,.06); border-color: rgba(99,102,241,.15); }
+    [data-theme="dark"] .venn-box h3 { color: var(--gray-800); }
+    [data-theme="dark"] .venn-box p { color: var(--gray-600); }
 </style>
 
   <script type="application/ld+json">
