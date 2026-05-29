@@ -170,17 +170,71 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
+    /* Status Cards — Enhanced */
+    .status-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--blue-subtle) 100%);
+      border: 1.5px solid var(--gray-200); border-radius: 16px; padding: 24px 28px; margin: 20px 0;
+      position: relative; overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .status-card::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+      background: linear-gradient(135deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px;
+    }
+    .status-card:hover { transform: translateX(4px); box-shadow: 0 8px 24px rgba(41,50,225,.12); }
+    .status-card h3 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin: 12px 0 8px; }
+    .status-card p { font-size: .9rem; color: var(--gray-600); line-height: 1.7; }
+
+    /* Status Badges */
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px;
+      border-radius: 999px; font-size: .8rem; font-weight: 700; letter-spacing: .03em;
+    }
+    .badge-pending { background: #FEF3C7; color: #92400E; border: 1.5px solid #FCD34D; }
+    .badge-warning { background: #FEE2E2; color: #991B1B; border: 1.5px solid #FCA5A5; }
+    .badge-info { background: #DBEAFE; color: #1E40AF; border: 1.5px solid #93C5FD; }
+    .badge-success { background: #D1FAE5; color: #065F46; border: 1.5px solid #6EE7B7; }
+    .badge-danger { background: #FEE2E2; color: #991B1B; border: 1.5px solid #F87171; }
+
+    /* SVG Chart Wrapper */
+    .svg-chart-wrapper {
+      margin: 40px 0; padding: 24px; background: var(--gray-50);
+      border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow-x: auto;
+      display: flex; justify-content: center;
+    }
+    .svg-chart-wrapper svg { max-width: 100%; height: auto; }
+
+    /* Blockquote Highlight */
+    .blockquote-highlight {
+      margin: 30px 0; padding: 20px 24px;
+      border-left: 4px solid var(--blue); background: var(--blue-subtle);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-style: italic; font-size: 1.05rem; color: var(--gray-700); line-height: 1.7;
+    }
+
+    /* Callout — Enhanced */
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; border-top: 5px solid; }
+    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #6EE7B7; }
+    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #FCD34D; }
+    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: rgba(41,50,225,.3); }
     .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
-    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
-    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
-    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
-    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; color: var(--gray-700); font-weight: 500; }
-    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    /* Takeaway — Enhanced */
+    .takeaway-box {
+      background: linear-gradient(180deg, #FFFFFF 0%, #EEF0FF 100%);
+      border: 1.5px solid #E5E7EB; border-radius: 16px; padding: 28px 32px; margin: 32px 0;
+      position: relative; overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .takeaway-box::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+      background: linear-gradient(135deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px;
+    }
+    .takeaway-box:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(41,50,225,.15); }
+    .takeaway-box h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #2932E1; display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 12px 0 0 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 24px; position: relative; color: #374151; }
+    .takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
 
     .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: var(--radius-lg); overflow: hidden; margin: 28px 0; font-size: .9rem; box-shadow: 0 4px 16px rgba(0,0,0,.06); }
     .comparison-table th { background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%); color: #fff; font-weight: 600; padding: 16px 18px; text-align: left; font-size: .95rem; }
@@ -286,11 +340,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
+/* Callout (supplemental — override original) */
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-top: 5px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #6EE7B7; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #FCD34D; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: rgba(41,50,225,.3); }
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Blockquote (article-content) */
@@ -304,10 +358,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .chart-title { text-align: center; font-size: .9rem; font-weight: 600; color: var(--gray-600); margin-bottom: 16px; }
 
 /* CTA Box */
-.cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
+.cta-box { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); color: #fff; padding: 48px; border-radius: 16px; text-align: center; margin: 50px 0; }
 .cta-box h2, .cta-box h3 { font-size: 2rem !important; font-weight: 700 !important; margin-bottom: 16px !important; color: #fff !important; }
 .cta-box p { font-size: 1.05rem !important; margin-bottom: 30px !important; opacity: .9; color: #fff !important; }
-.cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+.cta-btn { display: inline-block; background: #fff; color: #2932E1; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform .2s, box-shadow .2s; }
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
 /* Related */
@@ -432,7 +486,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
           </div>
         </div>
 
-        <h2>Quick Reference: All 5 Account Statuses</h2>
+        <h2>📋 Quick Reference: All 5 Account Statuses</h2>
 
         <table class="comparison-table">
           <thead>
@@ -447,7 +501,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
           </tbody>
         </table>
 
-        <h2>1. The Funds Have Not Arrived</h2>
+        <h2>💰 1. The Funds Have Not Arrived</h2>
 
         <div class="status-card">
           <span class="status-badge badge-pending">Pending</span>
@@ -477,7 +531,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h3>How long does this status last?</h3>
         <p>Typically 1-3 business days after Baidu receives your payment. Once payment is confirmed, the system automatically begins identity verification and moves the account to "Under review".</p>
 
-        <h2>2. Zero Balance</h2>
+        <h2>⚠️ 2. Zero Balance</h2>
 
         <div class="status-card">
           <span class="status-badge badge-warning">Warning</span>
@@ -505,7 +559,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h3>How long does this status last?</h3>
         <p>Until you top up. Ads resume serving within hours after your new payment is confirmed and the account has sufficient balance.</p>
 
-        <h2>3. Under Review</h2>
+        <h2>🔍 3. Under Review</h2>
 
         <div class="status-card">
           <span class="status-badge badge-info">In Progress</span>
@@ -535,7 +589,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h3>How long does this status last?</h3>
         <p>Typically 1-3 business days for standard reviews. Regulated industries may take 5-7 business days. You will receive a system notification once the review is complete.</p>
 
-        <h2>4. Activate</h2>
+        <h2>✅ 4. Activate</h2>
 
         <div class="status-card">
           <span class="status-badge badge-success">Active</span>
@@ -566,7 +620,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h3>How long does this status last?</h3>
         <p>Indefinitely, as long as you maintain a positive balance, comply with Baidu policies, and do not let your campaigns pause due to budget exhaustion.</p>
 
-        <h2>5. Rejected</h2>
+        <h2>❌ 5. Rejected</h2>
 
         <div class="status-card">
           <span class="status-badge badge-danger">Rejected</span>
@@ -603,7 +657,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h3>How long does this status last?</h3>
         <p>Until you fix the compliance issues and resubmit. The re-review typically takes 1-3 business days after you submit corrected information.</p>
 
-        <h2>Status Flow: How Accounts Move Between States</h2>
+        <h2>🔄 Status Flow: How Accounts Move Between States</h2>
 
         <div class="svg-chart-wrapper">
           <svg width="680" height="320" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
@@ -657,7 +711,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
           </svg>
         </div>
 
-        <h2>Common Troubleshooting Scenarios</h2>
+        <h2>🛠️ Common Troubleshooting Scenarios</h2>
 
         <p>Here are the most frequent questions we hear from advertisers about account status, and how to resolve them.</p>
 
