@@ -77,25 +77,33 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .article-content a:hover { border-color: #2932E1; }
 
 /* Callout — Enhanced */
-.callout { padding: 20px 24px; border-radius: 10px; margin: 28px 0; font-size: .95rem; line-height: 1.7; display: flex; gap: 14px; align-items: flex-start; }
-.callout.tip { background: #EEF0FF; border-left: 4px solid #2932E1; }
+.callout { border-radius: 12px; padding: 24px 28px; margin: 32px 0; border-top: 5px solid; position: relative; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #6EE7B7; }
 
 /* Takeaway — Enhanced */
-.takeaway {
+.takeaway-box {
   background: linear-gradient(180deg, #FFFFFF 0%, #EEF0FF 100%);
-  border: 1.5px solid #E5E7EB; border-radius: 16px; padding: 28px; margin: 28px 0;
+  border: 1.5px solid #E5E7EB; border-radius: 16px; padding: 28px 32px; margin: 32px 0;
   position: relative; overflow: hidden;
   transition: transform .25s ease, box-shadow .25s ease;
 }
-.takeaway::before {
+.takeaway-box::before {
   content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
   background: linear-gradient(135deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px;
 }
-.takeaway:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(41,50,225,.15); }
-.takeaway h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #111827; }
-.takeaway ul { margin: 0; padding: 0 0 0 20px; }
-.takeaway ul li { font-size: .9rem; line-height: 1.6; color: #374151; margin-bottom: 8px; }
-.takeaway ul li strong { color: #111827; font-weight: 700; }
+.takeaway-box:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(41,50,225,.15); }
+.takeaway-box h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #2932E1; display: flex; align-items: center; gap: 8px; }
+.takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 12px 0 0 0; }
+.takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 24px; position: relative; color: #374151; }
+.takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
+
+/* Comparison Table - Enhanced */
+.comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(41,50,225,.1); }
+.comparison-table th { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); color: #fff; padding: 18px 20px; text-align: left; font-weight: 700; font-size: .95rem; letter-spacing: .02em; }
+.comparison-table td { padding: 16px 20px; border-bottom: 1px solid #E5E7EB; color: #374151; font-size: .95rem; transition: background .2s; }
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table tr:hover td { background: #EEF0FF; }
+.comparison-table td strong { color: #111827; font-weight: 700; }
 
 /* Footer */
 footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
@@ -120,8 +128,13 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 [data-theme="dark"] .article-title { color: #F9FAFB; }
 [data-theme="dark"] .article-content { color: #D1D5DB; }
 [data-theme="dark"] .article-content a { color: #818CF8; }
-[data-theme="dark"] .callout.tip { background: rgba(99,102,241,.12); }
-[data-theme="dark"] .takeaway { background: #1F2937; border-color: #374151; }
+[data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
+[data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+[data-theme="dark"] .takeaway-box h4 { color: #818CF8; }
+[data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
+[data-theme="dark"] .comparison-table { background: var(--gray-100); }
+[data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
+[data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
 [data-theme="dark"] footer { background: #070B14; }
 
 /* CTA Button */
@@ -188,7 +201,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       <p>Baidu regularly retires underperforming or outdated creative components. The latest retirement: the Custom Form creative component, phased out in July 2024.</p>
       <p>For most advertisers, this is a non-event — these components had low conversion rates and were hurting user experience. But if you were using them, here is what to do.</p>
 
-      <h2>What Is Being Retired</h2>
+      <h2>📋 What Is Being Retired</h2>
       <p>The Custom Form creative component allowed advertisers to embed a form directly in their search ad. Users could fill and submit it without leaving the Baidu search results page.</p>
       <p>Baidu found these forms:</p>
       <ul>
@@ -197,23 +210,23 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
         <li>Underperformed against other creative types</li>
       </ul>
 
-      <h2>The Timeline</h2>
-      <div class="callout tip">
+      <h2>📅 The Timeline</h2>
+      <div class="callout callout-tip">
         <strong>⚠️ Key Dates</strong><br/>
         <strong>July 26, 2024</strong>: Cannot create new Custom Form or Form components<br/>
         <strong>July 31, 2024</strong>: Existing Custom Form components stop displaying. Management portal closes.
       </div>
 
-      <h2>What the Retirement Covers</h2>
-      <table>
+      <h2>📊 What the Retirement Covers</h2>
+      <table class="comparison-table">
         <thead><tr><th>Component</th><th>New Creation</th><th>Existing Display</th><th>Data Reports</th></tr></thead>
         <tbody>
-<tr><td>Custom Form</td><td>❌ Stopped Jul 26</td><td>❌ Stops Jul 31</td><td>✅ 27 months retained</td></tr>
-<tr><td>Form</td><td>❌ Stopped Jul 26</td><td>Already inactive</td><td>✅ 27 months retained</td></tr>
+          <tr><td><strong>Custom Form</strong></td><td>❌ Stopped Jul 26</td><td>❌ Stops Jul 31</td><td>✅ 27 months retained</td></tr>
+          <tr><td><strong>Form</strong></td><td>❌ Stopped Jul 26</td><td>Already inactive</td><td>✅ 27 months retained</td></tr>
         </tbody>
       </table>
 
-      <h2>Does This Affect Me?</h2>
+      <h2>🤔 Does This Affect Me?</h2>
       <p><strong>Probably not.</strong> This retirement specifically targets:</p>
       <ul>
         <li>The "Custom Form" creative component type</li>
@@ -228,18 +241,18 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       </ul>
       <p>No action required for the vast majority of advertisers.</p>
 
-      <h2>If You Were Using Custom Forms</h2>
-      <div class="takeaway">
+      <h2>✅ If You Were Using Custom Forms</h2>
+      <div class="takeaway-box">
         <h4>🎯 Quick Checklist</h4>
         <ul>
-          <li>✅ Check if you have active Custom Form components (most advertisers do not)</li>
-          <li>✅ If yes, export your historical data before July 31</li>
-          <li>✅ Set up a proper landing page with a form — better conversion quality</li>
-          <li>✅ Data reports remain available for 27 months after retirement</li>
+          <li>Check if you have active Custom Form components (most advertisers do not)</li>
+          <li>If yes, export your historical data before July 31</li>
+          <li>Set up a proper landing page with a form — better conversion quality</li>
+          <li>Data reports remain available for 27 months after retirement</li>
         </ul>
       </div>
 
-      <h2>Why This Is Good News</h2>
+      <h2>💡 Why This Is Good News</h2>
       <p>Component retirements like this are a platform health signal. Baidu is actively removing low-performing ad formats to improve:</p>
       <ol>
         <li><strong>User experience</strong> on search results pages</li>
@@ -248,18 +261,16 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       </ol>
       <p>A platform that never cleans up is a platform that stagnates. This retirement shows Baidu is actively maintaining its ad ecosystem.</p>
 
-      <h2>What Overseas Advertisers Should Know</h2>
+      <h2>🌏 What Overseas Advertisers Should Know</h2>
       <p>For international brands, platform changes like this can go unnoticed. You might not read Chinese product announcements covering component retirements that affect 1% of accounts.</p>
       <p>But if you were relying on Custom Forms — perhaps because building a Chinese landing page felt too complex — this retirement means you need a proper landing page.</p>
 
-      <h2>How BPP Handles This</h2>
+      <h2>🤝 How BPP Handles This</h2>
       <p>BPP-managed accounts already use landing pages with forms, not in-ad form components. This retirement has zero impact on our clients.</p>
       <p>If you are running Baidu ads yourself and relied on Custom Forms as a workaround to avoid building a Chinese landing page — now is the time to build one. Or talk to us.</p>
 
-      <hr style="margin: 48px 0; border: none; border-top: 1px solid #E5E7EB;">
-      <p style="font-size: 1.1rem; font-weight: 600; color: #111827;">Ready to explore what Baidu can do for your brand in 2026?</p>
       <div class="cta-box">
-        <h3>Talk to the BPP team</h3>
+        <h3>🚀 Talk to the BPP team</h3>
         <p>We handle Baidu advertising for international brands so you can focus on your business.</p>
         <a href="/contact" class="cta-btn">Talk to the BPP team →</a>
       </div>
