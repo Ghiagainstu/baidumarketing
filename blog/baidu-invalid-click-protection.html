@@ -344,6 +344,31 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+/* Warning hero — left/right layout */
+.warning-hero { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%); border: 1px solid #FECACA; border-radius: var(--radius-lg); padding: 28px 32px; margin: 28px 0; }
+.warning-hero-icon { font-size: 3rem; line-height: 1; }
+.warning-hero-text h3 { font-size: 1.1rem; font-weight: 700; color: #991B1B; margin-bottom: 8px; }
+.warning-hero-text p { font-size: .92rem; color: #7F1D1D; line-height: 1.7; margin: 0; }
+[data-theme="dark"] .warning-hero { background: rgba(239,68,68,.08); border-color: rgba(239,68,68,.3); }
+[data-theme="dark"] .warning-hero-text h3 { color: #FCA5A5; }
+[data-theme="dark"] .warning-hero-text p { color: #FCA5A5; }
+
+/* Practice cards */
+.practice-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 28px 0; }
+.practice-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; position: relative; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+.practice-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.practice-card-num { position: absolute; top: 12px; right: 16px; font-size: 2.5rem; font-weight: 900; color: var(--blue-light); line-height: 1; }
+.practice-card h3 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; position: relative; z-index: 1; }
+.practice-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.6; margin: 0; position: relative; z-index: 1; }
+.practice-card:nth-child(1) { border-top: 3px solid #2932E1; }
+.practice-card:nth-child(2) { border-top: 3px solid #4F46E5; }
+.practice-card:nth-child(3) { border-top: 3px solid #7C3AED; }
+.practice-card:nth-child(4) { border-top: 3px solid #2563EB; }
+.practice-card:nth-child(5) { border-top: 3px solid #10B981; }
+[data-theme="dark"] .practice-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .practice-card-num { color: var(--gray-200); }
+[data-theme="dark"] .practice-card h3 { color: var(--gray-900); }
 </style>
 <script type="application/ld+json">
   {
@@ -408,9 +433,12 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
         <p>We've managed Baidu campaigns for international clients for over 15 years, and click fraud comes up in almost every industry. The good news: Baidu's filtering system is one of the best in the industry. In this guide, we'll explain how it works, what you need to watch for, and how we help clients protect their ad budgets.</p>
 
-        <div class="callout callout-warning">
-          <strong>⚠️ Warning: The Real Cost of Invalid Clicks</strong>
-          <p>Invalid clicks drain budgets fast. In competitive industries like healthcare, education, and B2B services, competitors have every incentive to click your ads repeatedly. Without protection, you're not just wasting money—you're handing it to your rivals.</p>
+        <div class="warning-hero">
+          <div class="warning-hero-icon">⚠️</div>
+          <div class="warning-hero-text">
+            <h3>The Real Cost of Invalid Clicks</h3>
+            <p>Invalid clicks drain budgets fast. In competitive industries like healthcare, education, and B2B services, competitors have every incentive to click your ads repeatedly. Without protection, you're not just wasting money — you're handing it to your rivals.</p>
+          </div>
         </div>
 
         <h2>What Are Invalid Clicks?</h2>
@@ -607,20 +635,33 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
         <p>Based on our experience managing hundreds of Baidu accounts, here are the strategies we implement for our clients:</p>
 
-        <h3>1. Monitor Your Invalid Click Reports Weekly</h3>
-        <p>Don't just set it and forget it. Review the invalid click report in Baidu backend every week. Look for patterns—are certain keywords attracting more invalid clicks? Are specific time periods more vulnerable?</p>
-
-        <h3>2. Use IP Exclusions Strategically</h3>
-        <p>If you see repeated invalid clicks from specific IP addresses or ranges, add them to your exclusion list. But be careful—overblocking can hurt your reach.</p>
-
-        <h3>3. Adjust Bids, Don't Just Chase Position #1</h3>
-        <p>Being in the first position gets you the most clicks, but also makes you the biggest target. Sometimes position 2-3 gives you better ROI with less fraud risk.</p>
-
-        <h3>4. Implement Negative Keywords Aggressively</h3>
-        <p>Many invalid clicks come from poorly matched keywords. Regular negative keyword expansion reduces both wasted spend and invalid click risk.</p>
-
-        <h3>5. Work with Experts Who Monitor for You</h3>
-        <p>This is where we come in. Our team monitors accounts daily, spots anomalies early, and adjusts protection settings before budget is wasted.</p>
+        <div class="practice-cards">
+          <div class="practice-card">
+            <div class="practice-card-num">1</div>
+            <h3>📊 Monitor Reports Weekly</h3>
+            <p>Review the invalid click report in Baidu backend every week. Look for patterns — are certain keywords attracting more invalid clicks? Are specific time periods more vulnerable?</p>
+          </div>
+          <div class="practice-card">
+            <div class="practice-card-num">2</div>
+            <h3>🚫 Strategic IP Exclusions</h3>
+            <p>Add repeated offender IPs to your exclusion list. But be careful — overblocking can hurt your reach. Target specific ranges, not broad blocks.</p>
+          </div>
+          <div class="practice-card">
+            <div class="practice-card-num">3</div>
+            <h3>📉 Smart Bid Positioning</h3>
+            <p>Position #1 gets the most clicks but also the most fraud. Sometimes position 2-3 gives better ROI with less invalid click risk.</p>
+          </div>
+          <div class="practice-card">
+            <div class="practice-card-num">4</div>
+            <h3>🔍 Aggressive Negative Keywords</h3>
+            <p>Many invalid clicks come from poorly matched keywords. Regular negative keyword expansion reduces both wasted spend and invalid click risk.</p>
+          </div>
+          <div class="practice-card">
+            <div class="practice-card-num">5</div>
+            <h3>🛡️ Expert Monitoring</h3>
+            <p>Our team monitors accounts daily, spots anomalies early, and adjusts protection settings before budget is wasted.</p>
+          </div>
+        </div>
 
         <div class="takeaway-box">
           <h3>Key Takeaways</h3>
