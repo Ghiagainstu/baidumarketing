@@ -245,11 +245,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--blue); margin-bottom: 6px; }
 .stat-label { font-size: .85rem; color: var(--gray-600); }
 
-/* Comparison Table */
-.comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
-.comparison-table th { background: var(--blue); color: #fff; padding: 16px; text-align: left; font-weight: 600; font-size: .95rem; }
-.comparison-table td { padding: 14px 16px; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); font-size: .95rem; }
+/* Comparison Table - Enhanced */
+.comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(41,50,225,.1); }
+.comparison-table th { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); color: #fff; padding: 18px 20px; text-align: left; font-weight: 700; font-size: .95rem; letter-spacing: .02em; }
+.comparison-table td { padding: 16px 20px; border-bottom: 1px solid #E5E7EB; color: #374151; font-size: .95rem; transition: background .2s; }
 .comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table tr:hover td { background: #EEF0FF; }
+.comparison-table td strong { color: #111827; font-weight: 700; }
 .comparison-table .check-col { text-align: center; font-size: 1.2rem; }
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
@@ -462,44 +464,42 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <p><strong>Third, the ad format itself has changed.</strong> Search ads interrupt you. AI-native ads work differently. Ask the AI "what should I do this weekend?" and it suggests a theme park with a ticket link. That's not an interruption. That's a service. The line between content and advertising gets blurry, and when the ads actually solve your problem, most users don't mind.</p>
 
       <!-- 对比表格 -->
-      <div style="margin: 40px 0; overflow-x: auto;">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Aspect</th>
-              <th>Traditional Search (Baidu)</th>
-              <th>AI Assistants</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Ad Format</strong></td>
-              <td>Interrupts with banner/text ads</td>
-              <td>Native recommendations in conversation</td>
-            </tr>
-            <tr>
-              <td><strong>Trust Cost of Bad Ads</strong></td>
-              <td>Low — users scroll past</td>
-              <td>High — users switch platforms</td>
-            </tr>
-            <tr>
-              <td><strong>Regulation</strong></td>
-              <td>Post-scandal cleanup</td>
-              <td>Proactive whitelists for sensitive categories</td>
-            </tr>
-            <tr>
-              <td><strong>Optimization Target</strong></td>
-              <td>Keyword bids, CTR</td>
-              <td>Model trust scores</td>
-            </tr>
-            <tr>
-              <td><strong>User Experience</strong></td>
-              <td>Search → Evaluate → Decide</td>
-              <td>Ask → Get Recommended → Trust</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>📊 Aspect</th>
+            <th>🖥️ Traditional Search (Baidu)</th>
+            <th>🤖 AI Assistants</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ad Format</strong></td>
+            <td>Interrupts with banner/text ads</td>
+            <td>Native recommendations in conversation</td>
+          </tr>
+          <tr>
+            <td><strong>Trust Cost of Bad Ads</strong></td>
+            <td>Low — users scroll past</td>
+            <td>High — users switch platforms</td>
+          </tr>
+          <tr>
+            <td><strong>Regulation</strong></td>
+            <td>Post-scandal cleanup</td>
+            <td>Proactive whitelists for sensitive categories</td>
+          </tr>
+          <tr>
+            <td><strong>Optimization Target</strong></td>
+            <td>Keyword bids, CTR</td>
+            <td>Model trust scores</td>
+          </tr>
+          <tr>
+            <td><strong>User Experience</strong></td>
+            <td>Search → Evaluate → Decide</td>
+            <td>Ask → Get Recommended → Trust</td>
+          </tr>
+        </tbody>
+      </table>
 
       <!-- 功能卡片 -->
       <div class="feature-grid">
