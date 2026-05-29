@@ -48,6 +48,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .nav-links a:hover::after { width: 100%; left: 0; }
 .nav-links a.active { color: #2932E1; font-weight: 600; }
 .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-right-group { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .lang-switch { position: relative; }
+    .lang-switch-btn { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; font-size: .9rem; color: var(--gray-600); transition: all var(--transition-base); line-height: 1; }
+    .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .lang-switch-menu { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; box-shadow: var(--shadow-md); min-width: 150px; opacity: 0; pointer-events: none; transform: translateY(-4px); transition: opacity .2s ease, transform .2s ease; z-index: 200; }
+    .lang-switch-menu.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .lang-switch-item { display: block; padding: 10px 16px; font-size: .9rem; color: var(--gray-700); transition: background .15s; white-space: nowrap; text-decoration: none; }
+    .lang-switch-item:hover { background: var(--blue-light); color: var(--blue); }
+    .lang-switch-item:first-child { border-radius: 7px 7px 0 0; }
+    .lang-switch-item:last-child { border-radius: 0 0 7px 7px; }
+    [data-theme="dark"] .lang-switch-btn { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    [data-theme="dark"] .lang-switch-menu { background: #0B0F1A; border-color: var(--gray-200); }
+    [data-theme="dark"] .lang-switch-item { color: var(--gray-700); }
+    [data-theme="dark"] .lang-switch-item:hover { background: rgba(99,102,241,.12); color: var(--blue); }
+    @media (max-width: 900px) { .lang-switch { display: none}; }
+
 .nav-mobile-cta, .nav-mobile-theme { display: none; }
 .nav-cta { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform .2s, box-shadow .2s; position: relative; overflow: hidden; }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
@@ -172,7 +189,16 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       <a href="../blog" class="active">Blog</a>
       <a href="../contact">Contact</a>
     </div>
-    <a href="../contact" class="nav-cta">Get Started &rarr;</a>
+      <div class="nav-right-group">
+      <div class="lang-switch">
+        <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="Language">&#x1f1fa;&#x1f1f8;<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+        <div class="lang-switch-menu" id="langSwitchMenu">
+            <a href="/blog/baidu-custom-form-retirement" lang="en" class="lang-switch-item">&#x1f1fa;&#x1f1f8; English</a>
+            <a href="/ja/blog/baidu-custom-form-retirement" lang="ja" class="lang-switch-item">&#x1f1ef;&#x1f1f5; 日本語</a>
+        </div>
+      </div>
+      <a href="../contact" class="nav-cta">Get Started &rarr;</a>
+      </div>
     <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
       <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
     </button>
@@ -361,6 +387,29 @@ document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailt
     "@id": "https://baidumarketing.com/blog/baidu-custom-form-retirement"
   }
 }
+</script>
+<script>
+function toggleLangMenu() {
+  const menu = document.getElementById('langSwitchMenu');
+  if (menu) menu.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('langSwitchMenu');
+  const btn = document.querySelector('.lang-switch-btn');
+  if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const currentLang = document.documentElement.lang || 'en';
+  document.querySelectorAll('.lang-switch-item').forEach(function(item) {
+    if (item.getAttribute('lang') === currentLang) {
+      item.style.fontWeight = '600';
+      item.style.pointerEvents = 'none';
+      item.style.opacity = '0.5';
+    }
+  });
+});
 </script>
 </body>
 </html>
