@@ -306,10 +306,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
 
     /* Stats Highlight */
-    .stats-highlight { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 16px; padding: 32px; margin: 32px 0; text-align: center; }
-    .stats-highlight .big-num { font-size: 3rem; font-weight: 800; color: var(--blue); margin-bottom: 8px; }
-    .stats-highlight .label { font-size: 1.1rem; font-weight: 600; color: var(--gray-800); }
-    [data-theme="dark"] .stats-highlight { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    .stats-highlight { background: linear-gradient(135deg, #2563EB 0%, #4F46E5 50%, #7C3AED 100%); border-radius: 20px; padding: 40px 32px; margin: 32px 0; text-align: center; position: relative; overflow: hidden; box-shadow: 0 8px 32px rgba(37,99,235,.25); }
+    .stats-highlight::before { content: ''; position: absolute; top: -50%; right: -20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,.15) 0%, transparent 70%); pointer-events: none; }
+    .stats-highlight::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,255,255,.1) 0%, transparent 70%); pointer-events: none; }
+    .stats-highlight .big-num { font-size: 3.8rem; font-weight: 900; color: #fff; margin-bottom: 12px; letter-spacing: -.02em; text-shadow: 0 2px 8px rgba(0,0,0,.15); position: relative; z-index: 1; }
+    .stats-highlight .label { font-size: 1.15rem; font-weight: 600; color: rgba(255,255,255,.9); position: relative; z-index: 1; letter-spacing: .02em; }
+    .stats-highlight .sub-label { font-size: .85rem; color: rgba(255,255,255,.7); margin-top: 8px; position: relative; z-index: 1; }
+    [data-theme="dark"] .stats-highlight { background: linear-gradient(135deg, #1E40AF 0%, #3730A3 50%, #5B21B6 100%); box-shadow: 0 8px 32px rgba(30,64,175,.3); }
 
     /* Feed Comparison */
     .feed-comparison { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 24px 0; }
@@ -424,6 +427,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <div class="stats-highlight">
           <div class="big-num">100M+</div>
           <div class="label">Daily Active Users on Baidu Feed</div>
+          <div class="sub-label">📈 Up 300% Year-over-Year</div>
         </div>
 
         <p>Baidu feed ads appear inside content streams on the Baidu App, homepage, and Tieba. Unlike traditional display advertising, they're targeted using search history, browsing patterns, and behavioral signals.</p>
