@@ -251,18 +251,31 @@
     .blog-filter { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 48px; }
     .blog-filter button { padding: 8px 18px; border-radius: 999px; border: 1px solid var(--gray-200); background: transparent; color: var(--gray-600); font-size: .85rem; font-weight: 500; cursor: pointer; transition: all .2s; }
     .blog-filter button:hover { border-color: var(--blue); color: var(--blue); }
-    .blog-filter button.active { background: var(--gradient-brand); color: #fff; border-color: transparent; }
-    .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-    .blog-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 28px; transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
-    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .blog-card-tag { display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
-    .blog-card-tag.feed { background: rgba(16,185,129,.1); color: #059669; }
-    .blog-card-tag.search { background: rgba(59,130,246,.1); color: #2563EB; }
-    .blog-card-tag.strategy { background: rgba(139,92,246,.1); color: #7C3AED; }
-    .blog-card-tag.landing { background: rgba(245,158,11,.1); color: #D97706; }
-    .blog-card-tag.platform { background: rgba(236,72,153,.1); color: #DB2777; }
-    .blog-card-tag.insights { background: rgba(14,165,233,.1); color: #0284C7; }
-    .blog-card-title { font-size: 1.1rem; font-weight: 700; color: var(--gray-800); line-height: 1.4; margin-bottom: 10px; }
+    .blog-filter button.active { background: var(--gradient-brand); color: #fff; border-color: transparent; box-shadow: 0 4px 12px rgba(41,50,225,.25); }
+    .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .blog-card {
+      background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg);
+      padding: 0; transition: transform .3s cubic-bezier(0.16,1,0.3,1), box-shadow .3s ease, border-color .3s ease;
+      display: flex; flex-direction: column; overflow: hidden; position: relative;
+    }
+    .blog-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: var(--gradient-brand); opacity: 0;
+      transition: opacity .3s ease;
+    }
+    .blog-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(41,50,225,.15); border-color: rgba(41,50,225,.2); }
+    .blog-card:hover::before { opacity: 1; }
+    .blog-card-link { display: flex; flex-direction: column; height: 100%; }
+    .blog-card-content { padding: 28px; display: flex; flex-direction: column; flex: 1; }
+    .blog-card-tag { display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; width: fit-content; }
+    .blog-card-tag.feed { background: rgba(16,185,129,.1); color: #059669; border: 1px solid rgba(16,185,129,.2); }
+    .blog-card-tag.search { background: rgba(59,130,246,.1); color: #2563EB; border: 1px solid rgba(59,130,246,.2); }
+    .blog-card-tag.strategy { background: rgba(139,92,246,.1); color: #7C3AED; border: 1px solid rgba(139,92,246,.2); }
+    .blog-card-tag.landing { background: rgba(245,158,11,.1); color: #D97706; border: 1px solid rgba(245,158,11,.2); }
+    .blog-card-tag.platform { background: rgba(236,72,153,.1); color: #DB2777; border: 1px solid rgba(236,72,153,.2); }
+    .blog-card-tag.insights { background: rgba(14,165,233,.1); color: #0284C7; border: 1px solid rgba(14,165,233,.2); }
+    .blog-card-title { font-size: 1.1rem; font-weight: 700; color: var(--gray-800); line-height: 1.4; margin-bottom: 10px; transition: color .2s; }
+    .blog-card:hover .blog-card-title { color: var(--blue); }
     .blog-card-excerpt { font-size: .88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
     .blog-card-excerpt strong { color: var(--gray-800); font-weight: 600; }
     .blog-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; overflow: hidden; }
@@ -278,12 +291,15 @@
     }
     .blog-card-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--gray-100); font-size: .78rem; color: var(--gray-400); }
     .blog-card-meta .read-time { display: flex; align-items: center; gap: 4px; }
+    .blog-card-readmore { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 600; color: var(--blue); margin-top: 12px; transition: gap .2s; }
+    .blog-card:hover .blog-card-readmore { gap: 10px; }
     @media (max-width: 768px) {
       .blog-grid { grid-template-columns: 1fr; }
       .blog-section { padding: 48px 0; }
     }
     [data-theme="dark"] .blog-card { background: var(--gray-100) !important; border-color: var(--gray-200); }
     [data-theme="dark"] .blog-card-title { color: var(--gray-800); }
+    [data-theme="dark"] .blog-card:hover .blog-card-title { color: #818CF8; }
     [data-theme="dark"] .blog-card-excerpt { color: var(--gray-600); }
     [data-theme="dark"] .blog-card-excerpt strong { color: var(--gray-700); }
     [data-theme="dark"] .blog-card-meta { color: var(--gray-400); border-top-color: var(--gray-200); }
@@ -496,7 +512,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Streamlines Ad Creation Workflow: 3 Upgrades That Save Time and Improve Creative Quality</h3>
             <p class="blog-card-excerpt">📢 Read this article to learn more about Baidu advertising strategies and best practices.</p>
-            <div class="blog-card-meta"><span>May 17, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 17, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="insights">
@@ -504,7 +520,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Moves Brand Info to Account Level: Why It Matters for Ad Relevance and CTR</h3>
             <p class="blog-card-excerpt">📢 Read this article to learn more about Baidu advertising strategies and best practices.</p>
-            <div class="blog-card-meta"><span>May 17, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 17, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -512,7 +528,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Advertising for International Brands: Frequently Asked Questions (2026 Edition)</h3>
             <p class="blog-card-excerpt">📢 Baidu Advertising for International Brands: Frequently Asked Questions (2026 Edition) Account Setup Do I need a Chinese company to advertise on Baidu? Not</p>
-            <div class="blog-card-meta"><span>May 17, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 17, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -520,7 +536,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">New Opportunities for Customer Acquisition on Baidu in 2026</h3>
             <p class="blog-card-excerpt">📢 Baidu's 2026 upgrades: Maps Store Membership for local business, HuiBoXing AI digital human streaming, AiCaiGou B2B platform, Merchant AI Agent — new custo</p>
-            <div class="blog-card-meta"><span>May 10, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 10, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -528,7 +544,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Ad Billing Models: CPM, CPC, oCPM, and When to Use Each</h3>
             <p class="blog-card-excerpt">📢 Baidu offers multiple billing models: CPM for brand awareness, CPC for search intent, oCPM for conversion optimization. Pick the wrong one and you waste bu</p>
-            <div class="blog-card-meta"><span>May 3, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 3, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -536,7 +552,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Is Rising CPM Really Bad News for Your Baidu Campaigns?</h3>
             <p class="blog-card-excerpt">📢 Most advertisers panic when CPM goes up. But a real campaign case shows CPM rising from ¥28 to ¥36 while CPA dropped from ¥120 to ¥72. Here's when higher C</p>
-            <div class="blog-card-meta"><span>May 3, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 3, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -544,7 +560,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">CPM vs oCPM vs eCPM: The 3 Metrics Every Baidu Advertiser Must Understand</h3>
             <p class="blog-card-excerpt">📢 CPM, oCPM, and eCPM look similar but live at completely different levels of the ad system. Advertisers bid with oCPM, the system ranks by eCPM, and what yo</p>
-            <div class="blog-card-meta"><span>May 2, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 2, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -552,7 +568,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">The 5-Step B2B Lead Generation Framework on Baidu: A Practical Guide for Overseas Companies</h3>
             <p class="blog-card-excerpt">🤝 88% of B2B transactions start online. 75% of buyers use social media for research. 90% of decision makers never respond to cold outreach (Accenture da</p>
-            <div class="blog-card-meta"><span>May 29, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 29, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -560,7 +576,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu's 2026 Upgrades: Why the Opportunity Is Bigger for International Brands — and Harder to Capture</h3>
             <p class="blog-card-excerpt">📝 There is a pattern we see at BPP. It repeats with nearly every inquiry we receive.</p>
-            <div class="blog-card-meta"><span>May 17, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 17, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -568,7 +584,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu's New Keyword Zero-Impression Diagnosis Tool: What It Does and Who Can Use It</h3>
             <p class="blog-card-excerpt">📢 Baidu's Keyword Zero-Impression Diagnosis tool examines why your keywords aren't showing ads. Covers account settings, targeting filters, quality threshold</p>
-            <div class="blog-card-meta"><span>May 22, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 22, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -576,7 +592,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">How Chinese Consumers Research and Decide — and What This Means for Overseas Brands</h3>
             <p class="blog-card-excerpt">📝 Chinese outbound tourism is accelerating past $300 billion annually. But this article is not really about tourism. It is about something more fundamen</p>
-            <div class="blog-card-meta"><span>May 18, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 18, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -584,7 +600,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Why Baidu Search Is the Most Underrated B2B Channel for International Brands</h3>
             <p class="blog-card-excerpt">📢 Every B2B marketing director we speak to at BPP has a version of the same complaint: "We are spending on LinkedIn, on Google Ads, on trade shows — the</p>
-            <div class="blog-card-meta"><span>May 13, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 13, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -592,7 +608,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Will AI Assistants Become the Next Baidu?</h3>
             <p class="blog-card-excerpt">📢 Once Chinese AI chatbots start running ads, will we end up with another Baidu? My take: yes to the ads, no to the garbage. And that distinction matters.</p>
-            <div class="blog-card-meta"><span>Apr 7, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Apr 7, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -600,7 +616,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu's Profit Crashed 76% — Good News for You</h3>
             <p class="blog-card-excerpt">📢 Baidu's 2025 earnings reveal a 76% profit drop and AI revenue hitting 40B RMB. What this means for advertisers and three steps to prepare for the GEO revol</p>
-            <div class="blog-card-meta"><span>Apr 1, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Apr 1, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -608,7 +624,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">China Internet in Numbers 2025</h3>
             <p class="blog-card-excerpt">📢 China's internet population hit 1.125 billion in late 2025, with an 80.1% penetration rate. Key figures for advertisers building campaigns.</p>
-            <div class="blog-card-meta"><span>Apr 9, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Apr 9, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -616,7 +632,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Is Cleaning Up Inactive Keywords: What Active Advertisers Should Know</h3>
             <p class="blog-card-excerpt">📢 Baidu Is Cleaning Up Inactive Keywords: What Active Advertisers Should Know Platform maintenance announcements rarely make the news. But when Baidu announc</p>
-            <div class="blog-card-meta"><span>Dec 8, 2025</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 8, 2025</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -624,7 +640,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Search Ads Now Support 1:1 Images on Desktop: A Small Change That Saves Real Budget</h3>
             <p class="blog-card-excerpt">📢 Baidu Search Ads Now Support 1:1 Images on Desktop: A Small Change That Saves Real Budget When you run search ads across both mobile and desktop, one of th</p>
-            <div class="blog-card-meta"><span>Oct 27, 2025</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Oct 27, 2025</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -632,7 +648,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Ads Campaign Upgrades 2025: What Actually Changed</h3>
             <p class="blog-card-excerpt">📢 Baidu Ads Campaign Upgrades 2025: What Actually Changed for Your Account Three platform updates that affect how you build and optimize campaigns — and what</p>
-            <div class="blog-card-meta"><span>Oct 16, 2025</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Oct 16, 2025</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -640,7 +656,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Is Retiring Creative-Level URLs: Migration Guide for Advertisers</h3>
             <p class="blog-card-excerpt">📢 Baidu Is Retiring Creative-Level URLs: Migration Guide for Advertisers Platform migrations are rarely fun. But when Baidu removes a redundant layer from it</p>
-            <div class="blog-card-meta"><span>May 22, 2025</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 22, 2025</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="insights">
@@ -648,7 +664,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Retires Custom Form Creative Component: What Advertisers Need to Know</h3>
             <p class="blog-card-excerpt">📢 Baidu Retires Custom Form Creative Component: What Advertisers Need to Know Baidu regularly retires underperforming or outdated creative components. The la</p>
-            <div class="blog-card-meta"><span>Jul 24, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jul 24, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -656,7 +672,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu's New 'Conflicting Negative Keywords' Feature: A Practical Guide</h3>
             <p class="blog-card-excerpt">🔍 Baidu's AI platform Qingge uses natural language prompts, not keywords. Learn how the new 'Conflicting Negative Keywords' feature helps optimize your campa</p>
-            <div class="blog-card-meta"><span>Jul 12, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jul 12, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -664,7 +680,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu URL Wildcards: Complete Tracking Guide</h3>
             <p class="blog-card-excerpt">📢 Master Baidu URL wildcards to track keywords, campaigns, and ad groups. Complete guide with all 9 parameters, usage examples, and UTM integration tips.</p>
-            <div class="blog-card-meta"><span>May 19, 2023</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 19, 2023</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -672,7 +688,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Shared Budget: Stop Wasting Ad Spend Across Campaigns</h3>
             <p class="blog-card-excerpt">📢 Baidu now supports shared budgets across campaigns. Instead of manually allocating budget per campaign, let the system redistribute underutilized spend to</p>
-            <div class="blog-card-meta"><span>Mar 22, 2023</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Mar 22, 2023</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -680,7 +696,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Search Ads Drops Device Bid Coefficients: What It Means for Overseas Advertisers</h3>
             <p class="blog-card-excerpt">📢 Baidu Search Ads Drops Device Bid Coefficients: What It Means for Overseas Advertisers Baidu's search advertising platform is retiring the device bid bench</p>
-            <div class="blog-card-meta"><span>Sep 14, 2022</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Sep 14, 2022</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -688,7 +704,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Ad Performance Diagnostic Tool: Find Out Why Your Campaign Suddenly Dropped</h3>
             <p class="blog-card-excerpt">📢 Baidu Ad Performance Diagnostic Tool: Find Out Why Your Campaign Suddenly Dropped The Panic Moment It is 9 AM. You check your Baidu campaign dashboard. You</p>
-            <div class="blog-card-meta"><span>Jun 24, 2022</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jun 24, 2022</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -696,7 +712,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu oCPC Now Supports Skip Data Accumulation on All Traffic Types</h3>
             <p class="blog-card-excerpt">📢 Baidu oCPC Now Supports Skip Data Accumulation on All Traffic Types The Data Dilemma When you launch a new Baidu search campaign with oCPC (Baidu's smart b</p>
-            <div class="blog-card-meta"><span>Dec 22, 2021</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 22, 2021</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -704,7 +720,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Stopped Showing Domain Names in Ads</h3>
             <p class="blog-card-excerpt">📢 Baidu no longer shows domain names in PPC ad display URLs. Now business registration names appear by default. Learn how to customize brand info and what fo</p>
-            <div class="blog-card-meta"><span>Nov 10, 2021</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Nov 10, 2021</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -712,7 +728,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Paid Search Video Ads: Specs, Setup, and Why You Should Use Them</h3>
             <p class="blog-card-excerpt">📢 Baidu prioritizes video ads over static images in paid search results. Video formats deliver higher CTR and more engagement. Complete guide to video specs,</p>
-            <div class="blog-card-meta"><span>Sep 10, 2021</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Sep 10, 2021</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -720,7 +736,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Search Ad Video Format Guide: Specs, Settings, and Best Practices</h3>
             <p class="blog-card-excerpt">📢 Baidu search ads now prioritize video format over static images. Complete guide to video specs, account/campaign/ad group settings, Baidu's free video libr</p>
-            <div class="blog-card-meta"><span>Sep 10, 2021</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Sep 10, 2021</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -728,7 +744,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Conversion Tracking Now Prevents Double Counting: Why Clean Data Matters for B2B Campaigns</h3>
             <p class="blog-card-excerpt">📢 Baidu Conversion Tracking Now Prevents Double Counting: Why Clean Data Matters for B2B Campaigns The Problem With Double Counting Here is a scenario we see</p>
-            <div class="blog-card-meta"><span>Aug 17, 2021</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Aug 17, 2021</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="insights">
@@ -736,7 +752,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Brand Zone Adds Material Pre-Review: Catch Compliance Issues Before Submission</h3>
             <p class="blog-card-excerpt">🔍 Baidu Brand Zone now has automatic material pre-review. The system scans for compliance issues before formal submission — saves resubmission cycles for ove</p>
-            <div class="blog-card-meta"><span>Jul 14, 2021</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jul 14, 2021</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="landing">
@@ -744,7 +760,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Landing Page Report: Full-Funnel Data for Smarter Optimization</h3>
             <p class="blog-card-excerpt">📢 Baidu Landing Page Report: Full-Funnel Data for Smarter Optimization The Blind Spot in Most Campaigns You know how many clicks your Baidu campaign is getti</p>
-            <div class="blog-card-meta"><span>Mar 31, 2021</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Mar 31, 2021</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="landing">
@@ -752,7 +768,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Landing Page Audit: Now Showing Exactly Why Your Page Was Rejected</h3>
             <p class="blog-card-excerpt">🔍 Baidu Landing Page Audit: Now Showing Exactly Why Your Page Was Rejected The Old Way (and Why It Wasted Your Time) If you have ever submitted a landing pag</p>
-            <div class="blog-card-meta"><span>Jan 6, 2021</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jan 6, 2021</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -760,7 +776,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Click Fraud Protection Adds IPv4 Blocking: How to Stop Malicious Clicks</h3>
             <p class="blog-card-excerpt">📢 Baidu Click Fraud Protection Adds IPv4 Blocking: How to Stop Malicious Clicks The Click Fraud Problem on Baidu Click fraud is a real and persistent issue o</p>
-            <div class="blog-card-meta"><span>Dec 31, 2020</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 31, 2020</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="feed">
@@ -768,7 +784,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Feed Ads: Now Track Every Change With Upgraded History Records</h3>
             <p class="blog-card-excerpt">📢 Baidu Feed Ads: Now Track Every Change With Upgraded History Records The Problem: What Changed, and When? Something shifted in your Baidu campaign. Perform</p>
-            <div class="blog-card-meta"><span>Nov 30, 2020</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Nov 30, 2020</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -776,7 +792,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Understanding Baidu PPC Account Status: All 5 States Explained</h3>
             <p class="blog-card-excerpt">📢 Baidu PPC accounts display 5 possible statuses before and during promotion. Learn what each status means, why it happens, and exactly what action to take t</p>
-            <div class="blog-card-meta"><span>Sep 9, 2020</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Sep 9, 2020</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -784,7 +800,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">2020 Baidu B2B Industry Insights: What China's Industrial Search Data Reveals</h3>
             <p class="blog-card-excerpt">🔍 Baidu's 2020 B2B Industry Report analyzed millions of industrial search queries. Here are the key findings on China's top B2B segments, buyer behavior, and</p>
-            <div class="blog-card-meta"><span>Jul 9, 2020</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jul 9, 2020</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -792,7 +808,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Brand Zone Now Open for Generic Keywords — What It Means for Advertisers</h3>
             <p class="blog-card-excerpt">📢 Baidu Brand Zone was previously limited to brand and product keywords. Now any advertiser can bid on generic search terms — like 'lipstick' for a beauty br</p>
-            <div class="blog-card-meta"><span>Jun 4, 2020</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jun 4, 2020</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="insights">
@@ -800,7 +816,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Can I Use a Different Domain for My Baidu PPC Account?</h3>
             <p class="blog-card-excerpt">📢 Yes, you can use a different domain for your Baidu PPC account — via tracking URLs, domain change requests, or registering a new account. Here is how each</p>
-            <div class="blog-card-meta"><span>Mar 11, 2020</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Mar 11, 2020</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -808,7 +824,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu MCC Account: The Complete Guide to Managing Multiple Baidu PPC Accounts</h3>
             <p class="blog-card-excerpt">📢 Baidu MCC (My Client Center) is a platform for managing multiple PPC accounts from one dashboard. How to register, account types, maximum accounts, auto to</p>
-            <div class="blog-card-meta"><span>Dec 16, 2019</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 16, 2019</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -816,7 +832,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Audience Targeting: A Complete Guide for Advertisers</h3>
             <p class="blog-card-excerpt">🔍 Baidu Audience Targeting lets you reach users by demographics, interests, search history, browsing behavior, and device ID. Here is how each dimension work</p>
-            <div class="blog-card-meta"><span>Oct 15, 2019</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Oct 15, 2019</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -824,7 +840,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">What Is the Baidu V Sign and Why Your Account Needs It</h3>
             <p class="blog-card-excerpt">🔍 The Baidu V sign verifies your business registration and builds trust with Chinese consumers. Learn the 3 classes (V1/V2/V3), annual renewal process, and w</p>
-            <div class="blog-card-meta"><span>Jun 11, 2019</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jun 11, 2019</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -832,7 +848,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">8 Proven Ways to Lower Your Baidu CPC Without Sacrificing Results</h3>
             <p class="blog-card-excerpt">📢 Baidu CPC rising year over year? Here are 8 proven tactics to bring it down — from long-tail keywords and geo targeting to quality score optimization and b</p>
-            <div class="blog-card-meta"><span>May 6, 2019</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 6, 2019</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -840,7 +856,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Keyword Match Types: Why You Need So Many Similar Keywords</h3>
             <p class="blog-card-excerpt">📢 Baidu has 5 match types including Exact, Phrase, Core Phrase, and Broad. Unlike Google, Baidu lacks BMM. Here's why you need many similar keywords and how</p>
-            <div class="blog-card-meta"><span>Apr 9, 2019</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Apr 9, 2019</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -848,7 +864,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">How to Protect Your Brand on Baidu PPC</h3>
             <p class="blog-card-excerpt">📢 Step-by-step guide to protecting your brand from competitor misuse in Baidu PPC ads. Learn required documents, timeline, and key differences from Google.</p>
-            <div class="blog-card-meta"><span>Feb 7, 2019</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Feb 7, 2019</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -856,7 +872,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu PPC Terms Explained: Quality Score, Ranking, Bidding, and CPC</h3>
             <p class="blog-card-excerpt">📢 Understand the core Baidu PPC terms: Quality Score, ad ranking formula (QS × Bid), bidding price vs actual CPC, and how the CPC formula works. Essential kn</p>
-            <div class="blog-card-meta"><span>Jan 9, 2019</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jan 9, 2019</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -864,7 +880,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">How Much Does Baidu PPC Cost? Pricing, CPC, and Budget Guide</h3>
             <p class="blog-card-excerpt">📢 Baidu PPC uses a prepaid model starting from ¥2,400 (~$330) initial top-up. Learn how CPC is calculated, what you actually pay for, budget controls, and ho</p>
-            <div class="blog-card-meta"><span>Dec 4, 2018</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 4, 2018</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -872,7 +888,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Can I Do Baidu PPC? 7 Questions New Advertisers Ask</h3>
             <p class="blog-card-excerpt">📢 Small business, niche product, seasonal brand, or no website — can you still do Baidu PPC? We answer 7 common questions new advertisers ask before starting</p>
-            <div class="blog-card-meta"><span>Nov 13, 2018</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Nov 13, 2018</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -880,7 +896,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Why Baidu Ads Work for Foreign Businesses</h3>
             <p class="blog-card-excerpt">📢 6 billion daily searches, AI-driven targeting, and purchase intent. Why Baidu advertising works for international companies.</p>
-            <div class="blog-card-meta"><span>Jun 10, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jun 10, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="platform">
@@ -888,7 +904,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu App Ecosystem: Where Your Ads Show Up</h3>
             <p class="blog-card-excerpt">📢 Baidu App, Maps, Tieba, Haokan, Wenku — a complete breakdown of Baidu's advertising surfaces and what each one offers.</p>
-            <div class="blog-card-meta"><span>Oct 17, 2025</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Oct 17, 2025</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="platform">
@@ -896,7 +912,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Why Baidu? The Numbers</h3>
             <p class="blog-card-excerpt">📢 China's largest search ecosystem: 708M MAU, 15B daily feed distributions, 3.4B global POIs. What the numbers mean for advertisers.</p>
-            <div class="blog-card-meta"><span>Oct 7, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Oct 7, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="feed">
@@ -904,7 +920,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Feed Account Structure</h3>
             <p class="blog-card-excerpt">📢 How to build a Baidu feed ads account structure that actually works.</p>
-            <div class="blog-card-meta"><span>Jun 26, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Jun 26, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="feed">
@@ -912,7 +928,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">How Baidu Feed Ads Work</h3>
             <p class="blog-card-excerpt">📢 Baidu feed ads appear in content streams, targeted by search history and behavior. 100M+ DAU, up 300% YoY. Here's how they work.</p>
-            <div class="blog-card-meta"><span>Dec 3, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 3, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -920,7 +936,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu Invalid Click Protection: How We Safeguard Your Ad Budget</h3>
             <p class="blog-card-excerpt">📢 Learn how Baidu's intelligent filtering system protects your PPC budget from invalid clicks and bot traffic. Discover Business Shield tool and best practic</p>
-            <div class="blog-card-meta"><span>Feb 5, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Feb 5, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="insights">
@@ -928,7 +944,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">CPC, CPM, oCPA, oCPC — Baidu Pricing Models</h3>
             <p class="blog-card-excerpt">📢 CPC vs CPM vs oCPA vs oCPC — a quick guide to Baidu's pricing models and when to use each.</p>
-            <div class="blog-card-meta"><span>Mar 3, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Mar 3, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="insights">
@@ -936,7 +952,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu User Data: What You Can Target</h3>
             <p class="blog-card-excerpt">📢 Baidu's targeting advantage: search history, feed behavior, map data, and content consumption. What Google doesn't have in China.</p>
-            <div class="blog-card-meta"><span>May 20, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>May 20, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -944,7 +960,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Baidu vs Google: 7 Key Differences in PPC Advertising</h3>
             <p class="blog-card-excerpt">📢 Baidu and Google PPC advertising are built for different markets. Learn the 7 key differences: Brand Zone, ad formats, compliance requirements, account set</p>
-            <div class="blog-card-meta"><span>Dec 14, 2025</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 14, 2025</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -952,7 +968,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">China's Digital Consumer: 9.37T Yuan</h3>
             <p class="blog-card-excerpt">💰 China's digital consumption hit 9.37 trillion yuan in H1 2025 alone. Here's what the CNNIC data means for your marketing budget.</p>
-            <div class="blog-card-meta"><span>Dec 6, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 6, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="strategy">
@@ -960,7 +976,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Digital Marketing in China</h3>
             <p class="blog-card-excerpt">📢 Why online beats traditional for B2B lead gen in China. 60-80% lower cost per qualified lead.</p>
-            <div class="blog-card-meta"><span>Oct 22, 2025</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Oct 22, 2025</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="feed">
@@ -968,7 +984,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Feed Ad Landing Page Optimization</h3>
             <p class="blog-card-excerpt">📢 Optimizing landing pages for Baidu feed campaigns. Small tweaks lift conversions 15-30%.</p>
-            <div class="blog-card-meta"><span>Dec 26, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 26, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -976,7 +992,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Keyword Research for Baidu</h3>
             <p class="blog-card-excerpt">📢 Direct translations miss the mark. Here's how to research Chinese search terms for Baidu campaigns.</p>
-            <div class="blog-card-meta"><span>Aug 19, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Aug 19, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="landing">
@@ -984,7 +1000,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Landing Page Bounce Rate</h3>
             <p class="blog-card-excerpt">📢 High bounce rate kills conversions. Here's how to fix Baidu ads landing pages.</p>
-            <div class="blog-card-meta"><span>Feb 5, 2026</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Feb 5, 2026</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="feed">
@@ -992,7 +1008,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Native Ads vs Feed Ads</h3>
             <p class="blog-card-excerpt">📢 Native advertising is a format, feed advertising is a placement. Here's the difference and which one you need.</p>
-            <div class="blog-card-meta"><span>Dec 29, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Dec 29, 2024</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -1000,7 +1016,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">oCPC Explained</h3>
             <p class="blog-card-excerpt">📢 oCPC is Baidu's automated bidding that typically lowers cost per acquisition by 20-40%. Here's how it works.</p>
-            <div class="blog-card-meta"><span>Apr 13, 2025</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Apr 13, 2025</span></div>
           </div>
         </a>
       </article><article class="blog-card" data-category="search">
@@ -1008,7 +1024,7 @@
           <div class="blog-card-content">
             <h3 class="blog-card-title">Search Down to 69.5% — Is It Dying?</h3>
             <p class="blog-card-excerpt">📢 Search engine usage in China dropped from 79.2% to 69.5% between 2021-2025, while AI tool usage grew 176.7%. What this means for advertisers and how to ada</p>
-            <div class="blog-card-meta"><span>Mar 23, 2024</span></div>
+            <div class="blog-card-readmore">Read more →</div><div class="blog-card-meta"><span>Mar 23, 2024</span></div>
           </div>
         </a>
       </article></div>
