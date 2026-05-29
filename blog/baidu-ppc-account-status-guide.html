@@ -391,6 +391,32 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+/* Cause list (Why this happens) */
+.cause-list { display: flex; flex-direction: column; gap: 10px; margin: 16px 0 24px; padding: 20px 24px; background: linear-gradient(180deg, #fff, #FEF3C7); border: 1px solid #FDE68A; border-radius: var(--radius); }
+.cause-list-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #92400E; margin-bottom: 4px; }
+.cause-item { display: flex; align-items: flex-start; gap: 10px; font-size: .88rem; color: var(--gray-700); line-height: 1.5; }
+.cause-item::before { content: '→'; color: #D97706; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+[data-theme="dark"] .cause-list { background: rgba(245,158,11,.06); border-color: rgba(245,158,11,.2); }
+[data-theme="dark"] .cause-list-label { color: #FCD34D; }
+[data-theme="dark"] .cause-item { color: var(--gray-600); }
+
+/* Action list (What to do) */
+.action-list { display: flex; flex-direction: column; gap: 10px; margin: 16px 0 24px; padding: 20px 24px; background: linear-gradient(180deg, #fff, #ECFDF5); border: 1px solid #A7F3D0; border-radius: var(--radius); }
+.action-list-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #065F46; margin-bottom: 4px; }
+.action-item { display: flex; align-items: flex-start; gap: 10px; font-size: .88rem; color: var(--gray-700); line-height: 1.5; }
+.action-item::before { content: '✓'; color: #059669; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+.action-item strong { color: var(--gray-800); }
+[data-theme="dark"] .action-list { background: rgba(16,185,129,.06); border-color: rgba(16,185,129,.2); }
+[data-theme="dark"] .action-list-label { color: #6EE7B7; }
+[data-theme="dark"] .action-item { color: var(--gray-600); }
+
+/* Level check */
+.level-check { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.level-check-item { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 8px; font-size: .88rem; color: var(--gray-700); }
+.level-check-item strong { color: var(--gray-800); min-width: 100px; }
+.level-check-item::before { content: '✓'; width: 20px; height: 20px; border-radius: 50%; background: #D1FAE5; color: #059669; font-size: .7rem; font-weight: 800; display: grid; place-items: center; flex-shrink: 0; }
+[data-theme="dark"] .level-check-item { background: var(--gray-100); border-color: var(--gray-200); }
 </style>
   <script type="application/ld+json">
   {
@@ -510,16 +536,19 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </div>
 
         <h3>Why this happens</h3>
-        <ul>
-          <li>You have not yet made the initial payment (first top-up + service fee).</li>
-          <li>You made the payment, but Baidu has not yet confirmed receipt of funds. Bank transfers, especially international wire transfers, can take 1-3 business days to arrive and be matched to your account.</li>
-          <li>Your verification documents were submitted but payment has not been received yet, so the review cannot proceed.</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">Common causes</div>
+          <div class="cause-item">You have not yet made the initial payment (first top-up + service fee).</div>
+          <div class="cause-item">You made the payment, but Baidu has not yet confirmed receipt. International wire transfers can take 1-3 business days.</div>
+          <div class="cause-item">Verification documents submitted but payment not received — review cannot proceed.</div>
+        </div>
 
         <h3>What to do</h3>
-        <p>If you have <strong>not yet paid</strong>: complete the payment as soon as possible. Baidu will not begin identity verification until payment is received. The initial top-up amount plus the one-time service fee must both be paid.</p>
-
-        <p>If you <strong>have already paid</strong>: wait patiently. Payment confirmation typically takes 1-3 business days. Make sure you included the correct reference number with your transfer so Baidu can match the payment to your account.</p>
+        <div class="action-list">
+          <div class="action-list-label">Next steps</div>
+          <div class="action-item"><strong>Not yet paid:</strong> Complete payment ASAP. Baidu will not begin identity verification until payment is received. Both the initial top-up and service fee must be paid.</div>
+          <div class="action-item"><strong>Already paid:</strong> Wait 1-3 business days. Ensure you included the correct reference number so Baidu can match the payment to your account.</div>
+        </div>
 
         <div class="callout callout-tip">
           <span class="callout-icon">&#128161;</span>
@@ -540,11 +569,12 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </div>
 
         <h3>Why this happens</h3>
-        <ul>
-          <li>Your campaign spent the remaining budget and the account balance reached zero.</li>
-          <li>You paused your top-up and did not notice the balance running out.</li>
-          <li>Your automatic top-up failed (expired card, insufficient funds in the linked account).</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">Common causes</div>
+          <div class="cause-item">Campaign spent the remaining budget and balance reached zero.</div>
+          <div class="cause-item">You paused top-up and didn't notice the balance running out.</div>
+          <div class="cause-item">Automatic top-up failed (expired card, insufficient funds).</div>
+        </div>
 
         <h3>What to do</h3>
         <p>Top up the account as soon as possible. Baidu recommends maintaining a buffer balance so that your campaigns do not stop mid-day. For ongoing campaigns, we suggest keeping at least 20-30% of your monthly budget as a buffer in the account.</p>
@@ -568,11 +598,12 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </div>
 
         <h3>Why this happens</h3>
-        <ul>
-          <li>You just completed your first payment and Baidu initiated the identity verification process.</li>
-          <li>You submitted new ad copy or landing pages that triggered a compliance review.</li>
-          <li>You changed your business information or added a new domain to your account.</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">Common causes</div>
+          <div class="cause-item">First payment completed — Baidu initiated identity verification.</div>
+          <div class="cause-item">New ad copy or landing pages triggered a compliance review.</div>
+          <div class="cause-item">Business information changed or new domain added to account.</div>
+        </div>
 
         <h3>What to do</h3>
         <p>Wait for the verification result. Baidu will notify you through the account dashboard and, in most cases, by email. The review result will tell you whether your account is approved or if there are specific issues to fix.</p>
@@ -598,20 +629,21 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </div>
 
         <h3>Why this happens</h3>
-        <ul>
-          <li>You passed the initial review and your account is now live.</li>
-          <li>You fixed a previous "Rejected" status and your account was re-activated.</li>
-          <li>You topped up after a "Zero balance" status and the account re-activated.</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">How you got here</div>
+          <div class="cause-item">Passed the initial review — account is now live.</div>
+          <div class="cause-item">Fixed a previous "Rejected" status and account was re-activated.</div>
+          <div class="cause-item">Topped up after "Zero balance" and account re-activated.</div>
+        </div>
 
         <h3>What to do</h3>
-        <p>Check the status at every level of your account. "Activate" at the account level is necessary but not sufficient for your ads to serve. You also need:</p>
-        <ul>
-          <li><strong>Campaign level:</strong> Campaign must be enabled and not paused.</li>
-          <li><strong>Ad group level:</strong> Ad group must be enabled.</li>
-          <li><strong>Keyword level:</strong> Keywords must have sufficient quality score and bid to trigger ads.</li>
-          <li><strong>Creative level:</strong> Ad copy must be approved and not under review.</li>
-        </ul>
+        <p>Check the status at every level. "Activate" at account level is necessary but not sufficient. You also need:</p>
+        <div class="level-check">
+          <div class="level-check-item"><strong>Campaign:</strong> Must be enabled and not paused</div>
+          <div class="level-check-item"><strong>Ad Group:</strong> Must be enabled</div>
+          <div class="level-check-item"><strong>Keywords:</strong> Sufficient quality score and bid to trigger ads</div>
+          <div class="level-check-item"><strong>Creative:</strong> Ad copy must be approved and not under review</div>
+        </div>
 
         <blockquote class="blockquote-highlight">
           "Activate" at the account level means Baidu trusts your business identity. It does not mean your ads are currently serving. Always check campaign, ad group, keyword, and creative statuses separately.
@@ -629,21 +661,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </div>
 
         <h3>Why this happens</h3>
-        <ul>
-          <li>Your business license is expired or does not match the information you submitted.</li>
-          <li>Your website landing page contains content that violates Baidu advertising policies (prohibited products, misleading claims, unverified health claims).</li>
-          <li>You are in a restricted industry and did not obtain the required pre-approval or special license.</li>
-          <li>Your identity documents (ID card, passport) are unclear, expired, or do not match the business registration.</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">Common rejection causes</div>
+          <div class="cause-item">Business license expired or doesn't match submitted information.</div>
+          <div class="cause-item">Landing page violates Baidu policies (prohibited products, misleading claims, unverified health claims).</div>
+          <div class="cause-item">Restricted industry without required pre-approval or special license.</div>
+          <div class="cause-item">Identity documents unclear, expired, or don't match business registration.</div>
+        </div>
 
         <h3>What to do</h3>
-        <p>Read the rejection reason carefully. Baidu provides specific feedback in the account dashboard explaining which part of your application failed compliance. Common rejection reasons include:</p>
-        <ul>
-          <li>Business license copy is unclear or expired</li>
-          <li>Landing page URL is inaccessible or contains prohibited content</li>
-          <li>Ad copy uses superlative claims ("best", "number one") without proof</li>
-          <li>Website does not have an ICP (Internet Content Provider) filing number displayed</li>
-        </ul>
+        <p>Read the rejection reason in your dashboard. Baidu provides specific feedback. Common issues:</p>
+        <div class="action-list">
+          <div class="action-list-label">Fix checklist</div>
+          <div class="action-item">Business license copy unclear or expired — resubmit a clear, valid copy</div>
+          <div class="action-item">Landing page inaccessible or contains prohibited content — fix and resubmit</div>
+          <div class="action-item">Ad copy uses superlative claims ("best", "number one") without proof — remove or add evidence</div>
+          <div class="action-item">Missing ICP filing number on website — add it to the footer</div>
+        </div>
 
         <p>After you fix the issues, resubmit the account information. Baidu will re-authenticate the account. If the second review passes, your account status changes to "Activate".</p>
 
