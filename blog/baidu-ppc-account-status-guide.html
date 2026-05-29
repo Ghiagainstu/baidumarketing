@@ -198,11 +198,12 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
     /* SVG Chart Wrapper */
     .svg-chart-wrapper {
-      margin: 40px 0; padding: 24px; background: var(--gray-50);
+      margin: 40px 0; padding: 24px; background: #fff;
       border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow-x: auto;
       display: flex; justify-content: center;
     }
     .svg-chart-wrapper svg { max-width: 100%; height: auto; }
+    [data-theme="dark"] .svg-chart-wrapper { background: #F9FAFB; border-color: var(--gray-300); }
 
     /* Blockquote Highlight */
     .blockquote-highlight {
