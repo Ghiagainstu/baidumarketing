@@ -231,10 +231,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
   
 /* ===== Added by standardize-blog-pages.js ===== */
 /* Stats Grid */
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 40px 0; }
-.stat-card { background: var(--gray-50); padding: 28px 20px; border-radius: var(--radius); text-align: center; border: 1px solid var(--gray-200); }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0; }
+.stat-card { background: var(--gray-50); padding: 28px 20px; border-radius: var(--radius); text-align: center; border: 1px solid var(--gray-200); transition: transform .25s, box-shadow .25s; }
+.stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--blue); margin-bottom: 6px; }
-.stat-label { font-size: .85rem; color: var(--gray-600); }
+.stat-label { font-size: .85rem; color: var(--gray-600); margin-top: 4px; }
 
 /* Comparison Table */
 .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
@@ -388,7 +389,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <div class="stat-label">💎 Cost Savings vs Google</div>
     </div>
   </div>
-</div>
+
 <h3>📈 What does a realistic ROI timeline look like?</h3>
 <p>Most BPP clients begin to see stable lead costs within 4 to 8 weeks of campaign launch. The learning phase for oCPC bidding — where the AI optimizes for your conversion goals — requires at least 20 conversions per week to function effectively. Industries with higher search intent (B2B industrial, specialty manufacturing) tend to see faster ROI than high-competition consumer categories. </p>
 <h3>⚖️ How does Baidu pricing compare to Google Ads?</h3>
