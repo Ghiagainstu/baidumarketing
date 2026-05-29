@@ -400,6 +400,36 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 [data-theme="dark"] .needle-card { background: var(--gray-100); border-color: var(--gray-200); }
 [data-theme="dark"] .needle-card h4 { color: var(--gray-900); }
 
+/* Two-col cards */
+.two-col-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 24px 0; }
+.two-col-card { padding: 20px 24px; border-radius: var(--radius); border: 1px solid var(--gray-200); transition: transform .2s, box-shadow .2s; }
+.two-col-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+.two-col-card-icon { font-size: 1.6rem; margin-bottom: 10px; }
+.two-col-card h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+.two-col-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+.two-col-card:nth-child(1) { background: linear-gradient(180deg, #fff, #EEF0FF); border-top: 3px solid #2932E1; }
+.two-col-card:nth-child(2) { background: linear-gradient(180deg, #fff, #ECFDF5); border-top: 3px solid #10B981; }
+[data-theme="dark"] .two-col-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .two-col-card h4 { color: var(--gray-900); }
+
+/* Did-list (case study) */
+.did-list { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; padding: 24px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); }
+.did-list-label { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-400); margin-bottom: 4px; }
+.did-item { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: var(--gray-700); }
+.did-item::before { content: '✓'; width: 22px; height: 22px; border-radius: 50%; background: #D1FAE5; color: #059669; font-size: .75rem; font-weight: 800; display: grid; place-items: center; flex-shrink: 0; }
+.did-item.stale::before { background: #FEF3C7; color: #D97706; content: '✗'; }
+[data-theme="dark"] .did-list { background: var(--gray-100); border-color: var(--gray-200); }
+
+/* Mistake cards */
+.mistake-cards { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+.mistake-card { display: grid; grid-template-columns: 48px 1fr; gap: 14px; padding: 18px 20px; background: linear-gradient(180deg, #fff, #FEF2F2); border: 1px solid #FECACA; border-radius: var(--radius); }
+.mistake-card-icon { width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, #FEE2E2, #FECACA); display: grid; place-items: center; font-size: 1.2rem; flex-shrink: 0; }
+.mistake-card h4 { font-size: .95rem; font-weight: 700; color: #991B1B; margin-bottom: 4px; }
+.mistake-card p { font-size: .85rem; color: #7F1D1D; line-height: 1.5; margin: 0; }
+[data-theme="dark"] .mistake-card { background: rgba(239,68,68,.06); border-color: rgba(239,68,68,.2); }
+[data-theme="dark"] .mistake-card h4 { color: #FCA5A5; }
+[data-theme="dark"] .mistake-card p { color: #FCA5A5; }
+
 @media (max-width: 640px) { .vs-compare { grid-template-columns: 1fr; } .vs-divider { padding: 12px 0; } }
 </style>
 
@@ -635,10 +665,18 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
       <p>This means your GEO strategy has two components:</p>
 
-      <ul>
-        <li><strong>Training data presence:</strong> Your brand needs to exist in the data the model was trained on. This means publications, press releases, platform mentions, academic citations — the more, the better.</li>
-        <li><strong>Retrieval-time signals:</strong> Some AI systems also pull from real-time sources. If your brand has a strong presence on Zhihu, Baidu Baike, or industry databases, these can surface in live queries.</li>
-      </ul>
+      <div class="two-col-cards">
+        <div class="two-col-card">
+          <div class="two-col-card-icon">📚</div>
+          <h4>Training Data Presence</h4>
+          <p>Your brand needs to exist in the data the model was trained on. Publications, press releases, platform mentions, academic citations — the more, the better.</p>
+        </div>
+        <div class="two-col-card">
+          <div class="two-col-card-icon">🔍</div>
+          <h4>Retrieval-Time Signals</h4>
+          <p>Some AI systems pull from real-time sources. Strong presence on Zhihu, Baidu Baike, or industry databases can surface in live queries.</p>
+        </div>
+      </div>
 
       <h3>📊 What Actually Moves the Needle</h3>
 
@@ -671,12 +709,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
       <p>Here's a real pattern we've observed. A European industrial equipment manufacturer launched in China in 2018. They did everything "right" by 2018 standards:</p>
 
-      <ul>
-        <li>Translated their entire website into Chinese</li>
-        <li>Set up Baidu SEM campaigns with aggressive keyword bids</li>
-        <li>Registered on a few Chinese B2B platforms</li>
-        <li>Attended trade shows annually</li>
-      </ul>
+      <div class="did-list">
+        <div class="did-list-label">What they did (2018 playbook)</div>
+        <div class="did-item stale">Translated their entire website into Chinese</div>
+        <div class="did-item stale">Set up Baidu SEM campaigns with aggressive keyword bids</div>
+        <div class="did-item stale">Registered on a few Chinese B2B platforms</div>
+        <div class="did-item stale">Attended trade shows annually</div>
+      </div>
 
       <p>By 2024, their Baidu campaigns were still generating some leads. But when we asked Chinese AI assistants about "recommended industrial equipment suppliers from Europe," they weren't mentioned. Competitors who had invested in Chinese-language content marketing — particularly on Zhihu and through Baidu Baike entries — dominated the AI-generated recommendations.</p>
 
@@ -714,11 +753,20 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
       <h2>⚠️ Common Mistakes to Avoid</h2>
 
-      <p><strong>Machine translation is not a content strategy.</strong> Running English content through automated translation tools produces garbled, unnatural Chinese. Chinese readers can spot it immediately, and it damages rather than enhances your brand perception. Invest in native Chinese writers who understand your industry.</p>
-
-      <p><strong>Keyword stuffing doesn't work.</strong> The old SEO playbook — repeating target terms endlessly — is not only ineffective for GEO, it can actively harm your brand. AI models are sophisticated enough to detect manipulation attempts, and the reputational cost of being labeled a "content manipulator" is high.</p>
-
-      <p><strong>One-time efforts don't compound.</strong> GEO is not a campaign — it's a practice. A single Baidu Baike entry won't move the needle. Consistent, ongoing presence across multiple authoritative platforms is what builds the kind of signals AI models learn to trust.</p>
+      <div class="mistake-cards">
+        <div class="mistake-card">
+          <div class="mistake-card-icon">🌐</div>
+          <div><h4>Machine Translation Is Not a Strategy</h4><p>Running English through automated tools produces garbled Chinese. Readers spot it immediately. Invest in native Chinese writers who understand your industry.</p></div>
+        </div>
+        <div class="mistake-card">
+          <div class="mistake-card-icon">🔤</div>
+          <div><h4>Keyword Stuffing Doesn't Work</h4><p>The old SEO playbook is not only ineffective for GEO — it can actively harm your brand. AI models detect manipulation, and the reputational cost is high.</p></div>
+        </div>
+        <div class="mistake-card">
+          <div class="mistake-card-icon">⏱️</div>
+          <div><h4>One-Time Efforts Don't Compound</h4><p>GEO is not a campaign — it's a practice. A single Baidu Baike entry won't move the needle. Consistent, ongoing presence across multiple platforms builds trust signals.</p></div>
+        </div>
+      </div>
 
       <h2>🔐 The Window Is Closing</h2>
 
