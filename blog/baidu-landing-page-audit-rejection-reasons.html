@@ -285,6 +285,24 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+    /* Page Type Grid */
+    .page-type-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
+    .page-type-card { background: linear-gradient(180deg, #FFFFFF 0%, var(--blue-subtle) 100%); border: 1.5px solid var(--gray-200); border-radius: var(--radius); padding: 20px 16px; text-align: center; transition: transform .25s, box-shadow .25s; }
+    .page-type-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(41,50,225,.12); }
+    .page-type-icon { font-size: 2rem; margin-bottom: 10px; }
+    .page-type-name { font-size: .85rem; font-weight: 600; color: var(--gray-700); }
+    [data-theme="dark"] .page-type-card { background: linear-gradient(180deg, var(--gray-100) 0%, rgba(99,102,241,.06) 100%); border-color: var(--gray-200); }
+    [data-theme="dark"] .page-type-name { color: var(--gray-600); }
+    @media (max-width: 640px) { .page-type-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Callout Stacked (vertical) */
+    .callout-stacked { flex-direction: column; align-items: center; text-align: center; }
+    .callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
+    .callout-stacked .callout-content strong { display: block; font-size: 1rem; margin-bottom: 8px; color: var(--gray-800); }
+    .callout-stacked .callout-content p { font-size: .9rem; color: var(--gray-600); line-height: 1.7; margin: 0; }
+    [data-theme="dark"] .callout-stacked .callout-content strong { color: var(--gray-800); }
+    [data-theme="dark"] .callout-stacked .callout-content p { color: var(--gray-600); }
 </style>
 
   <meta property="og:title" content="Baidu Landing Page Audit: Now Showing Exactly Why Your Page Was Rejected — Baidu PPC Pro">
@@ -379,16 +397,32 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
   </div>
 </div>
 <h3>Supported Page Types</h3>
-<ul>
-<li>Smart single pages</li>
-<li>Store pages</li>
-<li>App download pages</li>
-<li>Video pages</li>
-</ul>
+<div class="page-type-grid">
+  <div class="page-type-card">
+    <div class="page-type-icon">📄</div>
+    <div class="page-type-name">Smart Single Pages</div>
+  </div>
+  <div class="page-type-card">
+    <div class="page-type-icon">🏪</div>
+    <div class="page-type-name">Store Pages</div>
+  </div>
+  <div class="page-type-card">
+    <div class="page-type-icon">📱</div>
+    <div class="page-type-name">App Download Pages</div>
+  </div>
+  <div class="page-type-card">
+    <div class="page-type-icon">🎬</div>
+    <div class="page-type-name">Video Pages</div>
+  </div>
+</div>
 <h2>💡 Why This Matters for Campaign Launch Speed</h2>
 <p>Every day your landing page sits in "rejected" status is a day you are burning budget on an underperforming page — or not spending at all. </p>
-<div class="callout callout-tip">
-  <strong>💡 Pro Tip:</strong> Before submitting a Jimuyu page for review, check that all images have proper licensing, all claims are substantiated, and there are no competing brand names in the copy. The most common rejection reasons are misleading claims and unlicensed copyrighted images.
+<div class="callout callout-tip callout-stacked">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Pro Tip:</strong>
+    <p>Before submitting a Jimuyu page for review, check that all images have proper licensing, all claims are substantiated, and there are no competing brand names in the copy. The most common rejection reasons are misleading claims and unlicensed copyrighted images.</p>
+  </div>
 </div>
 <h2>📊 The Barrier for International Brands</h2>
 <p>is a mainland-China product. To use it, you need:</p>
