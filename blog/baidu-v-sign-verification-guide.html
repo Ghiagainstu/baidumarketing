@@ -343,6 +343,27 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+/* V-sign level cards — colored top borders */
+.stat-card:nth-child(1) { border-top: 4px solid #93C5FD; }
+.stat-card:nth-child(2) { border-top: 4px solid #6366F1; }
+.stat-card:nth-child(3) { border-top: 4px solid #2932E1; }
+.stat-card:nth-child(4) { border-top: 4px solid #F59E0B; }
+.stat-card:nth-child(4) .stat-value { background: linear-gradient(135deg, #F59E0B, #D97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* V-level visual cards */
+.v-level-cards { display: flex; flex-direction: column; gap: 16px; margin: 28px 0; }
+.v-level-card { display: grid; grid-template-columns: 80px 1fr; gap: 20px; align-items: center; padding: 20px 24px; border-radius: var(--radius); border: 1px solid var(--gray-200); background: var(--gray-50); transition: transform .2s, box-shadow .2s; }
+.v-level-card:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.v-level-badge { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; font-size: 1.4rem; font-weight: 900; color: #fff; }
+.v-level-badge.v1 { background: linear-gradient(135deg, #93C5FD, #60A5FA); }
+.v-level-badge.v2 { background: linear-gradient(135deg, #818CF8, #6366F1); }
+.v-level-badge.v3 { background: linear-gradient(135deg, #2932E1, #4F46E5); box-shadow: 0 4px 16px rgba(41,50,225,.3); }
+.v-level-info h4 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+.v-level-info p { font-size: .88rem; color: var(--gray-600); margin: 0; line-height: 1.5; }
+.v-level-card:last-child { border-left: 4px solid #F59E0B; }
+[data-theme="dark"] .v-level-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .v-level-info h4 { color: var(--gray-900); }
 </style>
 <script type="application/ld+json">
   {
@@ -445,32 +466,29 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
           <p>Baidu uses a tiered V sign system. The level shown next to your result depends on how long you have been verified:</p>
 
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Level</th>
-                <th>Verification Duration</th>
-                <th>What It Signals</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>V1</strong></td>
-                <td>Less than 1 year</td>
-                <td>Newly verified by Baidu</td>
-              </tr>
-              <tr>
-                <td><strong>V2</strong></td>
-                <td>1 to 2 years</td>
-                <td>Established track record</td>
-              </tr>
-              <tr>
-                <td><strong>V3</strong></td>
-                <td>3+ years (top class)</td>
-                <td>Highest trust level</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="v-level-cards">
+            <div class="v-level-card">
+              <div class="v-level-badge v1">V1</div>
+              <div class="v-level-info">
+                <h4>Verified &lt; 1 Year</h4>
+                <p>Newly verified by Baidu. The entry level — shows you have a legitimate business registration. Everyone starts here.</p>
+              </div>
+            </div>
+            <div class="v-level-card">
+              <div class="v-level-badge v2">V2</div>
+              <div class="v-level-info">
+                <h4>Verified 1–2 Years</h4>
+                <p>Established track record. Users see a company that has maintained its verification through at least one renewal cycle.</p>
+              </div>
+            </div>
+            <div class="v-level-card">
+              <div class="v-level-badge v3">V3</div>
+              <div class="v-level-info">
+                <h4>Verified 3+ Years — Top Class</h4>
+                <p>Highest trust level. Tells users your business has passed Baidu's scrutiny for three consecutive years. The gold standard for credibility.</p>
+              </div>
+            </div>
+          </div>
 
           <p>The logic is simple: the longer you have been verified, the higher your V level. V3 is the top class. It tells users your business has passed Baidu's scrutiny for three years or more. For a foreign brand entering China, moving from V1 to V3 becomes a visible sign of your commitment to the market.</p>
 
