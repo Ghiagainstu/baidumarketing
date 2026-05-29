@@ -273,6 +273,32 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .feature-card li { font-size: .9rem; color: #374151; line-height: 1.6; padding-left: 24px; position: relative; }
 .feature-card li::before { content: '→'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
 
+/* Entry point steps */
+.entry-steps { display: flex; flex-direction: column; gap: 14px; margin: 16px 0; }
+.entry-step { display: flex; align-items: flex-start; gap: 14px; padding: 14px 18px; background: #fff; border: 1px solid var(--gray-200); border-radius: 10px; transition: transform .2s, box-shadow .2s; }
+.entry-step:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.entry-step-num { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #2932E1, #4F46E5); color: #fff; font-weight: 800; font-size: .85rem; display: grid; place-items: center; flex-shrink: 0; }
+.entry-step span { font-size: .9rem; color: var(--gray-700); line-height: 1.5; padding-top: 4px; }
+
+/* Filter tags grid */
+.filter-section { margin: 16px 0; }
+.filter-group { margin-bottom: 14px; }
+.filter-group-label { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-400); margin-bottom: 8px; }
+.filter-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.filter-tag { padding: 5px 12px; border-radius: 999px; font-size: .78rem; font-weight: 600; border: 1px solid; }
+.filter-tag.time { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+.filter-tag.object { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+.filter-tag.action { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+
+/* Result feature list */
+.result-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 16px 0; }
+.result-feature { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: #fff; border: 1px solid var(--gray-200); border-radius: 10px; font-size: .85rem; color: var(--gray-700); }
+.result-feature-icon { width: 28px; height: 28px; border-radius: 6px; background: var(--blue-light); display: grid; place-items: center; font-size: .9rem; flex-shrink: 0; }
+[data-theme="dark"] .entry-step, [data-theme="dark"] .result-feature { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .filter-tag.time { background: rgba(99,102,241,.12); border-color: rgba(99,102,241,.3); color: var(--blue); }
+[data-theme="dark"] .filter-tag.object { background: rgba(16,185,129,.12); border-color: rgba(16,185,129,.3); color: #6EE7B7; }
+[data-theme="dark"] .filter-tag.action { background: rgba(245,158,11,.12); border-color: rgba(245,158,11,.3); color: #FCD34D; }
+
 /* Comparison Table */
 .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
 .comparison-table th { background: var(--blue); color: #fff; padding: 16px; text-align: left; font-weight: 600; font-size: .95rem; }
@@ -434,30 +460,45 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <div class="feature-card">
   <h4>📍 Where to find it (3 entry points)</h4>
-  <ol>
-    <li>Tools Center → Account Tools → History Operation Records</li>
-    <li>Check a plan/unit/creative → click "View History Operation Records"</li>
-    <li>Click "Details" on a plan/unit row → view that material's history (opened Q4 2020)</li>
-  </ol>
+  <div class="entry-steps">
+    <div class="entry-step"><div class="entry-step-num">1</div><span>Tools Center → Account Tools → History Operation Records</span></div>
+    <div class="entry-step"><div class="entry-step-num">2</div><span>Check a plan/unit/creative → click "View History Operation Records"</span></div>
+    <div class="entry-step"><div class="entry-step-num">3</div><span>Click "Details" on a plan/unit row → view that material's history</span></div>
+  </div>
 </div>
 
 <div class="feature-card">
   <h4>🔧 What you can filter</h4>
-  <ul>
-    <li><strong>Time range</strong>: Today, yesterday, last 7/14/30 days, last month, or custom range</li>
-    <li><strong>Operation object</strong>: Account, Plans, Units, Creatives, Targeting Packages, Components, Conversion Tracking</li>
-    <li><strong>Action type</strong>: Filtered by the selected object level (e.g., selecting Plans shows plan/unit/creative actions)</li>
-  </ul>
+  <div class="filter-section">
+    <div class="filter-group">
+      <div class="filter-group-label">Time Range</div>
+      <div class="filter-tags">
+        <span class="filter-tag time">Today</span><span class="filter-tag time">Yesterday</span><span class="filter-tag time">Last 7 days</span><span class="filter-tag time">Last 14 days</span><span class="filter-tag time">Last 30 days</span><span class="filter-tag time">Last month</span><span class="filter-tag time">Custom range</span>
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-group-label">Operation Object</div>
+      <div class="filter-tags">
+        <span class="filter-tag object">Account</span><span class="filter-tag object">Plans</span><span class="filter-tag object">Units</span><span class="filter-tag object">Creatives</span><span class="filter-tag object">Targeting</span><span class="filter-tag object">Components</span><span class="filter-tag object">Conversion Tracking</span>
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-group-label">Action Type</div>
+      <div class="filter-tags">
+        <span class="filter-tag action">Create</span><span class="filter-tag action">Edit</span><span class="filter-tag action">Pause</span><span class="filter-tag action">Enable</span><span class="filter-tag action">Delete</span><span class="filter-tag action">Budget change</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="feature-card">
   <h4>📊 What you see in results</h4>
-  <ul>
-    <li>Sortable by operation time, operator name, object name</li>
-    <li>Filter by level and action type in results</li>
-    <li><strong>Highlighted changes</strong>: Modified fields shown in yellow — see exactly what changed before/after</li>
-    <li>Export to CSV for offline analysis</li>
-  </ul>
+  <div class="result-features">
+    <div class="result-feature"><div class="result-feature-icon">🔀</div><span>Sortable by time, operator, object</span></div>
+    <div class="result-feature"><div class="result-feature-icon">🔍</div><span>Filter by level &amp; action type</span></div>
+    <div class="result-feature"><div class="result-feature-icon">🟡</div><span>Highlighted changes in yellow</span></div>
+    <div class="result-feature"><div class="result-feature-icon">📥</div><span>Export to CSV</span></div>
+  </div>
 </div>
 <h2>💡 Why This Matters</h2>
 <table class="comparison-table">
