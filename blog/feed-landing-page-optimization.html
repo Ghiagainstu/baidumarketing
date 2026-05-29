@@ -312,6 +312,31 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+/* Hero stat card */
+.stat-card { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%); border-radius: var(--radius-xl); padding: 48px 32px; margin: 32px 0; text-align: center; position: relative; overflow: hidden; box-shadow: 0 16px 48px rgba(41,50,225,.25); }
+.stat-card::before { content: ''; position: absolute; top: -50%; right: -30%; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,.08); }
+.stat-card .big { font-size: 4.5rem; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -.03em; text-shadow: 0 2px 8px rgba(0,0,0,.15); position: relative; z-index: 1; }
+.stat-card .label { font-size: 1.1rem; color: rgba(255,255,255,.85); margin-top: 12px; font-weight: 500; position: relative; z-index: 1; }
+[data-theme="dark"] .stat-card { background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #4C1D95 100%); box-shadow: 0 16px 48px rgba(0,0,0,.3); }
+
+/* Wins grid */
+.wins-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 28px 0; }
+.win-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; transition: transform .2s, box-shadow .2s; }
+.win-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.win-card h3 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
+.win-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+[data-theme="dark"] .win-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .win-card h3 { color: var(--gray-900); }
+
+/* Test steps */
+.test-steps { display: flex; flex-direction: column; gap: 12px; margin: 24px 0; counter-reset: test-step; }
+.test-step { display: flex; align-items: flex-start; gap: 14px; padding: 14px 18px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; counter-increment: test-step; }
+.test-step::before { content: counter(test-step); width: 32px; height: 32px; border-radius: 50%; background: var(--blue-light); color: var(--blue); font-weight: 800; font-size: .85rem; display: grid; place-items: center; flex-shrink: 0; }
+.test-step span { font-size: .92rem; color: var(--gray-700); line-height: 1.5; padding-top: 4px; }
+[data-theme="dark"] .test-step { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .test-step::before { background: rgba(99,102,241,.15); color: var(--blue); }
+[data-theme="dark"] .test-step span { color: var(--gray-700); }
 </style>
 
   <script type="application/ld+json">
@@ -441,12 +466,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <p>If you can only test one thing, test the headline. It's the first thing users see and has the biggest impact on perceived relevance.</p>
 
         <p>After headline, test in this order:</p>
-        <ol>
-          <li>CTA button text and color</li>
-          <li>Form field count and order</li>
-          <li>Trust signal placement</li>
-          <li>Page layout</li>
-        </ol>
+
+        <div class="test-steps">
+          <div class="test-step"><span><strong>CTA button</strong> text and color</span></div>
+          <div class="test-step"><span><strong>Form fields</strong> — count and order</span></div>
+          <div class="test-step"><span><strong>Trust signals</strong> — placement and type</span></div>
+          <div class="test-step"><span><strong>Page layout</strong> — above the fold priority</span></div>
+        </div>
 
                 
         <div class="takeaway-box">
