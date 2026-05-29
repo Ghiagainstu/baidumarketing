@@ -72,10 +72,28 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .article-content h3 { font-size: 1.3rem; font-weight: 600; margin: 32px 0 16px; color: #1F2937; }
 .article-content p { margin-bottom: 20px; }
 .article-content ul, .article-content ol { margin: 0 0 24px 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
-.article-content li { padding: 14px 18px 14px 44px; background: #F9FAFB; border-radius: 10px; border: 1px solid #E5E7EB; position: relative; font-size: .95rem; line-height: 1.6; transition: transform .2s, box-shadow .2s; }
-.article-content li:hover { transform: translateX(4px); box-shadow: 0 2px 8px rgba(0,0,0,.04); }
-.article-content li::before { content: '•'; position: absolute; left: 18px; top: 14px; color: #2932E1; font-weight: 700; font-size: 1.2rem; }
-.article-content ol li::before { content: counter(list-counter); counter-increment: list-counter; font-size: .85rem; width: 24px; height: 24px; background: linear-gradient(135deg, #2932E1, #4F46E5); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; top: 14px; left: 12px; }
+.article-content li {
+  padding: 16px 20px 16px 48px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5F6FF 100%);
+  border-radius: 12px; border: 1.5px solid #E5E7EB; position: relative;
+  font-size: .95rem; line-height: 1.6;
+  transition: transform .25s cubic-bezier(0.16,1,0.3,1), box-shadow .25s ease, border-color .25s ease;
+}
+.article-content li:hover { transform: translateX(6px); box-shadow: 0 6px 20px rgba(41,50,225,.12); border-color: #2932E1; }
+.article-content li::before {
+  content: '✓'; position: absolute; left: 16px; top: 16px;
+  color: #fff; font-weight: 700; font-size: .75rem;
+  width: 22px; height: 22px; border-radius: 6px;
+  background: linear-gradient(135deg, #2932E1, #4F46E5);
+  display: flex; align-items: center; justify-content: center;
+}
+.article-content ol li::before {
+  content: counter(list-counter); counter-increment: list-counter;
+  font-size: .75rem; width: 22px; height: 22px;
+  background: linear-gradient(135deg, #2932E1, #4F46E5); color: #fff;
+  border-radius: 6px; display: flex; align-items: center; justify-content: center;
+  top: 16px; left: 16px;
+}
 .article-content ol { counter-reset: list-counter; }
 .article-content li strong { color: #111827; font-weight: 700; }
 .article-content a { color: #2932E1; border-bottom: 1px solid rgba(41,50,225,.3); transition: border-color .2s; }
@@ -198,11 +216,10 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       </div>
     </div>
   </section>
-</main>
 
-<section class="article-section">
-  <div class="container">
-    <article class="article-content">
+  <section class="article-section">
+    <div class="container">
+      <article class="article-content">
       <p>If you are managing Baidu campaigns from outside China, you already know the platform has its own logic. Interface patterns, naming conventions, and optimization workflows are nothing like Google Ads or Meta Ads Manager. So when Baidu ships an update to its campaign building interface, it is worth knowing exactly what changed — and whether it affects your workflow.</p>
       <p>This article breaks down three real platform upgrades from Baidu's October 2025 product update, explains what they do in plain terms, and flags which ones matter for international advertisers.</p>
 
@@ -214,7 +231,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
         </div>
       </div>
 
-      <h2>Upgrade 1: Simplified Unit-Level Campaign Creation</h2>
+      <h2>🚀 Upgrade 1: Simplified Unit-Level Campaign Creation</h2>
       <p><strong>What changed:</strong></p>
       <p>Baidu redesigned the unit creation workflow to reduce steps and consolidate options. The old flow used a side panel for selecting which campaign your new unit belonged to. That panel is now a standalone page — cleaner, easier to navigate, and with better visibility into campaign status.</p>
       <p><strong>Key improvements:</strong></p>
@@ -232,7 +249,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
         <strong>⚠️ Scope:</strong> This upgrade covers Lead Generation, Local Store, Website Links, and E-commerce store goals. App Promotion, Product Catalog, and Baijiahao goals are planned for later.
       </div>
 
-      <h2>Upgrade 2: AI Copywriting Tool Upgraded</h2>
+      <h2>🤖 Upgrade 2: AI Copywriting Tool Upgraded</h2>
       <p><strong>What changed:</strong></p>
       <p>The "Generate Copy" tool inside the ad creation flow now has significantly more intelligence. When you trigger it, the system automatically pulls your landing page content, extracts your business keywords and selling points, and pre-fills that information before generating anything.</p>
       <p><strong>How it works:</strong></p>
@@ -253,7 +270,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       <p><strong>What this means for you:</strong></p>
       <p>AI-generated copy that matches your actual landing page content — not generic templates. The system does the heavy lifting on first drafts. You still review and approve, but the starting point is much better than blank fields.</p>
 
-      <h2>Upgrade 3: Campaign Structure and Targeting Filters</h2>
+      <h2>🔍 Upgrade 3: Campaign Structure and Targeting Filters</h2>
       <p><strong>What changed:</strong></p>
       <p>The campaign building interface now gives you more control over targeting and structure before you even write an ad:</p>
       <ul>
@@ -263,11 +280,11 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       </ul>
       <p>This ties directly to the UI improvements in Upgrade 1 — the goal is end-to-end efficiency from campaign selection to unit creation to ad writing.</p>
 
-      <h2>What Does Not Change</h2>
+      <h2>🔒 What Does Not Change</h2>
       <p>Baidu has explicitly stated: <strong>these upgrades only change the page experience. Product functionality is unchanged.</strong></p>
       <p>Your existing campaigns, bids, keywords, and settings are unaffected. This is a UI/workflow improvement, not a policy or algorithm change.</p>
 
-      <h2>What This Means for International Advertisers</h2>
+      <h2>🌏 What This Means for International Advertisers</h2>
       <p>Here is the honest answer: these upgrades make Baidu easier to use. But the prerequisite is having an active Baidu account — and that is still the hardest part for overseas companies.</p>
       <p>Baidu requires a Chinese business entity to register an advertising account. Without one, you cannot access any of these features, regardless of how user-friendly the interface becomes.</p>
       <p><strong>BPP solves the access problem.</strong></p>
@@ -291,7 +308,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
   </div>
 </div>
 
-      <h2>Bottom Line</h2>
+      <h2>📊 Bottom Line</h2>
       <p>Baidu is making its interface more efficient. The AI copywriting upgrade is genuinely useful for anyone writing Chinese-language ads. The streamlined unit creation flow reduces friction for campaign managers.</p>
       <p>For international advertisers, the real question has never been whether Baidu is improving — it is. The question is whether you can get in the door. That is where BPP handles the complexity so you do not have to.</p>
 
@@ -304,7 +321,8 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       </div>
     </article>
   </div>
-</section>
+  </section>
+</main>
 
 <footer>
   <div class="container">
