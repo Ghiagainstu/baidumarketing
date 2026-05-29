@@ -161,20 +161,63 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .callout.tip{background:var(--blue-subtle);border-left-color:var(--blue)}
 .callout.warning{background:rgba(239,68,68,.06);border-left-color:#EF4444}
 .callout strong{display:block;margin-bottom:4px}
-.takeaway{border:1px solid var(--gray-200);border-radius:12px;padding:24px;margin:24px 0;background:var(--gray-50)}
-.takeaway h4{font-size:1rem;font-weight:700;margin-bottom:12px;color:var(--gray-800)}
-.takeaway ul{list-style:none;padding:0}
-.takeaway li{padding:6px 0;font-size:.9rem;color:var(--gray-600);line-height:1.6}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
-.stat-card{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:20px;text-align:center;transition:transform .2s,box-shadow .2s}
-.stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.stat-icon{font-size:1.5rem;margin-bottom:6px}
-.stat-number{font-size:1.4rem;font-weight:800;color:var(--gray-900)}
-.stat-label{font-size:.78rem;color:var(--gray-400);line-height:1.4;margin-top:4px}
-.comparison-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.9rem;border:1px solid var(--gray-200);border-radius:12px;overflow:hidden}
-.comparison-table th{background:var(--gray-100);padding:12px 16px;text-align:left;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)}
-.comparison-table td{padding:12px 16px;border-bottom:1px solid var(--gray-100);color:var(--gray-600)}
+/* Takeaway - Enhanced */
+.takeaway{
+  background:linear-gradient(180deg,#FFFFFF 0%,#EEF0FF 100%);
+  border:1.5px solid #E5E7EB;border-radius:16px;padding:28px 32px;margin:32px 0;
+  position:relative;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.takeaway::before{
+  content:'';position:absolute;top:0;left:0;width:4px;height:100%;
+  background:linear-gradient(135deg,#2932E1,#4F46E5);border-radius:4px 0 0 4px;
+}
+.takeaway:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(41,50,225,.15)}
+.takeaway h4{font-size:1.1rem;font-weight:700;margin-bottom:12px;color:#2932E1;display:flex;align-items:center;gap:8px}
+.takeaway ul{list-style:none;display:flex;flex-direction:column;gap:8px;padding-left:0;margin:12px 0 0 0}
+.takeaway li{font-size:.9rem;line-height:1.6;padding-left:24px;position:relative;color:#374151}
+.takeaway li::before{content:'✓';position:absolute;left:0;color:#2932E1;font-weight:700}
+/* Stats Grid - Enhanced v2 */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:40px 0}
+.stat-card{
+  background:linear-gradient(180deg,#FFFFFF 0%,#EEF0FF 100%);
+  padding:28px 16px 28px;border-radius:16px;text-align:center;
+  border:1.5px solid #E5E7EB;position:relative;overflow:hidden;
+  transition:transform .3s cubic-bezier(0.16,1,0.3,1),box-shadow .3s ease,border-color .3s ease;
+}
+.stat-card::before{
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:60%;height:4px;border-radius:0 0 4px 4px;
+  background:linear-gradient(135deg,#2932E1,#4F46E5);opacity:0;
+  transition:opacity .3s ease,width .3s cubic-bezier(0.16,1,0.3,1);
+}
+.stat-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 40px rgba(41,50,225,.22);border-color:#2932E1;
+}
+.stat-card:hover::before{opacity:1;width:85%}
+.stat-value{
+  font-size:2rem;font-weight:900;line-height:1.15;
+  background:linear-gradient(135deg,#2932E1 0%,#4F46E5 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;margin-bottom:6px;letter-spacing:-.02em;
+  word-break:break-word;overflow-wrap:break-word;
+}
+.stat-card:nth-child(1) .stat-value{background:linear-gradient(135deg,#2932E1,#4F46E5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-card:nth-child(2) .stat-value{background:linear-gradient(135deg,#4F46E5,#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-card:nth-child(3) .stat-value{background:linear-gradient(135deg,#2563EB,#6366F1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-card:nth-child(4) .stat-value{background:linear-gradient(135deg,#7C3AED,#A855F7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:.92rem;font-weight:700;color:#111827;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
+.comparison-table{width:100%;border-collapse:collapse;margin:32px 0;font-size:.9rem;border:1px solid var(--gray-200);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.comparison-table th{background:linear-gradient(135deg,#2563EB 0%,#3B82F6 100%);padding:14px 16px;text-align:left;font-weight:600;color:#fff;border-bottom:none;font-size:.92rem}
+.comparison-table td{padding:14px 16px;border-bottom:1px solid var(--gray-100);color:var(--gray-700)}
+.comparison-table tr:nth-child(even){background:var(--gray-50)}
+.comparison-table tr:hover{background:#EFF6FF;transition:background .2s ease}
 .comparison-table tr:last-child td{border-bottom:none}
+.comparison-table td:first-child{text-align:center;font-weight:700;color:var(--blue);font-size:1rem}
+.concentration-high{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.8rem;font-weight:600;background:#FEF3C7;color:#92400E}
+.concentration-medium{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.8rem;font-weight:600;background:#DBEAFE;color:#1E40AF}
+.concentration-very-high{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.8rem;font-weight:600;background:#FEE2E2;color:#991B1B}
 .blockquote-highlight{border-left:4px solid var(--blue);background:var(--gray-50);padding:20px 24px;margin:24px 0;border-radius:0 12px 12px 0;font-size:.95rem;line-height:1.7;color:var(--gray-600);font-style:italic}
 .blockquote-highlight cite{display:block;margin-top:8px;font-size:.82rem;color:var(--gray-400);font-style:normal}
 .cta-section{text-align:center;padding:64px 0;background:var(--gray-50)}
@@ -243,15 +286,35 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 .breadcrumb{font-size:.85rem;color:var(--gray-400);margin-bottom:20px}
 .breadcrumb a{color:var(--blue)}
 
-/* Process Steps */
+/* Process Steps - Enhanced */
 .process-steps { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
-.process-step { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--gray-50); border-radius: 12px; border: 1px solid var(--gray-200); transition: transform .2s, box-shadow .2s; }
-.process-step:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
-.process-step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--gradient-brand); color: #fff; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .9rem; }
-.process-step-content h4 { font-size: .95rem; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
-.process-step-content p { font-size: .85rem; color: var(--gray-600); margin: 0; }
-[data-theme="dark"] .process-step { background: var(--gray-100); border-color: var(--gray-200); }
+.process-step {
+  display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px;
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--blue-subtle) 100%);
+  border-radius: var(--radius-lg); border: 1.5px solid var(--gray-200);
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .25s ease, border-color .25s ease;
+  position: relative; overflow: hidden;
+}
+.process-step::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+  background: var(--gradient-brand); border-radius: 4px 0 0 4px; opacity: 0;
+  transition: opacity .25s ease, width .25s ease;
+}
+.process-step:hover { transform: translateX(6px); box-shadow: var(--shadow-md); border-color: var(--blue); }
+.process-step:hover::before { opacity: 1; }
+.process-step-num {
+  flex-shrink: 0; width: 40px; height: 40px;
+  background: var(--gradient-brand); color: #fff; border-radius: 12px;
+  display: grid; place-items: center; font-weight: 800; font-size: .95rem;
+  box-shadow: 0 4px 12px rgba(41,50,225,.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.process-step:hover .process-step-num { transform: scale(1.1); box-shadow: 0 6px 20px rgba(41,50,225,.35); }
+.process-step-content h4 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+.process-step-content p { font-size: .9rem; color: var(--gray-600); margin: 0; line-height: 1.6; }
+[data-theme="dark"] .process-step { background: linear-gradient(135deg, var(--gray-100) 0%, rgba(99,102,241,.06) 100%); border-color: var(--gray-200); }
 [data-theme="dark"] .process-step-content h4 { color: var(--gray-800); }
+[data-theme="dark"] .process-step-content p { color: var(--gray-600); }
 
 /* CTA Box */
 .cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
@@ -339,36 +402,36 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 
 <blockquote><p>Baidu processed millions of B2B industrial search queries in 2020. The patterns reveal exactly how Chinese business buyers research products, which industries lead demand, and where the platform competition stands. Here is what the data says — and what it means for overseas companies.</p></blockquote>
 
-<h2>The Big Picture: B2B Search Demand Bounces Back Strong</h2>
+<h2>📈 The Big Picture: B2B Search Demand Bounces Back Strong</h2>
 
 <p>The first thing that stands out in Baidu's 2020 B2B Industry Report: after the early-2020 downturn, B2B search demand on Baidu recovered rapidly. By April 2020, year-over-year B2B search volume was already outpacing 2019 levels. Businesses did not stop buying — they moved their supplier research online faster than anyone expected.</p>
 
 <div class="stats-grid">
   <div class="stat-card">
     <div class="stat-icon">📱</div>
-    <div class="stat-number">70%</div>
+    <div class="stat-value">70%</div>
     <div class="stat-label">B2B search traffic from mobile devices</div>
   </div>
   <div class="stat-card">
     <div class="stat-icon">💻</div>
-    <div class="stat-number">30%</div>
+    <div class="stat-value">30%</div>
     <div class="stat-label">B2B search traffic from PC</div>
   </div>
   <div class="stat-card">
     <div class="stat-icon">📊</div>
-    <div class="stat-number">78%</div>
+    <div class="stat-value">78%</div>
     <div class="stat-label">Comprehensive B2B platform search share</div>
   </div>
   <div class="stat-card">
     <div class="stat-icon">🏭</div>
-    <div class="stat-number">Top 3</div>
+    <div class="stat-value">Top 3</div>
     <div class="stat-label">Machinery, Building Materials, Electrical — the largest B2B segments</div>
   </div>
 </div>
 
 <p>The split between mobile and PC tells its own story: about 70% of B2B search traffic comes from mobile devices, showing that Chinese business buyers do their supplier research on the go — on factory floors, construction sites, and during field visits. But 30% still searches from desktop, which means you need campaigns on both channels to capture the full market.</p>
 
-<h2>China's Top 10 B2B Segments: Where the Demand Is</h2>
+<h2>🏭 China's Top 10 B2B Segments: Where the Demand Is</h2>
 
 <p>Baidu's search data identified ten dominant B2B industry categories. Together they account for the vast majority of industrial purchasing intent on the platform:</p>
 
@@ -451,7 +514,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
   <strong>💡 Competitive Advantage:</strong> For industries with high sub-segment concentration (metallurgy, hardware, auto parts, agriculture), concentrate 70% of your ad budget on the top 10 sub-category keywords. The remaining 30% can cover niche terms. This targeting approach typically produces 2-3x better ROAS than broad-category bidding.
 </div>
 
-<h2>How Chinese B2B Buyers Actually Search and Decide</h2>
+<h2>🔍 How Chinese B2B Buyers Actually Search and Decide</h2>
 
 <p>Understanding search behavior is the difference between running ads and running profitable ads. Baidu's report maps the exact journey Chinese B2B buyers take from first search to final purchase.</p>
 
@@ -485,7 +548,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
   <cite>— 2020 Baidu B2B Industry Insights Report</cite>
 </blockquote>
 
-<h2>The B2B Platform Landscape: Who Is Winning</h2>
+<h2>🏢 The B2B Platform Landscape: Who Is Winning</h2>
 
 <p>Baidu's report segments B2B platforms into two models:</p>
 <p>- <strong>Comprehensive platforms</strong> (78% of search interest): 1688.com, AiCaiGou (Baidu's own platform), HC360.com — one-stop platforms with broad category coverage</p>
@@ -493,7 +556,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 
 <p>1688.com leads in both search volume and brand recognition. But AiCaiGou is in the high-growth sweet spot — strong search share combined with rapidly rising awareness among business buyers. For overseas companies entering China, AiCaiGou represents a strategic opportunity because it is deeply integrated with Baidu's search ecosystem: your products show up not just on the marketplace, but in organic and paid search results across China's largest search engine.</p>
 
-<h2>The 5-Step B2B Marketing Method: Baidu's Full-Funnel Approach</h2>
+<h2>🚀 The 5-Step B2B Marketing Method: Baidu's Full-Funnel Approach</h2>
 
 <p>The report outlines a structured approach for B2B companies to capture demand and convert it into sales on Baidu's platform:</p>
 
@@ -581,7 +644,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 
 <strong>Ready to put your products in front of China's B2B buyers?</strong> Our team at BPP handles Baidu ad account setup, campaign management, and AiCaiGou storefront creation — no China business license needed. [Contact us today](https://baidumarketing.com/contact) for a free strategy session.
 
-<blockquote><p>📄 <strong>Source</strong>: This article is based on data from the "2020年百度B2B行业洞察报告" (2020 Baidu B2B Industry Insights Report), published by Baidu Search Big Data.</p></blockquote>
+<blockquote><p>📄 <strong>Source</strong>: This article is based on data from the "2020 Baidu B2B Industry Insights Report," published by Baidu Search Big Data.</p></blockquote>
 
     </article>
   </div>
