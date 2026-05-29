@@ -213,6 +213,26 @@
       .footer-bottom { flex-direction: column; text-align: center; }
       .stats-grid { grid-template-columns: 1fr; }
     }
+
+/* Ratio cards */
+.ratio-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+.ratio-card { border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; text-align: center; transition: transform .2s, box-shadow .2s; position: relative; overflow: hidden; }
+.ratio-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.ratio-card-ratio { font-size: 1.8rem; font-weight: 900; color: var(--blue); margin-bottom: 8px; }
+.ratio-card-devices { display: flex; justify-content: center; gap: 6px; margin-bottom: 10px; }
+.ratio-device { padding: 3px 10px; border-radius: 999px; font-size: .72rem; font-weight: 700; }
+.ratio-device.desktop { background: #EEF0FF; color: #3730A3; }
+.ratio-device.mobile { background: #D1FAE5; color: #065F46; }
+.ratio-device.both { background: linear-gradient(135deg, #D1FAE5, #EEF0FF); color: #2932E1; border: 1px solid #A5B4FC; }
+.ratio-card-change { font-size: .78rem; color: var(--gray-500); }
+.ratio-card-change .new { color: #059669; font-weight: 700; }
+.ratio-card.highlight { border-color: #6EE7B7; border-width: 2px; background: linear-gradient(180deg, #fff 0%, #D1FAE5 100%); }
+.ratio-card.highlight .ratio-card-ratio { color: #059669; }
+[data-theme="dark"] .ratio-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .ratio-card.highlight { background: linear-gradient(180deg, var(--gray-100) 0%, rgba(16,185,129,.08) 100%); border-color: rgba(16,185,129,.4); }
+[data-theme="dark"] .ratio-device.desktop { background: rgba(99,102,241,.12); color: var(--blue); }
+[data-theme="dark"] .ratio-device.mobile { background: rgba(16,185,129,.12); color: #6EE7B7; }
+[data-theme="dark"] .ratio-device.both { background: rgba(99,102,241,.08); color: var(--blue); border-color: rgba(99,102,241,.3); }
   </style>
   <script type="application/ld+json">
   {
@@ -330,37 +350,28 @@
           </svg>
         </div>
 
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Image Ratio</th>
-              <th>Allowed Devices (Before)</th>
-              <th>Allowed Devices (Now)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>1:1 (square)</strong></td>
-              <td>Mobile only</td>
-              <td><strong style="color:#059669;">Mobile + Desktop ✅</strong></td>
-            </tr>
-            <tr>
-              <td>3:2</td>
-              <td>Desktop only</td>
-              <td>Desktop only</td>
-            </tr>
-            <tr>
-              <td>16:9</td>
-              <td>Desktop only</td>
-              <td>Desktop only</td>
-            </tr>
-            <tr>
-              <td>3:1</td>
-              <td>Mobile only</td>
-              <td>Mobile only</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="ratio-cards">
+          <div class="ratio-card highlight">
+            <div class="ratio-card-ratio">1:1</div>
+            <div class="ratio-card-devices"><span class="ratio-device both">📱 Mobile + 🖥️ Desktop</span></div>
+            <div class="ratio-card-change"><span class="new">✅ NEW — was mobile only</span></div>
+          </div>
+          <div class="ratio-card">
+            <div class="ratio-card-ratio">3:2</div>
+            <div class="ratio-card-devices"><span class="ratio-device desktop">🖥️ Desktop only</span></div>
+            <div class="ratio-card-change">No change</div>
+          </div>
+          <div class="ratio-card">
+            <div class="ratio-card-ratio">16:9</div>
+            <div class="ratio-card-devices"><span class="ratio-device desktop">🖥️ Desktop only</span></div>
+            <div class="ratio-card-change">No change</div>
+          </div>
+          <div class="ratio-card">
+            <div class="ratio-card-ratio">3:1</div>
+            <div class="ratio-card-devices"><span class="ratio-device mobile">📱 Mobile only</span></div>
+            <div class="ratio-card-change">No change</div>
+          </div>
+        </div>
 
         <p>The 1:1 square format — the most common and easiest to produce — can now run everywhere.</p>
 
