@@ -165,8 +165,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .breadcrumb a { color: var(--blue); }
     .article-section { padding: 48px 0 80px; }
     .article-content { max-width: 720px; margin: 0 auto; }
-    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
-    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; }
+    .article-content h2 { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
+    .article-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--gray-700); margin: 28px 0 12px; padding-left: 12px; border-left: 3px solid var(--blue); }
+    .article-content ul { padding-left: 20px; }
+    .article-content li { margin-bottom: 12px; line-height: 1.7; }
+    .article-content li strong { color: var(--gray-800); }
     .article-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
@@ -200,6 +203,55 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .platform-pill.search { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
     .platform-pill.feed { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
     .platform-pill.display { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    .platform-pill.maps { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.ai { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+    .platform-pill.b2b { background: #DBEAFE; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.biz { background: #F3E8FF; border-color: #C4B5FD; color: #6B21A8; }
+
+    .case-study {
+      background: linear-gradient(135deg, var(--blue-subtle) 0%, #F0F9FF 100%);
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .case-study h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .case-study h4::before { content: '📋'; }
+    .case-study p {
+      font-size: .95rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .case-study strong {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .article-content p strong { color: var(--gray-800); }
+    .article-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gray-200), transparent);
+      margin: 48px 0;
+    }
+    [data-theme="dark"] .case-study {
+      background: linear-gradient(135deg, rgba(99,102,241,.08) 0%, rgba(59,130,246,.06) 100%);
+      border-color: var(--gray-200);
+      border-left-color: var(--blue);
+    }
+    [data-theme="dark"] .case-study h4 { color: var(--gray-800); }
+    [data-theme="dark"] .case-study p { color: var(--gray-600); }
+    [data-theme="dark"] .case-study strong { color: var(--blue); }
 
     .nav-mobile-cta,.nav-mobile-theme{display:none}
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
@@ -429,6 +481,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <p>After joining Baidu Maps Store Membership, a dental clinic in Guangzhou transparently displayed its credentials, pricing, and case studies online. This dramatically lowered the barrier to decision for potential patients. In just one month, the storefront received over <strong>300 targeted exposures</strong>, attracted <strong>54 navigation-to-visit conversions</strong>, and generated <strong>75 phone leads</strong> — successfully transitioning from traditional door-to-door marketing to precision online customer acquisition.</p>
       </div>
 
+      <hr>
+
       <h2>2. E-Commerce Live Streaming: Don't Fight in the Red Ocean</h2>
       <p>E-commerce sellers: are you still grinding it out? Rising traffic costs, limited host endurance, and orders stopping the moment you go offline — these are real pain points. But pain points are exactly where new rules of the game get rewritten. For sellers determined to break through, these very challenges point to an untapped incremental market that most are ignoring.</p>
       <p><strong>What's new:</strong> Baidu's e-commerce ecosystem is in a period of rapid growth with active resource support — including traffic and rebate incentives. The accompanying <strong>"HuiBoXing" AI digital human streaming tool</strong> revolutionizes the cost and labor ceiling of traditional streaming. Merchants can achieve 24/7 brand presentation and product sales through AI digital humans, without the high costs of human hosts, equipment, or venues.</p>
@@ -449,6 +503,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <p>This brand quickly adapted its proven e-commerce model from other platforms to Baidu e-commerce. By combining "real-host streaming + massive content assets" with official coaching, it completed cold-start in just <strong>4 days</strong>, achieving stable daily sales above <strong>15,000 yuan</strong>. ROI has remained at a healthy <strong>1:1.5</strong> or better long-term, successfully opening up an entirely new incremental market.</p>
       </div>
 
+      <hr>
+
       <h2>🔧 3. B2B Business: From "Waiting for Inquiries" to "Locking in Opportunities"</h2>
       <p>When trade show foot traffic keeps shrinking and sales teams spend more on travel with fewer quality leads, B2B growth seems to have hit a ceiling. The traditional "hit the road + run trade shows" model has high costs and low efficiency — it can no longer sustain growth.</p>
       <p><strong>What's new:</strong> The Baidu AiCaiGou platform is systematically solving B2B online marketing pain points through product matrix upgrades. The <strong>B2B Industry AI Agent</strong> acts as a professional "front-end sales consultant," answering technical parameter and application scenario questions in real time, completing initial screening. <strong>ShangJiTong</strong> guarantees a steady stream of potential procurement leads. The <strong>"AiCaiGou × Baidu Maps" joint membership</strong> covers online search scenarios before procurement managers conduct site visits. This combined approach enables full-funnel empowerment from "traffic exposure" to "opportunity conversion."</p>
@@ -464,6 +520,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h4>Case study: Shenzhen Xinwei Technology</h4>
         <p>A national high-tech sensor enterprise deeply cultivated the AiCaiGou platform and continuously optimized its storefront content and rankings. Over five years, it accumulated more than <strong>600 precision sales leads</strong>, validating that building trust through professional content can drive sustainable long-term growth.</p>
       </div>
+
+      <hr>
 
       <h2>🤖 4. All-Industry Efficiency: AI Rebuilds the Entire Marketing Funnel</h2>
       <p>Don't know how to structure campaigns? Don't have compelling creative assets? Account optimization consumes massive time, and professional marketing operations staff are too expensive? For businesses of any size — especially SMEs — the ultimate challenge of marketing is maximizing output while controlling costs.</p>
