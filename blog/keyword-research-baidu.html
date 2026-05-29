@@ -358,9 +358,31 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
     [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
 
+    /* Feature list for Baidu Keyword Planner */
+    .feature-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 20px 0; }
+    .feature-item { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; font-size: .88rem; color: var(--gray-700); transition: transform .2s, box-shadow .2s; }
+    .feature-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .feature-icon { width: 32px; height: 32px; border-radius: 8px; background: var(--blue-light); display: grid; place-items: center; font-size: 1rem; flex-shrink: 0; }
+    [data-theme="dark"] .feature-item { background: var(--gray-100); border-color: var(--gray-200); color: var(--gray-700); }
+    [data-theme="dark"] .feature-icon { background: rgba(99,102,241,.15); }
+
+    /* Enhanced tool cards */
+    .tool-item { position: relative; border-left: 4px solid var(--blue); }
+    .tool-item:nth-child(1) { border-left-color: #2932E1; }
+    .tool-item:nth-child(2) { border-left-color: #4F46E5; }
+    .tool-item:nth-child(3) { border-left-color: #7C3AED; }
+    .tool-item:nth-child(4) { border-left-color: #2563EB; }
+    .tool-name { display: flex; align-items: center; gap: 8px; }
+    .tool-name::before { content: '🔧'; font-size: .9rem; }
+    .tool-item:nth-child(1) .tool-name::before { content: '🔍'; }
+    .tool-item:nth-child(2) .tool-name::before { content: '📊'; }
+    .tool-item:nth-child(3) .tool-name::before { content: '💬'; }
+    .tool-item:nth-child(4) .tool-name::before { content: '📈'; }
+
     @media (max-width: 640px) {
       .tools-list { grid-template-columns: 1fr; }
       .related-grid { grid-template-columns: 1fr; }
+      .feature-list { grid-template-columns: 1fr; }
     }
 </style>
 
@@ -445,12 +467,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h2>🔍 Baidu's Built-In Tools</h2>
 
         <p><strong>Baidu Keyword Planner</strong> is the first stop. It shows:</p>
-        <ul>
-          <li>Search volume for each term</li>
-          <li>Competition level (low/medium/high)</li>
-          <li>Suggested bid ranges</li>
-          <li>Related keyword suggestions</li>
-        </ul>
+
+        <div class="feature-list">
+          <div class="feature-item"><div class="feature-icon">📊</div><span>Search volume for each term</span></div>
+          <div class="feature-item"><div class="feature-icon">⚡</div><span>Competition level (low/medium/high)</span></div>
+          <div class="feature-item"><div class="feature-icon">💰</div><span>Suggested bid ranges</span></div>
+          <div class="feature-item"><div class="feature-icon">🔗</div><span>Related keyword suggestions</span></div>
+        </div>
 
         <h2>🛠️ Third-Party Tools</h2>
 
