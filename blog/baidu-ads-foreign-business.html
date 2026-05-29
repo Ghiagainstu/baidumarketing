@@ -317,12 +317,16 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
     /* Process Steps */
     .process-steps { display: flex; flex-direction: column; gap: 24px; margin: 32px 0; }
-    .step { display: flex; gap: 16px; align-items: flex-start; position: relative; }
-    .step-num { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--blue); color: #fff; border-radius: 50%; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
-    .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; color: var(--gray-800); }
-    .step p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; }
-    [data-theme="dark"] .step-num { background: var(--blue); }
-    [data-theme="dark"] .step h3 { color: var(--gray-900); }
+    .step { display: flex; gap: 20px; align-items: flex-start; position: relative; padding: 20px; background: var(--gray-50); border-radius: var(--radius); border: 1px solid var(--gray-200); transition: transform .2s, box-shadow .2s; }
+    .step:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+    .step-num { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%); color: #fff; border-radius: 50%; font-weight: 700; font-size: 1.2rem; flex-shrink: 0; box-shadow: 0 2px 8px rgba(37,99,235,.3); }
+    .step-content { flex: 1; }
+    .step-content h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: var(--gray-800); line-height: 1.4; }
+    .step-content p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; margin: 0; }
+    [data-theme="dark"] .step { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .step-num { background: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%); }
+    [data-theme="dark"] .step-content h3 { color: var(--gray-900); }
+    [data-theme="dark"] .step-content p { color: var(--gray-600); }
 
     /* Callout */
     .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
@@ -464,32 +468,32 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <div class="process-steps">
           <div class="step">
             <div class="step-num">1</div>
-            <div>
+            <div class="step-content">
               <h3>Account Setup</h3>
               <p>Foreign companies need a Chinese business license or a registered agent. We handle this setup for you.</p>
-        <div class="callout callout-warning">
-              <span class="callout-icon">⚠️</span>
-              <div><strong>Compliance Note:</strong> Without a Chinese business entity, you can't directly open a Baidu advertising account. Working with a registered agent (like us) handles the compliance layer while you focus on strategy and creative.</div>
-            </div>
+              <div class="callout callout-warning" style="margin-top:12px;">
+                <span class="callout-icon">⚠️</span>
+                <div><strong>Compliance Note:</strong> Without a Chinese business entity, you can't directly open a Baidu advertising account. Working with a registered agent (like us) handles the compliance layer while you focus on strategy and creative.</div>
+              </div>
             </div>
           </div>
           <div class="step">
             <div class="step-num">2</div>
-            <div>
+            <div class="step-content">
               <h3>Keyword Research</h3>
               <p>We identify the Chinese search terms your potential customers actually use — not direct translations.</p>
             </div>
           </div>
           <div class="step">
             <div class="step-num">3</div>
-            <div>
+            <div class="step-content">
               <h3>Campaign Launch</h3>
               <p>We set up targeting, bidding strategy, and creative. Our oCPC system automatically optimizes for your cost per lead.</p>
             </div>
           </div>
           <div class="step">
             <div class="step-num">4</div>
-            <div>
+            <div class="step-content">
               <h3>Ongoing Optimization</h3>
               <p>Weekly performance reviews, bid adjustments, and creative testing to continuously improve results.</p>
             </div>
