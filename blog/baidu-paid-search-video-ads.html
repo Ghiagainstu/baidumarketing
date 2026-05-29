@@ -336,6 +336,38 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+/* Video level cards */
+.level-cards { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+.level-card { display: grid; grid-template-columns: 100px 1fr auto; gap: 0; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; transition: transform .2s, box-shadow .2s; }
+.level-card:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.level-card-badge { display: flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: .04em; }
+.level-card:nth-child(1) .level-card-badge { background: linear-gradient(135deg, #2932E1, #4F46E5); }
+.level-card:nth-child(2) .level-card-badge { background: linear-gradient(135deg, #7C3AED, #8B5CF6); }
+.level-card:nth-child(3) .level-card-badge { background: linear-gradient(135deg, #2563EB, #3B82F6); }
+.level-card-info { padding: 16px 20px; }
+.level-card-info h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+.level-card-info p { font-size: .85rem; color: var(--gray-600); margin: 0; line-height: 1.5; }
+.level-card-best { padding: 16px 20px; border-left: 1px solid var(--gray-100); display: flex; align-items: center; font-size: .82rem; color: var(--gray-500); max-width: 200px; }
+.level-card-best strong { color: var(--gray-700); display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; }
+[data-theme="dark"] .level-card { border-color: var(--gray-200); }
+[data-theme="dark"] .level-card-info h4 { color: var(--gray-900); }
+[data-theme="dark"] .level-card-best { border-left-color: var(--gray-200); color: var(--gray-500); }
+
+/* Spec grid */
+.spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 24px 0; }
+.spec-item { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px; text-align: center; transition: transform .2s, box-shadow .2s; }
+.spec-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+.spec-item-label { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-400); margin-bottom: 6px; }
+.spec-item-value { font-size: 1rem; font-weight: 700; color: var(--gray-800); line-height: 1.3; }
+.spec-item:nth-child(1) { border-top: 3px solid #2932E1; }
+.spec-item:nth-child(2) { border-top: 3px solid #4F46E5; }
+.spec-item:nth-child(3) { border-top: 3px solid #7C3AED; }
+.spec-item:nth-child(4) { border-top: 3px solid #3B82F6; }
+.spec-item:nth-child(5) { border-top: 3px solid #2563EB; }
+.spec-item:nth-child(6) { border-top: 3px solid #10B981; }
+[data-theme="dark"] .spec-item { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .spec-item-value { color: var(--gray-900); }
 </style>
   <script type="application/ld+json">
   {
@@ -424,72 +456,37 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <h2>Three Ways to Set Up Video Ads</h2>
         <p>Baidu gives you three levels of control. You can apply video at the account, campaign, or ad group level — depending on how much granularity you need.</p>
 
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Level</th>
-              <th>How It Works</th>
-              <th>Best For</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Account</strong></td>
-              <td>Video shows on all ads across every campaign</td>
-              <td>Brands with one core video asset</td>
-            </tr>
-            <tr>
-              <td><strong>Campaign</strong></td>
-              <td>Different videos per campaign</td>
-              <td>Campaigns targeting different products or segments</td>
-            </tr>
-            <tr>
-              <td><strong>Ad Group</strong></td>
-              <td>Different videos per ad group</td>
-              <td>A/B testing multiple video creatives</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="level-cards">
+          <div class="level-card">
+            <div class="level-card-badge">Account</div>
+            <div class="level-card-info"><h4>Account Level</h4><p>Video shows on all ads across every campaign</p></div>
+            <div class="level-card-best"><div><strong>Best for</strong>Brands with one core video asset</div></div>
+          </div>
+          <div class="level-card">
+            <div class="level-card-badge">Campaign</div>
+            <div class="level-card-info"><h4>Campaign Level</h4><p>Different videos per campaign</p></div>
+            <div class="level-card-best"><div><strong>Best for</strong>Different products or segments</div></div>
+          </div>
+          <div class="level-card">
+            <div class="level-card-badge">Ad Group</div>
+            <div class="level-card-info"><h4>Ad Group Level</h4><p>Different videos per ad group</p></div>
+            <div class="level-card-best"><div><strong>Best for</strong>A/B testing multiple creatives</div></div>
+          </div>
+        </div>
 
         <p>You find this setting under the creative section inside your Baidu paid search account. The feature is available to all advertisers — no special permissions needed.</p>
 
         <h2>Video Specs: What You Need to Know</h2>
         <p>Before you start producing videos, here are the technical requirements:</p>
 
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Spec</th>
-              <th>Requirement</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Formats</td>
-              <td>MP4, FLV, MOV, M3U8, 3GP, AVI, MPG, ASF, WMV, MKV, TS, WEBM, MXF</td>
-            </tr>
-            <tr>
-              <td>File size</td>
-              <td>Up to 500MB</td>
-            </tr>
-            <tr>
-              <td>Duration</td>
-              <td>6 seconds minimum (no stated max)</td>
-            </tr>
-            <tr>
-              <td>Desktop</td>
-              <td>16:9, at least 1280x720</td>
-            </tr>
-            <tr>
-              <td>Mobile</td>
-              <td>9:16, at least 720x1280</td>
-            </tr>
-            <tr>
-              <td>Square</td>
-              <td>1:1, at least 800x800</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="spec-grid">
+          <div class="spec-item"><div class="spec-item-label">Formats</div><div class="spec-item-value">MP4, FLV, MOV, AVI, WEBM +8 more</div></div>
+          <div class="spec-item"><div class="spec-item-label">File Size</div><div class="spec-item-value">Up to 500MB</div></div>
+          <div class="spec-item"><div class="spec-item-label">Duration</div><div class="spec-item-value">6s minimum (no max)</div></div>
+          <div class="spec-item"><div class="spec-item-label">🖥️ Desktop</div><div class="spec-item-value">16:9 · 1280×720</div></div>
+          <div class="spec-item"><div class="spec-item-label">📱 Mobile</div><div class="spec-item-value">9:16 · 720×1280</div></div>
+          <div class="spec-item"><div class="spec-item-label">⬜ Square</div><div class="spec-item-value">1:1 · 800×800</div></div>
+        </div>
 
         <div class="callout callout-insight">
           <span class="callout-icon">💡</span>
