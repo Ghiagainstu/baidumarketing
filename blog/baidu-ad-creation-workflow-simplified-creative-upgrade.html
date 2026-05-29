@@ -228,11 +228,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--blue); margin-bottom: 6px; }
 .stat-label { font-size: .85rem; color: var(--gray-600); }
 
-/* Comparison Table */
-.comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
-.comparison-table th { background: var(--blue); color: #fff; padding: 16px; text-align: left; font-weight: 600; font-size: .95rem; }
-.comparison-table td { padding: 14px 16px; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); font-size: .95rem; }
+/* Comparison Table - Enhanced */
+.comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 20px rgba(41,50,225,.1); }
+.comparison-table th { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); color: #fff; padding: 18px 20px; text-align: left; font-weight: 700; font-size: .95rem; letter-spacing: .02em; }
+.comparison-table td { padding: 16px 20px; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); font-size: .95rem; transition: background .2s; }
 .comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table tr:hover td { background: var(--blue-subtle); }
+.comparison-table td strong { color: var(--gray-800); font-weight: 700; }
 .comparison-table .check-col { text-align: center; font-size: 1.2rem; }
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
@@ -263,10 +265,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .chart-title { text-align: center; font-size: .9rem; font-weight: 600; color: var(--gray-600); margin-bottom: 16px; }
 
 /* CTA Box */
-.cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
+.cta-box { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); color: #fff; padding: 48px; border-radius: 16px; text-align: center; margin: 50px 0; }
 .cta-box h2, .cta-box h3 { font-size: 2rem !important; font-weight: 700 !important; margin-bottom: 16px !important; color: #fff !important; }
 .cta-box p { font-size: 1.05rem !important; margin-bottom: 30px !important; opacity: .9; color: #fff !important; }
-.cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+.cta-btn { display: inline-block; background: #fff; color: #2932E1; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform .2s, box-shadow .2s; }
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
 /* Related */
@@ -293,6 +295,37 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+    /* Before/After Grid */
+    .before-after-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+    .before-card, .after-card { padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); }
+    .before-card { background: #FEF2F2; border-color: #FECACA; }
+    .after-card { background: #F0FDF4; border-color: #BBF7D0; }
+    .card-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: .8rem; font-weight: 600; margin-bottom: 12px; }
+    .before-badge { background: #FEE2E2; color: #991B1B; }
+    .after-badge { background: #DCFCE7; color: #166534; }
+    .before-card p, .after-card p { font-size: .9rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 12px; }
+    .card-note { font-size: .8rem; color: var(--gray-500); font-style: italic; margin: 0; }
+    .example-box { padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-family: monospace; font-size: .85rem; }
+    .bad-example { background: #FEE2E2; color: #991B1B; border: 1px dashed #FECACA; }
+    .good-example { background: #DCFCE7; color: #166534; border: 1px dashed #BBF7D0; }
+    .example-box code { background: none; padding: 0; font-size: inherit; }
+    [data-theme="dark"] .before-card { background: rgba(220,38,38,.08); border-color: rgba(220,38,38,.2); }
+    [data-theme="dark"] .after-card { background: rgba(22,163,74,.08); border-color: rgba(22,163,74,.2); }
+    [data-theme="dark"] .before-card p, [data-theme="dark"] .after-card p { color: var(--gray-600); }
+    [data-theme="dark"] .bad-example { background: rgba(220,38,38,.1); color: #FCA5A5; }
+    [data-theme="dark"] .good-example { background: rgba(22,163,74,.1); color: #86EFAC; }
+    @media (max-width: 640px) { .before-after-grid { grid-template-columns: 1fr; } }
+
+    /* Rules Callout */
+    .rules-callout { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 20px 24px; margin: 20px 0; }
+    .rules-header { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 12px; }
+    .rules-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .rules-list li { font-size: .9rem; color: var(--gray-600); line-height: 1.6; padding-left: 20px; position: relative; }
+    .rules-list li::before { content: '•'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    [data-theme="dark"] .rules-callout { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .rules-header { color: var(--gray-800); }
+    [data-theme="dark"] .rules-list li { color: var(--gray-600); }
 </style>
 
   <meta property="og:title" content="Baidu Streamlines Ad Creation Workflow: 3 Upgrades That Save Time and Improve Creative Quality" />
@@ -393,42 +426,56 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     </ul>
   </div>
 <h2>🚀 Upgrade 3: Title Wildcard Limit — One Keyword Wildcard Max</h2>
-<p>This is the most impactful change for ad structure: </p>
-<strong>Before</strong>: You could insert up to 2 keyword wildcards in a single headline. Result: repetitive headlines like `Buy [Keyword] — Best [Keyword] Supplier`.
-<strong>After</strong>: Maximum <strong>1 keyword wildcard</strong> per headline. You can still add a separate geographic wildcard (e.g., `[City]`).
-<p>Rules: </p>
-<ul><li>New creatives: 1 keyword wildcard max. System prevents saving headlines with 2+.</li>
-<li>Existing creatives with 2 wildcards: Continue to display as before, but editing them now enforces the 1-wildcard limit.</li></ul>
-<p>This forces cleaner headlines. No more keyword-stuffed titles. </p>
+<p>This is the most impactful change for ad structure:</p>
+
+<div class="before-after-grid">
+  <div class="before-card">
+    <div class="card-badge before-badge">❌ Before</div>
+    <p>You could insert up to <strong>2 keyword wildcards</strong> in a single headline.</p>
+    <div class="example-box bad-example">
+      <code>Buy [Keyword] — Best [Keyword] Supplier</code>
+    </div>
+    <p class="card-note">Result: repetitive, keyword-stuffed headlines</p>
+  </div>
+  <div class="after-card">
+    <div class="card-badge after-badge">✅ After</div>
+    <p>Maximum <strong>1 keyword wildcard</strong> per headline.</p>
+    <div class="example-box good-example">
+      <code>Buy [Keyword] — Best [City] Supplier</code>
+    </div>
+    <p class="card-note">Separate geographic wildcard still allowed</p>
+  </div>
+</div>
+
+<div class="rules-callout">
+  <div class="rules-header">📋 New Rules</div>
+  <ul class="rules-list">
+    <li><strong>New creatives:</strong> 1 keyword wildcard max. System prevents saving headlines with 2+.</li>
+    <li><strong>Existing creatives:</strong> Continue to display as before, but editing enforces the 1-wildcard limit.</li>
+  </ul>
+</div>
+
+<p>This forces cleaner headlines. No more keyword-stuffed titles.</p>
 <h2>💡 Why This Matters for Overseas Advertisers</h2>
 <p>Baidu's ad platform is in Chinese. Every click, every field, every tooltip — all in Chinese. The improvements are real, but overseas advertisers cannot use them directly. </p>
-<p>BPP uses these tools daily: </p>
-<table class="comparison-table">
-      <thead><tr><th>Tool</th><th>BPP Value</th></tr></thead>
-      <tbody>
-        <tr><td>Simplified unit creation</td><td>Faster campaign setup → lower management cost for you</td></tr>
-        <tr><td>AI copy generation</td><td>Native Chinese ad copy, informed by Baidu's high-CTR data</td></tr>
-        <tr><td>Wildcard discipline</td><td>Clean headlines that pass review first time</td></tr>
-      </tbody>
-    </table>
+<p>BPP uses these tools daily:</p>
+<table class="comparison-table enhanced-table">
+  <thead><tr><th>🔧 Tool</th><th>💎 BPP Value</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Simplified unit creation</strong></td><td>Faster campaign setup → lower management cost for you</td></tr>
+    <tr><td><strong>AI copy generation</strong></td><td>Native Chinese ad copy, informed by Baidu's high-CTR data</td></tr>
+    <tr><td><strong>Wildcard discipline</strong></td><td>Clean headlines that pass review first time</td></tr>
+  </tbody>
+</table>
 <p>One headline, one keyword wildcard, one geographic wildcard. That is the new formula. BPP builds ad accounts that follow it from day one, not just when the platform enforces it. </p>
 <div class="cta-box">
       <h2>Ready to Simplify Your Baidu Ad Creation?</h2>
       <p>BPP manages your Baidu advertising workflow from setup to optimization. Focus on your business — we handle the platform.</p>
-      <a href="/contact" class="cta-btn">Start Baidu advertising with BPP &rarr;</a>
-    </div>
-
-    <div class="takeaway-box">
-      <h3>📝 Key Takeaways</h3>
-      <ul>
-        <li>Baidu continues to evolve its advertising platform with user-friendly upgrades</li>
-        <li>Overseas advertisers benefit from simplified workflows and AI-powered tools</li>
-        <li>Working with an experienced partner ensures smooth campaign setup and optimization</li>
-      </ul>
-    </div>
-    </article>
+        <a href="/contact" class="cta-btn">Start Baidu advertising with BPP →</a>
       </div>
-    </section>
+    </article>
+  </div>
+</section>
   </main>
 
   <div class="cta-box">
