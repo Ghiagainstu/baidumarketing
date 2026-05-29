@@ -182,10 +182,16 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; color: var(--gray-700); font-weight: 500; }
     .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
-    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
-    .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
-    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: var(--radius-lg); overflow: hidden; margin: 28px 0; font-size: .9rem; box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+    .comparison-table th { background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%); color: #fff; font-weight: 600; padding: 16px 18px; text-align: left; font-size: .95rem; }
+    .comparison-table td { padding: 16px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); vertical-align: middle; }
+    .comparison-table tr:nth-child(even) { background: var(--gray-50); }
+    .comparison-table tr:hover { background: #EFF6FF; transition: background .2s; }
     .comparison-table tr:last-child td { border-bottom: none; }
+
+    .serve-yes { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #DCFCE7; color: #166534; border-radius: 999px; font-weight: 600; font-size: .85rem; }
+    .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
+    .comparison-table small { font-size: .78rem; color: var(--gray-500); }
 
     .cta-section { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); border-radius: var(--radius-lg); padding: 48px; margin: 48px 0; text-align: center; }
     .cta-section h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
@@ -433,11 +439,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
             <tr><th>Status</th><th>Can Ads Serve?</th><th>Action Required</th></tr>
           </thead>
           <tbody>
-            <tr><td><span class="status-badge badge-pending">The funds have not arrived</span></td><td>No</td><td>Complete payment and wait for confirmation</td></tr>
-            <tr><td><span class="status-badge badge-warning">Zero balance</span></td><td>No</td><td>Top up the account immediately</td></tr>
-            <tr><td><span class="status-badge badge-info">Under review</span></td><td>No</td><td>Wait for Baidu to complete verification</td></tr>
-            <tr><td><span class="status-badge badge-success">Activate</span></td><td>Yes (if campaigns are also active)</td><td>Check campaign and ad group levels</td></tr>
-            <tr><td><span class="status-badge badge-danger">Rejected</span></td><td>No</td><td>Fix compliance issues and resubmit</td></tr>
+            <tr><td><span class="status-badge badge-pending">The funds have not arrived</span></td><td><span class="serve-no">❌ No</span></td><td>Complete payment and wait for confirmation</td></tr>
+            <tr><td><span class="status-badge badge-warning">Zero balance</span></td><td><span class="serve-no">❌ No</span></td><td>Top up the account immediately</td></tr>
+            <tr><td><span class="status-badge badge-info">Under review</span></td><td><span class="serve-no">❌ No</span></td><td>Wait for Baidu to complete verification</td></tr>
+            <tr><td><span class="status-badge badge-success">Activate</span></td><td><span class="serve-yes">✅ Yes</span><br><small>(if campaigns are also active)</small></td><td>Check campaign and ad group levels</td></tr>
+            <tr><td><span class="status-badge badge-danger">Rejected</span></td><td><span class="serve-no">❌ No</span></td><td>Fix compliance issues and resubmit</td></tr>
           </tbody>
         </table>
 
