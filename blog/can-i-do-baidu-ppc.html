@@ -319,6 +319,21 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .stat-card-green .stat-value { color: #10B981; }
 .stat-card-purple .stat-value { color: #8B5CF6; }
 .stat-card-orange .stat-value { color: #F59E0B; }
+.stat-value { font-size: 2.2rem; font-weight: 800; margin-bottom: 6px; line-height: 1.1; }
+.stat-sub { font-size: .78rem; color: var(--gray-400); margin-top: 4px; }
+
+/* Prohibited categories table */
+.prohibited-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 24px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(239,68,68,.1); }
+.prohibited-table th { background: #FEF2F2; color: #991B1B; font-weight: 700; padding: 14px 18px; text-align: left; font-size: .9rem; border-bottom: 2px solid #FECACA; }
+.prohibited-table td { padding: 12px 18px; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); font-size: .9rem; }
+.prohibited-table tr:last-child td { border-bottom: none; }
+.prohibited-table tr:hover { background: #FEF2F2; }
+.prohibited-table .note-blocked { color: #DC2626; font-weight: 600; }
+.prohibited-table .note-restricted { color: #D97706; font-weight: 600; }
+[data-theme="dark"] .prohibited-table { box-shadow: 0 2px 12px rgba(239,68,68,.08); }
+[data-theme="dark"] .prohibited-table th { background: rgba(239,68,68,.12); color: #FCA5A5; border-bottom-color: rgba(239,68,68,.3); }
+[data-theme="dark"] .prohibited-table td { border-bottom-color: var(--gray-200); color: var(--gray-600); }
+[data-theme="dark"] .prohibited-table tr:hover { background: rgba(239,68,68,.06); }
 </style>
   <script type="application/ld+json">
   {
@@ -500,15 +515,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
         <p>For completeness, here are the categories that are prohibited on Baidu advertising in mainland China:</p>
 
-        <table class="comparison-table">
+        <table class="prohibited-table">
           <thead>
-            <tr><th>Category</th><th>Examples</th><th>Note</th></tr>
+            <tr><th>🚫 Category</th><th>Examples</th><th>Status</th></tr>
           </thead>
           <tbody>
-            <tr><td>Gambling</td><td>Online casinos, sports betting sites</td><td>Completely prohibited</td></tr>
-            <tr><td>Lottery</td><td>Lottery sales, prediction services</td><td>Completely prohibited</td></tr>
-            <tr><td>Illegal goods/services</td><td>Counterfeit goods, illegal services</td><td>Zero tolerance</td></tr>
-            <tr><td>Restricted industries</td><td>Healthcare, finance, education (require special licenses)</td><td>Case-by-case approval</td></tr>
+            <tr><td><strong>Gambling</strong></td><td>Online casinos, sports betting sites</td><td><span class="note-blocked">⛔ Prohibited</span></td></tr>
+            <tr><td><strong>Lottery</strong></td><td>Lottery sales, prediction services</td><td><span class="note-blocked">⛔ Prohibited</span></td></tr>
+            <tr><td><strong>Illegal goods</strong></td><td>Counterfeit goods, illegal services</td><td><span class="note-blocked">⛔ Zero tolerance</span></td></tr>
+            <tr><td><strong>Restricted industries</strong></td><td>Healthcare, finance, education (require special licenses)</td><td><span class="note-restricted">⚠️ Case-by-case</span></td></tr>
           </tbody>
         </table>
 
