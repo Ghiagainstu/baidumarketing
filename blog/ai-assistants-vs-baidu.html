@@ -352,6 +352,55 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+
+/* Reason cards */
+.reason-cards { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; }
+.reason-card { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 20px 24px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); transition: transform .2s, box-shadow .2s; }
+.reason-card:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.reason-card-icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; font-size: 1.4rem; flex-shrink: 0; }
+.reason-card:nth-child(1) .reason-card-icon { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
+.reason-card:nth-child(2) .reason-card-icon { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); }
+.reason-card:nth-child(3) .reason-card-icon { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); }
+.reason-card h4 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+.reason-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+[data-theme="dark"] .reason-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .reason-card h4 { color: var(--gray-900); }
+
+/* VS comparison cards */
+.vs-compare { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; margin: 28px 0; align-items: stretch; }
+.vs-col { padding: 24px; border-radius: var(--radius); }
+.vs-col.old { background: linear-gradient(180deg, #FEF2F2, #FEE2E2); border: 1px solid #FECACA; }
+.vs-col.new { background: linear-gradient(180deg, #ECFDF5, #D1FAE5); border: 1px solid #A7F3D0; }
+.vs-col h4 { font-size: 1rem; font-weight: 700; margin-bottom: 14px; }
+.vs-col.old h4 { color: #991B1B; }
+.vs-col.new h4 { color: #065F46; }
+.vs-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.vs-col li { font-size: .88rem; line-height: 1.5; padding-left: 20px; position: relative; }
+.vs-col.old li { color: #7F1D1D; }
+.vs-col.new li { color: #065F46; }
+.vs-col.old li::before { content: '✗'; position: absolute; left: 0; color: #EF4444; font-weight: 700; }
+.vs-col.new li::before { content: '✓'; position: absolute; left: 0; color: #10B981; font-weight: 700; }
+.vs-divider { display: flex; align-items: center; justify-content: center; padding: 0 16px; }
+.vs-badge { background: var(--gradient-brand); color: #fff; font-size: .75rem; font-weight: 800; padding: 6px 10px; border-radius: 8px; text-transform: uppercase; letter-spacing: .05em; }
+[data-theme="dark"] .vs-col.old { background: rgba(239,68,68,.08); border-color: rgba(239,68,68,.3); }
+[data-theme="dark"] .vs-col.old h4, [data-theme="dark"] .vs-col.old li { color: #FCA5A5; }
+[data-theme="dark"] .vs-col.new { background: rgba(16,185,129,.08); border-color: rgba(16,185,129,.3); }
+[data-theme="dark"] .vs-col.new h4, [data-theme="dark"] .vs-col.new li { color: #6EE7B7; }
+
+/* Needle-move cards */
+.needle-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+.needle-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; transition: transform .2s, box-shadow .2s; }
+.needle-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.needle-card-icon { font-size: 1.6rem; margin-bottom: 10px; }
+.needle-card h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+.needle-card p { font-size: .85rem; color: var(--gray-600); line-height: 1.5; margin: 0; }
+.needle-card:nth-child(1) { border-top: 3px solid #2932E1; }
+.needle-card:nth-child(2) { border-top: 3px solid #7C3AED; }
+.needle-card:nth-child(3) { border-top: 3px solid #10B981; }
+[data-theme="dark"] .needle-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .needle-card h4 { color: var(--gray-900); }
+
+@media (max-width: 640px) { .vs-compare { grid-template-columns: 1fr; } .vs-divider { padding: 12px 0; } }
 </style>
 
   <script type="application/ld+json">
@@ -457,49 +506,44 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
       <p>AI won't make the same mistakes, for three reasons:</p>
 
-      <p><strong>First, the cost of being wrong is completely different.</strong> On a search engine, if you see a bad result, you grumble and scroll to the next link. But when an AI model hands you a recommendation and it turns out to be garbage, you don't scroll. You leave. You uninstall. You go to a competitor. The switching cost is basically zero. Platforms know this. They cannot afford to gamble with trust.</p>
+      <div class="reason-cards">
+        <div class="reason-card">
+          <div class="reason-card-icon">💰</div>
+          <div><h4>The Cost of Being Wrong</h4><p>On a search engine, a bad result means scrolling past. In AI, a bad recommendation means you leave, uninstall, switch. The switching cost is zero. Platforms cannot afford to gamble with trust.</p></div>
+        </div>
+        <div class="reason-card">
+          <div class="reason-card-icon">⚖️</div>
+          <div><h4>Regulators Are Watching</h4><p>China's been through the Baidu healthcare scandal. Regulators, government bodies, and platforms all remember. Sensitive categories will operate on whitelist basis — only rock-solid credentials get through.</p></div>
+        </div>
+        <div class="reason-card">
+          <div class="reason-card-icon">🔄</div>
+          <div><h4>The Ad Format Has Changed</h4><p>Search ads interrupt. AI-native ads serve. Ask "what should I do this weekend?" and get a theme park with a ticket link. When ads solve your problem, most users don't mind.</p></div>
+        </div>
+      </div>
 
-      <p><strong>Second, regulators are watching.</strong> China's been through the Baidu healthcare scandal. Regulators, government bodies, and the platforms themselves all remember. Sensitive categories like medicine and finance will almost certainly operate on a whitelist basis — only companies with rock-solid credentials get to advertise.</p>
-
-      <p><strong>Third, the ad format itself has changed.</strong> Search ads interrupt you. AI-native ads work differently. Ask the AI "what should I do this weekend?" and it suggests a theme park with a ticket link. That's not an interruption. That's a service. The line between content and advertising gets blurry, and when the ads actually solve your problem, most users don't mind.</p>
-
-      <!-- 对比表格 -->
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>📊 Aspect</th>
-            <th>🖥️ Traditional Search (Baidu)</th>
-            <th>🤖 AI Assistants</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Ad Format</strong></td>
-            <td>Interrupts with banner/text ads</td>
-            <td>Native recommendations in conversation</td>
-          </tr>
-          <tr>
-            <td><strong>Trust Cost of Bad Ads</strong></td>
-            <td>Low — users scroll past</td>
-            <td>High — users switch platforms</td>
-          </tr>
-          <tr>
-            <td><strong>Regulation</strong></td>
-            <td>Post-scandal cleanup</td>
-            <td>Proactive whitelists for sensitive categories</td>
-          </tr>
-          <tr>
-            <td><strong>Optimization Target</strong></td>
-            <td>Keyword bids, CTR</td>
-            <td>Model trust scores</td>
-          </tr>
-          <tr>
-            <td><strong>User Experience</strong></td>
-            <td>Search → Evaluate → Decide</td>
-            <td>Ask → Get Recommended → Trust</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="vs-compare">
+        <div class="vs-col old">
+          <h4>🖥️ Traditional Search (Baidu)</h4>
+          <ul>
+            <li>Interrupts with banner/text ads</li>
+            <li>Low trust cost — users scroll past</li>
+            <li>Post-scandal cleanup regulation</li>
+            <li>Optimize for keyword bids, CTR</li>
+            <li>Search → Evaluate → Decide</li>
+          </ul>
+        </div>
+        <div class="vs-divider"><span class="vs-badge">VS</span></div>
+        <div class="vs-col new">
+          <h4>🤖 AI Assistants</h4>
+          <ul>
+            <li>Native recommendations in conversation</li>
+            <li>High trust cost — users switch platforms</li>
+            <li>Proactive whitelists for sensitive categories</li>
+            <li>Optimize for model trust scores</li>
+            <li>Ask → Get Recommended → Trust</li>
+          </ul>
+        </div>
+      </div>
 
       <!-- 功能卡片 -->
       <div class="feature-grid">
@@ -598,13 +642,25 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
       <h3>📊 What Actually Moves the Needle</h3>
 
-      <p>Based on observations of how Chinese AI assistants respond to queries, here's what seems to influence recommendations:</p>
+      <p>Based on observations of how Chinese AI assistants respond to queries, here's what influences recommendations:</p>
 
-      <p><strong>Platform authority matters more than website traffic.</strong> A mention on Baidu Baike — which is essentially China's Wikipedia — carries more weight than a blog post with a million views. Baidu Baike entries go through a verification process. The AI treats them as structured, reliable data points.</p>
-
-      <p><strong>Recency signals are mixed.</strong> For some queries, recent mentions matter. For others, the model seems to draw from a fixed training snapshot. The safe bet: maintain consistent presence over time rather than chasing viral moments.</p>
-
-      <p><strong>Citations beget citations.</strong> If your brand gets mentioned by an authoritative source — a government body, a respected industry publication, an academic paper — other sources tend to follow. Early mentions from credible entities compound over time.</p>
+      <div class="needle-cards">
+        <div class="needle-card">
+          <div class="needle-card-icon">🏛️</div>
+          <h4>Platform Authority > Traffic</h4>
+          <p>A mention on Baidu Baike carries more weight than a blog post with a million views. The AI treats verified entries as structured, reliable data points.</p>
+        </div>
+        <div class="needle-card">
+          <div class="needle-card-icon">⏰</div>
+          <h4>Recency Signals Vary</h4>
+          <p>For some queries, recent mentions matter. For others, the model draws from a fixed snapshot. The safe bet: maintain consistent presence over time.</p>
+        </div>
+        <div class="needle-card">
+          <div class="needle-card-icon">🔗</div>
+          <h4>Citations Beget Citations</h4>
+          <p>One mention from a credible source — government, publication, academic — triggers others to follow. Early mentions from credible entities compound over time.</p>
+        </div>
+      </div>
 
       <div class="callout callout-insight">
         <span class="callout-icon">📊</span>
