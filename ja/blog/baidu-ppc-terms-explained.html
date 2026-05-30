@@ -503,6 +503,35 @@
 /* Serve Yes/No Badges */
 .serve-yes { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #DCFCE7; color: #166534; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
+
+/* Visual Gauge - Quality Score Scale */
+.visual-gauge { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 16px; padding: 28px; margin: 32px 0; }
+.visual-gauge h4 { font-size: 1.1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 20px; text-align: center; }
+.gauge-bar { display: flex; gap: 4px; margin-bottom: 16px; }
+.gauge-seg { flex: 1; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; color: #fff; border-radius: 6px; }
+.gauge-seg.low { background: linear-gradient(180deg, #EF4444 0%, #DC2626 100%); }
+.gauge-seg.med { background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%); }
+.gauge-seg.high { background: linear-gradient(180deg, #10B981 0%, #059669 100%); }
+.gauge-seg.top { background: linear-gradient(180deg, #2563EB 0%, #1D4ED8 100%); }
+.gauge-labels { display: flex; justify-content: space-between; font-size: .8rem; color: var(--gray-500); }
+[data-theme="dark"] .visual-gauge { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .visual-gauge h4 { color: var(--gray-800); }
+
+/* Tip Cards - How to Improve QS */
+.tip-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+.tip-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; transition: transform .2s, box-shadow .2s; }
+.tip-card:hover { transform: translateY(-2px); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.tip-icon { font-size: 1.8rem; margin-bottom: 12px; }
+.tip-card h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
+.tip-card p { font-size: .85rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+@media (max-width: 640px) { .tip-cards { grid-template-columns: 1fr; } }
+[data-theme="dark"] .tip-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .tip-card h4 { color: var(--gray-800); }
+
+/* SVG Chart Wrapper */
+.svg-chart-wrapper { display: flex; justify-content: center; margin: 32px 0; padding: 24px; background: #F9FAFB; border-radius: 16px; border: 1px solid #E5E7EB; overflow-x: auto; }
+.svg-chart-wrapper svg { max-width: 100%; height: auto; }
+[data-theme="dark"] .svg-chart-wrapper { background: #1F2937; border-color: #374151; }
 /* ===== End Enhanced Visual Styles ===== */
 
 </style>
