@@ -359,27 +359,6 @@
 [data-theme="dark"] .comparison-table tr:nth-child(even) { background: #111827; }
 [data-theme="dark"] .comparison-table tr:hover { background: rgba(99,102,241,.08); }
 
-/* Takeaway Box Enhancement */
-.takeaway-box {
-  background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%);
-  border: 1.5px solid #C7D2FE; border-radius: 16px;
-  padding: 28px 32px; margin: 32px 0;
-  position: relative; overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.takeaway-box::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
-  background: linear-gradient(180deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px;
-}
-.takeaway-box:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(41,50,225,.12); }
-.takeaway-box h3, .takeaway-box h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: #2932E1; display: flex; align-items: center; gap: 8px; }
-.takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; padding-left: 0; margin: 12px 0 0 0; }
-.takeaway-box ul li { font-size: .95rem; line-height: 1.6; padding-left: 24px; position: relative; color: #374151; }
-.takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
-.takeaway-box ul li strong { color: #111827; font-weight: 700; }
-[data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-[data-theme="dark"] .takeaway-box h3, [data-theme="dark"] .takeaway-box h4 { color: #818CF8; }
-[data-theme="dark"] .takeaway-box ul li { color: #D1D5DB; }
 
 /* Callout Enhancement */
 .callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid; transition: transform .2s, box-shadow .2s; }
@@ -498,6 +477,38 @@
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 /* ===== End Enhanced Visual Styles ===== */
 
+/* Video level cards */
+.level-cards { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+.level-card { display: grid; grid-template-columns: 100px 1fr auto; gap: 0; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; transition: transform .2s, box-shadow .2s; }
+.level-card:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.level-card-badge { display: flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: .04em; }
+.level-card:nth-child(1) .level-card-badge { background: linear-gradient(135deg, #2932E1, #4F46E5); }
+.level-card:nth-child(2) .level-card-badge { background: linear-gradient(135deg, #7C3AED, #8B5CF6); }
+.level-card:nth-child(3) .level-card-badge { background: linear-gradient(135deg, #2563EB, #3B82F6); }
+.level-card-info { padding: 16px 20px; }
+.level-card-info h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+.level-card-info p { font-size: .85rem; color: var(--gray-600); margin: 0; line-height: 1.5; }
+.level-card-best { padding: 16px 20px; border-left: 1px solid var(--gray-100); display: flex; align-items: center; font-size: .82rem; color: var(--gray-500); max-width: 200px; }
+.level-card-best strong { color: var(--gray-700); display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; }
+[data-theme="dark"] .level-card { border-color: var(--gray-200); }
+[data-theme="dark"] .level-card-info h4 { color: var(--gray-900); }
+[data-theme="dark"] .level-card-best { border-left-color: var(--gray-200); color: var(--gray-500); }
+
+/* Spec grid */
+.spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 24px 0; }
+.spec-item { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px; text-align: center; transition: transform .2s, box-shadow .2s; }
+.spec-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+.spec-item-label { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-400); margin-bottom: 6px; }
+.spec-item-value { font-size: 1rem; font-weight: 700; color: var(--gray-800); line-height: 1.3; }
+.spec-item:nth-child(1) { border-top: 3px solid #2932E1; }
+.spec-item:nth-child(2) { border-top: 3px solid #4F46E5; }
+.spec-item:nth-child(3) { border-top: 3px solid #7C3AED; }
+.spec-item:nth-child(4) { border-top: 3px solid #3B82F6; }
+.spec-item:nth-child(5) { border-top: 3px solid #2563EB; }
+.spec-item:nth-child(6) { border-top: 3px solid #10B981; }
+[data-theme="dark"] .spec-item { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .spec-item-value { color: var(--gray-900); }
+
 </style>
   <script type="application/ld+json">
   {
@@ -581,72 +592,37 @@
         <h2>動画広告を設定する3つの方法</h2>
         <p>Baiduは3つのレベルの制御を提供します。必要な粒度に応じて、アカウント、キャンペーン、または広告グループレベルで動画を適用できます。</p>
 
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>レベル</th>
-              <th>仕組み</th>
-              <th>最適な用途</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>アカウント</strong></td>
-              <td>すべてのキャンペーンのすべての広告に動画が表示</td>
-              <td>1つのコア動画アセットを持つブランド</td>
-            </tr>
-            <tr>
-              <td><strong>キャンペーン</strong></td>
-              <td>キャンペーンごとに異なる動画</td>
-              <td>異なる製品やセグメントをターゲットするキャンペーン</td>
-            </tr>
-            <tr>
-              <td><strong>広告グループ</strong></td>
-              <td>広告グループごとに異なる動画</td>
-              <td>複数の動画クリエイティブのA/Bテスト</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="level-cards">
+          <div class="level-card">
+            <div class="level-card-badge">Account</div>
+            <div class="level-card-info"><h4>アカウントレベル</h4><p>すべてのキャンペーンのすべての広告に動画が表示</p></div>
+            <div class="level-card-best"><div><strong>最適な用途</strong>1つのコア動画アセットを持つブランド</div></div>
+          </div>
+          <div class="level-card">
+            <div class="level-card-badge">Campaign</div>
+            <div class="level-card-info"><h4>キャンペーンレベル</h4><p>キャンペーンごとに異なる動画</p></div>
+            <div class="level-card-best"><div><strong>最適な用途</strong>異なる製品やセグメントをターゲット</div></div>
+          </div>
+          <div class="level-card">
+            <div class="level-card-badge">Ad Group</div>
+            <div class="level-card-info"><h4>広告グループレベル</h4><p>広告グループごとに異なる動画</p></div>
+            <div class="level-card-best"><div><strong>最適な用途</strong>複数の動画クリエイティブのA/Bテスト</div></div>
+          </div>
+        </div>
 
         <p>この設定は、Baidu検索広告アカウント内のクリエイティブセクションにあります。この機能はすべての広告主が利用可能で、特別な許可は不要です。</p>
 
         <h2>動画仕様：知っておくべきこと</h2>
         <p>動画の制作を始める前に、技術的な要件を確認してください：</p>
 
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>仕様</th>
-              <th>要件</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>フォーマット</td>
-              <td>MP4, FLV, MOV, M3U8, 3GP, AVI, MPG, ASF, WMV, MKV, TS, WEBM, MXF</td>
-            </tr>
-            <tr>
-              <td>ファイルサイズ</td>
-              <td>最大500MB</td>
-            </tr>
-            <tr>
-              <td>再生時間</td>
-              <td>最低6秒（上限の規定なし）</td>
-            </tr>
-            <tr>
-              <td>デスクトップ</td>
-              <td>16:9、最低1280x720</td>
-            </tr>
-            <tr>
-              <td>モバイル</td>
-              <td>9:16、最低720x1280</td>
-            </tr>
-            <tr>
-              <td>スクエア</td>
-              <td>1:1、最低800x800</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="spec-grid">
+          <div class="spec-item"><div class="spec-item-label">フォーマット</div><div class="spec-item-value">MP4, FLV, MOV, AVI, WEBM +8種</div></div>
+          <div class="spec-item"><div class="spec-item-label">ファイルサイズ</div><div class="spec-item-value">最大500MB</div></div>
+          <div class="spec-item"><div class="spec-item-label">再生時間</div><div class="spec-item-value">最低6秒（上限なし）</div></div>
+          <div class="spec-item"><div class="spec-item-label">🖥️ デスクトップ</div><div class="spec-item-value">16:9 · 1280×720</div></div>
+          <div class="spec-item"><div class="spec-item-label">📱 モバイル</div><div class="spec-item-value">9:16 · 720×1280</div></div>
+          <div class="spec-item"><div class="spec-item-label">⬜ スクエア</div><div class="spec-item-value">1:1 · 800×800</div></div>
+        </div>
 
         <div class="callout callout-insight">
           <span class="callout-icon">💡</span>

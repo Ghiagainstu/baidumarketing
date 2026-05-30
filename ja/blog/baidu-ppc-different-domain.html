@@ -359,27 +359,6 @@
 [data-theme="dark"] .comparison-table tr:nth-child(even) { background: #111827; }
 [data-theme="dark"] .comparison-table tr:hover { background: rgba(99,102,241,.08); }
 
-/* Takeaway Box Enhancement */
-.takeaway-box {
-  background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%);
-  border: 1.5px solid #C7D2FE; border-radius: 16px;
-  padding: 28px 32px; margin: 32px 0;
-  position: relative; overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.takeaway-box::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
-  background: linear-gradient(180deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px;
-}
-.takeaway-box:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(41,50,225,.12); }
-.takeaway-box h3, .takeaway-box h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: #2932E1; display: flex; align-items: center; gap: 8px; }
-.takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; padding-left: 0; margin: 12px 0 0 0; }
-.takeaway-box ul li { font-size: .95rem; line-height: 1.6; padding-left: 24px; position: relative; color: #374151; }
-.takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
-.takeaway-box ul li strong { color: #111827; font-weight: 700; }
-[data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-[data-theme="dark"] .takeaway-box h3, [data-theme="dark"] .takeaway-box h4 { color: #818CF8; }
-[data-theme="dark"] .takeaway-box ul li { color: #D1D5DB; }
 
 /* Callout Enhancement */
 .callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid; transition: transform .2s, box-shadow .2s; }
@@ -498,6 +477,25 @@
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 /* ===== End Enhanced Visual Styles ===== */
 
+/* Option comparison cards */
+.option-compare { display: flex; flex-direction: column; gap: 16px; margin: 28px 0; }
+.option-row { display: grid; grid-template-columns: 160px 1fr; gap: 0; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; transition: transform .2s, box-shadow .2s; }
+.option-row:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.option-row-label { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 20px; color: #fff; font-weight: 700; }
+.option-row-label .icon { font-size: 1.8rem; }
+.option-row-label .name { font-size: .9rem; text-align: center; }
+.option-row:nth-child(1) .option-row-label { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+.option-row:nth-child(2) .option-row-label { background: linear-gradient(135deg, #8B5CF6, #7C3AED); }
+.option-row:nth-child(3) .option-row-label { background: linear-gradient(135deg, #10B981, #059669); }
+.option-row-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.option-meta-cell { padding: 16px 20px; border-left: 1px solid var(--gray-100); }
+.option-meta-cell:first-child { border-left: none; }
+.option-meta-label { font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-400); margin-bottom: 4px; }
+.option-meta-value { font-size: .88rem; color: var(--gray-700); line-height: 1.4; }
+[data-theme="dark"] .option-row { border-color: var(--gray-200); }
+[data-theme="dark"] .option-meta-cell { border-left-color: var(--gray-200); }
+[data-theme="dark"] .option-meta-value { color: var(--gray-600); }
+
 </style>
   <script type="application/ld+json">
   {
@@ -607,36 +605,32 @@
         <p>2つの異なるドメインの広告を同時に実行する必要があり、両方があなたの法人に属している場合、2つ目の百度アカウントを登録できます。百度は一部の業界で同じ法人からの複数アカウントを許可しています。</p>
         <p>進める前に、百度カスタマーサービスまたは代理店に、あなたの業界が対象かどうか確認してください。対象の場合、書類提出、ドメイン検証、審査を含む完全なアカウント作成プロセスを再度経る必要があります。通常1〜2週間かかります。</p>
 
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>方法</th>
-              <th>最適なケース</th>
-              <th>所要時間</th>
-              <th>制限</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>トラッキングURL</strong></td>
-              <td>サードパーティトラッキングツール</td>
-              <td>数日</td>
-              <td>登録ドメインへのリダイレクト必須</td>
-            </tr>
-            <tr>
-              <td><strong>ドメイン変更</strong></td>
-              <td>リブランディングやサイト移行</td>
-              <td>変動（リクエストベース）</td>
-              <td>新ドメインは同じ法人である必要</td>
-            </tr>
-            <tr>
-              <td><strong>新規アカウント</strong></td>
-              <td>複数ドメインを同時運用</td>
-              <td>1〜2週間</td>
-              <td>業界が複数アカウントを許可する必要</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="option-compare">
+          <div class="option-row">
+            <div class="option-row-label"><span class="icon">🔗</span><span class="name">トラッキングURL</span></div>
+            <div class="option-row-meta">
+              <div class="option-meta-cell"><div class="option-meta-label">最適なケース</div><div class="option-meta-value">サードパーティトラッキングツール</div></div>
+              <div class="option-meta-cell"><div class="option-meta-label">所要時間</div><div class="option-meta-value">数日</div></div>
+              <div class="option-meta-cell"><div class="option-meta-label">制限</div><div class="option-meta-value">登録ドメインへのリダイレクト必須</div></div>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-row-label"><span class="icon">🔄</span><span class="name">ドメイン変更</span></div>
+            <div class="option-row-meta">
+              <div class="option-meta-cell"><div class="option-meta-label">最適なケース</div><div class="option-meta-value">リブランディングやサイト移行</div></div>
+              <div class="option-meta-cell"><div class="option-meta-label">所要時間</div><div class="option-meta-value">変動（リクエストベース）</div></div>
+              <div class="option-meta-cell"><div class="option-meta-label">制限</div><div class="option-meta-value">新ドメインは同じ法人である必要</div></div>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-row-label"><span class="icon">➕</span><span class="name">新規アカウント</span></div>
+            <div class="option-row-meta">
+              <div class="option-meta-cell"><div class="option-meta-label">最適なケース</div><div class="option-meta-value">複数ドメインを同時運用</div></div>
+              <div class="option-meta-cell"><div class="option-meta-label">所要時間</div><div class="option-meta-value">1〜2週間</div></div>
+              <div class="option-meta-cell"><div class="option-meta-label">制限</div><div class="option-meta-value">業界が複数アカウントを許可する必要</div></div>
+            </div>
+          </div>
+        </div>
 
         <div class="callout callout-warning">
           <span class="callout-icon">⚠️</span>

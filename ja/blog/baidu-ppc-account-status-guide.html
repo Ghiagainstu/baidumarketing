@@ -359,27 +359,6 @@
 [data-theme="dark"] .comparison-table tr:nth-child(even) { background: #111827; }
 [data-theme="dark"] .comparison-table tr:hover { background: rgba(99,102,241,.08); }
 
-/* Takeaway Box Enhancement */
-.takeaway-box {
-  background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%);
-  border: 1.5px solid #C7D2FE; border-radius: 16px;
-  padding: 28px 32px; margin: 32px 0;
-  position: relative; overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.takeaway-box::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
-  background: linear-gradient(180deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px;
-}
-.takeaway-box:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(41,50,225,.12); }
-.takeaway-box h3, .takeaway-box h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: #2932E1; display: flex; align-items: center; gap: 8px; }
-.takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; padding-left: 0; margin: 12px 0 0 0; }
-.takeaway-box ul li { font-size: .95rem; line-height: 1.6; padding-left: 24px; position: relative; color: #374151; }
-.takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
-.takeaway-box ul li strong { color: #111827; font-weight: 700; }
-[data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-[data-theme="dark"] .takeaway-box h3, [data-theme="dark"] .takeaway-box h4 { color: #818CF8; }
-[data-theme="dark"] .takeaway-box ul li { color: #D1D5DB; }
 
 /* Callout Enhancement */
 .callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid; transition: transform .2s, box-shadow .2s; }
@@ -498,6 +477,32 @@
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 /* ===== End Enhanced Visual Styles ===== */
 
+/* Cause list (Why this happens) */
+.cause-list { display: flex; flex-direction: column; gap: 10px; margin: 16px 0 24px; padding: 20px 24px; background: linear-gradient(180deg, #fff, #FEF3C7); border: 1px solid #FDE68A; border-radius: var(--radius); }
+.cause-list-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #92400E; margin-bottom: 4px; }
+.cause-item { display: flex; align-items: flex-start; gap: 10px; font-size: .88rem; color: var(--gray-700); line-height: 1.5; }
+.cause-item::before { content: '→'; color: #D97706; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+[data-theme="dark"] .cause-list { background: rgba(245,158,11,.06); border-color: rgba(245,158,11,.2); }
+[data-theme="dark"] .cause-list-label { color: #FCD34D; }
+[data-theme="dark"] .cause-item { color: var(--gray-600); }
+
+/* Action list (What to do) */
+.action-list { display: flex; flex-direction: column; gap: 10px; margin: 16px 0 24px; padding: 20px 24px; background: linear-gradient(180deg, #fff, #ECFDF5); border: 1px solid #A7F3D0; border-radius: var(--radius); }
+.action-list-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #065F46; margin-bottom: 4px; }
+.action-item { display: flex; align-items: flex-start; gap: 10px; font-size: .88rem; color: var(--gray-700); line-height: 1.5; }
+.action-item::before { content: '✓'; color: #059669; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+.action-item strong { color: var(--gray-800); }
+[data-theme="dark"] .action-list { background: rgba(16,185,129,.06); border-color: rgba(16,185,129,.2); }
+[data-theme="dark"] .action-list-label { color: #6EE7B7; }
+[data-theme="dark"] .action-item { color: var(--gray-600); }
+
+/* Level check */
+.level-check { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.level-check-item { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 8px; font-size: .88rem; color: var(--gray-700); }
+.level-check-item strong { color: var(--gray-800); min-width: 100px; }
+.level-check-item::before { content: '✓'; width: 20px; height: 20px; border-radius: 50%; background: #D1FAE5; color: #059669; font-size: .7rem; font-weight: 800; display: grid; place-items: center; flex-shrink: 0; }
+[data-theme="dark"] .level-check-item { background: var(--gray-100); border-color: var(--gray-200); }
+
 </style>
   <script type="application/ld+json">
   {
@@ -615,16 +620,19 @@
         </div>
 
         <h3>なぜこの状態になるか</h3>
-        <ul>
-          <li>まだ初期入金（初回チャージ＋サービス料）を行っていない。</li>
-          <li>入金は行ったが、Baiduがまだ資金の受領を確認していない。銀行振込、特に国際送金は、到着してアカウントに照合されるまで1-3営業日かかる場合がある。</li>
-          <li>本人確認書類は提出されたが、支払いがまだ受領されていないため、審査を進めることができない。</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">一般的な原因</div>
+          <div class="cause-item">まだ初期入金（初回チャージ＋サービス料）を行っていない。</div>
+          <div class="cause-item">入金は行ったが、Baiduがまだ資金の受領を確認していない。銀行振込、特に国際送金は、到着してアカウントに照合されるまで1-3営業日かかる場合がある。</div>
+          <div class="cause-item">本人確認書類は提出されたが、支払いがまだ受領されていないため、審査を進めることができない。</div>
+        </div>
 
         <h3>どうすべきか</h3>
-        <p><strong>まだ支払っていない場合</>：できるだけ早く支払いを完了してください。Baiduは支払いが受領されるまで本人確認を開始しません。初回チャージ額と1回限りのサービス料の両方を支払う必要があります。</p>
-
-        <p><strong>すでに支払った場合</>：忍耐強く待ってください。支払い確認は通常1-3営業日かかります。振込に正しい参照番号を含めたことを確認し、Baiduが支払いをアカウントに照合できるようにしてください。</p>
+        <div class="action-list">
+          <div class="action-list-label">次のステップ</div>
+          <div class="action-item"><strong>まだ支払っていない場合：</strong>できるだけ早く支払いを完了してください。Baiduは支払いが受領されるまで本人確認を開始しません。初回チャージ額と1回限りのサービス料の両方を支払う必要があります。</div>
+          <div class="action-item"><strong>すでに支払った場合：</strong>忍耐強く待ってください。支払い確認は通常1-3営業日かかります。振込に正しい参照番号を含めたことを確認し、Baiduが支払いをアカウントに照合できるようにしてください。</div>
+        </div>
 
         <div class="callout callout-tip">
           <span class="callout-icon">💡</span>
@@ -645,14 +653,18 @@
         </div>
 
         <h3>なぜこの状態になるか</h3>
-        <ul>
-          <li>キャンペーンが残りの予算を使い果たし、アカウント残高がゼロに達した。</li>
-          <li>チャージを一時停止し、残高が尽きることに気づかなかった。</li>
-          <li>自動チャージが失敗した（カードの期限切れ、リンクされたアカウントの残高不足）。</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">一般的な原因</div>
+          <div class="cause-item">キャンペーンが残りの予算を使い果たし、アカウント残高がゼロに達した。</div>
+          <div class="cause-item">チャージを一時停止し、残高が尽きることに気づかなかった。</div>
+          <div class="cause-item">自動チャージが失敗した（カードの期限切れ、リンクされたアカウントの残高不足）。</div>
+        </div>
 
         <h3>どうすべきか</h3>
-        <p>できるだけ早くアカウントにチャージしてください。Baiduは、キャンペーンが日中に停止しないよう、バッファ残高を維持することを推することを推奨しています。継続的なキャンペーンの場合、月間予算の少なくとも20-30%をアカウントのバッファとして維持することをお勧めします。</p>
+        <div class="action-list">
+          <div class="action-list-label">次のステップ</div>
+          <div class="action-item"><strong>チャージ：</strong>できるだけ早くアカウントにチャージしてください。Baiduは、キャンペーンが日中に停止しないよう、バッファ残高を維持することを推することを推奨しています。継続的なキャンペーンの場合、月間予算の少なくとも20-30%をアカウントのバッファとして維持することをお勧めします。</div>
+        </div>
 
         <div class="callout callout-warning">
           <span class="callout-icon">⚠️</span>
@@ -673,11 +685,12 @@
         </div>
 
         <h3>なぜこの状態になるか</h3>
-        <ul>
-          <li>初回の支払いを完了し、Baiduが本人確認プロセスを開始した。</li>
-          <li>コンプライアンス審査をトリガーする新しい広告コピーまたはランディングページを提出した。</li>
-          <li>ビジネス情報を変更したか、アカウントに新しいドメインを追加した。</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">一般的な原因</div>
+          <div class="cause-item">初回の支払いを完了し、Baiduが本人確認プロセスを開始した。</div>
+          <div class="cause-item">コンプライアンス審査をトリガーする新しい広告コピーまたはランディングページを提出した。</div>
+          <div class="cause-item">ビジネス情報を変更したか、アカウントに新しいドメインを追加した。</div>
+        </div>
 
         <h3>どうすべきか</h3>
         <p>審査結果を待ってください。Baiduはアカウントダッシュボードを通じて、多くの場合メールでも通知します。審査結果は、アカウントが承認されたか、修正すべき特定の問題があるかを示します。</p>
@@ -703,20 +716,21 @@
         </div>
 
         <h3>なぜこの状態になるか</h3>
-        <ul>
-          <li>初期審査に合格し、アカウントがライブになった。</li>
-          <li>以前の「却下」ステータスを修正し、アカウントが再有効化された。</li>
-          <li>「残高ゼロ」ステータスの後にチャージし、アカウントが再有効化された。</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">この状態になった経緯</div>
+          <div class="cause-item">初期審査に合格し、アカウントがライブになった。</div>
+          <div class="cause-item">以前の「却下」ステータスを修正し、アカウントが再有効化された。</div>
+          <div class="cause-item">「残高ゼロ」ステータスの後にチャージし、アカウントが再有効化された。</div>
+        </div>
 
         <h3>どうすべきか</h3>
         <p>アカウントのすべてのレベルでステータスを確認してください。アカウントレベルでの「有効」は必要条件ですが、広告が配信されるための十分条件ではありません。以下も必要です：</p>
-        <ul>
-          <li><strong>キャンペーンレベル：</strong>キャンペーンが有効で、一時停止されていないこと。</li>
-          <li><strong>広告グループレベル：</strong>広告グループが有効であること。</li>
-          <li><strong>キーワードレベル：</strong>キーワードが十分な品質スコアと入札価格を持ち、広告をトリガーできること。</li>
-          <li><strong>クリエイティブレベル：</strong>広告コピーが承認され、審査中でないこと。</li>
-        </ul>
+        <div class="level-check">
+          <div class="level-check-item"><strong>キャンペーン：</strong>有効で、一時停止されていないこと</div>
+          <div class="level-check-item"><strong>広告グループ：</strong>有効であること</div>
+          <div class="level-check-item"><strong>キーワード：</strong>十分な品質スコアと入札価格を持つこと</div>
+          <div class="level-check-item"><strong>クリエイティブ：</strong>広告コピーが承認済みで審査中でないこと</div>
+        </div>
 
         <blockquote class="blockquote-highlight">
           アカウントレベルでの「有効」は、Baiduがビジネスの本人確認を信頼していることを意味します。現在広告が配信されていることを意味するわけではありません。キャンペーン、広告グループ、キーワード、クリエイティブのステータスを常に個別に確認してください。
@@ -734,21 +748,23 @@
         </div>
 
         <h3>なぜこの状態になるか</h3>
-        <ul>
-          <li>営業許可証が期限切れか、提出した情報と一致しない。</li>
-          <li>ウェブサイトのランディングページにBaidu広告ポリシーに違反するコンテンツが含まれている（禁止製品、誤解を招く主張、未検証の健康主張）。</li>
-          <li>規制業界にあり、必要な事前承認または特別ライセンスを取得していない。</li>
-          <li>本人確認書類（IDカード、パスポート）が不明瞭、期限切れ、またはビジネス登録と一致しない。</li>
-        </ul>
+        <div class="cause-list">
+          <div class="cause-list-label">一般的な却下原因</div>
+          <div class="cause-item">営業許可証が期限切れか、提出した情報と一致しない。</div>
+          <div class="cause-item">ウェブサイトのランディングページにBaidu広告ポリシーに違反するコンテンツが含まれている（禁止製品、誤解を招く主張、未検証の健康主張）。</div>
+          <div class="cause-item">規制業界にあり、必要な事前承認または特別ライセンスを取得していない。</div>
+          <div class="cause-item">本人確認書類（IDカード、パスポート）が不明瞭、期限切れ、またはビジネス登録と一致しない。</div>
+        </div>
 
         <h3>どうすべきか</h3>
         <p>却下理由を注意深く読んでください。Baiduはアカウントダッシュボードで、申請のどの部分がコンプライアンスに失敗したかを具体的なフィードバックとして提供します。一般的な却下理由には以下が含まれます：</p>
-        <ul>
-          <li>営業許可証のコピーが不明瞭または期限切れ</li>
-          <li>ランディングページURLにアクセスできない、または禁止コンテンツが含まれている</li>
-          <li>広告コピーが証拠なしに最高級の主張（「最高」「ナンバーワン」）を使用している</li>
-          <li>ウェブサイトにICP（インターネットコンテンツプロバイダー）備案番号が表示されていない</li>
-        </ul>
+        <div class="action-list">
+          <div class="action-list-label">修正チェックリスト</div>
+          <div class="action-item">営業許可証のコピーが不明瞭または期限切れ — クリアで有効なコピーを再提出</div>
+          <div class="action-item">ランディングページURLにアクセスできない、または禁止コンテンツが含まれている — 修正して再提出</div>
+          <div class="action-item">広告コピーが証拠なしに最高級の主張（「最高」「ナンバーワン」）を使用している — 削除または証拠を追加</div>
+          <div class="action-item">ウェブサイトにICP（インターネットコンテンツプロバイダー）備案番号が表示されていない — フッターに追加</div>
+        </div>
 
         <p>問題を修正した後、アカウント情報を再提出してください。Baiduはアカウントを再認証します。2回目の審査に合格すると、アカウントステータスは「有効」に変わります。</p>
 

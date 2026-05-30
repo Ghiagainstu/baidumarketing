@@ -359,27 +359,6 @@
 [data-theme="dark"] .comparison-table tr:nth-child(even) { background: #111827; }
 [data-theme="dark"] .comparison-table tr:hover { background: rgba(99,102,241,.08); }
 
-/* Takeaway Box Enhancement */
-.takeaway-box {
-  background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%);
-  border: 1.5px solid #C7D2FE; border-radius: 16px;
-  padding: 28px 32px; margin: 32px 0;
-  position: relative; overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.takeaway-box::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
-  background: linear-gradient(180deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px;
-}
-.takeaway-box:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(41,50,225,.12); }
-.takeaway-box h3, .takeaway-box h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: #2932E1; display: flex; align-items: center; gap: 8px; }
-.takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; padding-left: 0; margin: 12px 0 0 0; }
-.takeaway-box ul li { font-size: .95rem; line-height: 1.6; padding-left: 24px; position: relative; color: #374151; }
-.takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
-.takeaway-box ul li strong { color: #111827; font-weight: 700; }
-[data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-[data-theme="dark"] .takeaway-box h3, [data-theme="dark"] .takeaway-box h4 { color: #818CF8; }
-[data-theme="dark"] .takeaway-box ul li { color: #D1D5DB; }
 
 /* Callout Enhancement */
 .callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid; transition: transform .2s, box-shadow .2s; }
@@ -498,6 +477,20 @@
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 /* ===== End Enhanced Visual Styles ===== */
 
+/* V-level visual cards */
+.v-level-cards { display: flex; flex-direction: column; gap: 16px; margin: 28px 0; }
+.v-level-card { display: grid; grid-template-columns: 80px 1fr; gap: 20px; align-items: center; padding: 20px 24px; border-radius: var(--radius); border: 1px solid var(--gray-200); background: var(--gray-50); transition: transform .2s, box-shadow .2s; }
+.v-level-card:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.v-level-badge { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; font-size: 1.4rem; font-weight: 900; color: #fff; }
+.v-level-badge.v1 { background: linear-gradient(135deg, #93C5FD, #60A5FA); }
+.v-level-badge.v2 { background: linear-gradient(135deg, #818CF8, #6366F1); }
+.v-level-badge.v3 { background: linear-gradient(135deg, #2932E1, #4F46E5); box-shadow: 0 4px 16px rgba(41,50,225,.3); }
+.v-level-info h4 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+.v-level-info p { font-size: .88rem; color: var(--gray-600); margin: 0; line-height: 1.5; }
+.v-level-card:last-child { border-left: 4px solid #F59E0B; }
+[data-theme="dark"] .v-level-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .v-level-info h4 { color: var(--gray-900); }
+
 </style>
 <script type="application/ld+json">
   {
@@ -573,14 +566,29 @@
   </div>
 
   <h2>3つのVレベル</h2>
-  <table class="comparison-table">
-    <thead><tr><th>レベル</th><th>認証期間</th><th>意味</th></tr></thead>
-    <tbody>
-      <tr><td><strong>V1</strong></td><td>1年未満</td><td>百度による新規認証</td></tr>
-      <tr><td><strong>V2</strong></td><td>1〜2年</td><td>確立された実績</td></tr>
-      <tr><td><strong>V3</strong></td><td>3年以上</td><td>最高信頼レベル</td></tr>
-    </tbody>
-  </table>
+  <div class="v-level-cards">
+    <div class="v-level-card">
+      <div class="v-level-badge v1">V1</div>
+      <div class="v-level-info">
+        <h4>認証1年未満</h4>
+        <p>百度による新規認証。エントリーレベルで、正当な事業登録を持つことを示します。全員ここからスタートです。</p>
+      </div>
+    </div>
+    <div class="v-level-card">
+      <div class="v-level-badge v2">V2</div>
+      <div class="v-level-info">
+        <h4>認証1〜2年</h4>
+        <p>確立された実績。少なくとも1回の更新サイクルを経た企業としてユーザーに認識されます。</p>
+      </div>
+    </div>
+    <div class="v-level-card">
+      <div class="v-level-badge v3">V3</div>
+      <div class="v-level-info">
+        <h4>認証3年以上 — 最高クラス</h4>
+        <p>最高の信頼レベル。3年連続で百度の審査を通過した企業であることを示す、信頼性のゴールドスタンダードです。</p>
+      </div>
+    </div>
+  </div>
 
   <h2>年間更新について</h2>
   <p>有効期限のある事業登録の場合、期限の<strong>30日前までに</strong>更新書類を提出する必要があります。期限を過ぎるとアカウントは停止されます。認証料は年間<strong>CNY 600</strong>（約85米ドル）です。</p>
