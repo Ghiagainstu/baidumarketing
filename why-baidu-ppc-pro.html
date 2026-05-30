@@ -72,6 +72,8 @@
     [data-theme="dark"] nav { background: rgba(11,15,26,.85) !important; backdrop-filter: blur(12px); border-bottom-color: var(--gray-200); }
     [data-theme="dark"] .nav-logo { color: #818CF8; }
     [data-theme="dark"] .nav-logo:hover { color: #F9FAFB; }
+    .logo-pro { color: #2932E1; }
+    [data-theme="dark"] .logo-pro { color: #818CF8; }
     [data-theme="dark"] .nav-links { color: var(--gray-600); }
     [data-theme="dark"] .nav-links a:hover { color: var(--blue); }
     [data-theme="dark"] .hamburger-icon rect { fill: #D1D5DB; }
@@ -199,6 +201,8 @@
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); white-space: nowrap; flex-shrink: 0; }
     .nav-logo:hover { color: var(--blue); }
+    .logo-pro { color: #2932E1; }
+    [data-theme="dark"] .logo-pro { color: #818CF8; }
     .nav-logo svg { flex-shrink: 0; }
     .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
     .nav-links a { position: relative; transition: color var(--transition-base); }
@@ -372,7 +376,7 @@
         <path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/>
         <text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text>
       </svg>
-      Baidu PPC Pro
+      Baidu PPC <span class="logo-pro">Pro</span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="/why-baidu-ppc-pro">Why Baidu PPC Pro</a>
