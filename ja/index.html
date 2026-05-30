@@ -2,13 +2,37 @@
 <html lang="ja">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCGE7NJT7H"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCGE7NJT7H">  // FAQ Toggle
+  function toggleFaq(btn) {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item.open").forEach(el => {
+      if (el !== item) el.classList.remove("open");
+    });
+    item.classList.toggle("open", !isOpen);
+  }
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() { toggleFaq(this); });
+  });
+</script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-TCGE7NJT7H');
-  </script>
+    // FAQ Toggle
+  function toggleFaq(btn) {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item.open").forEach(el => {
+      if (el !== item) el.classList.remove("open");
+    });
+    item.classList.toggle("open", !isOpen);
+  }
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() { toggleFaq(this); });
+  });
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
@@ -1261,7 +1285,19 @@
     }
   ]
 }
-  </script>
+    // FAQ Toggle
+  function toggleFaq(btn) {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item.open").forEach(el => {
+      if (el !== item) el.classList.remove("open");
+    });
+    item.classList.toggle("open", !isOpen);
+  }
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() { toggleFaq(this); });
+  });
+</script>
 </head>
 <body>
 
@@ -1919,7 +1955,19 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js" defer>  // FAQ Toggle
+  function toggleFaq(btn) {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item.open").forEach(el => {
+      if (el !== item) el.classList.remove("open");
+    });
+    item.classList.toggle("open", !isOpen);
+  }
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() { toggleFaq(this); });
+  });
+</script>
 <script>function toggleLangMenu() {
     const menu = document.getElementById('langSwitchMenu');
     if (menu) menu.classList.toggle('open');
@@ -1983,7 +2031,19 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 document.querySelectorAll('.obf-email').forEach(function(el){el.textContent=el.dataset.u+'@'+el.dataset.d});
 document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
 document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
-window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600); });</script>
+window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600); });  // FAQ Toggle
+  function toggleFaq(btn) {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item.open").forEach(el => {
+      if (el !== item) el.classList.remove("open");
+    });
+    item.classList.toggle("open", !isOpen);
+  }
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() { toggleFaq(this); });
+  });
+</script>
 <script>
   // ====== Counter Animation (easeOutExpo) ======
   function easeOutExpo(x) {
@@ -2039,6 +2099,18 @@ window.addEventListener('scroll', () => { document.getElementById('backToTop').c
 
     statEls.forEach(el => statObserver.observe(el));
   }
+  // FAQ Toggle
+  function toggleFaq(btn) {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item.open").forEach(el => {
+      if (el !== item) el.classList.remove("open");
+    });
+    item.classList.toggle("open", !isOpen);
+  }
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() { toggleFaq(this); });
+  });
 </script>
 </body>
 </html>
