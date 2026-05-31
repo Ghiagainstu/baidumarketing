@@ -477,7 +477,7 @@
 
         <p>基本的なコンセプトはGoogle AdsのValueTrackパラメータに似ていますが、具体的なパラメータや動作は大きく異なります。Baiduのワイルドカードは、アカウントIDから個別のキーワードバリアントまで、アカウント階層のすべてのレベルでトラッキングをサポートします。</p>
 
-        <div class="callout insight">
+        <div class="callout callout-insight">
           <div class="callout-title">💡 重要な洞察</div>
           <p>URLワイルドカードは、キーワードのランディングページURL、クリエイティブ（広告）のランディングページURL、モバイルURL、および追加クリエイティブのパスサブチェーンで機能します。表示URLでは動作しない点に注意してください。</p>
         </div>
@@ -577,7 +577,7 @@
           </table>
         </div>
 
-        <div class="callout warning">
+        <div class="callout callout-warning">
           <div class="callout-title">⚠️ エンコードに関する重要事項</div>
           <p>Baiduのデフォルトの中国語文字エンコーディングはGBKであり、UTF-8ではありません。ランディングページがUTF-8を使用している場合（ほとんどのモダンなWebサイトはUTF-8です）、<code>{kw_enc}</code>ではなく<code>{kw_enc_utf8}</code>を使用してください。間違ったエンコーディングを使用すると文字化けが発生し、分析データが破損します。</p>
         </div>
@@ -653,7 +653,7 @@
 
         <p>このアプローチにより、分析ダッシュボードでの標準化されたUTMレポートと、サーバーサイドのロジックやサードパーティの属性分析ツールで処理できるBaidu固有のトラッキングパラメータの両方を活用できます。</p>
 
-        <div class="callout tip">
+        <div class="callout callout-tip">
           <div class="callout-title">✅ プロのコツ</div>
           <p>最低限、<code>{keywordid}</code>と<code>{planid}</code>は必ず含めましょう。この2つのパラメータだけで、キーワードとキャンペーンレベルでのコンバージョン属性分析が可能になり、ほとんどのユースケースの90％をカバーできます。</p>
         </div>
@@ -664,7 +664,7 @@
 
         <p><code>{pagenum}</code>, <code>{adposition}</code>, <code>{mediatype}</code>, <code>{placement}</code>, <code>{bidurl}</code>, <code>{haoci}</code>, <code>{abtest}</code></p>
 
-        <div class="callout warning">
+        <div class="callout callout-warning">
           <div class="callout-title">⚠️ 警告</div>
           <p>廃止されたワイルドカードを使用してもエラーは発生しませんが、値が入ることもありません。これによりトラッキングが機能しているという誤った安心感が生まれ、キャンペーンデータが欠落したままの分析レポートが作られることになります。これはトラッキングがない状態よりも悪い結果を招きます。</p>
         </div>
