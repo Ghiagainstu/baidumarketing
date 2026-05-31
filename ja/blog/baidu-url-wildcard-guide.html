@@ -591,21 +591,31 @@
           <p>Baiduのデフォルトの中国語文字エンコーディングはGBKであり、UTF-8ではありません。ランディングページがUTF-8を使用している場合（ほとんどのモダンなWebサイトはUTF-8です）、<code>{kw_enc}</code>ではなく<code>{kw_enc_utf8}</code>を使用してください。間違ったエンコーディングを使用すると文字化けが発生し、分析データが破損します。</p>
         </div>
 
-        <h2>URLワイルドカードの動作：実践例</h2>
+        <h2>🔍 URLワイルドカードの動作：実践例</h2>
 
-        <p>実際のシナリオを見てみましょう。元のキーワードランディングページURLは次のとおりです。</p>
+        <div style="background:linear-gradient(135deg,#EEF0FF 0%,#F5F3FF 100%);border:1.5px solid #C7D2FE;border-radius:12px;padding:24px;margin:24px 0;">
+          <div style="font-weight:700;color:#2932E1;margin-bottom:12px;font-size:.95rem;">📥 元のURL</div>
+          <code style="display:block;background:#fff;padding:12px 16px;border-radius:8px;border:1px solid #E5E7EB;font-size:.9rem;color:#374151;word-break:break-all;">http://www.yoursite.com</code>
+        </div>
 
-        <p><code>http://www.yoursite.com</code></p>
+        <div style="text-align:center;font-size:1.5rem;color:#6B7280;margin:16px 0;">↓ ワイルドカード追加</div>
 
-        <p>いくつかのワイルドカードパラメータを追加すると、URLは次のようになります。</p>
+        <div style="background:linear-gradient(135deg,#EEF0FF 0%,#F5F3FF 100%);border:1.5px solid #C7D2FE;border-radius:12px;padding:24px;margin:24px 0;">
+          <div style="font-weight:700;color:#2932E1;margin-bottom:12px;font-size:.95rem;">🔗 ワイルドカード付きURL</div>
+          <code style="display:block;background:#fff;padding:12px 16px;border-radius:8px;border:1px solid #E5E7EB;font-size:.85rem;color:#374151;word-break:break-all;">http://www.yoursite.com/?a_keywordid=<span style="color:#2932E1;font-weight:700;">{keywordid}</span>&a_creative=<span style="color:#2932E1;font-weight:700;">{creative}</span>&a_matchtype=<span style="color:#2932E1;font-weight:700;">{matchtype}</span>&a_dongtai=<span style="color:#2932E1;font-weight:700;">{dongtai}</span></code>
+        </div>
 
-        <p><code>http://www.yoursite.com/?a_keywordid={keywordid}&a_creative={creative}&a_matchtype={matchtype}&a_dongtai={dongtai}</code></p>
+        <div style="text-align:center;font-size:1.5rem;color:#6B7280;margin:16px 0;">↓ クリック後に置換</div>
 
-        <p>ユーザーが広告をクリックすると、Baiduが各ワイルドカードを実際の値に置き換えます。サーバーに送信されるリクエストは次のようになります。</p>
+        <div style="background:linear-gradient(135deg,#D1FAE5 0%,#ECFDF5 100%);border:1.5px solid #6EE7B7;border-radius:12px;padding:24px;margin:24px 0;">
+          <div style="font-weight:700;color:#059669;margin-bottom:12px;font-size:.95rem;">✅ 実際の値に置換後</div>
+          <code style="display:block;background:#fff;padding:12px 16px;border-radius:8px;border:1px solid #E5E7EB;font-size:.85rem;color:#374151;word-break:break-all;">http://www.yoursite.com/?a_keywordid=<span style="color:#059669;font-weight:700;">123456789</span>&a_creative=<span style="color:#059669;font-weight:700;">98765432</span>&a_matchtype=<span style="color:#059669;font-weight:700;">1</span>&a_dongtai=<span style="color:#059669;font-weight:700;">0</span></code>
+        </div>
 
-        <p><code>http://www.yoursite.com/?a_keywordid=123456789&a_creative=98765432&a_matchtype=1&a_dongtai=0</code></p>
-
-        <p>これで分析プラットフォームは、どのキーワード（ID 123456789）がクリックを発生させたか、どのクリエイティブ（98765432）が表示されたか、完全一致（1）であったか、動的広告ではなかったか（0）を正確に把握できます。</p>
+        <div style="background:#F9FAFB;border-left:4px solid #2932E1;padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0;">
+          <div style="font-weight:700;color:#111827;margin-bottom:8px;">📊 分析結果</div>
+          <p style="margin:0;color:#6B7280;font-size:.9rem;">これで分析プラットフォームは、どのキーワード（ID 123456789）がクリックを発生させたか、どのクリエイティブ（98765432）が表示されたか、完全一致（1）であったか、動的広告ではなかったか（0）を正確に把握できます。</p>
+        </div>
 
         <!-- SVG FLOW CHART -->
         <div class="svg-chart">
@@ -733,9 +743,9 @@
         </div>
 
         <!-- CTA -->
-        <div class="cta-section">
-          <h2>Baiduのトラッキング設定にお困りですか？</h2>
-          <p>当社のチームは、数百ものBaidu PPCアカウントにURLワイルドカードトラッキングを導入してきました。現在の設定を監査し、適切なパラメータを推奨し、お客様の分析プラットフォームとの統合を支援します。</p>
+        <div class="cta-box">
+          <h3 style="color:#fff;">Baiduのトラッキング設定にお困りですか？</h3>
+          <p style="color:rgba(255,255,255,.9);">当社のチームは、数百ものBaidu PPCアカウントにURLワイルドカードトラッキングを導入してきました。現在の設定を監査し、適切なパラメータを推奨し、お客様の分析プラットフォームとの統合を支援します。</p>
           <a href="/ja/contact" class="cta-btn">無料で相談する →</a>
         </div>
 
