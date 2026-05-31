@@ -270,6 +270,14 @@
 .callout:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
 .callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
+/* Tools List Enhancement */
+.tools-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.tool-item { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 20px; transition: transform .25s, box-shadow .25s; }
+.tool-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+.tool-name { font-size: 1rem; font-weight: 700; color: #2932E1; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.tool-name::before { content: '🔧'; }
+.tool-desc { font-size: .9rem; color: #6B7280; line-height: 1.6; }
+
 /* Article Meta Enhancement */
 .article-meta { display: flex; align-items: center; gap: 16px; font-size: .85rem; color: #9CA3AF; flex-wrap: wrap; margin-top: 16px; }
 .article-meta span { display: inline-flex; align-items: center; gap: 6px; }
@@ -467,19 +475,19 @@
 
         <div class="tools-list">
           <div class="tool-item">
-            <div class="tool-name">5118.com</div>
+            <div class="tool-name">🔍 5118.com</div>
             <div class="tool-desc">中国の人気SEOツールで百度キーワードデータを提供。検索トレンドや競合キーワードの分析に有効。</div>
           </div>
           <div class="tool-item">
-            <div class="tool-name">Ahrefs（百度データ）</div>
+            <div class="tool-name">📊 Ahrefs（百度データ）</div>
             <div class="tool-desc">最近百度のデータカバレッジを追加。既にAhrefsを西洋SEOで使用している場合に便利。</div>
           </div>
           <div class="tool-item">
-            <div class="tool-name">知乎（Zhihu）検索</div>
+            <div class="tool-name">💬 知乎（Zhihu）検索</div>
             <div class="tool-desc">Quora形式の中国Q&Aサイト。自社業界で中国ユーザーがどのように質問を表現するかを理解するのに最適。</div>
           </div>
           <div class="tool-item">
-            <div class="tool-name">百度指数（Baidu Index）</div>
+            <div class="tool-name">📈 百度指数（Baidu Index）</div>
             <div class="tool-desc">急上昇キーワードやトレンド人気を表示。季節パターンや新興関心の理解に有効。</div>
           </div>
         </div>
