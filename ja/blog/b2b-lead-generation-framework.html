@@ -410,11 +410,25 @@
 [data-theme="dark"] .article-content li strong { color: #F9FAFB; }
 
 /* Process Step Enhancement */
+.process-steps { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
 .process-step { display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; background: linear-gradient(135deg, #FFFFFF 0%, #EEF0FF 100%); border-radius: 16px; border: 1.5px solid #E5E7EB; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
 .process-step::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(135deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px; opacity: 0; transition: opacity .25s; }
 .process-step:hover { transform: translateX(6px); box-shadow: 0 4px 16px rgba(41,50,225,.12); }
 .process-step:hover::before { opacity: 1; }
+.process-step-num {
+  flex-shrink: 0; width: 40px; height: 40px;
+  background: linear-gradient(135deg, #2932E1, #4F46E5); color: #fff; border-radius: 12px;
+  display: grid; place-items: center; font-weight: 800; font-size: .95rem;
+  box-shadow: 0 4px 12px rgba(41,50,225,.25);
+}
+.process-step-content h4 { font-size: 1rem; font-weight: 700; color: #111827; margin-bottom: 6px; }
+.process-step-content p { font-size: .9rem; color: #6B7280; margin: 0; line-height: 1.6; }
 [data-theme="dark"] .process-step { background: linear-gradient(135deg, #1F2937 0%, rgba(99,102,241,.06) 100%); border-color: #374151; }
+[data-theme="dark"] .process-step-content h4 { color: #F9FAFB; }
+[data-theme="dark"] .process-step-content p { color: var(--gray-600); }
+
+/* Stats Grid 3 columns */
+.stats-grid-3 { grid-template-columns: repeat(3, 1fr); }
 
 /* Callout Stacked (vertical) */
 .callout-stacked { flex-direction: column; align-items: center; text-align: center; }
@@ -556,9 +570,15 @@
       <div class="article-category strategy">Strategy</div>
       <div class="article-body">
         
-<h2>📊 努力と成果のギャップ</h2>
+<h2>努力と成果のギャップ</h2>
 
 <p>B2B取引の88%がオンラインで始まります。75%のバイヤーがソーシャルメディアでリサーチします。90%の意思決定者はコールドアプローチに応答しません（アクセンチュア調べ）。</p>
+
+<div class="stats-grid stats-grid-3">
+  <div class="stat-card"><div class="stat-number">88%</div><div class="stat-label">B2B取引がオンラインで開始</div></div>
+  <div class="stat-card"><div class="stat-number">75%</div><div class="stat-label">バイヤーがSNSでリサーチ</div></div>
+  <div class="stat-card"><div class="stat-number">90%</div><div class="stat-label">意思決定者がコールドアプローチを無視</div></div>
+</div>
 
 <p>この数字は、BPPで常に見られるパターンを説明しています。B2B企業がウェブサイトに投資し、広告を出し、コンテンツを投稿し、待ちます。トラフィックの数字は悪くなさそうだ——しかし実際に入ってくるリードは質が低いか、本来来るべきリードがまったく来ない。マーケティングチームは動いている。営業チームは苛立っている。経営陣は「デジタルマーケティングは本当に機能するのか」と問い始めている。</p>
 
@@ -566,21 +586,34 @@
 
 <p>この記事では、B2B企業が百度でリードを獲得するための5ステップのフレームワークを解説します。購買行動とプラットフォームの特性が欧米のものとは大きく異なる中国市場で、実際に効果のあるアプローチです。</p>
 
+<div class="process-steps">
+  <div class="process-step"><div class="process-step-num">1</div><div class="process-step-content"><h4>顧客プロファイル</h4><p>ターゲットを正確に把握——業界、役職、課題</p></div></div>
+  <div class="process-step"><div class="process-step-num">2</div><div class="process-step-content"><h4>検索意図</h4><p>百度で積極的に検索しているバイヤーを捕捉</p></div></div>
+  <div class="process-step"><div class="process-step-num">3</div><div class="process-step-content"><h4>コンテンツ戦略</h4><p>認知・検討・決定の各段階に合わせたコンテンツ</p></div></div>
+  <div class="process-step"><div class="process-step-num">4</div><div class="process-step-content"><h4>データループ</h4><p>マーケティングリードと営業成果を接続</p></div></div>
+  <div class="process-step"><div class="process-step-num">5</div><div class="process-step-content"><h4>デジタルペース</h4><p>適切な速度でテスト、学習、スケール</p></div></div>
+</div>
+
 <hr>
 
-<h2>📊 ステップ1：明確な顧客プロファイルを構築する</h2>
+<h2>ステップ1：明確な顧客プロファイルを構築する</h2>
 
 <p>B2B顧客は一枚岩ではありません。調達担当者、技術評価者、最終承認を行うCFOはそれぞれ異なる関心事を持ち、異なる検索行動をとります。効果的なリード獲得は、誰を狙うべきか正確に把握することから始まります。</p>
 
 <ul>問うべきことは：<li>最も優良な顧客はどの業界にいるか？</li><li>購買決定を下すのはどの役職か？</li><li>どの具体的な問題が彼らを検索行動に駆り立てるか？</li><li>調査段階でどのようなコンテンツを消費するか？</li></ul>
 
-<p>これらの答えがなければ、広告は間違った人に届きます。私たちが支援したある機械メーカーは、当初製造業全般に広くターゲティングしていました。百度のオーディエンス分析ツールで顧客データを分析した結果、広東省の中規模電子機器組立工場の調達担当者で「自動検査装置」を検索している層に絞り込みました。3ヶ月で適格リード単価が45%低下しました。</p>
+<p>これらの答えがなければ、広告は間違った人に届きます。</p>
+
+<div class="callout callout-insight">
+  <span class="callout-icon">💡</span>
+  <div><strong>具体例：</strong>私たちが支援したある機械メーカーは、当初製造業全般に広くターゲティングしていました。百度のオーディエンス分析ツールで顧客データを分析した結果、広東省の中規模電子機器組立工場の調達担当者で「自動検査装置」を検索している層に絞り込みました。3ヶ月で適格リード単価が<strong>45%低下</strong>しました。</div>
+</div>
 
 <p>顧客プロファイリングは一回限りの作業ではありません。市場は変化し、2年後の理想顧客は今日の理想顧客とは異なるかもしれません。定期的な見直しと改善のプロセスを組み込みましょう。</p>
 
 <hr>
 
-<h2>📊 ステップ2：能動的な検索意図を捕捉する</h2>
+<h2>ステップ2：能動的な検索意図を捕捉する</h2>
 
 <p>94%のB2Bバイヤーが購入判断前にオンライン検索をします（デロイト調べ）。中国では、その検索が百度で行われます。</p>
 
@@ -590,13 +623,23 @@
 
 <strong>SEO（検索エンジン最適化）：</strong> コンテンツ、技術構造、オーソリティシグナルを通じて、オーガニック検索の順位を向上させます。これは時間がかかりますが、一度確立すれば継続的な無料トラフィックを生み出します。
 
+<table class="comparison-table">
+  <thead><tr><th></th><th>SEM</th><th>SEO</th></tr></thead>
+  <tbody>
+    <tr><td><strong>速度</strong></td><td>数日で開始</td><td>成熟まで6〜12ヶ月</td></tr>
+    <tr><td><strong>コストモデル</strong></td><td>クリック/インプレッション単価</td><td>コンテンツ・技術投資</td></tr>
+    <tr><td><strong>トラフィック</strong></td><td>即時、制御可能</td><td>持続的、確立後無料</td></tr>
+    <tr><td><strong>最適用途</strong></td><td>市場参入、テスト</td><td>長期ブランド構築</td></tr>
+  </tbody>
+</table>
+
 <p>中国市場に参入するほとんどのB2Bブランドにとって、SEMが現実的な出発点です。SEOは6〜12ヶ月を要し、まだ保有していない可能性のあるコンテンツ資産が必要です。</p>
 
 <p>百度の検索広告はB2B向けの特徴を備えています：検索結果に埋め込まれる製品仕様表、クリック不要で視聴可能な動画ショーケース、CRMに直接送信されるリード獲得フォーム。これらが調査段階での摩擦を減らします。</p>
 
 <hr>
 
-<h2>📊 ステップ3：意思決定を動かすコンテンツを作る</h2>
+<h2>ステップ3：意思決定を動かすコンテンツを作る</h2>
 
 <p>B2B購入には信頼が必要です。信頼は、専門性を示し、能力を証明し、懸念に対処するコンテンツを通じて構築されます。</p>
 
@@ -620,11 +663,16 @@
   </div>
 </div>
 
-<p>コンテンツ制作はリソースを消費します。百度のAIコンテンツ生成ツールが制作を加速できます。あるクライアントは擎舵（QingDuo）を使って製品マーケティング画像と仕様表を生成し、クリエイティブ制作時間を70%削減しながら品質を維持しています。</p>
+<p>コンテンツ制作はリソースを消費します。</p>
+
+<div class="callout callout-tip">
+  <span class="callout-icon">✅</span>
+  <div><strong>ツールのヒント：</strong>百度のAIコンテンツ生成ツールが制作を加速できます。あるクライアントは擎舵（QingDuo）を使って製品マーケティング画像と仕様表を生成し、クリエイティブ制作時間を<strong>70%削減</strong>しながら品質を維持しています。</div>
+</div>
 
 <hr>
 
-<h2>📊 ステップ4：データループを閉じる</h2>
+<h2>ステップ4：データループを閉じる</h2>
 
 <p>マーケティングがリードを生成します。営業がリードを進めます。あまりにも多くの場合、両者の間に情報が流れていません。</p>
 
@@ -636,9 +684,14 @@
 
 <p>閉じたループがなければ、どのキャンペーンが機能しているか推測しているだけです。あれば、最適化しているのです。</p>
 
+<div class="callout callout-warning">
+  <span class="callout-icon">⚠️</span>
+  <div><strong>閉じたループなしでは</strong>、どのキャンペーンが機能しているか推測しているだけです。あれば、最適化しているのです。この差は時間とともに複利的に拡大します。</div>
+</div>
+
 <hr>
 
-<h2>📊 ステップ5：自社のデジタルペースを見つける</h2>
+<h2>ステップ5：自社のデジタルペースを見つける</h2>
 
 <p>デジタル変革はオール・オア・ナッシングではありません。どこに、いつ投資するかという一連の判断です。</p>
 
@@ -650,7 +703,7 @@
 
 <hr>
 
-<h2>📊 構造的な障壁</h2>
+<h2>構造的な障壁</h2>
 
 <ul>このフレームワークのすべてのステップは、百度広告アカウントの存在に依存しています。海外のB2B企業にとって、そこが最大の難関です。百度が要求するもの：<li>中国の事業許可証</li><li>中国の銀行口座</li><li>認証用の中国の電話番号</li></ul>
 

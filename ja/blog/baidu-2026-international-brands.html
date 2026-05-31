@@ -409,12 +409,33 @@
 [data-theme="dark"] .article-content li:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 [data-theme="dark"] .article-content li strong { color: #F9FAFB; }
 
-/* Process Step Enhancement */
-.process-step { display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; background: linear-gradient(135deg, #FFFFFF 0%, #EEF0FF 100%); border-radius: 16px; border: 1.5px solid #E5E7EB; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
-.process-step::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(135deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px; opacity: 0; transition: opacity .25s; }
+/* Process Steps */
+.process-steps { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
+.process-step {
+  display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #EEF0FF 100%);
+  border-radius: 16px; border: 1.5px solid #E5E7EB;
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .25s ease;
+  position: relative; overflow: hidden;
+}
+.process-step::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+  background: linear-gradient(135deg, #2932E1, #4F46E5); border-radius: 4px 0 0 4px; opacity: 0;
+  transition: opacity .25s ease;
+}
 .process-step:hover { transform: translateX(6px); box-shadow: 0 4px 16px rgba(41,50,225,.12); }
 .process-step:hover::before { opacity: 1; }
+.process-step-num {
+  flex-shrink: 0; width: 40px; height: 40px;
+  background: linear-gradient(135deg, #2932E1, #4F46E5); color: #fff; border-radius: 12px;
+  display: grid; place-items: center; font-weight: 800; font-size: .95rem;
+  box-shadow: 0 4px 12px rgba(41,50,225,.25);
+}
+.process-step-content h4 { font-size: 1rem; font-weight: 700; color: #111827; margin-bottom: 6px; }
+.process-step-content p { font-size: .9rem; color: #6B7280; margin: 0; line-height: 1.6; }
 [data-theme="dark"] .process-step { background: linear-gradient(135deg, #1F2937 0%, rgba(99,102,241,.06) 100%); border-color: #374151; }
+[data-theme="dark"] .process-step-content h4 { color: #F9FAFB; }
+[data-theme="dark"] .process-step-content p { color: var(--gray-600); }
 
 /* Callout Stacked (vertical) */
 .callout-stacked { flex-direction: column; align-items: center; text-align: center; }
@@ -448,10 +469,45 @@
 
 /* Highlight Grid Enhancement */
 .highlight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 32px 0; }
+.highlight-card {
+  padding: 24px; border-radius: var(--radius-lg); border: 1.5px solid;
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .25s ease;
+  position: relative; overflow: hidden;
+}
+.highlight-card::after {
+  content: ''; position: absolute; top: 0; right: 0; width: 80px; height: 80px;
+  border-radius: 50%; opacity: .06; transition: opacity .25s ease;
+}
+.highlight-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.highlight-card:hover::after { opacity: .1; }
+.highlight-card.urgent { background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%); border-color: #FECACA; }
+.highlight-card.important { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #FCD34D; }
+.highlight-card.urgent::after { background: #EF4444; }
+.highlight-card.important::after { background: #F59E0B; }
+.highlight-card.urgent h4 { color: #DC2626; }
+.highlight-card.important h4 { color: #D97706; }
+.highlight-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.highlight-card p { font-size: .88rem; color: var(--gray-600); margin: 0; line-height: 1.65; }
+[data-theme="dark"] .highlight-card.urgent { background: linear-gradient(135deg, rgba(220,38,38,.08) 0%, rgba(220,38,38,.12) 100%); border-color: rgba(220,38,38,.2); }
+[data-theme="dark"] .highlight-card.important { background: linear-gradient(135deg, rgba(217,119,6,.08) 0%, rgba(217,119,6,.12) 100%); border-color: rgba(217,119,6,.2); }
 @media (max-width: 640px) { .highlight-grid { grid-template-columns: 1fr; } }
 
 /* Before/After Grid */
 .before-after-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+.ba-card {
+  padding: 28px; border-radius: 16px; border: 1.5px solid #E5E7EB;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.ba-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+.ba-card.before { background: #F9FAFB; }
+.ba-card.after { background: linear-gradient(135deg, #EEF0FF 0%, #E0E7FF 100%); border-color: #A5B4FC; }
+.ba-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 14px; color: #111827; display: flex; align-items: center; gap: 8px; }
+.ba-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; padding-left: 0; margin: 0; }
+.ba-card ul li { font-size: .9rem; color: #6B7280; line-height: 1.5; padding-left: 24px; position: relative; }
+.ba-card ul li::before { content: '→'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
+.ba-card.after ul li::before { color: #4F46E5; }
+[data-theme="dark"] .ba-card.before { background: #1F2937; border-color: #374151; }
+[data-theme="dark"] .ba-card.after { background: linear-gradient(135deg, rgba(99,102,241,.08) 0%, rgba(99,102,241,.12) 100%); border-color: rgba(99,102,241,.2); }
 @media (max-width: 640px) { .before-after-grid { grid-template-columns: 1fr; } }
 
 /* Rules Callout */
@@ -541,9 +597,28 @@
       <div class="article-category insights">Market Insights</div>
       <div class="article-body">
         
-<h2>📊 機会とアクセスのあいだに横たわる壁</h2>
+<h2>機会とアクセスのあいだに横たわる壁</h2>
 
 <p>BPPに寄せられる問い合わせには、ほぼ毎回同じパターンがあります。</p>
+
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-value">7億+</div>
+    <div class="stat-label">Baidu App MAU</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">50億+</div>
+    <div class="stat-label">1日あたり検索クエリ数</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">1,000億$+</div>
+    <div class="stat-label">中国デジタル広告市場</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">3-5倍</div>
+    <div class="stat-label">検索意図コンバージョン率</div>
+  </div>
+</div>
 
 <p>中国国外に拠点を置くマーケティング責任者が、百度のトラフィック数字を目にする——Baidu Appだけでも月間アクティブユーザー7億人、検索意図に基づくコンバージョン率は欧米のプラットフォームでは考えられない水準——そして、「うちもやってみよう」と判断します。数週間かけてリサーチを進めるものの、中国の営業許可証、本土の銀行口座、中国の電話番号、そして全面中国語の管理画面の前でプロジェクトは暗礁に乗り上げます。半年後、何も始まっていません。</p>
 
@@ -557,15 +632,27 @@
 
 <hr>
 
-<h2>📊 2026年のアップグレード：実際に重要なこと</h2>
+<h2>2026年のアップグレード：実際に重要なこと</h2>
 
 <p>百度は2025年にAIインフラに多額の投資を行いました。その結果、海外ブランドが活用できるあらゆるプロダクトにまたがるプラットフォーム全体の転換が起きています。なかでも3つの変化は、特に注目に値します。</p>
+
+<div class="platform-pills">
+  <span class="platform-pill baidu">🔍 百度検索</span>
+  <span class="platform-pill feed">📱 百度フィード</span>
+  <span class="platform-pill display">🤖 愛採購 B2B</span>
+  <span class="platform-pill search">🛒 百度EC</span>
+</div>
 
 <h3>1️⃣ 1. AIネイティブな検索広告</h3>
 
 <p>百度の検索広告プラットフォームは、AI駆動アーキテクチャへの完全移行を完了しました。キャンペーンの設定は会話型になり、ビジネスを自然言語で説明すれば、キーワードセット、広告コピー、入札戦略を自動生成します。oCPC（最適化クリック単価）入札はコンバージョン確率シグナルに基づいてリアルタイムに調整されます。スマートリフレッシュ機能は、パフォーマンスの低下したキャンペーンを自動診断し、改善を提案します。</p>
 
-<p>海外ブランドにとって、これは一見大きなメリットに見えます。かつては百度の専門家が必要だった技術的な最適化作業の多くを、プラットフォーム自身が担えるようになったからです。しかし——誰も語らない部分ですが——プラットフォームが力を発揮する前提として、アカウントが最初から正しく構成されていなければなりません。コンバージョントラッキングが正確に設定され、ビジネスデータが適切に入力されていることが条件です。AIは強力ですが、正しい入力があって初めて機能します。</p>
+<p>海外ブランドにとって、これは一見大きなメリットに見えます。かつては百度の専門家が必要だった技術的な最適化作業の多くを、プラットフォーム自身が担えるようになったからです。</p>
+
+<div class="callout callout-insight">
+  <span class="callout-icon">💡</span>
+  <div><strong>重要な洞察：</strong>プラットフォームが力を発揮する前提として、アカウントが最初から正しく構成されていなければなりません。コンバージョントラッキングが正確に設定され、ビジネスデータが適切に入力されていることが条件です。AIは強力ですが、正しい入力があって初めて機能します。</div>
+</div>
 
 <h3>2️⃣ 2. B2B発見プラットフォームの拡張</h3>
 
@@ -581,26 +668,76 @@
 
 <hr>
 
-<h2>📊 本当の問題：プラットフォームではない。資格要件である</h2>
+<h2>本当の問題：プラットフォームではない。資格要件である</h2>
 
 <p>上で説明したすべての機会に必要なものが一つあります。中国の事業者名義で登録された有効な百度広告アカウントです。</p>
 
 <p>具体的に何が必要か：</p>
 
-<li><strong>中国の営業許可証（营业执照）。</strong> 海外子会社ではありません。中国本土で登録された法人です。</li>
-<li><strong>中国本土の銀行口座。</strong> 百度への越境支払いは簡単ではありません。</li>
-<li><strong>中国の携帯電話番号。</strong> アカウント認証に必須。海外番号は受け付けられません。</li>
-<li><strong>登録された現地法人、または代理で口座を保有できる信頼できるパートナー。</strong></li>
+<div class="process-steps">
+  <div class="process-step">
+    <div class="process-step-num">1</div>
+    <div class="process-step-content">
+      <h4>中国の営業許可証（营业执照）</h4>
+      <p>海外子会社ではありません。中国本土で登録された法人です。</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">2</div>
+    <div class="process-step-content">
+      <h4>中国本土の銀行口座</h4>
+      <p>百度への越境支払いは簡単ではありません。</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">3</div>
+    <div class="process-step-content">
+      <h4>中国の携帯電話番号</h4>
+      <p>アカウント認証に必須。海外番号は受け付けられません。</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">4</div>
+    <div class="process-step-content">
+      <h4>現地法人または信頼できるパートナー</h4>
+      <p>登録された現地法人、または代理で口座を保有できる信頼できるパートナー。</p>
+    </div>
+  </div>
+</div>
 
 <p>ほとんどの海外企業は、これらを一つも持っていません。たとえWFOEや合弁会社を通じて持っていたとしても、完全に中国語の管理画面を、時差を超え、現地のコンプライアンス要件を満たしながら運用する複雑さは相当です。</p>
 
-<p>この構造的な障壁こそ、BPPが解決するために存在する課題です。BPPがアカウントを保有し、インフラを管理します。お客様はキャンペーンと成果を手に入れる。まず中国法人を設立する必要はありません。</p>
+<div class="callout callout-tip">
+  <span class="callout-icon">✅</span>
+  <div><strong>BPPのソリューション：</strong>BPPがアカウントを保有し、インフラを管理します。お客様はキャンペーンと成果を手に入れる。まず中国法人を設立する必要はありません。</div>
+</div>
 
 <hr>
 
-<h2>📊 なぜ2026年は待てないのか</h2>
+<h2>なぜ2026年は待てないのか</h2>
 
 <p>2019年の百度では、運用の粗いキャンペーンでも、検索意図に基づくトラフィックをそれなりに獲得できていました。プラットフォームはシンプルで、アルゴリズムはそれほど複雑ではありませんでした。うまく運用されているアカウントと平均的なアカウントの差は、まだ埋められるものでした。</p>
+
+<div class="before-after-grid">
+  <div class="ba-card before">
+    <h4>📅 2019年</h4>
+    <ul>
+      <li>手動キーワード入札</li>
+      <li>基本的なコンバージョントラッキング</li>
+      <li>シンプルな広告フォーマット</li>
+      <li>限定的なAI最適化</li>
+    </ul>
+  </div>
+  <div class="ba-card after">
+    <h4>🚀 2026年</h4>
+    <ul>
+      <li>AI駆動のリアルタイム入札</li>
+      <li>高度なコンバージョンシグナル</li>
+      <li>AI生成広告クリエイティブ</li>
+      <li>スマートリフレッシュ自動診断</li>
+    </ul>
+  </div>
+</div>
 
 <p>その差は今、急速に開いています。</p>
 
@@ -608,27 +745,57 @@
 
 <p>海外ブランドにとって、これは2つのことを意味します。</p>
 
-<p>第一に、<strong>待つことのコストが上昇している</strong>こと。検討に費やす1ヶ月は、競合が品質スコアを構築し、コンバージョンデータを蓄積し、獲得単価を引き下げている1ヶ月です。ギャップは複利的に拡大します。</p>
-
-<p>第二に、<strong>間違えることのコストも上昇している</strong>こと。不適切に構築されたアカウントで百度キャンペーンを立ち上げた場合、3年前より高いコストで低い成果しか得られません。AIは正しい判断を増幅しますが、誤った判断も増幅します。</p>
+<div class="highlight-grid">
+  <div class="highlight-card urgent">
+    <h4>⏰ 遅延のコスト</h4>
+    <p>検討に費やす1ヶ月は、競合が品質スコアを構築し、コンバージョンデータを蓄積し、獲得単価を引き下げている1ヶ月です。ギャップは複利的に拡大します。</p>
+  </div>
+  <div class="highlight-card important">
+    <h4>⚠️ 間違いのコスト</h4>
+    <p>不適切に構築されたアカウントで百度キャンペーンを立ち上げた場合、3年前より高いコストで低い成果しか得られません。AIは正しい判断を増幅しますが、誤った判断も増幅します。</p>
+  </div>
+</div>
 
 <hr>
 
-<h2>📊 BPPがどう橋を架けるか</h2>
+<h2>BPPがどう橋を架けるか</h2>
 
 <p>BPPは、欧米のエージェンシーの大半が百度に広告プラットフォームがあることすら知らなかった頃から、海外ブランドの百度検索キャンペーンを運用してきました。具体的にどう違うのか：</p>
 
-<strong>機能するアカウントインフラ。</strong> BPPが中国法人の資格、本土の銀行口座、コンプライアンスインフラを保有します。ブランドは中国に会社を登録することなく、稼働する百度広告アカウントを利用できます。
-
-<strong>プラットフォームに常駐するチームによる運用。</strong> アカウント構築、キーワード戦略、クリエイティブ開発、入札管理、パフォーマンス最適化を中国語と英語で行います。毎日プラットフォームの中で仕事をしており、エッジケースも把握しています。
-
-<strong>活用できるレポート。</strong> 百度のダッシュボードは中国語です。指標もGoogle Adsと1対1ではありません。データも文脈も推奨事項も、お客様のチームが使える形式に翻訳してお届けします。
-
-<strong>実行だけでなく戦略の伴走。</strong> 検索とフィードの予算配分はどうすべきか？キャンペーンをどう構築すれば最大の効率が得られるか？対象業界とオーディエンスに対して、現実的なROIタイムラインはどうなるか？——これらはドキュメントではなく、経験に基づいてお答えする問いです。
+<div class="process-steps">
+  <div class="process-step">
+    <div class="process-step-num">1</div>
+    <div class="process-step-content">
+      <h4>機能するアカウントインフラ</h4>
+      <p>BPPが中国法人の資格、本土の銀行口座、コンプライアンスインフラを保有します。ブランドは中国に会社を登録することなく、稼働する百度広告アカウントを利用できます。</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">2</div>
+    <div class="process-step-content">
+      <h4>プラットフォームに常駐するチームによる運用</h4>
+      <p>アカウント構ウント構築、キーワード戦略、クリエイティブ開発、入札管理、パフォーマンス最適化を中国語と英語で行います。毎日プラットフォームの中で仕事をしており、エッジケースも把握しています。</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">3</div>
+    <div class="process-step-content">
+      <h4>活用できるレポート</h4>
+      <p>百度のダッシュボードは中国語です。指標もGoogle Adsと1対1ではありません。データも文脈も推奨事項も、お客様のチームが使える形式に翻訳してお届けします。</p>
+    </div>
+  </div>
+  <div class="process-step">
+    <div class="process-step-num">4</div>
+    <div class="process-step-content">
+      <h4>実行だけでなく戦略の伴走</h4>
+      <p>検索とフィードの予算配分はどうすべきか？キャンペーンをどう構築すれば最大の効率が得られるか？対象業界とオーディエンスに対して、現実的なROIタイムラインはどうなるか？——これらはドキュメントではなく、経験に基づいてお答えする問いです。</p>
+    </div>
+  </div>
+</div>
 
 <hr>
 
-<h2>📊 次のステップ</h2>
+<h2>次のステップ</h2>
 
 <p>中国国外に拠点を置くマーケティング責任者やエージェンシーオーナーで、百度に関心がありながら資格要件の壁に阻まれている——その方は、ぜひBPPにご相談ください。</p>
 

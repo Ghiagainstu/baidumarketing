@@ -437,7 +437,15 @@
 /* Journey Flow Enhancement */
 .journey-flow { margin: 28px 0; padding: 24px; background: #F9FAFB; border-radius: 16px; border: 1px solid #E5E7EB; }
 .journey-flow-label { font-size: .9rem; font-weight: 700; color: #2932E1; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.journey-flow-steps { display: flex; flex-wrap: wrap; align-items: center; gap: 0; }
+.journey-step { background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 8px; padding: 8px 14px; font-size: .82rem; font-weight: 600; color: #374151; white-space: nowrap; }
+.journey-arrow { color: #2932E1; font-size: 1rem; margin: 0 4px; flex-shrink: 0; }
+.journey-step:first-child { border-left: 3px solid #2932E1; }
+.journey-step:last-child { background: linear-gradient(135deg, #EEF0FF, #F5F3FF); border-color: #C7D2FE; color: #1E25AF; }
 [data-theme="dark"] .journey-flow { background: #1F2937; border-color: #374151; }
+[data-theme="dark"] .journey-step { background: #1F2937; border-color: #374151; color: #D1D5DB; }
+[data-theme="dark"] .journey-step:last-child { background: rgba(99,102,241,.12); border-color: rgba(99,102,241,.3); color: #818CF8; }
+@media (max-width: 640px) { .journey-flow-steps { gap: 6px; } .journey-arrow { display: none; } .journey-step { font-size: .75rem; padding: 6px 10px; } }
 
 /* Concept Card Enhancement */
 .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; }
@@ -502,6 +510,15 @@
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 /* ===== End Enhanced Visual Styles ===== */
 
+/* Takeaway Box */
+.takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+.takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: #2932E1; display: flex; align-items: center; gap: 8px; }
+.takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+.takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; color: #374151; }
+.takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
+[data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+[data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
+
 </style>
 </head>
 <body>
@@ -556,6 +573,11 @@
 
 <p>中国消費者の百度上での行動パターンをデータで見ていきます。</p>
 
+<div class="callout callout-insight">
+  <span class="callout-icon">💡</span>
+  <div><strong>重要な洞察：</strong>パターンは一貫しています。中国の消費者は百度をリサーチプロセスの基盤として使います。最初の立ち寄り先であり、戻ってくる地点です。</div>
+</div>
+
 <hr>
 
 <h2>百度は意思決定エンジンである</h2>
@@ -564,9 +586,46 @@
 
 <p>観光の場合：目的地検索 → 情報収集 → 旅程計画 → 予約 → 現地ナビゲーション → 帰国後の共有。</p>
 
+<div class="journey-flow">
+  <div class="journey-flow-label">✈️ 観光</div>
+  <div class="journey-flow-steps">
+    <span class="journey-step">目的地検索</span><span class="journey-arrow">→</span>
+    <span class="journey-step">情報収集</span><span class="journey-arrow">→</span>
+    <span class="journey-step">旅程計画</span><span class="journey-arrow">→</span>
+    <span class="journey-step">予約</span><span class="journey-arrow">→</span>
+    <span class="journey-step">現地ナビ</span><span class="journey-arrow">→</span>
+    <span class="journey-step">帰国後共有</span>
+  </div>
+</div>
+
 <p>高級時計ブランドの場合：ブランド比較 → 仕様研究 → 価格検証 → 正規販売店の場所 → 購入 → 所有体験の共有。</p>
 
+<div class="journey-flow">
+  <div class="journey-flow-label">⌚ 高級時計</div>
+  <div class="journey-flow-steps">
+    <span class="journey-step">ブランド比較</span><span class="journey-arrow">→</span>
+    <span class="journey-step">仕様研究</span><span class="journey-arrow">→</span>
+    <span class="journey-step">価格検証</span><span class="journey-arrow">→</span>
+    <span class="journey-step">販売店検索</span><span class="journey-arrow">→</span>
+    <span class="journey-step">購入</span><span class="journey-arrow">→</span>
+    <span class="journey-step">所有体験共有</span>
+  </div>
+</div>
+
 <p>教育機関の場合：プログラム検索 → ランキング比較 → 卒業生レビュー → 出願要件 → 学費計算 → 入学 → コミュニティ共有。</p>
+
+<div class="journey-flow">
+  <div class="journey-flow-label">🎓 教育</div>
+  <div class="journey-flow-steps">
+    <span class="journey-step">プログラム検索</span><span class="journey-arrow">→</span>
+    <span class="journey-step">ランキング比較</span><span class="journey-arrow">→</span>
+    <span class="journey-step">卒業生レビュー</span><span class="journey-arrow">→</span>
+    <span class="journey-step">出願要件</span><span class="journey-arrow">→</span>
+    <span class="journey-step">学費計算</span><span class="journey-arrow">→</span>
+    <span class="journey-step">入学</span><span class="journey-arrow">→</span>
+    <span class="journey-step">コミュニティ共有</span>
+  </div>
+</div>
 
 <p>パターンは一貫しています。中国の消費者は百度をリサーチプロセスの基盤として使います。最初の立ち寄り先であり、戻ってくる地点です。</p>
 
@@ -586,11 +645,24 @@
 
 <p>重要なポイント：彼らは衝動買いをしません。リサーチします。そしてリサーチは百度で行われます。</p>
 
+<div class="callout callout-tip">
+  <span class="callout-icon">✅</span>
+  <div><strong>重要なポイント：</strong>中国消費者は衝動買いをしません。リサーチします。そしてリサーチは百度で行われます。</div>
+</div>
+
 <hr>
 
 <h2>百度で利用可能なマーケティングツール</h2>
 
 <p>百度のエコシステムは検索広告以上のものを海外ブランドに提供します。フルファネルのプレゼンスとは以下の通りです。</p>
+
+<div class="platform-pills">
+  <span class="platform-pill baidu">🔍 検索広告</span>
+  <span class="platform-pill baidu">🎯 ブランドゾーン</span>
+  <span class="platform-pill baidu">📚 コンテンツエコシステム</span>
+  <span class="platform-pill baidu">📺 ディスプレイ＆ソーシャル</span>
+  <span class="platform-pill baidu">🤖 AIツール</span>
+</div>
 
 <strong>検索広告：</strong> 商業意図のキーワードに入札。誰かが「MBA留学 イギリス ランキング」や「ドイツ時計ブランド」を検索したとき、リッチフォーマット——画像、動画、製品仕様——とともにあなたの広告が検索結果に表示されます。
 
@@ -616,6 +688,11 @@
 
 <p>選択肢3はますます困難です。選択肢1は遅く、高価です。選択肢2が、BPPが存在する理由です。</p>
 
+<div class="callout callout-warning">
+  <span class="callout-icon">⚠️</span>
+  <div><strong>構造的な障壁：</strong>百度広告アカウントには中国の資格が必要です。中国の子会社を持たない海外ブランドは、資格を持つパートナーと協力するか、百度を無視するかの選択肢しかありません。</div>
+</div>
+
 <hr>
 
 <h2>BPPがアクセスギャップを埋める方法</h2>
@@ -629,10 +706,10 @@
 <p><strong>百度でのブランドプレゼンスがどのようなものか知りたいですか？</strong></p>
 <p>BPPにお問い合わせください。業界、ターゲットとする中国消費者、現在のマーケティングアプローチを分析し——どの百度ツールが意味をなし、どの投資レベルが適切かをお見せします。</p>
 
-<div class="takeaway">
-  <h4>📋 まとめ</h4>
+<div class="takeaway-box">
+  <h3>📋 まとめ</h3>
   <ul>
-    <li>✅ 百度は中国消費者の購買ジャーナリーの基盤プラットフォーム</li>
+    <li>✅ 百度は中国消費者の購買ジャーニーの基盤プラットフォーム</li>
     <li>✅ 97.5%の中国インターネットユーザーにリーチ</li>
     <li>✅ 検索→情報収集→予約→ナビ→共有の全段階で活用</li>
     <li>✅ BPPで中国法人なしに百度広告アカウント開設が可能</li>
