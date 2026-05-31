@@ -686,61 +686,42 @@
 
         <h2>📊 ステータスフロー：アカウントが状態間を移動する仕組み</h2>
 
-        <div class="svg-chart-wrapper">
-          <svg width="680" height="280" viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient>
-              <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/></linearGradient>
-              <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></linearGradient>
-              <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#DC2626"/></linearGradient>
-              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#6B7280"/></marker>
-            </defs>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:24px 0;">
+          <!-- Step 1 -->
+          <div style="background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff;padding:20px 24px;border-radius:12px;text-align:center;min-width:140px;flex:1;max-width:180px;">
+            <div style="font-size:2rem;margin-bottom:8px;">💰</div>
+            <div style="font-size:1rem;font-weight:700;">1. 資金未到着</div>
+            <div style="font-size:.8rem;opacity:.8;margin-top:4px;">支払い待ち</div>
+          </div>
+          <div style="display:flex;align-items:center;font-size:1.5rem;color:#6B7280;">→</div>
+          <!-- Step 2 -->
+          <div style="background:linear-gradient(135deg,#2932E1,#4F46E5);color:#fff;padding:20px 24px;border-radius:12px;text-align:center;min-width:140px;flex:1;max-width:180px;">
+            <div style="font-size:2rem;margin-bottom:8px;">🔍</div>
+            <div style="font-size:1rem;font-weight:700;">2. 審査中</div>
+            <div style="font-size:.8rem;opacity:.8;margin-top:4px;">本人確認・審査</div>
+          </div>
+          <div style="display:flex;align-items:center;font-size:1.5rem;color:#6B7280;">→</div>
+          <!-- Step 3 -->
+          <div style="background:linear-gradient(135deg,#10B981,#059669);color:#fff;padding:20px 24px;border-radius:12px;text-align:center;min-width:140px;flex:1;max-width:180px;">
+            <div style="font-size:2rem;margin-bottom:8px;">✅</div>
+            <div style="font-size:1rem;font-weight:700;">3. 有効</div>
+            <div style="font-size:.8rem;opacity:.8;margin-top:4px;">広告配信可能</div>
+          </div>
+        </div>
 
-            <!-- Step 1: 資金未到着 -->
-            <rect x="20" y="30" width="130" height="70" rx="12" fill="url(#g3)" opacity="0.9"/>
-            <text x="85" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1. 資金未到着</text>
-            <text x="85" y="78" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.8)">支払い待ち</text>
-
-            <!-- Arrow 1→2 -->
-            <path d="M155 65 L195 65" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
-
-            <!-- Step 2: 審査中 -->
-            <rect x="200" y="30" width="130" height="70" rx="12" fill="url(#g1)" opacity="0.9"/>
-            <text x="265" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2. 審査中</text>
-            <text x="265" y="78" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.8)">本人確認・審査</text>
-
-            <!-- Arrow 2→3 -->
-            <path d="M335 65 L375 65" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
-
-            <!-- Step 3: 有効 -->
-            <rect x="380" y="30" width="130" height="70" rx="12" fill="url(#g2)" opacity="0.9"/>
-            <text x="445" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3. 有効</text>
-            <text x="445" y="78" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.8)">広告配信可能</text>
-
-            <!-- Branch: 残高ゼロ -->
-            <path d="M445 100 L445 145 L310 145 L310 180" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
-            <rect x="245" y="185" width="130" height="55" rx="10" fill="url(#g3)" opacity="0.85"/>
-            <text x="310" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">残高ゼロ</text>
-            <text x="310" y="226" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)">チャージで有効に復帰</text>
-
-            <!-- Branch: 却下 -->
-            <path d="M265 100 L265 180" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
-            <rect x="195" y="185" width="140" height="55" rx="10" fill="url(#g4)" opacity="0.85"/>
-            <text x="265" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">却下</text>
-            <text x="265" y="226" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)">修正して審査中へ</text>
-
-            <!-- Return arrows -->
-            <path d="M195 212 L170 212 L170 100 L195 100" stroke="#6B7280" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-            <path d="M375 212 L520 212 L520 65 L515 65" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-
-            <!-- Legend -->
-            <rect x="545" y="30" width="120" height="70" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
-            <text x="605" y="50" text-anchor="middle" font-size="10" font-weight="700" fill="#374151">凡例</text>
-            <line x1="555" y1="62" x2="575" y2="62" stroke="#6B7280" stroke-width="1.5"/>
-            <text x="580" y="66" font-size="9" fill="#6B7280">通常フロー</text>
-            <line x1="555" y1="80" x2="575" y2="80" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <text x="580" y="84" font-size="9" fill="#6B7280">例外パス</text>
-          </svg>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:16px 0 32px;">
+          <!-- Branch: 残高ゼロ -->
+          <div style="background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff;padding:16px 20px;border-radius:10px;text-align:center;min-width:160px;flex:1;max-width:200px;border:2px dashed rgba(255,255,255,.4);">
+            <div style="font-size:1.2rem;margin-bottom:4px;">⚠️</div>
+            <div style="font-size:.95rem;font-weight:700;">残高ゼロ</div>
+            <div style="font-size:.75rem;opacity:.8;margin-top:4px;">チャージで有効に復帰 →</div>
+          </div>
+          <!-- Branch: 却下 -->
+          <div style="background:linear-gradient(135deg,#EF4444,#DC2626);color:#fff;padding:16px 20px;border-radius:10px;text-align:center;min-width:160px;flex:1;max-width:200px;border:2px dashed rgba(255,255,255,.4);">
+            <div style="font-size:1.2rem;margin-bottom:4px;">❌</div>
+            <div style="font-size:.95rem;font-weight:700;">却下</div>
+            <div style="font-size:.75rem;opacity:.8;margin-top:4px;">修正して審査中へ ↩</div>
+          </div>
         </div>
 
         <h2>よくあるトラブルシューティングシナリオ</h2>
