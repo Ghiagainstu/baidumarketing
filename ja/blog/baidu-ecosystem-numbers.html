@@ -174,8 +174,12 @@
 .callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
+.callout-insight { background: rgba(41,50,225,.06); border-color: #2932E1; }
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
+.callout-stacked { flex-direction: column; align-items: center; text-align: center; border-left: none; border-top: 4px solid #2932E1; }
+.callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
+.callout-stacked p { font-size: .95rem; line-height: 1.7; color: #374151; }
+.callout-stacked strong { color: #111827; }
 
 
 /* Blockquote (article-content) */
@@ -450,9 +454,12 @@
         <li><strong>地図</strong>：ローカルインテント（近隣サービス、小売店舗）を持つユーザーをターゲット</li>
         </ul>
 
-        <div class="callout callout-insight">
-          <p><strong>💡 重要なポイント</strong></p>
-<p>データは製品間を横断的に流れ、単一製品プラットフォーム（GoogleやMeta単独）では実現できない行動コンテキストを広告主に提供します。百度検索で「工場設備」を検索し、その後百度フィードで製造コンテンツを閲覧するユーザー——システムはこれらのシグナルを結びつけます。</p>
+        <div class="callout callout-insight callout-stacked">
+          <div class="callout-icon">💡</div>
+          <div>
+            <strong>重要なポイント</strong>
+            <p>データは製品間を横断的に流れ、単一製品プラットフォーム（GoogleやMeta単独）では実現できない行動コンテキストを広告主に提供します。百度検索で「工場設備」を検索し、その後百度フィードで製造コンテンツを閲覧するユーザー——システムはこれらのシグナルを結びつけます。</p>
+          </div>
         </div>
 
         <div class="takeaway">
