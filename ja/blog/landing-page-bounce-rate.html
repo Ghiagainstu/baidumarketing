@@ -270,6 +270,15 @@
 .callout:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
 .callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
+/* Checklist Enhancement */
+.checklist { margin: 32px 0; padding: 28px; background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1.5px solid #C7D2FE; border-radius: 16px; }
+.checklist h3 { font-size: 1.1rem; font-weight: 700; color: #2932E1; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+.check-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; padding: 12px 16px; background: #fff; border-radius: 10px; border: 1px solid #E5E7EB; transition: transform .2s, box-shadow .2s; }
+.check-item:hover { transform: translateX(4px); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.check-icon { width: 28px; height: 28px; background: linear-gradient(135deg, #2932E1, #4F46E5); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: .9rem; flex-shrink: 0; }
+.check-text { line-height: 1.6; font-size: .95rem; color: #374151; }
+.check-text strong { color: #111827; }
+
 /* Article Meta Enhancement */
 .article-meta { display: flex; align-items: center; gap: 16px; font-size: .85rem; color: #9CA3AF; flex-wrap: wrap; margin-top: 16px; }
 .article-meta span { display: inline-flex; align-items: center; gap: 6px; }
@@ -460,7 +469,7 @@
         <h2>🔧 改善チェックリスト</h2>
 
         <div class="checklist">
-          <h3>ランディングページ公開前の確認事項</h3>
+          <h3>📋 ランディングページ公開前の確認事項</h3>
           <div class="check-item">
             <div class="check-icon">✓</div>
             <div class="check-text"><strong>中国国内ホスティングまたはCDNの利用</strong> — 主要中国都市からの読み込み時間をテスト</div>
