@@ -1160,7 +1160,26 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 document.querySelectorAll('.obf-email').forEach(function(el){el.textContent=el.dataset.u+'@'+el.dataset.d});
 document.querySelectorAll('.obf-email-link').forEach(function(el){var a=el.dataset.u+'@'+el.dataset.d;el.href='mailto:'+a;if(!el.textContent)el.textContent=a});
 document.querySelectorAll('.obf-email-icon').forEach(function(el){el.href='mailto:'+el.dataset.u+'@'+el.dataset.d});
-window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600); });</script>
+window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 600); });
+
+// Blog filter functionality
+const filterBtns = document.querySelectorAll('#blogFilter button');
+const blogCards = document.querySelectorAll('#blogGrid .blog-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    blogCards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
 
 
 
