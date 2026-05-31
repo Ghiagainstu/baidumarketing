@@ -168,6 +168,22 @@
 .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--blue); margin-bottom: 6px; }
 .stat-label { font-size: .85rem; color: var(--gray-600); }
 
+/* Key Stat */
+.key-stat { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 32px; background: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%); border-radius: 16px; margin: 32px 0; position: relative; overflow: hidden; box-shadow: 0 16px 48px rgba(41,50,225,.25); }
+.key-stat::before { content: ''; position: absolute; top: -50%; right: -30%; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,.08); }
+.key-stat::after { content: ''; position: absolute; bottom: -40%; left: -20%; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,.05); }
+.key-stat .number { font-size: 4.5rem; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -.03em; text-shadow: 0 2px 8px rgba(0,0,0,.15); position: relative; z-index: 1; }
+.key-stat .label { font-size: 1.1rem; color: rgba(255,255,255,.85); margin-top: 12px; text-align: center; font-weight: 500; position: relative; z-index: 1; letter-spacing: .02em; }
+
+/* Platforms Grid */
+.platforms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 32px 0; }
+.platform-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; text-align: center; transition: transform .25s, box-shadow .25s; }
+.platform-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.platform-card .icon { font-size: 2rem; margin-bottom: 12px; }
+.platform-card .name { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
+.platform-card .metric { font-size: 1.5rem; font-weight: 800; color: var(--blue); margin-bottom: 4px; }
+.platform-card .desc { font-size: .85rem; color: var(--gray-600); }
+
 /* Comparison Table */
 .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
 .comparison-table th { background: var(--blue); color: #fff; padding: 16px; text-align: left; font-weight: 600; font-size: .95rem; }
@@ -435,31 +451,99 @@
     <div class="container">
       <article class="article-content">
 
-        <div class="stats-grid">
-          <div class="stat-card"><div class="stat-number">7.08億</div><div class="stat-label">百度App 月間アクティブユーザー</div></div>
-          <div class="stat-card"><div class="stat-number">150億+</div><div class="stat-label">日次フィード配信数</div></div>
-          <div class="stat-card"><div class="stat-number">34億</div><div class="stat-label">百度地図 グローバルPOI</div></div>
+        <div class="key-stat">
+          <div class="number">7.08億</div>
+          <div class="label">百度App 月間アクティブユーザー</div>
         </div>
 
         <p>百度は単なる検索エンジンではありません——月間アクティブユーザー7億人以上にサービスを提供するマルチプロダクトエコシステムです。</p>
 
-        <h2>百度エコシステム概要</h2>
+        <h2>🔍 百度エコシステム概要</h2>
+
+        <div class="platforms-grid">
+          <div class="platform-card">
+            <div class="icon">🔍</div>
+            <div class="name">百度App</div>
+            <div class="metric">7.08億</div>
+            <div class="desc">月間アクティブユーザー</div>
+          </div>
+          <div class="platform-card">
+            <div class="icon">📰</div>
+            <div class="name">百度フィード</div>
+            <div class="metric">150億+</div>
+            <div class="desc">日次配信数</div>
+          </div>
+          <div class="platform-card">
+            <div class="icon">🗺️</div>
+            <div class="name">百度地図</div>
+            <div class="metric">34億</div>
+            <div class="desc">グローバルPOI</div>
+          </div>
+        </div>
+
+        <h2>📊 なぜこれらの数字が広告主に重要なのか</h2>
+
+        <p><strong>百度App（7.08億MAU）：</strong>主要な検索とコンテンツのプラットフォーム。ユーザーは百度を開くと、検索だけでなく、ニュースの閲覧、ショート動画の視聴、フィードを通じた商品発見も行います。1つのアカウントでこれらのすべてにアクセスできます。</p>
+
+        <p><strong>百度フィード（日次150億以上）：</strong>フィードアルゴリズムはキーワードだけでなく、ユーザー行動に基づいてコンテンツと広告を配信します。つまり、アクティブに検索していないものの、関連トピックに興味を示したユーザーにもリーチできます。</p>
+
+        <p><strong>百度地図（34億POI）：</strong>実店舗を持つ企業にとって、百度地図広告はローカルインテントを持つユーザーを捕捉します。「近くの物流会社」といった検索はここで行われます。</p>
 
         <table class="comparison-table">
-          <thead><tr><th>製品</th><th>主要指標</th><th>広告主へのメリット</th></tr></thead>
+          <thead>
+            <tr>
+              <th>プラットフォーム</th>
+              <th>主要指標</th>
+              <th>最適な用途</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td><strong>百度App</strong></td><td>7.08億 MAU</td><td>高インテントユーザーの検索ニーズを捕捉</td></tr>
-            <tr><td><strong>百度フィード</strong></td><td>日次150億以上</td><td>発見モードのユーザーにリーチ</td></tr>
-            <tr><td><strong>百度地図</strong></td><td>34億グローバルPOI</td><td>ローカルインテントを持つユーザーをターゲット</td></tr>
+            <tr>
+              <td><strong>百度検索</strong></td>
+              <td>日次60億以上のクエリ</td>
+              <td>高インテント、取引型</td>
+            </tr>
+            <tr>
+              <td><strong>百度フィード</strong></td>
+              <td>日次150億以上</td>
+              <td>発見、認知拡大</td>
+            </tr>
+            <tr>
+              <td><strong>百度地図</strong></td>
+              <td>34億POI</td>
+              <td>ローカル、実店舗向け</td>
+            </tr>
           </tbody>
         </table>
 
-        <h3>統一アカウントの利点</h3>
-        <p>1つの百度アカウントですべての製品の広告を管理：</p>
-        <ul><li><strong>検索</strong>：ソリューションを積極的に探す高インテントユーザーを捕捉</li>
-        <li><strong>フィード</strong>：百度のコンテンツストリーム全体で発見モードのユーザーにリーチ</li>
-        <li><strong>地図</strong>：ローカルインテント（近隣サービス、小売店舗）を持つユーザーをターゲット</li>
-        </ul>
+        <h2>🌍 国際ブランドにとっての優位性</h2>
+
+        <p>データが異なる広告システムに分散している他のプラットフォームとは異なり、百度はすべてを1つのアカウントで運営します。検索キャンペーンデータがフィードのターゲティングに活用され、地図広告は検索で見つけた同じユーザーにリーチします。統合されたエコシステムであり、サイロ化された製品の集合ではありません。</p>
+
+        <p>中国の顧客にリーチしようとする広告主にとって、百度は独自の価値を提供します：検索インテントデータとディスカバリーリーチの組み合わせを単一のプラットフォームで実現し、中国デジタルマーケティングの出発点となる数字で裏付けられています。</p>
+
+        <div class="callout callout-insight callout-stacked">
+          <div class="callout-icon">💡</div>
+          <div>
+            <strong>重要なポイント</strong>
+            <p>データは製品間を横断的に流れ、単一製品プラットフォーム（GoogleやMeta単独）では実現できない行動コンテキストを広告主に提供します。百度検索で「工場設備」を検索し、その後百度フィードで製造コンテンツを閲覧するユーザー——システムはこれらのシグナルを結びつけます。</p>
+          </div>
+        </div>
+
+        <div class="takeaway-box">
+          <h3>📋 まとめ</h3>
+          <ul>
+            <li><strong>マルチプロダクト：</strong>百度は検索エンジンではなく、月間7億ユーザーのマルチプロダクトエコシステム</li>
+            <li><strong>統一管理：</strong>1アカウントで検索・フィード・地図の全プロダクトに広告配信可能</li>
+            <li><strong>データ統合：</strong>クロスプロダクト行動データは、単一プラットフォームでは実現できない精度のターゲティングを可能にする</li>
+          </ul>
+        </div>
+
+        <div class="cta-box">
+          <h3>7.08億ユーザーにリーチしませんか？</h3>
+          <p>国際ブランドの百度キャンペーン構築と最適化を支援します。</p>
+          <a href="/ja/contact" class="cta-btn">今すぐ始める</a>
+        </div>
 
         <div class="callout callout-insight callout-stacked">
           <div class="callout-icon">💡</div>
