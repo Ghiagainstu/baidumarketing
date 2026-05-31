@@ -680,59 +680,63 @@
           </div>
         </div>
 
-        <h3>このステータスはどのくらい続くか</h3>
-        <p>コンプライアンス問題を修正し再提出するまで続きます。修正情報を提出した後の再審査は通常1-3営業日かかります。</p>
 
-        <h2>ステータスフロー：アカウントが状態間を移動する仕組み</h2>
+        <h2>📊 ステータスフロー：アカウントが状態間を移動する仕組み</h2>
 
         <div class="svg-chart-wrapper">
-          <svg width="680" height="320" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+          <svg width="680" height="280" viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEF3C7"/><stop offset="100%" stop-color="#FDE68A"/></linearGradient>
-              <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEE2E2"/><stop offset="100%" stop-color="#FCA5A5"/></linearGradient>
-              <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#DBEAFE"/><stop offset="100%" stop-color="#93C5FD"/></linearGradient>
-              <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D1FAE5"/><stop offset="100%" stop-color="#6EE7B7"/></linearGradient>
-              <linearGradient id="g5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEE2E2"/><stop offset="100%" stop-color="#F87171"/></linearGradient>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient>
+              <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/></linearGradient>
+              <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></linearGradient>
+              <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#DC2626"/></linearGradient>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#6B7280"/></marker>
             </defs>
-            <!-- 資金未到着 -->
-            <rect x="20" y="40" width="120" height="60" rx="10" fill="url(#g1)" stroke="#F59E0B" stroke-width="1.5"/>
-            <text x="80" y="68" text-anchor='middle' font-size="11" font-weight="700" fill="#92400E">資金</text>
-            <text x="80" y="84" text-anchor='middle' font-size="11" font-weight="700" fill="#92400E">未到着</text>
-            <!-- Arrow -->
-            <path d="M145 70 L195 70" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
-            <!-- 審査中 -->
-            <rect x="200" y="40" width="120" height="60" rx="10" fill="url(#g3)" stroke="#3B82F6" stroke-width="1.5"/>
-            <text x="260" y="75" text-anchor='middle' font-size="11" font-weight="700" fill="#1E40AF">審査中</text>
-            <!-- Arrow -->
-            <path d="M325 70 L375 70" stroke="#6B7280" stroke-width="2"/>
-            <!-- 有効 -->
-            <rect x="380" y="40" width="120" height="60" rx="10" fill="url(#g4)" stroke="#10B981" stroke-width="1.5"/>
-            <text x="440" y="68" text-anchor='middle' font-size="11" font-weight="700" fill="#065F46">有効</text>
-            <text x="440" y="84" text-anchor='middle' font-size="10" font-weight="600" fill="#065F46">広告配信可能</text>
-            <!-- 残高ゼロ branch -->
-            <path d="M440 100 L440 140 L300 140 L300 200 L350 200" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <rect x="280" y="190" width="140" height="50" rx="10" fill="url(#g2)" stroke="#EF4444" stroke-width="1.5"/>
-            <text x="350" y="215" text-anchor='middle' font-size="11" font-weight="700" fill="#991B1B">残高ゼロ</text>
-            <text x="350" y="229" text-anchor='middle' font-size="9" fill="#991B1B">チャージで再開</text>
-            <!-- 却下 -->
-            <path d="M325 70 L325 200" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <rect x="200" y="190" width="120" height="50" rx="10" fill="url(#g5)" stroke="#EF4444" stroke-width="1.5"/>
-            <text x="260" y="215" text-anchor='middle' font-size="11" font-weight="700" fill="#991B1B">却下</text>
-            <text x="260" y="229" text-anchor='middle' font-size="9" fill="#991B1B">修正して再提出</text>
-            <!-- Back to 審査中 from 却下 -->
-            <path d="M200 215 L185 215 L185 100 L195 100" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <!-- Back to 有効 from 残高ゼロ -->
-            <path d="M280 215 L265 215 L265 100 L375 100" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <!-- Arrow markers -->
-            <defs>
-              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/></marker>
-            </defs>
+
+            <!-- Step 1: 資金未到着 -->
+            <rect x="20" y="30" width="130" height="70" rx="12" fill="url(#g3)" opacity="0.9"/>
+            <text x="85" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1. 資金未到着</text>
+            <text x="85" y="78" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.8)">支払い待ち</text>
+
+            <!-- Arrow 1→2 -->
+            <path d="M155 65 L195 65" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+            <!-- Step 2: 審査中 -->
+            <rect x="200" y="30" width="130" height="70" rx="12" fill="url(#g1)" opacity="0.9"/>
+            <text x="265" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2. 審査中</text>
+            <text x="265" y="78" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.8)">本人確認・審査</text>
+
+            <!-- Arrow 2→3 -->
+            <path d="M335 65 L375 65" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+            <!-- Step 3: 有効 -->
+            <rect x="380" y="30" width="130" height="70" rx="12" fill="url(#g2)" opacity="0.9"/>
+            <text x="445" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3. 有効</text>
+            <text x="445" y="78" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.8)">広告配信可能</text>
+
+            <!-- Branch: 残高ゼロ -->
+            <path d="M445 100 L445 145 L310 145 L310 180" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+            <rect x="245" y="185" width="130" height="55" rx="10" fill="url(#g3)" opacity="0.85"/>
+            <text x="310" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">残高ゼロ</text>
+            <text x="310" y="226" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)">チャージで有効に復帰</text>
+
+            <!-- Branch: 却下 -->
+            <path d="M265 100 L265 180" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+            <rect x="195" y="185" width="140" height="55" rx="10" fill="url(#g4)" opacity="0.85"/>
+            <text x="265" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">却下</text>
+            <text x="265" y="226" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)">修正して審査中へ</text>
+
+            <!-- Return arrows -->
+            <path d="M195 212 L170 212 L170 100 L195 100" stroke="#6B7280" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+            <path d="M375 212 L520 212 L520 65 L515 65" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
             <!-- Legend -->
-            <text x="540" y="50" font-size="11" font-weight="700" fill="#374151">凡例</text>
-            <line x1="530" y1="60" x2="550" y2="60" stroke="#6B7280" stroke-width="1.5"/>
-            <text x="555" y="64" font-size="10" fill="#6B7280">通常フロー</text>
-            <line x1="530" y1="80" x2="550" y2="80" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <text x="555" y="84" font-size="10" fill="#6B7280">例外パス</text>
+            <rect x="545" y="30" width="120" height="70" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+            <text x="605" y="50" text-anchor="middle" font-size="10" font-weight="700" fill="#374151">凡例</text>
+            <line x1="555" y1="62" x2="575" y2="62" stroke="#6B7280" stroke-width="1.5"/>
+            <text x="580" y="66" font-size="9" fill="#6B7280">通常フロー</text>
+            <line x1="555" y1="80" x2="575" y2="80" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <text x="580" y="84" font-size="9" fill="#6B7280">例外パス</text>
           </svg>
         </div>
 
