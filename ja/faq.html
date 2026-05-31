@@ -35,7 +35,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <em>, </em>::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     a { color: inherit; text-decoration: none; }
@@ -55,7 +55,7 @@
       --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    /* ===== DARK THEME ===== */
+    /<em> ===== DARK THEME ===== </em>/
     [data-theme="dark"] {
       --blue: #6366F1; --blue-dark: #818CF8; --blue-deep: #4F46E5;
       --blue-light: rgba(99,102,241,.12); --blue-glow: rgba(99,102,241,.15); --blue-subtle: rgba(99,102,241,.06);
@@ -138,7 +138,7 @@
     [data-theme="dark"] .hero-decoration-blob { opacity: 0.15; }
     [data-theme="dark"] .back-to-top { background: var(--gray-200) !important; color: var(--gray-600); }
     [data-theme="dark"] .back-to-top:hover { background: var(--blue) !important; color: #fff; }
-    /* Theme toggle */
+    /<em> Theme toggle </em>/
     .lang-switch { position: relative; z-index: 9999 !important; }
     .lang-switch-btn {
       display: inline-flex;
@@ -216,7 +216,7 @@
     section { padding: 96px 0; }
     section:nth-child(even) { background: var(--gray-50); }
 
-    /* NAV */
+    /<em> NAV </em>/
     nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--gray-800); transition: color var(--transition-base); white-space: nowrap; flex-shrink: 0; }
@@ -239,7 +239,7 @@
     .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
     .nav-overlay.active { opacity: 1; pointer-events: auto; }
 
-    /* PAGE HERO */
+    /<em> PAGE HERO </em>/
     .page-hero { padding: 80px 0 60px; background: var(--gradient-hero); position: relative; overflow: hidden; }
     .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; letter-spacing: -.02em; color: var(--gray-800); margin-bottom: 16px; }
     .page-hero h1 em { color: var(--blue); font-style: normal; }
@@ -247,10 +247,10 @@
     .breadcrumb { font-size: .85rem; color: var(--gray-400); margin-bottom: 20px; }
     .breadcrumb a { color: var(--blue); }
 
-    /* HERO BADGE */
+    /<em> HERO BADGE </em>/
     .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(41,50,225,.08); color: var(--blue); font-size: .78rem; font-weight: 600; padding: 5px 14px; border-radius: 999px; border: 1px solid rgba(41,50,225,.12); }
 
-    /* SECTION HEADINGS */
+    /<em> SECTION HEADINGS </em>/
     .section-label { font-size: .75rem; font-weight: 700; color: var(--blue); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
     .section-title { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; line-height: 1.15; color: var(--gray-900); letter-spacing: -.03em; margin-bottom: 16px; }
     .section-sub { font-size: 1rem; color: var(--gray-600); max-width: 600px; line-height: 1.7; }
@@ -258,7 +258,7 @@
     .section-header.center { text-align: center; }
     .section-header.center .section-sub { margin: 0 auto; }
 
-    /* よくある質問 */
+    /<em> よくある質問 </em>/
     .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
     .faq-item { border-bottom: 1px solid var(--gray-200); }
     .faq-question {
@@ -290,14 +290,14 @@
       padding-bottom: 20px;
     }
 
-    /* CTA BLOCK */
+    /<em> CTA BLOCK </em>/
     .btn-primary { background: var(--gradient-brand); color: #fff; padding: 14px 28px; border-radius: 10px; font-size: .95rem; font-weight: 600; box-shadow: 0 4px 14px rgba(41,50,225,.35); transition: transform var(--transition-base), box-shadow var(--transition-base); display: inline-block; position: relative; overflow: hidden; }
     .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transition: left .6s ease; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(41,50,225,.4); }
     .btn-primary:hover::before { left: 120%; }
     .btn-primary:active { transform: translateY(0) scale(.98); }
 
-    /* FOOTER */
+    /<em> FOOTER </em>/
     footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
     .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
@@ -317,32 +317,32 @@
     .footer-social a:hover svg { fill: #fff !important; stroke: #fff !important; }
     .footer-social a svg { width: 18px; height: 18px; }
 
-    /* よくある質問 ANSWER STRONG */
+    /<em> よくある質問 ANSWER STRONG </em>/
     .faq-answer strong { color: var(--gray-800); }
     [data-theme="dark"] .faq-answer strong { color: var(--gray-700); }
 
-    /* よくある質問 CTA STATS */
+    /<em> よくある質問 CTA STATS </em>/
     .faq-cta-stats { display: flex; justify-content: center; gap: 40px; margin-bottom: 8px; }
     .faq-cta-stat { text-align: center; }
     .faq-cta-num { font-size: 2rem; font-weight: 800; color: var(--blue); line-height: 1.2; }
     .faq-cta-label { font-size: .78rem; color: var(--gray-400); line-height: 1.4; margin-top: 4px; }
     @media (max-width: 640px) { .faq-cta-stats { gap: 24px; } .faq-cta-num { font-size: 1.6rem; } }
 
-    /* BACK TO TOP */
+    /<em> BACK TO TOP </em>/
     .back-to-top { position: fixed; bottom: 32px; right: 32px; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(41,50,225,.35); opacity: 0; pointer-events: none; transition: opacity .3s, transform var(--transition-base), box-shadow var(--transition-base); }
     .back-to-top.visible { opacity: 1; pointer-events: auto; }
     .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(41,50,225,.45); }
     .back-to-top:active { transform: scale(.92); }
     .back-to-top svg { width: 20px; height: 20px; }
 
-    /* RESPONSIVE */
+    /<em> RESPONSIVE </em>/
     @media (max-width: 900px) {
       section { padding: 64px 0; }
       .nav-links { display: none; }
       .nav-cta { display: none; }
       .page-hero { padding: 56px 0 40px; }
       .footer-top { grid-template-columns: 1fr 1fr; }
-      /* Mobile nav links panel */
+      /<em> Mobile nav links panel </em>/
       .nav-links.open {
         display: flex !important;
         flex-direction: column;
@@ -374,7 +374,7 @@
         color: var(--blue);
       }
       .nav-links.open a::after { display: none; }
-      /* Mobile CTA inside menu */
+      /<em> Mobile CTA inside menu </em>/
       .nav-mobile-cta {
         display: block;
         margin: 12px 24px 20px;
@@ -386,7 +386,7 @@
         font-weight: 600;
         font-size: .95rem;
       }
-      /* Mobile theme toggle inside menu */
+      /<em> Mobile theme toggle inside menu </em>/
       .nav-mobile-theme {
         display: flex;
         align-items: center;
@@ -982,7 +982,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **はい。** 百度は**海外企業・法人**のアカウント開設に対応しています。中国の国内営業許可証がなくても始められます——手続きは当社が代行します。
+          <strong>はい。</strong> 百度は<strong>海外企業・法人</strong>のアカウント開設に対応しています。中国の国内営業許可証がなくても始められます——手続きは当社が代行します。
         </div>
       </div>
       <div class="faq-item">
@@ -1000,7 +1000,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **必要書類：**<br> (a) 営業許可証のコピー＋公証翻訳（社印押印）<br> (b) 政府ウェブサイトの企業情報スクリーンショット＋公証翻訳（社印押印）<br> (c) 銀行口座証明書＋指定機関による翻訳書類（社印押印）。例：銀行振込記録、銀行取引明細書、納税証明書、小切手、月次明細書<br> (d, 任意) ランディングページトップページのスクリーンショット（社印押印）<br><br> 書類のご用意が難しい場合は、喜んでサポートいたします。
+          <strong>必要書類：</strong><br> (a) 営業許可証のコピー＋公証翻訳（社印押印）<br> (b) 政府ウェブサイトの企業情報スクリーンショット＋公証翻訳（社印押印）<br> (c) 銀行口座証明書＋指定機関による翻訳書類（社印押印）。例：銀行振込記録、銀行取引明細書、納税証明書、小切手、月次明細書<br> (d, 任意) ランディングページトップページのスクリーンショット（社印押印）<br><br> 書類のご用意が難しい場合は、喜んでサポートいたします。
         </div>
       </div>
     </div>
@@ -1019,7 +1019,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **はい。** 年額**600元**のアカウント認証費用があります。新規ユーザーの場合、この費用は初年度終了後に広告アカウントに返金されます——実質的に初年度は無料です。
+          <strong>はい。</strong> 年額<strong>600元</strong>のアカウント認証費用があります。新規ユーザーの場合、この費用は初年度終了後に広告アカウントに返金されます——実質的に初年度は無料です。
         </div>
       </div>
       <div class="faq-item">
@@ -1028,7 +1028,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          百度の公式ルールでは最低チャージ額は**2,400元**です。ただし、送金手数料の節約と着金時間の短縮のため、1回あたり**10,000元以上**のチャージをおすすめします。
+          百度の公式ルールでは最低チャージ額は<strong>2,400元</strong>です。ただし、送金手数料の節約と着金時間の短縮のため、1回あたり<strong>10,000元以上</strong>のチャージをおすすめします。
         </div>
       </div>
       <div class="faq-item">
@@ -1037,7 +1037,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **前払い広告費：** 最低**2,400元**<br> **サービス料：** **100米ドル**〜（書類翻訳、書類審査、申請手続き代行を含む）<br><br> 必要書類のご用意が難しい場合は、喜んでサポートいたします。
+          <strong>前払い広告費：</strong> 最低<strong>2,400元</strong><br> <strong>サービス料：</strong> <strong>100米ドル</strong>〜（書類翻訳、書類審査、申請手続き代行を含む）<br><br> 必要書類のご用意が難しい場合は、喜んでサポートいたします。
         </div>
       </div>
     </div>
@@ -1056,7 +1056,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **いいえ。** 百度は前払いのみ対応しています。広告を配信するには、アカウントに十分な残高が必要です。クレジット（後払い）のオプションはありません。
+          <strong>いいえ。</strong> 百度は前払いのみ対応しています。広告を配信するには、アカウントに十分な残高が必要です。クレジット（後払い）のオプションはありません。
         </div>
       </div>
       <div class="faq-item">
@@ -1065,7 +1065,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **クリック単価（CPC）：** ユーザーが広告をクリックした場合のみ課金されます。<br> 実際のCPC ＝（競合の入札額 × 競合の品質スコア ÷ あなたの品質スコア）＋ 0.01元<br> また、**oCPC**（目標コンバージョン単価）を使用すれば、クリックではなく完了したコンバージョンに対して最適化されます。
+          <strong>クリック単価（CPC）：</strong> ユーザーが広告をクリックした場合のみ課金されます。<br> 実際のCPC ＝（競合の入札額 × 競合の品質スコア ÷ あなたの品質スコア）＋ 0.01元<br> また、<strong>oCPC</strong>（目標コンバージョン単価）を使用すれば、クリックではなく完了したコンバージョンに対して最適化されます。
         </div>
       </div>
       <div class="faq-item">
@@ -1074,7 +1074,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **クリック単価：** 一律の価格はありません。競合の少ないキーワードでは数元/クリックです。競合の激しい業界では、人気キーワードが**100元以上**/クリックになることもあります。<br> **最低月額予算：** 最低日額予算は**50元**で、理論上の月額最低額は**1,500元**です。実際の費用はターゲットキーワードの検索ボリュームによって変動します。上限はありません。
+          <strong>クリック単価：</strong> 一律の価格はありません。競合の少ないキーワードでは数元/クリックです。競合の激しい業界では、人気キーワードが<strong>100元以上</strong>/クリックになることもあります。<br> <strong>最低月額予算：</strong> 最低日額予算は<strong>50元</strong>で、理論上の月額最低額は<strong>1,500元</strong>です。実際の費用はターゲットキーワードの検索ボリュームによって変動します。上限はありません。
         </div>
       </div>
     </div>
@@ -1093,7 +1093,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **できません。** アカウント審査に合格するまで広告は配信できません。不合格の理由を解消し、承認を得てからでないと広告は配信されません。
+          <strong>できません。</strong> アカウント審査に合格するまで広告は配信できません。不合格の理由を解消し、承認を得てからでないと広告は配信されません。
         </div>
       </div>
       <div class="faq-item">
@@ -1102,7 +1102,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **よくある却下理由：**<br> • 資格・ライセンスの期限切れ<br> • 禁止用語の使用<br> • ウェブサイトにアクセスできない、またはオフライン<br> • 虚偽・誇大・誤解を招く内容<br> • その他のコンプライアンス違反
+          <strong>よくある却下理由：</strong><br> • 資格・ライセンスの期限切れ<br> • 禁止用語の使用<br> • ウェブサイトにアクセスできない、またはオフライン<br> • 虚偽・誇大・誤解を招く内容<br> • その他のコンプライアンス違反
         </div>
       </div>
       <div class="faq-item">
@@ -1120,7 +1120,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          以下の手順で対応してください：<br> **ステップ1：** 審査コメントをよく読む<br> **ステップ2：** 指摘された内容を修正する<br> **ステップ3：** 再審査を申請する<br> **ステップ4：** 却下が誤りと思われる場合は、特別審査の異議申し立てを行う<br><br> 当社管理クライアントについては、このプロセスを代行します。
+          以下の手順で対応してください：<br> <strong>ステップ1：</strong> 審査コメントをよく読む<br> <strong>ステップ2：</strong> 指摘された内容を修正する<br> <strong>ステップ3：</strong> 再審査を申請する<br> <strong>ステップ4：</strong> 却下が誤りと思われる場合は、特別審査の異議申し立てを行う<br><br> 当社管理クライアントについては、このプロセスを代行します。
         </div>
       </div>
       <div class="faq-item">
@@ -1129,7 +1129,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          **はい。** 医療や金融などの規制業界では以下が必要です：<br> • 業界固有のライセンスの提出（医療機関開設許可証など）<br> • 広告コピーおよびランディングページでの効能主張の禁止<br> • すべての主張が中国の広告規制に準拠し、裏付けがあることの確認
+          <strong>はい。</strong> 医療や金融などの規制業界では以下が必要です：<br> • 業界固有のライセンスの提出（医療機関開設許可証など）<br> • 広告コピーおよびランディングページでの効能主張の禁止<br> • すべての主張が中国の広告規制に準拠し、裏付けがあることの確認
         </div>
       </div>
     </div>
@@ -1157,7 +1157,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          低いです。クリック課金またはインプレッション課金を選択でき、最低日額は**50元**です。常に支出をコントロールできるため、大きなコミットメントなしでテスト運用できます。
+          低いです。クリック課金またはインプレッション課金を選択でき、最低日額は<strong>50元</strong>です。常に支出をコントロールできるため、大きなコミットメントなしでテスト運用できます。
         </div>
       </div>
       <div class="faq-item">
@@ -1303,7 +1303,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          oCPCは2段階で動作します。第1段階は学習期間で、システムがモデル構築のためにコンバージョンデータを収集します。この期間中に十分なコンバージョン数（業界によりますが通常**数日以内に30件以上**）に達すると、第2段階に移行し、自動入札が開始されます。この閾値に届かない場合は、担当者がターゲティングの拡大やコンバージョンアクションの緩和をご提案します。
+          oCPCは2段階で動作します。第1段階は学習期間で、システムがモデル構築のためにコンバージョンデータを収集します。この期間中に十分なコンバージョン数（業界によりますが通常<strong>数日以内に30件以上</strong>）に達すると、第2段階に移行し、自動入札が開始されます。この閾値に届かない場合は、担当者がターゲティングの拡大やコンバージョンアクションの緩和をご提案します。
         </div>
       </div>
       <div class="faq-item">
@@ -1321,7 +1321,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          まず、まだ学習期間中（配信開始から**最初の3日間**）かを確認してください。その期間中のオーバーシュートは正常です。学習期間を過ぎている場合は、目標CPAが市場相場に対して低すぎないか、コンバージョントラッキングが正確か、最近キャンペーン設定を変更していないかを確認します。当社チームがこれを監視し、必要に応じて調整します。
+          まず、まだ学習期間中（配信開始から<strong>最初の3日間</strong>）かを確認してください。その期間中のオーバーシュートは正常です。学習期間を過ぎている場合は、目標CPAが市場相場に対して低すぎないか、コンバージョントラッキングが正確か、最近キャンペーン設定を変更していないかを確認します。当社チームがこれを監視し、必要に応じて調整します。
         </div>
       </div>
       <div class="faq-item">
@@ -1367,7 +1367,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          まずランディングページです。読み込みが遅いと（**3秒以上**）、ほとんどの訪問者は内容を読む前に離脱します。次に、ページが広告の約束と一致しているかを確認します——広告が「医療ブランド向け百度広告」と謳っているのに、ページが一般的な内容ならユーザーは離脱します。最後に、フォームやお問い合わせボタンが**ファーストビュー**にあるかを確認します。スクロールしないと連絡手段が見つからない場合、多くのユーザーはそこで離脱します。
+          まずランディングページです。読み込みが遅いと（<strong>3秒以上</strong>）、ほとんどの訪問者は内容を読む前に離脱します。次に、ページが広告の約束と一致しているかを確認します——広告が「医療ブランド向け百度広告」と謳っているのに、ページが一般的な内容ならユーザーは離脱します。最後に、フォームやお問い合わせボタンが<strong>ファーストビュー</strong>にあるかを確認します。スクロールしないと連絡手段が見つからない場合、多くのユーザーはそこで離脱します。
         </div>
       </div>
       <div class="faq-item">
@@ -1439,7 +1439,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          CNNIC第57次統計報告（2026年2月）によると、検索エンジン利用率は2021年の**79.2%**から2025年の**69.5%**に低下しました。これは確かな変化ですが、文脈が重要です。中国では依然として**7億8200万人**が検索を利用しています——ヨーロッパ全域を上回る規模です。低下は関心が短尺動画やAIツールに分散していることを反映しており、検索がなくなるわけではありません。広告主にとっては、検索のみのキャンペーンでは従来ほどファネルをカバーできなくなっていることを意味します。現実的な対応は、百度検索とフィードプレースメントを併用し、能動的意図（検索）と受動的発見（フィード）の両方を捉えることです。割合の低下だけを見て検索から全面撤退するのは間違いです。
+          CNNIC第57次統計報告（2026年2月）によると、検索エンジン利用率は2021年の<strong>79.2%</strong>から2025年の<strong>69.5%</strong>に低下しました。これは確かな変化ですが、文脈が重要です。中国では依然として<strong>7億8200万人</strong>が検索を利用しています——ヨーロッパ全域を上回る規模です。低下は関心が短尺動画やAIツールに分散していることを反映しており、検索がなくなるわけではありません。広告主にとっては、検索のみのキャンペーンでは従来ほどファネルをカバーできなくなっていることを意味します。現実的な対応は、百度検索とフィードプレースメントを併用し、能動的意図（検索）と受動的発見（フィード）の両方を捉えることです。割合の低下だけを見て検索から全面撤退するのは間違いです。
         </div>
       </div>
       <div class="faq-item">
@@ -1448,7 +1448,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          CNNICによると、2025年末時点で中国の生成AI利用者は**6億200万人**（普及率**42.8%**）に達し、AIツールの利用時間は**前年比176.7%増**です。これは実際の行動変化であり、これまで検索に向かっていた情報検索クエリの一部がAIチャットボットに流れています。しかし、「産業機器を購入」「Xのサプライヤーを探す」といった購買意図のある検索は依然として検索エンジン上で行われます——AIツールは広告を配信せず、取引も成立させないからです。百度も自社AI製品（Ernie Bot、AI検索サマリー）を検索結果に直接統合しており、AI拡張された検索結果でも百度広告枠は表示され続けます。この領域は注視すべきですが、まだ慌てる必要はありません。
+          CNNICによると、2025年末時点で中国の生成AI利用者は<strong>6億200万人</strong>（普及率<strong>42.8%</strong>）に達し、AIツールの利用時間は<strong>前年比176.7%増</strong>です。これは実際の行動変化であり、これまで検索に向かっていた情報検索クエリの一部がAIチャットボットに流れています。しかし、「産業機器を購入」「Xのサプライヤーを探す」といった購買意図のある検索は依然として検索エンジン上で行われます——AIツールは広告を配信せず、取引も成立させないからです。百度も自社AI製品（Ernie Bot、AI検索サマリー）を検索結果に直接統合しており、AI拡張された検索結果でも百度広告枠は表示され続けます。この領域は注視すべきですが、まだ慌てる必要はありません。
         </div>
       </div>
       <div class="faq-item">
@@ -1457,7 +1457,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          この3つの指標は広告システムの異なるレイヤーで動作します。**CPM**（インプレッション単価）は1,000インプレッションあたりの実際の支払額——これはアウトプットであり、設定するものではありません。**oCPM**（最適化CPM）は入札戦略で、目標単価をプラットフォームに伝えると、リアルタイムで入札を調整してその目標達成を目指します。**eCPM**（実効CPM）はシステム内部のランキング指標：あなたの入札額×品質スコアです。システムは競合広告を入札額単独ではなくeCPMでランキングします。一言で：広告主はoCPMで入札し、システムはeCPMでランキングし、最終的なコストはCPMとして表示されます。
+          この3つの指標は広告システムの異なるレイヤーで動作します。<strong>CPM</strong>（インプレッション単価）は1,000インプレッションあたりの実際の支払額——これはアウトプットであり、設定するものではありません。<strong>oCPM</strong>（最適化CPM）は入札戦略で、目標単価をプラットフォームに伝えると、リアルタイムで入札を調整してその目標達成を目指します。<strong>eCPM</strong>（実効CPM）はシステム内部のランキング指標：あなたの入札額×品質スコアです。システムは競合広告を入札額単独ではなくeCPMでランキングします。一言で：広告主はoCPMで入札し、システムはeCPMでランキングし、最終的なコストはCPMとして表示されます。
         </div>
       </div>
       <div class="faq-item">
@@ -1466,7 +1466,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          コンバージョンデータ次第です。oCPMは**広告グループあたり週30件以上**のコンバージョンがある場合に最も効果を発揮します——システムが効果的に最適化するには十分なシグナルが必要です。始めたばかりかコンバージョン数が少ない場合は、手動入札の方がコントロールしやすいです。百度でのほとんどのリード獲得・ECキャンペーンでは、学習期間終了後のoCPMの方がコンバージョン単価が低くなることが一般的です。当社が業界やキャンペーン目標に基づいて最適なモデルの選択と設定を支援します。
+          コンバージョンデータ次第です。oCPMは<strong>広告グループあたり週30件以上</strong>のコンバージョンがある場合に最も効果を発揮します——システムが効果的に最適化するには十分なシグナルが必要です。始めたばかりかコンバージョン数が少ない場合は、手動入札の方がコントロールしやすいです。百度でのほとんどのリード獲得・ECキャンペーンでは、学習期間終了後のoCPMの方がコンバージョン単価が低くなることが一般的です。当社が業界やキャンペーン目標に基づいて最適なモデルの選択と設定を支援します。
         </div>
       </div>
       <div class="faq-item">
@@ -1475,7 +1475,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          CPM上昇の原因は通常3つのいずれかです：(a) 新規競合がオークションに参入し入札価格を押し上げている、(b) **品質スコアが低下**し、システムがより高いインプレッション単価を課している、(c) ターゲティングが広すぎて、より高価なセグメントで競合している。最も効果的な対策は入札額を下げることではありません——キーワードと広告の整合性を高め、ランディングページの読み込み速度を最適化して品質スコアを改善することです。それでもCPMが上昇し続ける場合は、他のアクティブなキャンペーンとのオーディエンス重複により自己競合を起こしていないか確認してください。
+          CPM上昇の原因は通常3つのいずれかです：(a) 新規競合がオークションに参入し入札価格を押し上げている、(b) <strong>品質スコアが低下</strong>し、システムがより高いインプレッション単価を課している、(c) ターゲティングが広すぎて、より高価なセグメントで競合している。最も効果的な対策は入札額を下げることではありません——キーワードと広告の整合性を高め、ランディングページの読み込み速度を最適化して品質スコアを改善することです。それでもCPMが上昇し続ける場合は、他のアクティブなキャンペーンとのオーディエンス重複により自己競合を起こしていないか確認してください。
         </div>
       </div>
       <div class="faq-item">
@@ -1484,7 +1484,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          いいえ。実際、CPM上昇は広告品質が改善され、システムが広告を**より価値の高いトラフィックプール**に押し上げているサインであることが多いです。重要な判断基準：CTRとCVRがCPMと共に上昇し、CPAが低下または横ばいであれば、高いインプレッションコストは十分に元が取れています。実際のECキャンペーン事例では、CPMが**28元から36元**に上昇する一方で、CPAは**120元から72元**に低下——40%の改善です。CPM単独ではなく、指標チェーン全体を監視しましょう。
+          いいえ。実際、CPM上昇は広告品質が改善され、システムが広告を<strong>より価値の高いトラフィックプール</strong>に押し上げているサインであることが多いです。重要な判断基準：CTRとCVRがCPMと共に上昇し、CPAが低下または横ばいであれば、高いインプレッションコストは十分に元が取れています。実際のECキャンペーン事例では、CPMが<strong>28元から36元</strong>に上昇する一方で、CPAは<strong>120元から72元</strong>に低下——40%の改善です。CPM単独ではなく、指標チェーン全体を監視しましょう。
         </div>
       </div>
       <div class="faq-item">
@@ -1493,7 +1493,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          CPMは常に**CTR**（クリック率）、**CVR**（コンバージョン率）、**CPA**（顧客獲得単価）と合わせて読み取ってください。良いCPM上昇は、CTRとCVRが改善し、CPAが横ばいか低下します。悪いCPM上昇は、CTRとCVRが横ばいまたは低下し、CPAが上昇します。悪いパターンが見られた場合の対策は通常、**クリエイティブ最適化**または**より厳格なオーディエンスターゲティング**であり、盲目的に入札額を下げることではありません。
+          CPMは常に<strong>CTR</strong>（クリック率）、<strong>CVR</strong>（コンバージョン率）、<strong>CPA</strong>（顧客獲得単価）と合わせて読み取ってください。良いCPM上昇は、CTRとCVRが改善し、CPAが横ばいか低下します。悪いCPM上昇は、CTRとCVRが横ばいまたは低下し、CPAが上昇します。悪いパターンが見られた場合の対策は通常、<strong>クリエイティブ最適化</strong>または<strong>より厳格なオーディエンスターゲティング</strong>であり、盲目的に入札額を下げることではありません。
         </div>
       </div>
       <div class="faq-item">
@@ -1502,7 +1502,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          これらは異なるキャンペーン目標に対応する3つの課金モデルです。**CPM**（インプレッション単価）は1,000回表示あたりの課金——ブランド認知に最適。**CPC**（クリック単価）はクリックされた場合のみ課金——検索意図に理想。**oCPM**（最適化CPM）はAI駆動型——目標単価を設定すれば百度が入札を調整してコンバージョンを最大化、十分なコンバージョンデータ（週30件以上）があるパフォーマンスフィードキャンペーンに最適。課金モデルの選択ミスは、百度で最も多い予算浪費の原因です。
+          これらは異なるキャンペーン目標に対応する3つの課金モデルです。<strong>CPM</strong>（インプレッション単価）は1,000回表示あたりの課金——ブランド認知に最適。<strong>CPC</strong>（クリック単価）はクリックされた場合のみ課金——検索意図に理想。<strong>oCPM</strong>（最適化CPM）はAI駆動型——目標単価を設定すれば百度が入札を調整してコンバージョンを最大化、十分なコンバージョンデータ（週30件以上）があるパフォーマンスフィードキャンペーンに最適。課金モデルの選択ミスは、百度で最も多い予算浪費の原因です。
         </div>
       </div>
     </div>
