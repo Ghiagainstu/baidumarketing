@@ -76,7 +76,7 @@
     .footer-col ul li a { font-size: .85rem; color: #9CA3AF; transition: color .2s; }
     .footer-col ul li a:hover { color: #fff; }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
-    .footer-copy { font-size: .82rem; color: #6B7280; }
+    .footer-copy { font-size: .82rem; color: var(--gray-500); }
     .footer-social { display: flex; gap: 14px; align-items: center; }
     .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
     .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
@@ -201,8 +201,8 @@
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 .callout-stacked { flex-direction: column; align-items: center; text-align: center; }
 .callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
-.callout-stacked p { font-size: .95rem; line-height: 1.7; color: #374151; }
-.callout-stacked strong { color: #111827; }
+.callout-stacked p { font-size: .95rem; line-height: 1.7; color: var(--gray-700); }
+.callout-stacked strong { color: var(--gray-900); }
 
 
 /* Blockquote (article-content) */
@@ -265,7 +265,7 @@
 .stat-card:nth-child(2) .stat-value { color: #10B981; }
 .stat-card:nth-child(3) .stat-value { color: #F59E0B; }
 .stat-card:nth-child(4) .stat-value { color: #7C3AED; }
-.stat-label { font-size: .9rem; color: #6B7280; line-height: 1.5; font-weight: 500; }
+.stat-label { font-size: .9rem; color: var(--gray-500); line-height: 1.5; font-weight: 500; }
 .stat-sub { font-size: .78rem; color: #9CA3AF; margin-top: 4px; line-height: 1.4; }
 .stat-icon { font-size: 2rem; margin-bottom: 8px; }
 @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr; } .stats-grid-2 { grid-template-columns: 1fr; } .stats-grid-4 { grid-template-columns: 1fr 1fr; } }
@@ -273,7 +273,7 @@
 /* Comparison Table Enhancement */
 .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,.06); }
 .comparison-table th { background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%); color: #fff; padding: 16px 18px; text-align: left; font-weight: 600; font-size: .95rem; }
-.comparison-table td { padding: 14px 18px; border-bottom: 1px solid #F3F4F6; color: #374151; font-size: .95rem; vertical-align: middle; }
+.comparison-table td { padding: 14px 18px; border-bottom: 1px solid #F3F4F6; color: var(--gray-700); font-size: .95rem; vertical-align: middle; }
 .comparison-table tr:nth-child(even) { background: #F9FAFB; }
 .comparison-table tr:hover { background: #EFF6FF; transition: background .2s; }
 .comparison-table tr:last-child td { border-bottom: none; }
@@ -281,7 +281,7 @@
 
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid; transition: transform .2s, box-shadow .2s; }
+.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid var(--blue); transition: transform .2s, box-shadow .2s; }
 .callout:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
 .callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
@@ -296,12 +296,12 @@
 
 /* List Item Card Enhancement */
 .article-content ul, .article-content ol { margin: 12px 0 24px 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
-.article-content li { padding: 14px 18px 14px 44px; background: #F9FAFB; border-radius: 10px; border: 1px solid #E5E7EB; position: relative; font-size: .95rem; line-height: 1.6; transition: transform .2s, box-shadow .2s; color: #374151; }
+.article-content li { padding: 14px 18px 14px 44px; background: #F9FAFB; border-radius: 10px; border: 1px solid #E5E7EB; position: relative; font-size: .95rem; line-height: 1.6; transition: transform .2s, box-shadow .2s; color: var(--gray-700); }
 .article-content li:hover { transform: translateX(4px); box-shadow: 0 2px 8px rgba(0,0,0,.04); }
 .article-content li::before { content: '•'; position: absolute; left: 18px; top: 14px; color: #2932E1; font-weight: 700; font-size: 1.2rem; }
 .article-content ol { counter-reset: list-counter; }
 .article-content ol li::before { content: counter(list-counter); counter-increment: list-counter; font-size: .85rem; width: 24px; height: 24px; background: linear-gradient(135deg, #2932E1, #4F46E5); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; top: 14px; left: 12px; }
-.article-content li strong { color: #111827; font-weight: 700; }
+.article-content li strong { color: var(--gray-900); font-weight: 700; }
 
 /* Process Step Enhancement */
 .process-step { display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; background: linear-gradient(135deg, #FFFFFF 0%, #EEF0FF 100%); border-radius: 16px; border: 1.5px solid #E5E7EB; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
@@ -312,8 +312,8 @@
 /* Callout Stacked (vertical) */
 .callout-stacked { flex-direction: column; align-items: center; text-align: center; }
 .callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
-.callout-stacked .callout-content strong { display: block; font-size: 1.05rem; margin-bottom: 8px; color: #111827; }
-.callout-stacked .callout-content p { font-size: .9rem; color: #6B7280; line-height: 1.7; margin: 0; }
+.callout-stacked .callout-content strong { display: block; font-size: 1.05rem; margin-bottom: 8px; color: var(--gray-900); }
+.callout-stacked .callout-content p { font-size: .9rem; color: var(--gray-500); line-height: 1.7; margin: 0; }
 
 /* Platform Pills Enhancement */
 .platform-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
@@ -346,9 +346,9 @@
 
 /* Rules Callout */
 .rules-callout { background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 16px; padding: 20px 24px; margin: 20px 0; }
-.rules-header { font-size: 1rem; font-weight: 700; color: #111827; margin-bottom: 12px; }
+.rules-header { font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 12px; }
 .rules-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-.rules-list li { font-size: .9rem; color: #6B7280; line-height: 1.6; padding-left: 20px; position: relative; }
+.rules-list li { font-size: .9rem; color: var(--gray-500); line-height: 1.6; padding-left: 20px; position: relative; }
 .rules-list li::before { content: '•'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
 
 /* Step Cards */
@@ -357,18 +357,18 @@
 .step-card:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
 .step-num { flex-shrink: 0; width: 44px; height: 44px; background: linear-gradient(135deg, #2563EB, #3B82F6); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; box-shadow: 0 2px 8px rgba(37,99,235,.3); }
 .step-content { flex: 1; }
-.step-content h3 { font-size: 1.05rem; font-weight: 700; color: #111827; margin-bottom: 8px; }
-.step-content p { font-size: .9rem; color: #6B7280; line-height: 1.7; margin: 0; }
+.step-content h3 { font-size: 1.05rem; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; }
+.step-content p { font-size: .9rem; color: var(--gray-500); line-height: 1.7; margin: 0; }
 
 /* Highlight Box */
-.highlight-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 8px; padding: 16px 20px; margin: 16px 0; text-align: center; font-size: 1.05rem; color: #374151; }
+.highlight-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 8px; padding: 16px 20px; margin: 16px 0; text-align: center; font-size: 1.05rem; color: var(--gray-700); }
 
 /* Page Type Grid */
 .page-type-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
 .page-type-card { background: linear-gradient(180deg, #FFFFFF 0%, #EEF0FF 100%); border: 1.5px solid #E5E7EB; border-radius: 8px; padding: 20px 16px; text-align: center; transition: transform .25s, box-shadow .25s; }
 .page-type-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(41,50,225,.12); }
 .page-type-icon { font-size: 2rem; margin-bottom: 10px; }
-.page-type-name { font-size: .85rem; font-weight: 600; color: #374151; }
+.page-type-name { font-size: .85rem; font-weight: 600; color: var(--gray-700); }
 @media (max-width: 640px) { .page-type-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* Deprecated List */
@@ -521,14 +521,6 @@
         <p>データが異なる広告システムに分散している他のプラットフォームとは異なり、百度はすべてを1つのアカウントで運営します。検索キャンペーンデータがフィードのターゲティングに活用され、地図広告は検索で見つけた同じユーザーにリーチします。統合されたエコシステムであり、サイロ化された製品の集合ではありません。</p>
 
         <p>中国の顧客にリーチしようとする広告主にとって、百度は独自の価値を提供します：検索インテントデータとディスカバリーリーチの組み合わせを単一のプラットフォームで実現し、中国デジタルマーケティングの出発点となる数字で裏付けられています。</p>
-
-        <div class="callout callout-insight callout-stacked">
-          <div class="callout-icon">💡</div>
-          <div>
-            <strong>重要なポイント</strong>
-            <p>データは製品間を横断的に流れ、単一製品プラットフォーム（GoogleやMeta単独）では実現できない行動コンテキストを広告主に提供します。百度検索で「工場設備」を検索し、その後百度フィードで製造コンテンツを閲覧するユーザー——システムはこれらのシグナルを結びつけます。</p>
-          </div>
-        </div>
 
         <div class="callout callout-insight callout-stacked">
           <div class="callout-icon">💡</div>
