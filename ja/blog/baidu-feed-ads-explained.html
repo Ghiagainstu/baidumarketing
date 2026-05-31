@@ -185,7 +185,7 @@
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid var(--blue); display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
@@ -268,7 +268,7 @@
 
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid; transition: transform .2s, box-shadow .2s; }
+.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid var(--blue); transition: transform .2s, box-shadow .2s; }
 .callout:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
 .callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
@@ -370,6 +370,15 @@
 /* Serve Yes/No Badges */
 .serve-yes { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #DCFCE7; color: #166534; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
+
+/* Stats Highlight */
+.stats-highlight { background: linear-gradient(135deg, #2563EB 0%, #4F46E5 50%, #7C3AED 100%); border-radius: 20px; padding: 40px 32px; margin: 32px 0; text-align: center; position: relative; overflow: hidden; box-shadow: 0 8px 32px rgba(37,99,235,.25); }
+.stats-highlight::before { content: ''; position: absolute; top: -50%; right: -20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,.15) 0%, transparent 70%); pointer-events: none; }
+.stats-highlight::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,255,255,.1) 0%, transparent 70%); pointer-events: none; }
+.stats-highlight .big-num { font-size: 3.8rem; font-weight: 900; color: #fff; margin-bottom: 12px; letter-spacing: -.02em; text-shadow: 0 2px 8px rgba(0,0,0,.15); position: relative; z-index: 1; }
+.stats-highlight .label { font-size: 1.15rem; font-weight: 600; color: rgba(255,255,255,.9); position: relative; z-index: 1; letter-spacing: .02em; }
+[data-theme="dark"] .stats-highlight { box-shadow: 0 8px 32px rgba(0,0,0,.3); }
+
 /* ===== End Enhanced Visual Styles ===== */
 
 </style>
@@ -454,9 +463,9 @@
 
         <p>百度情報流広告は、百度アプリ、ホームページ、贴吧（掲示板）のコンテンツストリーム内に表示されます。従来のディスプレイ広告とは異なり、検索履歴、閲覧パターン、行動シグナルに基づいてターゲティングされます。</p>
 
-        <div class="callout callout-insight">
-          <span class="callout-icon">💡</span>
-          <div><strong>重要なポイント：</strong>ユーザー体験を中断させる従来のディスプレイ広告とは異なり、百度情報流広告はコンテンツストリームに自然に溶け込みます。このネイティブ形式は、ユーザーがすでにコンテンツ消費のマインドセットにあるため、従来のバナー広告より3〜5倍高いエンゲージメントを生み出します。</div>
+        <div class="callout callout-insight" style="flex-direction:column;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span class="callout-icon">💡</span><strong>重要なポイント</strong></div>
+          <p style="margin:0;">ユーザー体験を中断させる従来のディスプレイ広告とは異なり、百度情報流広告はコンテンツストリームに自然に溶け込みます。このネイティブ形式は、ユーザーがすでにコンテンツ消費のマインドセットにあるため、従来のバナー広告より3〜5倍高いエンゲージメントを生み出します。</p>
         </div>
 
         <h2>情報流広告と検索広告の違い</h2>
