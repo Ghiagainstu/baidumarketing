@@ -412,6 +412,20 @@
 .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; color: #374151; }
 .takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
 
+/* Reason cards */
+.reason-cards { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; }
+.reason-card { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 20px 24px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); transition: transform .2s, box-shadow .2s; }
+.reason-card:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.reason-card-icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; font-size: 1.4rem; flex-shrink: 0; }
+.reason-card:nth-child(1) .reason-card-icon { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
+.reason-card:nth-child(2) .reason-card-icon { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); }
+.reason-card:nth-child(3) .reason-card-icon { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); }
+.reason-card:nth-child(4) .reason-card-icon { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); }
+.reason-card h4 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+.reason-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+[data-theme="dark"] .reason-card { background: var(--gray-100); border-color: var(--gray-200); }
+[data-theme="dark"] .reason-card h4 { color: var(--gray-900); }
+
 </style>
 </head>
 <body>
@@ -498,13 +512,36 @@
   </div>
 </div>
 
-<strong>ソーシャルプラットフォームにはできない意図ベースのターゲティング。</strong> 百度のスマート入札システムは、検索クエリ、デバイスタイプ、時間帯、ユーザー履歴、地理的シグナルを分析し、どの検索者が最もコンバージョンしやすいかを予測します。平日の夜9時に「高圧バルブ仕様」を検索している調達担当者は、ウィンドウショッピングではありません——百度のアルゴリズムはそれを知っています。
-
-<strong>B2Bの意思決定サイクルに合わせたリッチ広告フォーマット。</strong> B2B購入は仕様比較、資格確認、事例評価が必要です。百度の検索広告は、製品パラメータ表、プロジェクト事例ギャラリー、工場見学動画、技術ドキュメントを検索結果に直接表示できます。これにより、通常は営業チームが数週間かける信頼構築が一足飛びに進みます。
-
-<strong>B2Bの経済性に合った柔軟な入札。</strong> 手動CPC入札で主要製品キーワードを管理。oCPC（最適化クリック単価）はコンバージョン確率に基づいて入札を自動化——目標リード単価を設定すれば、システムがリアルタイムで入札を調整します。BPPのクライアントは通常、手動入札と比較してoCPCで獲得単価が20〜40%低下しています。
-
-<strong>採用できないチームの代わりになるAIツール。</strong> 百度の軽舸（QingGe）は、ビジネスの自然言語説明からキーワード戦略とクリエイティブコピーを生成します。擎舵（QingDuo）はB2B製品マーケティング画像——パラメータ表や比較チャート含む——を数分で制作します。観星盤（GuanXingPan）は業界の検索トレンドと競合環境のインテリジェンスを提供します。そして百度のAIチャットボットが時間外の問い合わせに対応し、リードを逃しません。
+<div class="reason-cards">
+  <div class="reason-card">
+    <div class="reason-card-icon">🎯</div>
+    <div>
+      <h4>ソーシャルプラットフォームにはできない意図ベースのターゲティング</h4>
+      <p>百度のスマート入札システムは、検索クエリ、デバイスタイプ、時間帯、ユーザー履歴、地理的シグナルを分析し、どの検索者が最もコンバージョンしやすいかを予測します。平日の夜9時に「高圧バルブ仕様」を検索している調達担当者は、ウィンドウショッピングではありません——百度のアルゴリズムはそれを知っています。</p>
+    </div>
+  </div>
+  <div class="reason-card">
+    <div class="reason-card-icon">📋</div>
+    <div>
+      <h4>B2Bの意思決定サイクルに合わせたリッチ広告フォーマット</h4>
+      <p>B2B購入は仕様比較、資格確認、事例評価が必要です。百度の検索広告は、製品パラメータ表、プロジェクト事例ギャラリー、工場見学動画、技術ドキュメントを検索結果に直接表示できます。これにより、通常は営業チームが数週間かける信頼構築が一足飛びに進みます。</p>
+    </div>
+  </div>
+  <div class="reason-card">
+    <div class="reason-card-icon">⚙️</div>
+    <div>
+      <h4>B2Bの経済性に合った柔軟な入札</h4>
+      <p>手動CPC入札で主要製品キーワードを管理。oCPC（最適化クリック単価）はコンバージョン確率に基づいて入札を自動化——目標リード単価を設定すれば、システムがリアルタイムで入札を調整します。BPPのクライアントは通常、手動入札と比較してoCPCで獲得単価が20〜40%低下しています。</p>
+    </div>
+  </div>
+  <div class="reason-card">
+    <div class="reason-card-icon">🤖</div>
+    <div>
+      <h4>採用できないチームの代わりになるAIツール</h4>
+      <p>百度の軽舸（QingGe）は、ビジネスの自然言語説明からキーワード戦略とクリエイティブコピーを生成します。擎舵（QingDuo）はB2B製品マーケティング画像を数分で制作。観星盤（GuanXingPan）は業界の検索トレンドと競合環境のインテリジェンスを提供。AIチャットボットが時間外の問い合わせに対応し、リードを逃しません。</p>
+    </div>
+  </div>
+</div>
 
 <div class="callout callout-insight">
   <span class="callout-icon">🤖</span>
