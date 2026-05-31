@@ -175,7 +175,7 @@
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid var(--blue); display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
@@ -258,7 +258,7 @@
 
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid; transition: transform .2s, box-shadow .2s; }
+.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid var(--blue); transition: transform .2s, box-shadow .2s; }
 .callout:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
 .callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
@@ -453,8 +453,9 @@
 </div>
 <h2>どのシナリオに該当するか？</h2>
 <p>| シナリオ | 現在の設定 | 必要な対応 | |---|---|---| | <strong>1</strong> | クリエイティブURL = 広告グループURL | ✅ 対応不要。 | | <strong>2</strong> | クリエイティブURL = 広告グループURL + トラッキングパラメータ | ⚠️ 広告グループ層で `{creative}` ワイルドカードを使用し、各クリエイティブを追跡。 | | <strong>3</strong> | クリエイティブURL ≠ 広告グループURL、ただし全クリエイティブで同じURL | ⚠️ URLを広告グループ層に移動。 | | <strong>4</strong> | 各クリエイティブで異なるURL | 🔧 再編成：1製品=1広告グループ。URLはキーワード層または広告グループ層で設定。 | </p>
-<div class="callout tip">
-  <strong>💡 移行期限：</strong> 2025年6月5日。この日以降、クリエイティブ層URLの新規追加・編集は不可。既存URLは引き続き配信されるが、修正不可——削除のみ可能。今すぐ移行を開始し、強制的な停止を回避してください。
+<div class="callout callout-tip" style="flex-direction:column;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span class="callout-icon">💡</span><strong>移行期限</strong></div>
+  <p style="margin:0;">2025年6月5日。この日以降、クリエイティブ層URLの新規追加・編集は不可。既存URLは引き続き配信されるが、修正不可——削除のみ可能。今すぐ移行を開始し、強制的な停止を回避してください。</p>
 </div>
 <h2>6月5日以降の変更点</h2>
 <ul><li>❌ 新規クリエイティブ層URLの追加不可</li>
