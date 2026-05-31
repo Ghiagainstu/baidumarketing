@@ -85,6 +85,12 @@
     .nav-links a:hover::after { width: 100%; left: 0; }
     .nav-links a.active { color: var(--blue); font-weight: 600; }
     .nav-links a.active::after { width: 100%; left: 0; }
+    .nav-cta { background: var(--gradient-brand); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: .9rem; font-weight: 600; transition: transform var(--transition-base), box-shadow var(--transition-base); position: relative; overflow: hidden; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(41,50,225,.35); }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(2px); z-index: 99; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+
 
     footer { background: var(--gray-800); color: #D1D5DB; padding: 56px 0 24px; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
@@ -510,7 +516,7 @@
           </tbody>
         </table>
 
-        <h2>1. 資金未到着（资金未到账）</h2>
+        <h2>1. 資金未到着</h2>
 
         <div class="status-card">
           <span class="status-badge badge-pending">保留中</span>
@@ -543,7 +549,7 @@
         <h3>このステータスはどのくらい続くか</h3>
         <p>Baiduが支払いを受領してから通常1-3営業日です。支払いが確認されると、システムは自動的に本人確認を開始し、アカウントを「審査中」に移行します。</p>
 
-        <h2>2. 残高ゼロ（余额为零）</h2>
+        <h2>2. 残高ゼロ</h2>
 
         <div class="status-card">
           <span class="status-badge badge-warning">警告</span>
@@ -575,7 +581,7 @@
         <h3>このステータスはどのくらい続くか</h3>
         <p>チャージするまで続きます。新しい支払いが確認され、アカウントに十分な残高があれば、数時間以内に広告の配信が再開します。</p>
 
-        <h2>3. 審査中（审核中）</h2>
+        <h2>3. 審査中</h2>
 
         <div class="status-card">
           <span class="status-badge badge-info">進行中</span>
@@ -606,7 +612,7 @@
         <h3>このステータスはどのくらい続くか</h3>
         <p>標準的な審査では通常1-3営業日です。規制業界では5-7営業日かかる場合があります。審査が完了するとシステム通知が届きます。</p>
 
-        <h2>4. 有効（激活）</h2>
+        <h2>4. 有効</h2>
 
         <div class="status-card">
           <span class="status-badge badge-success">有効</span>
@@ -638,7 +644,7 @@
         <h3>このステータスはどのくらい続くか</h3>
         <p>プラスの残高を維持し、Baiduポリシーに準拠し、予算枯渇によるキャンペーンの一時停止を避ける限り、無期限に続きます。</p>
 
-        <h2>5. 却下（被拒）</h2>
+        <h2>5. 却下</h2>
 
         <div class="status-card">
           <span class="status-badge badge-danger">却下</span>
