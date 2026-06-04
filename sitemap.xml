@@ -226,6 +226,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-merchant-agent-human-handoff</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-ocpc-skip-data-accumulation</loc>
     <priority>0.6</priority>
   </url>
@@ -559,6 +563,10 @@
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-mcc-account-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-merchant-agent-human-handoff</loc>
     <priority>0.6</priority>
   </url>
   <url>
