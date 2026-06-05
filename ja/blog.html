@@ -315,6 +315,8 @@
     [data-theme="dark"] .blog-card-title { color: var(--gray-800); }
     [data-theme="dark"] .blog-card-excerpt { color: var(--gray-600); }
     [data-theme="dark"] .blog-card-excerpt strong { color: var(--gray-700); }
+    .blog-card-readmore { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 600; color: var(--blue); margin-top: 12px; transition: gap .2s; }
+    .blog-card:hover .blog-card-readmore { gap: 10px; }
     [data-theme="dark"] .blog-card-meta { color: var(--gray-400); border-top-color: var(--gray-200); }
     .btn-primary { background: var(--gradient-brand); color: #fff; padding: 14px 28px; border-radius: 10px; font-size: .95rem; font-weight: 600; box-shadow: 0 4px 14px rgba(41,50,225,.35); transition: transform var(--transition-base), box-shadow var(--transition-base); display: inline-block; position: relative; overflow: hidden; }
     .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transition: left .6s ease; }
