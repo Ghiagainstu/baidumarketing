@@ -222,7 +222,7 @@
         <path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/>
         <text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text>
       </svg>
-      Baidu PPC <span class="logo-pro">Pro</span>
+      Baidu PPC Pro
     </a>
     <div class="nav-links" id="navLinks">
       <a href="/ja/why-baidu-ppc-pro">選ばれる理由</a>
@@ -252,6 +252,22 @@
       <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
       <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
+    <script>
+    // Set active nav link based on current URL
+    (function(){
+      var path = window.location.pathname.replace(/\/$/, '') || '/';
+      document.querySelectorAll('.nav-links a:not(.nav-mobile-cta)').forEach(function(a){
+        var href = a.getAttribute('href').replace(/\/$/, '') || '/';
+        if(path === href || path.startsWith(href + '/')) a.classList.add('active');
+      });
+      // Language switcher: update links to stay on current page
+      var pagePath = path.replace(/^\/(ja|ko)(\/|$)/, '/');
+      document.querySelectorAll('.lang-switch-item').forEach(function(a){
+        var lang = a.getAttribute('lang');
+        a.href = lang === 'en' ? pagePath : '/' + lang + pagePath;
+      });
+    })();
+    </script>
   </div>
 </nav>
 <main>
@@ -356,7 +372,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 全著作権所有。</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

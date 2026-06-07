@@ -116,7 +116,23 @@ ${langItems}
     <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu">
       <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
       <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
-    </button>`;
+    </button>
+    <script>
+    // Set active nav link based on current URL
+    (function(){
+      var path = window.location.pathname.replace(/\\/$/, '') || '/';
+      document.querySelectorAll('.nav-links a:not(.nav-mobile-cta)').forEach(function(a){
+        var href = a.getAttribute('href').replace(/\\/$/, '') || '/';
+        if(path === href || path.startsWith(href + '/')) a.classList.add('active');
+      });
+      // Language switcher: update links to stay on current page
+      var pagePath = path.replace(/^\\/(ja|ko)(\\/|$)/, '/');
+      document.querySelectorAll('.lang-switch-item').forEach(function(a){
+        var lang = a.getAttribute('lang');
+        a.href = lang === 'en' ? pagePath : '/' + lang + pagePath;
+      });
+    })();
+    </script>`;
 }
 
 // ====== FOOTER HTML GENERATOR ======
