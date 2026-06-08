@@ -219,7 +219,7 @@ def md_to_full_html(md_text, date_str, read_time, category, author, cta_title, c
         date_label = date_str
         cat_label = category
 
-    body_html = md_to_html(body)
+    body_html = post_process(md_to_html(body))
 
     return f'''  <section class="article-hero">
     <div class="container">
