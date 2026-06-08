@@ -170,6 +170,22 @@ def md_to_html(md_text):
     return '\n\n'.join(result)
 
 
+def post_process(html):
+    """
+    Final safety net: convert any remaining raw Markdown to HTML.
+    Call AFTER md_to_html or md_to_full_html to catch edge cases.
+    """
+    # Raw ## / ### that slipped through
+    html = re.sub(r'^## ([^<].*?)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
+    html = re.sub(r'^### ([^<].*?)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
+    html = re.sub(r'^#### ([^<].*?)$', r'<h4>\1</h4>', html, flags=re.MULTILINE)
+    # Raw **bold** / *italic* / [link](url) / `code`
+    html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
+    html = re.sub(r'(?<!\*)\*([^*]+?)\*(?!\*)', r'<em>\1</em>', html)
+    html = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', html)
+    return html
+
+
 def md_to_full_html(md_text, date_str, read_time, category, author, cta_title, cta_text, cta_btn, cta_link, lang='en'):
     """
     Convert full MD text (with frontmatter) to complete article HTML structure.
