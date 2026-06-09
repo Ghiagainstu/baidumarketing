@@ -96,6 +96,31 @@ def md_to_html(md_text):
             i += 1
             continue
 
+        # Markdown table (| col | col |)
+        if line.strip().startswith('|') and '|' in line.strip()[1:]:
+            close_lists()
+            table_lines = []
+            while i < len(lines) and lines[i].strip().startswith('|'):
+                table_lines.append(lines[i].strip())
+                i += 1
+            # Parse table
+            if len(table_lines) >= 2:
+                # First row = header
+                headers = [c.strip() for c in table_lines[0].split('|')[1:-1]]
+                # Skip separator row (|---|---|)
+                data_start = 1
+                if len(table_lines) > 1 and re.match(r'^[\s|:-]+$', table_lines[1]):
+                    data_start = 2
+                result.append('    <table class="comparison-table">')
+                result.append('      <thead><tr>' + ''.join(f'<th>{inline(h)}</th>' for h in headers) + '</tr></thead>')
+                result.append('      <tbody>')
+                for row_line in table_lines[data_start:]:
+                    cells = [c.strip() for c in row_line.split('|')[1:-1]]
+                    result.append('        <tr>' + ''.join(f'<td>{inline(c)}</td>' for c in cells) + '</tr>')
+                result.append('      </tbody>')
+                result.append('    </table>')
+            continue
+
         # Horizontal rule
         if line.strip() == '---':
             close_lists()
