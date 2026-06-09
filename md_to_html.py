@@ -186,7 +186,7 @@ def post_process(html):
     return html
 
 
-def md_to_full_html(md_text, date_str, read_time, category, author, cta_title, cta_text, cta_btn, cta_link, lang='en'):
+def md_to_full_html(md_text, date_str, read_time, category, author, cta_title, cta_text, cta_btn, cta_link, lang='en', wrap_main=True):
     """
     Convert full MD text (with frontmatter) to complete article HTML structure.
     Returns the full <section class="article-hero"> + <main>...</main> block.
@@ -227,14 +227,14 @@ def md_to_full_html(md_text, date_str, read_time, category, author, cta_title, c
       <h1 class="article-title">{title}</h1>
       <div class="article-meta">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> {date_label}</span>
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {read_time} read</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {read_time}</span>
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> {cat_label}</span>
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By {author}</span>
       </div>
     </div>
   </section>
 
-  <main>
+  {'<main>' if wrap_main else ''}
   <section class="article-section">
     <div class="container">
       <article class="article-content">
@@ -252,4 +252,4 @@ def md_to_full_html(md_text, date_str, read_time, category, author, cta_title, c
       <a href="{cta_link}" class="btn-primary">{cta_btn}</a>
     </div>
   </div>
-  </main>'''
+  {'</main>' if wrap_main else ''}'''
