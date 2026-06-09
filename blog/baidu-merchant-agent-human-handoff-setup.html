@@ -213,6 +213,8 @@
     .cta-box p { font-size: 1.05rem !important; margin-bottom: 30px !important; opacity: .9; color: #fff !important; }
     .cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform var(--transition-base), box-shadow var(--transition-base); }
     .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .btn-primary { display: inline-block; padding: 14px 36px; background: #fff; color: var(--blue); border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all .2s; cursor: pointer; border: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
     .related-section { padding: 60px 0; background: var(--gray-50); }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 30px; }
@@ -381,7 +383,15 @@
 
     <p>In the Merchant Agent backend, add your available contact methods:</p>
 
-    <p>| Channel | Best for | Setup complexity | |---------|----------|-----------------| | 400/800 toll-free number | High-volume B2C, simple B2B | Low | | Enterprise WeChat QR | B2B relationship building | Medium | | Online chat integration | Real-time support teams | Medium | | Dedicated sales contact card | High-value B2B leads | Low |</p>
+    <table class="comparison-table">
+      <thead><tr><th>Channel</th><th>Best for</th><th>Setup complexity</th></tr></thead>
+      <tbody>
+        <tr><td>400/800 toll-free number</td><td>High-volume B2C, simple B2B</td><td>Low</td></tr>
+        <tr><td>Enterprise WeChat QR</td><td>B2B relationship building</td><td>Medium</td></tr>
+        <tr><td>Online chat integration</td><td>Real-time support teams</td><td>Medium</td></tr>
+        <tr><td>Dedicated sales contact card</td><td>High-value B2B leads</td><td>Low</td></tr>
+      </tbody>
+    </table>
 
     <p>You can configure multiple channels. The AI will present the most appropriate one based on the conversation context.</p>
 
