@@ -255,6 +255,8 @@ def post_process(html):
     Final safety net: convert any remaining raw Markdown to HTML.
     Call AFTER md_to_html or md_to_full_html to catch edge cases.
     """
+    # Fix malformed CSS comments: /<em>text</em>/ → /* text */
+    html = re.sub(r'/<em>(.*?)</em>/', r'/* \1 */', html)
     # Raw ## / ### that slipped through
     html = re.sub(r'^## ([^<].*?)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
     html = re.sub(r'^### ([^<].*?)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
