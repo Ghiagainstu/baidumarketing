@@ -102,11 +102,66 @@ def md_to_html(md_text):
             i += 1
             continue
 
-        # HTML block
+        # Callout block (dedicated parser for reliability)
+        if re.match(r'\s*<div class="callout', line.strip()):
+            close_lists()
+            block_lines = [line.strip()]
+            depth = 1
+            i += 1
+            while depth > 0 and i < len(lines):
+                l = lines[i].strip()
+                block_lines.append(l)
+                depth += l.count('<div') - l.count('</div>')
+                i += 1
+            result.append('    ' + '\n    '.join(block_lines))
+            continue
+
+        # Comparison table (dedicated parser)
+        if re.match(r'\s*<table class="comparison-table"', line.strip()):
+            close_lists()
+            block_lines = [line.strip()]
+            depth = 1
+            i += 1
+            while depth > 0 and i < len(lines):
+                l = lines[i].strip()
+                block_lines.append(l)
+                depth += l.count('<table') - l.count('</table>')
+                i += 1
+            result.append('    ' + '\n    '.join(block_lines))
+            continue
+
+        # Stats grid (dedicated parser)
+        if re.match(r'\s*<div class="stats-grid"', line.strip()):
+            close_lists()
+            block_lines = [line.strip()]
+            depth = 1
+            i += 1
+            while depth > 0 and i < len(lines):
+                l = lines[i].strip()
+                block_lines.append(l)
+                depth += l.count('<div') - l.count('</div>')
+                i += 1
+            result.append('    ' + '\n    '.join(block_lines))
+            continue
+
+        # Takeaway box (dedicated parser)
+        if re.match(r'\s*<div class="takeaway', line.strip()):
+            close_lists()
+            block_lines = [line.strip()]
+            depth = 1
+            i += 1
+            while depth > 0 and i < len(lines):
+                l = lines[i].strip()
+                block_lines.append(l)
+                depth += l.count('<div') - l.count('</div>')
+                i += 1
+            result.append('    ' + '\n    '.join(block_lines))
+            continue
+
+        # Generic HTML block (fallback)
         if is_html_block(line):
             close_lists()
-            block_html, i = read_html_block(i - 1)
-            i += 1
+            block_html, i = read_html_block(i)
             result.append(block_html)
             continue
 
