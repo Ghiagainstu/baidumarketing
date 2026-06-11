@@ -20,6 +20,44 @@ from md_to_html import md_to_html, post_process
 VAULT = 'E:/Obsidian/Baidu'
 PROJECT = os.path.dirname(os.path.abspath(__file__))
 
+# Golden source pages for CSS validation — always use these to verify/fix templates
+GOLDEN_SOURCES = {
+    'en': f'{PROJECT}/blog/ai-marketing-whitepapers-2026-baidu-insights.html',
+    'ja': f'{PROJECT}/ja/blog/baidu-merchant-agent-human-handoff-setup.html',
+    'ko': f'{PROJECT}/blog/ai-marketing-whitepapers-2026-baidu-insights.html',
+}
+
+def extract_style_block(html):
+    """Extract the <style>...</style> block from HTML."""
+    m = re.search(r'<style>(.*?)</style>', html, re.DOTALL)
+    return m.group(1) if m else ''
+
+def validate_and_fix_style(template, lang):
+    """Validate nav-links CSS in template. If broken, replace entire <style> block from golden source."""
+    # Check critical CSS patterns
+    issues = []
+    if '.nav-links { display: flex' not in template:
+        issues.append('nav-links missing display:flex')
+    if '.nav-mobile-cta' not in template:
+        issues.append('nav-mobile-cta CSS missing')
+    if '.lang-switch-btn:hover svg' not in template and lang == 'ja':
+        issues.append('lang-switch-btn hover missing')
+    
+    if not issues:
+        return template, []
+    
+    # Fix: replace entire <style> block from golden source
+    golden_path = GOLDEN_SOURCES.get(lang, GOLDEN_SOURCES['en'])
+    if os.path.exists(golden_path):
+        with open(golden_path, 'r', encoding='utf-8') as f:
+            golden_html = f.read()
+        golden_style = extract_style_block(golden_html)
+        if golden_style:
+            template = re.sub(r'<style>.*?</style>', f'<style>\n{golden_style}\n</style>', template, flags=re.DOTALL)
+            return template, issues
+    
+    return template, issues
+
 CATEGORY_MAP = {
     'insights': '01-Market-Insights',
     'platform': '02-Platform',
@@ -84,13 +122,19 @@ def generate_html(slug, lang):
     body_html = post_process(md_to_html(body))
     
     # Read template
-    template_path = f'{PROJECT}/blog/_template-en.html' if lang == 'en' else f'{PROJECT}/ja/blog/_template-ja.html'
+    template_path = f'{PROJECT}/blog/_template-en.html' if lang == 'en' else f'{PROJECT}/ja/blog/_template-ja.html' if lang == 'ja' else f'{PROJECT}/ko/blog/_template-ko.html'
     if not os.path.exists(template_path):
         print(f'  ✗ Template not found: {template_path}')
         return None
     
     with open(template_path, 'r', encoding='utf-8') as f:
         template = f.read()
+    
+    # Validate and fix template CSS
+    template, css_issues = validate_and_fix_style(template, lang)
+    if css_issues:
+        print(f'  ⚠ Template CSS issues detected: {", ".join(css_issues)}')
+        print(f'  → Auto-fixed from golden source: {GOLDEN_SOURCES.get(lang, GOLDEN_SOURCES["en"])}')
     
     # Fill template
     html = template
@@ -144,10 +188,10 @@ def main():
     parser = argparse.ArgumentParser(description='Generate blog HTML from template + MD')
     parser.add_argument('slug', help='Blog slug')
     parser.add_argument('--lang', default='en', choices=['en', 'ja', 'ko'], help='Language')
-    parser.add_argument('--both', action='store_true', help='Generate both EN and JA')
+    parser.add_argument('--both', action='store_true', help='Generate both EN, JA and KO')
     args = parser.parse_args()
     
-    langs = ['en', 'ja'] if args.both else [args.lang]
+    langs = ['en', 'ja', 'ko'] if args.both else [args.lang]
     
     for lang in langs:
         html = generate_html(args.slug, lang)
