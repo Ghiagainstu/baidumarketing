@@ -494,6 +494,34 @@ function generateSitemap() {
     }
   }
 
+  // Korean pages
+  for (const page of LANG_CFG.pages) {
+    const koDir = path.join(ROOT, 'ko');
+    const koFilePath = page === 'index' ? path.join(koDir, 'index.html') : path.join(koDir, `${page}.html`);
+    if (fs.existsSync(koFilePath)) {
+      const pageName = page === 'index' ? '' : page;
+      const urlLine = pageName ? `${baseURL}/ko/${pageName}` : `${baseURL}/ko`;
+      lines.push(`  <url>`);
+      lines.push(`    <loc>${urlLine}</loc>`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${urlLine}" />`);
+      lines.push(`    <priority>0.8</priority>`);
+      lines.push(`  </url>`);
+    }
+  }
+
+  // Korean blog posts
+  const koBlogDir = path.join(ROOT, 'ko', 'blog');
+  if (fs.existsSync(koBlogDir)) {
+    const posts = fs.readdirSync(koBlogDir).filter(f => f.endsWith('.html'));
+    for (const post of posts) {
+      const slug = post.replace('.html', '');
+      lines.push(`  <url>`);
+      lines.push(`    <loc>${baseURL}/ko/blog/${slug}</loc>`);
+      lines.push(`    <priority>0.6</priority>`);
+      lines.push(`  </url>`);
+    }
+  }
+
   lines.push(`</urlset>`);
   
   writeFile('sitemap.xml', lines.join('\n') + '\n');

@@ -3,22 +3,26 @@
 blog_publish.py — BPP 博客自动化发布脚本
 从 SKILL.md 提取所有发布规则，100% 自动执行。
 
-用法：python blog_publish.py <slug> --category <cat> --title-en "..." --title-ja "..." --excerpt-en "..." --excerpt-ja "..." --date "Mon DD, YYYY" --date-ja "YYYY年M月D日" --read-time "N min" --read-time-ja "約N分"
+用法：python blog_publish.py <slug> --category <cat> --title-en "..." --title-ja "..." --title-ko "..." --excerpt-en "..." --excerpt-ja "..." --excerpt-ko "..." --date "Mon DD, YYYY" --date-ja "YYYY年M月D日" --date-ko "YYYY년 M월 D일" --read-time "N min" --read-time-ja "約N分" --read-time-ko "약N분"
 
 示例：python blog_publish.py baidu-industry-insights-tool-guide \
   --category insights \
   --title-en "📊 How to Use Baidu's New Industry Insights Tool" \
   --title-ja "📊 百度業界インサイトツールの使い方" \
+  --title-ko "📊 바이두의 새로운 업종 인사이트 도구 사용법" \
   --excerpt-en "Learn how Baidu's new Industry Insights tool helps advertisers benchmark PPC performance." \
   --excerpt-ja "百度の新「業界インサイト」ツールの活用法を解説。" \
+  --excerpt-ko "바이두의 새로운 업종 인사이트 도구로 PPC 성과를 벤치마킹하는 방법을 알아보세요。" \
   --date "Jun 3, 2026" \
   --date-ja "2026年6月3日" \
+  --date-ko "2026년 6월 3일" \
   --read-time "8 min" \
-  --read-time-ja "約9分"
+  --read-time-ja "約9分" \
+  --read-time-ko "약9분"
 
 功能：
   1. 调用 blog_validate.py 验证
-  2. 插入 blog 卡片到 blog.html / ja/blog.html
+  2. 插入 blog 卡片到 blog.html / ja/blog.html / ko/blog.html
   3. 按日期排序所有卡片
   4. 更新 sitemap.xml
   5. Git commit + push
@@ -52,6 +56,12 @@ LANG_CONFIG = {
         "listing_file": "ja/blog.html",
         "read_more": "続きを読む →",
         "date_field": "date_ja",
+    },
+    "ko": {
+        "blog_dir": "ko/blog",
+        "listing_file": "ko/blog.html",
+        "read_more": "더 보기 →",
+        "date_field": "date_ko",
     },
 }
 
@@ -104,6 +114,24 @@ def parse_date_ja(date_str):
     if m:
         return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)))
     return datetime(2020, 1, 1)
+
+
+def parse_date_ko(date_str):
+    """解析韩文日期：YYYY년 M월 D일"""
+    m = re.match(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일", date_str.strip())
+    if m:
+        return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    return datetime(2020, 1, 1)
+
+
+def parse_date_auto(date_str, lang):
+    """根据语言自动解析日期"""
+    if lang == "ja":
+        return parse_date_ja(date_str)
+    elif lang == "ko":
+        return parse_date_ko(date_str)
+    else:
+        return parse_date_en(date_str)
 
 
 # ============================================================
@@ -161,10 +189,7 @@ def insert_and_sort_cards(lang, slug, category, title, excerpt, date, read_time)
         m = re.search(r"<span>([^<]+)</span>", card)
         if m:
             date_str = m.group(1)
-            if lang == "ja":
-                return parse_date_ja(date_str)
-            else:
-                return parse_date_en(date_str)
+            return parse_date_auto(date_str, lang)
         return datetime(2020, 1, 1)
 
     sorted_cards = sorted(cards, key=sort_key, reverse=True)
@@ -228,6 +253,7 @@ def git_commit_and_push(slug):
     files = [
         "blog.html",
         "ja/blog.html",
+        "ko/blog.html",
         "sitemap.xml",
     ]
 
@@ -320,7 +346,14 @@ def run_validation(slug):
         capture_output=False
     )
 
-    if result_en.returncode != 0 or result_ja.returncode != 0:
+    # 验证 KO
+    result_ko = subprocess.run(
+        [sys.executable, str(BLOG_VALIDATE), slug, "--lang", "ko"],
+        cwd=PROJECT_ROOT,
+        capture_output=False
+    )
+
+    if result_en.returncode != 0 or result_ja.returncode != 0 or result_ko.returncode != 0:
         print("\n❌ 验证失败，请修复后重试")
         return False
 
@@ -338,12 +371,16 @@ def main():
     parser.add_argument("--category", required=True, help="分类：insights/search/feed/strategy/platform/landing")
     parser.add_argument("--title-en", required=True, help="英文标题")
     parser.add_argument("--title-ja", required=True, help="日文标题")
+    parser.add_argument("--title-ko", help="韩文标题")
     parser.add_argument("--excerpt-en", required=True, help="英文摘要 (≤120字符)")
     parser.add_argument("--excerpt-ja", required=True, help="日文摘要 (≤120字符)")
+    parser.add_argument("--excerpt-ko", help="韩文摘要 (≤120字符)")
     parser.add_argument("--date", required=True, help="英文日期：Mon DD, YYYY")
     parser.add_argument("--date-ja", required=True, help="日文日期：YYYY年M月D日")
+    parser.add_argument("--date-ko", help="韩文日期：YYYY년 M월 D일")
     parser.add_argument("--read-time", required=True, help="英文阅读时间：N min")
     parser.add_argument("--read-time-ja", required=True, help="日文阅读时间：約N分")
+    parser.add_argument("--read-time-ko", help="韩文阅读时间：약N분")
     parser.add_argument("--skip-validation", action="store_true", help="跳过验证")
     parser.add_argument("--skip-push", action="store_true", help="跳过 git push")
 
@@ -356,6 +393,8 @@ def main():
     print(f"  Category: {args.category}")
     print(f"  EN Title: {args.title_en}")
     print(f"  JA Title: {args.title_ja}")
+    if args.title_ko:
+        print(f"  KO Title: {args.title_ko}")
     print("=" * 60)
 
     # Step 1: 验证
@@ -384,6 +423,15 @@ def main():
     ):
         sys.exit(1)
 
+    # KO 卡片（可选）
+    if args.title_ko and args.excerpt_ko and args.date_ko and args.read_time_ko:
+        if not insert_and_sort_cards(
+            "ko", args.slug, args.category,
+            args.title_ko, args.excerpt_ko,
+            args.date_ko, args.read_time_ko
+        ):
+            sys.exit(1)
+
     # Step 3: 更新 sitemap
     print("\n" + "=" * 60)
     print("🗺️  更新 sitemap...")
@@ -405,6 +453,8 @@ def main():
     print("=" * 60)
     print(f"  EN: https://www.baidumarketing.com/blog/{args.slug}")
     print(f"  JA: https://www.baidumarketing.com/ja/blog/{args.slug}")
+    if args.title_ko:
+        print(f"  KO: https://www.baidumarketing.com/ko/blog/{args.slug}")
     print("=" * 60)
 
 

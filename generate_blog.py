@@ -24,7 +24,7 @@ PROJECT = os.path.dirname(os.path.abspath(__file__))
 GOLDEN_SOURCES = {
     'en': f'{PROJECT}/blog/ai-marketing-whitepapers-2026-baidu-insights.html',
     'ja': f'{PROJECT}/ja/blog/baidu-merchant-agent-human-handoff-setup.html',
-    'ko': f'{PROJECT}/blog/ai-marketing-whitepapers-2026-baidu-insights.html',
+    'ko': f'{PROJECT}/ja/blog/baidu-merchant-agent-human-handoff-setup.html',
 }
 
 def extract_style_block(html):

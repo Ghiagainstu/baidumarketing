@@ -5,72 +5,84 @@
     <loc>https://www.baidumarketing.com</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/" />
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/about</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/about" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/about" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/about" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/features</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/features" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/features" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/features" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/pricing</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/pricing" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/pricing" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/pricing" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/clients</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/clients" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/clients" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/clients" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/faq</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/faq" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/faq" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/faq" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/contact</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/contact" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/contact" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/contact" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/blog</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/why-baidu-ppc-pro</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/why-baidu-ppc-pro" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/why-baidu-ppc-pro" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/why-baidu-ppc-pro" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/china-geo</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/china-geo" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/china-geo" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/china-geo" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/privacy</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/privacy" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/privacy" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/privacy" />
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.baidumarketing.com/terms</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/terms" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/terms" />
+      <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/terms" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -787,6 +799,72 @@
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ja/blog/_template-ja</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/faq</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/faq" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/2020-baidu-b2b-industry-insights</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-2026-new-opportunities</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-ad-performance-diagnostic-tool</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-ads-campaign-upgrade-2025</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-brand-info-account-level</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-click-fraud-ipv4-blocking</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-conversion-tracking-dedup</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-feed-ads-history-operation-records-upgrade</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-landing-page-audit-rejection-reasons</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-landing-page-report</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-ocpc-skip-data-accumulation</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-search-device-bid-coefficient-retirement</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-service-direct-lead-ads</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/_template-ko</loc>
     <priority>0.6</priority>
   </url>
 </urlset>

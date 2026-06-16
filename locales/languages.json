@@ -18,6 +18,15 @@
       "flag": "🇯🇵",
       "active": true,
       "sitemapPriority": 0.9
+    },
+    {
+      "code": "ko",
+      "label": "Korean",
+      "nativeLabel": "한국어",
+      "dir": "ko",
+      "flag": "🇰🇷",
+      "active": true,
+      "sitemapPriority": 0.9
     }
   ],
   "pages": [
