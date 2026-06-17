@@ -1,0 +1,71 @@
+# clients 페이지 영문 텍스트 추출
+# 총 67개
+# 형식: 번호|원문|번역
+
+1|Trusted by Global Brands — Baidu PPC Pro Client Stories|글로벌 브랜드가 신뢰 — Baidu PPC Pro 고객 사례
+2|BPP|BPP
+3|" />|"
+4|Baidu PPC Pro|Baidu PPC Pro
+5|Why Baidu PPC Pro|바이두 PPC Pro란
+6|Services|서비스
+7|Pricing|요금
+8|Clients|도입 사례
+9|FAQ|자주 묻는 질문
+10|About|회사 소개
+11|Blog|블로그
+12|Contact|문의하기
+13|Get Started →|지금 시작하기 →
+14|🇺🇸|🇺🇸
+15|🇺🇸 English|🇺🇸 English
+16|🇯🇵 日本語|🇯🇵 日本語
+17|Home|홈
+18|/ Clients|/ 도입 사례
+19|Client Stories|고객 사례
+20|Trusted by Agencies|에이전시가 신뢰
+21|& Companies|& 기업
+22|Worldwide|전 세계
+23|From tech startups to global agencies — see how our clients leverage Baidu PPC Pro to reach the Chinese market.|기술 스타트업부터 글로벌 에이전시까지 — 고객이 중국 시장에 도달하기 위해 Baidu PPC Pro를 활용하는 방법을 확인하세요.
+24|Global Clients Served|글로벌 고객 서비스
+25|Account Setup from|계정 설정 시작가
+26|Top-Up Fee from|충전 수수료 시작가
+27|72h|72시간
+28|Account Activation|계정 활성화
+29|What Our Clients Say|고객의 말
+30|Hear from the agencies and companies that trust us with their Baidu advertising.|바이두 광고를 믿고 맡기는 에이전시와 기업의 이야기를 들어보세요.
+31|"Baidu PPC Pro made it incredibly easy for us to enter the Chinese market. The account setup was seamless, and their team handled all the documentation we couldn't have managed on our own."|"Baidu PPC Pro는 중국 시장 진출을 매우 쉽게 만들어주었습니다. 계정 설정이 매끄러웠고, 팀이 저희가 직접 관리할 수 없었던 모든 서류를 처리해주었습니다."
+32|JM|JM
+33|James Mitchell|James Mitchell
+34|VP of Marketing, TechForward Inc.|마케팅 부사장, TechForward Inc.
+35|"As a white-label partner, we've been able to offer Baidu advertising to our clients without building any in-house expertise. The support is responsive and the results speak for themselves."|"화이트라벨 파트너로서, 내부 전문성 없이도 고객에게 바이두 광고를 제공할 수 있었습니다. 지원이 신속하고 결과가 말해줍니다."
+36|SB|SB
+37|Sophie Bernard|Sophie Bernard
+38|CEO, GlobalReach Agency|CEO, GlobalReach Agency
+39|"We tried setting up a Baidu account directly and failed twice. Baidu PPC Pro got us approved and running ads within a week. Their knowledge of the compliance landscape is unmatched."|"직접 바이두 계정을 설정하려고 두 번 실패했습니다. Baidu PPC Pro는 일주일 이내에 승인받고 광고를 실행했습니다. 컴플라이언스 환경에 대한 지식은 타의 추종을 불허합니다."
+40|AK|AK
+41|Amir Khan|Amir Khan
+42|Director of Growth, NovaMed|성장 이사, NovaMed
+43|Industries We Serve|서비스 산업
+44|Cross-Industry Expertise|크로스 산업 전문성
+45|We work with companies across a wide range of industries targeting the Chinese market.|중국 시장을 목표로 하는 다양한 산업의 기업과 협력합니다.
+46|Technology & SaaS|기술 및 SaaS
+47|Software, cloud services, and tech products reaching Chinese enterprise buyers.|중국 기업 구매자에게 도달하는 소프트웨어, 클라우드 서비스, 기술 제품.
+48|Healthcare|의료
+49|Medical devices, pharma, and health services with compliance expertise.|컴플라이언스 전문성을 갖춘 의료 기기, 제약, 건강 서비스.
+50|Education|교육
+51|International schools, online courses, and training programs targeting Chinese students.|중국 학생을 대상으로 하는 국제 학교, 온라인 과정, 교육 프로그램.
+52|Finance & FinTech|금융 및 핀테크
+53|Financial services, investment platforms, and payment solutions.|금융 서비스, 투자 플랫폼, 결제 솔루션.
+54|Travel & Tourism|여행 및 관광
+55|Hotels, airlines, and tourism boards attracting Chinese travelers.|중국 여행자를 유치하는 호텔, 항공사, 관광청.
+56|Manufacturing & B2B|제조업 및 B2B
+57|Industrial equipment, components, and B2B trade companies.|산업 장비, 부품, B2B 무역 회사.
+58|Join Our Growing Client List|성장하는 고객 목록에 합류
+59|Start your Baidu advertising journey today. We'll have you running ads within a week.|오늘 바이두 광고 여정을 시작하세요. 일주일 이내에 광고를 실행할 수 있습니다.
+60|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+61|Quick Links|바로가기
+62|About Us|회사 소개
+63|Submit a Request|문의 접수
+64|Legal|법적 고지
+65|Privacy Policy|개인정보 처리방침
+66|Terms of Service|이용약관
+67|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.

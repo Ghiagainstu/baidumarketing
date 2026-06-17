@@ -1,0 +1,71 @@
+# privacy 页面英文文本提取
+# 共 67 条
+# 格式: 序号|原文
+
+1|Privacy Policy — How We Protect Your Data — Baidu PPC Pro
+2|BPP
+3|" />
+4|Baidu PPC Pro
+5|Why Baidu PPC Pro
+6|Services
+7|Pricing
+8|Clients
+9|FAQ
+10|About
+11|Blog
+12|Contact
+13|Get Started →
+14|🇺🇸
+15|🇺🇸 English
+16|🇯🇵 日本語
+17|Privacy Policy
+18|Last updated: April 2026
+19|1. Information We Collect
+20|When you use our website or services, we may collect the following types of information:
+21|Personal Information:
+22|Name, email address, phone number, company name, and business registration details provided through our contact forms or during account setup.
+23|Technical Information:
+24|IP address, browser type, device information, and usage data collected automatically through cookies and similar technologies.
+25|Business Information:
+26|Baidu advertising account data, campaign details, and performance metrics accessed on your behalf.
+27|2. How We Use Your Information
+28|We use collected information to:
+29|Provide and manage Baidu advertising account services
+30|Process account opening, top-up, and campaign management requests
+31|Communicate with you about your account and services
+32|Improve our website and service quality
+33|Comply with legal and regulatory requirements
+34|3. Information Sharing
+35|We do not sell your personal information to third parties. We may share your information with:
+36|Baidu:
+37|To the extent necessary for account management and ad campaign operations on the Baidu platform.
+38|Service Providers:
+39|Trusted third parties that assist with payment processing, document translation, or technical infrastructure.
+40|Legal Requirements:
+41|When required by law, regulation, or legal process.
+42|4. Data Security
+43|We implement industry-standard security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+44|5. Cookies
+45|6. Data Retention
+46|We retain your personal information for as long as your account is active or as needed to provide services. Upon account closure, we will delete your personal data within a reasonable timeframe, except where retention is required by law.
+47|7. Your Rights
+48|You have the right to:
+49|Access, correct, or delete your personal information
+50|Withdraw consent for data processing
+51|Request a copy of your data
+52|Object to the processing of your data
+53|To exercise any of these rights, please contact us at
+54|8. Changes to This Policy
+55|We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Your continued use of our services after any changes constitutes your acceptance of the revised policy.
+56|9. Contact Us
+57|If you have any questions about this Privacy Policy, please contact us at:
+58|Email:
+59|Website:
+60|Contact Page
+61|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.
+62|Quick Links
+63|About Us
+64|Submit a Request
+65|Legal
+66|Terms of Service
+67|©  Baidu PPC Pro. All rights reserved.

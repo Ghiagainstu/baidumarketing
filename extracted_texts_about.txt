@@ -1,0 +1,114 @@
+# about 页面英文文本提取
+# 共 110 条
+# 格式: 序号|原文
+
+1|About Us — Baidu Marketing for Global Companies
+2|BPP
+3|" />
+4|Baidu PPC Pro
+5|Why Baidu PPC Pro
+6|Services
+7|Pricing
+8|Clients
+9|FAQ
+10|About
+11|Blog
+12|Contact
+13|Get Started →
+14|🇺🇸
+15|🇺🇸 English
+16|🇯🇵 日本語
+17|Home
+18|/ About
+19|🏢 About Baidu PPC Pro
+20|We're a
+21|Baidu-certified partner
+22|helping international companies and agencies enter China's
+23|$100B+
+24|digital advertising market — with transparency, expertise, and zero guesswork.
+25|📖 Our Story
+26|🤝 Built to Bridge the Gap
+27|China's digital advertising market is massive — but for international companies, it's also opaque, bureaucratic, and hard to navigate. We built Baidu PPC Pro to change that.
+28|As a
+29|Baidu second-tier reseller
+30|connected directly to Baidu official and first-tier agents, we occupy a unique position in the ecosystem. We're not a middleman adding layers — we're the bridge that makes the system work for companies outside China.
+31|Our team is based in
+32|Shanghai
+33|with over
+34|25 years
+35|of combined experience in Chinese digital advertising. We've helped
+36|200+ companies
+37|from
+38|10+ countries
+39|open Baidu accounts, fund campaigns, and navigate the compliance landscape — all in English.
+40|By leveraging
+41|AI
+42|for campaign management and optimization, we operate efficiently and pass those savings to you in the form of
+43|lower service fees
+44|— without compromising on quality.
+45|Our Edge:
+46|Direct Baidu ecosystem access + AI-powered optimization = lower costs, faster execution, zero guesswork for your campaigns.
+47|📊 By the Numbers
+48|📈 Track Record
+49|📅 7+
+50|Years Managing Baidu Ads
+51|🏢 200+
+52|Accounts Opened
+53|🌍 10+
+54|Countries Served
+55|🏆 25+
+56|Years Combined Experience
+57|👥 Our Team
+58|The People Behind
+59|Your China Campaigns
+60|Over 25 years of combined experience in Chinese digital advertising. Based in Shanghai, working with clients worldwide.
+61|Benny Cheuk
+62|Programmatic Expert, Trilingual
+63|12+ years
+64|in programmatic advertising, specializing in
+65|DSP technology
+66|. Trilingual in
+67|English, Mandarin, and Cantonese
+68|. He bridges European and Chinese markets, helping international companies navigate China's programmatic buying with practical, culturally-aware strategies.
+69|Yan Huo
+70|Account Manager
+71|15+ years
+72|helping international companies navigate China's digital advertising landscape. Fluent
+73|English
+74|, expert at bridging cultural and technical gaps between global brands and Chinese platforms.
+75|⭐ Our Values
+76|🎯 What Drives Us
+77|🛡️ Compliance First
+78|We navigate China's advertising regulations so you don't have to. Every account, every campaign —
+79|fully compliant from day one
+80|🔍 Total Transparency
+81|Your account belongs to you —
+82|. Full admin access, all credentials in your hands. We never retain control of your account.
+83|🌐 EN / 中文 Bilingual
+84|Language should never be a barrier. We communicate in
+85|, manage everything in
+86|Chinese
+87|— so you can focus on your business.
+88|⚡ Fast Response
+89|Every inquiry answered within
+90|one business day
+91|. We know the urgency of getting campaigns live — and we don't make you wait.
+92|✅ Why Companies Choose Us
+93|Direct Baidu ecosystem access — no unnecessary middlemen
+94|Bilingual team (EN/中文) based in Shanghai with 25+ years of combined experience
+95|AI-powered optimization keeps your costs low and performance high
+96|100% account ownership — full admin access, always in your hands
+97|🚀 Ready to Enter the China Market?
+98|Get a free consultation with our bilingual team. We'll assess your needs and outline a clear path to launching your Baidu campaigns.
+99|View Pricing
+100|✉️ Free Consultation
+101|💬 EN & 中文 Support
+102|🔒 No Commitment
+103|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.
+104|Quick Links
+105|About Us
+106|Submit a Request
+107|Legal
+108|Privacy Policy
+109|Terms of Service
+110|©  Baidu PPC Pro. All rights reserved.

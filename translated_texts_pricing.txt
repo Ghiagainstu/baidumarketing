@@ -1,0 +1,99 @@
+# pricing 페이지 영문 텍스트 추출
+# 총 95개
+# 형식: 번호|원문|번역
+
+1|Transparent Pricing for Baidu Ads — Baidu PPC Pro|투명한 바이두 광고 요금 — Baidu PPC Pro
+2|BPP|BPP
+3|" />|"
+4|Baidu PPC Pro|Baidu PPC Pro
+5|Why Baidu PPC Pro|바이두 PPC Pro란
+6|Services|서비스
+7|Pricing|요금
+8|Clients|도입 사례
+9|FAQ|자주 묻는 질문
+10|About|회사 소개
+11|Blog|블로그
+12|Contact|문의하기
+13|Get Started →|지금 시작하기 →
+14|🇺🇸|🇺🇸
+15|🇺🇸 English|🇺🇸 English
+16|🇯🇵 日本語|🇯🇵 日本語
+17|Home|홈
+18|/ Pricing|/ 요금
+19|Transparent Pricing|투명한 요금
+20|Competitive Rates Powered|경쟁력 있는 요금
+21|by|으로
+22|AI Efficiency|AI 효율성
+23|Our AI-augmented operations mean lower overhead — and we pass those savings to you. No hidden fees, ever.|AI로 강화된 운영은 낮은 오버헤드를 의미하며, 그 절감액을 고객에게 전달합니다. 숨겨진 수수료는 없습니다.
+24|Accounts Opened|개설된 계정
+25|📊 $|📊 $
+26|M+|M+
+27|Ad Spend Managed|관리된 광고 지출
+28|Average Cost Reduction|평균 비용 절감
+29|hr|시간
+30|Average Setup Time|평균 설정 시간
+31|One-Time|일회성
+32|💰 Account Opening|💰 계정 개설
+33|One-time setup fee, per account|일회성 설정 수수료, 계정당
+34|Full Baidu account registration|전체 바이두 계정 등록
+35|Verification & compliance handling|인증 및 컴플라이언스 처리
+36|Business qualification submission|사업 자격 제출
+37|Account activated within 72 hours|72시간 이내 계정 활성화
+38|English onboarding guide included|영어 온보딩 가이드 포함
+39|Open an Account|계정 개설
+40|Most Popular|가장 인기
+41|Ongoing|진행 중
+42|💳 Budget Top-Up|💳 예산 충전
+43|From|시작가
+44|Of deposit amount · Tiered rates available|입금액의 · 단계별 요금 가능
+45|USD / EUR / GBP accepted|USD / EUR / GBP 지원
+46|Same-day or next-day crediting|당일 또는 익일 입금
+47|No minimum top-up amount|최소 충전 금액 없음
+48|Volume discounts for large budgets|대규모 예산에 대한 볼륨 할인
+49|Full transaction receipt provided|전체 거래 영수증 제공
+50|Top Up Now|지금 충전
+51|Monthly Service · AI-Powered|월간 서비스 · AI 기반
+52|🤖 Campaign Management|🤖 캠페인 관리
+53|Of monthly ad spend · Lowest in the market|월간 광고 지출의 · 시장 최저
+54|AI-augmented bilingual campaign management|AI로 강화된 이중언어 캠페인 관리
+55|Keyword research & bidding strategy|키워드 리서치 및 입찰 전략
+56|Ad copywriting (CN + EN)|광고 문구 작성 (중국어 + 영어)
+57|Weekly optimization & A/B testing|주간 최적화 및 A/B 테스트
+58|Monthly performance report|월간 성과 보고서
+59|Start Managing|관리 시작
+60|All prices in USD. Custom enterprise quotes available for budgets over $50,000/month.|모든 가격은 USD입니다. 월 $50,000 이상 예산에 대한 맞춤형 기업 견적 가능.
+61|Contact us|문의하기
+62|Pricing FAQ|요금 FAQ
+63|Common Pricing Questions|일반적인 요금 질문
+64|Quick answers about our fees, top-up process, and budget requirements.|수수료, 충전 프로세스, 예산 요구 사항에 대한 빠른 답변.
+65|💰 Are there fees besides the advertising budget?|💰 광고 예산 외에 수수료가 있나요?
+66|Yes.|네.
+67|There is an annual account authentication fee of CNY 600. For new users, this fee is refunded to your ad account after the first year — effectively making it free for the first year.|연간 계정 인증 수수료 600위안이 있습니다. 신규 사용자의 경우, 이 수수료는 첫 해 후 광고 계정으로 환불됩니다 — effectively 첫 해는 무료입니다.
+68|💳 What is the minimum top-up amount?|💳 최소 충전 금액은 얼마인가요?
+69|Baidu's official rule is a minimum top-up of|바이두의 공식 규정은 최소 충전 금액입니다
+70|CNY 2,400|2,400위안
+71|. However, to save on transaction fees and reduce transfer time, we recommend a single top-up of CNY 10,000 or more.|그러나 거래 수수료를 절약하고 송금 시간을 줄이기 위해, 10,000위안 이상의 단일 충전을 권장합니다.
+72|🔓 How much does it cost to open a Baidu account?|🔓 바이두 계정 개설 비용은 얼마인가요?
+73|Prepaid advertising fee:|선불 광고비:
+74|minimum CNY 2,400|최소 2,400위안
+75|Service fee:|서비스 수수료:
+76|starting from USD 100, which includes document translation, document review, and submission handling.|USD 100부터, 서류 번역, 서류 검토, 제출 처리 포함.
+77|⏰ Does Baidu support post-payment (pay later)?|⏰ 바이두는 후불 결제를 지원하나요?
+78|No.|아니요.
+79|Baidu only supports pre-payment. You must have sufficient balance in your account before your ads can run. There is no credit or post-pay option.|바이두는 선불 결제만 지원합니다. 광고가 실행되기 전에 계정에 충분한 잔액이 있어야 합니다. 신용 또는 후불 옵션은 없습니다.
+80|📊 How much does each click cost?|📊 클릭당 비용은 얼마인가요?
+81|Cost per click:|클릭당 비용:
+82|There is no uniform price. Low-competition keywords may cost a few yuan per click. In highly competitive industries, popular keywords can cost dozens to over CNY 100 per click.|통일된 가격은 없습니다. 저경쟁 키워드는 클릭당 몇 위안일 수 있습니다. 고경쟁 산업에서는 인기 키워드가 클릭당 수십에서 100위안 이상일 수 있습니다.
+83|Minimum monthly budget:|최소 월간 예산:
+84|CNY 50/day minimum, so theoretical monthly minimum is CNY 1,500.|최소 50위안/일, 따라서 이론적 월간 최소는 1,500위안입니다.
+85|📝 Need a Custom Quote?|📝 맞춤 견적이 필요하신가요?
+86|Enterprise budgets over $50,000/month get custom pricing. Let's talk.|월 $50,000 이상의 기업 예산은 맞춤 가격을 받을 수 있습니다. 상담해 보세요.
+87|Get a Custom Quote →|맞춤 견적 받기 →
+88|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+89|Quick Links|바로가기
+90|About Us|회사 소개
+91|Submit a Request|문의 접수
+92|Legal|법적 고지
+93|Privacy Policy|개인정보 처리방침
+94|Terms of Service|이용약관
+95|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.

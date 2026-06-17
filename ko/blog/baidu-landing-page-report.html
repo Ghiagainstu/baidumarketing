@@ -63,6 +63,25 @@
     [data-theme="dark"] footer { background:#070B14 !important; }
     @media (max-width:900px) { .nav-links { display:none; } .mobile-nav-toggle { display:flex; } }
 
+      /* Language switcher */
+    .lang-switch { position: relative; z-index: 9999 !important; }
+    .lang-switch-btn { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; font-size: .9rem; color: var(--gray-600); transition: all var(--transition-base); line-height: 1; }
+    .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .lang-switch-btn:hover svg { transform: rotate(180deg); }
+    .lang-switch-menu { position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; box-shadow: var(--shadow-md); min-width: 150px; opacity: 0; pointer-events: none; transform: translateY(-4px); transition: opacity .2s ease, transform .2s ease; z-index: 200; }
+    .lang-switch-menu.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .lang-switch-item { display: block; padding: 10px 16px; font-size: .9rem; color: var(--gray-700); transition: background .15s; white-space: nowrap; text-decoration: none; }
+    .lang-switch-item:hover { background: var(--blue-light); color: var(--blue); }
+    .lang-switch-item:first-child { border-radius: 7px 7px 0 0; }
+    .lang-switch-item:last-child { border-radius: 0 0 7px 7px; }
+    [data-theme="dark"] .lang-switch-btn { border-color: var(--gray-200); color: var(--gray-600); }
+    [data-theme="dark"] .lang-switch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    [data-theme="dark"] .lang-switch-menu { background: #0B0F1A; border-color: var(--gray-200); }
+    [data-theme="dark"] .lang-switch-item { color: var(--gray-700); }
+    [data-theme="dark"] .lang-switch-item:hover { background: rgba(99,102,241,.12); color: var(--blue); }
+    @media (max-width: 900px) { .lang-switch { display: none; } }
+    .nav-right-group { display: flex; align-items: center; gap: 8px; }
+
   </style>
 <script type="application/ld+json">
   {
@@ -97,24 +116,27 @@
   <meta name="twitter:description" content="바이두 캠페인이 얼마나 많은 클릭을 얻고 있는지 알고 있습니다. 얼마나 많은 전환이 발생했는지도 알고 있습니다. 그러나 그 사이에 무엇이 일어났는지는요?" />
 </head>
 <body>
-    <nav>
-    <div class="nav-inner">
-      <a href="../index" class="nav-logo"><svg width="28" height="28" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#2932E1"></rect><text x="16" y='21.5' text-anchor='middle' fill="#fff" font-weight='800' font-size='13'>BPP</text></svg> Baidu PPC Pro</a>
-      <div class="nav-links" id="navLinks">
-        <a href="../why-baidu-ppc-pro">Why Baidu PPC Pro</a>
-        <a href="../features">Services</a>
-        <a href="../pricing">Pricing</a>
-        <a href="../clients">Clients</a>
-        <a href="../faq">FAQ</a>
-        <a href="../about">About</a>
-        <a href="../blog">Blog</a>
-        <a href="../contact">Contact</a>
-      </div>
-      <a href="../contact" class="nav-cta">Get Started →</a>
-      <button class="mobile-nav-toggle" id="navToggle" aria-label="Menu" onclick="toggleMobileNav()"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button>
+    <nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="/ko" class="nav-logo"><svg width="28" height="28" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#2932E1"/><text x="16" y="21.5" text-anchor="middle" fill="#fff" font-weight="800" font-size="13">BPP</text></svg> Baidu PPC Pro</a>
+    <div class="nav-links" id="navLinks">
+      <a href="/ko/why-baidu-ppc-pro">바이두 PPC Pro란</a><a href="/ko/features">서비스</a><a href="/ko/pricing">요금</a><a href="/ko/clients">도입 사례</a><a href="/ko/faq">자주 묻는 질문</a><a href="/ko/about">회사 소개</a><a href="/ko/blog" class="active">블로그</a><a href="/ko/contact">문의하기</a>
     </div>
-  </nav>
-  <div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()"></div>
+    <div class="nav-right-group">
+      <div class="lang-switch">
+        <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="언어">🇰🇷<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+        <div class="lang-switch-menu" id="langSwitchMenu">
+          <a href="/blog/baidu-landing-page-report" lang="en" class="lang-switch-item">🇺🇸 English</a>
+          <a href="/ja/blog/baidu-landing-page-report" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
+          <a href="/ko/blog/baidu-landing-page-report" lang="ko" class="lang-switch-item">🇰🇷 한국어</a>
+        </div>
+      </div>
+      <a href="/ko/contact" class="nav-cta">지금 시작하기 →</a>
+    </div>
+    <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" aria-hidden="true"></div>
   <main>
     
     <div class="breadcrumb"><a href="/ko">홈</a> / <a href="/ko/blog">블로그</a></div>
@@ -122,7 +144,7 @@
       <div class="article-meta">
         <span>2021-03-31</span>
         <span>·</span>
-        <span>2 min read</span>
+        <span>2분 읽기</span>
         <span>·</span>
         <span>Baidu PPC Pro Team</span>
       </div>
@@ -151,11 +173,11 @@
     <div class="stat-label">엔드투엔드 퍼널</div>
   </div>
 </div>
-<strong>제공되는 데이터:</strong>
+<h3>제공되는 데이터:</h3>
 <ul><li>도착률 (클릭 → 페이지 로드) — 기술적 문제나 느리게 로드되는 페이지 식별</li>
 <li>각 랜딩 페이지의 방문자 행동 데이터 (체류 시간, 스크롤 깊이, 인터랙션 이벤트)</li>
 <li>퍼널 전체 전환 경로 — 어떤 랜딩 페이지가 실제로 전환을 일으키는지 확인</li></ul>
-<strong>가용 범위:</strong> 현재 <strong>의료업계를 제외한</strong> 모든 업계에서 이용 가능 (의료 수직 분야의 공개 시기는 미정).
+<p><strong>가용 범위:</strong> 현재 <strong>의료업계를 제외한</strong> 모든 업계에서 이용 가능 (의료 수직 분야의 공개 시기는 미정).</p>
 <h2>📊 이 데이터를 사용하는 방법</h2>
 <table class="comparison-table">
   <thead>
@@ -183,7 +205,7 @@
     <li>✅ 구체적인 수정을 권장합니다: 카피 다시 쓰기, 모바일 로드 속도 개선, CTA 배치 조정</li></ul>
   </ul>
 </div>
-<strong>중국 내 법인 없이, 바이두 캠페인에서 퍼널 전체의 가시성을 얻고 싶으신가요?</strong>
+<h3>중국 내 법인 없이, 바이두 캠페인에서 퍼널 전체의 가시성을 얻고 싶으신가요?</h3>
 <p>→ <a href="/ko/contact">BPP 팀에 문의하기</a> </p>
 
     </article>
@@ -192,11 +214,11 @@
     <div class="footer-top">
       <div class="footer-brand">
         <h3>1️⃣ BPP Baidu PPC Pro</h3>
-        <p>We help international agencies and brands access China's digital advertising market.</p>
+        <p>1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 지원합니다.</p>
       </div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../features">Services</a></li><li><a href="../pricing">Pricing</a></li><li><a href="../clients">Clients</a></li><li><a href="../about">About</a></li><li><a href="../faq">FAQ</a></li><li><a href="../blog">Blog</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="../contact">Submit a Request</a></li></ul></div>
-      <div class="footer-col"><h4>Legal</h4><ul><li><a href="../privacy">Privacy Policy</a></li><li><a href="../terms">Terms of Service</a></li></ul></div>
+      <div class="footer-col"><h4>바로가기</h4><ul><li><a href="/ko/features">서비스</a></li><li><a href="/ko/pricing">요금</a></li><li><a href="/ko/clients">도입 사례</a></li><li><a href="/ko/about">회사 소개</a></li><li><a href="/ko/faq">자주 묻는 질문</a></li><li><a href="/ko/blog">블로그</a></li></ul></div>
+      <div class="footer-col"><h4>문의하기</h4><ul><li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li><li><a href="/ko/contact">문의 접수</a></li></ul></div>
+      <div class="footer-col"><h4>법적 고지</h4><ul><li><a href="/ko/privacy">개인정보 처리방침</a></li><li><a href="/ko/terms">이용약관</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>

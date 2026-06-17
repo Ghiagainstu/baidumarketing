@@ -264,25 +264,23 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 </head>
 <body>
 <!-- NAV -->
-<nav>
-  <div class="container nav-inner">
-    <a href="/ko/index" class="nav-logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#lg)"/><path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/><text x="16" y='21' text-anchor='middle' font-family="Inter,system-ui,sans-serif" font-size='12' font-weight='800' fill='white' letter-spacing=".3">BPP</text></svg> Baidu PPC Pro</a>
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="/ko" class="nav-logo"><svg width="28" height="28" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#2932E1"/><text x="16" y="21.5" text-anchor="middle" fill="#fff" font-weight="800" font-size="13">BPP</text></svg> Baidu PPC Pro</a>
     <div class="nav-links" id="navLinks">
-      <a href="/">Baidu PPC Pro란?</a>
-      <a href="/">서비스</a>
-      <a href="/">요금제</a>
-      <a href="/">고객사</a>
-      <a href="/">FAQ</a>
-      <a href="/">회사소개</a>
-      <a href="/ko/blog" class="active">블로그</a>
-      <a href="/">문의하기</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> 다크모드 전환</button>
+      <a href="/ko/why-baidu-ppc-pro">바이두 PPC Pro란</a><a href="/ko/features">서비스</a><a href="/ko/pricing">요금</a><a href="/ko/clients">도입 사례</a><a href="/ko/faq">자주 묻는 질문</a><a href="/ko/about">회사 소개</a><a href="/ko/blog" class="active">블로그</a><a href="/ko/contact">문의하기</a>
     </div>
     <div class="nav-right-group">
-      <div class="lang-switch"><button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="Language">KR <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
-        <div class="lang-switch-menu" id="langSwitchMenu"><a href="/" lang="en" class="lang-switch-item">English</a><a href="/ko/index" lang="ko" class="lang-switch-item">한국어</a></div></div>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
-      <a href="/" class="nav-cta">지금 시작하기</a></div>
+      <div class="lang-switch">
+        <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="언어">🇰🇷<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+        <div class="lang-switch-menu" id="langSwitchMenu">
+          <a href="/blog/2020-baidu-b2b-industry-insights" lang="en" class="lang-switch-item">🇺🇸 English</a>
+          <a href="/ja/blog/2020-baidu-b2b-industry-insights" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
+          <a href="/ko/blog/2020-baidu-b2b-industry-insights" lang="ko" class="lang-switch-item">🇰🇷 한국어</a>
+        </div>
+      </div>
+      <a href="/ko/contact" class="nav-cta">지금 시작하기 →</a>
+    </div>
     <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu"><svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg><svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg></button>
   </div>
 </nav>
@@ -294,9 +292,9 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
   <div class="container">
     <h1 class="article-title">2020년 Baidu B2B 산업 인사이트: 중국 산업 검색 데이터가 밝히는 진실</h1>
     <div class="article-meta">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jul 9, 2020</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> 7 min</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2020년 7월 9일</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> 7분 읽기</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro 팀</span>
     </div>
   </div>
 </section>
@@ -304,13 +302,12 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 <section class="article-section">
   <div class="container">
     <article class="article-content">
-# 2020년 Baidu B2B 산업 인사이트: 중국 산업 검색 데이터가 밝히는 진실
+<h1>2020년 Baidu B2B 산업 인사이트: 중국 산업 검색 데이터가 밝히는 진실</h1>
 
-> Baidu가 2020년에 처리한 수백만 건의 B2B 산업 검색 쿼리. 이 데이터는 중국 비즈니스 바이어가 제품을 어떻게 조사하고, 어떤 산업이 수요를 주도하며, 플랫폼 경쟁이 어떻게 진행되는지 보여줍니다. 데이터가 말하는 사실과 해외 기업에게 주는 의미를 알아봅니다.
+<blockquote><p>Baidu가 2020년에 처리한 수백만 건의 B2B 산업 검색 쿼리. 이 데이터는 중국 비즈니스 바이어가 제품을 어떻게 조사하고, 어떤 산업이 수요를 주도하며, 플랫폼 경쟁이 어떻게 진행되는지 보여줍니다. 데이터가 말하는 사실과 해외 기업에게 주는 의미를 알아봅니다.</p></blockquote>
+<h2>전체 그림: B2B 검색 수요의 급격한 회복</h2>
 
-## 전체 그림: B2B 검색 수요의 급격한 회복
-
-Baidu 2020년 B2B 산업 보고서에서 가장 주목할 점: 2020년 초 하락 이후 B2B 검색 수요가 빠르게 회복되었습니다. 2020년 4월까지 전년 대비 B2B 검색량은 이미 2019년 수준을 넘어섰습니다. 기업들은 구매를 멈춘 것이 아니라, 공급업체 조사를 예상보다 훨씬 빠르게 온라인으로 전환한 것입니다.
+<p>Baidu 2020년 B2B 산업 보고서에서 가장 주목할 점: 2020년 초 하락 이후 B2B 검색 수요가 빠르게 회복되었습니다. 2020년 4월까지 전년 대비 B2B 검색량은 이미 2019년 수준을 넘어섰습니다. 기업들은 구매를 멈춘 것이 아니라, 공급업체 조사를 예상보다 훨씬 빠르게 온라인으로 전환한 것입니다.</p>
 
 <div class="stats-grid">
   <div class="stat-card">
@@ -330,16 +327,16 @@ Baidu 2020년 B2B 산업 보고서에서 가장 주목할 점: 2020년 초 하�
   </div>
   <div class="stat-card">
     <div class="stat-icon">🏭</div>
-    <div class="stat-number">TOP 3</div>
+    <div class="stat-number">상위 3개</div>
     <div class="stat-label">기계공업·건축자재·전기설비 — 최대 B2B 세그먼트</div>
   </div>
 </div>
 
-모바일과 PC의 비율도 중요한 시사점을 줍니다. B2B 검색 트래픽의 약 70%가 모바일 기기에서 발생하며, 이는 중국 비즈니스 바이어가 공장 현장, 건설 현장, 외근 중에 스마트폰으로 공급업체를 조사한다는 것을 의미합니다. 하지만 30%는 데스크톱에서 검색하므로, 전체 시장을 아우르려면 두 채널 모두에서 캠페인을 운영해야 합니다.
+<p>모바일과 PC의 비율도 중요한 시사점을 줍니다. B2B 검색 트래픽의 약 70%가 모바일 기기에서 발생하며, 이는 중국 비즈니스 바이어가 공장 현장, 건설 현장, 외근 중에 스마트폰으로 공급업체를 조사한다는 것을 의미합니다. 하지만 30%는 데스크톱에서 검색하므로, 전체 시장을 아우르려면 두 채널 모두에서 캠페인을 운영해야 합니다.</p>
 
-## 중국 B2B TOP 10 세그먼트: 수요는 어디에 있는가
+<h2>중국 B2B TOP 10 세그먼트: 수요는 어디에 있는가</h2>
 
-Baidu 검색 데이터는 10개의 주요 B2B 산업 카테고리를 식별했습니다. 이들은 플랫폼 상의 산업 구매 의도의 대부분을 차지합니다.
+<p>Baidu 검색 데이터는 10개의 주요 B2B 산업 카테고리를 식별했습니다. 이들은 플랫폼 상의 산업 구매 의도의 대부분을 차지합니다.</p>
 
 <table class="comparison-table">
   <thead>
@@ -414,92 +411,95 @@ Baidu 검색 데이터는 10개의 주요 B2B 산업 카테고리를 식별했�
   </tbody>
 </table>
 
-주목할 패턴: 야금, 철물, 자동차 부품, 농업 4개 카테고리에서는 상위 10개 서브세그먼트만으로 전체 검색량의 80% 이상을 차지합니다. 이들 산업에 진출할 경우, 주요 서브세그먼트에 집중한 키워드 전략이 수백 개의 롱테일 키워드에 예산을 분산하는 것보다 훨씬 비용 효율적입니다.
+<p>주목할 패턴: 야금, 철물, 자동차 부품, 농업 4개 카테고리에서는 상위 10개 서브세그먼트만으로 전체 검색량의 80% 이상을 차지합니다. 이들 산업에 진출할 경우, 주요 서브세그먼트에 집중한 키워드 전략이 수백 개의 롱테일 키워드에 예산을 분산하는 것보다 훨씬 비용 효율적입니다.</p>
 
 <div class="callout tip">
   <strong>💡 경쟁 우위 팁:</strong> 서브세그먼트 집중도가 높은 산업(야금, 철물, 자동차 부품, 농업)에서는 광고 예산의 70%를 상위 10개 서브카테고리 키워드에 집중하고, 나머지 30%를 틈새 용어에 할당하세요. 이 방식은 일반적으로 광범위한 카테고리 입찰보다 2~3배 높은 ROAS를 달성합니다.
 </div>
 
-## 중국 B2B 바이어는 실제로 어떻게 검색하고 결정하는가
+<h2>중국 B2B 바이어는 실제로 어떻게 검색하고 결정하는가</h2>
 
-검색 행동을 이해하는 것은 단순한 광고 운영과 수익성 높은 광고 운영의 차이를 만듭니다. Baidu 보고서는 중국 B2B 바이어가 최초 검색부터 최종 구매까지 거치는 정확한 경로를 보여줍니다.
+<p>검색 행동을 이해하는 것은 단순한 광고 운영과 수익성 높은 광고 운영의 차이를 만듭니다. Baidu 보고서는 중국 B2B 바이어가 최초 검색부터 최종 구매까지 거치는 정확한 경로를 보여줍니다.</p>
 
-### 검색 여정: 3단계
+<h3>검색 여정: 3단계</h3>
 
-**1단계 — 인지**: 바이어는 일반적인 B2B 용어로 검색을 시작합니다. 아직 넓게 정보를 수집하는 단계입니다. 이 시기에 클릭되는 것은 Baidu 백과사전, Baidu 지식 Q&A, 바이자하오의 산업 콘텐츠입니다. 아직 공급업체에 연락할 준비가 되지 않았습니다.
+<p><strong>1단계 — 인지</strong>: 바이어는 일반적인 B2B 용어로 검색을 시작합니다. 아직 넓게 정보를 수집하는 단계입니다. 이 시기에 클릭되는 것은 Baidu 백과사전, Baidu 지식 Q&A, 바이자하오의 산업 콘텐츠입니다. 아직 공급업체에 연락할 준비가 되지 않았습니다.</p>
 
-**2단계 — 비교**: 검색이 특정 제조업체와 조달처로 좁혀집니다. "공장 직판", "제조업체", "도매 공급업체" 같은 용어가 중심이 됩니다. 바이어는 B2B 플랫폼, 기업 웹사이트, 기술 지원 페이지를 클릭합니다.
+<p><strong>2단계 — 비교</strong>: 검색이 특정 제조업체와 조달처로 좁혀집니다. "공장 직판", "제조업체", "도매 공급업체" 같은 용어가 중심이 됩니다. 바이어는 B2B 플랫폼, 기업 웹사이트, 기술 지원 페이지를 클릭합니다.</p>
 
-**3단계 — 결정**: 최종 단계입니다. 가격, 최소 주문 수량, 배송 조건 등 거래 용어로 검색합니다. 문의를 위해 AiCaiGou, 1688.com, 공급업체 사이트를 방문합니다.
+<p><strong>3단계 — 결정</strong>: 최종 단계입니다. 가격, 최소 주문 수량, 배송 조건 등 거래 용어로 검색합니다. 문의를 위해 AiCaiGou, 1688.com, 공급업체 사이트를 방문합니다.</p>
 
-광고주를 위한 교훈: 검색 캠페인은 바이어의 단계에 맞춰야 합니다. 광범위한 산업 키워드와 거래 지향적 키워드는 서로 다른 랜딩페이지와 다른 CTA로 연결되어야 합니다.
+<p>광고주를 위한 교훈: 검색 캠페인은 바이어의 단계에 맞춰야 합니다. 광범위한 산업 키워드와 거래 지향적 키워드는 서로 다른 랜딩페이지와 다른 CTA로 연결되어야 합니다.</p>
 
-### 바이어가 가장 중요하게 생각하는 것
+<h3>바이어가 가장 중요하게 생각하는 것</h3>
 
-전 산업을 통틀어 B2B 구매 결정을 좌우하는 최대 요인은 하나: **가격**입니다. 중국 비즈니스 바이어는 사양이나 공급업체 평판, 납품 조건보다 먼저 가격을 조사합니다.
+<p>전 산업을 통틀어 B2B 구매 결정을 좌우하는 최대 요인은 하나: <strong>가격</strong>입니다. 중국 비즈니스 바이어는 사양이나 공급업체 평판, 납품 조건보다 먼저 가격을 조사합니다.</p>
 
-그러나 2차적 관심사는 산업별로 다릅니다:
-- **건축자재·금속**: 입소문 평가, 반품·수리 대응
-- **기계·전기·전자**: 중고 판매·임대 옵션
-- **전 산업 공통**: 거래 채널의 신뢰성과 결제 안전성
+<p>그러나 2차적 관심사는 산업별로 다릅니다:</p>
+<ul>
+<li><strong>건축자재·금속</strong>: 입소문 평가, 반품·수리 대응</li>
+<li><strong>기계·전기·전자</strong>: 중고 판매·임대 옵션</li>
+<li><strong>전 산업 공통</strong>: 거래 채널의 신뢰성과 결제 안전성</li>
+</ul>
+<h3>바이어는 언제, 어디서 검색하는가</h3>
 
-### 바이어는 언제, 어디서 검색하는가
+<p><strong>시간 패턴</strong>: PC 검색은 평일 업무 시간에 피크를 이룹니다. 모바일 검색은 더 균등하게 분포하며, 주말과 야간도 포함됩니다. 즉, B2B 캠페인은 주간 내내 운영하고, 경쟁사가 놓치기 쉬운 주말 모바일 트래픽을 확보하는 예산 배분이 효과적입니다.</p>
 
-**시간 패턴**: PC 검색은 평일 업무 시간에 피크를 이룹니다. 모바일 검색은 더 균등하게 분포하며, 주말과 야간도 포함됩니다. 즉, B2B 캠페인은 주간 내내 운영하고, 경쟁사가 놓치기 쉬운 주말 모바일 트래픽을 확보하는 예산 배분이 효과적입니다.
-
-**지역 패턴**: 화둥(華東) 지역이 전체 B2B 검색 수요의 50%를 차지합니다. 화베이(華北)와 화난(華南)이 각각 약 12%, 화중(華中) 10%, 시난(西南·5%), 둥베이(東北·5%), 시베이(西北·4%) 순입니다. 화난 내에서는 광둥성 하나가 이 지역 B2B 활동의 대부분을 차지합니다.
+<p><strong>지역 패턴</strong>: 화둥(華東) 지역이 전체 B2B 검색 수요의 50%를 차지합니다. 화베이(華北)와 화난(華南)이 각각 약 12%, 화중(華中) 10%, 시난(西南·5%), 둥베이(東北·5%), 시베이(西北·4%) 순입니다. 화난 내에서는 광둥성 하나가 이 지역 B2B 활동의 대부분을 차지합니다.</p>
 
 <blockquote class="blockquote-highlight">
-  "수요는 경제 활동이 가장 활발한 화둥 지역에 집중되어 있습니다. 그러나 산업별로 지역 패턴은 다릅니다 — 물류·자동차 부품은 광둥, 후베이, 쓰촨, 허베이에서 두드러지고, 가전은 광둥, 쓰촨, 허난에서 수요가 절정에 달합니다"
+<p>"수요는 경제 활동이 가장 활발한 화둥 지역에 집중되어 있습니다. 그러나 산업별로 지역 패턴은 다릅니다 — 물류·자동차 부품은 광둥, 후베이, 쓰촨, 허베이에서 두드러지고, 가전은 광둥, 쓰촨, 허난에서 수요가 절정에 달합니다"</p>
   <cite>— 2020년 Baidu B2B 산업 인사이트 보고서</cite>
 </blockquote>
 
-## B2B 플랫폼 판도: 승자는 누구인가
+<h2>B2B 플랫폼 판도: 승자는 누구인가</h2>
 
-Baidu 보고서는 B2B 플랫폼을 두 가지 모델로 분류합니다:
-- **종합형 플랫폼**(검색 관심의 78%): 1688.com, AiCaiGou(Baidu 자체 플랫폼), HC360.com — 광범위한 카테고리를 아우르는 원스톱 플랫폼
-- **수직형 플랫폼**(22%): 더 깊은 전문성을 갖춘 산업 특화 마켓플레이스
+<p>Baidu 보고서는 B2B 플랫폼을 두 가지 모델로 분류합니다:</p>
+<ul>
+<li><strong>종합형 플랫폼</strong>(검색 관심의 78%): 1688.com, AiCaiGou(Baidu 자체 플랫폼), HC360.com — 광범위한 카테고리를 아우르는 원스톱 플랫폼</li>
+<li><strong>수직형 플랫폼</strong>(22%): 더 깊은 전문성을 갖춘 산업 특화 마켓플레이스</li>
+</ul>
+<p>1688.com은 검색량과 브랜드 인지도 모두에서 선두입니다. 그러나 AiCaiGou는 고성장의 스위트 스폿에 있습니다 — 높은 검색 점유율과 비즈니스 바이어 사이에서 빠르게 높아지는 인지도를 동시에 갖추고 있습니다. 중국 시장에 진출하는 해외 기업에게 AiCaiGou는 전략적 기회입니다. Baidu 검색 생태계와 깊이 통합되어 있어, 마켓플레이스뿐만 아니라 중국 최대 검색 엔진의 자연 검색 결과와 광고에도 자사 제품이 표시되기 때문입니다.</p>
 
-1688.com은 검색량과 브랜드 인지도 모두에서 선두입니다. 그러나 AiCaiGou는 고성장의 스위트 스폿에 있습니다 — 높은 검색 점유율과 비즈니스 바이어 사이에서 빠르게 높아지는 인지도를 동시에 갖추고 있습니다. 중국 시장에 진출하는 해외 기업에게 AiCaiGou는 전략적 기회입니다. Baidu 검색 생태계와 깊이 통합되어 있어, 마켓플레이스뿐만 아니라 중국 최대 검색 엔진의 자연 검색 결과와 광고에도 자사 제품이 표시되기 때문입니다.
+<h2>B2B 마케팅 5단계: Baidu의 풀퍼널 접근법</h2>
 
-## B2B 마케팅 5단계: Baidu의 풀퍼널 접근법
+<p>보고서는 B2B 기업이 Baidu 플랫폼에서 수요를 확보하고 판매로 전환하기 위한 체계적인 접근법을 제시합니다:</p>
 
-보고서는 B2B 기업이 Baidu 플랫폼에서 수요를 확보하고 판매로 전환하기 위한 체계적인 접근법을 제시합니다:
+<p><strong>1단계: 정밀 타게팅</strong> — 검색 광고, 브랜드 존, 피드 광고, 디스플레이 광고를 활용해 제품 카테고리를 검색하는 순간의 고의도 바이어를 포착합니다.</p>
 
-**1단계: 정밀 타게팅** — 검색 광고, 브랜드 존, 피드 광고, 디스플레이 광고를 활용해 제품 카테고리를 검색하는 순간의 고의도 바이어를 포착합니다.
+<p><strong>2단계: 지식 마케팅</strong> — Baidu 백과사전 항목, Baidu 지식 답변, 숏폼 비디오 콘텐츠를 통해 권위를 구축합니다. 중국 B2B 바이어는 인지·비교 단계에서 이러한 콘텐츠 소스에 크게 의존합니다.</p>
 
-**2단계: 지식 마케팅** — Baidu 백과사전 항목, Baidu 지식 답변, 숏폼 비디오 콘텐츠를 통해 권위를 구축합니다. 중국 B2B 바이어는 인지·비교 단계에서 이러한 콘텐츠 소스에 크게 의존합니다.
+<p><strong>3단계: 풀퍼널 웹사이트</strong> — Baidu의 Jimuyu(基木魚) 플랫폼을 사용해 리드 캡처 기능이 내장된 고전환 랜딩페이지를 구축·호스팅합니다. 별도 호스팅이나 CMS가 필요 없습니다.</p>
 
-**3단계: 풀퍼널 웹사이트** — Baidu의 Jimuyu(基木魚) 플랫폼을 사용해 리드 캡처 기능이 내장된 고전환 랜딩페이지를 구축·호스팅합니다. 별도 호스팅이나 CMS가 필요 없습니다.
+<p><strong>4단계: 프라이빗 도메인 운영</strong> — 기업 바이자하오 계정과 라이브 스트리밍을 통해 반복 구매자의 직접 오디언스를 구축합니다. 이는 Baidu 에코시스템 내의 자사 채널입니다.</p>
 
-**4단계: 프라이빗 도메인 운영** — 기업 바이자하오 계정과 라이브 스트리밍을 통해 반복 구매자의 직접 오디언스를 구축합니다. 이는 Baidu 에코시스템 내의 자사 채널입니다.
+<p><strong>5단계: 리드 운영</strong> — AiCaiGou 문의 시스템을 통해 플랫폼 트래픽을 적격 리드로 전환하고, 실시간 리드 알림과 CRM 연동을 실현합니다.</p>
 
-**5단계: 리드 운영** — AiCaiGou 문의 시스템을 통해 플랫폼 트래픽을 적격 리드로 전환하고, 실시간 리드 알림과 CRM 연동을 실현합니다.
+<h2>AiCaiGou: 잘 알려지지 않은 가장 빠르게 성장하는 B2B 플랫폼</h2>
 
-## AiCaiGou: 잘 알려지지 않은 가장 빠르게 성장하는 B2B 플랫폼
+<p>AiCaiGou(愛購買)는 Baidu의 B2B 조달 플랫폼입니다. 보고서는 국제 브랜드가 주목해야 할 몇 가지 이유를 제시합니다:</p>
 
-AiCaiGou(愛購買)는 Baidu의 B2B 조달 플랫폼입니다. 보고서는 국제 브랜드가 주목해야 할 몇 가지 이유를 제시합니다:
-
-- **Baidu 에코시스템 통합**: AiCaiGou에 등록된 제품은 Baidu의 자연 검색과 유료 검색 모두에 표시됩니다 — Google에서 Amazon 상품 리스트가 랭킹되는 것과 같습니다
-- **성장하는 DAU와 가입 기업 수**: 일일 활성 사용자와 등록 기업 수가 꾸준히 증가 추세
-- **듀얼 시나리오 커버리지**: 바이어는 능동 검색과 수동 브라우징 추천 양쪽에서 제품에 접근
-- **계절 피크**: 문의량 피크는 3~6월과 9~12월로, 중국의 산업 조달 사이클과 일치
-- **주요 지역**: 광둥성, 저장성, 장쑤성, 산둥성, 허베이성
-
+<ul>
+<li><strong>Baidu 에코시스템 통합</strong>: AiCaiGou에 등록된 제품은 Baidu의 자연 검색과 유료 검색 모두에 표시됩니다 — Google에서 Amazon 상품 리스트가 랭킹되는 것과 같습니다</li>
+<li><strong>성장하는 DAU와 가입 기업 수</strong>: 일일 활성 사용자와 등록 기업 수가 꾸준히 증가 추세</li>
+<li><strong>듀얼 시나리오 커버리지</strong>: 바이어는 능동 검색과 수동 브라우징 추천 양쪽에서 제품에 접근</li>
+<li><strong>계절 피크</strong>: 문의량 피크는 3~6월과 9~12월로, 중국의 산업 조달 사이클과 일치</li>
+<li><strong>주요 지역</strong>: 광둥성, 저장성, 장쑤성, 산둥성, 허베이성</li>
+</ul>
 <div class="callout warning">
   <strong>⚠️ 중요:</strong> AiCaiGou의 TOP 10 산업 카테고리는 B2B 검색 수요 전체와 거의 완벽하게 일치합니다 — 기계, 건축자재, 전기, 전자, 금속, 화학, 보안, 철물, 자동차 부품, 농업. 귀사 제품이 이 카테고리에 해당한다면, 중국에서 가장 트래픽이 높은 B2B 채널에서 경쟁하고 있는 것입니다. 참여하지 않으면 참여하고 있는 경쟁사에 가시성을 빼앗기게 됩니다.
 </div>
 
-## 해외 B2B 기업에게 주는 의미
+<h2>해외 B2B 기업에게 주는 의미</h2>
 
-Baidu 보고서 데이터는 중국 시장에 진출하거나 확장하는 국제 브랜드에게 명확한 전략 로드맵을 제공합니다:
+<p>Baidu 보고서 데이터는 중국 시장에 진출하거나 확장하는 국제 브랜드에게 명확한 전략 로드맵을 제공합니다:</p>
 
-1. **모바일 퍼스트 캠페인은 필수** — 바이어의 70%가 스마트폰으로 검색
-2. **가격 투명성이 승리의 열쇠** — 중국 B2B 바이어는 무엇보다 먼저 가격을 조사
-3. **화둥 지역부터 시작, 이후 확장** — 수요의 50%가 장강 삼각주 지역에서 발생
-4. **3가지 검색 단계를 모두 커버** — 인지·비교·결정에 각각 다른 키워드와 LP 제공
-5. **주말 모바일 캠페인에 숨겨진 가치** — 경쟁이 적고 실제 구매 의도 존재
-6. **AiCaiGou + Baidu 검색이 최강 조합** — 마켓플레이스와 검색 엔진의 듀얼 커버리지
+<p>1. <strong>모바일 퍼스트 캠페인은 필수</strong> — 바이어의 70%가 스마트폰으로 검색</p>
+<p>2. <strong>가격 투명성이 승리의 열쇠</strong> — 중국 B2B 바이어는 무엇보다 먼저 가격을 조사</p>
+<p>3. <strong>화둥 지역부터 시작, 이후 확장</strong> — 수요의 50%가 장강 삼각주 지역에서 발생</p>
+<p>4. <strong>3가지 검색 단계를 모두 커버</strong> — 인지·비교·결정에 각각 다른 키워드와 LP 제공</p>
+<p>5. <strong>주말 모바일 캠페인에 숨겨진 가치</strong> — 경쟁이 적고 실제 구매 의도 존재</p>
+<p>6. <strong>AiCaiGou + Baidu 검색이 최강 조합</strong> — 마켓플레이스와 검색 엔진의 듀얼 커버리지</p>
 
 <div class="takeaway">
   <h4>🎯 핵심 요약</h4>
@@ -516,17 +516,16 @@ Baidu 보고서 데이터는 중국 시장에 진출하거나 확장하는 국�
   </ul>
 </div>
 
----
+<p>---</p>
 
-B2B 검색 데이터가 그리는 그림은 명확합니다. 중국의 산업 바이어는 온라인에서, 모바일로 검색하며, Baidu를 주요 리서치 도구로 사용하고 있습니다. Baidu 검색과 AiCaiGou 양쪽에 프레즌스를 구축하고, 바이어 여정의 각 단계에 맞춘 모바일 최적화 캠페인과 콘텐츠를 전개하는 기업이 이 수요의 최대 점유율을 확보할 것입니다.
+<p>B2B 검색 데이터가 그리는 그림은 명확합니다. 중국의 산업 바이어는 온라인에서, 모바일로 검색하며, Baidu를 주요 리서치 도구로 사용하고 있습니다. Baidu 검색과 AiCaiGou 양쪽에 프레즌스를 구축하고, 바이어 여정의 각 단계에 맞춘 모바일 최적화 캠페인과 콘텐츠를 전개하는 기업이 이 수요의 최대 점유율을 확보할 것입니다.</p>
 
-**중국의 B2B 바이어에게 귀사 제품을 보여줄 준비가 되셨습니까?** BPP는 Baidu 광고 계정 개설, 캠페인 관리, AiCaiGou 스토어프런트 구축까지 — 중국 비즈니스 라이선스 불필요. [문의하기](https://www.baidumarketing.com/contact)
+<p><strong>중국의 B2B 바이어에게 귀사 제품을 보여줄 준비가 되셨습니까?</strong> BPP는 Baidu 광고 계정 개설, 캠페인 관리, AiCaiGou 스토어프런트 구축까지 — 중국 비즈니스 라이선스 불필요. [문의하기](https://www.baidumarketing.com/contact)</p>
 
-> 📄 **출처**: 본 문서는 Baidu 검색 빅데이터가 발표한 "2020년 Baidu B2B 산업 인사이트 보고서"(2020 Baidu B2B Industry Insights Report)의 데이터를 기반으로 합니다.
+<blockquote><p>📄 <strong>출처</strong>: 본 문서는 Baidu 검색 빅데이터가 발표한 "2020년 Baidu B2B 산업 인사이트 보고서"(2020 Baidu B2B Industry Insights Report)의 데이터를 기반으로 합니다.</p></blockquote>
+<p>---</p>
 
----
-
-**By Baidu PPC Pro Team**
+<h3>Baidu PPC Pro 팀</h3>
 </article>
   </div>
 </section>
@@ -560,31 +559,31 @@ B2B 검색 데이터가 그리는 그림은 명확합니다. 중국의 산업 �
     <div class="footer-top">
       <div class="footer-brand">
         <h3><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fl" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fl)"/><text x="16" y='21' text-anchor='middle' font-size='12' font-weight='800' fill='white'>BPP</text></svg> Baidu PPC Pro</h3>
-        <p>We help international agencies and brands access China's digital advertising market with compliance, clarity, and zero guesswork.</p>
+        <p>컴플라이언스, 투명성, 명확한 가이드로 해외 기업이 중국 디지털 광고 시장에 진출할 수 있도록 지원합니다.</p>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4>바로가기</h4>
         <ul>
-          <li><a href="/">Why Baidu PPC Pro</a></li>
-          <li><a href="/">Services</a></li>
-          <li><a href="/">Pricing</a></li>
-          <li><a href="/">About</a></li>
-          <li><a href="/">FAQ</a></li>
-          <li><a href="/ko/blog">Blog</a></li>
+          <li><a href="/">바이두 PPC Pro란</a></li>
+          <li><a href="/">서비스</a></li>
+          <li><a href="/">요금</a></li>
+          <li><a href="/">회사 소개</a></li>
+          <li><a href="/">자주 묻는 질문</a></li>
+          <li><a href="/ko/blog">블로그</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>문의하기</h4>
         <ul>
           <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
-          <li><a href="/">Submit a Request</a></li>
+          <li><a href="/">문의 접수</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Legal</h4>
+        <h4>법적 고지</h4>
         <ul>
-          <li><a href="/">Privacy Policy</a></li>
-          <li><a href="/">Terms of Service</a></li>
+          <li><a href="/">개인정보 처리방침</a></li>
+          <li><a href="/">이용약관</a></li>
         </ul>
       </div>
     </div>

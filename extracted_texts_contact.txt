@@ -1,0 +1,84 @@
+# contact 页面英文文本提取
+# 共 80 条
+# 格式: 序号|原文
+
+1|Contact Us — Start Your Baidu Advertising Journey — Baidu PPC Pro
+2|BPP
+3|" />
+4|Baidu PPC Pro
+5|Why Baidu PPC Pro
+6|Services
+7|Pricing
+8|Clients
+9|FAQ
+10|About
+11|Blog
+12|Contact
+13|Get Started →
+14|🇺🇸
+15|🇺🇸 English
+16|🇯🇵 日本語
+17|Home
+18|/ Contact
+19|💬 Let's Talk
+20|Ready to Start Advertising
+21|on
+22|Baidu
+23|Fill in the form and our team will respond within
+24|one business day
+25|. We'll review your requirements and send a
+26|tailored proposal
+27|— including a custom strategy for your specific situation.
+28|📬 Get in Touch
+29|Discuss Your Baidu Advertising Strategy
+30|📧 Email Us
+31|⚡ Response Time
+32|Within
+33|1 business day
+34|🌍 We Support
+35|Companies & agencies
+36|worldwide
+37|🔗 Our Advantage
+38|Direct connection
+39|to Baidu official & top agents
+40|First Name *
+41|Last Name *
+42|Work Email *
+43|Company / Agency Name *
+44|Service Interested In *
+45|Select a service…
+46|Account Opening ($100+)
+47|Budget Top-Up (2.5%+ fee)
+48|Campaign Management (6%+ of spend)
+49|Full Bundle (All Three)
+50|Agency / White-Label Partnership
+51|Other / Not Sure Yet
+52|Estimated Monthly Ad Budget
+53|Select a range…
+54|Under $1,000 / month
+55|$1,000 – $5,000 / month
+56|$5,000 – $20,000 / month
+57|$20,000 – $50,000 / month
+58|Over $50,000 / month
+59|Website
+60|Tell Us About Your Project
+61|Send My Request →
+62|Your information is kept strictly confidential and never shared.
+63|Message Received!
+64|Thank you for reaching out. Our team will review your request and reply to
+65|within one business day.
+66|Confidential
+67|— Your info is never shared
+68|Reply within
+69|Free
+70|initial consultation
+71|Serving
+72|countries
+73|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.
+74|Quick Links
+75|About Us
+76|Submit a Request
+77|Legal
+78|Privacy Policy
+79|Terms of Service
+80|©  Baidu PPC Pro. All rights reserved.

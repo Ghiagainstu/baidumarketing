@@ -1,0 +1,69 @@
+# terms 页面英文文本提取
+# 共 65 条
+# 格式: 序号|原文
+
+1|Terms of Service — Baidu PPC Pro
+2|BPP
+3|" />
+4|Baidu PPC Pro
+5|Why Baidu PPC Pro
+6|Services
+7|Pricing
+8|Clients
+9|FAQ
+10|About
+11|Blog
+12|Contact
+13|Get Started →
+14|🇺🇸
+15|🇺🇸 English
+16|🇯🇵 日本語
+17|Terms of Service
+18|Last updated: April 2026
+19|1. Acceptance of Terms
+20|By accessing or using the Baidu PPC Pro website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+21|2. Services Description
+22|Baidu PPC Pro provides the following services to international businesses and agencies:
+23|Account Opening:
+24|Assistance with Baidu advertising account registration for foreign entities, including document preparation, translation, and submission.
+25|Budget Top-Up:
+26|Facilitation of advertising fund deposits into your Baidu account, with transparent fee structures.
+27|Campaign Management:
+28|Ongoing management and optimization of Baidu advertising campaigns, including keyword research, ad creation, bid management, and performance reporting.
+29|3. Client Responsibilities
+30|As a client, you agree to:
+31|Provide accurate and complete business registration documents
+32|Ensure your advertising content complies with Baidu's advertising policies and Chinese advertising law
+33|Maintain sufficient account balance for ad delivery
+34|Respond promptly to review or compliance inquiries
+35|Not use the services for any illegal, fraudulent, or harmful purposes
+36|4. Fees and Payments
+37|Service fees are as outlined on our
+38|page and agreed upon in your service agreement. All fees are payable as specified, and advertising budget deposits are non-refundable once applied to your Baidu account.
+39|We reserve the right to adjust our service fees with prior notice. Existing clients will be notified of any fee changes at least 30 days before they take effect.
+40|5. Intellectual Property
+41|The Baidu PPC Pro website, logo, and all content (excluding client-provided materials) are the intellectual property of Baidu PPC Pro and may not be reproduced, distributed, or used without prior written consent.
+42|6. Limitation of Liability
+43|Baidu PPC Pro acts as an intermediary service provider for the Baidu advertising platform. We are not responsible for:
+44|Baidu platform outages, policy changes, or algorithm updates
+45|Ad disapprovals resulting from client-provided content
+46|Loss of advertising budget due to Baidu platform policies or third-party actions
+47|7. Confidentiality
+48|We treat your business information and advertising data as confidential. We will not share your proprietary information with third parties except as required to provide our services or as mandated by law.
+49|8. Termination
+50|9. Dispute Resolution
+51|Any disputes arising from these terms shall be resolved through good-faith negotiation. If negotiation fails, disputes shall be submitted to the jurisdiction of the courts where Baidu PPC Pro is registered.
+52|10. Changes to Terms
+53|We may update these Terms of Service from time to time. Continued use of our services after changes are posted constitutes acceptance of the revised terms.
+54|11. Contact
+55|For questions about these Terms of Service, please contact us at:
+56|Email:
+57|Website:
+58|Contact Page
+59|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.
+60|Quick Links
+61|About Us
+62|Submit a Request
+63|Legal
+64|Privacy Policy
+65|©  Baidu PPC Pro. All rights reserved.

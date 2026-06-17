@@ -1,0 +1,84 @@
+# contact 페이지 영문 텍스트 추출
+# 총 80개
+# 형식: 번호|원문|번역
+
+1|Contact Us — Start Your Baidu Advertising Journey — Baidu PPC Pro|문의하기 — 바이두 광고 여정 시작 — Baidu PPC Pro
+2|BPP|BPP
+3|" />|"
+4|Baidu PPC Pro|Baidu PPC Pro
+5|Why Baidu PPC Pro|바이두 PPC Pro란
+6|Services|서비스
+7|Pricing|요금
+8|Clients|도입 사례
+9|FAQ|자주 묻는 질문
+10|About|회사 소개
+11|Blog|블로그
+12|Contact|문의하기
+13|Get Started →|지금 시작하기 →
+14|🇺🇸|🇺🇸
+15|🇺🇸 English|🇺🇸 English
+16|🇯🇵 日本語|🇯🇵 日本語
+17|Home|홈
+18|/ Contact|/ 문의하기
+19|💬 Let's Talk|💬 상담하기
+20|Ready to Start Advertising|광고 시작 준비
+21|on|에서
+22|Baidu|바이두
+23|Fill in the form and our team will respond within|양식을 작성하시면 팀이 응답합니다
+24|one business day|1영업일 이내
+25|. We'll review your requirements and send a|. 요구 사항을 검토하고 보내드립니다
+26|tailored proposal|맞춤 제안
+27|— including a custom strategy for your specific situation.|— 상황에 맞는 맞춤 전략 포함.
+28|📬 Get in Touch|📬 연락하기
+29|Discuss Your Baidu Advertising Strategy|바이두 광고 전략 논의
+30|📧 Email Us|📧 이메일 보내기
+31|⚡ Response Time|⚡ 응답 시간
+32|Within|이내
+33|1 business day|1영업일
+34|🌍 We Support|🌍 지원합니다
+35|Companies & agencies|기업 및 에이전시
+36|worldwide|전 세계
+37|🔗 Our Advantage|🔗 우리의 장점
+38|Direct connection|직접 연결
+39|to Baidu official & top agents|바이두 공식 및 최고 에이전시와
+40|First Name *|이름 *
+41|Last Name *|성 *
+42|Work Email *|업무 이메일 *
+43|Company / Agency Name *|회사 / 에이전시명 *
+44|Service Interested In *|관심 서비스 *
+45|Select a service…|서비스 선택…
+46|Account Opening ($100+)|계정 개설 ($100+)
+47|Budget Top-Up (2.5%+ fee)|예산 충전 (2.5%+ 수수료)
+48|Campaign Management (6%+ of spend)|캠페인 관리 (지출의 6%+)
+49|Full Bundle (All Three)|풀 번들 (세 가지 모두)
+50|Agency / White-Label Partnership|에이전시 / 화이트라벨 파트너십
+51|Other / Not Sure Yet|기타 / 아직 확실하지 않음
+52|Estimated Monthly Ad Budget|예상 월간 광고 예산
+53|Select a range…|범위 선택…
+54|Under $1,000 / month|$1,000 미만 / 월
+55|$1,000 – $5,000 / month|$1,000 – $5,000 / 월
+56|$5,000 – $20,000 / month|$5,000 – $20,000 / 월
+57|$20,000 – $50,000 / month|$20,000 – $50,000 / 월
+58|Over $50,000 / month|$50,000 이상 / 월
+59|Website|웹사이트
+60|Tell Us About Your Project|프로젝트에 대해 알려주세요
+61|Send My Request →|요청 보내기 →
+62|Your information is kept strictly confidential and never shared.|귀하의 정보는 엄격하게 기밀로 유지되며 공유되지 않습니다.
+63|Message Received!|메시지 수신!
+64|Thank you for reaching out. Our team will review your request and reply to|연락해 주셔서 감사합니다. 팀이 요청을 검토하고 응답합니다
+65|within one business day.|1영업일 이내에.
+66|Confidential|기밀
+67|— Your info is never shared|— 귀하의 정보는 공유되지 않습니다
+68|Reply within|응답 시간
+69|Free|무료
+70|initial consultation|초기 상담
+71|Serving|서비스
+72|countries|개국
+73|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+74|Quick Links|바로가기
+75|About Us|회사 소개
+76|Submit a Request|문의 접수
+77|Legal|법적 고지
+78|Privacy Policy|개인정보 처리방침
+79|Terms of Service|이용약관
+80|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.

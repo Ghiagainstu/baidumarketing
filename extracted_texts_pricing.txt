@@ -1,0 +1,99 @@
+# pricing 页面英文文本提取
+# 共 95 条
+# 格式: 序号|原文
+
+1|Transparent Pricing for Baidu Ads — Baidu PPC Pro
+2|BPP
+3|" />
+4|Baidu PPC Pro
+5|Why Baidu PPC Pro
+6|Services
+7|Pricing
+8|Clients
+9|FAQ
+10|About
+11|Blog
+12|Contact
+13|Get Started →
+14|🇺🇸
+15|🇺🇸 English
+16|🇯🇵 日本語
+17|Home
+18|/ Pricing
+19|Transparent Pricing
+20|Competitive Rates Powered
+21|by
+22|AI Efficiency
+23|Our AI-augmented operations mean lower overhead — and we pass those savings to you. No hidden fees, ever.
+24|Accounts Opened
+25|📊 $
+26|M+
+27|Ad Spend Managed
+28|Average Cost Reduction
+29|hr
+30|Average Setup Time
+31|One-Time
+32|💰 Account Opening
+33|One-time setup fee, per account
+34|Full Baidu account registration
+35|Verification & compliance handling
+36|Business qualification submission
+37|Account activated within 72 hours
+38|English onboarding guide included
+39|Open an Account
+40|Most Popular
+41|Ongoing
+42|💳 Budget Top-Up
+43|From
+44|Of deposit amount · Tiered rates available
+45|USD / EUR / GBP accepted
+46|Same-day or next-day crediting
+47|No minimum top-up amount
+48|Volume discounts for large budgets
+49|Full transaction receipt provided
+50|Top Up Now
+51|Monthly Service · AI-Powered
+52|🤖 Campaign Management
+53|Of monthly ad spend · Lowest in the market
+54|AI-augmented bilingual campaign management
+55|Keyword research & bidding strategy
+56|Ad copywriting (CN + EN)
+57|Weekly optimization & A/B testing
+58|Monthly performance report
+59|Start Managing
+60|All prices in USD. Custom enterprise quotes available for budgets over $50,000/month.
+61|Contact us
+62|Pricing FAQ
+63|Common Pricing Questions
+64|Quick answers about our fees, top-up process, and budget requirements.
+65|💰 Are there fees besides the advertising budget?
+66|Yes.
+67|There is an annual account authentication fee of CNY 600. For new users, this fee is refunded to your ad account after the first year — effectively making it free for the first year.
+68|💳 What is the minimum top-up amount?
+69|Baidu's official rule is a minimum top-up of
+70|CNY 2,400
+71|. However, to save on transaction fees and reduce transfer time, we recommend a single top-up of CNY 10,000 or more.
+72|🔓 How much does it cost to open a Baidu account?
+73|Prepaid advertising fee:
+74|minimum CNY 2,400
+75|Service fee:
+76|starting from USD 100, which includes document translation, document review, and submission handling.
+77|⏰ Does Baidu support post-payment (pay later)?
+78|No.
+79|Baidu only supports pre-payment. You must have sufficient balance in your account before your ads can run. There is no credit or post-pay option.
+80|📊 How much does each click cost?
+81|Cost per click:
+82|There is no uniform price. Low-competition keywords may cost a few yuan per click. In highly competitive industries, popular keywords can cost dozens to over CNY 100 per click.
+83|Minimum monthly budget:
+84|CNY 50/day minimum, so theoretical monthly minimum is CNY 1,500.
+85|📝 Need a Custom Quote?
+86|Enterprise budgets over $50,000/month get custom pricing. Let's talk.
+87|Get a Custom Quote →
+88|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.
+89|Quick Links
+90|About Us
+91|Submit a Request
+92|Legal
+93|Privacy Policy
+94|Terms of Service
+95|©  Baidu PPC Pro. All rights reserved.

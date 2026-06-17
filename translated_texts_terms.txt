@@ -1,0 +1,69 @@
+# terms 페이지 영문 텍스트 추출
+# 총 65개
+# 형식: 번호|원문|번역
+
+1|Terms of Service — Baidu PPC Pro|이용약관 — Baidu PPC Pro
+2|BPP|BPP
+3|" />|"
+4|Baidu PPC Pro|Baidu PPC Pro
+5|Why Baidu PPC Pro|바이두 PPC Pro란
+6|Services|서비스
+7|Pricing|요금
+8|Clients|도입 사례
+9|FAQ|자주 묻는 질문
+10|About|회사 소개
+11|Blog|블로그
+12|Contact|문의하기
+13|Get Started →|지금 시작하기 →
+14|🇺🇸|🇺🇸
+15|🇺🇸 English|🇺🇸 English
+16|🇯🇵 日本語|🇯🇵 日本語
+17|Terms of Service|이용약관
+18|Last updated: April 2026|최종 업데이트: 2026년 4월
+19|1. Acceptance of Terms|1. 약관 동의
+20|By accessing or using the Baidu PPC Pro website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.|Baidu PPC Pro 웹사이트 및 서비스에 접근하거나 사용하면 이 이용약관에 동의하는 것으로 간주됩니다. 이 약관에 동의하지 않으면 서비스를 사용하지 마세요.
+21|2. Services Description|2. 서비스 설명
+22|Baidu PPC Pro provides the following services to international businesses and agencies:|Baidu PPC Pro는 국제 기업 및 에이전시에 다음과 같은 서비스를 제공합니다:
+23|Account Opening:|계정 개설:
+24|Assistance with Baidu advertising account registration for foreign entities, including document preparation, translation, and submission.|외국 기관을 위한 바이두 광고 계정 등록 지원, 서류 준비, 번역, 제출 포함.
+25|Budget Top-Up:|예산 충전:
+26|Facilitation of advertising fund deposits into your Baidu account, with transparent fee structures.|투명한 수수료 구조로 바이두 계정에 광고 자금 입금 촉진.
+27|Campaign Management:|캠페인 관리:
+28|Ongoing management and optimization of Baidu advertising campaigns, including keyword research, ad creation, bid management, and performance reporting.|키워드 리서치, 광고 제작, 입찰 관리, 성과 리포팅을 포함한 바이두 광고 캠페인의 지속적인 관리 및 최적화.
+29|3. Client Responsibilities|3. 고객 책임
+30|As a client, you agree to:|고객으로서 다음에 동의합니다:
+31|Provide accurate and complete business registration documents|정확하고 완전한 사업자 등록 서류 제공
+32|Ensure your advertising content complies with Baidu's advertising policies and Chinese advertising law|광고 콘텐츠가 바이두 광고 정책 및 중국 광고법을 준수하도록 보장
+33|Maintain sufficient account balance for ad delivery|광고 게재를 위한 충분한 계정 잔액 유지
+34|Respond promptly to review or compliance inquiries|검토 또는 컴플라이언스 문의에 신속하게 응답
+35|Not use the services for any illegal, fraudulent, or harmful purposes|불법, 사기, 유해한 목적으로 서비스 사용 금지
+36|4. Fees and Payments|4. 수수료 및 결제
+37|Service fees are as outlined on our|서비스 수수료는
+38|page and agreed upon in your service agreement. All fees are payable as specified, and advertising budget deposits are non-refundable once applied to your Baidu account.|페이지에 설명된 대로이며 서비스 계약에 동의한 대로입니다. 모든 수수료는 지정된 대로 지불해야 하며, 바이두 계정에 적용된 광고 예산 입금은 환불 불가입니다.
+39|We reserve the right to adjust our service fees with prior notice. Existing clients will be notified of any fee changes at least 30 days before they take effect.|사전 통지로 서비스 수수료를 조정할 권리를 보유합니다. 기존 고객에게는 수수료 변경 사항이 발효되기 최소 30일 전에 통지됩니다.
+40|5. Intellectual Property|5. 지적 재산
+41|The Baidu PPC Pro website, logo, and all content (excluding client-provided materials) are the intellectual property of Baidu PPC Pro and may not be reproduced, distributed, or used without prior written consent.|Baidu PPC Pro 웹사이트, 로고, 모든 콘텐츠(고객 제공 자료 제외)는 Baidu PPC Pro의 지적 재산이며 사전 서면 동의 없이 복제, 배포, 사용할 수 없습니다.
+42|6. Limitation of Liability|6. 책임 제한
+43|Baidu PPC Pro acts as an intermediary service provider for the Baidu advertising platform. We are not responsible for:|Baidu PPC Pro는 바이두 광고 플랫폼의 중개 서비스 제공업체로 활동합니다. 다음에 대해 책임지지 않습니다:
+44|Baidu platform outages, policy changes, or algorithm updates|바이두 플랫폼 중단, 정책 변경, 알고리즘 업데이트
+45|Ad disapprovals resulting from client-provided content|고객 제공 콘텐츠로 인한 광고 거부
+46|Loss of advertising budget due to Baidu platform policies or third-party actions|바이두 플랫폼 정책 또는 제3자 행동으로 인한 광고 예산 손실
+47|7. Confidentiality|7. 기밀 유지
+48|We treat your business information and advertising data as confidential. We will not share your proprietary information with third parties except as required to provide our services or as mandated by law.|비즈니스 정보와 광고 데이터를 기밀로 취급합니다. 서비스 제공에 필요하거나 법률에 의해 요구되는 경우를 제외하고 제3자와 독점 정보를 공유하지 않습니다.
+49|8. Termination|8. 해지
+50|9. Dispute Resolution|9. 분쟁 해결
+51|Any disputes arising from these terms shall be resolved through good-faith negotiation. If negotiation fails, disputes shall be submitted to the jurisdiction of the courts where Baidu PPC Pro is registered.|이 약관에서 발생하는 분쟁은 선의의 협상을 통해 해결됩니다. 협상이 실패하면, 분쟁은 Baidu PPC Pro가 등록된 법원의 관할에 제출됩니다.
+52|10. Changes to Terms|10. 약관 변경
+53|We may update these Terms of Service from time to time. Continued use of our services after changes are posted constitutes acceptance of the revised terms.|이 이용약관을 수시로 업데이트할 수 있습니다. 변경 사항 게시 후 서비스를 계속 사용하면 수정된 약관에 동의하는 것으로 간주됩니다.
+54|11. Contact|11. 문의하기
+55|For questions about these Terms of Service, please contact us at:|이 이용약관에 대한 질문이 있으시면 다음으로 연락해 주세요:
+56|Email:|이메일:
+57|Website:|웹사이트:
+58|Contact Page|문의 페이지
+59|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+60|Quick Links|바로가기
+61|About Us|회사 소개
+62|Submit a Request|문의 접수
+63|Legal|법적 고지
+64|Privacy Policy|개인정보 처리방침
+65|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.

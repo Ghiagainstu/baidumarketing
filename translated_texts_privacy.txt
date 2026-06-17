@@ -1,0 +1,71 @@
+# privacy 페이지 영문 텍스트 추출
+# 총 67개
+# 형식: 번호|원문|번역
+
+1|Privacy Policy — How We Protect Your Data — Baidu PPC Pro|개인정보 처리방침 — 데이터 보호 방법 — Baidu PPC Pro
+2|BPP|BPP
+3|" />|"
+4|Baidu PPC Pro|Baidu PPC Pro
+5|Why Baidu PPC Pro|바이두 PPC Pro란
+6|Services|서비스
+7|Pricing|요금
+8|Clients|도입 사례
+9|FAQ|자주 묻는 질문
+10|About|회사 소개
+11|Blog|블로그
+12|Contact|문의하기
+13|Get Started →|지금 시작하기 →
+14|🇺🇸|🇺🇸
+15|🇺🇸 English|🇺🇸 English
+16|🇯🇵 日本語|🇯🇵 日本語
+17|Privacy Policy|개인정보 처리방침
+18|Last updated: April 2026|최종 업데이트: 2026년 4월
+19|1. Information We Collect|1. 수집하는 정보
+20|When you use our website or services, we may collect the following types of information:|웹사이트 또는 서비스를 사용할 때, 다음과 같은 유형의 정보를 수집할 수 있습니다:
+21|Personal Information:|개인 정보:
+22|Name, email address, phone number, company name, and business registration details provided through our contact forms or during account setup.|연락 양식 또는 계정 설정 중에 제공된 이름, 이메일 주소, 전화번호, 회사명, 사업자 등록 세부 정보.
+23|Technical Information:|기술 정보:
+24|IP address, browser type, device information, and usage data collected automatically through cookies and similar technologies.|쿠키 및 유사 기술을 통해 자동으로 수집되는 IP 주소, 브라우저 유형, 장치 정보, 사용 데이터.
+25|Business Information:|비즈니스 정보:
+26|Baidu advertising account data, campaign details, and performance metrics accessed on your behalf.|귀하를 대신하여 접근하는 바이두 광고 계정 데이터, 캠페인 세부 정보, 성과 지표.
+27|2. How We Use Your Information|2. 정보 사용 방법
+28|We use collected information to:|수집된 정보를 다음과 같이 사용합니다:
+29|Provide and manage Baidu advertising account services|바이두 광고 계정 서비스 제공 및 관리
+30|Process account opening, top-up, and campaign management requests|계정 개설, 충전, 캠페인 관리 요청 처리
+31|Communicate with you about your account and services|계정 및 서비스에 대한 소통
+32|Improve our website and service quality|웹사이트 및 서비스 품질 개선
+33|Comply with legal and regulatory requirements|법적 및 규제 요구 사항 준수
+34|3. Information Sharing|3. 정보 공유
+35|We do not sell your personal information to third parties. We may share your information with:|개인 정보를 제3자에게 판매하지 않습니다. 다음과 공유할 수 있습니다:
+36|Baidu:|바이두:
+37|To the extent necessary for account management and ad campaign operations on the Baidu platform.|바이두 플랫폼에서 계정 관리 및 광고 캠페인 운영에 필요한 범위 내에서.
+38|Service Providers:|서비스 제공업체:
+39|Trusted third parties that assist with payment processing, document translation, or technical infrastructure.|결제 처리, 서류 번역, 기술 인프라를 지원하는 신뢰할 수 있는 제3자.
+40|Legal Requirements:|법적 요구 사항:
+41|When required by law, regulation, or legal process.|법률, 규정, 법적 절차에 의해 요구될 때.
+42|4. Data Security|4. 데이터 보안
+43|We implement industry-standard security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.|개인 정보를 보호하기 위해 업계 표준 보안 조치를 구현합니다. 그러나 인터넷을 통한 전송이나 전자 저장 방법은 100% 안전하지 않으며, 절대적인 보안을 보장할 수 없습니다.
+44|5. Cookies|5. 쿠키
+45|6. Data Retention|6. 데이터 보존
+46|We retain your personal information for as long as your account is active or as needed to provide services. Upon account closure, we will delete your personal data within a reasonable timeframe, except where retention is required by law.|계정이 활성화되어 있거나 서비스를 제공하는 데 필요한 기간 동안 개인 정보를 보존합니다. 계정 해지 시, 법률에 의해 보존이 요구되는 경우를 제외하고 합리적인 시간 내에 개인 데이터를 삭제합니다.
+47|7. Your Rights|7. 귀하의 권리
+48|You have the right to:|다음과 같은 권리가 있습니다:
+49|Access, correct, or delete your personal information|개인 정보에 접근, 수정, 삭제
+50|Withdraw consent for data processing|데이터 처리 동의 철회
+51|Request a copy of your data|데이터 사본 요청
+52|Object to the processing of your data|데이터 처리에 대한 이의 제기
+53|To exercise any of these rights, please contact us at|이러한 권리를 행사하려면 다음으로 연락해 주세요
+54|8. Changes to This Policy|8. 정책 변경
+55|We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Your continued use of our services after any changes constitutes your acceptance of the revised policy.|이 개인정보 처리방침을 수시로 업데이트할 수 있습니다. 변경 사항은 업데이트된 "최종 업데이트" 날짜와 함께 이 페이지에 게시됩니다. 변경 후 서비스를 계속 사용하면 수정된 정책에 동의하는 것으로 간주됩니다.
+56|9. Contact Us|9. 문의하기
+57|If you have any questions about this Privacy Policy, please contact us at:|이 개인정보 처리방침에 대한 질문이 있으시면 다음으로 연락해 주세요:
+58|Email:|이메일:
+59|Website:|웹사이트:
+60|Contact Page|문의 페이지
+61|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+62|Quick Links|바로가기
+63|About Us|회사 소개
+64|Submit a Request|문의 접수
+65|Legal|법적 고지
+66|Terms of Service|이용약관
+67|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.

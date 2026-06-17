@@ -1,0 +1,97 @@
+# why-baidu-ppc-pro 페이지 영문 텍스트 추출
+# 총 93개
+# 형식: 번호|원문|번역
+
+1|Why Baidu PPC Pro — Baidu Marketing for Global Companies|바이두 PPC Pro란 — 글로벌 기업을 위한 바이두 마케팅
+2|BPP|BPP
+3|" />|"
+4|Baidu PPC Pro|Baidu PPC Pro
+5|Why Baidu PPC Pro|바이두 PPC Pro란
+6|Services|서비스
+7|Pricing|요금
+8|Clients|도입 사례
+9|FAQ|자주 묻는 질문
+10|About|회사 소개
+11|Blog|블로그
+12|Contact|문의하기
+13|Get Started →|지금 시작하기 →
+14|🇺🇸|🇺🇸
+15|🇺🇸 English|🇺🇸 English
+16|🇯🇵 日本語|🇯🇵 日本語
+17|Home|홈
+18|/ Why Baidu PPC Pro|/ 바이두 PPC Pro란
+19|🏆 Why Baidu PPC Pro|🏆 바이두 PPC Pro란
+20|The data-backed, experience-driven case for trusting us with your Baidu advertising — and your entry into|데이터 기반, 경험 기반의 사례 — 바이두 광고와 중국 시장 진출을 믿고 맡겨주세요
+21|China's $100B+ digital market|중국 1000억 달러 이상의 디지털 시장
+22|📊 Market Data|📊 시장 데이터
+23|📈 Baidu Dominates China's Search Market|📈 바이두, 중국 검색 시장 지배
+24|Still the|여전히
+25|#1 search engine|1위 검색 엔진
+26|in China — reaching over|중국에서 — 10억 이상의 사용자에게 도달
+27|1 billion users|10억 사용자
+28|. The data speaks for itself.|. 데이터가 말해줍니다.
+29|Source:|출처:
+30|StatCounter Global Stats — Search Engine Market Share China, Mar 2025–Mar 2026|StatCounter 글로벌 통계 — 중국 검색 엔진 시장 점유율, 2025년 3월–2026년 3월
+31|⭐ Why Choose Us|⭐ 우리를 선택하는 이유
+32|🚀 Why Baidu PPC Pro|🚀 바이두 PPC Pro란
+33|We're a|우리는
+34|Baidu second-tier reseller|바이두 2차 리셀러
+35|connected directly to Baidu official and first-tier agents. This unique position gives you advantages that going directly to Baidu simply cannot match.|바이두 공식 및 1차 에이전시에 직접 연결되어 있습니다. 이 고유한 위치는 직접 바이두에 접근하는 것과는 비교할 수 없는 장점을 제공합니다.
+36|🌏 Deep Overseas Experience|🌏 깊은 해외 경험
+37|We specialize in serving|전문으로 서비스합니다
+38|international companies and agencies|국제 기업 및 에이전시
+39|. We understand the challenges of cross-border business — compliance, cultural nuances, and communication gaps that often stall or derail Baidu advertising projects.|. 국경 간 비즈니스의 과제를 이해합니다 — 컴플라이언스, 문화적 뉘앙스, 의사소통 격차로 인해 바이두 광고 프로젝트가 지연되거나 무산되는 경우가 많습니다.
+40|🌐 Language Barrier Solved|🌐 언어 장벽 해결
+41|Many overseas companies struggle because Baidu's processes are|많은 해외 기업이 어려움을 겪습니다 — 바이두 프로세스가
+42|entirely in Chinese|전적으로 중국어
+43|. We bridge that gap — handling documentation, negotiations, and ongoing communication so you|. 그 격차를 연결합니다 — 서류, 협상, 지속적인 의사소통을 처리하므로
+44|never have to worry about language issues|언어 문제에 대해 걱정할 필요가 없습니다
+45|🎯 Tailored Account & Campaign Strategy|🎯 맞춤형 계정 및 캠페인 전략
+46|We don't offer|제공하지 않습니다
+47|one-size-fits-all packages|일률적인 패키지
+48|. With direct access to first-hand resources, we craft custom account opening strategies and media buying plans tailored to your specific industry, budget, and goals.|. 1차 리소스에 직접 접근하여, 특정 산업, 예산, 목표에 맞춤형 계정 개설 전략 및 미디어 바잉 플랜을 수립합니다.
+49|🔗 First-Hand Resource Access|🔗 1차 리소스 접근
+50|We're directly connected to|직접 연결되어 있습니다
+51|Baidu official channels and top-tier agents|바이두 공식 채널 및 최고 에이전시
+52|. This means|.这意味着
+53|better rates, faster turnaround|더 나은 요금, 더 빠른 처리
+54|, and more flexible solutions than you'd get going through standard channels on your own.|, 표준 채널을 통해 직접 접근하는 것보다 더 유연한 솔루션.
+55|🤖 AI-Powered Efficiency = Lower Fees|🤖 AI 기반 효율성 = 낮은 수수료
+56|By leveraging AI for campaign management, optimization, and reporting, we operate with leaner teams — and pass those|AI를 활용하여 캠페인 관리, 최적화, 리포팅을 수행하며, 더 lean한 팀으로 운영하고 그
+57|savings directly to you in the form of lower service fees|절감액을 낮은 서비스 수수료 형태로 직접 전달합니다
+58|without compromising quality.|품질 저하 없이.
+59|🛡️ Zero Bureaucracy for You|🛡️ 관료주의 제로
+60|Dealing with Baidu directly as a foreign entity means navigating Chinese business registration, tax documents, and compliance requirements. We handle|외국 법인으로서 바이두와 직접 거래한다는 것은 중국 사업자 등록, 세금 서류, 컴플라이언스 요구 사항을 탐색해야 함을 의미합니다. 처리합니다
+61|all of that|그 모든 것을
+62|— you just provide the basics and we take care of the rest.|— 기본 정보만 제공하시면 나머지는 저희가 처리합니다.
+63|🔑 Your Account. Your Control.|🔑 귀하의 계정. 귀하의 통제.
+64|The Baidu account we open belongs to you —|개설하는 바이두 계정은 귀하의 것입니다 —
+65|. You receive|. 받게 됩니다
+66|full admin access|전체 관리자 접근
+67|and own all credentials from day one. We never retain control of your account. Our role is simple: help you fund it when you need us.|그리고 첫날부터 모든 자격 증명을 소유합니다. 계정을 통제하지 않습니다. 역할은 간단합니다: 필요할 때 자금을 지원합니다.
+68|⚡ Save Time on Baidu Coordination|⚡ 바이두 조정 시간 절약
+69|Years of direct experience working with Baidu teams means we know exactly who to contact, what to say, and how to get things done|바이두 팀과의 직접적인 경험은 누구에게 연락해야 하는지, 무엇을 말해야 하는지, 일을 처리하는 방법을 정확히 알고 있음을 의미합니다
+70|fast|빠르게
+71|. Skip the back-and-forth — we absorb the coordination cost so you don't have to.|. 왕복을 건너뛰세요 — 조정 비용을 흡수하므로 귀하는 할 필요가 없습니다.
+72|✅ Why agencies & advertisers trust us|✅ 에이전시와 광고주가 우리를 신뢰하는 이유
+73|Years Managing Baidu Ads|바이두 광고 관리 경험
+74|Years Managing Global Clients|글로벌 고객 관리 경험
+75|Accounts Opened|개설된 계정
+76|Countries Served|서비스 국가
+77|EN / 中文|영어 / 중국어
+78|Bilingual|이중언어
+79|Support|지원
+80|🚀 Ready to Enter China's Search Market?|🚀 중국 검색 시장 진출 준비가 되셨나요?
+81|Get a free consultation with our bilingual team. We'll outline a clear, compliant path to launch your first Baidu campaign.|이중언어 팀과 무료 상담을 받으세요. 첫 번째 바이두 캠페인을 시작하기 위한 명확하고 컴플라이언스를 준수하는 경로를 제시합니다.
+82|View Services|서비스 보기
+83|✉️ Free Consultation|✉️ 무료 상담
+84|💬 EN & 中文 Support|💬 영어 및 중국어 지원
+85|🔒 100% Account Ownership|🔒 100% 계정 소유
+86|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+87|Quick Links|바로가기
+88|About Us|회사 소개
+89|Submit a Request|문의 접수
+90|Legal|법적 고지
+91|Privacy Policy|개인정보 처리방침
+92|Terms of Service|이용약관
+93|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.

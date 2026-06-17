@@ -1,0 +1,224 @@
+# index 페이지 영문 텍스트 추출
+# 총 220개
+# 형식: 번호|원문|번역
+
+1|Baidu PPC Pro — Baidu Advertising for Global Companies|Baidu PPC Pro — 글로벌 기업을 위한 바이두 광고
+2|BPP|BPP
+3|" />|"
+4|Skip to main content|메인 콘텐츠로 건너뛰기
+5|Baidu PPC Pro|Baidu PPC Pro
+6|Why Baidu PPC Pro|바이두 PPC Pro란
+7|Services|서비스
+8|Pricing|요금
+9|Clients|도입 사례
+10|FAQ|자주 묻는 질문
+11|About|회사 소개
+12|Blog|블로그
+13|Contact|문의하기
+14|Get Started →|지금 시작하기 →
+15|🇺🇸|🇺🇸
+16|🇺🇸 English|🇺🇸 English
+17|🇯🇵 日本語|🇯🇵 日本語
+18|Your Gateway to China's Biggest Search Engine|중국 최대 검색 엔진으로의 관문
+19|Run Baidu Ads|바이두 광고 시작하기
+20|Without the|없이
+21|Barrier|장벽
+22|🌏 The Chinese digital ad market is|🌏 중국 디지털 광고 시장은
+23|$100B+|1000억 달러 이상
+24|and growing. We help agencies and brands access it with compliance, clarity, and zero guesswork — one platform, end to end.|성장하고 있습니다. 컴플라이언스, 투명성, 명확한 가이드로 에이전시와 브랜드가 진출할 수 있도록 지원합니다 — 하나의 플랫폼, 엔드투엔드.
+25|Open Your Account Today|오늘 계정을 열기
+26|View Pricing|요금 보기
+27|🤖 Explore China GEO: Optimize for AI Search →|🤖 중국 GEO 탐색: AI 검색 최적화 →
+28|💰 Account Setup from|💰 계정 설정 시작가
+29|💳 Top-Up Fee from|💳 충전 수수료 시작가
+30|0h|0시간
+31|⏱️ Account Activation|⏱️ 계정 활성화
+32|🌍 Global Clients Served|🌍 글로벌 고객 서비스
+33|Top 3 Placement|상위 3위 배치
+34|Baidu Ads Console|바이두 광고 콘솔
+35|Campaign Dashboard|캠페인 대시보드
+36|Mar 1 – Mar 31, 2026|2026년 3월 1일 – 3월 31일
+37|Live|실시간
+38|Total Spend|총 지출
+39|CNY 18.6M|1860만 위안
+40|▲ 23.5%|▲ 23.5%
+41|Conversions|전환
+42|8.2K|8.2K
+43|▲ 18.2%|▲ 18.2%
+44|Avg. CPC|평균 CPC
+45|CNY 12.50|12.50 위안
+46|▼ 8.7%|▼ 8.7%
+47|CTR|CTR
+48|▲ 5.1%|▲ 5.1%
+49|Click Trend|클릭 추세
+50|7D|7일
+51|30D|30일
+52|90D|90일
+53|Active Campaigns|활성 캠페인
+54|Brand Keywords|브랜드 키워드
+55|Search Ads|검색 광고
+56|Clicks|클릭
+57|CNY 0.32|0.32 위안
+58|CPC|CPC
+59|Active|활성
+60|Product Pages|상품 페이지
+61|oCPC|oCPC
+62|CNY 0.58|0.58 위안
+63|Generic Keywords|일반 키워드
+64|CNY 0.45|0.45 위안
+65|oCPC Model — Maximize Conversions|oCPC 모델 — 전환 최대화
+66|Pay only for real conversions, not clicks. AI optimizes bidding automatically.|실제 전환에 대해서만 지불하세요, 클릭이 아닙니다. AI가 자동으로 입찰을 최적화합니다.
+67|CPC from CNY 0.30|CPC 0.30위안부터
+68|🛠️ Our Services|🛠️ 서비스
+69|🚀 Full-Service Baidu Advertising|🚀 풀서비스 바이두 광고
+70|for Global Companies|글로벌 기업을 위한
+71|We handle everything from account opening to campaign optimization — so you can focus on growing your business in the Chinese market.|계정 개설부터 캠페인 최적화까지 모든 것을 처리합니다 — 중국 시장에서 비즈니스 성장에 집중할 수 있습니다.
+72|🔓 Baidu Account Opening|🔓 바이두 계정 개설
+73|We handle all paperwork, verification, and compliance checks required to open a verified Baidu Ads account for foreign entities — fast and hassle-free.|외국 기관을 위한 인증된 바이두 광고 계정 개설에 필요한 모든 서류, 인증, 컴플라이언스 검사를 처리합니다 — 빠르고 번거롭지 않게.
+74|💳 Budget Top-Up & Funding|💳 예산 충전 및 자금
+75|Accept international wire transfers, SWIFT, and major currencies. We convert and top up your Baidu account balance with low fees starting at just|국제 송금, SWIFT, 주요 통화를 지원합니다. 낮은 수수료로 바이두 계정 잔액을 환전하고 충전합니다.
+76|🚀 Campaign Management|🚀 캠페인 관리
+77|Our bilingual team — augmented by AI tools — sets up, monitors, and continuously optimizes your Baidu campaigns for maximum ROI.|AI 도구로 강화된 이중언어 팀이 최대 ROI를 위해 바이두 캠페인을 설정, 모니터링, 지속적으로 최적화합니다.
+78|🤝 Agency White-Label Support|🤝 에이전시 화이트라벨 지원
+79|Running an agency? We offer white-label Baidu PPC services so you can resell to your clients under your own brand with full back-end support from us.|에이전시를 운영하시나요? 화이트라벨 바이두 PPC 서비스를 제공하여 귀사의 브랜드로 고객에게 재판매할 수 있도록 지원합니다.
+80|📊 Performance Reporting|📊 성과 리포팅
+81|Receive clear, English-language reports covering impressions, clicks, CTR, CPC, conversions, and ROI — on a schedule that works for you.|노출, 클릭, CTR, CPC, 전환, ROI를 포함한 명확한 영어 보고서를 원하는 일정으로 받으세요.
+82|🤖 AI-Powered Optimization|🤖 AI 기반 최적화
+83|We leverage AI to deliver high-quality campaign management at lower costs — meaning lower service fees for you without sacrificing performance.|AI를 활용하여 낮은 비용으로 고품질 캠페인 관리를 제공합니다 — 성능 저하 없이 낮은 서비스 수수료를 의미합니다.
+84|💰 Transparent Pricing|💰 투명한 요금
+85|💰 Competitive Rates Powered|💰 경쟁력 있는 요금
+86|by AI Efficiency|AI 효율성으로
+87|Our AI-augmented operations mean lower overhead — and we pass those savings to you. No hidden fees, ever.|AI로 강화된 운영은 낮은 오버헤드를 의미하며, 그 절감액을 고객에게 전달합니다. 숨겨진 수수료는 없습니다.
+88|One-Time|일회성
+89|Account Opening|계정 개설
+90|One-time setup fee, per account|일회성 설정 수수료, 계정당
+91|Full Baidu account registration|전체 바이두 계정 등록
+92|Verification & compliance handling|인증 및 컴플라이언스 처리
+93|Business qualification submission|사업 자격 제출
+94|Account activated within 72 hours|72시간 이내 계정 활성화
+95|English onboarding guide included|영어 온보딩 가이드 포함
+96|Open an Account|계정 개설
+97|Most Popular|가장 인기
+98|Ongoing|진행 중
+99|Budget Top-Up|예산 충전
+100|From|시작가
+101|Of deposit amount · Tiered rates available|입금액의 · 단계별 요금 가능
+102|USD / EUR / GBP accepted|USD / EUR / GBP 지원
+103|Same-day or next-day crediting|당일 또는 익일 입금
+104|No minimum top-up amount|최소 충전 금액 없음
+105|Volume discounts for large budgets|대규모 예산에 대한 볼륨 할인
+106|Full transaction receipt provided|전체 거래 영수증 제공
+107|Top Up Now|지금 충전
+108|Monthly Service · AI-Powered|월간 서비스 · AI 기반
+109|Campaign Management|캠페인 관리
+110|Of monthly ad spend · Lowest in the market|월간 광고 지출의 · 시장 최저
+111|AI-augmented bilingual campaign management|AI로 강화된 이중언어 캠페인 관리
+112|Keyword research & bidding strategy|키워드 리서치 및 입찰 전략
+113|Ad copywriting (CN + EN)|광고 문구 작성 (중국어 + 영어)
+114|Weekly optimization & A/B testing|주간 최적화 및 A/B 테스트
+115|Monthly performance report|월간 성과 보고서
+116|Start Managing|관리 시작
+117|All prices in USD. Custom enterprise quotes available for budgets over $50,000/month.|모든 가격은 USD입니다. 월 $50,000 이상 예산에 대한 맞춤형 기업 견적 가능.
+118|Contact us|문의하기
+119|💬 Client Stories|💬 고객 사례
+120|🌍 Trusted by Agencies|🌍 에이전시가 신뢰
+121|Around the World|전 세계
+122|Here's what our clients have to say about working with us.|고객들이 우리와 함께한 경험에 대해 말합니다.
+123|"Baidu PPC Pro made it incredibly easy for us to enter the Chinese market. The account setup was seamless, and their team handled all the documentation we couldn't have managed on our own."|"Baidu PPC Pro는 중국 시장 진출을 매우 쉽게 만들어주었습니다. 계정 설정이 매끄러웠고, 팀이 저희가 직접 관리할 수 없었던 모든 서류를 처리해주었습니다."
+124|JM|JM
+125|James Mitchell|James Mitchell
+126|VP of Marketing, TechForward Inc.|마케팅 부사장, TechForward Inc.
+127|View All Client Stories &rarr;|모든 고객 사례 보기 &rarr;
+128|👥 Our Team|👥 팀 소개
+129|👥 The People Behind|👥背后的人们
+130|Your China Campaigns|중국 캠페인
+131|Over|25년 이상
+132|25 years|25년
+133|of combined experience in Chinese digital advertising. Based in Shanghai, working with clients worldwide.|중국 디지털 광고 분야의 경력. 상하이 기반, 전 세계 고객과 협력.
+134|Benny Cheuk|Benny Cheuk
+135|Programmatic Expert, Trilingual|프로그래매틱 전문가, 삼중언어
+136|12+ years|12년 이상
+137|in programmatic advertising, specializing in DSP technology. Trilingual in English, Mandarin, and Cantonese. He bridges European and Chinese markets, helping international companies navigate China's programmatic buying with practical, culturally-aware strategies.|프로그래매틱 광고 분야, DSP 기술 전문. 영어, 중국어, 광둥어 삼중언어. 유럽과 중국 시장을 연결하며, 실용적이고 문화적으로 인식된 전략으로 국제 기업이 중국의 프로그래매틱 바잉을 탐색하도록 돕습니다.
+138|Yan Huo|Yan Huo
+139|Account Manager|계정 관리자
+140|15+ years|15년 이상
+141|helping international companies navigate China's digital advertising landscape. Fluent English, expert at bridging cultural and technical gaps between global brands and Chinese platforms.|국제 기업이 중국의 디지털 광고 환경을 탐색하도록 돕습니다. 유창한 영어, 글로벌 브랜드와 중국 플랫폼 사이의 문화적和技术적 격차를 연결하는 전문가.
+142|❓ Baidu SEM FAQ|❓ 바이두 SEM FAQ
+143|Everything you need to know about opening and managing a Baidu advertising account — from foreign company setup to compliance requirements.|바이두 광고 계정 개설 및 관리에 필요한 모든 것 — 외국 회사 설정부터 컴플라이언스 요구 사항까지.
+144|Can I open a Baidu account without a Chinese domestic company?|중국 국내 회사 없이 바이두 계정을 개설할 수 있나요?
+145|Yes.|네.
+146|Baidu supports account opening for|바이두는 계정 개설을 지원합니다
+147|foreign companies and entities|외국 회사 및 기관
+148|. You don't need a Chinese domestic business license to get started — we handle the process for you.|시작하기 위해 중국 국내 사업자 등록증이 필요하지 않습니다 — 저희가 프로세스를 처리합니다.
+149|How much does it cost to open a Baidu account?|바이두 계정 개설 비용은 얼마인가요?
+150|Prepaid advertising fee:|선불 광고비:
+151|minimum CNY 2,400|최소 2,400위안
+152|Service fee:|서비스 수수료:
+153|starting from USD 100, which includes document translation, document review, and submission handling|USD 100부터, 서류 번역, 서류 검토, 제출 처리 포함
+154|If you have difficulty providing the required documents, we are happy to assist.|필요한 서류를 제공하는 데 어려움이 있으시면 기꺼이 도와드리겠습니다.
+155|How does Baidu advertising charge?|바이두 광고는 어떻게 과금되나요?
+156|Cost-per-click (CPC):|클릭당 비용 (CPC):
+157|You are charged only when a user clicks your ad.|사용자가 광고를 클릭할 때만 과금됩니다.
+158|Your CPC = (Competitor Bid × Competitor Quality Score ÷ Your Quality Score) + CNY 0.01|CPC = (경쟁사 입찰 × 경쟁사 품질 점수 ÷ 품질 점수) + 0.01위안
+159|You can also use|또한 사용할 수 있습니다
+160|(optimized CPC), where you pay for completed conversions rather than clicks.|(최적화된 CPC), 클릭이 아닌 완료된 전환에 대해 지불합니다.
+161|What are the common reasons for ad rejection?|광고 거부의 일반적인 이유는 무엇인가요?
+162|Common rejection reasons:|일반적인 거부 이유:
+163|• Expired qualifications or licenses|• 만료된 자격 또는 라이선스
+164|• Content contains prohibited words|• 콘텐츠에 금지된 단어 포함
+165|• Website is unreachable or offline|• 웹사이트에 접속할 수 없거나 오프라인
+166|• Content is false, exaggerated, or misleading|• 콘텐츠가 거짓, 과장, 또는 오해의 소지가 있음
+167|• Any other compliance violations|• 기타 컴플라이언스 위반
+168|Do healthcare/finance industries have special requirements?|의료/금융 산업에는 특별한 요구 사항이 있나요?
+169|Regulated industries such as healthcare and finance must:|의료 및 금융과 같은 규제 산업은 다음을 해야 합니다:
+170|• Provide industry-specific licenses (e.g., medical institution practice license)|• 산업별 라이선스 제공 (예: 의료 기관 실습 라이선스)
+171|• Avoid efficacy claims in all ad copy and landing page content|• 모든 광고 문구와 랜딩 페이지 콘텐츠에서 효능 주장 피하기
+172|• Ensure all claims are substantiated and compliant with Chinese advertising regulations|• 모든 주장이 입증되고 중국 광고 규정을 준수하도록 보장
+173|❓ Still have questions?|❓ 아직 질문이 있으신가요?
+174|Explore all 59 questions across account setup, fees, billing, and compliance.|계정 설정, 수수료, 결제, 컴플라이언스에 관한 59개 질문 탐색.
+175|View All FAQ →|모든 FAQ 보기 →
+176|Get in Touch|연락하기
+177|📝 Ready to Start Advertising|📝 광고 시작 준비
+178|on Baidu?|바이두에서?
+179|Fill in the form and our team will respond within one business day. We'll review your requirements and send a tailored proposal — including a custom strategy for your specific situation.|양식을 작성하시면 팀이 1영업일 이내에 응답합니다. 요구 사항을 검토하고 맞춤형 제안을 보내드립니다 — 상황에 맞는 맞춤 전략 포함.
+180|Email Us|이메일 보내기
+181|Response Time|응답 시간
+182|Within 1 business day|1영업일 이내
+183|We Support|지원합니다
+184|Companies & agencies worldwide|전 세계 기업 및 에이전시
+185|Our Advantage|우리의 장점
+186|Direct connection to Baidu official & top agents|바이두 공식 및 최고 에이전시와의 직접 연결
+187|First Name *|이름 *
+188|Last Name *|성 *
+189|Work Email *|업무 이메일 *
+190|Company / Agency Name *|회사 / 에이전시명 *
+191|Service Interested In *|관심 서비스 *
+192|Select a service…|서비스 선택…
+193|Account Opening ($100+)|계정 개설 ($100+)
+194|Budget Top-Up (2.5%+ fee)|예산 충전 (2.5%+ 수수료)
+195|Campaign Management (6%+ of spend)|캠페인 관리 (지출의 6%+)
+196|Full Bundle (All Three)|풀 번들 (세 가지 모두)
+197|Agency / White-Label Partnership|에이전시 / 화이트라벨 파트너십
+198|Other / Not Sure Yet|기타 / 아직 확실하지 않음
+199|Estimated Monthly Ad Budget|예상 월간 광고 예산
+200|Select a range…|범위 선택…
+201|Under $1,000 / month|$1,000 미만 / 월
+202|$1,000 – $5,000 / month|$1,000 – $5,000 / 월
+203|$5,000 – $20,000 / month|$5,000 – $20,000 / 월
+204|$20,000 – $50,000 / month|$20,000 – $50,000 / 월
+205|Over $50,000 / month|$50,000 이상 / 월
+206|Website|웹사이트
+207|Tell Us About Your Project|프로젝트에 대해 알려주세요
+208|Send My Request →|요청 보내기 →
+209|Your information is kept strictly confidential and never shared.|귀하의 정보는 엄격하게 기밀로 유지되며 공유되지 않습니다.
+210|Message Received!|메시지 수신!
+211|Thank you for reaching out. Our team will review your request and reply to|연락해 주셔서 감사합니다. 팀이 요청을 검토하고 응답합니다
+212|within one business day.|1영업일 이내에.
+213|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+214|Quick Links|바로가기
+215|About Us|회사 소개
+216|Submit a Request|문의 접수
+217|Legal|법적 고지
+218|Privacy Policy|개인정보 처리방침
+219|Terms of Service|이용약관
+220|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.

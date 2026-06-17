@@ -1,0 +1,135 @@
+# china-geo 페이지 영문 텍스트 추출
+# 총 131개
+# 형식: 번호|원문|번역
+
+1|China GEO: Generative Engine Optimization for AI Search — Baidu PPC Pro|중국 GEO: AI 검색을 위한 생성형 엔진 최적화 — Baidu PPC Pro
+2|BPP|BPP
+3|" />|"
+4|Baidu PPC Pro|Baidu PPC Pro
+5|Why Baidu PPC Pro|바이두 PPC Pro란
+6|Services|서비스
+7|Pricing|요금
+8|Clients|도입 사례
+9|FAQ|자주 묻는 질문
+10|About|회사 소개
+11|Blog|블로그
+12|Contact|문의하기
+13|Get Started →|지금 시작하기 →
+14|🇺🇸|🇺🇸
+15|🇺🇸 English|🇺🇸 English
+16|🇯🇵 日本語|🇯🇵 日本語
+17|Home|홈
+18|/ China GEO|/ 중국 GEO
+19|China|중국
+20|Generative Engine|생성형 엔진
+21|Optimization|최적화
+22|More than 660 million Chinese users get answers from AI every month. Make sure your brand is part of those answers.|6억 6천만 이상의 중국 사용자가 매달 AI로부터 답변을 받습니다. 귀하의 브랜드가 그 답변的一部分인지 확인하세요.
+23|What Is GEO?|GEO란?
+24|The New Frontier of Search in China|중국 검색의 새로운 프론티어
+25|Generative Engine Optimization (GEO) is the practice of optimizing content so AI-powered search engines — like Baidu's ERNIE, ByteDance's Doubao, DeepSeek, and Alibaba's Tongyi Qianwen — reference your brand in their answers.|생성형 엔진 최적화(GEO)는 AI 기반 검색 엔진 — 바이두의 ERNIE, 바이트댄스의 Doubao, DeepSeek, 알리바바의 통의천문 — 이 답변에서 귀하의 브랜드를 참조하도록 콘텐츠를 최적화하는 것입니다.
+26|curated answer|큐레이션된 답변
+27|— a paragraph, a comparison, a recommendation — written by AI in real time. If your brand is not in that answer, you are invisible to 660 million monthly active users.|— 단락, 비교, 추천 — AI가 실시간으로 작성합니다. 귀하의 브랜드가 그 답변에 없다면, 6억 6천만 월간 활성 사용자에게 보이지 않습니다.
+28|For international brands targeting China, GEO is particularly critical. Chinese consumers are early and enthusiastic adopters of AI tools. They ask AI for product recommendations, brand comparisons, and purchasing advice — often before ever visiting a search engine. If your brand's content is not optimized for AI retrieval, you lose the battle before the first click.|중국을 목표로 하는 국제 브랜드에게 GEO는 특히 중요합니다. 중국 소비자는 AI 도구의 초기 열성 사용자입니다. AI에게 제품 추천, 브랜드 비교, 구매 조언을 요청합니다 — 종종 검색 엔진을 방문하기 전에. 귀하의 브랜드 콘텐츠가 AI 검색에 최적화되지 않았다면, 첫 번째 클릭 전에 전쟁에서 집니다.
+29|660M+|6억 6천만+
+30|Combined MAU of Top 4 AI Platforms|상위 4개 AI 플랫폼의 총 MAU
+31|of Chinese Users Trust AI Answers for Purchases|중국 사용자가 구매를 위해 AI 답변을 신뢰
+32|3.2×|3.2배
+33|Higher Engagement vs Traditional Search Results|전통적인 검색 결과 대비 높은 참여율
+34|of Gen Z in China Use AI Assistants Weekly|중국 Z세대가 주간 AI 어시스턴트 사용
+35|Market Trends|시장 동향
+36|China's AI Revolution by the Numbers|숫자로 보는 중국 AI 혁명
+37|China has emerged as a global leader in generative AI adoption. Here are the trends shaping the landscape for advertisers and brands.|중국은 생성형 AI 채용의 글로벌 리더로 부상했습니다. 광고주와 브랜드를 위한 환경을 형성하는 동향입니다.
+38|Explosive User Growth|폭발적인 사용자 성장
+39|China's AI-native app user base grew from virtually zero to 660M+ MAU in less than 3 years. The speed of adoption outpaces any previous technology wave — mobile, social, or e-commerce.|중국의 AI 네이티브 앱 사용자 기반은 3년도 안 되어 사실상 0에서 6억 6천만+ MAU로 성장했습니다. 채용 속도는 이전 기술 물결 — 모바일, 소셜, 전자상거래 — 을 초과합니다.
+40|Tech Giants Compete|기술 거대 기업 간 경쟁
+41|Baidu, ByteDance, Alibaba, and Tencent are all racing to dominate the AI assistant market. Each brings a unique ecosystem advantage — Baidu's search data, ByteDance's content, Alibaba's commerce.|바이두, 바이트댄스, 알리바바, 텐센트가 모두 AI 어시스턴트 시장을 지배하기 위해 경쟁하고 있습니다. 각각 고유한 생태계 장점을 제공합니다 — 바이두의 검색 데이터, 바이트댄스의 콘텐츠, 알리바바의 상거래.
+42|AI-First Consumer Behavior|AI 우선 소비자 행동
+43|Chinese consumers increasingly start their purchase journey with an AI prompt rather than a search query. For brands, appearing in AI answers is becoming as important as ranking #1 on Baidu.|중국 소비자는 점점 더 검색 쿼리보다 AI 프롬프트로 구매 여정을 시작합니다. 브랜드에게 AI 답변에 나타나는 것은 바이두에서 1위를 차지하는 것만큼 중요해지고 있습니다.
+44|GEO Becomes a Budget Line|GEO가 예산 항목이 됨
+45|Forward-looking brands are allocating 10-15% of their China digital marketing budget to GEO content production and AI answer optimization — a line item that did not exist 18 months ago.|선진 브랜드는 중국 디지털 마케팅 예산의 10-15%를 GEO 콘텐츠 제작 및 AI 답변 최적화에 할당하고 있습니다 — 18개월 전에는 존재하지 않았던 예산 항목입니다.
+46|💡 Key Insight|💡 핵심 인사이트
+47|GEO is not a replacement for traditional Baidu SEM and SEO — it is a complement. The most effective China digital strategies invest across all three channels to capture users at every stage of the AI-funnel.|GEO는 전통적인 바이두 SEM과 SEO의 대체가 아닌 보완입니다. 가장 효과적인 중국 디지털 전략은 AI 퍼널의 모든 단계에서 사용자를 포착하기 위해 세 가지 채널 모두에 투자합니다.
+48|The Platforms|플랫폼
+49|China's Top 4 AI Platforms &amp; Their Reach|중국 상위 4개 AI 플랫폼 및 도달 범위
+50|Each platform has unique strengths, user demographics, and content preferences. Understanding these differences is the foundation of an effective GEO strategy.|각 플랫폼은 고유한 강점, 사용자 인구 통계, 콘텐츠 선호도를 가지고 있습니다. 이러한 차이를 이해하는 것이 효과적인 GEO 전략의 기초입니다.
+51|Baidu ERNIE Bot|바이두 ERNIE 봇
+52|Baidu, Inc.|바이두, Inc.
+53|200M+|2억+
+54|Monthly Active Users|월간 활성 사용자
+55|Deeply integrated with Baidu Search. ERNIE generates answers powered by real-time search data. Best platform for|바이두 검색과 깊이 통합. ERNIE는 실시간 검색 데이터로 답변을 생성합니다. 최적의 플랫폼
+56|brand awareness|브랜드 인지도
+57|and|및
+58|purchase intent|구매 의도
+59|queries. Users often ask ERNIE for product comparisons, reviews, and brand recommendations.|쿼리. 사용자는 종종 ERNIE에게 제품 비교, 리뷰, 브랜드 추천을 요청합니다.
+60|Doubao (豆包)|Doubao (豆包)
+61|ByteDance|바이트댄스
+62|226M|2억 2600만
+63|ByteDance's flagship AI assistant, integrated with Douyin (TikTok China). 226M MAU makes it China's most popular standalone AI app. Optimized for|바이트댄스의 대표 AI 어시스턴트, 더우인(틱톡 중국)과 통합. 2억 2600만 MAU로 중국에서 가장 인기 있는 독립형 AI 앱. 최적화
+64|entertainment|엔터테인먼트
+65|lifestyle|라이프스타일
+66|, and|, 및
+67|shopping|쇼핑
+68|queries. Voice interaction is a key differentiator.|쿼리. 음성 상호작용은 핵심 차별화 요소입니다.
+69|DeepSeek|DeepSeek
+70|DeepSeek (Independent)|DeepSeek (독립)
+71|135M|1억 3500만
+72|The open-source reasoning model that took China by storm. DeepSeek excels at|중국을 강타한 오픈소스 추론 모델. DeepSeek은 뛰어납니다
+73|logical reasoning|논리적 추론
+74|technical analysis|기술 분석
+75|in-depth research|심층 연구
+76|queries. Popular among professionals, developers, and educated users making complex purchasing decisions.|쿼리. 전문가, 개발자, 복잡한 구매 결정을 내리는 교육받은 사용자에게 인기.
+77|Tongyi Qianwen (通义千问)|통의천문 (通义千问)
+78|Alibaba Group|알리바바 그룹
+79|100M+|1억+
+80|Alibaba's multi-modal AI model, integrated with Taobao and Tmall. Uniquely positioned for|알리바바의 멀티모달 AI 모델, 타obao와 티몰과 통합. 고유한 위치
+81|product discovery|제품 발견
+82|e-commerce|전자상거래
+83|queries. Users ask Tongyi for product recommendations, price comparisons, and shopping guidance.|쿼리. 사용자는 통의에게 제품 추천, 가격 비교, 쇼핑 가이드를 요청합니다.
+84|Platform|플랫폼
+85|Company|회사
+86|MAU|MAU
+87|Best For|최적 용도
+88|Content Preference|콘텐츠 선호도
+89|Baidu|바이두
+90|Brand awareness, purchase intent|브랜드 인지도, 구매 의도
+91|Factual, authoritative, structured data|사실적, 권위적, 구조화된 데이터
+92|Entertainment, lifestyle, shopping|엔터테인먼트, 라이프스타일, 쇼핑
+93|Engaging, visual, conversational|매력적, 시각적, 대화형
+94|Independent|독립
+95|Technical analysis, research|기술 분석, 연구
+96|In-depth, logical, citation-rich|심층적, 논리적, 인용 풍부
+97|Tongyi Qianwen|통의천문
+98|Alibaba|알리바바
+99|E-commerce, product discovery|전자상거래, 제품 발견
+100|Product specs, reviews, comparisons|제품 사양, 리뷰, 비교
+101|✅ What This Means for Your Brand|✅ 귀하의 브랜드에 대한 의미
+102|Each platform pulls content from different sources. Baidu ERNIE favors Baidu-indexed pages. Doubao favors Douyin/ByteDance content. Tongyi leverages Alibaba's product database. An effective GEO strategy must distribute brand content across all four ecosystems — not just your website.|각 플랫폼은 다른 소스에서 콘텐츠를 가져옵니다. 바이두 ERNIE는 바이두 인덱싱된 페이지를 선호합니다. Doubao는 더우인/바이트댄스 콘텐츠를 선호합니다. 통의는 알리바바의 제품 데이터베이스를 활용합니다. 효과적인 GEO 전략은 네 가지 생태계 모두에 브랜드 콘텐츠를 배포해야 합니다 — 웹사이트만이 아닙니다.
+103|Our Approach|접근 방식
+104|How We Help Brands Win at GEO|GEO에서 브랜드가 승리하도록 돕는 방법
+105|Our GEO service combines content optimization, platform-specific distribution, and performance tracking to ensure your brand appears in AI answers across China's top generative engines.|GEO 서비스는 콘텐츠 최적화, 플랫폼별 배포, 성과 추적을 결합하여 중국의 최고 생성형 엔진에서 AI 답변에 귀하의 브랜드가 나타나도록 보장합니다.
+106|1. Content Audit &amp; Gap Analysis|1. 콘텐츠 감사 및 갭 분석
+107|— We analyze your existing content against the types of questions each AI platform answers. We identify gaps where your brand is invisible and prioritize content production.|— 각 AI 플랫폼이 답변하는 질문 유형에 대해 기존 콘텐츠를 분석합니다. 브랜드가 보이지 않는 갭을 식별하고 콘텐츠 제작을 우선시합니다.
+108|2. Platform-Specific Optimization|2. 플랫폼별 최적화
+109|— Each AI platform has unique source preferences and answer formats. We optimize your content for Baidu's structured data preferences, Doubao's conversational style, DeepSeek's citation requirements, and Tongyi's product focus.|— 각 AI 플랫폼은 고유한 소스 선호도와 답변 형식을 가지고 있습니다. 바이두의 구조화된 데이터 선호도, Doubao의 대화형 스타일, DeepSeek의 인용 요구 사항, 통의의 제품 초점에 맞게 콘텐츠를 최적화합니다.
+110|3. Multi-Channel Distribution|3. 멀티 채널 배포
+111|— We distribute your brand content across the ecosystems each AI platform trusts: Baidu Zhidao, Baidu Baike, Douyin, Taobao product pages, and authoritative third-party review sites.|— 각 AI 플랫폼이 신뢰하는 생태계에 브랜드 콘텐츠를 배포합니다: 바이두 지도, 바이두 바이크, 더우인, 타obao 제품 페이지, 권위 있는 타사 리뷰 사이트.
+112|4. Monitoring &amp; Iteration|4. 모니터링 및 반복
+113|— AI answer formats evolve rapidly. We track which queries trigger your brand mentions, measure AI answer sentiment, and adjust content strategy monthly.|— AI 답변 형식은 빠르게 진화합니다. 어떤 쿼리가 브랜드 멘션을 트리거하는지 추적하고, AI 답변 감정을 측정하고, 월간 콘텐츠 전략을 조정합니다.
+114|📋 Key Takeaways|📋 핵심 요약
+115|China's top 4 AI platforms serve 660M+ monthly active users — a market no international brand can afford to ignore|중국 상위 4개 AI 플랫폼은 6억 6천만+ 월간 활성 사용자를 서비스합니다 — 어떤 국제 브랜드도 무시할 수 없는 시장
+116|GEO (Generative Engine Optimization) is the practice of optimizing brand content to appear in AI-generated answers|GEO(생성형 엔진 최적화)는 AI 생성 답변에 나타나도록 브랜드 콘텐츠를 최적화하는 것입니다
+117|Each platform has unique content preferences — a one-size-fits-all approach does not work|각 플랫폼은 고유한 콘텐츠 선호도를 가지고 있습니다 — 일률적인 접근 방식은 작동하지 않습니다
+118|GEO complements traditional Baidu SEM and SEO, not replaces them|GEO는 전통적인 바이두 SEM과 SEO를 보완하며, 대체하지 않습니다
+119|The most effective strategy combines content optimization across all four platforms with paid search visibility|가장 효과적인 전략은 네 가지 플랫폼 모두에서 콘텐츠 최적화와 유료 검색 가시성을 결합합니다
+120|AI consumption behavior in China is growing faster than any previous digital channel — early movers gain disproportionate advantage|중국의 AI 소비 행동은 이전 디지털 채널보다 빠르게 성장하고 있습니다 — 초기 진입자가 불균형적인 이점을 얻습니다
+121|Ready to Optimize Your Brand for China's AI Engines?|중국 AI 엔진을 위해 브랜드를 최적화할 준비가 되셨나요?
+122|Our team has deep experience in both traditional Baidu PPC and emerging GEO strategies. We can audit your current AI visibility and build a custom plan for the top 4 platforms.|팀은 전통적인 바이두 PPC와 신흥 GEO 전략 모두에 깊은 경험을 가지고 있습니다. 현재 AI 가시성을 감사하고 상위 4개 플랫폼을 위한 맞춤 플랜을 구축할 수 있습니다.
+123|Talk to Our Team →|팀에 문의하기 →
+124|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+125|Quick Links|바로가기
+126|About Us|회사 소개
+127|Submit a Request|문의 접수
+128|Legal|법적 고지
+129|Privacy Policy|개인정보 처리방침
+130|Terms of Service|이용약관
+131|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.

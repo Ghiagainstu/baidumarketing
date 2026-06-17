@@ -1,0 +1,114 @@
+# about 페이지 영문 텍스트 추출
+# 총 110개
+# 형식: 번호|원문|번역
+
+1|About Us — Baidu Marketing for Global Companies|회사 소개 — 글로벌 기업을 위한 바이두 마케팅
+2|BPP|BPP
+3|" />|"
+4|Baidu PPC Pro|Baidu PPC Pro
+5|Why Baidu PPC Pro|바이두 PPC Pro란
+6|Services|서비스
+7|Pricing|요금
+8|Clients|도입 사례
+9|FAQ|자주 묻는 질문
+10|About|회사 소개
+11|Blog|블로그
+12|Contact|문의하기
+13|Get Started →|지금 시작하기 →
+14|🇺🇸|🇺🇸
+15|🇺🇸 English|🇺🇸 English
+16|🇯🇵 日本語|🇯🇵 日本語
+17|Home|홈
+18|/ About|/ 회사 소개
+19|🏢 About Baidu PPC Pro|🏢 Baidu PPC Pro 소개
+20|We're a|우리는
+21|Baidu-certified partner|바이두 인증 파트너
+22|helping international companies and agencies enter China's|국제 기업과 에이전시가 중국에 진출할 수 있도록 지원합니다
+23|$100B+|1000억 달러 이상
+24|digital advertising market — with transparency, expertise, and zero guesswork.|디지털 광고 시장 — 투명성, 전문성, 명확한 가이드로.
+25|📖 Our Story|📖 우리의 이야기
+26|🤝 Built to Bridge the Gap|🤝 격차를 연결하기 위해 설립
+27|China's digital advertising market is massive — but for international companies, it's also opaque, bureaucratic, and hard to navigate. We built Baidu PPC Pro to change that.|중국의 디지털 광고 시장은 거대합니다 — 그러나 국제 기업에게는 불투명하고 관료적이며 탐색하기 어렵습니다. Baidu PPC Pro를 이를 바꾸기 위해 만들었습니다.
+28|As a|로서
+29|Baidu second-tier reseller|바이두 2차 리셀러
+30|connected directly to Baidu official and first-tier agents, we occupy a unique position in the ecosystem. We're not a middleman adding layers — we're the bridge that makes the system work for companies outside China.|바이두 공식 및 1차 에이전시에 직접 연결되어, 생태계에서 고유한 위치를 차지합니다. 우리는 레이어를 추가하는 중개인이 아닙니다 — 중국 외 기업을 위해 시스템을 작동시키는 다리입니다.
+31|Our team is based in|팀은 기반합니다
+32|Shanghai|상하이
+33|with over|이상의
+34|25 years|25년
+35|of combined experience in Chinese digital advertising. We've helped|중국 디지털 광고 경험. 도왔습니다
+36|200+ companies|200개 이상의 기업
+37|from|에서
+38|10+ countries|10개국 이상
+39|open Baidu accounts, fund campaigns, and navigate the compliance landscape — all in English.|바이두 계정을 개설하고, 캠페인을 자금 지원하며, 컴플라이언스 환경을 탐색 — 모두 영어로.
+40|By leveraging|활용하여
+41|AI|AI
+42|for campaign management and optimization, we operate efficiently and pass those savings to you in the form of|캠페인 관리 및 최적화를 위해 효율적으로 운영하며 절감액을 전달합니다
+43|lower service fees|낮은 서비스 수수료
+44|— without compromising on quality.|— 품질 저하 없이.
+45|Our Edge:|우리의 장점:
+46|Direct Baidu ecosystem access + AI-powered optimization = lower costs, faster execution, zero guesswork for your campaigns.|직접 바이두 생태계 접근 + AI 기반 최적화 = 낮은 비용, 빠른 실행, 캠페인에 대한 명확한 가이드.
+47|📊 By the Numbers|📊 숫자로 보기
+48|📈 Track Record|📈 실적
+49|📅 7+|📅 7년 이상
+50|Years Managing Baidu Ads|바이두 광고 관리 경험
+51|🏢 200+|🏢 200개 이상
+52|Accounts Opened|개설된 계정
+53|🌍 10+|🌍 10개국 이상
+54|Countries Served|서비스 국가
+55|🏆 25+|🏆 25년 이상
+56|Years Combined Experience|총 경험
+57|👥 Our Team|👥 팀 소개
+58|The People Behind|背后的人们
+59|Your China Campaigns|중국 캠페인
+60|Over 25 years of combined experience in Chinese digital advertising. Based in Shanghai, working with clients worldwide.|25년 이상의 중국 디지털 광고 경험. 상하이 기반, 전 세계 고객과 협력.
+61|Benny Cheuk|Benny Cheuk
+62|Programmatic Expert, Trilingual|프로그래매틱 전문가, 삼중언어
+63|12+ years|12년 이상
+64|in programmatic advertising, specializing in|프로그래매틱 광고 분야, 전문
+65|DSP technology|DSP 기술
+66|. Trilingual in|. 삼중언어
+67|English, Mandarin, and Cantonese|영어, 중국어, 광둥어
+68|. He bridges European and Chinese markets, helping international companies navigate China's programmatic buying with practical, culturally-aware strategies.|. 유럽과 중국 시장을 연결하며, 실용적이고 문화적으로 인식된 전략으로 국제 기업이 중국의 프로그래매틱 바잉을 탐색하도록 돕습니다.
+69|Yan Huo|Yan Huo
+70|Account Manager|계정 관리자
+71|15+ years|15년 이상
+72|helping international companies navigate China's digital advertising landscape. Fluent|국제 기업이 중국의 디지털 광고 환경을 탐색하도록 지원. 유창한
+73|English|영어
+74|, expert at bridging cultural and technical gaps between global brands and Chinese platforms.|, 글로벌 브랜드와 중국 플랫폼 사이의 문화적/기술적 격차를 연결하는 전문가.
+75|⭐ Our Values|⭐ 우리의 가치
+76|🎯 What Drives Us|🎯 우리를 이끄는 것
+77|🛡️ Compliance First|🛡️ 컴플라이언스 우선
+78|We navigate China's advertising regulations so you don't have to. Every account, every campaign —|중국의 광고 규정을 탐색하므로 귀하는 할 필요가 없습니다. 모든 계정, 모든 캠페인 —
+79|fully compliant from day one|첫날부터 완전히 준수
+80|🔍 Total Transparency|🔍 완전한 투명성
+81|Your account belongs to you —|귀하의 계정은 귀하의 것입니다 —
+82|. Full admin access, all credentials in your hands. We never retain control of your account.|. 전체 관리자 접근, 모든 자격 증명이 귀하의 손에. 우리는 귀하의 계정을 통제하지 않습니다.
+83|🌐 EN / 中文 Bilingual|🌐 영어 / 중국어 이중언어
+84|Language should never be a barrier. We communicate in|언어는 장벽이 되어서는 안 됩니다. 소통합니다
+85|, manage everything in|모든 것을 관리합니다
+86|Chinese|중국어로
+87|— so you can focus on your business.|— 비즈니스에 집중할 수 있도록.
+88|⚡ Fast Response|⚡ 빠른 응답
+89|Every inquiry answered within|모든 문의에 응답합니다
+90|one business day|1영업일 이내
+91|. We know the urgency of getting campaigns live — and we don't make you wait.|. 캠페인을 라이브로 전환하는 긴급성을 알고 있습니다 — 기다리지 않도록 합니다.
+92|✅ Why Companies Choose Us|✅ 기업이 우리를 선택하는 이유
+93|Direct Baidu ecosystem access — no unnecessary middlemen|직접 바이두 생태계 접근 — 불필요한 중개인 없음
+94|Bilingual team (EN/中文) based in Shanghai with 25+ years of combined experience|상하이 기반 이중언어 팀 (영어/중국어) 25년 이상의 경험
+95|AI-powered optimization keeps your costs low and performance high|AI 기반 최적화로 비용을 낮추고 성과를 높입니다
+96|100% account ownership — full admin access, always in your hands|100% 계정 소유 — 전체 관리자 접근, 항상 귀하의 손에
+97|🚀 Ready to Enter the China Market?|🚀 중국 시장 진출 준비가 되셨나요?
+98|Get a free consultation with our bilingual team. We'll assess your needs and outline a clear path to launching your Baidu campaigns.|이중언어 팀과 무료 상담을 받으세요. 요구 사항을 평가하고 바이두 캠페인 시작을 위한 명확한 경로를 제시합니다.
+99|View Pricing|요금 보기
+100|✉️ Free Consultation|✉️ 무료 상담
+101|💬 EN & 中文 Support|💬 영어 및 중국어 지원
+102|🔒 No Commitment|🔒 약속 없음
+103|We help international agencies and brands access China's $100B+ digital advertising market with compliance, clarity, and zero guesswork — one platform, end to end.|1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.
+104|Quick Links|바로가기
+105|About Us|회사 소개
+106|Submit a Request|문의 접수
+107|Legal|법적 고지
+108|Privacy Policy|개인정보 처리방침
+109|Terms of Service|이용약관
+110|©  Baidu PPC Pro. All rights reserved.|©  Baidu PPC Pro. 무단전재를 금지합니다.
