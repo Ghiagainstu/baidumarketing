@@ -150,6 +150,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-brand-baikan-ai-brand-ads</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-brand-info-account-level</loc>
     <priority>0.6</priority>
   </url>
@@ -538,6 +542,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-brand-baikan-ai-brand-ads</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-brand-info-account-level</loc>
     <priority>0.6</priority>
   </url>
@@ -802,13 +810,63 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ko</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/about</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/about" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/features</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/features" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/pricing" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/clients</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/clients" />
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ko/faq</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/faq" />
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ko/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/contact" />
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ko/blog</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/why-baidu-ppc-pro</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/why-baidu-ppc-pro" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/china-geo</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/china-geo" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/privacy" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/terms</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/terms" />
     <priority>0.8</priority>
   </url>
   <url>
@@ -825,6 +883,10 @@
   </url>
   <url>
     <loc>https://www.baidumarketing.com/ko/blog/baidu-ads-campaign-upgrade-2025</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-brand-baikan-ai-brand-ads</loc>
     <priority>0.6</priority>
   </url>
   <url>
