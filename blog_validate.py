@@ -41,6 +41,14 @@ LANG_RULES = {
         "breadcrumb_blog": "ブログ",
         "date_format": r"\d{4}年\d{1,2}月\d{1,2}日",
     },
+    "ko": {
+        "blog_dir": "ko/blog",
+        "footer_copyright": "무단전재를 금지합니다",
+        "read_more": "자세히 보기",
+        "breadcrumb_home": "홈",
+        "breadcrumb_blog": "블로그",
+        "date_format": r"d{4}년d{1,2}월d{1,2}일",
+    },
 }
 
 
@@ -416,7 +424,7 @@ def main():
 
     if all_mode:
         # 验证所有博客
-        for l in ["en", "ja"]:
+        for l in ["en", "ja", "ko"]:
             blog_dir = LANG_RULES[l]["blog_dir"]
             dir_path = PROJECT_ROOT / blog_dir
             if dir_path.exists():
