@@ -284,14 +284,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform var(--transition-base), box-shadow var(--transition-base); }
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
-/* Related */
-.related-section { padding: 60px 0; background: var(--gray-50); }
-.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 30px; }
-.related-card { background: #fff; border-radius: var(--radius); padding: 24px; border: 1px solid var(--gray-200); transition: transform var(--transition-base), box-shadow var(--transition-base); }
-.related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.related-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--gray-900); }
-.related-card p { font-size: .85rem; color: var(--gray-600); }
-
 /* Dark mode overrides for common components */
 [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
 [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -508,20 +500,19 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
   <section class="related-section">
     <div class="container">
-      <h2>📚 You May Also Like</h2>
-      <h2>블로그 다른 글</h2>
+      <h2>📚 관련 기사</h2>
       <div class="related-grid">
         <a href="/ko/blog/baidu-2026-international-brands" class="related-card">
-          <h4>Baidu's 2026 Upgrades for International Brands</h4>
-          <p>What changed and how to adapt your Baidu PPC strategy for 2026.</p>
+          <h4>해외 브랜드를 위한 바이두의 2026년 업그레이드</h4>
+          <p>2026년 바이두 플랫폼의 주요 변경사항과百度 PPC 전략 조정 방법을 정리합니다.</p>
         </a>
         <a href="/ko/blog/how-much-does-baidu-ppc-cost" class="related-card">
-          <h4>How Much Does Baidu PPC Cost?</h4>
-          <p>The CPC formula and how Quality Score directly impacts your actual cost per click.</p>
+          <h4>百度 PPC 비용은 얼마인가?</h4>
+          <p>CPC 공식과 품질점수가 실제 클릭당 비용에 미치는 영향을 분석합니다.</p>
         </a>
-        <a href="/ko/blog/baidu-2025-earnings-geo" class="related-card">
-          <h4>Baidu's Profit Crashed 76% — And That's Good News</h4>
-          <p>What Baidu's 2025 earnings reveal about the GEO revolution.</p>
+        <a href="/ko/blog/baidu-2025-earnings-geo" class="required-card">
+          <h4>百度 수익 76% 폭락 — 이것이 좋은 소식인 이유</h4>
+          <p>百度의 2025년 실적이 GEO 혁명에 대해 말해주는 것.</p>
         </a>
       </div>
     </div>
@@ -565,7 +556,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단전재를 금지합니다.</div>
       <div class="footer-social">
-        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>
     </div>
   </div>
