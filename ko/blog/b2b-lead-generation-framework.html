@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <style>
-    /* Language switcher */
+    /<em> Language switcher </em>/
     .nav-right-group { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .lang-switch { position: relative; }
     .lang-switch-btn { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--gray-200); background: transparent; cursor: pointer; font-size: .9rem; color: var(--gray-600); transition: all var(--transition-base); line-height: 1; }
@@ -58,7 +58,7 @@
     @media (max-width: 900px) { .lang-switch { display: none; } }
 
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <em>, </em>::before, <em>::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-display); color: var(--gray-900); background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     a { color: inherit; text-decoration: none; }
@@ -244,14 +244,14 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .related-card h4 { color: var(--gray-800); }
     [data-theme="dark"] .related-card p { color: var(--gray-600); }
   
-/* ===== Added by standardize-blog-pages.js ===== */
-/* Stats Grid */
+/</em> ===== Added by standardize-blog-pages.js ===== <em>/
+/</em> Stats Grid <em>/
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin: 40px 0; }
 .stat-card { background: var(--gray-50); padding: 28px 20px; border-radius: var(--radius); text-align: center; border: 1px solid var(--gray-200); }
 .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--blue); margin-bottom: 6px; }
 .stat-label { font-size: .85rem; color: var(--gray-600); }
 
-/* Comparison Table */
+/</em> Comparison Table <em>/
 .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
 .comparison-table th { background: var(--blue); color: #fff; padding: 16px; text-align: left; font-weight: 600; font-size: .95rem; }
 .comparison-table td { padding: 14px 16px; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); font-size: .95rem; }
@@ -260,31 +260,31 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
+/</em> Callout <em>/
 .callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
-/* Blockquote (article-content) */
+/</em> Blockquote (article-content) <em>/
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
-/* Chart Container */
+/</em> Chart Container <em>/
 .chart-container { margin: 40px 0; padding: 24px; background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow-x: auto; }
 .chart-container svg { display: block; width: 100%; height: auto; }
 .chart-title { text-align: center; font-size: .9rem; font-weight: 600; color: var(--gray-600); margin-bottom: 16px; }
 
-/* CTA Box */
+/</em> CTA Box <em>/
 .cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
 .cta-box h2, .cta-box h3 { font-size: 2rem !important; font-weight: 700 !important; margin-bottom: 16px !important; color: #fff !important; }
 .cta-box p { font-size: 1.05rem !important; margin-bottom: 30px !important; opacity: .9; color: #fff !important; }
 .cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform var(--transition-base), box-shadow var(--transition-base); }
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
-/* Related */
+/</em> Related <em>/
 .related-section { padding: 60px 0; background: var(--gray-50); }
 .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 30px; }
 .related-card { background: #fff; border-radius: var(--radius); padding: 24px; border: 1px solid var(--gray-200); transition: transform var(--transition-base), box-shadow var(--transition-base); }
@@ -292,7 +292,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .related-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--gray-900); }
 .related-card p { font-size: .85rem; color: var(--gray-600); }
 
-/* Dark mode overrides for common components */
+/</em> Dark mode overrides for common components <em>/
 [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
 [data-theme="dark"] .comparison-table { background: var(--gray-100); }
 [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
@@ -302,14 +302,14 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 [data-theme="dark"] .related-section { background: var(--gray-50); }
 [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
-/* ===== End of supplemental CSS ===== */
+/</em> ===== End of supplemental CSS ===== <em>/
 
       [data-theme="dark"] .article-content p { color: var(--gray-600); }
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
 
-    /* Callout */
+    /</em> Callout <em>/
     .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
     .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
     .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
@@ -319,7 +319,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
     [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
 
-    /* Process Steps */
+    /</em> Process Steps <em>/
     .process-steps { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
     .process-step { display: flex; align-items: flex-start; gap: 20px; position: relative; padding-left: 68px; min-height: 56px; }
     .process-step-num { position: absolute; left: 0; top: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--gradient-brand); color: #fff; font-weight: 800; font-size: 1.1rem; display: grid; place-items: center; flex-shrink: 0; z-index: 2; }
@@ -329,7 +329,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .process-step::before { background: var(--gray-200); }
     [data-theme="dark"] .process-step-content h4 { color: var(--gray-900); }
 
-    /* Funnel Stages */
+    /</em> Funnel Stages <em>/
     .funnel-stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
     .funnel-stage { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; text-align: center; position: relative; }
     .funnel-stage-num { font-size: 2rem; margin-bottom: 6px; }
@@ -343,7 +343,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .funnel-stage h4 { color: var(--gray-900); }
     @media (max-width: 640px) { .funnel-stages { grid-template-columns: 1fr; } }
 
-    /* Stats Grid Enhanced */
+    /</em> Stats Grid Enhanced <em>/
     .stats-grid-enhanced { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin: 28px 0; }
     .stat-card-enhanced { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 16px; padding: 24px 16px; text-align: center; transition: transform .2s, box-shadow .2s; }
     .stat-card-enhanced:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(41,50,225,.15); }
@@ -355,7 +355,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .stat-card-enhanced { background: var(--gray-100); border-color: var(--gray-200); }
     [data-theme="dark"] .stat-card-enhanced:hover { box-shadow: 0 12px 24px rgba(0,0,0,.3); }
 
-    /* Takeaway Box */
+    /</em> Takeaway Box <em>/
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
     .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
@@ -364,7 +364,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
 
-    /* CTA Box */
+    /</em> CTA Box */
     .cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
     .cta-box h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; color: #fff; }
     .cta-box p { font-size: 1rem; margin-bottom: 24px; opacity: .9; color: #fff; }
@@ -412,7 +412,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>이 수치들은 BPP에서 지속적으로 목격하는 패턴을 설명합니다. B2B 기업이 웹사이트에 투자하고, 광고를 집행하고, 콘텐츠를 게시하고, 기다립니다. 트래픽 숫자는 그럴듯해 보입니다. 하지만 실제로 들어오는 리드는 질이 낮거나, 당연히 와야 할 리드가 전혀 오지 않습니다. 마케팅팀은 바쁘고, 영업팀은 답답하고, 경영진은 "디지털이 우리 비즈니스에 실제로 작동하는가"를 묻기 시작합니다.</p>
 <p>문제는 거의 대부분의 경우 디지털 마케팅 자체가 아닙니다. 그것을 어떻게 구현하느냐의 문제입니다. 대부분의 기업은 전술적으로 접근합니다——광고를 집행하고, 콘텐츠를 게시하고, 지표를 추적하고요——그러나 잠재 고객을 "한 번도 들어본 적 없음"에서 "구매 준비 완료"로 이동시키는 일관된 시스템 없이요.</p>
 <p>이 글은 바이두를 사용하여 리드를 생성하는 B2B 기업을 위한 5단계 프레임워크를 세분화합니다. 이는 중국 시장에서 실제로 작동하는 것에 기반하며, 구매 행동과 플랫폼 역학이 서구 플랫폼과 의미 있게 다릅니다.</p>
-<p>---</p>
 <h2>1단계: 명확한 고객 프로필 구축</h2>
 <p>B2B 고객은 단일체가 아닙니다. 구매 담당자, 기술 평가자, 승인 서명하는 CFO는 각각 다른 우려를 갖고 다르게 검색합니다. 효과적인 리드 생성은 정확히 누구를 대상으로 하는지 아는 것에서 시작됩니다.</p>
 <p>묻어야 할 것들:</p>
@@ -424,7 +423,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 </ul>
 <p>이 답을 모르면 광고가 잘못된 사람에게 도달합니다. 우리가 협력한 기계 제조사는 초기에 제조업 전반에 걸쳐 넓게 타겟팅했습니다. 바이두의 오디언스 인텔리전스로 고객 데이터를 분석한 후 광둥 성의 중견 전자제품 조립 공장 procurement managers specifically searching for "자동 검사 장비"로 좁혔습니다. 3개월 만에 적격 리드당 비용이 45% 감소했습니다.</p>
 <p>고객 프로파일링은 일회성 작업이 아닙니다. 시장이 바뀌고, 업종이 진화하며, 2년 후의 이상적인 고객은 오늘의 이상적인 고객과 다를 수 있습니다. 정기적으로 검토하고 개선하는 프로세스를 구축하세요.</p>
-<p>---</p>
 <h2>2단계: 능동적 검색 의도 포착</h2>
 <p>B2B 구매자의 94%가 구매 결정 전에 온라인 검색을 합니다(디트로이트). 중국에서 그 검색은 바이두에서 이루어집니다.</p>
 <p>이것이 기회를 만듭니다: 누군가 "정밀 가공 공급업체 광둥"이나 "산업용 여과 시스템 제조사"를 검색할 때, 그들은 구매 의도를 시그널링하고 있습니다. 당신의 일은 그 검색 결과에 나타나는 것입니다.</p>
@@ -432,7 +430,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><strong>SEO(검색 엔진 최적화):</strong> 콘텐츠, 기술 구조, 권위 신호를 통해 웹사이트의 오가닉 순위를 개선합니다. 더디지만 한 번 자리 잡으면 지속적인 무료 트래픽을 생성합니다.</p>
 <p>중국 시장에 진입하는 대부분의 B2B 브랜드에는 SEM이 현실적인 출발점입니다. SEO는 6~12개월이 걸리며 아직 보유하지 않았을 수 있는 콘텐츠 자산이 필요합니다.</p>
 <p>바이두의 검색 광고는 B2B 특화 기능을 제공합니다: 검색 결과에 내장된 제품 사양표, 클릭 없이 볼 수 있는 동영상 쇼케이스, CRM으로 직접 제출되는 리드 캡처 폼. 이것들이 리서치 단계의 마찰을 줄입니다.</p>
-<p>---</p>
 <h2>3단계: 결정을 움직이는 콘텐츠 제작</h2>
 <p>B2B 구매는 신뢰를 필요로 합니다. 신뢰는 전문성을 시연하고, 능력을 증명하며, 이의를 다루는 콘텐츠로 구축됩니다.</p>
 <p>구매 단계에 콘텐츠를 맞추세요.</p>
@@ -440,7 +437,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><strong>고려 단계:</strong> 구매자가 솔루션을 평가합니다. 증거를 제시하세요——측정 가능한 결과를 포함한 상세한 사례 연구, 제품 비교 매트릭스, 기술 사양서. 당신이 그들의 문제를 해결한다는 것을 시연하세요.</p>
 <p><strong>결정 단계:</strong> 구매자가 구매 준비가 되었습니다. 장벽을 제거하세요——명확한 가격 정보, 구현 타임라인, 서비스 보장. 당신을 선택하기 쉽게 만드세요.</p>
 <p>콘텐츠 제작은 리소스를 많이 소비합니다. 바이두의 AI 콘텐츠 생성 도구가 제작을 가속화할 수 있습니다. 한 클라이언트는 경다(QingDuo)를 사용하여 제품 마케팅 이미지와 사양표를 생성하고, 크리에이티브 제작 시간을 70% 단축하면서도 품질을 유지했습니다.</p>
-<p>---</p>
 <h2>4단계: 데이터 루프 폐쇄</h2>
 <p>마케팅이 리드를 생성합니다. 영업이 리드를 작업합니다. 너무 자주, 정보가 그들 사이에서 흐르지 않습니다.</p>
 <p>폐쇄된 데이터 루프의 의미:</p>
@@ -457,7 +453,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 </ul>
 <p>바이두의 영싱통(Marketing Connect) 플랫폼은 리드 소스를 통합하고 영업팀으로의 자동 배분을 처리합니다. 잠재 고객이 밤 11시에 문의 폼을 작성하면, 누군가 다음 날 아침 이메일함을 확인하기를 기다리는 것이 아니라 즉시 적절한 영업 담당자에게 라우팅됩니다.</p>
 <p>폐쇄된 루프 없이는 어떤 캠페이 효과가 있는지 추측합니다. 있다면 최적화합니다.</p>
-<p>---</p>
 <h2>5단계: 나에게 맞는 디지털 속도 찾기</h2>
 <p>디지털 전환은 올.or.나프트가 아닙니다. 어디에, 언제 투자할지에 대한 일련의 결정입니다.</p>
 <p>영업 사이클이 6~12개월이라면 2주 광고 캠페인은 아무것도 알려주지 않습니다. 평균 거래 규모가 5만 달러라면, 테스트에 5천 달러를 쓰는 것은 비례합니다. 팀에 콘텐츠 자산이 없다면, 광고 비용을 확대하기 전에 거기서 시작하세요.</p>
@@ -469,7 +464,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <li>검토하고, 배우고, 확대하거나 피벗하세요.</li>
 </ul>
 <p>BPP는 다양한 단계의 기업과 협력합니다. 전체 서비스 관리가 필요한 기업도 있고, 내부 역량을 구축하면서 전략적 가이드가 필요한 기업도 있습니다. 프레임워크는 동일합니다. 실행이 리소스에 맞게 조정됩니다.</p>
-<p>---</p>
 <h2>구조적 장벽</h2>
 <p>이 프레임워크의 모든 단계는 바이두 광고 계정을 보유하는 것에 의존합니다. 국제 B2B 기업의 경우, 그것이 가장 어려운 부분입니다. 바이두가 요구하는 것:</p>
 <ul>
@@ -478,10 +472,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <li>인증용 중국 전화번호</li>
 </ul>
 <p>이것이 없으면 프레임워크는 전혀 구현할 수 없습니다. 이것이 BPP가 작동하는 곳입니다. 우리가 자격을 보유하고, 플랫폼을 관리하며, 리드를 전달합니다. 당신은 그것을 성사시키는 데 집중하세요.</p>
-<p>---</p>
 <p><strong>바이두에서 B2B 리드 생성 시스템을 구축할 준비가 되셨나요?</strong></p>
 <p>BPP에 문의하세요. 현재 마케팅 설정, 중국 내 타겟 시장, 리드 생성 목표를 검토하고——바이두가 무엇을 제공할 수 있고 어느 투자 수준이 합리적인지 현실적인 평가를 드립니다.</p>
-<p>→ [BPP 팀에 문의하기](https://baidumarketing.com/contact)</p>
+<p>→ <a href="https://baidumarketing.com/contact">BPP 팀에 문의하기</a></p>
 </article>
   </main>
   <footer>
