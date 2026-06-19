@@ -443,14 +443,14 @@
 
 <nav>
   <div class="container nav-inner">
-    <a href="/ko/" class="nav-logo">
+    <a href="/ko" class="nav-logo">
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"></stop><stop offset="100%" stop-color="#4F46E5"></stop></linearGradient></defs>
-        <rect width="32" height="32" rx="8" fill="url(#logoGrad)"></rect>
-        <path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"></path>
-        <text x="16" y='21' text-anchor='middle' font-family="Inter,system-ui,sans-serif" font-size='12' font-weight='800' fill='white' letter-spacing=".3">BPP</text>
+        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs>
+        <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+        <path d="M9.5 11.5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9z" stroke="white" stroke-width="1.2" fill="none" opacity=".35"/>
+        <text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text>
       </svg>
-      Baidu PPC <span class="logo-pro">Pro</span>
+      Baidu PPC Pro
     </a>
     <div class="nav-links" id="navLinks">
       <a href="/ko/why-baidu-ppc-pro">바이두 PPC Pro란</a>
@@ -461,33 +461,42 @@
       <a href="/ko/about">회사 소개</a>
       <a href="/ko/blog">블로그</a>
       <a href="/ko/contact">문의하기</a>
-      <a href="contact.html" class="nav-mobile-cta">今すぐ始める →</a>
-      <button class="nav-mobile-theme" onclick="toggleTheme()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        ダークモード切替
-      </button>
+      <a href="/ko/contact" class="nav-mobile-cta">지금 시작하기 →</a>
     </div>
     <div class="nav-right-group">
     <div class="lang-switch">
-      <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="言語">
-        🇯🇵
-        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"></path></svg>
+      <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="언어">
+        🇰🇷
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
       </button>
       <div class="lang-switch-menu" id="langSwitchMenu">
-          <a href="../" lang="en" class="lang-switch-item">🇺🇸 English</a>
-          <a href="../ja/" lang="ko" class="lang-switch-item">🇯🇵 日本語</a>
+          <a href="/" lang="en" class="lang-switch-item">🇺🇸 English</a>
+          <a href="/ja" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
+          <a href="/ko" lang="ko" class="lang-switch-item">🇰🇷 한국어</a>
       </div>
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-    </button>
-    <a href="contact.html" class="nav-cta">今すぐ始める →</a>
+    <a href="/ko/contact" class="nav-cta">지금 시작하기 →</a>
     </div>
     <button class="nav-mobile-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menu">
-      <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"></rect><rect y="10" width="22" height="2" rx="1" fill="#374151"></rect><rect y="16" width="22" height="2" rx="1" fill="#374151"></rect></svg>
-      <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"></line><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"></line></svg>
+      <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="#374151"/><rect y="10" width="22" height="2" rx="1" fill="#374151"/><rect y="16" width="22" height="2" rx="1" fill="#374151"/></svg>
+      <svg class="close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:none"><line x1="4" y1="4" x2="18" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
+    <script>
+    // Set active nav link based on current URL
+    (function(){
+      var path = window.location.pathname.replace(/\/$/, '') || '/';
+      document.querySelectorAll('.nav-links a:not(.nav-mobile-cta)').forEach(function(a){
+        var href = a.getAttribute('href').replace(/\/$/, '') || '/';
+        if(path === href || path.startsWith(href + '/')) a.classList.add('active');
+      });
+      // Language switcher: update links to stay on current page
+      var pagePath = path.replace(/^\/(ja|ko)(\/|$)/, '/');
+      document.querySelectorAll('.lang-switch-item').forEach(function(a){
+        var lang = a.getAttribute('lang');
+        a.href = lang === 'en' ? pagePath : '/' + lang + pagePath;
+      });
+    })();
+    </script>
   </div>
 </nav>
 <main>
@@ -632,40 +641,40 @@
     <div class="footer-top">
       <div class="footer-brand">
         <h3>
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"></stop><stop offset="100%" stop-color="#4F46E5"></stop></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"></rect><text x="16" y='21' text-anchor='middle' font-family='system-ui' font-size='12' font-weight='800' fill='white' letter-spacing=".3">BPP</text></svg>
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fLogo" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#2932E1"/><stop offset="100%" stop-color="#4F46E5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#fLogo)"/><text x="16" y="21" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="800" fill="white" letter-spacing=".3">BPP</text></svg>
           Baidu PPC Pro
         </h3>
-        <p>当社は国際的なエージェンシーやブランドが、コンプライアンス、透明性、そしてゼロ・ゲスワークで中国の1,000億ドル以上のデジタル広告市場にアクセスできるよう支援します。ワンプラットフォーム、エンドツーエンド。</p>
+        <p>1000억 달러 규모의 중국 디지털 광고 시장에 해외 기업이 진출할 수 있도록 컴플라이언스, 투명성, 명확한 가이드를 제공합니다. 하나의 플랫폼, 엔드투엔드.</p>
       </div>
       <div class="footer-col">
-        <h4>クイックリンク</h4>
+        <h4>바로가기</h4>
         <ul>
-          <li><a href="features.html">サービス</a></li>
-          <li><a href="pricing.html">料金プラン</a></li>
+          <li><a href="/ko/features">서비스</a></li>
+          <li><a href="/ko/pricing">요금</a></li>
           <li><a href="/ko/about">회사 소개</a></li>
-          <li><a href="faq.html">よくある質問</a></li>
-          <li><a href="blog.html">ブログ</a></li>
+          <li><a href="/ko/faq">자주 묻는 질문</a></li>
+          <li><a href="/ko/blog">블로그</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>お問い合わせ</h4>
+        <h4>문의하기</h4>
         <ul>
           <li><a href="#" class="obf-email-link" data-u="baidu" data-d="baidumarketing.com"></a></li>
-          <li><a href="contact.html">お問い合わせを送信</a></li>
+          <li><a href="/ko/contact">문의 접수</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>法的情報</h4>
+        <h4>법적 고지</h4>
         <ul>
-          <li><a href="privacy.html">プライバシーポリシー</a></li>
-          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="/ko/privacy">개인정보 처리방침</a></li>
+          <li><a href="/ko/terms">이용약관</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
       <div class="footer-social">
-        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22,4 12,13 2,4"></polyline></svg></a>
+        <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>
     </div>
   </div>

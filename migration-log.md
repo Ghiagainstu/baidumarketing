@@ -1,0 +1,816 @@
+# Obsidian Vault 迁移日志
+
+**迁移日期**: 2026-06-10 21:23:52
+**模式**: 实际执行
+
+## 迁移统计
+
+| 操作 | 数量 |
+|------|------|
+| 重命名 | 259 |
+| 移动 | 193 |
+| 创建 | 283 |
+| 跳过 | 61 |
+| 重复 | 3 |
+
+## 详细日志
+
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings\01-baidu-2025-earnings-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings\01-baidu-2025-earnings-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings\01-baidu-2025-earnings-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu\02-ai-assistants-vs-baidu-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu\02-ai-assistants-vs-baidu-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu\02-ai-assistants-vs-baidu-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025\03-china-internet-data-2025-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025\03-china-internet-data-2025-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025\03-china-internet-data-2025-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline\04-search-usage-decline-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline\04-search-usage-decline-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline\04-search-usage-decline-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption\05-china-digital-consumption-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption\05-china-digital-consumption-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption\05-china-digital-consumption-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\06-2024-b2b-marketing-china\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\06-2024-b2b-marketing-china\06-2024-b2b-marketing-china-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\2020-baidu-b2b-industry-insights\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\2020-baidu-b2b-industry-insights\2020-baidu-b2b-industry-insights-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\2020-baidu-b2b-industry-insights\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\2020-baidu-b2b-industry-insights\2020-baidu-b2b-industry-insights-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\2020-baidu-b2b-industry-insights\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\2020-baidu-b2b-industry-insights\2020-baidu-b2b-industry-insights-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\2024-b2b-marketing-china-baidu-whitepaper\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\2024-b2b-marketing-china-baidu-whitepaper\2024-b2b-marketing-china-baidu-whitepaper-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands\baidu-2026-international-brands-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands\baidu-2026-international-brands-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands\baidu-2026-international-brands-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\bpp-chinese-consumers-decision-journey\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\bpp-chinese-consumers-decision-journey\bpp-chinese-consumers-decision-journey-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\bpp-chinese-consumers-decision-journey\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\bpp-chinese-consumers-decision-journey\bpp-chinese-consumers-decision-journey-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\bpp-chinese-consumers-decision-journey\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\bpp-chinese-consumers-decision-journey\bpp-chinese-consumers-decision-journey-ko.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\china-digital-marketing-trends-2026\summary-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\china-digital-marketing-trends-2026\china-digital-marketing-trends-2026-en.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\china-digital-marketing-trends-2026\summary-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\china-digital-marketing-trends-2026\china-digital-marketing-trends-2026-ja.md`
+- **rename**: `E:\Obsidian\Baidu\01-Market-Insights\china-digital-marketing-trends-2026\summary-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\china-digital-marketing-trends-2026\china-digital-marketing-trends-2026-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update\05-baidu-display-name-update-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update\05-baidu-display-name-update-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update\05-baidu-display-name-update-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data\06-baidu-ecosystem-data-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data\06-baidu-ecosystem-data-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data\06-baidu-ecosystem-data-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem\07-baidu-app-ecosystem-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem\07-baidu-app-ecosystem-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem\07-baidu-app-ecosystem-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting\08-baidu-user-data-targeting-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting\08-baidu-user-data-targeting-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting\08-baidu-user-data-targeting-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc\09-baidu-vs-google-ppc-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc\09-baidu-vs-google-ppc-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc\09-baidu-vs-google-ppc-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities\baidu-2026-new-opportunities-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities\baidu-2026-new-opportunities-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities\baidu-2026-new-opportunities-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025\baidu-ads-campaign-upgrade-2025-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025\baidu-ads-campaign-upgrade-2025-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025\baidu-ads-campaign-upgrade-2025-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-app-ecosystem\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-app-ecosystem\baidu-app-ecosystem-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-create-2026-agent-era\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-create-2026-agent-era\baidu-create-2026-agent-era-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-create-2026-agent-era\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-create-2026-agent-era\baidu-create-2026-agent-era-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-create-2026-agent-era\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-create-2026-agent-era\baidu-create-2026-agent-era-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration\baidu-creative-url-retirement-migration-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration\baidu-creative-url-retirement-migration-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration\baidu-creative-url-retirement-migration-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement\baidu-custom-form-retirement-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-ernie-5-1-release\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ernie-5-1-release\baidu-ernie-5-1-release-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-ernie-5-1-release\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ernie-5-1-release\baidu-ernie-5-1-release-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-ernie-5-1-release\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ernie-5-1-release\baidu-ernie-5-1-release-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-market-product-updates-june-2026\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-market-product-updates-june-2026\baidu-market-product-updates-june-2026-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-marketing-product-updates-june-2026\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-marketing-product-updates-june-2026\baidu-marketing-product-updates-june-2026-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-marketing-product-updates-june-2026\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-marketing-product-updates-june-2026\baidu-marketing-product-updates-june-2026-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-marketing-product-updates-june-2026\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-marketing-product-updates-june-2026\baidu-marketing-product-updates-june-2026-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-meg-restructuring-2026\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-meg-restructuring-2026\baidu-meg-restructuring-2026-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-meg-restructuring-2026\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-meg-restructuring-2026\baidu-meg-restructuring-2026-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-meg-restructuring-2026\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-meg-restructuring-2026\baidu-meg-restructuring-2026-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-merchant-agent-human-handoff\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-merchant-agent-human-handoff\baidu-merchant-agent-human-handoff-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-q1-2026-ai-overtakes-search\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-q1-2026-ai-overtakes-search\baidu-q1-2026-ai-overtakes-search-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-q1-2026-ai-overtakes-search\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-q1-2026-ai-overtakes-search\baidu-q1-2026-ai-overtakes-search-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-q1-2026-ai-overtakes-search\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-q1-2026-ai-overtakes-search\baidu-q1-2026-ai-overtakes-search-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-search-ad-video-format-guide\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-ad-video-format-guide\baidu-search-ad-video-format-guide-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement\baidu-search-device-bid-coefficient-retirement-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement\baidu-search-device-bid-coefficient-retirement-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement\baidu-search-device-bid-coefficient-retirement-ko.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\bpp-baidu-merchant-agent-human-handoff\summary-en.md` -> `E:\Obsidian\Baidu\02-Platform\bpp-baidu-merchant-agent-human-handoff\bpp-baidu-merchant-agent-human-handoff-en.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\bpp-baidu-merchant-agent-human-handoff\summary-ja.md` -> `E:\Obsidian\Baidu\02-Platform\bpp-baidu-merchant-agent-human-handoff\bpp-baidu-merchant-agent-human-handoff-ja.md`
+- **rename**: `E:\Obsidian\Baidu\02-Platform\bpp-baidu-merchant-agent-human-handoff\summary-ko.md` -> `E:\Obsidian\Baidu\02-Platform\bpp-baidu-merchant-agent-human-handoff\bpp-baidu-merchant-agent-human-handoff-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work\10-why-baidu-ads-work-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work\10-why-baidu-ads-work-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work\10-why-baidu-ads-work-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained\11-ocpc-explained-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained\11-ocpc-explained-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained\11-ocpc-explained-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm\12-cpm-ocpm-ecpm-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm\12-cpm-ocpm-ecpm-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm\12-cpm-ocpm-ecpm-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis\13-rising-cpm-analysis-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis\13-rising-cpm-analysis-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis\13-rising-cpm-analysis-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models\14-baidu-billing-models-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models\14-baidu-billing-models-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models\14-baidu-billing-models-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc\15-8-ways-lower-cpc-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc\15-8-ways-lower-cpc-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc\15-8-ways-lower-cpc-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting\16-baidu-audience-targeting-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting\16-baidu-audience-targeting-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting\16-baidu-audience-targeting-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords\17-brand-zone-generic-keywords-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords\17-brand-zone-generic-keywords-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords\17-brand-zone-generic-keywords-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account\18-baidu-mcc-account-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account\18-baidu-mcc-account-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account\18-baidu-mcc-account-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget\19-baidu-shared-budget-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget\19-baidu-shared-budget-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget\19-baidu-shared-budget-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads\20-baidu-video-search-ads-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads\20-baidu-video-search-ads-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads\20-baidu-video-search-ads-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain\21-baidu-different-domain-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain\21-baidu-different-domain-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain\21-baidu-different-domain-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types\22-keyword-match-types-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types\22-keyword-match-types-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types\22-keyword-match-types-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide\23-video-format-guide-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide\23-video-format-guide-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide\23-video-format-guide-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified\baidu-ad-creation-flow-simplified-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-workflow-simplified-creative-upgrade\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-workflow-simplified-creative-upgrade\baidu-ad-creation-workflow-simplified-creative-upgrade-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-workflow-simplified-creative-upgrade\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-workflow-simplified-creative-upgrade\baidu-ad-creation-workflow-simplified-creative-upgrade-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool\baidu-ad-performance-diagnostic-tool-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool\baidu-ad-performance-diagnostic-tool-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool\baidu-ad-performance-diagnostic-tool-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-app-ecosystem\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-app-ecosystem\baidu-app-ecosystem-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-audience-targeting-guide\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-audience-targeting-guide\baidu-audience-targeting-guide-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level\baidu-brand-info-account-level-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level\baidu-brand-info-account-level-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level\baidu-brand-info-account-level-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review\baidu-brand-zone-pre-review-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking\baidu-click-fraud-ipv4-blocking-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking\baidu-click-fraud-ipv4-blocking-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking\baidu-click-fraud-ipv4-blocking-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-feature\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-feature\baidu-conflicting-negative-keywords-feature-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup\baidu-conversion-tracking-dedup-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup\baidu-conversion-tracking-dedup-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup\baidu-conversion-tracking-dedup-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-feed-account-structure\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-feed-account-structure\baidu-feed-account-structure-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-feed-ads-explained\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-feed-ads-explained\baidu-feed-ads-explained-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025\baidu-inactive-keyword-cleanup-2025-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-invalid-click-protection\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-invalid-click-protection\baidu-invalid-click-protection-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis\baidu-keyword-zero-impression-diagnosis-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation\baidu-ocpc-skip-data-accumulation-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation\baidu-ocpc-skip-data-accumulation-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation\baidu-ocpc-skip-data-accumulation-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images\baidu-search-ads-1-1-desktop-images-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images\baidu-search-ads-1-1-desktop-images-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images\baidu-search-ads-1-1-desktop-images-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\bpp-why-b2b-baidu-search\summary-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\bpp-why-b2b-baidu-search\bpp-why-b2b-baidu-search-en.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\bpp-why-b2b-baidu-search\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\bpp-why-b2b-baidu-search\bpp-why-b2b-baidu-search-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\bpp-why-b2b-baidu-search\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\bpp-why-b2b-baidu-search\bpp-why-b2b-baidu-search-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\digital-marketing-china\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\digital-marketing-china\digital-marketing-china-ko.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\feed-landing-page-optimization\summary-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\feed-landing-page-optimization\feed-landing-page-optimization-ja.md`
+- **rename**: `E:\Obsidian\Baidu\03-Search-Ads\keyword-research-baidu\summary-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\keyword-research-baidu\keyword-research-baidu-ko.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work\summary-en.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work\22-how-baidu-feed-ads-work-en.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work\summary-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work\22-how-baidu-feed-ads-work-ja.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work\summary-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work\22-how-baidu-feed-ads-work-ko.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads\summary-en.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads\23-native-vs-feed-ads-en.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads\summary-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads\23-native-vs-feed-ads-ja.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads\summary-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads\23-native-vs-feed-ads-ko.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure\summary-en.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure\24-feed-account-structure-en.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure\summary-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure\24-feed-account-structure-ja.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure\summary-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure\24-feed-account-structure-ko.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization\summary-en.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization\25-feed-landing-page-optimization-en.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization\summary-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization\25-feed-landing-page-optimization-ja.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization\summary-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization\25-feed-landing-page-optimization-ko.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade\summary-en.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade\baidu-feed-ads-history-operation-records-upgrade-en.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade\summary-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade\baidu-feed-ads-history-operation-records-upgrade-ja.md`
+- **rename**: `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade\summary-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade\baidu-feed-ads-history-operation-records-upgrade-ko.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu\summary-en.md` -> `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu\26-keyword-research-baidu-en.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu\summary-ja.md` -> `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu\26-keyword-research-baidu-ja.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu\summary-ko.md` -> `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu\26-keyword-research-baidu-ko.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china\summary-en.md` -> `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china\27-digital-marketing-china-en.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china\summary-ja.md` -> `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china\27-digital-marketing-china-ja.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china\summary-ko.md` -> `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china\27-digital-marketing-china-ko.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\baidu-2026-new-opportunities\summary-ko.md` -> `E:\Obsidian\Baidu\05-Strategy\baidu-2026-new-opportunities\baidu-2026-new-opportunities-ko.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\bpp-b2b-lead-generation-framework\summary-en.md` -> `E:\Obsidian\Baidu\05-Strategy\bpp-b2b-lead-generation-framework\bpp-b2b-lead-generation-framework-en.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\bpp-b2b-lead-generation-framework\summary-ja.md` -> `E:\Obsidian\Baidu\05-Strategy\bpp-b2b-lead-generation-framework\bpp-b2b-lead-generation-framework-ja.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\bpp-b2b-lead-generation-framework\summary-ko.md` -> `E:\Obsidian\Baidu\05-Strategy\bpp-b2b-lead-generation-framework\bpp-b2b-lead-generation-framework-ko.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\faq-international-brands\summary-en.md` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands\faq-international-brands-en.md`
+- **rename**: `E:\Obsidian\Baidu\05-Strategy\faq-international-brands\summary-ja.md` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands\faq-international-brands-ja.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix\summary-en.md` -> `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix\28-bounce-rate-fix-en.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix\summary-ja.md` -> `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix\28-bounce-rate-fix-ja.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix\summary-ko.md` -> `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix\28-bounce-rate-fix-ko.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons\summary-en.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons\baidu-landing-page-audit-rejection-reasons-en.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons\summary-ja.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons\baidu-landing-page-audit-rejection-reasons-ja.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons\summary-ko.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons\baidu-landing-page-audit-rejection-reasons-ko.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report\summary-en.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report\baidu-landing-page-report-en.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report\summary-ja.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report\baidu-landing-page-report-ja.md`
+- **rename**: `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report\summary-ko.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report\baidu-landing-page-report-ko.md`
+- **rename**: `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models\summary-en.md` -> `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models\29-baidu-pricing-models-en.md`
+- **rename**: `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models\summary-ja.md` -> `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models\29-baidu-pricing-models-ja.md`
+- **rename**: `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models\summary-ko.md` -> `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models\29-baidu-pricing-models-ko.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc\summary-en.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc\01-can-i-do-baidu-ppc-en.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc\summary-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc\01-can-i-do-baidu-ppc-ja.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc\summary-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc\01-can-i-do-baidu-ppc-ko.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost\summary-en.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost\02-baidu-ppc-cost-en.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost\summary-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost\02-baidu-ppc-cost-ja.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost\summary-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost\02-baidu-ppc-cost-ko.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms\summary-en.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms\03-baidu-key-terms-en.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms\summary-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms\03-baidu-key-terms-ja.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms\summary-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms\03-baidu-key-terms-ko.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection\summary-en.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection\04-brand-protection-en.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection\summary-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection\04-brand-protection-ja.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection\summary-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection\04-brand-protection-ko.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account\summary-en.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account\05-v-sign-account-en.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account\summary-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account\05-v-sign-account-ja.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account\summary-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account\05-v-sign-account-ko.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic\summary-en.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic\06-international-vs-domestic-en.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic\summary-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic\06-international-vs-domestic-ja.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic\summary-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic\06-international-vs-domestic-ko.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status\summary-en.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status\07-account-status-en.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status\summary-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status\07-account-status-ja.md`
+- **rename**: `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status\summary-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status\07-account-status-ko.md`
+- **rename**: `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china\summary-en.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china\01-search-engines-china-en.md`
+- **rename**: `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china\summary-ja.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china\01-search-engines-china-ja.md`
+- **rename**: `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china\summary-ko.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china\01-search-engines-china-ko.md`
+- **rename**: `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine\summary-en.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine\02-new-search-engine-en.md`
+- **rename**: `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine\summary-ja.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine\02-new-search-engine-ja.md`
+- **rename**: `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine\summary-ko.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine\02-new-search-engine-ko.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine\summary-en.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine\01-major-shift-ocean-engine-en.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine\summary-ja.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine\01-major-shift-ocean-engine-ja.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine\summary-ko.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine\01-major-shift-ocean-engine-ko.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads\summary-en.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads\02-bytedance-douyin-ads-en.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads\summary-ja.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads\02-bytedance-douyin-ads-ja.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads\summary-ko.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads\02-bytedance-douyin-ads-ko.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products\summary-en.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products\03-bytedance-products-en.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products\summary-ja.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products\03-bytedance-products-ja.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products\summary-ko.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products\03-bytedance-products-ko.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools\summary-en.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools\04-douyin-tools-en.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools\summary-ja.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools\04-douyin-tools-ja.md`
+- **rename**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools\summary-ko.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools\04-douyin-tools-ko.md`
+- **rename**: `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads\summary-en.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads\01-baidu-offline-ads-en.md`
+- **rename**: `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads\summary-ja.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads\01-baidu-offline-ads-ja.md`
+- **rename**: `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads\summary-ko.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads\01-baidu-offline-ads-ko.md`
+- **rename**: `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic\summary-en.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic\02-baidu-covid-traffic-en.md`
+- **rename**: `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic\summary-ja.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic\02-baidu-covid-traffic-ja.md`
+- **rename**: `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic\summary-ko.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic\02-baidu-covid-traffic-ko.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types\summary-en.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types\01-match-types-en.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types\summary-ja.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types\01-match-types-ja.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types\summary-ko.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types\01-match-types-ko.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks\summary-en.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks\02-malicious-clicks-en.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks\summary-ja.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks\02-malicious-clicks-ja.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks\summary-ko.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks\02-malicious-clicks-ko.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other\summary-en.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other\03-compliance-other-en.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other\summary-ja.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other\03-compliance-other-ja.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other\summary-ko.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other\03-compliance-other-ko.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection\summary-en.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection\04-invalid-click-protection-en.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection\summary-ja.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection\04-invalid-click-protection-ja.md`
+- **rename**: `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection\summary-ko.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection\04-invalid-click-protection-ko.md`
+- **rename**: `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update\summary-en.md` -> `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update\01-baidu-grc-update-en.md`
+- **rename**: `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update\summary-ja.md` -> `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update\01-baidu-grc-update-ja.md`
+- **rename**: `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update\summary-ko.md` -> `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update\01-baidu-grc-update-ko.md`
+- **rename**: `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips\summary-en.md` -> `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips\02-baidu-sem-tips-en.md`
+- **rename**: `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips\summary-ja.md` -> `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips\02-baidu-sem-tips-ja.md`
+- **rename**: `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips\summary-ko.md` -> `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips\02-baidu-sem-tips-ko.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-01-baidu-2025-earnings-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings-ja\01-baidu-2025-earnings-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-01-baidu-2025-earnings-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings-ko\01-baidu-2025-earnings-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-01-baidu-2025-earnings.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-02-ai-assistants-vs-baidu-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu-ja\02-ai-assistants-vs-baidu-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-02-ai-assistants-vs-baidu-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu-ko\02-ai-assistants-vs-baidu-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-02-ai-assistants-vs-baidu.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-03-china-internet-data-2025-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025-ja\03-china-internet-data-2025-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-03-china-internet-data-2025-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025-ko\03-china-internet-data-2025-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-03-china-internet-data-2025.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-04-search-usage-decline-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline-ja\04-search-usage-decline-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-04-search-usage-decline-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline-ko\04-search-usage-decline-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-04-search-usage-decline.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-05-china-digital-consumption-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption-ja\05-china-digital-consumption-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-05-china-digital-consumption-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption-ko\05-china-digital-consumption-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-05-china-digital-consumption.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-06-2024-b2b-marketing-china-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\06-2024-b2b-marketing-china-ko\06-2024-b2b-marketing-china-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-06-2024-b2b-marketing-china.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-07-2020-b2b-industry-insights-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\07-2020-b2b-industry-insights-en\07-2020-b2b-industry-insights-en-en.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-07-2020-b2b-industry-insights-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\07-2020-b2b-industry-insights-ja\07-2020-b2b-industry-insights-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-07-2020-b2b-industry-insights-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\07-2020-b2b-industry-insights-ko\07-2020-b2b-industry-insights-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-baidu-2026-international-brands-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands-en\baidu-2026-international-brands-en-en.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-baidu-2026-international-brands-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands-ja\baidu-2026-international-brands-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-baidu-2026-international-brands-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands-ko\baidu-2026-international-brands-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-chinese-consumers-decision-journey-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\chinese-consumers-decision-journey-en\chinese-consumers-decision-journey-en-en.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-chinese-consumers-decision-journey-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\chinese-consumers-decision-journey-ja\chinese-consumers-decision-journey-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\✅ bpp-chinese-consumers-decision-journey-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\chinese-consumers-decision-journey-ko\chinese-consumers-decision-journey-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ baidu-2026-new-opportunities-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities-en\baidu-2026-new-opportunities-en-en.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ baidu-2026-new-opportunities-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities-ja\baidu-2026-new-opportunities-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ baidu-2026-new-opportunities-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities-ko\baidu-2026-new-opportunities-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-05-baidu-display-name-update-ja.md` -> `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update-ja\05-baidu-display-name-update-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-05-baidu-display-name-update-ko.md` -> `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update-ko\05-baidu-display-name-update-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-05-baidu-display-name-update.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-06-baidu-ecosystem-data-ja.md` -> `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data-ja\06-baidu-ecosystem-data-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-06-baidu-ecosystem-data-ko.md` -> `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data-ko\06-baidu-ecosystem-data-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-06-baidu-ecosystem-data.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-07-baidu-app-ecosystem-ja.md` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem-ja\07-baidu-app-ecosystem-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-07-baidu-app-ecosystem-ko.md` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem-ko\07-baidu-app-ecosystem-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-07-baidu-app-ecosystem.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-08-baidu-user-data-targeting-ja.md` -> `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting-ja\08-baidu-user-data-targeting-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-08-baidu-user-data-targeting-ko.md` -> `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting-ko\08-baidu-user-data-targeting-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-08-baidu-user-data-targeting.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-09-baidu-vs-google-ppc-ja.md` -> `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc-ja\09-baidu-vs-google-ppc-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-09-baidu-vs-google-ppc-ko.md` -> `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc-ko\09-baidu-vs-google-ppc-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-09-baidu-vs-google-ppc.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-ads-campaign-upgrade-2025-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025-en\baidu-ads-campaign-upgrade-2025-en-en.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-ads-campaign-upgrade-2025-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025-ja\baidu-ads-campaign-upgrade-2025-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-ads-campaign-upgrade-2025-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025-ko\baidu-ads-campaign-upgrade-2025-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-creative-url-retirement-migration-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration-en\baidu-creative-url-retirement-migration-en-en.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-creative-url-retirement-migration-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration-ja\baidu-creative-url-retirement-migration-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-creative-url-retirement-migration-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration-ko\baidu-creative-url-retirement-migration-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-custom-form-retirement-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement-en\baidu-custom-form-retirement-en-en.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-custom-form-retirement-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement-ja\baidu-custom-form-retirement-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-custom-form-retirement-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement-ko\baidu-custom-form-retirement-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-search-device-bid-coefficient-retirement-en.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement-en\baidu-search-device-bid-coefficient-retirement-en-en.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-search-device-bid-coefficient-retirement-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement-ja\baidu-search-device-bid-coefficient-retirement-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\02-Platform\✅ bpp-baidu-search-device-bid-coefficient-retirement-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement-ko\baidu-search-device-bid-coefficient-retirement-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-10-why-baidu-ads-work-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work-ja\10-why-baidu-ads-work-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-10-why-baidu-ads-work-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work-ko\10-why-baidu-ads-work-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-10-why-baidu-ads-work.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-11-ocpc-explained-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained-ja\11-ocpc-explained-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-11-ocpc-explained-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained-ko\11-ocpc-explained-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-11-ocpc-explained.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-12-cpm-ocpm-ecpm-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm-ja\12-cpm-ocpm-ecpm-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-12-cpm-ocpm-ecpm-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm-ko\12-cpm-ocpm-ecpm-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-12-cpm-ocpm-ecpm.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-13-rising-cpm-analysis-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis-ja\13-rising-cpm-analysis-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-13-rising-cpm-analysis-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis-ko\13-rising-cpm-analysis-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-13-rising-cpm-analysis.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-14-baidu-billing-models-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models-ja\14-baidu-billing-models-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-14-baidu-billing-models-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models-ko\14-baidu-billing-models-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-14-baidu-billing-models.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-15-8-ways-lower-cpc-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc-ja\15-8-ways-lower-cpc-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-15-8-ways-lower-cpc-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc-ko\15-8-ways-lower-cpc-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-15-8-ways-lower-cpc.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-16-baidu-audience-targeting-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting-ja\16-baidu-audience-targeting-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-16-baidu-audience-targeting-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting-ko\16-baidu-audience-targeting-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-16-baidu-audience-targeting.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-17-brand-zone-generic-keywords-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords-ja\17-brand-zone-generic-keywords-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-17-brand-zone-generic-keywords-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords-ko\17-brand-zone-generic-keywords-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-17-brand-zone-generic-keywords.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-18-baidu-mcc-account-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account-ja\18-baidu-mcc-account-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-18-baidu-mcc-account-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account-ko\18-baidu-mcc-account-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-18-baidu-mcc-account.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-19-baidu-shared-budget-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget-ja\19-baidu-shared-budget-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-19-baidu-shared-budget-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget-ko\19-baidu-shared-budget-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-19-baidu-shared-budget.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-20-baidu-video-search-ads-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads-ja\20-baidu-video-search-ads-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-20-baidu-video-search-ads-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads-ko\20-baidu-video-search-ads-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-20-baidu-video-search-ads.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-21-baidu-different-domain-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain-ja\21-baidu-different-domain-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-21-baidu-different-domain-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain-ko\21-baidu-different-domain-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-21-baidu-different-domain.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-22-keyword-match-types-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types-ja\22-keyword-match-types-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-22-keyword-match-types-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types-ko\22-keyword-match-types-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-22-keyword-match-types.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-23-video-format-guide-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide-ja\23-video-format-guide-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-23-video-format-guide-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide-ko\23-video-format-guide-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-23-video-format-guide.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ad-creation-flow-simplified-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified-en\baidu-ad-creation-flow-simplified-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ad-creation-flow-simplified-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified-ja\baidu-ad-creation-flow-simplified-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ad-creation-flow-simplified-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified-ko\baidu-ad-creation-flow-simplified-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ad-performance-diagnostic-tool-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool-en\baidu-ad-performance-diagnostic-tool-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ad-performance-diagnostic-tool-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool-ja\baidu-ad-performance-diagnostic-tool-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ad-performance-diagnostic-tool-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool-ko\baidu-ad-performance-diagnostic-tool-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-brand-info-account-level-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level-en\baidu-brand-info-account-level-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-brand-info-account-level-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level-ja\baidu-brand-info-account-level-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-brand-info-account-level-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level-ko\baidu-brand-info-account-level-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-brand-zone-pre-review-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review-en\baidu-brand-zone-pre-review-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-brand-zone-pre-review-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review-ja\baidu-brand-zone-pre-review-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-brand-zone-pre-review-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review-ko\baidu-brand-zone-pre-review-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-click-fraud-ipv4-blocking-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking-en\baidu-click-fraud-ipv4-blocking-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-click-fraud-ipv4-blocking-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking-ja\baidu-click-fraud-ipv4-blocking-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-click-fraud-ipv4-blocking-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking-ko\baidu-click-fraud-ipv4-blocking-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-conflicting-negative-keywords-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-en\baidu-conflicting-negative-keywords-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-conflicting-negative-keywords-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-ja\baidu-conflicting-negative-keywords-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-conflicting-negative-keywords-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-ko\baidu-conflicting-negative-keywords-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-conversion-tracking-dedup-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup-en\baidu-conversion-tracking-dedup-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-conversion-tracking-dedup-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup-ja\baidu-conversion-tracking-dedup-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-conversion-tracking-dedup-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup-ko\baidu-conversion-tracking-dedup-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-inactive-keyword-cleanup-2025-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025-en\baidu-inactive-keyword-cleanup-2025-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-inactive-keyword-cleanup-2025-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025-ja\baidu-inactive-keyword-cleanup-2025-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-inactive-keyword-cleanup-2025-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025-ko\baidu-inactive-keyword-cleanup-2025-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-keyword-zero-impression-diagnosis-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis-en\baidu-keyword-zero-impression-diagnosis-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-keyword-zero-impression-diagnosis-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis-ja\baidu-keyword-zero-impression-diagnosis-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-keyword-zero-impression-diagnosis-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis-ko\baidu-keyword-zero-impression-diagnosis-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ocpc-skip-data-accumulation-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation-en\baidu-ocpc-skip-data-accumulation-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ocpc-skip-data-accumulation-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation-ja\baidu-ocpc-skip-data-accumulation-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-ocpc-skip-data-accumulation-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation-ko\baidu-ocpc-skip-data-accumulation-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-search-ads-1-1-desktop-images-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images-en\baidu-search-ads-1-1-desktop-images-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-search-ads-1-1-desktop-images-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images-ja\baidu-search-ads-1-1-desktop-images-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-baidu-search-ads-1-1-desktop-images-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images-ko\baidu-search-ads-1-1-desktop-images-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-why-b2b-baidu-search-en.md` -> `E:\Obsidian\Baidu\03-Search-Ads\why-b2b-baidu-search-en\why-b2b-baidu-search-en-en.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-why-b2b-baidu-search-ja.md` -> `E:\Obsidian\Baidu\03-Search-Ads\why-b2b-baidu-search-ja\why-b2b-baidu-search-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\03-Search-Ads\✅ bpp-why-b2b-baidu-search-ko.md` -> `E:\Obsidian\Baidu\03-Search-Ads\why-b2b-baidu-search-ko\why-b2b-baidu-search-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-22-how-baidu-feed-ads-work-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work-ja\22-how-baidu-feed-ads-work-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-22-how-baidu-feed-ads-work-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work-ko\22-how-baidu-feed-ads-work-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-22-how-baidu-feed-ads-work.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-23-native-vs-feed-ads-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads-ja\23-native-vs-feed-ads-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-23-native-vs-feed-ads-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads-ko\23-native-vs-feed-ads-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-23-native-vs-feed-ads.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-24-feed-account-structure-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure-ja\24-feed-account-structure-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-24-feed-account-structure-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure-ko\24-feed-account-structure-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-24-feed-account-structure.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-25-feed-landing-page-optimization-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization-ja\25-feed-landing-page-optimization-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-25-feed-landing-page-optimization-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization-ko\25-feed-landing-page-optimization-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-25-feed-landing-page-optimization.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-baidu-feed-ads-history-operation-records-upgrade-en.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade-en\baidu-feed-ads-history-operation-records-upgrade-en-en.md`
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-baidu-feed-ads-history-operation-records-upgrade-ja.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade-ja\baidu-feed-ads-history-operation-records-upgrade-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\04-Feed-Ads\✅ bpp-baidu-feed-ads-history-operation-records-upgrade-ko.md` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade-ko\baidu-feed-ads-history-operation-records-upgrade-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-26-keyword-research-baidu-ja.md` -> `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu-ja\26-keyword-research-baidu-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-26-keyword-research-baidu-ko.md` -> `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu-ko\26-keyword-research-baidu-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-26-keyword-research-baidu.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-27-digital-marketing-china-ja.md` -> `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china-ja\27-digital-marketing-china-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-27-digital-marketing-china-ko.md` -> `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china-ko\27-digital-marketing-china-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-27-digital-marketing-china.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-b2b-lead-generation-framework-en.md` -> `E:\Obsidian\Baidu\05-Strategy\b2b-lead-generation-framework-en\b2b-lead-generation-framework-en-en.md`
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-b2b-lead-generation-framework-ja.md` -> `E:\Obsidian\Baidu\05-Strategy\b2b-lead-generation-framework-ja\b2b-lead-generation-framework-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-b2b-lead-generation-framework-ko.md` -> `E:\Obsidian\Baidu\05-Strategy\b2b-lead-generation-framework-ko\b2b-lead-generation-framework-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-faq-international-brands-en.md` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands-en\faq-international-brands-en-en.md`
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-faq-international-brands-ja.md` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands-ja\faq-international-brands-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\05-Strategy\✅ bpp-faq-international-brands-ko.md` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands-ko\faq-international-brands-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-28-bounce-rate-fix-ja.md` -> `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix-ja\28-bounce-rate-fix-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-28-bounce-rate-fix-ko.md` -> `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix-ko\28-bounce-rate-fix-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-28-bounce-rate-fix.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-baidu-landing-page-audit-rejection-reasons-en.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons-en\baidu-landing-page-audit-rejection-reasons-en-en.md`
+- **move**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-baidu-landing-page-audit-rejection-reasons-ja.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons-ja\baidu-landing-page-audit-rejection-reasons-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-baidu-landing-page-audit-rejection-reasons-ko.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons-ko\baidu-landing-page-audit-rejection-reasons-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-baidu-landing-page-report-en.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report-en\baidu-landing-page-report-en-en.md`
+- **move**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-baidu-landing-page-report-ja.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report-ja\baidu-landing-page-report-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\06-Landing-Page\✅ bpp-baidu-landing-page-report-ko.md` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report-ko\baidu-landing-page-report-ko-ko.md`
+- **move**: `E:\Obsidian\Baidu\07-Pricing-Models\✅ bpp-29-baidu-pricing-models-ja.md` -> `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models-ja\29-baidu-pricing-models-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\07-Pricing-Models\✅ bpp-29-baidu-pricing-models-ko.md` -> `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models-ko\29-baidu-pricing-models-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\07-Pricing-Models\✅ bpp-29-baidu-pricing-models.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-01-can-i-do-baidu-ppc-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc-ja\01-can-i-do-baidu-ppc-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-01-can-i-do-baidu-ppc-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc-ko\01-can-i-do-baidu-ppc-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-01-can-i-do-baidu-ppc.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-02-baidu-ppc-cost-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost-ja\02-baidu-ppc-cost-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-02-baidu-ppc-cost-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost-ko\02-baidu-ppc-cost-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-02-baidu-ppc-cost.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-03-baidu-key-terms-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms-ja\03-baidu-key-terms-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-03-baidu-key-terms-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms-ko\03-baidu-key-terms-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-03-baidu-key-terms.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-04-brand-protection-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection-ja\04-brand-protection-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-04-brand-protection-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection-ko\04-brand-protection-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-04-brand-protection.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-05-v-sign-account-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account-ja\05-v-sign-account-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-05-v-sign-account-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account-ko\05-v-sign-account-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-05-v-sign-account.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-06-international-vs-domestic-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic-ja\06-international-vs-domestic-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-06-international-vs-domestic-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic-ko\06-international-vs-domestic-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-06-international-vs-domestic.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-07-account-status-ja.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status-ja\07-account-status-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-07-account-status-ko.md` -> `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status-ko\07-account-status-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\08-Baidu-Basics\✅ bpp-07-account-status.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\09-China-Search-Landscape\✅ bpp-01-search-engines-china-ja.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china-ja\01-search-engines-china-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\09-China-Search-Landscape\✅ bpp-01-search-engines-china-ko.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china-ko\01-search-engines-china-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\09-China-Search-Landscape\✅ bpp-01-search-engines-china.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\09-China-Search-Landscape\✅ bpp-02-new-search-engine-ja.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine-ja\02-new-search-engine-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\09-China-Search-Landscape\✅ bpp-02-new-search-engine-ko.md` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine-ko\02-new-search-engine-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\09-China-Search-Landscape\✅ bpp-02-new-search-engine.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-01-major-shift-ocean-engine-ja.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine-ja\01-major-shift-ocean-engine-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-01-major-shift-ocean-engine-ko.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine-ko\01-major-shift-ocean-engine-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-01-major-shift-ocean-engine.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-02-bytedance-douyin-ads-ja.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads-ja\02-bytedance-douyin-ads-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-02-bytedance-douyin-ads-ko.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads-ko\02-bytedance-douyin-ads-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-02-bytedance-douyin-ads.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-03-bytedance-products-ja.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products-ja\03-bytedance-products-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-03-bytedance-products-ko.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products-ko\03-bytedance-products-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-03-bytedance-products.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-04-douyin-tools-ja.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools-ja\04-douyin-tools-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-04-douyin-tools-ko.md` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools-ko\04-douyin-tools-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\10-ByteDance-Douyin\✅ bpp-04-douyin-tools.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\11-Offline-Traditional\✅ bpp-01-baidu-offline-ads-ja.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads-ja\01-baidu-offline-ads-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\11-Offline-Traditional\✅ bpp-01-baidu-offline-ads-ko.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads-ko\01-baidu-offline-ads-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\11-Offline-Traditional\✅ bpp-01-baidu-offline-ads.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\11-Offline-Traditional\✅ bpp-02-baidu-covid-traffic-ja.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic-ja\02-baidu-covid-traffic-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\11-Offline-Traditional\✅ bpp-02-baidu-covid-traffic-ko.md` -> `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic-ko\02-baidu-covid-traffic-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\11-Offline-Traditional\✅ bpp-02-baidu-covid-traffic.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-01-match-types-ja.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types-ja\01-match-types-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-01-match-types-ko.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types-ko\01-match-types-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-01-match-types.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-02-malicious-clicks-ja.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks-ja\02-malicious-clicks-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-02-malicious-clicks-ko.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks-ko\02-malicious-clicks-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-02-malicious-clicks.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-03-compliance-other-ja.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other-ja\03-compliance-other-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-03-compliance-other-ko.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other-ko\03-compliance-other-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-03-compliance-other.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-04-invalid-click-protection-ja.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection-ja\04-invalid-click-protection-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-04-invalid-click-protection-ko.md` -> `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection-ko\04-invalid-click-protection-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\12-Operations-Compliance\✅ bpp-04-invalid-click-protection.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\13-Special-Topics\✅ bpp-01-baidu-grc-update-ja.md` -> `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update-ja\01-baidu-grc-update-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\13-Special-Topics\✅ bpp-01-baidu-grc-update-ko.md` -> `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update-ko\01-baidu-grc-update-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\13-Special-Topics\✅ bpp-01-baidu-grc-update.md` -> `None` (无语言后缀)
+- **move**: `E:\Obsidian\Baidu\13-Special-Topics\✅ bpp-02-baidu-sem-tips-ja.md` -> `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips-ja\02-baidu-sem-tips-ja-ja.md`
+- **move**: `E:\Obsidian\Baidu\13-Special-Topics\✅ bpp-02-baidu-sem-tips-ko.md` -> `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips-ko\02-baidu-sem-tips-ko-ko.md`
+- **skip**: `E:\Obsidian\Baidu\13-Special-Topics\✅ bpp-02-baidu-sem-tips.md` -> `None` (无语言后缀)
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\01-baidu-2025-earnings-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\02-ai-assistants-vs-baidu-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\03-china-internet-data-2025-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\04-search-usage-decline-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\05-china-digital-consumption-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\06-2024-b2b-marketing-china\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\06-2024-b2b-marketing-china-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\07-2020-b2b-industry-insights-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\07-2020-b2b-industry-insights-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\07-2020-b2b-industry-insights-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\2020-baidu-b2b-industry-insights\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\2024-b2b-marketing-china-baidu-whitepaper\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-2026-international-brands-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\bpp-chinese-consumers-decision-journey\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\china-digital-marketing-trends-2026\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\chinese-consumers-decision-journey-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\chinese-consumers-decision-journey-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\01-Market-Insights\chinese-consumers-decision-journey-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\05-baidu-display-name-update-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\06-baidu-ecosystem-data-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\08-baidu-user-data-targeting-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\09-baidu-vs-google-ppc-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-2026-new-opportunities-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-ads-campaign-upgrade-2025-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-app-ecosystem\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-create-2026-agent-era\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-creative-url-retirement-migration-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-custom-form-retirement-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-ernie-5-1-release\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-market-product-updates-june-2026\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-marketing-product-updates-june-2026\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-meg-restructuring-2026\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-merchant-agent-human-handoff\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-q1-2026-ai-overtakes-search\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-ad-video-format-guide\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\baidu-search-device-bid-coefficient-retirement-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\02-Platform\bpp-baidu-merchant-agent-human-handoff\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\10-why-baidu-ads-work-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\11-ocpc-explained-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\12-cpm-ocpm-ecpm-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\13-rising-cpm-analysis-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\14-baidu-billing-models-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\15-8-ways-lower-cpc-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\16-baidu-audience-targeting-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\17-brand-zone-generic-keywords-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\18-baidu-mcc-account-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\19-baidu-shared-budget-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\20-baidu-video-search-ads-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\21-baidu-different-domain-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\22-keyword-match-types-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\23-video-format-guide-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-flow-simplified-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-creation-workflow-simplified-creative-upgrade\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ad-performance-diagnostic-tool-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-app-ecosystem\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-audience-targeting-guide\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-info-account-level-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-brand-zone-pre-review-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-click-fraud-ipv4-blocking-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-feature\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conflicting-negative-keywords-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-conversion-tracking-dedup-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-feed-account-structure\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-feed-ads-explained\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-inactive-keyword-cleanup-2025-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-invalid-click-protection\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-keyword-zero-impression-diagnosis-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-ocpc-skip-data-accumulation-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\baidu-search-ads-1-1-desktop-images-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\bpp-why-b2b-baidu-search\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\digital-marketing-china\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\feed-landing-page-optimization\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\keyword-research-baidu\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\why-b2b-baidu-search-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\why-b2b-baidu-search-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\03-Search-Ads\why-b2b-baidu-search-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\22-how-baidu-feed-ads-work-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\23-native-vs-feed-ads-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\24-feed-account-structure-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\25-feed-landing-page-optimization-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\04-Feed-Ads\baidu-feed-ads-history-operation-records-upgrade-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\26-keyword-research-baidu-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\27-digital-marketing-china-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\b2b-lead-generation-framework-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\b2b-lead-generation-framework-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\b2b-lead-generation-framework-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\baidu-2026-new-opportunities\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\bpp-b2b-lead-generation-framework\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\05-Strategy\faq-international-brands-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\28-bounce-rate-fix-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-audit-rejection-reasons-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report-en\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\06-Landing-Page\baidu-landing-page-report-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\07-Pricing-Models\29-baidu-pricing-models-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\01-can-i-do-baidu-ppc-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\02-baidu-ppc-cost-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\03-baidu-key-terms-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\04-brand-protection-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\05-v-sign-account-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\06-international-vs-domestic-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\08-Baidu-Basics\07-account-status-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\01-search-engines-china-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\09-China-Search-Landscape\02-new-search-engine-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\01-major-shift-ocean-engine-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\02-bytedance-douyin-ads-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\03-bytedance-products-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\10-ByteDance-Douyin\04-douyin-tools-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\11-Offline-Traditional\01-baidu-offline-ads-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\11-Offline-Traditional\02-baidu-covid-traffic-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\01-match-types-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\02-malicious-clicks-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\03-compliance-other-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\12-Operations-Compliance\04-invalid-click-protection-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\13-Special-Topics\01-baidu-grc-update-ko\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips-ja\readme.md`
+- **create**: `None` -> `E:\Obsidian\Baidu\13-Special-Topics\02-baidu-sem-tips-ko\readme.md`
+- **skip**: `E:\Obsidian\Baidu\2020年百度B2B行业洞察报告.md` -> `None` (无分类映射)
+- **skip**: `E:\Obsidian\Baidu\baidu-ad-display-name-update.md` -> `None` (无分类映射)
+- **move**: `E:\Obsidian\Baidu\baidu-marketing-blog-ja.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-marketing-blog\baidu-marketing-blog-ja.md`
+- **move**: `E:\Obsidian\Baidu\baidu-marketing-blog-ko.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-marketing-blog\baidu-marketing-blog-ko.md`
+- **move**: `E:\Obsidian\Baidu\baidu-marketing-blog.md` -> `E:\Obsidian\Baidu\02-Platform\baidu-marketing-blog\baidu-marketing-blog.md`
+- **skip**: `E:\Obsidian\Baidu\baidu-marketing-playbook-appendix-faq-ko.md` -> `None` (无分类映射)
+- **skip**: `E:\Obsidian\Baidu\bpp-blog-cards-jp-translated.md` -> `None` (无分类映射)
+- **skip**: `E:\Obsidian\Baidu\bpp-faq-jp-translated.md` -> `None` (无分类映射)
+- **skip**: `E:\Obsidian\Baidu\bpp-faq-source-en.md` -> `None` (无分类映射)
+- **skip**: `E:\Obsidian\Baidu\BPP-品牌Logo设计规范.md` -> `None` (无分类映射)
+- **move**: `E:\Obsidian\Baidu\faq-b2b-market-insights-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\faq-b2b-market-insights\faq-b2b-market-insights-en.md`
+- **move**: `E:\Obsidian\Baidu\faq-b2b-market-insights-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\faq-b2b-market-insights\faq-b2b-market-insights-ja.md`
+- **move**: `E:\Obsidian\Baidu\faq-b2b-market-insights-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\faq-b2b-market-insights\faq-b2b-market-insights-ko.md`
+- **move**: `E:\Obsidian\Baidu\faq-b2b-market-insights.md` -> `E:\Obsidian\Baidu\01-Market-Insights\faq-b2b-market-insights\faq-b2b-market-insights.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\Jun 5, 2026 - baidu-industry-insights-tool-guide-en.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-industry-insights-tool-guide-en\baidu-industry-insights-tool-guide-en.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\Jun 5, 2026 - baidu-industry-insights-tool-guide-ja.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-industry-insights-tool-guide-ja\baidu-industry-insights-tool-guide-ja.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\Jun 5, 2026 - baidu-industry-insights-tool-guide-ko.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-industry-insights-tool-guide-ko\baidu-industry-insights-tool-guide-ko.md`
+- **move**: `E:\Obsidian\Baidu\01-Market-Insights\Jun 5, 2026 - baidu-industry-insights-tool-guide.md` -> `E:\Obsidian\Baidu\01-Market-Insights\baidu-industry-insights-tool-guide\baidu-industry-insights-tool-guide.md`
+- **duplicate**: `E:\Obsidian\Baidu\02-Platform\baidu-app-ecosystem` -> `E:\Obsidian\Baidu\02-Platform\07-baidu-app-ecosystem` (2 vs 4 files)
+- **duplicate**: `E:\Obsidian\Baidu\02-Platform\bpp-baidu-merchant-agent-human-handoff` -> `E:\Obsidian\Baidu\02-Platform\baidu-merchant-agent-human-handoff` (4 vs 2 files)
+- **duplicate**: `E:\Obsidian\Baidu\02-Platform\baidu-market-product-updates-june-2026` -> `E:\Obsidian\Baidu\02-Platform\baidu-marketing-product-updates-june-2026` (2 vs 4 files)
