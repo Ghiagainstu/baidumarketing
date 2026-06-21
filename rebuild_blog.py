@@ -47,7 +47,7 @@ FOOTER_BRAND_DESC = {
 }
 
 COPYRIGHT_TEXT = {
-    'ja': '全著作権所有。',
+    'ja': '無断転載を禁じます',
     'ko': '무단전재를 금지합니다.',
 }
 
@@ -352,22 +352,28 @@ def rebuild(template_path, md_path, output_path, lang, slug):
         ce = result.find('</article>', cs) + 10
         result = result[:cs] + f'<article class="article-content">\n{content_html}\n      </article>' + result[ce:]
 
-    # 8. CTA
+    # 8. CTA (includes </main> tag)
     cta = CTA_TEXT.get(lang, CTA_TEXT['en'])
     ctas = result.find('<div class="cta-box">')
     if ctas > 0:
-        ctae = result.find('</div>\n    </div>', ctas)
-        if ctae < 0:
-            ctae = result.find('</div>', ctas + 100)
-            ctae = result.find('</div>', ctae + 1) + 7
+        # Find the end of CTA section including </main>
+        main_end = result.find('</main>', ctas)
+        if main_end > 0:
+            ctae = main_end + len('</main>')
         else:
-            ctae += len('</div>\n    </div>')
+            ctae = result.find('</div>\n    </div>', ctas)
+            if ctae < 0:
+                ctae = result.find('</div>', ctas + 100)
+                ctae = result.find('</div>', ctae + 1) + 7
+            else:
+                ctae += len('</div>\n    </div>')
         result = result[:ctas] + f'''<div class="cta-box">
         <h3>{cta["title"]}</h3>
         <p>{cta["text"]}</p>
         <a href="{cta["link"]}" class="cta-btn">{cta["btn"]}</a>
       </div>
-    </div>''' + result[ctae:]
+    </div>
+  </main>''' + result[ctae:]
 
     # 9. Related section
     rt_title = RELATED_TITLE.get(lang, 'Related Articles')
