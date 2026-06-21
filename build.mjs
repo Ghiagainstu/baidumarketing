@@ -461,6 +461,10 @@ function generateSitemap() {
       const slug = post.replace('.html', '');
       lines.push(`  <url>`);
       lines.push(`    <loc>${baseURL}/blog/${slug}</loc>`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${baseURL}/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${baseURL}/ja/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${baseURL}/ko/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${baseURL}/blog/${slug}" />`);
       lines.push(`    <priority>0.6</priority>`);
       lines.push(`  </url>`);
     }
@@ -489,6 +493,10 @@ function generateSitemap() {
       const slug = post.replace('.html', '');
       lines.push(`  <url>`);
       lines.push(`    <loc>${baseURL}/ja/blog/${slug}</loc>`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${baseURL}/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${baseURL}/ja/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${baseURL}/ko/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${baseURL}/blog/${slug}" />`);
       lines.push(`    <priority>0.6</priority>`);
       lines.push(`  </url>`);
     }
@@ -517,6 +525,10 @@ function generateSitemap() {
       const slug = post.replace('.html', '');
       lines.push(`  <url>`);
       lines.push(`    <loc>${baseURL}/ko/blog/${slug}</loc>`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${baseURL}/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${baseURL}/ja/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${baseURL}/ko/blog/${slug}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${baseURL}/blog/${slug}" />`);
       lines.push(`    <priority>0.6</priority>`);
       lines.push(`  </url>`);
     }

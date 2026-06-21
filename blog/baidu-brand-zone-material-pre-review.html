@@ -556,16 +556,11 @@ window.addEventListener('scroll', () => { document.getElementById('backToTop').c
   "description": "Baidu Brand Zone now has automatic material pre-review. Saves resubmission cycles for overseas advertisers.",
   "url": "https://www.baidumarketing.com/blog/baidu-brand-zone-material-pre-review",
   "image": "https://www.baidumarketing.com/assets/og-brand-default.png",
-<div class="footer-lang"><a href="/blog/baidu-brand-zone-material-pre-review">English</a> | <a href="/ja/blog/baidu-brand-zone-material-pre-review">日本語</a></div>
       <div class="footer-social"><a href="/contact" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a></div>
 </div>
 </div></footer>
 
 <script>
-function toggleLangMenu() {
-  const menu = document.getElementById('langSwitchMenu');
-  if (menu) menu.classList.toggle('open');
-}
 document.addEventListener('click', function(e) {
   const menu = document.getElementById('langSwitchMenu');
   const btn = document.querySelector('.lang-switch-btn');
@@ -658,11 +653,7 @@ window.addEventListener('scroll', () => { document.getElementById('backToTop').c
   }
 }
 
-  function toggleLangMenu() {
-    const menu = document.getElementById('langSwitchMenu');
-    if (menu) menu.classList.toggle('open');
-  }
-  document.addEventListener('click', function(e) {
+    document.addEventListener('click', function(e) {
     const menu = document.getElementById('langSwitchMenu');
     const btn = document.querySelector('.lang-switch-btn');
     if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
