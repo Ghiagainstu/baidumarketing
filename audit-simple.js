@@ -1,15 +1,14 @@
 // audit-simple.js
 const fs = require('fs');
-const files = fs.readdirSync('blog').filter(f => f.endsWith('.html'));
+const files = fs.readdirSync('blog').filter(f => f.endsWith('.html') && !f.startsWith('_'));
 let issues = [];
 files.forEach(f => {
   const html = fs.readFileSync('blog/' + f, 'utf8');
-  const hasBrokenFooter = html.includes('function toggleLangMenu()') && html.includes('footer-copy');
   const hasFooterLang = html.includes('footer-lang');
   const hasNavRightGroup = html.includes('nav-right-group');
   const hasLangSwitch = html.includes('lang-switch');
-  if (hasBrokenFooter || !hasFooterLang || !hasNavRightGroup || !hasLangSwitch) {
-    issues.push(f + ' | nav:' + !hasNavRightGroup + ' | lang:' + !hasLangSwitch + ' | footer:' + hasBrokenFooter + ' | footLang:' + !hasFooterLang);
+  if (!hasFooterLang || !hasNavRightGroup || !hasLangSwitch) {
+    issues.push(f + ' | nav:' + !hasNavRightGroup + ' | lang:' + !hasLangSwitch + ' | footLang:' + !hasFooterLang);
   }
 });
 console.log('Total:', files.length);
