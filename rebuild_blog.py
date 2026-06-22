@@ -199,30 +199,94 @@ def build_enhanced_content(body_md):
     if pos > 0:
         html = html[:pos+5] + stats + html[pos+5:]
 
-    # Callout after account setup
-    callout1 = '''
+    # Add callout elements based on article content
+    # Check if this is a SaaS article (check for both English and translated text)
+    is_saas = 'SaaS' in html and ('Landing Page Requirements' in html or 'ランディングページ要件' in html or '랜딩페이지 요건' in html)
+    if is_saas:
+        # Callout after landing page section - insert before "Budget Planning" heading
+        callout_landing = '''
+    <div class="callout callout-warning">
+      <strong>⚠️ Common Pitfall:</strong> Using your English website as the landing page. Baidu will reject it during review, and even if it passes, conversion rates will be near zero. Chinese enterprise buyers expect localized content with trust signals.
+    </div>
+'''
+        # Try English first, then Japanese, then Korean
+        budget_heading_en = '    <h2>Budget Planning for SaaS on Baidu</h2>'
+        budget_heading_ja = '    <h2>百度でのSaaS向け予算計画</h2>'
+        budget_heading_ko = '    <h2>바이두에서의 SaaS용 예산 계획</h2>'
+        
+        if budget_heading_en in html:
+            html = html.replace(budget_heading_en, callout_landing + '\n' + budget_heading_en)
+        elif budget_heading_ja in html:
+            html = html.replace(budget_heading_ja, callout_landing + '\n' + budget_heading_ja)
+        elif budget_heading_ko in html:
+            html = html.replace(budget_heading_ko, callout_landing + '\n' + budget_heading_ko)
+
+        # Callout after budget section - insert before "What BPP Does" heading
+        callout_budget = '''
+    <div class="callout callout-insight">
+      <strong>💡 Key Insight:</strong> SaaS companies should start with category keywords (60% of budget) to build awareness, then shift budget to comparison keywords (25%) as brand recognition grows. Branded keywords (15%) protect your brand terms from competitors.
+    </div>
+'''
+        # Try English first, then Japanese, then Korean
+        bpp_heading_en = '    <h2>What BPP Does for SaaS Companies</h2>'
+        bpp_heading_ja = '    <h2>BPPがSaaS企業のためにできること</h2>'
+        bpp_heading_ko = '    <h2>BPP가 SaaS 기업을 위해 할 수 있는 일</h2>'
+        
+        if bpp_heading_en in html:
+            html = html.replace(bpp_heading_en, callout_budget + '\n' + bpp_heading_en)
+        elif bpp_heading_ja in html:
+            html = html.replace(bpp_heading_ja, callout_budget + '\n' + bpp_heading_ja)
+        elif bpp_heading_ko in html:
+            html = html.replace(bpp_heading_ko, callout_budget + '\n' + bpp_heading_ko)
+
+        # Takeaway box before CTA
+        takeaway = '''
+    <div class="takeaway-box">
+      <h3>📋 Key Takeaways for SaaS Companies</h3>
+      <ul>
+        <li>China SaaS market: $92.9B by 2033, 18.5% CAGR — massive opportunity</li>
+        <li>Chinese enterprise buyers start research on Baidu, not Google</li>
+        <li>SaaS CPCs are ¥8–25 ($1.10–$3.45) — competitive vs Western markets</li>
+        <li>Landing page must be in Chinese with trust signals and free trial CTA</li>
+        <li>Budget: ¥5,000–80,000/month depending on SaaS category</li>
+        <li>BPP handles account setup, campaign management, and landing page guidance</li>
+      </ul>
+    </div>
+'''
+        # Try English first, then Japanese, then Korean
+        cta_en = 'No hidden charges.</p>\n\n    <p><strong>Ready to explore'
+        cta_ja = '追加料金はなし。</p>\n\n    <p><strong>2026年に百度をSaaSブランドに活かす準備はできていますか？'
+        cta_ko = '추가 비용 없음.</p>\n\n    <p><strong>2026년 바이두를 SaaS 브랜드에 활용할 준비가 되셨나요?'
+        
+        if cta_en in html:
+            html = html.replace(cta_en, 'No hidden charges.</p>\n' + takeaway + '\n    <p><strong>Ready to explore')
+        elif cta_ja in html:
+            html = html.replace(cta_ja, '追加料金はなし。</p>\n' + takeaway + '\n    <p><strong>2026年に百度をSaaSブランドに活かす準備はできていますか？')
+        elif cta_ko in html:
+            html = html.replace(cta_ko, '추가 비용 없음.</p>\n' + takeaway + '\n    <p><strong>2026년 바이두를 SaaS 브랜드에 활용할 준비가 되셨나요?')
+    else:
+        # Default callout for other articles (e.g., baidu-ads-b2b-manufacturers)
+        callout1 = '''
     <div class="callout callout-warning">
       <strong>⚠️ Common Pitfall:</strong> The document translation and compliance review is where most foreign companies get stuck. Baidu's review process is strict — a single mismatched company name can delay approval by weeks.
     </div>
 '''
-    html = html.replace(
-        'delay approval by weeks.</p>\n\n    <h2>🎯 Keyword',
-        'delay approval by weeks.</p>\n' + callout1 + '\n    <h2>🎯 Keyword'
-    )
+        html = html.replace(
+            'delay approval by weeks.</p>\n\n    <h2>🎯 Keyword',
+            'delay approval by weeks.</p>\n' + callout1 + '\n    <h2>🎯 Keyword'
+        )
 
-    # Callout after budget
-    callout2 = '''
+        callout2 = '''
     <div class="callout callout-insight">
       <strong>💡 Key Insight:</strong> These numbers assume a well-optimized campaign with a Chinese-language landing page. Poor landing pages can 3–5× your cost per lead.
     </div>
 '''
-    html = html.replace(
-        '3–5× your cost per lead.</p>\n\n    <h3>Budget Allocation',
-        '3–5× your cost per lead.</p>\n' + callout2 + '\n    <h3>Budget Allocation'
-    )
+        html = html.replace(
+            '3–5× your cost per lead.</p>\n\n    <h3>Budget Allocation',
+            '3–5× your cost per lead.</p>\n' + callout2 + '\n    <h3>Budget Allocation'
+        )
 
-    # Takeaway box before CTA
-    takeaway = '''
+        takeaway = '''
     <div class="takeaway-box">
       <h3>📋 Key Takeaways</h3>
       <ul>
@@ -235,10 +299,10 @@ def build_enhanced_content(body_md):
       </ul>
     </div>
 '''
-    html = html.replace(
-        'No hidden charges.</p>\n\n    <p><strong>Ready to explore',
-        'No hidden charges.</p>\n' + takeaway + '\n    <p><strong>Ready to explore'
-    )
+        html = html.replace(
+            'No hidden charges.</p>\n\n    <p><strong>Ready to explore',
+            'No hidden charges.</p>\n' + takeaway + '\n    <p><strong>Ready to explore'
+        )
 
     return html
 
@@ -253,9 +317,10 @@ def translate_components(html, lang):
     # Translate takeaway-box title and callout titles
     if lang == 'ja':
         html = html.replace('📋 Key Takeaways', '📋 重要ポイントまとめ')
+        html = html.replace('📋 Key Takeaways for SaaS Companies', '📋 SaaS企業向け重要ポイント')
         html = html.replace('⚠️ Common Pitfall', '⚠️ よくある落とし穴')
         html = html.replace('💡 Key Insight', '💡 重要な洞察')
-        # Translate takeaway list items
+        # Translate baidu-ads takeaway list items
         html = html.replace('Baidu is where Chinese B2B buyers search — not Google',
                            '中国のB2BバイヤーはGoogleではなく百度で検索する')
         html = html.replace('Industrial CPCs are ¥1–5, 60–80% lower than Google Ads',
@@ -268,8 +333,27 @@ def translate_components(html, lang):
                            '層1製品キーワードから始める（予算の80%）')
         html = html.replace('Budget: ¥3,000–50,000/month depending on volume',
                            '月間予算：¥3,000〜50,000（ボリュームによる）')
+        # Translate SaaS takeaway list items
+        html = html.replace('China SaaS market: $92.9B by 2033, 18.5% CAGR — massive opportunity',
+                           '中国SaaS市場：2033年までに929億ドル、CAGR 18.5% — 巨大な機会')
+        html = html.replace('Chinese enterprise buyers start research on Baidu, not Google',
+                           '中国のエンタープライズバイヤーはGoogleではなく百度から調査を始める')
+        html = html.replace('SaaS CPCs are ¥8–25 ($1.10–$3.45) — competitive vs Western markets',
+                           'SaaS CPCは¥8〜25（$1.10〜$3.45）— 西洋市場と比較して競争力あり')
+        html = html.replace('Landing page must be in Chinese with trust signals and free trial CTA',
+                           'ランディングページは中国語で、信頼シグナルと無料トライアルCTAが必要')
+        html = html.replace('Budget: ¥5,000–80,000/month depending on SaaS category',
+                           '月間予算：¥5,000〜80,000（SaaSカテゴリによる）')
+        html = html.replace('BPP handles account setup, campaign management, and landing page guidance',
+                           'BPPはアカウント設定、キャンペーン管理、ランディングページガイダンスを担当')
+        # Translate SaaS callout content
+        html = html.replace('Using your English website as the landing page. Baidu will reject it during review, and even if it passes, conversion rates will be near zero. Chinese enterprise buyers expect localized content with trust signals.',
+                           '英語のウェブサイトをランディングページとして使用すること。百度は審査で却下し、通過してもコンバージョン率はほぼゼロになります。中国のエンタープライズバイヤーはローカライズされたコンテンツと信頼シグナルを期待しています。')
+        html = html.replace('SaaS companies should start with category keywords (60% of budget) to build awareness, then shift budget to comparison keywords (25%) as brand recognition grows. Branded keywords (15%) protect your brand terms from competitors.',
+                           'SaaS企業は認知構築のためにカテゴリキーワード（予算の60%）から始めるべきです。ブランド認知が成長したら比較キーワード（25%）に予算を移行します。ブランドキーワード（15%）はブランド用語を競合から保護します。')
     elif lang == 'ko':
         html = html.replace('📋 Key Takeaways', '📋 핵심 요약')
+        html = html.replace('📋 Key Takeaways for SaaS Companies', '📋 SaaS 기업 핵심 요약')
         html = html.replace('⚠️ Common Pitfall', '⚠️ 흔한 함정')
         html = html.replace('💡 Key Insight', '💡 핵심 인사이트')
         html = html.replace('Baidu is where Chinese B2B buyers search — not Google',
