@@ -368,6 +368,24 @@ def translate_components(html, lang):
                            '계층 1 제품 키워드부터 시작 (예산의 80%)')
         html = html.replace('Budget: ¥3,000–50,000/month depending on volume',
                            '월 예산: ¥3,000~50,000 (볼륨에 따라)')
+        # Translate SaaS takeaway list items
+        html = html.replace('China SaaS market: $92.9B by 2033, 18.5% CAGR — massive opportunity',
+                           '중국 SaaS 시장: 2033년까지 929억 달러, CAGR 18.5% — 거대한 기회')
+        html = html.replace('Chinese enterprise buyers start research on Baidu, not Google',
+                           '중국 기업 바이어는 구글이 아닌 바이두에서 조사를 시작')
+        html = html.replace('SaaS CPCs are ¥8–25 ($1.10–$3.45) — competitive vs Western markets',
+                           'SaaS CPC는 ¥8~25 ($1.10~$3.45) — 서양 시장 대비 경쟁력 있음')
+        html = html.replace('Landing page must be in Chinese with trust signals and free trial CTA',
+                           '랜딩페이지는 중국어로 신뢰 시그널과 무료 체험 CTA 포함 필요')
+        html = html.replace('Budget: ¥5,000–80,000/month depending on SaaS category',
+                           '월 예산: ¥5,000~80,000 (SaaS 카테고리에 따라)')
+        html = html.replace('BPP handles account setup, campaign management, and landing page guidance',
+                           'BPP는 계정 설정, 캠페인 관리, 랜딩페이지 가이던스를 담당')
+        # Translate SaaS callout content
+        html = html.replace('Using your English website as the landing page. Baidu will reject it during review, and even if it passes, conversion rates will be near zero. Chinese enterprise buyers expect localized content with trust signals.',
+                           '영어 웹사이트를 랜딩페이지로 사용하는 것. 바이두는 심사에서 거부하며, 통과해도 전환율은 거의 0에 가깝습니다. 중국 기업 바이어는 로컬라이즈된 콘텐츠와 신뢰 시그널을 기대합니다.')
+        html = html.replace('SaaS companies should start with category keywords (60% of budget) to build awareness, then shift budget to comparison keywords (25%) as brand recognition grows. Branded keywords (15%) protect your brand terms from competitors.',
+                           'SaaS 기업은 인지도 구축을 위해 카테고리 키워드(예산의 60%)로 시작하고, 브랜드 인지도가 성장하면 비교 키워드(25%)로 예산을 이동해야 합니다. 브랜드 키워드(15%)는 경쟁사로부터 브랜드 용어를 보호합니다.')
     return html
 
 
