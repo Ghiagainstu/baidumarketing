@@ -414,6 +414,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-knowledge-graph-entity-seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-knowledge-graph-entity-seo" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-landing-page-audit-rejection-reasons</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-landing-page-audit-rejection-reasons" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-landing-page-audit-rejection-reasons" />
@@ -518,6 +526,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-ppc-education-industry</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-ppc-education-industry" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-ppc-monthly-report-template</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-ppc-monthly-report-template" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-ppc-roi-calculator</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-roi-calculator" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-roi-calculator" />
@@ -590,6 +614,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-seo-ppc-synergy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-seo-ppc-synergy" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-service-direct-lead-ads</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-service-direct-lead-ads" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-service-direct-lead-ads" />
@@ -635,6 +667,14 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-v-sign-verification-guide" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-v-sign-verification-guide" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-v-sign-verification-guide" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-vs-douyin-ads-china</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-vs-douyin-ads-china" />
     <priority>0.6</priority>
   </url>
   <url>
@@ -726,11 +766,59 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/blog/geo-audit-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-audit-checklist" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/geo-content-playbook-chinese-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-content-playbook-chinese-ai" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/geo-get-brand-cited-by-chinese-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-get-brand-cited-by-chinese-ai" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/geo-monitoring-brand-ai-search</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-monitoring-brand-ai-search" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/geo-vs-ppc-budget-allocation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-vs-ppc-budget-allocation" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/blog/how-much-does-baidu-ppc-cost</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/how-much-does-baidu-ppc-cost" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/how-much-does-baidu-ppc-cost" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/how-much-does-baidu-ppc-cost" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/how-much-does-baidu-ppc-cost" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/how-to-choose-baidu-ppc-agency</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/how-to-choose-baidu-ppc-agency" />
     <priority>0.6</priority>
   </url>
   <url>
@@ -1202,6 +1290,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-knowledge-graph-entity-seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-knowledge-graph-entity-seo" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-landing-page-audit-rejection-reasons</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-landing-page-audit-rejection-reasons" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-landing-page-audit-rejection-reasons" />
@@ -1306,6 +1402,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-ppc-education-industry</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-ppc-education-industry" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-ppc-monthly-report-template</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-ppc-monthly-report-template" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-ppc-roi-calculator</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-roi-calculator" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-roi-calculator" />
@@ -1378,6 +1490,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-seo-ppc-synergy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-seo-ppc-synergy" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-service-direct-lead-ads</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-service-direct-lead-ads" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-service-direct-lead-ads" />
@@ -1423,6 +1543,14 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-v-sign-verification-guide" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-v-sign-verification-guide" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-v-sign-verification-guide" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-vs-douyin-ads-china</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-vs-douyin-ads-china" />
     <priority>0.6</priority>
   </url>
   <url>
@@ -1514,11 +1642,59 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ja/blog/geo-audit-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-audit-checklist" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/geo-content-playbook-chinese-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-content-playbook-chinese-ai" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/geo-get-brand-cited-by-chinese-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-get-brand-cited-by-chinese-ai" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/geo-monitoring-brand-ai-search</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-monitoring-brand-ai-search" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/geo-vs-ppc-budget-allocation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-vs-ppc-budget-allocation" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ja/blog/how-much-does-baidu-ppc-cost</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/how-much-does-baidu-ppc-cost" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/how-much-does-baidu-ppc-cost" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/how-much-does-baidu-ppc-cost" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/how-much-does-baidu-ppc-cost" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/how-to-choose-baidu-ppc-agency</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/how-to-choose-baidu-ppc-agency" />
     <priority>0.6</priority>
   </url>
   <url>
@@ -1870,6 +2046,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-knowledge-graph-entity-seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-knowledge-graph-entity-seo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-knowledge-graph-entity-seo" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ko/blog/baidu-landing-page-audit-rejection-reasons</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-landing-page-audit-rejection-reasons" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-landing-page-audit-rejection-reasons" />
@@ -1902,6 +2086,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-ppc-education-industry</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-ppc-education-industry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-ppc-education-industry" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-ppc-monthly-report-template</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-ppc-monthly-report-template" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-ppc-monthly-report-template" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ko/blog/baidu-ppc-roi-calculator</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ppc-roi-calculator" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ppc-roi-calculator" />
@@ -1926,6 +2126,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-seo-ppc-synergy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-seo-ppc-synergy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-seo-ppc-synergy" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ko/blog/baidu-service-direct-lead-ads</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-service-direct-lead-ads" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-service-direct-lead-ads" />
@@ -1942,6 +2150,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-vs-douyin-ads-china</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-vs-douyin-ads-china" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-vs-douyin-ads-china" />
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baidumarketing.com/ko/blog/chinese-consumers-decision-journey</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/chinese-consumers-decision-journey" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/chinese-consumers-decision-journey" />
@@ -1955,6 +2171,54 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/faq-international-brands" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/faq-international-brands" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/faq-international-brands" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/geo-audit-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-audit-checklist" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-audit-checklist" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/geo-content-playbook-chinese-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-content-playbook-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-content-playbook-chinese-ai" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/geo-get-brand-cited-by-chinese-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-get-brand-cited-by-chinese-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-get-brand-cited-by-chinese-ai" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/geo-monitoring-brand-ai-search</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-monitoring-brand-ai-search" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-monitoring-brand-ai-search" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/geo-vs-ppc-budget-allocation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/geo-vs-ppc-budget-allocation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/geo-vs-ppc-budget-allocation" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/how-to-choose-baidu-ppc-agency</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/how-to-choose-baidu-ppc-agency" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/how-to-choose-baidu-ppc-agency" />
     <priority>0.6</priority>
   </url>
   <url>
