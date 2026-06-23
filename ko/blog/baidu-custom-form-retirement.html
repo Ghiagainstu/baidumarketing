@@ -40,13 +40,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M9 11c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V11z' fill='none' stroke='white' stroke-width='1.5' opacity='.3'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
 <style>
-<em>, </em>::before, <em>::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #111827; background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 
-/</em> Nav <em>/
+/</em> Nav */
 nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E5E7EB; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: #1F2937; transition: color .2s; }
@@ -85,13 +85,13 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .nav-overlay.active { opacity: 1; pointer-events: auto; }
 @media (max-width: 900px) { .nav-links { display: none; } .nav-mobile-toggle { display: block; } }
 
-/</em> Hero <em>/
+/</em> Hero */
 .article-hero { padding: 120px 0 60px; background: linear-gradient(160deg, #ffffff 30%, #EEF0FF 60%, #E0E7FF 100%); }
 .article-title { font-size: 2.8rem; font-weight: 800; line-height: 1.2; color: #111827; margin-bottom: 16px; }
 .article-meta { display: flex; gap: 20px; font-size: .85rem; color: #6B7280; }
 .article-meta span { display: inline-flex; align-items: center; gap: 6px; }
 
-/</em> Content <em>/
+/</em> Content */
 .article-section { padding: 60px 0 96px; }
 .article-content { max-width: 750px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #374151; }
 .article-content h2 { font-size: 1.6rem; font-weight: 700; margin: 48px 0 20px; color: #111827; }
@@ -105,11 +105,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .article-content a { color: #2932E1; border-bottom: 1px solid rgba(41,50,225,.3); transition: border-color .2s; }
 .article-content a:hover { border-color: #2932E1; }
 
-/</em> Callout — Enhanced <em>/
+/</em> Callout — Enhanced */
 .callout { border-radius: 12px; padding: 24px 28px; margin: 32px 0; border-top: 5px solid; position: relative; }
 .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #6EE7B7; }
 
-/</em> Takeaway — Enhanced <em>/
+/</em> Takeaway — Enhanced */
 .takeaway-box {
   background: linear-gradient(180deg, #FFFFFF 0%, #EEF0FF 100%);
   border: 1.5px solid #E5E7EB; border-radius: 16px; padding: 28px 32px; margin: 32px 0;
@@ -126,7 +126,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 24px; position: relative; color: #374151; }
 .takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
 
-/</em> Comparison Table - Enhanced <em>/
+/</em> Comparison Table - Enhanced */
 .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(41,50,225,.1); }
 .comparison-table th { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 100%); color: #fff; padding: 18px 20px; text-align: left; font-weight: 700; font-size: .95rem; letter-spacing: .02em; }
 .comparison-table td { padding: 16px 20px; border-bottom: 1px solid #E5E7EB; color: #374151; font-size: .95rem; transition: background .2s; }
@@ -134,7 +134,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .comparison-table tr:hover td { background: #EEF0FF; }
 .comparison-table td strong { color: #111827; font-weight: 700; }
 
-/</em> Footer <em>/
+/</em> Footer */
 footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
 .footer-brand h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
@@ -149,7 +149,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08); display: grid; place-items: center; transition: background .2s, transform .2s; }
 .footer-social a:hover { background: #2932E1; transform: translateY(-2px); }
 
-/</em> Dark Mode <em>/
+/</em> Dark Mode */
 [data-theme="dark"] body { background: #0B0F1A; color: #E5E7EB; }
 [data-theme="dark"] nav { background: rgba(11,15,26,.85); border-bottom-color: #1F2937; }
 [data-theme="dark"] .nav-links { color: #9CA3AF; }
@@ -166,18 +166,18 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
 [data-theme="dark"] footer { background: #070B14; }
 
-/</em> CTA Button <em>/
+/</em> CTA Button */
 .cta-btn { display: inline-block; background: #2932E1; color: #fff !important; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none !important; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(41,50,225,.35); background: #1E27CC; color: #fff !important; }
 [data-theme="dark"] .cta-btn { background: #2932E1; }
 [data-theme="dark"] .cta-btn:hover { background: #1E27CC; }
 
-/</em> CTA Box <em>/
+/</em> CTA Box */
 .cta-box { background: linear-gradient(135deg, #2932E1 0%, #4F46E5 50%, #7C3AED 100%); color: #fff; padding: 48px; border-radius: 16px; text-align: center; margin: 50px 0; }
 .cta-box h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; color: #fff; }
 .cta-box p { font-size: 1rem; margin-bottom: 24px; opacity: .9; color: #fff; }
 
-/</em> Breadcrumb <em>/
+/</em> Breadcrumb */
 .breadcrumb { font-size: .85rem; color: #9CA3AF; margin-bottom: 20px; }
 .breadcrumb a { color: #2932E1; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
