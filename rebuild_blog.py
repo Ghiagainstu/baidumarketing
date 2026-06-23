@@ -412,6 +412,34 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     # 1. {{SLUG}} 全局替换（语言切换器、hreflang、canonical、OG、JSON-LD）
     result = result.replace('{{SLUG}}', slug)
 
+    # 1b. Fix hreflang tags for all languages
+    # Remove existing hreflang tags
+    result = re.sub(r'\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*" />\s*\n?', '\n', result)
+    # Add correct hreflang tags
+    hreflang_block = f'''  <link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/{slug}" />
+  <link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/{slug}" />
+  <link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/{slug}" />
+  <link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/{slug}" />
+'''
+    # Insert after <meta charset>
+    charset_pos = result.find('<meta charset="UTF-8">')
+    if charset_pos > 0:
+        insert_pos = result.find('\n', charset_pos) + 1
+        result = result[:insert_pos] + hreflang_block + result[insert_pos:]
+
+    # 1c. Fix canonical and og:url for language
+    lang_prefix = '' if lang == 'en' else f'/{lang}'
+    result = re.sub(
+        r'<link rel="canonical" href="https://www\.baidumarketing\.com/blog/[^"]*"',
+        f'<link rel="canonical" href="https://www.baidumarketing.com{lang_prefix}/blog/{slug}"',
+        result
+    )
+    result = re.sub(
+        r'<meta property="og:url" content="https://www\.baidumarketing\.com/blog/[^"]*"',
+        f'<meta property="og:url" content="https://www.baidumarketing.com{lang_prefix}/blog/{slug}"',
+        result
+    )
+
     # 2. Title
     result = re.sub(r'<title>.*?</title>', f'<title>{title} — Baidu PPC Pro Blog</title>', result)
     result = re.sub(r'<h1 class="article-title">.*?</h1>', f'<h1 class="article-title">{title}</h1>', result, flags=re.DOTALL)
@@ -424,7 +452,7 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     result = re.sub(r'<meta name="twitter:description" content="[^"]*"', f'<meta name="twitter:description" content="{desc}"', result)
 
     # 4. JSON-LD
-    jl = f'{{"@context":"https://schema.org","@type":"BlogPosting","headline":"{title}","description":"{desc}","datePublished":"{date}","dateModified":"{date}","author":{{"@type":"Organization","name":"{author}"}},"publisher":{{"@type":"Organization","name":"Baidu PPC Pro"}},"mainEntityOfPage":{{"@type":"WebPage","@id":"https://www.baidumarketing.com/blog/{slug}"}}}}'
+    jl = f'{{"@context":"https://schema.org","@type":"BlogPosting","headline":"{title}","description":"{desc}","datePublished":"{date}","dateModified":"{date}","author":{{"@type":"Organization","name":"{author}"}},"publisher":{{"@type":"Organization","name":"Baidu PPC Pro"}},"mainEntityOfPage":{{"@type":"WebPage","@id":"https://www.baidumarketing.com{lang_prefix}/blog/{slug}"}}}}'
     result = re.sub(r'<script type="application/ld\+json">.*?</script>', f'<script type="application/ld+json">\n  {jl}\n  </script>', result, flags=re.DOTALL)
 
     # 5. Article meta (with SVG icons)

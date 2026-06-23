@@ -9,7 +9,7 @@ DRAFTS = PROJECT / "blog-drafts"
 
 def read_frontmatter(md_path):
     """Extract frontmatter fields from MD."""
-    text = md_path.read_text(encoding="utf-8")
+    text = md_path.read_text(encoding="utf-8-sig")
     fm_match = re.match(r'^---\s*\n(.*?)\n---', text, re.DOTALL)
     if not fm_match:
         return {}, text
@@ -26,6 +26,7 @@ def md_to_html(md_text):
     """Convert markdown body to HTML."""
     lines = md_text.split('\n')
     html_parts = []
+    first_h1_skipped = False
     in_list = False
     in_ol = False
     in_table = False
@@ -66,6 +67,13 @@ def md_to_html(md_text):
         # Headings
         if stripped.startswith('### '):
             html_parts.append(f'<h3>{process_inline(stripped[4:])}</h3>')
+            continue
+        # H1 (skip first occurrence - already in page title)
+        if stripped.startswith('# ') and not first_h1_skipped:
+            first_h1_skipped = True
+            continue
+        if stripped.startswith('# '):
+            html_parts.append(f'<h2>{process_inline(stripped[2:])}</h2>')
             continue
         if stripped.startswith('## '):
             html_parts.append(f'<h2>{process_inline(stripped[3:])}</h2>')
@@ -162,8 +170,18 @@ def generate_html(template_path, slug, lang, fm, body_html, cta):
     category = fm.get('category', 'strategy')
     author = fm.get('author', 'Baidu PPC Pro Team')
     
-    # Build date string
-    date_str = date  # Will be like 2026-06-23
+    # Build date string per language
+    from datetime import datetime
+    try:
+        dt = datetime.strptime(date, '%Y-%m-%d')
+        if lang == 'ja':
+            date_str = f'{dt.year}年{dt.month}月{dt.day}日'
+        elif lang == 'ko':
+            date_str = f'{dt.year}년 {dt.month}월 {dt.day}일'
+        else:
+            date_str = dt.strftime('%b %d, %Y')
+    except ValueError:
+        date_str = date
     
     # Determine URL prefix
     if lang == 'en':

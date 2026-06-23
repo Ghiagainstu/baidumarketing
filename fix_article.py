@@ -20,12 +20,12 @@ for lang in ["ja", "ko"]:
     template = template_path.read_text(encoding="utf-8")
     
     # Read MD for frontmatter
-    md_text = md_path.read_text(encoding="utf-8")
+    md_text = md_path.read_text(encoding="utf-8-sig")
     fm_match = re.match(r'^---\s*\n(.*?)\n---', md_text, re.DOTALL)
     fm = {}
     if fm_match:
         for line in fm_match.group(1).split('\n'):
-            m = re.match(r'^(\w+):\s*"?([^"]*)"?$', line)
+            m = re.match(r'^(\w+):\s*"?(.*?)"?\s*$', line)
             if m:
                 fm[m.group(1)] = m.group(2)
     
@@ -56,7 +56,19 @@ for lang in ["ja", "ko"]:
     html = template
     html = html.replace("{{SLUG}}", SLUG)
     html = html.replace("{{TITLE}}", title)
-    html = html.replace("{{DATE}}", date)
+    # Format date per language
+    from datetime import datetime
+    try:
+        dt = datetime.strptime(date, '%Y-%m-%d')
+        if lang == 'ja':
+            date_display = f'{dt.year}年{dt.month}月{dt.day}日'
+        elif lang == 'ko':
+            date_display = f'{dt.year}년 {dt.month}월 {dt.day}일'
+        else:
+            date_display = dt.strftime('%b %d, %Y')
+    except ValueError:
+        date_display = date
+    html = html.replace("{{DATE}}", date_display)
     html = html.replace("{{READ_TIME}}", reading_time)
     html = html.replace("{{CATEGORY}}", fm.get("category", "strategy"))
     html = html.replace("{{AUTHOR}}", author)
