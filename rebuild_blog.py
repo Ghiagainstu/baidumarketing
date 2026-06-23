@@ -392,7 +392,7 @@ def translate_components(html, lang):
 def rebuild(template_path, md_path, output_path, lang, slug):
     with open(template_path, 'r', encoding='utf-8') as f:
         tpl = f.read()
-    with open(md_path, 'r', encoding='utf-8') as f:
+    with open(md_path, 'r', encoding='utf-8-sig') as f:
         md = f.read()
 
     meta, body = parse_frontmatter(md)
