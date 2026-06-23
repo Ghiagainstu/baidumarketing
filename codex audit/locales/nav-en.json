@@ -1,0 +1,16 @@
+{
+  "logo": "Baidu PPC Pro",
+  "links": {
+    "why": "Why Baidu PPC Pro",
+    "services": "Services",
+    "pricing": "Pricing",
+    "clients": "Clients",
+    "faq": "FAQ",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "cta": "Get Started →",
+  "themeToggle": "Toggle Dark Mode",
+  "languageLabel": "Language"
+}

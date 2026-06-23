@@ -1,0 +1,46 @@
+{
+  "default": "en",
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "nativeLabel": "English",
+      "dir": "",
+      "flag": "🇺🇸",
+      "active": true,
+      "sitemapPriority": 1.0
+    },
+    {
+      "code": "ja",
+      "label": "Japanese",
+      "nativeLabel": "日本語",
+      "dir": "ja",
+      "flag": "🇯🇵",
+      "active": true,
+      "sitemapPriority": 0.9
+    },
+    {
+      "code": "ko",
+      "label": "Korean",
+      "nativeLabel": "한국어",
+      "dir": "ko",
+      "flag": "🇰🇷",
+      "active": true,
+      "sitemapPriority": 0.9
+    }
+  ],
+  "pages": [
+    "index",
+    "about",
+    "features",
+    "pricing",
+    "clients",
+    "faq",
+    "contact",
+    "blog",
+    "why-baidu-ppc-pro",
+    "china-geo",
+    "privacy",
+    "terms"
+  ]
+}

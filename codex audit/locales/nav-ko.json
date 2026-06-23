@@ -1,0 +1,16 @@
+{
+  "logo": "Baidu PPC Pro",
+  "links": {
+    "why": "바이두 PPC Pro란",
+    "services": "서비스",
+    "pricing": "요금",
+    "clients": "도입 사례",
+    "faq": "자주 묻는 질문",
+    "about": "회사 소개",
+    "blog": "블로그",
+    "contact": "문의하기"
+  },
+  "cta": "지금 시작하기 →",
+  "themeToggle": "다크 모드 전환",
+  "languageLabel": "언어"
+}
