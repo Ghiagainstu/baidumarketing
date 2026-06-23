@@ -1,8 +1,8 @@
 ﻿---
 title: "ゼロから月間400件のリード獲得：ヨーロッパメーカーが百度PPCで中国市場を開拓した方法"
 date: 2026-06-23
-source_url:
-source_name:
+source_url: original
+source_name: Baidu PPC Pro (Original)
 source_date:
 category: strategy
 tags: [case-study, b2b, manufacturing, lead-generation, baidu-ppc, roi, china-market]
@@ -209,3 +209,4 @@ url_ko:
 BPPチームにお問い合わせください。業界を分析し、現実的なCPCとリードボリュームを推定し、正直な評価をお伝えします。高圧的な営業は一切ありません。
 
 → [BPPにお問い合わせ](https://baidumarketing.com/ja/contact)
+

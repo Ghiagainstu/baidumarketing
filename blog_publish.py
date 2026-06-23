@@ -204,12 +204,19 @@ def insert_and_sort_cards(lang, slug, category, title, excerpt, date, read_time)
         return False
 
     after_last = content[grid_content_start + last_article_end + len("</article>"):]
-    grid_close = after_last.find("</div>")
-    if grid_close == -1:
-        print(f"❌ 未找到 grid 关闭标签")
+    # Find the boundary after the last article - look for </div>, </section>, </footer>
+    boundary = -1
+    for tag in ["</div>", "</section>", "</footer>"]:
+        idx = after_last.find(tag)
+        if idx >= 0:
+            # boundary is the START of the close tag (we want to keep it)
+            boundary = idx
+            break
+    if boundary == -1:
+        print("grid close not found")
         return False
-
-    grid_end = grid_content_start + last_article_end + len("</article>") + grid_close + len("</div>")
+    # grid_end points to the start of the close tag - we keep the close tag and everything after
+    grid_end = grid_content_start + last_article_end + len("</article>") + boundary
 
     # 写入新内容
     new_content = content[:grid_content_start] + new_grid_content + content[grid_end:]

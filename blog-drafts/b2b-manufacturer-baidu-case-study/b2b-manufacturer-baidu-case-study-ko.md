@@ -1,8 +1,8 @@
 ﻿---
 title: "제로에서 월 400건 리드 확보: 유럽 제조사가 바이두 PPC로 중국 시장을 개척한 방법"
 date: 2026-06-23
-source_url:
-source_name:
+source_url: original
+source_name: Baidu PPC Pro (Original)
 source_date:
 category: strategy
 tags: [case-study, b2b, manufacturing, lead-generation, baidu-ppc, roi, china-market]
@@ -209,3 +209,4 @@ url_ko:
 BPP 팀에 문의하십시오. 업종을 분석하고, 현실적인 CPC와 리드 볼륨을 추정하며, 솔직한 평가를 제공합니다. 강압적인 영업은 일절 없습니다.
 
 → [BPP에 문의](https://baidumarketing.com/ko/contact)
+

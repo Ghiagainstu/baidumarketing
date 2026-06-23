@@ -520,6 +520,20 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     if lang in COPYRIGHT_TEXT:
         result = result.replace('All rights reserved.', COPYRIGHT_TEXT[lang])
 
+    # 11b. Language switcher button flag
+    FLAG_MAP = {
+        'en': '&#x1f1fa;&#x1f1f8;',  # 🇺🇸
+        'ja': '&#x1f1ef;&#x1f1f5;',  # 🇯🇵
+        'ko': '🇰🇷',
+    }
+    if lang in FLAG_MAP:
+        # Replace the flag in the lang-switch-btn
+        result = re.sub(
+            r'(<button class="lang-switch-btn"[^>]*>)(&#x1f1fa;&#x1f1f8;|&#x1f1ef;&#x1f1f5;|🇰🇷)',
+            f'\\1{FLAG_MAP[lang]}',
+            result
+        )
+
     # 12. Nav links (add language prefix)
     if lang in ['ja', 'ko']:
         prefix = f'/{lang}'

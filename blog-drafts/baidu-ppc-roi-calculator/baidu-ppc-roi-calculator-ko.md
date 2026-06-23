@@ -1,8 +1,8 @@
 ﻿---
 title: "바이두 PPC ROI 계산 방법: 해외 광고주를 위한 프레임워크"
 date: 2026-06-23
-source_url:
-source_name:
+source_url: original
+source_name: Baidu PPC Pro (Original)
 source_date:
 category: strategy
 tags: [baidu-ppc, roi, budget, forecasting, lead-generation, cpc, conversion-rate]
@@ -210,3 +210,4 @@ BPP에서는 추측으로 움직이지 않습니다. 캠페인 시작 전에 다
 BPP 팀에 문의하십시오. 업종을 분석하고, 현실적인 비용과 수익을 추정하며, 자사 비즈니스에 바이두 광고가 어떤 모습이 될지 명확하게 보여드립니다. 강압적인 영업은 일절 없습니다.
 
 → [BPP에 문의](https://baidumarketing.com/ko/contact)
+

@@ -1,8 +1,8 @@
 ﻿---
 title: "From Zero to 400 Leads Per Month: How a European Manufacturer Cracked the China Market with Baidu PPC"
 date: 2026-06-23
-source_url:
-source_name:
+source_url: original
+source_name: Baidu PPC Pro (Original)
 source_date:
 category: strategy
 tags: [case-study, b2b, manufacturing, lead-generation, baidu-ppc, roi, china-market]
@@ -209,3 +209,4 @@ If you are considering Baidu advertising for your manufacturing or B2B business,
 Talk to the BPP team. We will analyze your industry, estimate realistic CPCs and lead volumes, and give you an honest assessment — no pressure, no fluff.
 
 → [Contact BPP](https://baidumarketing.com/contact)
+

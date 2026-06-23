@@ -1,8 +1,8 @@
 ﻿---
 title: "百度PPCのROIを計算する方法：海外広告主向けフレームワーク"
 date: 2026-06-23
-source_url:
-source_name:
+source_url: original
+source_name: Baidu PPC Pro (Original)
 source_date:
 category: strategy
 tags: [baidu-ppc, roi, budget, forecasting, lead-generation, cpc, conversion-rate]
@@ -210,4 +210,5 @@ BPPでは推測で動きます。キャンペーン開始前に以下を提供�
 BPPチームにお問い合わせください。業界を分析し、現実的なコストとリターンを見積もり、自社のビジネスにとって百度広告がどのような姿になるか明確にお伝えします。高圧的な営業は一切ありません。
 
 → [BPPにお問い合わせ](https://baidumarketing.com/ja/contact)
+
 
