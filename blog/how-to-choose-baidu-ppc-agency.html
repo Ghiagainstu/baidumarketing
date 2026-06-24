@@ -255,6 +255,16 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .question-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .q-card { border-radius: 12px; padding: 20px; border: 1px solid var(--gray-200); background: var(--gray-50); }
+    .q-card .q-num { font-size: .7rem; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+    .q-card .q-title { font-size: .9rem; font-weight: 700; color: var(--gray-800); }
+    .q-card .q-desc { font-size: .78rem; color: var(--gray-500); margin-top: 4px; line-height: 1.4; }
+    [data-theme="dark"] .q-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .q-card .q-title { color: var(--gray-700); }
+    @media (max-width: 640px) { .question-grid { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 <body>
@@ -286,7 +296,7 @@
       <div class="article-meta">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 23, 2026</span>
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 7 min</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> strategy</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> Strategy</span>
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span>
       </div>
     </div>
@@ -298,7 +308,19 @@
 
 <p>Choosing a Baidu PPC agency is one of the most consequential decisions you will make for your China advertising. A good agency saves you months of trial and error, protects your budget, and accelerates your results. A bad one burns through your budget while delivering reports that look busy but mean nothing.</p>
     <p>The challenge: most international advertisers have never worked with a Baidu agency before. They do not know what good looks like. Here are 10 questions that separate serious agencies from pretenders.</p>
-    <h2>Question 1: Are You an Authorized Baidu Partner?</h2>
+    <div class="question-grid">
+  <div class="q-card"><div class="q-num">Q1</div><div class="q-title">Authorized Partner?</div><div class="q-desc">Can they open accounts directly?</div></div>
+  <div class="q-card"><div class="q-num">Q2</div><div class="q-title">International Experience</div><div class="q-desc">Have they worked with foreign brands?</div></div>
+  <div class="q-card"><div class="q-num">Q3</div><div class="q-title">Account Ownership</div><div class="q-desc">Who owns the account if you switch?</div></div>
+  <div class="q-card"><div class="q-num">Q4</div><div class="q-title">Reporting Quality</div><div class="q-desc">Do reports drive decisions?</div></div>
+  <div class="q-card"><div class="q-num">Q5</div><div class="q-title">Fee Structure</div><div class="q-desc">Transparent pricing or hidden costs?</div></div>
+  <div class="q-card"><div class="q-num">Q6</div><div class="q-title">Chinese Content</div><div class="q-desc">Native writers or machine translation?</div></div>
+  <div class="q-card"><div class="q-num">Q7</div><div class="q-title">Crisis Response</div><div class="q-desc">How do they handle performance drops?</div></div>
+  <div class="q-card"><div class="q-num">Q8</div><div class="q-title">Client References</div><div class="q-desc">Anonymized case studies available?</div></div>
+  <div class="q-card"><div class="q-num">Q9</div><div class="q-title">Platform Updates</div><div class="q-desc">Do they track Baidu changes?</div></div>
+  <div class="q-card"><div class="q-num">Q10</div><div class="q-title">Onboarding Process</div><div class="q-desc">Structured or "let us see how it goes"?</div></div>
+</div>
+<h2>Question 1: Are You an Authorized Baidu Partner?</h2>
     <p>This is non-negotiable. An authorized Baidu partner (百度授权服务商) has a direct relationship with Baidu, access to Baidu's partner portal, and the ability to open accounts under their verified entity.</p>
     <p><strong>What to listen for:</strong></p>
     <ul>
@@ -372,7 +394,10 @@
       <li>Optimization cycle &mdash; ongoing improvements based on data</li>
     </ol>
     <p>If the agency says "we will just set up some ads and see how it goes" &mdash; walk away.</p>
-    <h2>Red Flags Summary</h2>
+    <div class="callout callout-warning">
+  <strong>⚠️ Red Flags to Watch For:</strong> No verified Baidu partnership, vague reporting, no Chinese content team, account ownership lock-in, "guaranteed results" promises, no industry experience, one-size-fits-all strategy.
+</div>
+<h2>Red Flags Summary</h2>
     <table class="comparison-table">
   <thead><tr><th>Red Flag</th><th>Why It Matters</th></tr></thead>
   <tbody><tr><td>No verifiable Baidu partnership</td><td>Cannot open accounts or access support directly</td></tr><tr><td>Vague reporting</td><td>You cannot measure their performance</td></tr><tr><td>No Chinese content team</td><td>Machine-translated ads fail on Baidu</td></tr><tr><td>Account ownership lock-in</td><td>Makes switching agencies expensive and difficult</td></tr><tr><td>"Guaranteed results" promises</td><td>No agency can guarantee Baidu PPC results</td></tr><tr><td>No industry experience</td><td>Learning on your budget</td></tr><tr><td>One-size-fits-all strategy</td><td>Your business is unique; your strategy should be too</td></tr></tbody></table>
@@ -381,7 +406,17 @@
     <p>We do not lock you into contracts. We do not own your account. We provide transparent reporting and honest assessments.</p>
     <p><strong>Want to see if BPP is the right fit for your business?</strong></p>
     <p>Talk to the BPP team. We will walk you through our approach, show you real client results, and answer every question on this list &mdash; no pressure, no fluff.</p>
-    <p>→ <a href="https://baidumarketing.com/contact">Contact BPP</a></p>
+    <div class="takeaway-box">
+  <h3>📋 Agency Selection Checklist</h3>
+  <ul>
+    <li><strong>Verify Baidu partnership</strong> — Ask for their partner status and ID</li>
+    <li><strong>Request sample reports</strong> — Generic templates reveal lack of depth</li>
+    <li><strong>Ask about account ownership</strong> — You should have admin access</li>
+    <li><strong>Review their content team</strong> — Native Chinese writers are non-negotiable</li>
+    <li><strong>Check their onboarding process</strong> — Structure equals professionalism</li>
+  </ul>
+</div>
+<p>→ <a href="https://baidumarketing.com/contact">Contact BPP</a></p>
 
       </article>
     </div>

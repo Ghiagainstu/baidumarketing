@@ -243,6 +243,16 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .question-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .q-card { border-radius: 12px; padding: 20px; border: 1px solid var(--gray-200); background: var(--gray-50); }
+    .q-card .q-num { font-size: .7rem; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+    .q-card .q-title { font-size: .9rem; font-weight: 700; color: var(--gray-800); }
+    .q-card .q-desc { font-size: .78rem; color: var(--gray-500); margin-top: 4px; line-height: 1.4; }
+    [data-theme="dark"] .q-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .q-card .q-title { color: var(--gray-700); }
+    @media (max-width: 640px) { .question-grid { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 </head>
