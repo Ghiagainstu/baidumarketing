@@ -255,6 +255,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .funnel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .funnel-card { border-radius: 12px; padding: 20px; border: 1px solid var(--gray-200); text-align: center; }
+    .funnel-card.top { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #FCD34D; }
+    .funnel-card.mid { background: linear-gradient(180deg, #EEF0FF 0%, #FFFFFF 100%); border-color: #A5B4FC; }
+    .funnel-card.bot { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #6EE7B7; }
+    .funnel-card .f-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+    .funnel-card .f-name { font-size: .9rem; font-weight: 700; margin-bottom: 4px; }
+    .funnel-card .f-cpc { font-size: .8rem; color: var(--gray-500); }
+    .funnel-card .f-cvr { font-size: .8rem; color: var(--blue); font-weight: 600; }
+    [data-theme="dark"] .funnel-card.top { background: linear-gradient(180deg, rgba(245,158,11,.08) 0%, var(--gray-100) 100%); }
+    [data-theme="dark"] .funnel-card.mid { background: linear-gradient(180deg, rgba(99,102,241,.08) 0%, var(--gray-100) 100%); }
+    [data-theme="dark"] .funnel-card.bot { background: linear-gradient(180deg, rgba(34,197,94,.08) 0%, var(--gray-100) 100%); }
+    @media (max-width: 640px) { .funnel-grid { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 <body>
@@ -286,7 +301,7 @@
       <div class="article-meta">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 23, 2026</span>
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> strategy</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> Strategy</span>
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span>
       </div>
     </div>
@@ -317,7 +332,10 @@
     <p>Partner with a local education provider that holds the required licenses. Your programs are offered through their licensed entity. BPP can facilitate this partnership and manage the advertising under their credentials.</p>
     <p><strong>Option 2: Market to study-abroad seekers</strong></p>
     <p>If your programs are delivered outside China (study abroad, overseas training), you face fewer restrictions. The ads target Chinese students interested in overseas education rather than domestic training. BPP has extensive experience in this category.</p>
-    <h3>Content Restrictions</h3>
+    <div class="callout callout-warning">
+  <strong>⚠️ Strict Compliance:</strong> Education is one of Baidu's most regulated categories. No "guaranteed results" claims, no misleading accreditation, student testimonials must be verifiable. Violation = immediate suspension.
+</div>
+<h3>Content Restrictions</h3>
     <p>Baidu's education ad review is particularly strict:</p>
     <ul>
       <li>No guarantee of employment or salary levels</li>
@@ -329,7 +347,12 @@
     <p>Violating these rules results in immediate ad suspension &mdash; and repeated violations can permanently ban the account.</p>
     <h2>Keyword Strategy for Education</h2>
     <p>Education keywords on Baidu have distinct patterns that differ from other industries:</p>
-    <h3>High-Intent Keywords (Conversion-Focused)</h3>
+    <div class="funnel-grid">
+  <div class="funnel-card top"><div class="f-label">🟡 Top</div><div class="f-name">Awareness</div><div class="f-cpc">CPC: ¥3–12</div><div class="f-cvr">CVR: 3–6%</div></div>
+  <div class="funnel-card mid"><div class="f-label">🔵 Mid</div><div class="f-name">Research</div><div class="f-cpc">CPC: ¥3–12</div><div class="f-cvr">CVR: 3–6%</div></div>
+  <div class="funnel-card bot"><div class="f-label">🟢 Bottom</div><div class="f-name">Conversion</div><div class="f-cpc">CPC: ¥5–25</div><div class="f-cvr">CVR: 8–15%</div></div>
+</div>
+<h3>High-Intent Keywords (Conversion-Focused)</h3>
     <p>These are the money keywords &mdash; users who are ready to enroll:</p>
     <ul>
       <li>"雅思培训报名" (IELTS training registration)</li>
@@ -414,7 +437,17 @@
     </ul>
     <p><strong>Ready to reach Chinese students and professionals?</strong></p>
     <p>Talk to the BPP team. We will assess your program's fit for the Chinese market, outline the compliance requirements, and show you what realistic lead volumes look like &mdash; no pressure, no fluff.</p>
-    <p>→ <a href="https://baidumarketing.com/contact">Contact BPP</a></p>
+    <div class="takeaway-box">
+  <h3>📋 Education PPC Quick Reference</h3>
+  <ul>
+    <li><strong>Key compliance first</strong> — Partner with a licensed Chinese institution or focus on study-abroad</li>
+    <li><strong>Target high-intent keywords</strong> — Registration queries convert at 8–15%</li>
+    <li><strong>Budget seasonally</strong> — Peak periods: Jan–Mar (spring semester), Jul–Sep (fall enrollment)</li>
+    <li><strong>No guarantee claims</strong> — Baidu strictly enforces against "pass rate" or "employment" guarantees</li>
+    <li><strong>Verify student testimonials</strong> — Baidu compliance will ask for proof</li>
+  </ul>
+</div>
+<p>→ <a href="https://baidumarketing.com/contact">Contact BPP</a></p>
 
       </article>
     </div>

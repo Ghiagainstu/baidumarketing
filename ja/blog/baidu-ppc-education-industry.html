@@ -243,6 +243,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .funnel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .funnel-card { border-radius: 12px; padding: 20px; border: 1px solid var(--gray-200); text-align: center; }
+    .funnel-card.top { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #FCD34D; }
+    .funnel-card.mid { background: linear-gradient(180deg, #EEF0FF 0%, #FFFFFF 100%); border-color: #A5B4FC; }
+    .funnel-card.bot { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #6EE7B7; }
+    .funnel-card .f-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+    .funnel-card .f-name { font-size: .9rem; font-weight: 700; margin-bottom: 4px; }
+    .funnel-card .f-cpc { font-size: .8rem; color: var(--gray-500); }
+    .funnel-card .f-cvr { font-size: .8rem; color: var(--blue); font-weight: 600; }
+    [data-theme="dark"] .funnel-card.top { background: linear-gradient(180deg, rgba(245,158,11,.08) 0%, var(--gray-100) 100%); }
+    [data-theme="dark"] .funnel-card.mid { background: linear-gradient(180deg, rgba(99,102,241,.08) 0%, var(--gray-100) 100%); }
+    [data-theme="dark"] .funnel-card.bot { background: linear-gradient(180deg, rgba(34,197,94,.08) 0%, var(--gray-100) 100%); }
+    @media (max-width: 640px) { .funnel-grid { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 </head>
@@ -376,7 +391,12 @@
 
     <p>百度の教育キーワードは他の業界とは異なるパターンを持ちます。</p>
 
-    <h3>高意図キーワード（コンバージョン重視）</h3>
+    <div class="funnel-grid">
+  <div class="funnel-card top"><div class="f-label">🟡 最上部</div><div class="f-name">認知</div><div class="f-cpc">CPC: ¥3〜12</div><div class="f-cvr">CVR: 3〜6%</div></div>
+  <div class="funnel-card mid"><div class="f-label">🔵 中間</div><div class="f-name">調査</div><div class="f-cpc">CPC: ¥3〜12</div><div class="f-cvr">CVR: 3〜6%</div></div>
+  <div class="funnel-card bot"><div class="f-label">🟢 下部</div><div class="f-name">転換</div><div class="f-cpc">CPC: ¥5〜25</div><div class="f-cvr">CVR: 8〜15%</div></div>
+</div>
+<h3>高意図キーワード（コンバージョン重視）</h3>
 
     <p>最も価値の高いキーワード——入学準備完了のユーザー：</p>
 
