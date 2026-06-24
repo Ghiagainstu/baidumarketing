@@ -234,8 +234,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .related-card h4 { color: var(--gray-800); }
     [data-theme="dark"] .related-card p { color: var(--gray-600); }
   
-/</em> ===== Added by standardize-blog-pages.js ===== */
-/</em> Stats Grid — Enhanced v2 */
+/* ===== Added by standardize-blog-pages.js ===== */
+/* Stats Grid — Enhanced v2 */
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; margin: 40px 0; }
 .stat-card {
   background: linear-gradient(180deg, #FFFFFF 0%, #EEF0FF 100%);
@@ -264,7 +264,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .stat-label { font-size: .92rem; font-weight: 700; color: #111827; margin-bottom: 5px; text-transform: uppercase; letter-spacing: .04em; }
 @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr; } }
 
-/</em> Comparison Table */
+/* Comparison Table */
 .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
 .comparison-table th { background: var(--blue); color: #fff; padding: 16px; text-align: left; font-weight: 600; font-size: .95rem; }
 .comparison-table td { padding: 14px 16px; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); font-size: .95rem; }
@@ -273,14 +273,14 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/</em> Callout — Enhanced */
+/* Callout — Enhanced */
 .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; border-left: 4px solid; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
-/</em> Takeaway — Enhanced */
+/* Takeaway — Enhanced */
 .takeaway-box {
   background: linear-gradient(180deg, #FFFFFF 0%, #EEF0FF 100%);
   border: 1.5px solid #E5E7EB; border-radius: 16px; padding: 28px 32px; margin: 32px 0;
@@ -298,24 +298,24 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
 .takeaway-box ul li strong { color: #111827; font-weight: 700; }
 
-/</em> Blockquote (article-content) */
+/* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
-/</em> Chart Container */
+/* Chart Container */
 .chart-container { margin: 40px 0; padding: 24px; background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow-x: auto; }
 .chart-container svg { display: block; width: 100%; height: auto; }
 .chart-title { text-align: center; font-size: .9rem; font-weight: 600; color: var(--gray-600); margin-bottom: 16px; }
 
-/</em> CTA Box */
+/* CTA Box */
 .cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
 .cta-box h2, .cta-box h3 { font-size: 2rem !important; font-weight: 700 !important; margin-bottom: 16px !important; color: #fff !important; }
 .cta-box p { font-size: 1.05rem !important; margin-bottom: 30px !important; opacity: .9; color: #fff !important; }
 .cta-btn { display: inline-block; background: #fff; color: var(--blue); padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: transform var(--transition-base), box-shadow var(--transition-base); }
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
-/</em> Related */
+/* Related */
 .related-section { padding: 60px 0; background: var(--gray-50); }
 .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 30px; }
 .related-card { background: #fff; border-radius: var(--radius); padding: 24px; border: 1px solid var(--gray-200); transition: transform var(--transition-base), box-shadow var(--transition-base); }
@@ -323,7 +323,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .related-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--gray-900); }
 .related-card p { font-size: .85rem; color: var(--gray-600); }
 
-/</em> Dark mode overrides for common components */
+/* Dark mode overrides for common components */
 [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
 [data-theme="dark"] .comparison-table { background: var(--gray-100); }
 [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
@@ -333,7 +333,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 [data-theme="dark"] .related-section { background: var(--gray-50); }
 [data-theme="dark"] .related-card { background: var(--gray-100); border-color: var(--gray-200); }
 [data-theme="dark"] .related-card h4 { color: #F9FAFB; }
-/</em> ===== End of supplemental CSS ===== */
+/* ===== End of supplemental CSS ===== */
 
       [data-theme="dark"] .article-content p { color: var(--gray-600); }
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
