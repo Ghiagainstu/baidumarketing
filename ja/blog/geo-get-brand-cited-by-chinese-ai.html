@@ -243,6 +243,15 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .platform-card { border-radius: 12px; padding: 20px; border: 1px solid var(--gray-200); background: var(--gray-50); }
+    .platform-card h4 { font-size: .9rem; font-weight: 700; margin-bottom: 8px; }
+    .platform-card p { font-size: .82rem; color: var(--gray-600); line-height: 1.5; }
+    .platform-card .model-icon { font-size: 1.5rem; margin-bottom: 6px; display: block; }
+    [data-theme="dark"] .platform-card { background: var(--gray-100); border-color: var(--gray-200); }
+    @media (max-width: 640px) { .platform-grid { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 </head>
@@ -276,7 +285,7 @@
       <div class="article-meta">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2026年6月23日</span>
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 11 min</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> strategy</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 戦略</span>
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro チーム</span>
       </div>
     </div>
@@ -296,7 +305,13 @@
 
     <p>最適化する前に、各モデルが実際に何を引用しているかを理解する必要があります。</p>
 
-    <h3>ERNIE（百度文心一言）</h3>
+    <div class="platform-grid">
+  <div class="platform-card"><span class="model-icon">🔵</span><h4>ERNIE（百度）</h4><p>Baiduエコシステムを優先。百科エントリーは他のどのソースよりも重みが高い。</p></div>
+  <div class="platform-card"><span class="model-icon">🟢</span><h4>DeepSeek</h4><p>学術論文、業界レポート、データ重視の分析を好む。技術的深さが重要。</p></div>
+  <div class="platform-card"><span class="model-icon">🟠</span><h4>Doubao（字節跳動）</h4><p>ニュースとソーシャルコンテンツから引用。中国メディアでの露出が可視性に直結。</p></div>
+</div>
+
+<h3>ERNIE（百度文心一言）</h3>
 
     <p>百度の旗艦AIアシスタント。百度のエコシステムと深く統合。</p>
 
