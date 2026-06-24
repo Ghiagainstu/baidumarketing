@@ -259,6 +259,28 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.doubao { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.12); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(16,185,129,.12); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(245,158,11,.12); border-color: #F59E0B; color: #FCD34D; }
+
+    .progress-timeline { margin: 28px 0; }
+    .tl-item { display: flex; gap: 16px; margin-bottom: 16px; position: relative; }
+    .tl-item::before { content: ''; position: absolute; left: 23px; top: 36px; bottom: -16px; width: 2px; background: var(--gray-200); }
+    .tl-item:last-child::before { display: none; }
+    .tl-dot { width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .75rem; flex-shrink: 0; }
+    .tl-content { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 16px 20px; flex: 1; }
+    .tl-content h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+    .tl-content p { font-size: .85rem !important; color: var(--gray-600) !important; line-height: 1.5 !important; margin-bottom: 0 !important; }
+    [data-theme="dark"] .tl-content { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .tl-content h4 { color: #F9FAFB; }
+    [data-theme="dark"] .tl-content p { color: #9CA3AF !important; }
+    @media (max-width: 640px) { .tl-dot { width: 36px; height: 36px; font-size: .6rem; } .tl-item { gap: 12px; } .tl-content { padding: 12px 14px; } }
+
   </style>
 </head>
 <body>
@@ -303,7 +325,7 @@
 
     <p>중국 AI 검색에서 브랜드 존재감을 모니터링하려면 수동적이고 체계적인 접근 방식이 필요합니다. 구체적인 방법을 설명합니다.</p>
 
-    <h2>월간 AI 인용 감사</h2>
+    <h2>📋 월간 AI 인용 감사</h2>
 
     <p>매월 한 번, 주요 중국 AI 모델에 업계에 관한 15개의 질문을 던집니다. 결과를 스프레드시트에 기록합니다.</p>
 
@@ -345,7 +367,17 @@
 
       <li>"중국에서 [제품]을 어디서 구매할 수 있나요?"</li>
 
-</ul>
+    </ul>
+
+    <div class="takeaway-box">
+      <h3>📋 핵심 요약</h3>
+      <ul>
+        <li>매월 동일한 15개 질문을 ERNIE·DeepSeek·Doubao에 제출</li>
+        <li>브랜드 언급·인용·경쟅사 출현을 스프레드시트로 추적</li>
+        <li>1단계: 업계 포지셐닝, 2단계: 경쟅사 비교, 3단계: 브랜드 인지도</li>
+        <li>일관성이 양보다 중요 — 월간 감사로 트렌드 파악</li>
+      </ul>
+    </div>
 
     <h3>테스트 실행 방법</h3>
 
@@ -371,6 +403,12 @@
 
     </table>
 
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🥇 ERNIE Bot (yiyan.baidu.com)</span>
+      <span class="platform-pill deepseek">🥈 DeepSeek (chat.deepseek.com)</span>
+      <span class="platform-pill doubao">🥉 Doubao (doubao.com)</span>
+    </div>
+
     <h3>추적 스프레드시트 템플릿</h3>
 
     <table class="comparison-table">
@@ -387,7 +425,7 @@
 
     </table>
 
-    <h2>보완적 모니터링 방법</h2>
+    <h2>🔍 보완적 모니터링 방법</h2>
 
     <h3>바이두 검색 콘솔</h3>
 
@@ -435,7 +473,7 @@
 
 </ul>
 
-    <h2>분기별 심층 감사</h2>
+    <h2>📊 분기별 심층 감사</h2>
 
     <p>3개월마다 더 깊은 분석을 실시합니다:</p>
 
@@ -451,7 +489,7 @@
 
     <p>각 플랫폼(백과, 즈후, 미디어, 웹사이트)에서의 존재감이 최신 상태이고 일관성이 있는지 확인합니다.</p>
 
-    <h2>좋은 GEO 진행 상황 지표</h2>
+    <h2>📈 좋은 GEO 진행 상황 지표</h2>
 
     <table class="comparison-table">
 
@@ -473,9 +511,11 @@
 
     </table>
 
-    <p><strong>중요 참고 사항:</strong> GEO 결과는 직선적이지 않습니다. 몇 달간 움직임이 없다가 주요 플랫폼 항목이 승인되거나 미디어 기사가 게시되면 갑자기 도약할 수 있습니다. 인내와 일관성이 필수적입니다.</p>
+    <div class="callout callout-insight">
+      <strong>💡 중요 참고 사항:</strong> GEO 결과는 직선적이지 않습니다. 몇 달간 움직임이 없다가 주요 플랫폼 항목이 승인되거나 미디어 기사가 게시되면 갑자기 도약할 수 있습니다. 인내와 일관성이 필수적입니다.
+    </div>
 
-    <h2>BPP가 클라이언트의 AI 가시성을 모니터링하는 방법</h2>
+    <h2>🤝 BPP가 클라이언트의 AI 가시성을 모니터링하는 방법</h2>
 
     <p>BPP에서는 AI 가시성 모니터링을 GEO 서비스의 일부로 포함하고 있습니다. 월간 인용 감사를 실시하고, 경쟁 포지셔닝을 추적하며, 시간에 따른 진행 상황을 보여주는 실행 가능한 보고서를 제공합니다.</p>
 

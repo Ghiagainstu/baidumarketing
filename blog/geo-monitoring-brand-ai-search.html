@@ -255,6 +255,39 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    /* === Visual Enhancements === */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.doubao { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.12); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(16,185,129,.12); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(245,158,11,.12); border-color: #F59E0B; color: #FCD34D; }
+
+    .progress-timeline { margin: 28px 0; }
+    .progress-timeline::after { content: ''; display: table; clear: both; }
+    .tl-item { display: flex; gap: 16px; margin-bottom: 16px; position: relative; }
+    .tl-item::before { content: ''; position: absolute; left: 23px; top: 36px; bottom: -16px; width: 2px; background: var(--gray-200); }
+    .tl-item:last-child::before { display: none; }
+    .tl-dot { width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .75rem; flex-shrink: 0; }
+    .tl-content { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 16px 20px; flex: 1; }
+    .tl-content h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+    .tl-content p { font-size: .85rem !important; color: var(--gray-600) !important; line-height: 1.5 !important; margin-bottom: 0 !important; }
+    [data-theme="dark"] .tl-content { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .tl-content h4 { color: #F9FAFB; }
+    [data-theme="dark"] .tl-content p { color: #9CA3AF !important; }
+    @media (max-width: 640px) { .tl-dot { width: 36px; height: 36px; font-size: .6rem; } .tl-item { gap: 12px; } .tl-content { padding: 12px 14px; } }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    [data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+    [data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+    [data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
   </style>
 </head>
 <body>
@@ -298,7 +331,7 @@
 
 <p>You have invested in GEO. You have built your Baidu Baike entry, established a Zhihu presence, and created Chinese-language content. But how do you know if it is working? Unlike PPC, there is no dashboard that shows "AI impressions" or "AI clicks."</p>
     <p>Monitoring your brand's presence in Chinese AI search requires a manual, systematic approach. Here is exactly how to do it.</p>
-    <h2>The Monthly AI Citation Audit</h2>
+    <h2>📋 The Monthly AI Citation Audit</h2>
     <p>Once per month, ask each major Chinese AI model the same set of 15 questions about your industry. Record the results in a spreadsheet.</p>
     <h3>The 15-Question Test Set</h3>
     <p>Create 15 questions that your target customers might ask. Structure them in three tiers:</p>
@@ -320,15 +353,29 @@
       <li>"Is [your brand] a good choice for [specific application]?"</li>
       <li>"Where can I buy [your product] in China?"</li>
     </ul>
+    <div class="takeaway-box">
+      <h3>📋 Key Takeaways</h3>
+      <ul>
+        <li>Run the same 15-question test set monthly across ERNIE, DeepSeek, and Doubao</li>
+        <li>Track brand mentions, citations, and competitor appearances in a spreadsheet</li>
+        <li>Tier 1 questions test industry positioning; Tier 2 tests competitive comparison; Tier 3 tests direct brand recognition</li>
+        <li>Consistency matters more than volume — monthly audits reveal trends over time</li>
+      </ul>
+    </div>
     <h3>How to Run the Test</h3>
     <table class="comparison-table">
   <thead><tr><th>Step</th><th>Action</th></tr></thead>
   <tbody><tr><td>1</td><td>Open ERNIE (yiyan.baidu.com) and ask each question</td></tr><tr><td>2</td><td>Screenshot the response</td></tr><tr><td>3</td><td>Record: Does your brand appear? Is it cited? Is it recommended?</td></tr><tr><td>4</td><td>Repeat for DeepSeek (chat.deepseek.com)</td></tr><tr><td>5</td><td>Repeat for Doubao (doubao.com)</td></tr><tr><td>6</td><td>Log all results in your tracking spreadsheet</td></tr></tbody></table>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🥇 ERNIE Bot (yiyan.baidu.com)</span>
+      <span class="platform-pill deepseek">🥈 DeepSeek (chat.deepseek.com)</span>
+      <span class="platform-pill doubao">🥉 Doubao (doubao.com)</span>
+    </div>
     <h3>Tracking Spreadsheet Template</h3>
     <table class="comparison-table">
   <thead><tr><th>Question</th><th>ERNIE: Brand Mentioned?</th><th>ERNIE: Cited?</th><th>DeepSeek: Mentioned?</th><th>DeepSeek: Cited?</th><th>Doubao: Mentioned?</th><th>Doubao: Cited?</th><th>Competitor Mentioned?</th></tr></thead>
   <tbody><tr><td>Q1</td><td>Yes/No</td><td>Yes/No</td><td>Yes/No</td><td>Yes/No</td><td>Yes/No</td><td>Yes/No</td><td>Which ones?</td></tr><tr><td>Q2</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
-    <h2>Supplementary Monitoring Methods</h2>
+    <h2>🔍 Supplementary Monitoring Methods</h2>
     <h3>Baidu Search Console</h3>
     <p>Track branded search volume on Baidu. If your GEO efforts are working, more people will search for your brand name over time.</p>
     <p><strong>Key metrics to monitor:</strong></p>
@@ -352,7 +399,7 @@
       <li>Use media monitoring tools (Meltwater, Brandwatch) if budget allows</li>
       <li>Manually search Chinese news portals monthly</li>
     </ul>
-    <h2>Quarterly Deep Audit</h2>
+    <h2>📊 Quarterly Deep Audit</h2>
     <p>Every 3 months, conduct a deeper analysis:</p>
     <p><strong>1. Competitive AI visibility comparison</strong></p>
     <p>Ask the 15 questions but frame them as "best [product category] brands" &mdash; see which brands appear and how often.</p>
@@ -360,12 +407,48 @@
     <p>Identify questions where competitors are cited but you are not. These are your content creation priorities.</p>
     <p><strong>3. Platform coverage review</strong></p>
     <p>Check whether your presence on each platform (Baike, Zhihu, media, website) is up-to-date and consistent.</p>
-    <h2>What Good GEO Progress Looks Like</h2>
-    <table class="comparison-table">
-  <thead><tr><th>Timeline</th><th>Expected Milestone</th></tr></thead>
-  <tbody><tr><td>Month 1–2</td><td>Baidu Baike entry live, Zhihu account established</td></tr><tr><td>Month 3–4</td><td>First AI mentions appearing (even if incomplete or inaccurate)</td></tr><tr><td>Month 5–6</td><td>Consistent brand mentions across 1–2 AI models</td></tr><tr><td>Month 7–9</td><td>Brand cited with data and source references</td></tr><tr><td>Month 10–12</td><td>Outperforming competitors in AI visibility for core topics</td></tr></tbody></table>
-    <p><strong>Important caveat:</strong> GEO results are not linear. You may see no movement for months, then a sudden jump when a key platform entry gets approved or a media article goes live. Patience and consistency are essential.</p>
-    <h2>How BPP Monitors AI Visibility for Clients</h2>
+    <h2>📈 What Good GEO Progress Looks Like</h2>
+    <div class="progress-timeline">
+      <div class="tl-item">
+        <div class="tl-dot">M1-2</div>
+        <div class="tl-content">
+          <h4>📄 Foundation Building</h4>
+          <p>Baidu Baike entry live, Zhihu account established, first Chinese content published</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">M3-4</div>
+        <div class="tl-content">
+          <h4>🔎 First Signals</h4>
+          <p>First AI mentions appearing — even if incomplete or inaccurate, this confirms the AI models are aware of your brand</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">M5-6</div>
+        <div class="tl-content">
+          <h4>📈 Consistent Presence</h4>
+          <p>Consistent brand mentions across 1–2 AI models. Your content strategy is gaining traction.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">M7-9</div>
+        <div class="tl-content">
+          <h4>📝 Authority Recognition</h4>
+          <p>Brand cited with data and source references. AI models treat your brand as an authoritative source.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">M10+</div>
+        <div class="tl-content">
+          <h4>🏆 Competitive Edge</h4>
+          <p>Outperforming competitors in AI visibility for core topics. Your brand is the AI-recommended choice.</p>
+        </div>
+      </div>
+    </div>
+    <div class="callout callout-insight">
+      <strong>💡 Important Caveat:</strong> GEO results are not linear. You may see no movement for months, then a sudden jump when a key platform entry gets approved or a media article goes live. Patience and consistency are essential.
+    </div>
+    <h2>🤝 How BPP Monitors AI Visibility for Clients</h2>
     <p>At BPP, we include AI visibility monitoring as part of our GEO service. We run monthly citation audits, track competitive positioning, and provide actionable reports showing your progress over time.</p>
     <p><strong>Want professional monitoring of your brand's AI visibility?</strong></p>
     <p>Talk to the BPP team. We will set up a monitoring framework for your brand and provide monthly reports on your AI citation performance &mdash; no pressure, no fluff.</p>

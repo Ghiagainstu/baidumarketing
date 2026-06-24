@@ -259,6 +259,28 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.doubao { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.12); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(16,185,129,.12); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(245,158,11,.12); border-color: #F59E0B; color: #FCD34D; }
+
+    .progress-timeline { margin: 28px 0; }
+    .tl-item { display: flex; gap: 16px; margin-bottom: 16px; position: relative; }
+    .tl-item::before { content: ''; position: absolute; left: 23px; top: 36px; bottom: -16px; width: 2px; background: var(--gray-200); }
+    .tl-item:last-child::before { display: none; }
+    .tl-dot { width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .75rem; flex-shrink: 0; }
+    .tl-content { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 16px 20px; flex: 1; }
+    .tl-content h4 { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+    .tl-content p { font-size: .85rem !important; color: var(--gray-600) !important; line-height: 1.5 !important; margin-bottom: 0 !important; }
+    [data-theme="dark"] .tl-content { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .tl-content h4 { color: #F9FAFB; }
+    [data-theme="dark"] .tl-content p { color: #9CA3AF !important; }
+    @media (max-width: 640px) { .tl-dot { width: 36px; height: 36px; font-size: .6rem; } .tl-item { gap: 12px; } .tl-content { padding: 12px 14px; } }
+
   </style>
 </head>
 <body>
@@ -303,7 +325,7 @@
 
     <p>中国のAI検索におけるブランドのプレゼンス監視には、手動で体系的なアプローチが必要です。以下にその具体的な方法を説明します。</p>
 
-    <h2>月次AI引用監査</h2>
+    <h2>📋 月次AI引用監査</h2>
 
     <p>月に一度、主要な中国AIモデルに業界に関する15の質問を投げかけます。結果をスプレッドシートに記録します。</p>
 
@@ -345,7 +367,17 @@
 
       <li>「中国のどこで[製品]を購入できますか？」</li>
 
-</ul>
+    </ul>
+
+    <div class="takeaway-box">
+      <h3>📋 重要ポイントまとめ</h3>
+      <ul>
+        <li>毎月同じ15の質問をERNIE・DeepSeek・Doubaoに投げかける</li>
+        <li>ブランド言及・引用・競合の出現をスプレッドシートで追跡</li>
+        <li>レベル1は業界ポジショニング、レベル2は競合比較、レベル3はブランド認知</li>
+        <li>一貫性が量より重要 — 月次監査でトレンドを把握する</li>
+      </ul>
+    </div>
 
     <h3>テストの実行方法</h3>
 
@@ -371,6 +403,12 @@
 
     </table>
 
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🥇 ERNIE Bot (yiyan.baidu.com)</span>
+      <span class="platform-pill deepseek">🥈 DeepSeek (chat.deepseek.com)</span>
+      <span class="platform-pill doubao">🥉 Doubao (doubao.com)</span>
+    </div>
+
     <h3>追跡スプレッドシートテンプレート</h3>
 
     <table class="comparison-table">
@@ -387,7 +425,7 @@
 
     </table>
 
-    <h2>補足的な監視方法</h2>
+    <h2>🔍 補足的な監視方法</h2>
 
     <h3>Baiduサーチコンソール</h3>
 
@@ -435,7 +473,7 @@
 
 </ul>
 
-    <h2>四半期詳細監査</h2>
+    <h2>📊 四半期詳細監査</h2>
 
     <p>3ヶ月ごとに、より深い分析を実施します：</p>
 
@@ -451,31 +489,51 @@
 
     <p>各プラットフォーム（百科、知乎、メディア、Webサイト）でのプレゼンスが最新かつ一貫しているかを確認します。</p>
 
-    <h2>良好なGEO進捗の指標</h2>
+    <h2>📈 良好なGEO進捗の指標</h2>
 
-    <table class="comparison-table">
+        <div class="progress-timeline">
+      <div class="tl-item">
+        <div class="tl-dot">1-2</div>
+        <div class="tl-content">
+          <h4>📄 基盤構築</h4>
+          <p>Baidu百科エントリー公開、Zhihuアカウント開設、初の中国語コンテンツ公開</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">3-4</div>
+        <div class="tl-content">
+          <h4>🔎 最初の兆候</h4>
+          <p>最初のAI言及が出現 — 不完全でもAIモデルがブランドを認識している証拠</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">5-6</div>
+        <div class="tl-content">
+          <h4>📈 安定した存在感</h4>
+          <p>1～2のAIモデルで一貫した言及。コンテンツ戦略が効果を発挽。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">7-9</div>
+        <div class="tl-content">
+          <h4>📝 権威の認知</h4>
+          <p>データとソース参照付きで引用。AIがブランドを権威として扱う。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">10+</div>
+        <div class="tl-content">
+          <h4>🏆 競争優位</h4>
+          <p>コアトピックで競合を上回るAI可視性。ブランドがAI推奨の選択肢に。</p>
+        </div>
+      </div>
+    </div>
 
-      <thead><tr><th>期間</th><th>期待されるマイルストーン</th></tr></thead>
+    <div class="callout callout-insight">
+      <strong>💡 重要な注意点:</strong> GEOの結果は直線的ではありません。数ヶ月間動きがなくても、主要なプラットフォームエントリーが承認されたり、メディア記事が公開されたりすると突然ジャンプすることがあります。忍耐と一貫性が不可欠です。
+    </div>
 
-      <tbody>
-
-        <tr><td>1〜2ヶ月目</td><td>Baidu百科エントリー公開、Zhihuアカウント確立</td></tr>
-
-        <tr><td>3〜4ヶ月目</td><td>最初のAI言及が出現（不完全・不正確でも）</td></tr>
-
-        <tr><td>5〜6ヶ月目</td><td>1〜2のAIモデルで一貫したブランド言及</td></tr>
-
-        <tr><td>7〜9ヶ月目</td><td>データとソース参照付きでブランドが引用される</td></tr>
-
-        <tr><td>10〜12ヶ月目</td><td>コアトピックのAI可視性で競合を上回る</td></tr>
-
-      </tbody>
-
-    </table>
-
-    <p><strong>重要な注意点:</strong> GEOの結果は直線的ではありません。数ヶ月間動きがなくても、主要なプラットフォームエントリーが承認されたり、メディア記事が公開されたりすると突然ジャンプすることがあります。忍耐と一貫性が不可欠です。</p>
-
-    <h2>BPPがクライアントのAI可視性を監視する方法</h2>
+    <h2>🤝 BPPがクライアントのAI可視性を監視する方法</h2>
 
     <p>BPPでは、AI可視性監視をGEOサービスの一部として提供しています。月次引用監査を実施し、競合ポジショニングを追跡し、時間の経過に伴う進捗を示す実用的なレポートを提供します。</p>
 
