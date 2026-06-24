@@ -255,6 +255,19 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .vs-header { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; margin: 28px 0; }
+    .vs-header .side { text-align: center; padding: 24px; border-radius: 12px; border: 1.5px solid; }
+    .vs-header .side.baidu { background: linear-gradient(180deg, #EEF0FF 0%, #FFFFFF 100%); border-color: #A5B4FC; }
+    .vs-header .side.douyin { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #FCD34D; }
+    .vs-header .side .icon { font-size: 2rem; margin-bottom: 6px; }
+    .vs-header .side .name { font-size: 1rem; font-weight: 800; }
+    .vs-header .side .desc { font-size: .8rem; color: var(--gray-500); margin-top: 4px; }
+    .vs-header .vs-badge { font-size: 1.3rem; font-weight: 800; color: var(--gray-400); }
+    [data-theme="dark"] .vs-header .side.baidu { background: linear-gradient(180deg, rgba(99,102,241,.08) 0%, var(--gray-100) 100%); }
+    [data-theme="dark"] .vs-header .side.douyin { background: linear-gradient(180deg, rgba(245,158,11,.08) 0%, var(--gray-100) 100%); }
+    @media (max-width: 640px) { .vs-header { grid-template-columns: 1fr; } .vs-header .vs-badge { display: none; } }
+
   </style>
 </head>
 <body>
@@ -286,7 +299,7 @@
       <div class="article-meta">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 23, 2026</span>
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> strategy</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> Strategy</span>
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span>
       </div>
     </div>
@@ -298,7 +311,12 @@
 
 <p>If you are planning to advertise in China, you have probably heard two names over and over: Baidu and Douyin. Baidu is China's dominant search engine. Douyin (the Chinese version of TikTok) is the country's most engaging short-video platform. Both offer advertising. Both reach hundreds of millions of users. But for B2B advertisers, they are fundamentally different tools.</p>
     <p>Choosing the wrong platform does not just waste budget &mdash; it wastes months of effort while your competitors move ahead. Here is a clear, honest comparison to help you decide.</p>
-    <h2>The Core Difference: Intent vs. Discovery</h2>
+    <div class="vs-header">
+  <div class="side baidu"><div class="icon">🔵</div><div class="name">Baidu</div><div class="desc">Search Intent<br>Users actively look for solutions</div></div>
+  <div class="vs-badge">VS</div>
+  <div class="side douyin"><div class="icon">🟠</div><div class="name">Douyin</div><div class="desc">Discovery Mode<br>Users passively watch content</div></div>
+</div>
+<h2>The Core Difference: Intent vs. Discovery</h2>
     <p>The single most important distinction:</p>
     <p><strong>Baidu = Search intent.</strong> Users are actively looking for something. They type a question or a product name into a search bar. Your ad appears when they are already interested.</p>
     <p><strong>Douyin = Discovery.</strong> Users are passively watching videos. Your ad interrupts their feed. You have 3–5 seconds to capture attention before they swipe away.</p>
@@ -336,7 +354,10 @@
       <li><strong>Content production cost:</strong> High &mdash; requires video production, editing, and ongoing content creation</li>
     </ul>
     <p>For B2B companies entering China, Baidu's content requirements are significantly easier to meet. A well-written Chinese landing page can drive results for months. Douyin requires constant new video content &mdash; and B2B product videos are inherently harder to make engaging than consumer content.</p>
-    <h2>When to Choose Baidu</h2>
+    <div class="callout callout-tip">
+  <strong>✅ Baidu is best when:</strong> You sell high-value B2B products, your buyers search before purchasing, you need leads not just awareness, your budget is limited, or you are entering China for the first time.
+</div>
+<h2>When to Choose Baidu</h2>
     <p>Baidu is the better choice when:</p>
     <ul>
       <li><strong>You sell high-value B2B products</strong> (manufacturing components, software, professional services)</li>
@@ -345,7 +366,10 @@
       <li><strong>You are entering China for the first time</strong> (search captures existing demand without needing brand awareness)</li>
       <li><strong>Your budget is limited</strong> (more efficient CPL, less content production cost)</li>
     </ul>
-    <h2>When to Choose Douyin</h2>
+    <div class="callout callout-warning">
+  <strong>🟠 Douyin makes sense when:</strong> You sell visually appealing B2C products, brand awareness is the primary goal, you have video production resources, or you are already established in China and want an awareness layer.
+</div>
+<h2>When to Choose Douyin</h2>
     <p>Douyin makes sense when:</p>
     <ul>
       <li><strong>You sell visually appealing B2C products</strong> (fashion, food, cosmetics, electronics)</li>
