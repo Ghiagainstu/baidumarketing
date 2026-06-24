@@ -211,7 +211,9 @@
     [data-theme="dark"] .logo-pro { color: #818CF8; }
     .nav-logo svg { flex-shrink: 0; }
     .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--gray-600); }
-    html[lang="ja"] .nav-links { gap: 20px; font-size: .82rem; }
+    html[lang="ja"] .nav-links { gap: 12px; font-size: .8rem; }
+    html[lang="ja"] .nav-links a { white-space: nowrap; }
+    html[lang="ja"] .nav-cta { font-size: .8rem; padding: 8px 16px; }
     .nav-links a { position: relative; transition: color var(--transition-base); }
     .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--blue); border-radius: 1px; transition: width var(--transition-smooth), left var(--transition-smooth); }
     .nav-links a:hover { color: var(--blue); }
