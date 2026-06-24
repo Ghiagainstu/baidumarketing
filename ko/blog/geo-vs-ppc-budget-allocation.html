@@ -259,6 +259,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .budget-timeline { display: flex; justify-content: space-between; gap: 12px; margin: 32px 0; flex-wrap: wrap; }
+    .budget-phase { flex: 1; min-width: 160px; background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); position: relative; }
+    .budget-phase .phase-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--gray-400); margin-bottom: 4px; }
+    .budget-phase .phase-title { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 10px; }
+    .budget-phase .phase-split { font-size: 1.1rem; font-weight: 800; color: var(--blue); }
+    .budget-phase .phase-split .ppc { color: var(--blue); }
+    .budget-phase .phase-split .geo { color: #7C3AED; }
+    .budget-phase .phase-bar { height: 6px; border-radius: 3px; background: var(--gray-200); margin-top: 10px; overflow: hidden; display: flex; }
+    .budget-phase .phase-bar .bar-ppc { height: 100%; background: var(--blue); border-radius: 3px 0 0 3px; }
+    .budget-phase .phase-bar .bar-geo { height: 100%; background: #7C3AED; border-radius: 0 3px 3px 0; }
+    [data-theme="dark"] .budget-phase { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .budget-phase .phase-title { color: var(--gray-700); }
+    @media (max-width: 640px) { .budget-timeline { flex-direction: column; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,14 @@
 
     <p>다음은 중국의 해외 광고주에게 실제로 효과가 있는 것에 기반한 실용적 의사결정 프레임워크입니다.</p>
 
-    <h2>근본적 트레이드오프</h2>
+    <div class="budget-timeline">
+  <div class="budget-phase"><div class="phase-label">1단계</div><div class="phase-title">시장 진입</div><div class="phase-split"><span class="ppc">90%</span> / <span class="geo">10%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:90%"></div><div class="bar-geo" style="width:10%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">1~6개월 차</div></div>
+  <div class="budget-phase"><div class="phase-label">2단계</div><div class="phase-title">성장</div><div class="phase-split"><span class="ppc">70%</span> / <span class="geo">30%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:70%"></div><div class="bar-geo" style="width:30%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">7~12개월 차</div></div>
+  <div class="budget-phase"><div class="phase-label">3단계</div><div class="phase-title">확립</div><div class="phase-split"><span class="ppc">50%</span> / <span class="geo">50%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:50%"></div><div class="bar-geo" style="width:50%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">13~24개월 차</div></div>
+  <div class="budget-phase"><div class="phase-label">4단계</div><div class="phase-title">시장 리더</div><div class="phase-split"><span class="ppc">40%</span> / <span class="geo">60%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:40%"></div><div class="bar-geo" style="width:60%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">24개월 차 이후</div></div>
+</div>
+
+<h2>근본적 트레이드오프</h2>
 
     <table class="comparison-table">
 
@@ -490,7 +512,10 @@
 
     <p>이 시나리오에서 PPC가 전환 크레딧을 받습니다. 그러나 GEO가 초기 인지를 창출했습니다. 이것이 PPC 지표만으로 GEO를 측정할 수 없는 이유입니다 — 전체 여정을 추적해야 합니다.</p>
 
-    <h2>PPC에서 GEO로 예산 전환 시점</h2>
+    <div class="callout callout-tip">
+  <strong>💡 핵심 인사이트：</strong>PPC는 기존 수요를 포착합니다. GEO는 새로운 수요를 창출합니다. 둘은 보완 관계이며 대체 관계가 아닙니다. PPC로 시작하고, 시장을 증명한 다음, GEO를 덧입히세요.
+</div>
+<h2>PPC에서 GEO로 예산 전환 시점</h2>
 
     <p>GEO 투자를 늘려야 할 명확한 시그널:</p>
 
@@ -510,7 +535,15 @@
 
     <p>PPC 캠페인을 최적화했고 한계 수확 체감에 도달했다면, 추가 1달러는 GEO에 더 효과적으로 사용됩니다.</p>
 
-    <h2>흔한 실수</h2>
+    <div class="takeaway-box">
+  <h3>📋 피해야 할 3가지 실수</h3>
+  <ul>
+    <li><strong>GEO에 너무 일찍 올인</strong> — PPC를 기준 리드 소스로 유지하세요</li>
+    <li><strong>GEO를 완전히 무시</strong> — CPC 상승에 취약해집니다</li>
+    <li><strong>GEO가 PPC를 대체할 것이라 기대</strong> — 둘은 서로 다른 목적을 수행합니다</li>
+  </ul>
+</div>
+<h2>흔한 실수</h2>
 
     <p><strong>실수 1: GEO에 너무 일찍 올인</strong></p>
 

@@ -255,6 +255,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .budget-timeline { display: flex; justify-content: space-between; gap: 12px; margin: 32px 0; flex-wrap: wrap; }
+    .budget-phase { flex: 1; min-width: 160px; background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); position: relative; }
+    .budget-phase .phase-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--gray-400); margin-bottom: 4px; }
+    .budget-phase .phase-title { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 10px; }
+    .budget-phase .phase-split { font-size: 1.1rem; font-weight: 800; color: var(--blue); }
+    .budget-phase .phase-split .ppc { color: var(--blue); }
+    .budget-phase .phase-split .geo { color: #7C3AED; }
+    .budget-phase .phase-bar { height: 6px; border-radius: 3px; background: var(--gray-200); margin-top: 10px; overflow: hidden; display: flex; }
+    .budget-phase .phase-bar .bar-ppc { height: 100%; background: var(--blue); border-radius: 3px 0 0 3px; }
+    .budget-phase .phase-bar .bar-geo { height: 100%; background: #7C3AED; border-radius: 0 3px 3px 0; }
+    [data-theme="dark"] .budget-phase { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .budget-phase .phase-title { color: var(--gray-700); }
+    @media (max-width: 640px) { .budget-timeline { flex-direction: column; } }
+
   </style>
 </head>
 <body>
@@ -299,7 +314,14 @@
 <p>You have a fixed marketing budget for China. You know PPC works &mdash; it generates leads from day one. But now there is a new option: GEO (Generative Engine Optimization). Getting your brand cited by Chinese AI models like ERNIE, DeepSeek, and Doubao. The problem: GEO takes months to build and does not have a clear ROI formula yet.</p>
     <p>So how much should you invest in each? And when?</p>
     <p>Here is a practical framework for making that decision &mdash; based on what we see working for international advertisers in China.</p>
-    <h2>The Fundamental Trade-Off</h2>
+    <div class="budget-timeline">
+  <div class="budget-phase"><div class="phase-label">Phase 1</div><div class="phase-title">Market Entry</div><div class="phase-split"><span class="ppc">90%</span> / <span class="geo">10%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:90%"></div><div class="bar-geo" style="width:10%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">Months 1–6</div></div>
+  <div class="budget-phase"><div class="phase-label">Phase 2</div><div class="phase-title">Growth</div><div class="phase-split"><span class="ppc">70%</span> / <span class="geo">30%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:70%"></div><div class="bar-geo" style="width:30%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">Months 7–12</div></div>
+  <div class="budget-phase"><div class="phase-label">Phase 3</div><div class="phase-title">Established</div><div class="phase-split"><span class="ppc">50%</span> / <span class="geo">50%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:50%"></div><div class="bar-geo" style="width:50%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">Months 13–24</div></div>
+  <div class="budget-phase"><div class="phase-label">Phase 4</div><div class="phase-title">Market Leader</div><div class="phase-split"><span class="ppc">40%</span> / <span class="geo">60%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:40%"></div><div class="bar-geo" style="width:60%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">Month 24+</div></div>
+</div>
+
+<h2>The Fundamental Trade-Off</h2>
     <table class="comparison-table">
   <thead><tr><th>Factor</th><th>PPC (Paid Search)</th><th>GEO (AI Visibility)</th></tr></thead>
   <tbody><tr><td>Speed to results</td><td>Immediate (day 1)</td><td>Slow (3–6 months)</td></tr><tr><td>Cost predictability</td><td>High &mdash; pay per click</td><td>Low &mdash; investment before returns</td></tr><tr><td>Measurability</td><td>Excellent &mdash; every click tracked</td><td>Poor &mdash; no built-in analytics</td></tr><tr><td>Compounding effect</td><td>None &mdash; stops when you stop paying</td><td>High &mdash; builds over time</td></tr><tr><td>Competitive moat</td><td>Low &mdash; competitors can outbid you</td><td>High &mdash; authority is hard to replicate</td></tr><tr><td>Lead quality</td><td>High &mdash; search intent</td><td>Variable &mdash; depends on citation context</td></tr></tbody></table>
@@ -354,7 +376,10 @@
       <li>Fill out a form → become a lead</li>
     </ol>
     <p>In this scenario, PPC gets the conversion credit. But GEO created the initial awareness. This is why you cannot measure GEO with PPC metrics alone &mdash; you need to track the full journey.</p>
-    <h2>When to Shift Budget from PPC to GEO</h2>
+    <div class="callout callout-tip">
+  <strong>💡 Key Insight:</strong> PPC captures existing demand. GEO creates new demand. They complement each other — they do not replace each other. Start with PPC, prove the market, then layer in GEO.
+</div>
+<h2>When to Shift Budget from PPC to GEO</h2>
     <p>Here are clear signals that it is time to increase your GEO investment:</p>
     <p><strong>Signal 1: PPC costs are rising</strong></p>
     <p>If your average CPC has increased 20%+ over 6 months while conversion rates are stable, the market is getting more competitive. GEO offers a way to generate visibility without paying per click.</p>
@@ -364,7 +389,15 @@
     <p>If more people are searching for your brand name on Baidu, your awareness is building. GEO can amplify this by ensuring AI models also recommend you.</p>
     <p><strong>Signal 4: Your PPC campaigns are mature</strong></p>
     <p>If you have optimized your PPC campaigns and are hitting diminishing returns, the marginal dollar is better spent on GEO.</p>
-    <h2>Common Mistakes</h2>
+    <div class="takeaway-box">
+  <h3>📋 The 3 Mistakes to Avoid</h3>
+  <ul>
+    <li><strong>Going all-in on GEO too early</strong> — Maintain PPC as your baseline lead source</li>
+    <li><strong>Ignoring GEO entirely</strong> — You are vulnerable to rising CPCs without it</li>
+    <li><strong>Expecting GEO to replace PPC</strong> — They serve different purposes</li>
+  </ul>
+</div>
+<h2>Common Mistakes</h2>
     <p><strong>Mistake 1: Going all-in on GEO too early</strong></p>
     <p>GEO takes months. If you shift budget away from PPC before GEO produces results, you will have a revenue gap. Always maintain PPC as your baseline lead source.</p>
     <p><strong>Mistake 2: Ignoring GEO entirely</strong></p>

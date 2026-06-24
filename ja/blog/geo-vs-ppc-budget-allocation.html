@@ -259,6 +259,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .budget-timeline { display: flex; justify-content: space-between; gap: 12px; margin: 32px 0; flex-wrap: wrap; }
+    .budget-phase { flex: 1; min-width: 160px; background: var(--gray-50); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--gray-200); position: relative; }
+    .budget-phase .phase-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--gray-400); margin-bottom: 4px; }
+    .budget-phase .phase-title { font-size: .95rem; font-weight: 700; color: var(--gray-800); margin-bottom: 10px; }
+    .budget-phase .phase-split { font-size: 1.1rem; font-weight: 800; color: var(--blue); }
+    .budget-phase .phase-split .ppc { color: var(--blue); }
+    .budget-phase .phase-split .geo { color: #7C3AED; }
+    .budget-phase .phase-bar { height: 6px; border-radius: 3px; background: var(--gray-200); margin-top: 10px; overflow: hidden; display: flex; }
+    .budget-phase .phase-bar .bar-ppc { height: 100%; background: var(--blue); border-radius: 3px 0 0 3px; }
+    .budget-phase .phase-bar .bar-geo { height: 100%; background: #7C3AED; border-radius: 0 3px 3px 0; }
+    [data-theme="dark"] .budget-phase { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .budget-phase .phase-title { color: var(--gray-700); }
+    @media (max-width: 640px) { .budget-timeline { flex-direction: column; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,14 @@
 
     <p>以下は、中国の海外広告主で実際に機能していることに基づいた、実践的な意思決定フレームワークです。</p>
 
-    <h2>基本的なトレードオフ</h2>
+    <div class="budget-timeline">
+  <div class="budget-phase"><div class="phase-label">フェーズ1</div><div class="phase-title">市場参入</div><div class="phase-split"><span class="ppc">90%</span> / <span class="geo">10%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:90%"></div><div class="bar-geo" style="width:10%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">1〜6ヶ月目</div></div>
+  <div class="budget-phase"><div class="phase-label">フェーズ2</div><div class="phase-title">成長</div><div class="phase-split"><span class="ppc">70%</span> / <span class="geo">30%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:70%"></div><div class="bar-geo" style="width:30%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">7〜12ヶ月目</div></div>
+  <div class="budget-phase"><div class="phase-label">フェーズ3</div><div class="phase-title">確立</div><div class="phase-split"><span class="ppc">50%</span> / <span class="geo">50%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:50%"></div><div class="bar-geo" style="width:50%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">13〜24ヶ月目</div></div>
+  <div class="budget-phase"><div class="phase-label">フェーズ4</div><div class="phase-title">リーダー</div><div class="phase-split"><span class="ppc">40%</span> / <span class="geo">60%</span></div><div class="phase-bar"><div class="bar-ppc" style="width:40%"></div><div class="bar-geo" style="width:60%"></div></div><div style="font-size:.75rem;color:var(--gray-400);margin-top:6px">24ヶ月目以降</div></div>
+</div>
+
+<h2>基本的なトレードオフ</h2>
 
     <table class="comparison-table">
 
@@ -492,7 +514,10 @@
 
     <p>このシナリオでは、PPCがコンバージョンクレジットを獲得します。しかしGEOが最初の認知を創出しました。これが、PPCの指標だけでGEOを測定してはいけない理由です——完全なジャーニーを追跡する必要があります。</p>
 
-    <h2>PPCからGEOへ予算をシフトするタイミング</h2>
+    <div class="callout callout-tip">
+  <strong>💡 重要な洞察：</strong>PPCは既存の需要を捕捉します。GEOは新たな需要を創出します。両者は補完関係であり、代替関係ではありません。PPCで始め、市場を証明し、GEOを重ねていきましょう。
+</div>
+<h2>PPCからGEOへ予算をシフトするタイミング</h2>
 
     <p>GEO投資を増やす明確なシグナル：</p>
 
@@ -512,7 +537,15 @@
 
     <p>PPCキャンペーンを最適化し収穫逓減に達している場合、限界費用の1ドルはGEOにより効果的に使われます。</p>
 
-    <h2>よくある間違い</h2>
+    <div class="takeaway-box">
+  <h3>📋 回避すべき3つの間違い</h3>
+  <ul>
+    <li><strong>GEOに早すぎる全力投球</strong> — PPCをベースラインリード源として維持</li>
+    <li><strong>GEOを完全に無視</strong> — CPC上昇に対して脆弱になる</li>
+    <li><strong>GEOがPPCを代替すると期待</strong> — 両者は異なる目的を果たす</li>
+  </ul>
+</div>
+<h2>よくある間違い</h2>
 
     <p><strong>間違い1: GEOに早すぎる段階で全力投球</strong></p>
 
