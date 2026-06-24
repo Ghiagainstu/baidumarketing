@@ -255,6 +255,48 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.ernie { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.doubao { background: #FEF3C7; border-color: #FCD34D; color: #92400E; }
+    [data-theme="dark"] .platform-pill.ernie { background: rgba(99,102,241,.12); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(16,185,129,.12); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(245,158,11,.12); border-color: #F59E0B; color: #FCD34D; }
+
+    .checklist-card { background: linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%); border: 1.5px solid #BBF7D0; border-radius: 16px; padding: 24px 28px; margin: 24px 0; border-left: 4px solid #22C55E; }
+    .checklist-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 14px; color: #16A34A; }
+    .checklist-card ul { list-style: none !important; padding-left: 0 !important; margin: 0; }
+    .checklist-card ul li { font-size: .9rem; line-height: 1.7; padding: 4px 0 4px 28px; position: relative; color: #374151; }
+    .checklist-card ul li::before { content: '☐'; position: absolute; left: 0; color: #22C55E; font-weight: 700; font-size: 1rem; }
+    [data-theme="dark"] .checklist-card { background: linear-gradient(180deg, #111827 0%, #052E16 100%); border-color: #166534; }
+    [data-theme="dark"] .checklist-card h3 { color: #4ADE80; }
+    [data-theme="dark"] .checklist-card ul li { color: #D1D5DB; }
+    [data-theme="dark"] .checklist-card ul li::before { color: #4ADE80; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    [data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+    [data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+    [data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin: 28px 0; }
+    .stat-card { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 16px; padding: 24px 16px; text-align: center; transition: transform .2s, box-shadow .2s; }
+    .stat-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(41,50,225,.15); }
+    .stat-card:nth-child(1) { border-top: 4px solid #2932E1; }
+    .stat-card:nth-child(2) { border-top: 4px solid #4F46E5; }
+    .stat-card:nth-child(3) { border-top: 4px solid #7C3AED; }
+    .stat-card:nth-child(4) { border-top: 4px solid #2563EB; }
+    .stat-number { font-size: 1.8rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
+    .stat-label { font-size: .82rem; color: var(--gray-600); margin-top: 6px; }
+    [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
+    [data-theme="dark"] .stat-card:hover { box-shadow: 0 12px 24px rgba(0,0,0,.3); }
+
+    @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
   </style>
 </head>
 <body>
@@ -298,7 +340,7 @@
 
 <p>Not all content gets cited by AI. Some content gets ignored completely. The difference is not quality alone &mdash; it is structure, specificity, and format. Chinese AI models have preferences, and understanding those preferences is the key to getting quoted.</p>
     <p>This playbook shows you exactly what kind of content to create, how to structure it, and how to optimize it for each Chinese AI model.</p>
-    <h2>The 5 Content Formats AI Models Prefer</h2>
+    <h2>📝 The 5 Content Formats AI Models Prefer</h2>
     <h3>1. Comparison Tables</h3>
     <p>AI models love tables. They are easy to parse, easy to quote, and provide clear, structured information.</p>
     <p><strong>Example format:</strong></p>
@@ -338,11 +380,20 @@
     <p>Step 3: [Action] &mdash; [Brief explanation]</p>
     <p>```</p>
     <p><strong>Best for:</strong> How-to guides, setup procedures, decision frameworks, troubleshooting processes.</p>
+        <div class="takeaway-box">
+      <h3>📋 Key Takeaways</h3>
+      <ul>
+        <li>AI models prefer structured, data-rich content over generic marketing language</li>
+        <li>Five winning formats: comparison tables, data-rich paragraphs, FAQs, step-by-step guides, authoritative definitions</li>
+        <li>Each Chinese AI model (ERNIE, DeepSeek, Doubao) has different content preferences</li>
+        <li>Localization beats translation — native Chinese content gets cited more</li>
+      </ul>
+    </div>
     <h3>5. Authoritative Definitions</h3>
     <p>Clear, concise definitions of industry terms are frequently cited by AI models &mdash; especially when they are the best available explanation.</p>
     <p><strong>Example:</strong> "oCPC (Optimized Cost Per Click) is Baidu's automated bidding model that adjusts bids in real time based on predicted conversion probability. It differs from manual CPC in that the algorithm, not the advertiser, determines the optimal bid for each auction."</p>
     <p><strong>Key requirement:</strong> The definition must be precise, factual, and free of marketing language. AI models prefer neutral, encyclopedic tone.</p>
-    <h2>What Each Chinese AI Model Prefers</h2>
+    <h2>🤖 What Each Chinese AI Model Prefers</h2>
     <h3>ERNIE (百度文心一言)</h3>
     <p><strong>Prefers:</strong> Content from Baidu's ecosystem (Baike, Zhidao, Wenku), structured data, Chinese-language content, verified sources.</p>
     <p><strong>Optimize for ERNIE by:</strong></p>
@@ -370,7 +421,7 @@
       <li>Using conversational but authoritative tone</li>
       <li>Including social proof (user counts, client logos, testimonials)</li>
     </ul>
-    <h2>The GEO Writing Checklist</h2>
+    <h2>✅ The GEO Writing Checklist</h2>
     <p>Before publishing any content for GEO purposes, verify:</p>
     <ul>
       <li>[ ] Content directly answers a question your target audience asks</li>
@@ -383,7 +434,10 @@
       <li>[ ] Published on a platform Chinese AI models index (Zhihu, your China-accessible site, Baike)</li>
       <li>[ ] Competitor-neutral in tone (factual comparisons, not bashing)</li>
     </ul>
-    <h2>Content Localization vs Translation</h2>
+        <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> AI models can detect translated content and give it lower citation priority. Localized content — written natively for Chinese readers — performs significantly better. Never simply machine-translate your English content and call it GEO.
+    </div>
+    <h2>🌐 Content Localization vs Translation</h2>
     <p>A critical distinction for GEO:</p>
     <p><strong>Translation</strong> = converting words from one language to another.</p>
     <p><strong>Localization</strong> = adapting content for the target audience's context, culture, and search behavior.</p>
@@ -394,7 +448,7 @@
     <p>"根据2025年行业测试数据，本产品的加工精度达到±0.002mm，在同类产品中排名前三。"</p>
     <p>(Translation: "According to 2025 industry testing data, this product achieves ±0.002mm machining accuracy, ranking in the top three among comparable products.")</p>
     <p>The localized version includes a data point, a source reference, and a specific claim &mdash; exactly what AI models prefer to cite.</p>
-    <h2>How BPP Creates GEO Content</h2>
+    <h2>🤝 How BPP Creates GEO Content</h2>
     <p>At BPP, we create Chinese-language content specifically designed for AI citation. Our content team includes native Chinese writers with industry expertise who understand what AI models prefer to quote.</p>
     <p><strong>Want content that Chinese AI will cite?</strong></p>
     <p>Talk to the BPP team. We will identify the highest-impact content opportunities for your brand and create content designed to be quoted by ERNIE, DeepSeek, and Doubao &mdash; no pressure, no fluff.</p>
