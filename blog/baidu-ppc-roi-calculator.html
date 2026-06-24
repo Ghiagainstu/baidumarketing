@@ -255,6 +255,15 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .roi-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .roi-step { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; text-align: center; }
+    .roi-step .step-num { display: inline-flex; width: 32px; height: 32px; border-radius: 50%; background: var(--blue); color: #fff; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; margin-bottom: 8px; }
+    .roi-step h4 { font-size: .85rem; font-weight: 700; margin-bottom: 4px; }
+    .roi-step p { font-size: .78rem; color: var(--gray-500); line-height: 1.4; }
+    [data-theme="dark"] .roi-step { background: var(--gray-100); border-color: var(--gray-200); }
+    @media (max-width: 640px) { .roi-steps { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 <body>
@@ -286,7 +295,7 @@
       <div class="article-meta">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 23, 2026</span>
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 7 min</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> strategy</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> Strategy</span>
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> By Baidu PPC Pro Team</span>
       </div>
     </div>
@@ -299,13 +308,24 @@
 <p>Before you spend a single yuan on Baidu, you need to know one thing: what does success look like?</p>
     <p>Most international advertisers jump into Baidu with a budget in mind but no clear framework for measuring return. They know they want "leads" or "sales" &mdash; but they have not done the math to figure out how many leads they need, what each lead should cost, or when the campaign has crossed the line from investment into waste.</p>
     <p>This guide gives you a concrete framework for calculating Baidu PPC ROI before, during, and after your campaigns.</p>
-    <h2>The Core ROI Formula</h2>
+    <div class="callout callout-insight">
+  <strong>🔢 The Fundamental Formula:</strong> ROI = (Revenue − Cost) ÷ Cost × 100%. But this only works after the fact. To plan ahead, you work backward from your target revenue — using close rates, CPL benchmarks, and deal values.
+</div>
+<h2>The Core ROI Formula</h2>
     <p>The basic formula is the same as any PPC channel:</p>
     <p><strong>ROI = (Revenue from Baidu Ads − Cost of Baidu Ads) ÷ Cost of Baidu Ads × 100%</strong></p>
     <p>If you spend ¥10,000 on Baidu ads and generate ¥45,000 in revenue, your ROI is 350%.</p>
     <p>But this formula is only useful after the fact. To plan campaigns and set budgets, you need to work backward from your business goals.</p>
     <h2>Working Backward: The Goal-Based Budget Model</h2>
-    <h3>Step 1: Define Your Target Revenue</h3>
+    <div class="roi-steps">
+  <div class="roi-step"><div class="step-num">1</div><h4>Target Revenue</h4><p>How much monthly revenue do you need from Baidu?</p></div>
+  <div class="roi-step"><div class="step-num">2</div><h4>Close Rate</h4><p>What % of leads become paying customers?</p></div>
+  <div class="roi-step"><div class="step-num">3</div><h4>Required Leads</h4><p>Target ÷ Deal Value ÷ Close Rate</p></div>
+  <div class="roi-step"><div class="step-num">4</div><h4>Cost Per Lead</h4><p>Industry-specific CPL estimate</p></div>
+  <div class="roi-step"><div class="step-num">5</div><h4>Monthly Budget</h4><p>Required Leads × CPL</p></div>
+  <div class="roi-step"><div class="step-num">6</div><h4>Expected ROI</h4><p>(Revenue − Spend) ÷ Spend × 100%</p></div>
+</div>
+<h3>Step 1: Define Your Target Revenue</h3>
     <p>How much revenue do you want Baidu to generate per month? Start with a realistic target based on your market size and capacity.</p>
     <p><strong>Example:</strong> A B2B manufacturer wants ¥200,000 (~$27,600 USD) in monthly revenue from Baidu leads.</p>
     <h3>Step 2: Determine Your Close Rate</h3>
@@ -374,7 +394,17 @@
   <thead><tr><th>Metric</th><th>Value</th></tr></thead>
   <tbody><tr><td>Target trials</td><td>50/month</td></tr><tr><td>Expected CPC</td><td>¥8 (~$1.10)</td></tr><tr><td>Expected conversion rate</td><td>6%</td></tr><tr><td>Expected CPL</td><td>¥133 (~$18)</td></tr><tr><td>Monthly budget</td><td>¥6,650 (~$917)</td></tr><tr><td>Expected paid conversions</td><td>10/month</td></tr><tr><td>Monthly revenue</td><td>¥150,000 (~$20,700)</td></tr><tr><td>ROAS</td><td>22.6:1</td></tr></tbody></table>
     <p><strong>Key insight:</strong> The SaaS company's biggest risk is not the ad spend &mdash; it is the trial-to-paid conversion rate. If that drops from 20% to 10%, the ROAS halves. Optimizing the product trial experience matters as much as optimizing the ad campaigns.</p>
-    <h2>Common Mistakes in ROI Calculation</h2>
+    <div class="takeaway-box">
+  <h3>📋 5 Common ROI Mistakes to Avoid</h3>
+  <ul>
+    <li><strong>Using Google Ads benchmarks</strong> — Baidu CPCs are lower, so Google data overestimates costs</li>
+    <li><strong>Ignoring the learning period</strong> — Budget 1.5–2x for the first 2–3 months</li>
+    <li><strong>Counting all leads equally</strong> — A procurement manager inquiry is worth 10x more than a student download</li>
+    <li><strong>Forgetting sales cycle length</strong> — 30–90 day cycles mean Month 1 ROI will be negative</li>
+    <li><strong>Not accounting for agency fees</strong> — Include management costs in total ROI math</li>
+  </ul>
+</div>
+<h2>Common Mistakes in ROI Calculation</h2>
     <h3>Mistake 1: Using Google Ads benchmarks</h3>
     <p>Baidu CPCs are generally lower than Google Ads for B2B keywords in China. Using Google benchmarks will overestimate your costs and underestimate your potential returns.</p>
     <h3>Mistake 2: Ignoring the learning period</h3>

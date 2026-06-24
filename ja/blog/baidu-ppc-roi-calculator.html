@@ -243,6 +243,15 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .roi-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .roi-step { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; text-align: center; }
+    .roi-step .step-num { display: inline-flex; width: 32px; height: 32px; border-radius: 50%; background: var(--blue); color: #fff; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; margin-bottom: 8px; }
+    .roi-step h4 { font-size: .85rem; font-weight: 700; margin-bottom: 4px; }
+    .roi-step p { font-size: .78rem; color: var(--gray-500); line-height: 1.4; }
+    [data-theme="dark"] .roi-step { background: var(--gray-100); border-color: var(--gray-200); }
+    @media (max-width: 640px) { .roi-steps { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 </head>
@@ -292,7 +301,10 @@
 
     <p>このガイドでは、百度PPCキャンペーンの前・中・後に使える具体的なROI計算フレームワークを提供します。</p>
 
-    <h2>コアROI計算式</h2>
+    <div class="callout callout-insight">
+  <strong>🔢 基本計算式：</strong>ROI = (収益−費用) ÷ 費用 × 100%。ただしこれは事後的にしか機能しません。事前に計画するには、目標収益から逆算します——成約率、CPLベンチマーク、案件単価を使用します。
+</div>
+<h2>コアROI計算式</h2>
 
     <p>基本的な計算式は他のPPCチャネルと同じです。</p>
 
