@@ -413,8 +413,8 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     result = result.replace('{{SLUG}}', slug)
 
     # 1b. Fix hreflang tags for all languages
-    # Remove existing hreflang tags
-    result = re.sub(r'\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*" />\s*\n?', '\n', result)
+    # Remove existing hreflang tags (both /> and > variants)
+    result = re.sub(r'\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*/?>\s*\n?', '\n', result)
     # Add correct hreflang tags
     hreflang_block = f'''  <link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/{slug}" />
   <link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/{slug}" />
@@ -583,12 +583,29 @@ def main():
 
     base = os.path.dirname(os.path.abspath(__file__))
     template = os.path.join(base, 'blog', '_template-en.html')
-    obsidian_base = 'E:/Obsidian/Baidu/05-Strategy'
+
+    # Search across all Obsidian category dirs for the slug
+    obsidian_base = 'E:/Obsidian/Baidu'
+    category_dirs = [
+        '01-Market-Insights', '02-Platform', '03-Search-Ads',
+        '04-Feed-Ads', '05-Strategy', '06-Landing-Page', '07-Pricing-Models'
+    ]
 
     langs = ['en', 'ja', 'ko'] if args.lang == 'all' else [args.lang]
 
+    # Find which category dir contains the slug
+    slug_dir = None
+    for cat in category_dirs:
+        candidate = os.path.join(obsidian_base, cat, args.slug)
+        if os.path.isdir(candidate):
+            slug_dir = candidate
+            break
+    if not slug_dir:
+        print(f'ERROR: slug "{args.slug}" not found in any Obsidian category dir')
+        sys.exit(1)
+
     for lang in langs:
-        md_path = os.path.join(obsidian_base, args.slug, f'{args.slug}-{lang}.md')
+        md_path = os.path.join(slug_dir, f'{args.slug}-{lang}.md')
         if lang == 'en':
             out_path = os.path.join(base, 'blog', f'{args.slug}.html')
         else:
