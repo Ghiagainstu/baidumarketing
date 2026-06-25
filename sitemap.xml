@@ -166,9 +166,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.baidumarketing.com/blog/baidu-ad-billing-models-explained</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ad-billing-models-explained" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ad-billing-models-explained" />
@@ -366,6 +363,14 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-feed-ads-history-operation-records-upgrade" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-feed-ads-history-operation-records-upgrade" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-feed-ads-history-operation-records-upgrade" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/blog/baidu-geo-targeting-2026-white-paper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-geo-targeting-2026-white-paper" />
     <priority>0.6</priority>
   </url>
   <url>
@@ -1037,9 +1042,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.baidumarketing.com/ja/blog/baidu-ad-billing-models-explained</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ad-billing-models-explained" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ad-billing-models-explained" />
@@ -1237,6 +1239,14 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-feed-ads-history-operation-records-upgrade" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-feed-ads-history-operation-records-upgrade" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-feed-ads-history-operation-records-upgrade" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ja/blog/baidu-geo-targeting-2026-white-paper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-geo-targeting-2026-white-paper" />
     <priority>0.6</priority>
   </url>
   <url>
@@ -1892,9 +1902,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.baidumarketing.com/ko/blog/baidu-ad-creation-workflow-simplified-creative-upgrade</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-ad-creation-workflow-simplified-creative-upgrade" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-ad-creation-workflow-simplified-creative-upgrade" />
@@ -2012,6 +2019,14 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-feed-ads-history-operation-records-upgrade" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-feed-ads-history-operation-records-upgrade" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-feed-ads-history-operation-records-upgrade" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baidumarketing.com/ko/blog/baidu-geo-targeting-2026-white-paper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/baidu-geo-targeting-2026-white-paper" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/baidu-geo-targeting-2026-white-paper" />
     <priority>0.6</priority>
   </url>
   <url>
