@@ -12,10 +12,11 @@ rebuild_blog.py — 从 Obsidian MD + 模板生成完整博客 HTML
 - JA/KO footer 品牌描述翻译
 - JA/KO footer 列标题翻译
 """
-import sys
-import os
 import re
+import os
+import sys
 import argparse
+import html as html_module
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from md_to_html import md_to_html
@@ -102,8 +103,109 @@ CTA_TEXT = {
     },
 }
 
-RELATED_CARDS = {
-    'en': '''<a href="/blog/why-b2b-baidu-search" class="related-card">
+RELATED_TITLE = {'en': 'Related Articles', 'ja': '関連記事', 'ko': '관련 기사'}
+
+
+CATEGORY_LABELS = {
+    'insights': 'Market Insights', 'search': 'Search Ads', 'feed': 'Feed Ads',
+    'strategy': 'Strategy', 'platform': 'Platform', 'landing': 'Landing Page',
+    'pricing': 'Pricing Models',
+    'ja': {
+        'insights': '市場インサイト', 'search': '検索広告', 'feed': 'フィード広告',
+        'strategy': '戦略', 'platform': 'プラットフォーム', 'landing': 'ランディングページ',
+        'pricing': '料金モデル',
+    },
+    'ko': {
+        'insights': '시장 인사이트', 'search': '검색 광고', 'feed': '피드 광고',
+        'strategy': '전략', 'platform': '플랫폼', 'landing': '랜딩 페이지',
+        'pricing': '요금 모델',
+    },
+}
+
+
+def get_related_cards_html(slug, category, lang):
+    """从博客列表页读取同分类的最新文章，生成关联卡片HTML。
+    
+    如果同分类文章不足3篇，用最新文章补充。
+    如果列表页无法解析，返回硬编码默认卡片。
+    """
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    if lang == 'en':
+        listing_path = os.path.join(base_dir, 'blog.html')
+    else:
+        listing_path = os.path.join(base_dir, lang, 'blog.html')
+
+    if not os.path.exists(listing_path):
+        return _fallback_related_cards(lang)
+
+    with open(listing_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # 解析所有卡片：data-category, href, title, excerpt
+    # 格式: <article class="blog-card" data-category="insights">
+    #         <a href="blog/slug" class="blog-card-link">
+    #           <h3 class="blog-card-title">Title</h3>
+    #           <p class="blog-card-excerpt">Excerpt...</p>
+    cards = []
+    pattern = re.compile(
+        r'<article class="blog-card" data-category="([^"]*)">'
+        r'\s*<a href="([^"]*)" class="blog-card-link">'
+        r'\s*<div class="blog-card-content">'
+        r'\s*<h3 class="blog-card-title">(.*?)</h3>'
+        r'\s*<p class="blog-card-excerpt">(.*?)</p>',
+        re.DOTALL
+    )
+    for match in pattern.finditer(content):
+        cat = match.group(1)
+        href = match.group(2).strip()
+        title = match.group(3).strip()
+        excerpt = match.group(4).strip()
+        # Extract slug from href
+        card_slug = href.rstrip('/').split('/')[-1]
+        if card_slug == slug:
+            continue  # 排除当前文章
+        cards.append({'category': cat, 'slug': card_slug, 'title': title, 'excerpt': excerpt})
+
+    # 优先选同分类
+    same_cat = [c for c in cards if c['category'] == category]
+    other = [c for c in cards if c['category'] != category]
+
+    selected = same_cat[:3]
+    if len(selected) < 3:
+        # 不足3篇时，用最新文章补充
+        need = 3 - len(selected)
+        selected += other[:need]
+
+    if not selected:
+        return _fallback_related_cards(lang)
+
+    # 生成HTML
+    path_prefix = '' if lang == 'en' else f'/{lang}'
+    items_html = []
+    for card in selected:
+        # Map category key to human-readable label per language
+        cat_key = card['category']
+        if lang in CATEGORY_LABELS and cat_key in CATEGORY_LABELS[lang]:
+            cat_label = CATEGORY_LABELS[lang][cat_key]
+        else:
+            cat_label = CATEGORY_LABELS.get(cat_key, cat_key)
+        # Escape HTML entities in title/excerpt
+        safe_title = html_module.escape(card['title'])
+        safe_excerpt = html_module.escape(card['excerpt'])
+        items_html.append(
+            f'<a href="{path_prefix}/blog/{card["slug"]}" class="related-card">'
+            f'<span>{cat_label}</span>'
+            f'<h4>{safe_title}</h4>'
+            f'<p>{safe_excerpt}</p>'
+            f'</a>'
+        )
+    return '\n'.join(items_html)
+
+
+def _fallback_related_cards(lang):
+    """列表页无法解析时的硬编码默认值"""
+    defaults = {
+        'en': '''<a href="/blog/why-b2b-baidu-search" class="related-card">
           <span>B2B</span><h4>Why Baidu Search Is the Most Underrated B2B Channel</h4>
           <p>Discover why Baidu search ads deliver higher-quality B2B leads than social media.</p>
         </a>
@@ -115,7 +217,7 @@ RELATED_CARDS = {
           <span>Pricing</span><h4>How Much Does Baidu PPC Cost? Complete Pricing Guide</h4>
           <p>Understand Baidu advertising costs, from account setup to CPC benchmarks.</p>
         </a>''',
-    'ja': '''<a href="/ja/blog/why-b2b-baidu-search" class="related-card">
+        'ja': '''<a href="/ja/blog/why-b2b-baidu-search" class="related-card">
           <span>B2B</span><h4>なぜ百度検索はB2Bに最も過小評価されているチャネルなのか</h4>
           <p>百度検索広告が中国でソーシャルメディアより高品質なB2Bリードを生む理由を解説。</p>
         </a>
@@ -127,7 +229,7 @@ RELATED_CARDS = {
           <span>料金</span><h4>百度PPCの費用はいくら？完全価格ガイド</h4>
           <p>アカウント開設から日予算、CPCベンチマークまで、百度広告のコストを理解する。</p>
         </a>''',
-    'ko': '''<a href="/ko/blog/why-b2b-baidu-search" class="related-card">
+        'ko': '''<a href="/ko/blog/why-b2b-baidu-search" class="related-card">
           <span>B2B</span><h4>왜 바이두 검색이 B2B에 가장 과소평가된 채널인가</h4>
           <p>바이두 검색 광고가 소셜 미디어보다 고품질 B2B 리드를 제공하는 이유.</p>
         </a>
@@ -139,9 +241,8 @@ RELATED_CARDS = {
           <span>요금</span><h4>바이두 PPC 비용은 얼마? 완벽 가격 가이드</h4>
           <p>계정 설정부터 CPC 벤치마크까지 바이두 광고 비용을 이해합니다.</p>
         </a>''',
-}
-
-RELATED_TITLE = {'en': 'Related Articles', 'ja': '関連記事', 'ko': '관련 기사'}
+    }
+    return defaults.get(lang, defaults['en'])
 
 
 def strip_quotes(s):
@@ -401,6 +502,7 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     date = meta.get('date', '2026-06-21')
     rtime = meta.get('reading_time', '9 min')
     author = meta.get('author', 'Baidu PPC Pro Team')
+    category = meta.get('category', '')
 
     # Build enhanced HTML content
     content_html = build_enhanced_content(body)
@@ -505,9 +607,9 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     </div>
   </main>''' + result[ctae:]
 
-    # 9. Related section
+    # 9. Related section (dynamically generated from listing page)
     rt_title = RELATED_TITLE.get(lang, 'Related Articles')
-    rc = RELATED_CARDS.get(lang, RELATED_CARDS['en'])
+    rc = get_related_cards_html(slug, category, lang)
     rs = result.find('<section class="related-section">')
     if rs > 0:
         re_end = result.find('</section>', rs) + 10
