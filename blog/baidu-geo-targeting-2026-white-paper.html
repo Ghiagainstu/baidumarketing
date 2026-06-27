@@ -261,6 +261,14 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .geo-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+    .geo-card { border-radius: 12px; padding: 20px; text-align: center; background: var(--gray-50); border: 1px solid var(--gray-200); }
+    .geo-card .num { font-size: 1.8rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
+    .geo-card .label { font-size: .78rem; color: var(--gray-500); margin-top: 6px; line-height: 1.4; }
+    [data-theme="dark"] .geo-card { background: var(--gray-100); border-color: var(--gray-200); }
+    @media (max-width: 640px) { .geo-stats { grid-template-columns: 1fr 1fr; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +315,13 @@
 
     <p>A newly released 2026 industry white paper on GEO (Geographic Optimization) promotion services spells out both the scale of the problem and the path forward. Here is what the numbers mean for international advertisers.</p>
 
-    <h2>The Waste Problem: Why Regional Targeting Matters</h2>
+    <div class="geo-stats">
+  <div class="geo-card"><div class="num">¥860B</div><div class="label">📊 中国デジタル広告市場 (2025)</div></div>
+  <div class="geo-card"><div class="num">34%</div><div class="label">🎯 地域ターゲット広告シェア</div></div>
+  <div class="geo-card"><div class="num">68%</div><div class="label">⚠️ 地域精度50%未満の広告主</div></div>
+  <div class="geo-card"><div class="num">23%</div><div class="label">💰 不適切設定によるCPA増加</div></div>
+</div>
+<h2>The Waste Problem: Why Regional Targeting Matters</h2>
 
     <p>The core takeaway from the white paper is blunt: <strong>68% of digital advertisers in China report that their regional targeting accuracy is below 50%</strong>. In plain terms, more than half of e-commerce advertisers are showing ads to users who cannot or will not buy — and they are paying for every impression.</p>
 
@@ -325,7 +339,10 @@
 
     <p>This is not a small-fry problem. It affects large platforms and small advertisers alike.</p>
 
-    <h2>Where Baidu Stands in the GEO Landscape</h2>
+    <div class="callout callout-insight">
+  <strong>🔑 Key Finding:</strong> Baidu delivers county-level geo-targeting with an 88% regional match rate — the highest among China's major digital platforms. ROI improvement averages 35% when geo-targeting is properly configured.
+</div>
+<h2>Where Baidu Stands in the GEO Landscape</h2>
 
     <p>The white paper compares four major platforms on regional targeting capabilities. Baidu's metrics, drawn from its official marketing data, tell a specific story:</p>
 
@@ -410,7 +427,15 @@
 
     <p>The white paper notes that the best results come from AI algorithms that update every 24-48 hours based on real-time performance data. But Baidu's automated bidding (OCPC) and regional optimization tools need a "learning phase" of at least 7 days with sufficient conversion data. If your campaign starts with the wrong regional settings, it wastes its own learning budget before it can correct course.</p>
 
-    <h2>How BPP Closes These Gaps</h2>
+    <div class="takeaway-box">
+  <h3>📋 3 Barriers for Overseas Brands — and How BPP Solves Them</h3>
+  <ul>
+    <li><strong>Account Setup</strong> — Baidu requires a Chinese business license. BPP opens and manages accounts for overseas companies.</li>
+    <li><strong>Data Layer</strong> — Regional data and tools are Chinese-only. BPP maps your product to specific districts and industrial parks.</li>
+    <li><strong>Optimization Cycle</strong> — Wrong regional settings waste the AI learning phase. BPP starts with properly seeded data.</li>
+  </ul>
+</div>
+<h2>How BPP Closes These Gaps</h2>
 
     <p>BPP exists precisely because these barriers should not stop overseas brands from accessing the Chinese market through Baidu.</p>
 

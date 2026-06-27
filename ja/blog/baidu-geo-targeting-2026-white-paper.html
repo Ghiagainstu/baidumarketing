@@ -261,6 +261,14 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .geo-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+    .geo-card { border-radius: 12px; padding: 20px; text-align: center; background: var(--gray-50); border: 1px solid var(--gray-200); }
+    .geo-card .num { font-size: 1.8rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
+    .geo-card .label { font-size: .78rem; color: var(--gray-500); margin-top: 6px; line-height: 1.4; }
+    [data-theme="dark"] .geo-card { background: var(--gray-100); border-color: var(--gray-200); }
+    @media (max-width: 640px) { .geo-stats { grid-template-columns: 1fr 1fr; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +315,13 @@
 
     <p>2026年に発表されたGEO（Geographic Optimization：地理情報最適化）プロモーションサービスに関する業界白書は、問題の規模とその解決策の両方を明らかにしています。以下、国際的な広告主にとってこの数字が何を意味するのかを解説します。</p>
 
-    <h2>浪費の問題：地域ターゲティングが重要な理由</h2>
+    <div class="geo-stats">
+  <div class="geo-card"><div class="num">¥8,600億</div><div class="label">📊 中国デジタル広告市場 (2025)</div></div>
+  <div class="geo-card"><div class="num">34%</div><div class="label">🎯 地域ターゲット広告シェア</div></div>
+  <div class="geo-card"><div class="num">68%</div><div class="label">⚠️ 地域精度50%未満の広告主</div></div>
+  <div class="geo-card"><div class="num">23%</div><div class="label">💰 不適切設定によるCPA増加</div></div>
+</div>
+<h2>浪費の問題：地域ターゲティングが重要な理由</h2>
 
     <p>白書の核心的な指摘は端的です。<strong>中国のデジタル広告主の68%が、自社の地域ターゲティング精度が50%未満であると回答しています</strong>。端的に言えば、EC事業者の過半数が「購入できない、あるいは購入しないユーザー」に広告を表示しており、そのインプレッションすべてに料金を支払っているのです。</p>
 
@@ -325,7 +339,10 @@
 
     <p>これは一部の広告主だけの問題ではありません。大手プラットフォームから中小広告主まで、幅広く影響しています。</p>
 
-    <h2>GEO環境における百度の立ち位置</h2>
+    <div class="callout callout-insight">
+  <strong>🔑 重要な発見：</strong>百度は市区町村レベルの地域ターゲティングを提供し、地域一致率は88%に達します——中国主要デジタルプラットフォームの中で最高値です。地域ターゲティングを適切に設定すると、ROIは平均35%向上します。
+</div>
+<h2>GEO環境における百度の立ち位置</h2>
 
     <p>白書は主要4プラットフォームの地域ターゲティング能力を比較しています。百度の公式マーケティングデータから抽出された指標は、以下の通りです。</p>
 
@@ -410,7 +427,15 @@
 
     <p>白書は、リアルタイムのパフォーマンスデータに基づいて24〜48時間ごとに更新されるAIアルゴリズムが最良の結果をもたらすと指摘しています。しかし、百度の自動入札（OCPC）と地域最適化ツールは、十分なコンバージョンデータを得るために少なくとも7日間の「学習フェーズ」を必要とします。キャンペーンが誤った地域設定でスタートすると、方向修正する前に自らの学習予算を浪費してしまいます。</p>
 
-    <h2>BPPがこのギャップを埋める方法</h2>
+    <div class="takeaway-box">
+  <h3>📋 海外ブランドが直面する3つの障壁 — そしてBPPの解決策</h3>
+  <ul>
+    <li><strong>アカウント開設</strong> — 百度には中国営業許可証が必要。BPPが海外企業に代わってアカウントを開設・管理。</li>
+    <li><strong>データ不足</strong> — 地域データとツールは中国語のみ。BPPが製品を特定の区や工業団地にマッピング。</li>
+    <li><strong>最適化サイクル</strong> — 誤った地域設定でAI学習期間を浪費。BPPは適切なデータで開始。</li>
+  </ul>
+</div>
+<h2>BPPがこのギャップを埋める方法</h2>
 
     <p>BPPは、これらの障壁が海外ブランドの百度を通じた中国市場アクセスを妨げるべきではないという信念のもとに存在しています。</p>
 

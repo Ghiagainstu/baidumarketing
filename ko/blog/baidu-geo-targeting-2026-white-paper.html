@@ -261,6 +261,14 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .geo-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+    .geo-card { border-radius: 12px; padding: 20px; text-align: center; background: var(--gray-50); border: 1px solid var(--gray-200); }
+    .geo-card .num { font-size: 1.8rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
+    .geo-card .label { font-size: .78rem; color: var(--gray-500); margin-top: 6px; line-height: 1.4; }
+    [data-theme="dark"] .geo-card { background: var(--gray-100); border-color: var(--gray-200); }
+    @media (max-width: 640px) { .geo-stats { grid-template-columns: 1fr 1fr; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +315,13 @@
 
     <p>2026년 새롭게 발표된 GEO(Geographic Optimization, 지리정보 최적화) 프로모션 서비스 업계 백서는 문제의 규모와 해결 방향을 모두 제시합니다. 국제 광고주에게 이 수치가 무엇을 의미하는지 분석합니다.</p>
 
-    <h2>낭비의 문제: 지역 타겟팅이 중요한 이유</h2>
+    <div class="geo-stats">
+  <div class="geo-card"><div class="num">¥8조6,000억</div><div class="label">📊 중국 디지털 광고 시장 (2025)</div></div>
+  <div class="geo-card"><div class="num">34%</div><div class="label">🎯 지역 타겟 광고 점유율</div></div>
+  <div class="geo-card"><div class="num">68%</div><div class="label">⚠️ 지역 정확도 50% 미만 광고주</div></div>
+  <div class="geo-card"><div class="num">23%</div><div class="label">💰 부적절 설정으로 인한 CPA 증가</div></div>
+</div>
+<h2>낭비의 문제: 지역 타겟팅이 중요한 이유</h2>
 
     <p>백서의 핵심 지적은 단도직입적입니다. <strong>중국 디지털 광고주의 68%가 자사의 지역 타겟팅 정확도가 50% 미만이라고 응답했습니다</strong>. 쉽게 말해, 전자상거래 광고주의 과반수가 '구매할 수 없거나 구매하지 않을 사용자'에게 광고를 표시하고 있으며, 모든 노출에 대해 비용을 지불하고 있습니다.</p>
 
@@ -325,7 +339,10 @@
 
     <p>이는 일부 광고주만의 문제가 아닙니다. 대형 플랫폼부터 중소 광고주까지 폭넓게 영향을 미치고 있습니다.</p>
 
-    <h2>GEO 환경에서 바이두의 위치</h2>
+    <div class="callout callout-insight">
+  <strong>🔑 핵심 발견：</strong>바이두는 군/읍/면 수준의 지역 타겟팅을 제공하며 지역 일치율이 88%에 달합니다——중국 주요 디지털 플랫폼 중 최고 수준입니다. 지역 타겟팅을 적절히 설정하면 ROI가 평균 35% 향상됩니다.
+</div>
+<h2>GEO 환경에서 바이두의 위치</h2>
 
     <p>백서는 주요 4개 플랫폼의 지역 타겟팅 능력을 비교하고 있습니다. 바이두 공식 마케팅 데이터에서 추출한 지표는 다음과 같습니다.</p>
 
@@ -410,7 +427,15 @@
 
     <p>백서는 실시간 성과 데이터를 기반으로 24~48시간마다 업데이트되는 AI 알고리즘이 최상의 결과를 가져온다고 지적합니다. 그러나 바이두의 자동 입찰(OCPC)과 지역 최적화 도구는 충분한 전환 데이터를 얻기 위해 최소 7일간의 '학습 단계'가 필요합니다. 캠페인이 잘못된 지역 설정으로 시작되면, 방향을 수정하기도 전에 자체 학습 예산을 낭비하게 됩니다.</p>
 
-    <h2>BPP가 이 격차를 해소하는 방법</h2>
+    <div class="takeaway-box">
+  <h3>📋 해외 브랜드가 직면하는 3가지 장벽 — 그리고 BPP의 해결책</h3>
+  <ul>
+    <li><strong>계좌 개설</strong> — 바이두에는 중국 사업자등록증이 필요합니다. BPP가 해외 기업을 대신하여 계좌를 개설·관리합니다.</li>
+    <li><strong>데이터 부족</strong> — 지역 데이터와 도구는 중국어 전용입니다. BPP가 제품을 특정 구와 산업단지에 매핑합니다.</li>
+    <li><strong>최적화 사이클</strong> — 잘못된 지역 설정으로 AI 학습 기간을 낭비합니다. BPP는 적절한 데이터로 시작합니다.</li>
+  </ul>
+</div>
+<h2>BPP가 이 격차를 해소하는 방법</h2>
 
     <p>BPP는 이러한 장벽이 해외 브랜드의 바이두를 통한 중국 시장 접근을 막아서는 안 된다는 신념으로 존재합니다.</p>
 
