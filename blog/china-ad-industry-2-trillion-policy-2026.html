@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.toutiao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.taobao { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.jd { background: #FEF2F2; border-color: #FCA5A5; color: #991B1B; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.toutiao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.taobao { background: rgba(159,18,57,.15); border-color: #FB7185; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.jd { background: rgba(153,27,27,.15); border-color: #EF4444; color: #FCA5A5; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -370,6 +385,18 @@
 
     <p>Both point toward a more professionalized, technology-driven market. The agencies that win in this environment will be the ones that combine platform expertise with cross-border capability — not the ones that just buy media in bulk.</p>
 
+    <table class="comparison-table">
+      <thead><tr><th>Policy Category</th><th>Items</th><th>Key Focus</th></tr></thead>
+      <tbody>
+        <tr><td>🏗️ Industry Layout</td><td>1–4</td><td>Regional clusters, enterprise cultivation</td></tr>
+        <tr><td>🔬 Innovation</td><td>5–7</td><td>AI + big data ad tech, digital transformation</td></tr>
+        <tr><td>🔗 Cross-Sector Integration</td><td>8–11</td><td>Brand building, "Advertising+" initiative</td></tr>
+        <tr><td><strong>🌍 Opening Up</strong></td><td><strong>12–14</strong></td><td><strong>Multi-language ads, international agencies, cross-border infrastructure</strong></td></tr>
+        <tr><td>⚖️ Regulatory Environment</td><td>15–19</td><td>Standards, data security, compliance</td></tr>
+        <tr><td>📐 Implementation Support</td><td>20–22</td><td>Funding, talent, coordination mechanism</td></tr>
+      </tbody>
+    </table>
+
     <div class="callout callout-insight">
       <strong>Insight: The policy direction is unmistakable.</strong> Six government departments did not sign this document to maintain the status quo. They signed it to build infrastructure — and that infrastructure includes channels for overseas advertising into China. The question is not <em>whether</em> China is opening, but <em>how fast</em> the infrastructure catches up to the policy intent.
     </div>
@@ -384,7 +411,17 @@
 
     <p><strong>Barrier 2: Language and cultural gap.</strong> The policy supports multi-language ad services, but the ad platforms themselves — Baidu's backend, analytics dashboards, optimization tools — are almost entirely in Chinese. Overseas advertisers need not just translated creative, but translated operations. The gap between "having access" and "being effective" is wide.</p>
 
-    <p><strong>Barrier 3: Platform fragmentation and policy complexity.</strong> China's ad ecosystem is not one platform. Search (Baidu), feed (Baidu Feed, Toutiao), e-commerce (Taobao, JD), social (WeChat, Douyin) each have their own rules, formats, and optimization logic. The 22-point policy is a framework — turning it into operational advantage requires deep platform-by-platform knowledge.</p>
+    <p><strong>Barrier 3: Platform fragmentation and policy complexity.</strong> China's ad ecosystem is not one platform. Each channel has its own rules, formats, and optimization logic. The 22-point policy is a framework — turning it into operational advantage requires deep platform-by-platform knowledge.</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 Baidu Search</span>
+      <span class="platform-pill baidu">📱 Baidu Feed</span>
+      <span class="platform-pill toutiao">📰 Toutiao</span>
+      <span class="platform-pill taobao">🛒 Taobao</span>
+      <span class="platform-pill jd">📦 JD</span>
+      <span class="platform-pill wechat">💬 WeChat</span>
+      <span class="platform-pill douyin">🎵 Douyin</span>
+    </div>
 
     <div class="callout callout-warning">
       <strong>Warning: Policy alone does not open accounts.</strong> The 22-point plan is a framework document, not an operational change. It signals direction — but the hard operational barriers (business license, Chinese-language platform, cross-platform complexity) remain. Overseas brands need a domestic operator regardless of how favorable the policy environment becomes.

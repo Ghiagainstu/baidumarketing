@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.toutiao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.taobao { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.jd { background: #FEF2F2; border-color: #FCA5A5; color: #991B1B; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.toutiao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.taobao { background: rgba(159,18,57,.15); border-color: #FB7185; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.jd { background: rgba(153,27,27,.15); border-color: #EF4444; color: #FCA5A5; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -370,6 +385,18 @@
 
     <p>両方とも、より専門化されテクノロジー駆動の市場を指向しています。この環境で勝つエージェンシーは、プラットフォーム専門知識と国境を越えた能力を組み合わせた企業です — メディアを大量購入するだけの企業ではありません。</p>
 
+    <table class="comparison-table">
+      <thead><tr><th>政策カテゴリ</th><th>項目</th><th>主要焦点</th></tr></thead>
+      <tbody>
+        <tr><td>🏗️ 産業配置</td><td>1–4</td><td>地域クラスター、企業育成</td></tr>
+        <tr><td>🔬 イノベーション</td><td>5–7</td><td>AI+ビッグデータ広告技術、デジタル変革</td></tr>
+        <tr><td>🔗 分野横断統合</td><td>8–11</td><td>ブランド構築、「広告+」イニシアティブ</td></tr>
+        <tr><td><strong>🌍 対外開放</strong></td><td><strong>12–14</strong></td><td><strong>多言語広告、国際代理店、越境インフラ</strong></td></tr>
+        <tr><td>⚖️ 規制環境</td><td>15–19</td><td>標準、データセキュリティ、コンプライアンス</td></tr>
+        <tr><td>📐 実施支援</td><td>20–22</td><td>資金、人材、調整メカニズム</td></tr>
+      </tbody>
+    </table>
+
     <div class="callout callout-insight">
       <strong>インサイト：政策の方向性は明白です。</strong> 6つの政府部門がこの文書に署名したのは、現状維持のためではありません。インフラを構築するためです — そしてそのインフラには、中国への海外広告のチャネルが含まれています。問われているのは、中国が<em>開放するかどうか</em>ではなく、政策意図にインフラが<em>どれだけ早く追いつくか</em>です。
     </div>
@@ -384,7 +411,17 @@
 
     <p><strong>障壁2：言語と文化のギャップ。</strong> 政策は多言語広告サービスを支援していますが、広告プラットフォーム自体 — 百度のバックエンド、分析ダッシュボード、最適化ツール — はほぼ完全に中国語です。海外広告主に必要なのは翻訳されたクリエイティブだけでなく、翻訳された運営です。「アクセスがあること」と「効果的であること」の間のギャップは広いのです。</p>
 
-    <p><strong>障壁3：プラットフォームの断片化と政策の複雑さ。</strong> 中国の広告エコシステムは1つのプラットフォームではありません。検索（百度）、フィード（百度フィード、头条）、Eコマース（淘宝、京東）、ソーシャル（微信、抖音）はそれぞれ独自のルール、フォーマット、最適化ロジックを持っています。22項目政策はフレームワークです — それを運営上の優位性に変えるには、プラットフォームごとの深い知識が必要です。</p>
+    <p><strong>障壁3：プラットフォームの断片化と政策の複雑さ。</strong> 中国の広告エコシステムは1つのプラットフォームではありません。各チャネルには独自のルール、フォーマット、最適化ロジックがあります。22項目政策はフレームワークです — それを運営上の優位性に変えるには、プラットフォームごとの深い知識が必要です。</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 百度検索</span>
+      <span class="platform-pill baidu">📱 百度フィード</span>
+      <span class="platform-pill toutiao">📰 头条</span>
+      <span class="platform-pill taobao">🛒 淘宝</span>
+      <span class="platform-pill jd">📦 京東</span>
+      <span class="platform-pill wechat">💬 WeChat</span>
+      <span class="platform-pill douyin">🎵 抖音</span>
+    </div>
 
     <div class="callout callout-warning">
       <strong>警告：政策だけではアカウントは開かない。</strong> 22項目計画はフレームワーク文書であり、運用上の変更ではありません。方向性を示しています — しかし厳しい運用障壁（営業許可証、中国語プラットフォーム、クロスプラットフォームの複雑さ）は残っています。海外ブランドは、政策環境がどれほど有利になっても、国内オペレーターを必要とします。

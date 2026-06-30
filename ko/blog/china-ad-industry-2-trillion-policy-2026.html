@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.toutiao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.taobao { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.jd { background: #FEF2F2; border-color: #FCA5A5; color: #991B1B; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.toutiao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.taobao { background: rgba(159,18,57,.15); border-color: #FB7185; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.jd { background: rgba(153,27,27,.15); border-color: #EF4444; color: #FCA5A5; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -370,6 +385,18 @@
 
     <p>둘 다 더 전문화되고 기술 중심의 시장을 가리킵니다. 이 환경에서 승리하는 에이전시는 플랫폼 전문성과 크로스보더 역량을 결합한 기업입니다 — 대량으로 미디어를 구매하는 기업이 아닙니다.</p>
 
+    <table class="comparison-table">
+      <thead><tr><th>정책 카테고리</th><th>항목</th><th>주요 초점</th></tr></thead>
+      <tbody>
+        <tr><td>🏗️ 산업 배치</td><td>1–4</td><td>지역 클러스터, 기업 육성</td></tr>
+        <tr><td>🔬 혁신</td><td>5–7</td><td>AI+빅데이터 광고 기술, 디지털 전환</td></tr>
+        <tr><td>🔗 분야 간 통합</td><td>8–11</td><td>브랜드 구축, "광고+" 이니셔티브</td></tr>
+        <tr><td><strong>🌍 대외 개방</strong></td><td><strong>12–14</strong></td><td><strong>다국어 광고, 국제 에이전시, 크로스보더 인프라</strong></td></tr>
+        <tr><td>⚖️ 규제 환경</td><td>15–19</td><td>표준, 데이터 보안, 컴플라이언스</td></tr>
+        <tr><td>📐 실행 지원</td><td>20–22</td><td>자금, 인재, 조정 메커니즘</td></tr>
+      </tbody>
+    </table>
+
     <div class="callout callout-insight">
       <strong>인사이트: 정책 방향은 명백합니다.</strong> 6개 정부 부처가 이 문서에 서명한 것은 현상 유지를 위한 것이 아닙니다. 인프라를 구축하기 위한 것입니다 — 그리고 그 인프라에는 중국으로의 해외 광고 채널이 포함됩니다. 질문은 중국이 <em>개방하는지 여부</em>가 아니라, 정책 의도에 인프라가 <em>얼마나 빨리 따라잡을지</em>입니다.
     </div>
@@ -384,7 +411,17 @@
 
     <p><strong>장벽 2: 언어 및 문화적 격차.</strong> 정책은 다국어 광고 서비스를 지원하지만, 광고 플랫폼 자체 — 바이두의 백엔드, 분석 대시보드, 최적화 도구 — 는 거의 완전히 중국어입니다. 해외 광고주에게 필요한 것은 번역된 크리에이티브뿐만 아니라 번역된 운영입니다. "접근할 수 있는 것"과 "효과적인 것" 사이의 격차는 넓습니다.</p>
 
-    <p><strong>장벽 3: 플랫폼 단편화와 정책 복잡성.</strong> 중국의 광고 생태계는 하나의 플랫폼이 아닙니다. 검색(바이두), 피드(바이두 피드, 토우티아오), 이커머스(타오바오, 징동), 소셜(위챗, 더우인)은 각각 고유한 규칙, 형식, 최적화 로직을 가지고 있습니다. 22개 항목 정책은 프레임워크입니다 — 이를 운영적 이점으로 전환하려면 플랫폼별 깊은 지식이 필요합니다.</p>
+    <p><strong>장벽 3: 플랫폼 단편화와 정책 복잡성.</strong> 중국의 광고 생태계는 하나의 플랫폼이 아닙니다. 각 채널에는 고유한 규칙, 형식, 최적화 로직이 있습니다. 22개 항목 정책은 프레임워크입니다 — 이를 운영적 이점으로 전환하려면 플랫폼별 깊은 지식이 필요합니다.</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 바이두 검색</span>
+      <span class="platform-pill baidu">📱 바이두 피드</span>
+      <span class="platform-pill toutiao">📰 토우티아오</span>
+      <span class="platform-pill taobao">🛒 타오바오</span>
+      <span class="platform-pill jd">📦 징동</span>
+      <span class="platform-pill wechat">💬 위챗</span>
+      <span class="platform-pill douyin">🎵 더우인</span>
+    </div>
 
     <div class="callout callout-warning">
       <strong>경고: 정책만으로 계정이 열리지 않습니다.</strong> 22개 항목 계획은 프레임워크 문서일 뿐 운영적 변경이 아닙니다. 방향성을 제시하지만 — 사업자등록증, 중국어 플랫폼, 크로스 플랫폼 복잡성이라는 엄격한 운영 장벽은 그대로 남아 있습니다. 해외 브랜드는 정책 환경이 아무리 유리해져도 국내 운영자가 필요합니다.
