@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -306,6 +317,13 @@
     <p>For most overseas brands, GEO is still a new concept. The idea of optimizing content so that AI search engines (Baidu, Doubao, DeepSeek, Tongyi Qianwen) cite your brand in their answers is intuitive. But the rules around how to do that — and, critically, how <em>not</em> to do it — have been unclear. The Red Book changes that.</p>
 
     <p>This matters in two directions. First, it signals that China's AI search ecosystem is maturing beyond the "wild west" phase and into governance. Second, it means overseas brands doing GEO in China now have a compliance framework they ignore at their own risk — and that their GEO service providers need to know about.</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 Baidu AI Search</span>
+      <span class="platform-pill doubao">🤖 Doubao (ByteDance)</span>
+      <span class="platform-pill deepseek">🧠 DeepSeek</span>
+      <span class="platform-pill tongyi">📚 Tongyi Qianwen</span>
+    </div>
 
     <h2>📈 The Context: Why GEO Governance is Happening Now</h2>
 
@@ -369,6 +387,15 @@
 
     <p>For each risk type, the Red Book provides a five-dimension breakdown: definition, underlying mechanism, detection signals, harmful impact, and scenario replay. It also builds a full lifecycle compliance framework covering organizational structure, content production workflow, performance evaluation metrics, and service provider procurement assessment.</p>
 
+    <table class="comparison-table">
+      <thead><tr><th>Risk Category</th><th>Types</th><th>Key Concern for Overseas Brands</th></tr></thead>
+      <tbody>
+        <tr><td>🏛️ A — Values & Ethics</td><td>1–6</td><td>Competition ethics, trust forgery, undisclosed paid placement, authority signal hijacking</td></tr>
+        <tr><td>📝 B — Information Quality</td><td>7</td><td>Unverified AI content, fabricated citations, exaggerated claims, keyword stuffing</td></tr>
+        <tr><td>🔐 C — Tech & System Security</td><td>8–9</td><td>Prompt injection, RAG poisoning, data layer contamination, model backdoors</td></tr>
+      </tbody>
+    </table>
+
     <div class="callout callout-insight">
       <strong>Insight: The Red Book is not a law — it is a standard.</strong> But standards backed by 40+ authoritative organizations, including the National Advertising Research Institute and Xinhua's State Key Lab, have regulatory gravity. Platforms and regulators will reference this framework. GEO providers who ignore it expose their clients to compliance risk.
     </div>
@@ -377,11 +404,11 @@
 
     <p>For overseas companies running GEO in China, the Red Book introduces three specific compliance pressures that don't apply equally to domestic players.</p>
 
-    <p><strong>Pressure 1: Service provider risk asymmetry.</strong> Most overseas brands rely on third-party GEO agencies or platforms. The Red Book explicitly warns that the current GEO service market is "mixed with huge gaps in qualifications, technical capability, and service quality." An overseas brand hiring a GEO agency has limited ability to audit whether that agency is following Red Book guidelines — or triggering Category A ethics violations like undisclosed paid placements or authority signal forgery.</p>
+    <p><strong>1️⃣ Pressure 1: Service provider risk asymmetry.</strong> Most overseas brands rely on third-party GEO agencies or platforms. The Red Book explicitly warns that the current GEO service market is "mixed with huge gaps in qualifications, technical capability, and service quality." An overseas brand hiring a GEO agency has limited ability to audit whether that agency is following Red Book guidelines — or triggering Category A ethics violations like undisclosed paid placements or authority signal forgery.</p>
 
-    <p><strong>Pressure 2: Cross-language content governance.</strong> A common GEO tactic is to distribute consistent brand information across multiple platforms in multiple languages. But the Red Book's emphasis on "truth first" and "evidence-based content" means that information gaps between English source material and Chinese AI-facing content become a compliance risk. If your Chinese-language GEO content makes claims your English website doesn't substantiate, that's a Category B information quality issue.</p>
+    <p><strong>2️⃣ Pressure 2: Cross-language content governance.</strong> A common GEO tactic is to distribute consistent brand information across multiple platforms in multiple languages. But the Red Book's emphasis on "truth first" and "evidence-based content" means that information gaps between English source material and Chinese AI-facing content become a compliance risk. If your Chinese-language GEO content makes claims your English website doesn't substantiate, that's a Category B information quality issue.</p>
 
-    <p><strong>Pressure 3: Lack of internal monitoring capability.</strong> The Red Book recommends continuous monitoring of brand mention rates, ranking changes, and content drift in AI search results. Overseas brands without Chinese-language operations teams cannot realistically do this themselves. They are flying blind on GEO compliance unless they work with an operator who monitors the Chinese AI search landscape directly.</p>
+    <p><strong>3️⃣ Pressure 3: Lack of internal monitoring capability.</strong> The Red Book recommends continuous monitoring of brand mention rates, ranking changes, and content drift in AI search results. Overseas brands without Chinese-language operations teams cannot realistically do this themselves. They are flying blind on GEO compliance unless they work with an operator who monitors the Chinese AI search landscape directly.</p>
 
     <h2>🔍 The Specific Risks Overseas Brands Should Audit Right Now</h2>
 

@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -306,6 +317,13 @@
     <p>대부분의 해외 브랜드에게 GEO는 여전히 새로운 개념입니다. AI 검색 엔진(바이두, 더우바오, 딥시크, 통이첸원)이 답변에서 귀하의 브랜드를 인용하도록 콘텐츠를 최적화한다는 아이디어는 직관적입니다. 그러나 그 방법에 대한 규칙 — 그리고 결정적으로, 하지 말아야 할 것들 — 은 불분명했습니다. 레드북이 이를 바꿉니다.</p>
 
     <p>이는 두 가지 방향에서 중요합니다. 첫째, 중국의 AI 검색 생태계가 "무법 지대" 단계를 넘어 거버넌스 단계로 진입하고 있음을 시사합니다. 둘째, 중국에서 GEO를 수행하는 해외 브랜드는 이제 무시하면 책임을 져야 할 컴플라이언스 프레임워크를 갖게 되었으며, GEO 서비스 제공업체가 알고 있어야 함을 의미합니다.</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 바이두 AI 검색</span>
+      <span class="platform-pill doubao">🤖 더우바오 (바이트댄스)</span>
+      <span class="platform-pill deepseek">🧠 DeepSeek</span>
+      <span class="platform-pill tongyi">📚 통이첸원</span>
+    </div>
 
     <h2>📈 배경: GEO 거버넌스가 지금 일어나는 이유</h2>
 
@@ -369,6 +387,15 @@
 
     <p>각 리스크 유형에 대해 레드북은 5차원 분해를 제공합니다: 정의, 기반 메커니즘, 탐지 신호, 유해 영향, 시나리오 재현. 또한 조직 구조, 콘텐츠 제작 워크플로, 성과 평가 지표, 서비스 제공업체 조달 평가를 포괄하는 전체 라이프사이클 컴플라이언스 프레임워크도 구축합니다.</p>
 
+    <table class="comparison-table">
+      <thead><tr><th>리스크 카테고리</th><th>유형</th><th>해외 브랜드 주요 우려</th></tr></thead>
+      <tbody>
+        <tr><td>🏛️ A — 가치관과 윤리</td><td>1–6</td><td>경쟁 윤리, 신뢰 위조, 미공개 유료 게재, 권위 신호 탈취</td></tr>
+        <tr><td>📝 B — 정보 품질</td><td>7</td><td>미검증 AI 콘텐츠, 허구 인용, 과장 주장, 키워드 채우기</td></tr>
+        <tr><td>🔐 C — 기술·보안</td><td>8–9</td><td>프롬프트 인젝션, RAG 오염, 데이터 레이어 오염, 모델 백도어</td></tr>
+      </tbody>
+    </table>
+
     <div class="callout callout-insight">
       <strong>인사이트: 레드북은 법률이 아니라 표준입니다.</strong> 그러나 국가광고연구원과 신화사 국가중점실험실을 포함한 40개 이상의 권위 기관이 지지하는 표준은 규제적 무게를 가집니다. 플랫폼과 규제 당국은 이 프레임워크를 참조할 것입니다. 이를 무시하는 GEO 제공업체는 클라이언트를 컴플라이언스 리스크에 노출시킵니다.
     </div>
@@ -377,11 +404,11 @@
 
     <p>중국에서 GEO를 수행하는 해외 기업에게 레드북은 국내 기업에게 동등하게 적용되지 않는 세 가지 특정 컴플라이언스 압력을 도입합니다.</p>
 
-    <p><strong>압력 1: 서비스 제공업체 리스크 비대칭.</strong> 대부분의 해외 브랜드는 서드파티 GEO 에이전시나 플랫폼에 의존합니다. 레드북은 현재 GEO 서비스 시장이 "자격, 기술력, 서비스 품질에 큰 격차가 있다"고 명시적으로 경고합니다. GEO 에이전시를 고용한 해외 브랜드는 해당 에이전시가 레드북 가이드라인을 따르고 있는지, 또는 미공개 유료 게재나 권위 신호 위조와 같은 카테고리 A 윤리 위반을 유발하고 있는지 감사할 능력이 제한적입니다.</p>
+    <p><strong>1️⃣ 압력 1: 서비스 제공업체 리스크 비대칭.</strong> 대부분의 해외 브랜드는 서드파티 GEO 에이전시나 플랫폼에 의존합니다. 레드북은 현재 GEO 서비스 시장이 "자격, 기술력, 서비스 품질에 큰 격차가 있다"고 명시적으로 경고합니다. GEO 에이전시를 고용한 해외 브랜드는 해당 에이전시가 레드북 가이드라인을 따르고 있는지, 또는 미공개 유료 게재나 권위 신호 위조와 같은 카테고리 A 윤리 위반을 유발하고 있는지 감사할 능력이 제한적입니다.</p>
 
-    <p><strong>압력 2: 크로스 언어 콘텐츠 거버넌스.</strong> 일반적인 GEO 전술은 일관된 브랜드 정보를 여러 언어로 여러 플랫폼에 배포하는 것입니다. 그러나 레드북의 "진실 우선"과 "증거 기반 콘텐츠" 강조는 영어 소스 자료와 중국어 AI 대상 콘텐츠 간의 정보 격차가 컴플라이언스 리스크가 됨을 의미합니다. 중국어 GEO 콘텐츠가 영어 웹사이트에서 입증되지 않은 주장을 하는 경우, 이는 카테고리 B 정보 품질 문제입니다.</p>
+    <p><strong>2️⃣ 압력 2: 크로스 언어 콘텐츠 거버넌스.</strong> 일반적인 GEO 전술은 일관된 브랜드 정보를 여러 언어로 여러 플랫폼에 배포하는 것입니다. 그러나 레드북의 "진실 우선"과 "증거 기반 콘텐츠" 강조는 영어 소스 자료와 중국어 AI 대상 콘텐츠 간의 정보 격차가 컴플라이언스 리스크가 됨을 의미합니다. 중국어 GEO 콘텐츠가 영어 웹사이트에서 입증되지 않은 주장을 하는 경우, 이는 카테고리 B 정보 품질 문제입니다.</p>
 
-    <p><strong>압력 3: 내부 모니터링 능력 부족.</strong> 레드북은 AI 검색 결과에서 브랜드 언급률, 순위 변화, 콘텐츠 편차의 지속적 모니터링을 권장합니다. 중국어 운영 팀이 없는 해외 브랜드는 이를 현실적으로 자체 수행할 수 없습니다. 중국 AI 검색 환경을 직접 모니터링하는 운영자와 협력하지 않는 한 GEO 컴플라이언스에서 시각 장애 상태로 비행하는 것입니다.</p>
+    <p><strong>3️⃣ 압력 3: 내부 모니터링 능력 부족.</strong> 레드북은 AI 검색 결과에서 브랜드 언급률, 순위 변화, 콘텐츠 편차의 지속적 모니터링을 권장합니다. 중국어 운영 팀이 없는 해외 브랜드는 이를 현실적으로 자체 수행할 수 없습니다. 중국 AI 검색 환경을 직접 모니터링하는 운영자와 협력하지 않는 한 GEO 컴플라이언스에서 시각 장애 상태로 비행하는 것입니다.</p>
 
     <h2>🔍 해외 브랜드가 지금 당장 감사해야 할 구체적 리스크</h2>
 

@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -306,6 +317,13 @@
     <p>多くの海外ブランドにとって、GEOはまだ新しい概念です。AI検索エンジン（百度、豆包、DeepSeek、通義千問）が回答の中で自社ブランドを引用するようにコンテンツを最適化するという考え方は直感的です。しかし、その方法に関するルール — そして決定的に重要な、やってはいけないこと — は不明確でした。レッドブックがそれを変えます。</p>
 
     <p>これは2つの方向で重要です。第一に、中国のAI検索エコシステムが「無法地帯」段階を超えてガバナンス段階に入りつつあることを示します。第二に、中国でGEOを行う海外ブランドは、無視すれば自己責任となるコンプライアンスフレームワークを持ち、そのGEOサービスプロバイダーが知っておく必要があることを意味します。</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 百度AI検索</span>
+      <span class="platform-pill doubao">🤖 豆包（バイトダンス）</span>
+      <span class="platform-pill deepseek">🧠 DeepSeek</span>
+      <span class="platform-pill tongyi">📚 通義千問</span>
+    </div>
 
     <h2>📈 背景：なぜGEOガバナンスが今起こっているのか</h2>
 
@@ -369,6 +387,15 @@
 
     <p>各リスクタイプについて、レッドブックは5次元の分解を提供します：定義、基礎メカニズム、検出シグナル、有害影響、シナリオリプレイ。さらに、組織構造、コンテンツ制作ワークフロー、パフォーマンス評価指標、サービスプロバイダー調達評価をカバーする完全ライフサイクルコンプライアンスフレームワークも構築しています。</p>
 
+    <table class="comparison-table">
+      <thead><tr><th>リスクカテゴリ</th><th>タイプ</th><th>海外ブランドへの主な懸念</th></tr></thead>
+      <tbody>
+        <tr><td>🏛️ A — 価値観と倫理</td><td>1–6</td><td>競争倫理、信頼偽造、未開示有料掲載、権威シグナル乗っ取り</td></tr>
+        <tr><td>📝 B — 情報品質</td><td>7</td><td>未検証AIコンテンツ、架空引用、誇張主張、キーワード詰め込み</td></tr>
+        <tr><td>🔐 C — 技術・セキュリティ</td><td>8–9</td><td>プロンプトインジェクション、RAG汚染、データ層汚染、モデルバックドア</td></tr>
+      </tbody>
+    </table>
+
     <div class="callout callout-insight">
       <strong>インサイト：レッドブックは法律ではなく、標準です。</strong> しかし、国家広告研究院や新華社国家重点実験室を含む40以上の権威機関が支持する標準には規制上の重みがあります。プラットフォームと規制当局はこのフレームワークを参照します。これを無視するGEOプロバイダーは、クライアントをコンプライアンスリスクにさらします。
     </div>
@@ -377,11 +404,11 @@
 
     <p>中国でGEOを実施する海外企業にとって、レッドブックは国内プレイヤーに等しく適用されない3つの特定のコンプライアンス圧力を導入します。</p>
 
-    <p><strong>圧力1：サービスプロバイダーのリスク非対称性。</strong> ほとんどの海外ブランドはサードパーティのGEO代理店やプラットフォームに依存しています。レッドブックは、現在のGEOサービス市場が「資格、技術力、サービス品質に大きな格差がある」と明示的に警告しています。GEO代理店を雇っている海外ブランドは、その代理店がレッドブックのガイドラインに従っているか、あるいは未開示の有料掲載や権威シグナル偽造などのカテゴリA倫理違反を引き起こしているかを監査する能力が限られています。</p>
+    <p><strong>1️⃣ 圧力1：サービスプロバイダーのリスク非対称性。</strong> ほとんどの海外ブランドはサードパーティのGEO代理店やプラットフォームに依存しています。レッドブックは、現在のGEOサービス市場が「資格、技術力、サービス品質に大きな格差がある」と明示的に警告しています。GEO代理店を雇っている海外ブランドは、その代理店がレッドブックのガイドラインに従っているか、あるいは未開示の有料掲載や権威シグナル偽造などのカテゴリA倫理違反を引き起こしているかを監査する能力が限られています。</p>
 
-    <p><strong>圧力2：クロスランゲージコンテンツガバナンス。</strong> 一般的なGEO戦術は、一貫したブランド情報を複数の言語で複数のプラットフォームに配信することです。しかし、レッドブックの「真実優先」と「証拠ベースのコンテンツ」の重視は、英語のソース資料と中国語のAI向けコンテンツの間の情報ギャップがコンプライアンスリスクになることを意味します。中国語のGEOコンテンツが英語のウェブサイトで裏付けられていない主張を行う場合、それはカテゴリBの情報品質問題です。</p>
+    <p><strong>2️⃣ 圧力2：クロスランゲージコンテンツガバナンス。</strong> 一般的なGEO戦術は、一貫したブランド情報を複数の言語で複数のプラットフォームに配信することです。しかし、レッドブックの「真実優先」と「証拠ベースのコンテンツ」の重視は、英語のソース資料と中国語のAI向けコンテンツの間の情報ギャップがコンプライアンスリスクになることを意味します。中国語のGEOコンテンツが英語のウェブサイトで裏付けられていない主張を行う場合、それはカテゴリBの情報品質問題です。</p>
 
-    <p><strong>圧力3：内部モニタリング能力の欠如。</strong> レッドブックは、AI検索結果におけるブランド言及率、ランキング変化、コンテンツのずれの継続的なモニタリングを推奨しています。中国語の運営チームを持たない海外ブランドは、これを自力で現実的に行うことはできません。中国のAI検索ランドスケープを直接監視するオペレーターと協力しない限り、GEOコンプライアンスにおいて盲目飛行していることになります。</p>
+    <p><strong>3️⃣ 圧力3：内部モニタリング能力の欠如。</strong> レッドブックは、AI検索結果におけるブランド言及率、ランキング変化、コンテンツのずれの継続的なモニタリングを推奨しています。中国語の運営チームを持たない海外ブランドは、これを自力で現実的に行うことはできません。中国のAI検索ランドスケープを直接監視するオペレーターと協力しない限り、GEOコンプライアンスにおいて盲目飛行していることになります。</p>
 
     <h2>🔍 海外ブランドが今すぐ監査すべき具体的リスク</h2>
 
