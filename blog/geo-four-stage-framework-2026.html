@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -305,6 +316,13 @@
 
     <p>The study, released by the 博枢知耀 research team, synthesizes findings from the Princeton KDD 2024 paper on GEO methods and the GEO Red Book 2026 into a four-stage implementation framework. It is the first structured methodology for GEO execution in the Chinese market, and it arrives at a moment when 440 million monthly active users are relying on AI applications for information, and the GEO market is expanding from ¥28.5 billion toward ¥80 billion.</p>
 
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 Baidu AI</span>
+      <span class="platform-pill doubao">🤖 Doubao</span>
+      <span class="platform-pill deepseek">🧠 DeepSeek</span>
+      <span class="platform-pill tongyi">📚 Tongyi Qianwen</span>
+    </div>
+
     <p>For overseas brands, the framework is both encouraging and sobering. Encouraging because it confirms that a methodical approach works — the Princeton study showed that correct method combinations can increase brand visibility in AI-generated answers by approximately 40%. Sobering because most overseas brands are stuck at stage one, if they have started at all.</p>
 
     <div class="stats-grid">
@@ -334,6 +352,16 @@
 
     <p>GEO is not a one-time project. AI models update continuously, competitors move constantly, and user query patterns shift over time. This stage requires regular retesting across major AI platforms, tracking brand performance changes, and closing the loop: detect deviation → identify cause → adjust strategy → re-verify.</p>
 
+    <table class="comparison-table">
+      <thead><tr><th>Stage</th><th>Focus</th><th>Key Task</th></tr></thead>
+      <tbody>
+        <tr><td>1️⃣ Infrastructure</td><td>Baseline Accuracy</td><td>Website, Baike, media, cross-channel consistency</td></tr>
+        <tr><td>2️⃣ Content</td><td>Question-Driven</td><td>Structured content answering real user queries</td></tr>
+        <tr><td>3️⃣ Source Network</td><td>Trust Signals</td><td>Authoritative media, research citations, platform synergy</td></tr>
+        <tr><td>4️⃣ Monitoring</td><td>Continuous Loop</td><td>Detect → Diagnose → Adjust → Re-verify</td></tr>
+      </tbody>
+    </table>
+
     <h2>📐 Why the Sequence Matters</h2>
 
     <p>The study's most important insight is not the four stages themselves — each stage describes actions that are individually familiar. The insight is the sequence. Princeton's research demonstrated that some GEO methods not only fail to improve visibility but actively reduce it when applied in the wrong order or combination.</p>
@@ -348,11 +376,11 @@
 
     <p>For overseas companies operating in China, the four-stage framework reveals three specific failure points that domestic competitors face differently, if at all.</p>
 
-    <p><strong>Failure Point 1: Stage 1 foundation gaps.</strong> Most overseas brands have accurate English-language websites. But the Chinese-language information ecosystem — Baidu Baike entries, Chinese media coverage, Chinese-language product documentation — is often incomplete or inconsistent. AI platforms pulling from Chinese-language sources encounter fragmented, conflicting, or absent brand data. The foundation is cracked before anything is built on it.</p>
+    <p><strong>1️⃣ Failure Point 1: Stage 1 foundation gaps.</strong> Most overseas brands have accurate English-language websites. But the Chinese-language information ecosystem — Baidu Baike entries, Chinese media coverage, Chinese-language product documentation — is often incomplete or inconsistent. AI platforms pulling from Chinese-language sources encounter fragmented, conflicting, or absent brand data. The foundation is cracked before anything is built on it.</p>
 
-    <p><strong>Failure Point 2: Stage 2 content-language mismatch.</strong> The framework's "question-driven" principle requires knowing what Chinese users are actually asking AI platforms. Overseas brands that translate English FAQ content into Chinese miss the point: the questions Chinese users ask about a product category, the vocabulary they use, and the comparison frameworks they apply are culturally specific. Translated content answers the wrong questions.</p>
+    <p><strong>2️⃣ Failure Point 2: Stage 2 content-language mismatch.</strong> The framework's "question-driven" principle requires knowing what Chinese users are actually asking AI platforms. Overseas brands that translate English FAQ content into Chinese miss the point: the questions Chinese users ask about a product category, the vocabulary they use, and the comparison frameworks they apply are culturally specific. Translated content answers the wrong questions.</p>
 
-    <p><strong>Failure Point 3: Stage 3 source network inaccessibility.</strong> Building a network of credible Chinese-language sources requires relationships with Chinese media, research institutions, and platform ecosystems. Overseas brands without local operations have no natural path to building this network. They are dependent on whatever organic coverage exists, which is usually thin.</p>
+    <p><strong>3️⃣ Failure Point 3: Stage 3 source network inaccessibility.</strong> Building a network of credible Chinese-language sources requires relationships with Chinese media, research institutions, and platform ecosystems. Overseas brands without local operations have no natural path to building this network. They are dependent on whatever organic coverage exists, which is usually thin.</p>
 
     <div class="callout callout-warning">
       <strong>Warning: Most overseas brands are stuck at stage 0.</strong> The four-stage framework assumes you have already committed to GEO as a strategy. But for overseas brands entering China, the pre-stage question is: do you have the operational infrastructure — business entity, Chinese-language operations, platform access — to even start stage 1? Without a domestic operator, the framework is a map with no vehicle.

@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -305,6 +316,13 @@
 
     <p>博枢知耀研究チームが発表したこの研究は、Princeton KDD 2024のGEOメソッド論文集とGEOレッドブック2026の知見を統合し、四段階の実装フレームワークにまとめています。これは中国市場における初の体系的なGEO実行方法論であり、4.4億人の月間アクティブユーザーが情報収集にAIアプリケーションを利用し、GEO市場が285億元から800億元へと拡大しているタイミングで発表されました。</p>
 
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 百度AI</span>
+      <span class="platform-pill doubao">🤖 豆包</span>
+      <span class="platform-pill deepseek">🧠 DeepSeek</span>
+      <span class="platform-pill tongyi">📚 通義千問</span>
+    </div>
+
     <p>海外ブランドにとって、このフレームワークは励みにもなれば冷静にもさせます。励みになるのは、体系的なアプローチが機能することを確認しているからです——Princetonの研究では、正しい方法の組み合わせがAI生成回答におけるブランドの可視性を約40%向上させることが示されました。冷静にさせるのは、ほとんどの海外ブランドがせいぜい第一段階で止まっているという事実です。</p>
 
     <div class="stats-grid">
@@ -334,6 +352,16 @@
 
     <p>GEOは一回限りのプロジェクトではありません。AIモデルは継続的に更新され、競合他社は絶えず動き、ユーザーの質問パターンは時間とともに変化します。この段階では、主要AIプラットフォームでの定期的な再テスト、ブランドパフォーマンスの変化の追跡、そして「偏差の検出→原因の特定→戦略の調整→再検証」というループの完結が求められます。</p>
 
+    <table class="comparison-table">
+      <thead><tr><th>段階</th><th>焦点</th><th>主要タスク</th></tr></thead>
+      <tbody>
+        <tr><td>1️⃣ 情報基盤</td><td>基本精度</td><td>Webサイト、百科、メディア、クロスチャネル一貫性</td></tr>
+        <tr><td>2️⃣ コンテンツ</td><td>質問駆動</td><td>実ユーザー質問に答える構造化コンテンツ</td></tr>
+        <tr><td>3️⃣ 信頼NW</td><td>信頼信号</td><td>権威メディア、研究引用、プラットフォーム相乗効果</td></tr>
+        <tr><td>4️⃣ モニタリング</td><td>継続ループ</td><td>検出→診断→調整→再検証</td></tr>
+      </tbody>
+    </table>
+
     <h2>📐 なぜ順序が重要なのか</h2>
 
     <p>この研究の最も重要な洞察は四段階そのものではなく、その順序にあります。Princetonの研究は、一部のGEOメソッドが可視性の向上に失敗するだけでなく、誤った順序や組み合わせで適用されると積極的に低下させることを実証しました。</p>
@@ -348,11 +376,11 @@
 
     <p>中国で事業を行う海外企業にとって、四段階フレームワークは国内競合とは異なる三つの具体的な失敗ポイントを明らかにします。</p>
 
-    <p><strong>失敗ポイント1：第一段階の基礎ギャップ。</strong> ほとんどの海外ブランドは正確な英語ウェブサイトを持っています。しかし中国語の情報エコシステム——百度百科のエントリ、中国語メディア報道、中国語製品ドキュメント——は不完全または不整合な場合が多いのです。中国語ソースから情報を取得するAIプラットフォームは、断片的で矛盾した、あるいは欠落したブランドデータに遭遇します。何かを構築する前に基礎が割れています。</p>
+    <p><strong>1️⃣ 失敗ポイント1：第一段階の基礎ギャップ。</strong> ほとんどの海外ブランドは正確な英語ウェブサイトを持っています。しかし中国語の情報エコシステム——百度百科のエントリ、中国語メディア報道、中国語製品ドキュメント——は不完全または不整合な場合が多いのです。中国語ソースから情報を取得するAIプラットフォームは、断片的で矛盾した、あるいは欠落したブランドデータに遭遇します。何かを構築する前に基礎が割れています。</p>
 
-    <p><strong>失敗ポイント2：第二段階のコンテンツ-言語ミスマッチ。</strong> フレームワークの「質問駆動」原則は、中国ユーザーがAIプラットフォームに実際に尋ねていることを知る必要があります。英語のFAQコンテンツを中国語に翻訳する海外ブランドは論点を外しています：中国ユーザーが製品カテゴリについて尋ねる質問、使用する語彙、適用する比較フレームワークは文化的に固有です。翻訳されたコンテンツは間違った質問に答えています。</p>
+    <p><strong>2️⃣ 失敗ポイント2：第二段階のコンテンツ-言語ミスマッチ。</strong> フレームワークの「質問駆動」原則は、中国ユーザーがAIプラットフォームに実際に尋ねていることを知る必要があります。英語のFAQコンテンツを中国語に翻訳する海外ブランドは論点を外しています：中国ユーザーが製品カテゴリについて尋ねる質問、使用する語彙、適用する比較フレームワークは文化的に固有です。翻訳されたコンテンツは間違った質問に答えています。</p>
 
-    <p><strong>失敗ポイント3：第三段階の信頼ネットワークへのアクセス不能。</strong> 信頼できる中国語ソースのネットワークを構築するには、中国メディア、研究機関、プラットフォームエコシステムとの関係が必要です。ローカルオペレーションを持たない海外ブランドには、このネットワークを構築する自然な経路がありません。存在する有機的な報道に依存せざるを得ず、それは通常薄いものです。</p>
+    <p><strong>3️⃣ 失敗ポイント3：第三段階の信頼ネットワークへのアクセス不能。</strong> 信頼できる中国語ソースのネットワークを構築するには、中国メディア、研究機関、プラットフォームエコシステムとの関係が必要です。ローカルオペレーションを持たない海外ブランドには、このネットワークを構築する自然な経路がありません。存在する有機的な報道に依存せざるを得ず、それは通常薄いものです。</p>
 
     <div class="callout callout-warning">
       <strong>警告：ほとんどの海外ブランドはステージ0で立ち往生しています。</strong> 四段階フレームワークは、すでにGEOを戦略として採用していることを前提としています。しかし中国に参入する海外ブランドにとって、前提段階の質問は：第1段階を始めるための運営インフラ（事業体、中国語運営、プラットフォームアクセス）を持っていますか？国内オペレーターなしでは、フレームワークは車のない地図です。
