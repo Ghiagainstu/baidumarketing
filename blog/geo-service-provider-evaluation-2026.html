@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -338,6 +349,13 @@
 
     <p>This timeline is not a history lesson. It is a vendor evaluation checklist in chronological form. Every event introduced obligations that a legitimate GEO provider should now be able to demonstrate compliance with. If a provider cannot explain how they adapted to these regulatory milestones, they were either not paying attention or are actively avoiding scrutiny.</p>
 
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 Baidu AI</span>
+      <span class="platform-pill doubao">🤖 Doubao</span>
+      <span class="platform-pill deepseek">🧠 DeepSeek</span>
+      <span class="platform-pill tongyi">📚 Tongyi Qianwen</span>
+    </div>
+
     <div class="callout callout-insight">
       <strong>Insight: The compliance timeline is a provider test you can run without Chinese.</strong> Seven events in six months. Each introduced a standard a legitimate provider should be able to reference. Ask a candidate: "What did your team change in response to the March 15 CCTV exposure?" If they cannot describe a concrete operational change, you have your answer.
     </div>
@@ -346,17 +364,17 @@
 
     <p>The following framework is adapted from criteria published in a July 1 CSDN industry article, translated into practical questions an overseas brand can actually ask. None of these questions requires Chinese-language expertise to verify — they are designed for a procurement team that operates in English.</p>
 
-    <p><strong>Criterion 1: Verifiable certification.</strong> Ask for a certificate or test report number that can be independently verified. The China Academy of Information and Communications Technology (CAICT) and the China Telecommunication Technology Labs issued GEO compliance certifications in 2026. A legitimate provider should be able to produce a certificate number or report number that can be looked up. If the answer is "we are the market leader" without a verifiable document, move on.</p>
+    <p><strong>1️⃣ Criterion 1: Verifiable certification.</strong> Ask for a certificate or test report number that can be independently verified. The China Academy of Information and Communications Technology (CAICT) and the China Telecommunication Technology Labs issued GEO compliance certifications in 2026. A legitimate provider should be able to produce a certificate number or report number that can be looked up. If the answer is "we are the market leader" without a verifiable document, move on.</p>
 
-    <p><strong>Criterion 2: Proprietary technology.</strong> Ask whether the provider has its own technology platform or is reselling third-party tools. A provider with proprietary search infrastructure, model adaptation capability, and content safety mechanisms can explain exactly how their system works. A reseller cannot. This matters because platform-level safety controls — detection of fabricated citations, content authenticity verification — cannot be retrofitted onto someone else's software.</p>
+    <p><strong>2️⃣ Criterion 2: Proprietary technology.</strong> Ask whether the provider has its own technology platform or is reselling third-party tools. A provider with proprietary search infrastructure, model adaptation capability, and content safety mechanisms can explain exactly how their system works. A reseller cannot. This matters because platform-level safety controls — detection of fabricated citations, content authenticity verification — cannot be retrofitted onto someone else's software.</p>
 
-    <p><strong>Criterion 3: Anti-poisoning capability.</strong> This is the direct response to the March 15 exposure. Ask the provider to explain their content screening process specifically for preventing AI poisoning: how they detect fabricated citations, how they verify source authenticity, how they prevent exaggerated claims from entering AI-facing content. A provider who cannot describe a concrete screening pipeline is a risk.</p>
+    <p><strong>3️⃣ Criterion 3: Anti-poisoning capability.</strong> This is the direct response to the March 15 exposure. Ask the provider to explain their content screening process specifically for preventing AI poisoning: how they detect fabricated citations, how they verify source authenticity, how they prevent exaggerated claims from entering AI-facing content. A provider who cannot describe a concrete screening pipeline is a risk.</p>
 
-    <p><strong>Criterion 4: Brand mention monitoring.</strong> Ask whether the provider can show a live dashboard of your brand's AI visibility — mentions, ranking position, and source URLs across major AI platforms. The dashboard should include clickable links to actual AI-generated outputs, not aggregate numbers. "Your visibility improved 40%" without a link to the output is marketing, not measurement.</p>
+    <p><strong>4️⃣ Criterion 4: Brand mention monitoring.</strong> Ask whether the provider can show a live dashboard of your brand's AI visibility — mentions, ranking position, and source URLs across major AI platforms. The dashboard should include clickable links to actual AI-generated outputs, not aggregate numbers. "Your visibility improved 40%" without a link to the output is marketing, not measurement.</p>
 
-    <p><strong>Criterion 5: Attribution and effect tracking.</strong> Ask whether the provider can separate GEO-driven traffic from other marketing channels and attribute conversions to specific AI citations. The 2026 standard is multi-touch attribution with a defined lookback window, not "we drove more traffic." If the provider cannot show an attribution methodology document, their performance claims are unverifiable.</p>
+    <p><strong>5️⃣ Criterion 5: Attribution and effect tracking.</strong> Ask whether the provider can separate GEO-driven traffic from other marketing channels and attribute conversions to specific AI citations. The 2026 standard is multi-touch attribution with a defined lookback window, not "we drove more traffic." If the provider cannot show an attribution methodology document, their performance claims are unverifiable.</p>
 
-    <p><strong>Criterion 6: Industry fit and pricing transparency.</strong> Ask for reference cases in your specific industry, not general brand lists. A provider serving consumer goods may have no relevant experience for B2B industrial equipment. Also ask for a transparent pricing breakdown: what is the monthly retainer, what is performance-linked, what are the content production unit costs. If the pricing structure is "we'll send you a custom proposal," the market has matured enough to demand more.</p>
+    <p><strong>6️⃣ Criterion 6: Industry fit and pricing transparency.</strong> Ask for reference cases in your specific industry, not general brand lists. A provider serving consumer goods may have no relevant experience for B2B industrial equipment. Also ask for a transparent pricing breakdown: what is the monthly retainer, what is performance-linked, what are the content production unit costs. If the pricing structure is "we'll send you a custom proposal," the market has matured enough to demand more.</p>
 
     <h2>⚠️ Why Overseas Brands Face Higher Selection Risk</h2>
 
