@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -318,6 +329,21 @@
 
     <p>The announcements are unusually coordinated. Doubao published a <em>Doubao AI Agent Feature Shutdown Notice</em> on July 4, stating the feature will be discontinued on July 15 due to "product function adjustment." After July 15, no new agents can be created, and existing agents will stop functioning. Users have until October 15 to back up their data. Tongyi Qianwen followed with a similar notice: anthropomorphic interaction agents and user-built agents will be disabled on July 10, with full shutdown on July 15.</p>
 
+    <div class="platform-pills">
+      <span class="platform-pill doubao">🤖 Doubao (ByteDance)</span>
+      <span class="platform-pill tongyi">📚 Tongyi Qianwen (Alibaba)</span>
+    </div>
+
+    <table class="comparison-table">
+      <thead><tr><th>Date</th><th>Event</th></tr></thead>
+      <tbody>
+        <tr><td>July 4</td><td>Doubao + Tongyi Qianwen announce shutdown</td></tr>
+        <tr><td>July 10</td><td>Tongyi: anthropomorphic agents disabled</td></tr>
+        <tr><td>July 15</td><td>Both platforms fully shut down agent features</td></tr>
+        <tr><td>October 15</td><td>Data backup window closes</td></tr>
+      </tbody>
+    </table>
+
     <p>The regulation these moves are responding to defines anthropomorphic interaction services as "continuous emotional interaction services that use AI to simulate natural person personality traits, thought patterns, and communication styles." The scope is broad — it covers any AI system designed to engage users in human-like conversation, including brand personas, customer service agents, and interactive marketing characters.</p>
 
     <h2>⚠️ Why This Matters for Brands</h2>
@@ -340,15 +366,15 @@
 
     <p>There are three immediate actions for any overseas brand with a China marketing presence:</p>
 
-    <p><strong>Audit your AI agent footprint.</strong> If your brand has built custom agents on Doubao, Tongyi Qianwen, or any other Chinese AI platform, identify them now. Back up the data before the October 15 deadline. Understand what engagement metrics were being driven through those agents and plan for the gap.</p>
+    <p><strong>1️⃣ Audit your AI agent footprint.</strong> If your brand has built custom agents on Doubao, Tongyi Qianwen, or any other Chinese AI platform, identify them now. Back up the data before the October 15 deadline. Understand what engagement metrics were being driven through those agents and plan for the gap.</p>
 
     <div class="callout callout-warning">
       <strong>Warning: If your brand has custom AI agents on Chinese platforms, your compliance clock is ticking.</strong> July 15 is 11 days away. Data backup closes October 15. Do not wait until a platform sends a reminder — most brands using custom agents will discover their loss reactively. Audit your agent footprint today.
     </div>
 
-    <p><strong>Shift focus to passive AI visibility.</strong> The regulatory trend points toward a distinction between AI systems that actively engage users in conversation (regulated under the new measures) and AI systems that passively surface authoritative brand information in response to queries (increasingly valuable). The GEO framework we have been covering this week — information infrastructure, structured content, credible source networks, and continuous monitoring — becomes more important, not less, when active agent channels are closed.</p>
+    <p><strong>2️⃣ Shift focus to passive AI visibility.</strong> The regulatory trend points toward a distinction between AI systems that actively engage users in conversation (regulated under the new measures) and AI systems that passively surface authoritative brand information in response to queries (increasingly valuable). The GEO framework we have been covering this week — information infrastructure, structured content, credible source networks, and continuous monitoring — becomes more important, not less, when active agent channels are closed.</p>
 
-    <p><strong>Do not assume this is the last regulatory action.</strong> The anthropomorphism regulation is the first of what is likely to be a sequence. The GEO Red Book established governance standards. The four-stage framework provided an implementation path. The service provider evaluation criteria defined how to select partners. Each of these is a response to a regulatory signal. There will be more.</p>
+    <p><strong>3️⃣ Do not assume this is the last regulatory action.</strong> The anthropomorphism regulation is the first of what is likely to be a sequence. The GEO Red Book established governance standards. The four-stage framework provided an implementation path. The service provider evaluation criteria defined how to select partners. Each of these is a response to a regulatory signal. There will be more.</p>
 
     <h2>✅ What BPP Does About It</h2>
 

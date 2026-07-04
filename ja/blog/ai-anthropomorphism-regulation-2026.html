@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.deepseek { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.tongyi { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -318,6 +329,21 @@
 
     <p>発表は異例の調整ぶりです。豆包は7月4日に『豆包AIエージェント機能停止通知』を発表し、「製品機能の調整」により7月15日に機能を停止すると述べました。7月15日以降、新規エージェントの作成はできず、既存のエージェントも動作を停止します。利用者には10月15日までデータバックアップの猶予期間が設けられています。通義千問も同様の通知を続けました：擬人化インタラクションエージェントと利用者定義エージェントは7月10日に無効化され、7月15日に完全停止します。</p>
 
+    <div class="platform-pills">
+      <span class="platform-pill doubao">🤖 豆包（バイトダンス）</span>
+      <span class="platform-pill tongyi">📚 通義千問（アリババ）</span>
+    </div>
+
+    <table class="comparison-table">
+      <thead><tr><th>日付</th><th>イベント</th></tr></thead>
+      <tbody>
+        <tr><td>7月4日</td><td>豆包＋通義千問が停止を発表</td></tr>
+        <tr><td>7月10日</td><td>通義：擬人化エージェント無効化</td></tr>
+        <tr><td>7月15日</td><td>両プラットフォーム完全停止</td></tr>
+        <tr><td>10月15日</td><td>データバックアップ期限</td></tr>
+      </tbody>
+    </table>
+
     <p>これらの動きが対応している規制は、擬人化インタラクションサービスを「AIを用いて自然人の人格特性、思考パターン、コミュニケーションスタイルを模倣する継続的な感情的インタラクションサービス」と定義しています。その範囲は広く——ブランドペルソナ、カスタマーサービスエージェント、インタラクティブマーケティングキャラクターを含む、人間らしい会話で利用者と関わるよう設計されたあらゆるAIシステムをカバーします。</p>
 
     <h2>ブランドにとってこれが重要な理由</h2>
@@ -344,11 +370,11 @@
       <strong>警告：ブランドが中国のAIプラットフォームにカスタムエージェントを持っている場合、コンプライアンスの時計は刻んでいます。</strong> 7月15日まであと11日です。データバックアップの期限は10月15日です。プラットフォームからリマインダーが届くのを待たないでください——カスタムエージェントを使用しているほとんどのブランドは、その喪失を受動的に発見します。今日エージェントのフットプリントを監査してください。
     </div>
 
-    <p><strong>AIエージェントのフットプリントを監査する。</strong> ブランドが豆包、通義千問、その他の中国AIプラットフォーム上にカスタムエージェントを構築している場合、今すぐ特定してください。10月15日の期限前にデータをバックアップしてください。それらのエージェントを通じてどのようなエンゲージメント指標が駆動されていたかを理解し、ギャップに備えてください。</p>
+    <p><strong>1️⃣ AIエージェントのフットプリントを監査する。</strong> ブランドが豆包、通義千問、その他の中国AIプラットフォーム上にカスタムエージェントを構築している場合、今すぐ特定してください。10月15日の期限前にデータをバックアップしてください。それらのエージェントを通じてどのようなエンゲージメント指標が駆動されていたかを理解し、ギャップに備えてください。</p>
 
-    <p><strong>受動的AI可視性に焦点をシフトする。</strong> 規制の方向性は、利用者と能動的に対話するAIシステム（新措置の下で規制対象）と、クエリに応答して受動的に権威あるブランド情報を表示するAIシステム（価値が増大）の区別を示しています。今週カバーしてきたGEOフレームワーク——情報インフラ、構造化コンテンツ、信頼できる情報源ネットワーク、継続的モニタリング——は、能動的エージェントチャネルが閉じられるほど、より重要になります。</p>
+    <p><strong>2️⃣ 受動的AI可視性に焦点をシフトする。</strong> 規制の方向性は、利用者と能動的に対話するAIシステム（新措置の下で規制対象）と、クエリに応答して受動的に権威あるブランド情報を表示するAIシステム（価値が増大）の区別を示しています。今週カバーしてきたGEOフレームワーク——情報インフラ、構造化コンテンツ、信頼できる情報源ネットワーク、継続的モニタリング——は、能動的エージェントチャネルが閉じられるほど、より重要になります。</p>
 
-    <p><strong>これが最後の規制措置だと思わないこと。</strong> 擬人化規制は、おそらく連続する最初のものです。GEOレッドブックはガバナンス基準を確立しました。四段階フレームワークは実装経路を提供しました。サービスプロバイダー評価基準はパートナー選定方法を定義しました。これらはすべて規制シグナルへの対応です。さらに続きます。</p>
+    <p><strong>3️⃣ これが最後の規制措置だと思わないこと。</strong> 擬人化規制は、おそらく連続する最初のものです。GEOレッドブックはガバナンス基準を確立しました。四段階フレームワークは実装経路を提供しました。サービスプロバイダー評価基準はパートナー選定方法を定義しました。これらはすべて規制シグナルへの対応です。さらに続きます。</p>
 
     <h2>BPPがそれに対して行うこと</h2>
 
