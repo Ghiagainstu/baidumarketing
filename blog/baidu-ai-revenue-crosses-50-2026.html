@@ -182,7 +182,7 @@
     .stat-card:nth-child(2) { border-top: 4px solid #4F46E5; }
     .stat-card:nth-child(3) { border-top: 4px solid #7C3AED; }
     .stat-card:nth-child(4) { border-top: 4px solid #2563EB; }
-    .stat-number { font-size: 1.8rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
+    .stat-number { font-size: 1.4rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
     .stat-label { font-size: .82rem; color: var(--gray-600); margin-top: 6px; }
     [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
     [data-theme="dark"] .stat-card:hover { box-shadow: 0 12px 24px rgba(0,0,0,.3); }
@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wenxin { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.deepseek { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    .platform-pill.douyin { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
+    [data-theme="dark"] .platform-pill.wenxin { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(159,18,57,.15); border-color: #E11D48; color: #FDA4AF; }
   </style>
 </head>
 <body>
@@ -311,6 +322,23 @@
       <div class="stat-card"><div class="stat-number">>50%</div><div class="stat-label">🏛️ AI Share of Total Revenue</div></div>
       <div class="stat-card"><div class="stat-number">45%→18%</div><div class="stat-label">📉 Blue Link CTR (3 Years)</div></div>
     </div>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 Baidu Wenxin</span>
+      <span class="platform-pill deepseek">🧠 DeepSeek</span>
+      <span class="platform-pill douyin">🎵 Douyin AI</span>
+      <span class="platform-pill wenxin">📚 Tongyi Qianwen</span>
+    </div>
+
+    <table class="comparison-table">
+      <thead><tr><th>Metric</th><th>2023</th><th>2026 (Q1)</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Blue Link CTR</td><td>~45%</td><td>~18%</td><td>📉 -60%</td></tr>
+        <tr><td>Baidu AI Revenue Share</td><td>&lt;30% est.</td><td>&gt;50%</td><td>📈 Structural shift</td></tr>
+        <tr><td>AI Search Substitution</td><td>N/A</td><td>&gt;45%</td><td>📊 IDC confirmed</td></tr>
+        <tr><td>GEO Market Size</td><td>N/A</td><td>¥480B</td><td>🏆 +67.8% YoY</td></tr>
+      </tbody>
+    </table>
 
     <h2>📊 What the Numbers Mean</h2>
 
