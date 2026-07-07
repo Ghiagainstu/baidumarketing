@@ -272,7 +272,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
@@ -297,7 +297,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .takeaway-box ul li strong { color: #111827; font-weight: 700; }
 
 /* Blockquote (article-content) */
-.article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
+.article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
@@ -407,7 +407,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <h1 class="article-title">바이두 전환 추적, 중복 집계 방지 기능 추가: B2B 캠페인에서 정확한 데이터가 중요한 이유</h1>
           <div class="article-meta">
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2021년 8월 17일</span>
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 약 3분</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>약 3분</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 검색 광고</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro 팀</span>
     </div>
@@ -429,23 +429,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>2021년 11월부터 바이두의 전환 추적에 <strong>중복 제거 기능</strong>이 내장되었습니다. 동일한 전환 이벤트가 여러 채널을 통해 보고되면, 시스템이 자동으로 중복을 필터링합니다.</p>
 
-<p><div class="stats-grid"></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🔍</div></p>
-<p><div class="stat-number">자동 감지</div></p>
-<p><div class="stat-label">중복 전환 이벤트 자동 식별</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">📊</div></p>
-<p><div class="stat-number">깨끗한 데이터</div></p>
-<p><div class="stat-label">실제 전환 수를 리포트에 반영</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🎯</div></p>
-<p><div class="stat-number">스마트 oCPC</div></p>
-<p><div class="stat-label">실제 데이터 기반 알고리즘 최적화</div></p>
-<p></div></p>
-<p></div></p>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">🔍</div>
+<div class="stat-number">자동 감지</div>
+<div class="stat-label">중복 전환 이벤트 자동 식별</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">📊</div>
+<div class="stat-number">깨끗한 데이터</div>
+<div class="stat-label">실제 전환 수를 리포트에 반영</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">🎯</div>
+<div class="stat-number">스마트 oCPC</div>
+<div class="stat-label">실제 데이터 기반 알고리즘 최적화</div>
+</div>
+</div>
 
 <p><strong>이 기능이 감지하는 일반적인 중복 패턴:</strong></p>
 <ul>
@@ -456,7 +456,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <h2>캠페인 성과에 미치는 영향</h2>
 
-<p><table class="comparison-table"></p>
+<table class="comparison-table">
 <p><thead></p>
 <p><tr><th>지표</th><th>중복 있음</th><th>중복 제거 후</th></tr></p>
 <p></thead></p>
@@ -466,11 +466,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><tr><td>oCPC 최적화</td><td>존재하지 않는 데이터에 최적화</td><td>실제 행동에 최적화</td></tr></p>
 <p><tr><td>예산 판단</td><td>잘못된 ROI 기반</td><td>실제 ROI 기반</td></tr></p>
 <p></tbody></p>
-<p></table></p>
+</table>
 
-<p><div class="callout tip"></p>
+<div class="callout tip">
 <p><strong>💡 실전 조언:</strong> 자동 중복 제거가 도입되었더라도, 분기마다 한 번씩 전환 추적 설정을 감사하세요. 각 전환 목표에 추적 방법이 하나만 있는지 확인하십시오. 이중화는 가용성에 좋지만, 데이터 정확성에는 해롭습니다.</p>
-<p></div></p>
+</div>
 
 <h2>해외 브랜드가 직면한 장벽</h2>
 
@@ -485,15 +485,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <h2>BPP가 깨끗한 전환 데이터를 실현하는 방법</h2>
 
-<p><div class="takeaway"></p>
-<p><h4>🎯 BPP의 솔루션</h4></p>
-<p><ul></p>
-<p><li>✅ 첫날부터 올바른 방법으로 바이두 계정을 개설하고 전환 추적을 설정합니다 -- 1목표 1추적 방식</li></p>
-<p><li>✅ 기존 설정을 감사하여 데이터를 왜곡하는 중복 집계 문제를 식별하고 수정합니다</li></p>
-<p><li>✅ 바이두 전환 API와 기존 CRM 및 분석 인프라를 연동합니다</li></p>
-<p><li>✅ 매월 바이두 전환 데이터와 내부 시스템 데이터를 대조하여 정합성을 검증합니다</li></p>
-<p></ul></p>
-<p></div></p>
+<div class="takeaway">
+<h4>🎯 BPP의 솔루션</h4>
+<ul>
+<li>✅ 첫날부터 올바른 방법으로 바이두 계정을 개설하고 전환 추적을 설정합니다 -- 1목표 1추적 방식</li>
+<li>✅ 기존 설정을 감사하여 데이터를 왜곡하는 중복 집계 문제를 식별하고 수정합니다</li>
+<li>✅ 바이두 전환 API와 기존 CRM 및 분석 인프라를 연동합니다</li>
+<li>✅ 매월 바이두 전환 데이터와 내부 시스템 데이터를 대조하여 정합성을 검증합니다</li>
+</ul>
+</div>
 
 <p><strong>깨끗한 데이터가 더 현명한 의사결정을 이끕니다. BPP가 당신의 바이두 전환 데이터를 정확하게 유지합니다.</strong></p>
 
@@ -553,7 +553,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
-      <div class="footer-lang"><a href="/blog/baidu-conversion-tracking-dedup">🇺🇸 English</a> | <a href="/ja/blog/baidu-conversion-tracking-dedup">日本語</a> | <a href="/ko/blog/baidu-conversion-tracking-dedup">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

@@ -19,11 +19,11 @@
   <title>AEO vs SEO vs GEO：中国市場向け新しい検索最適化スタック — Baidu PPC Pro Blog</title>
 
 <meta name="description" content="中国市場を狙う海外広告主向けのSEO、AEO、GEO解説。百度のAI検索がルールをどう変え、何をすべきか。">
-  <link rel="canonical" href="https://www.baidumarketing.com/blog/aeo-vs-seo-vs-geo-china">
+  <link rel="canonical" href="https://www.baidumarketing.com/ja/blog/aeo-vs-seo-vs-geo-china">
   <meta property="og:type" content="article">
   <meta property="og:title" content="AEO vs SEO vs GEO：中国市場向け新しい検索最適化スタック">
   <meta property="og:description" content="中国市場を狙う海外広告主向けのSEO、AEO、GEO解説。百度のAI検索がルールをどう変え、何をすべきか。">
-  <meta property="og:url" content="https://www.baidumarketing.com/blog/aeo-vs-seo-vs-geo-china">
+  <meta property="og:url" content="https://www.baidumarketing.com/ja/blog/aeo-vs-seo-vs-geo-china">
   <meta property="og:image" content="https://www.baidumarketing.com/assets/og-brand-default.png">
   <meta property="og:site_name" content="Baidu PPC Pro">
   <meta name="twitter:card" content="summary_large_image">
@@ -212,11 +212,11 @@
     }
     .takeaway-box h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #2932E1; }
     .takeaway-box ul { list-style: none !important; display: flex; flex-direction: column; gap: 8px; padding-left: 0 !important; margin: 12px 0 0 0; }
-    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 24px; position: relative; color: #374151; }
+    .takeaway-box ul li { padding-left: 24px !important; font-size: .9rem; line-height: 1.6; position: relative; color: #374151; }
     .takeaway-box ul li::before { content: '✓'; position: absolute; left: 0; color: #2932E1; font-weight: 700; }
     [data-theme="dark"] .takeaway-box { background: linear-gradient(180deg, #111827 0%, #1E1B4B 100%); border-color: var(--gray-200); }
     [data-theme="dark"] .takeaway-box h3 { color: #818CF8; }
-    [data-theme="dark"] .takeaway-box ul li { color: #D1D5DB; }
+    [data-theme="dark"] .takeaway-box ul li { padding-left: 24px !important; color: #D1D5DB; }
     [data-theme="dark"] .takeaway-box ul li::before { color: #818CF8; }
 
     .cta-box { background: var(--gradient-brand); color: #fff; padding: 48px; border-radius: var(--radius-xl); text-align: center; margin: 50px 0; }
@@ -258,6 +258,13 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .stat-caption { font-size: .82rem; color: var(--gray-600); margin: -8px 0 24px; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.12); border-color: var(--gray-200); color: #C7D2FE; }
+    [data-theme="dark"] .stat-caption { color: var(--gray-400); }
   </style>
 </head>
 <body>
@@ -268,7 +275,7 @@
     </div>
     <div class="nav-right-group">
       <div class="lang-switch">
-        <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="Language">&#x1f1fa;&#x1f1f8;#x1f1ef;&#x1f1fa;&#x1f1f8;#x1f1f5;<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+        <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="Language">🇯🇵<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="lang-switch-menu" id="langSwitchMenu">
           <a href="/blog/aeo-vs-seo-vs-geo-china" lang="en" class="lang-switch-item">🇺🇸 English</a>
           <a href="/ja/blog/aeo-vs-seo-vs-geo-china" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
@@ -304,11 +311,11 @@
 
     <p>SEO、AEO、GEOが実際に何を意味し、百度でどのように連携するかを解説します。</p>
 
-    <h2>モダン検索の3つのレイヤー</h2>
+    <h2>🧭 モダン検索の3つのレイヤー</h2>
 
     <p>検索最適化は3つのレイヤーで構成されます。それぞれがバイヤーの情報検索の異なる部分をターゲットにします。</p>
 
-    <h3>SEO：検索エンジン最適化</h3>
+    <h3>1️⃣ SEO：検索エンジン最適化</h3>
 
     <p>クラシックな手法です。ウェブサイトを最適化し、検索エンジンの結果で上位にランクインさせます。</p>
 
@@ -318,7 +325,7 @@
 
     <p><strong>最適な用途：</strong> ウェブサイトをクリックして訪問するバイヤー——つまり、サプライヤーを調査し、価格を比較し、オプションを評価するB2Bバイヤーの多くに効果的です。</p>
 
-    <h3>AEO：アンサーエンジン最適化</h3>
+    <h3>2️⃣ AEO：アンサーエンジン最適化</h3>
 
     <p>これは結果ではなく、回答になるための最適化です。百度がAI生成の要約や精选摘要をページ上部に表示する際、AEOはあなたのコンテンツがその回答に引用されるかどうかを決定します。</p>
 
@@ -328,7 +335,7 @@
 
     <p><strong>最適な用途：</strong> 百度がSERPで直接回答する情報クエリ——「方法」「とは」「最良の[カテゴリ]」クエリ。</p>
 
-    <h3>GEO：ジェネレイティブエンジン最適化</h3>
+    <h3>3️⃣ GEO：ジェネレイティブエンジン最適化</h3>
 
     <p>これは最新のレイヤーです。GEOはAI生成レスポンス内の引用をターゲットにします——百度だけでなく、ChatGPT、Perplexity、Gemini、そして中国独自のERNIE Bot（文心一言）、DeepSeek、通義千問も含まれます。</p>
 
@@ -338,7 +345,7 @@
 
     <p><strong>最適な用途：</strong> AIツールを使ってベンダーをリストアップするB2Bバイヤー——企業の調達でますます一般的になっています。</p>
 
-    <h2>百度での仕組み（Googleとの違い）</h2>
+    <h2>🔍 百度での仕組み（Googleとの違い）</h2>
 
     <p>概念はグローバルに同じですが、百度の実装にはいくつかの重要な違いがあります：</p>
 
@@ -364,7 +371,19 @@
 
     <p>重要な違い：百度のAI検索は自社エコシステムとより緊密に統合されています。ERNIEが回答を生成する際、百度自体のプロパティ——百度知道、百度百科、百度貼吧、知乎——から多くを抽出します。つまり、百度向けのGEO戦略にはこれらのプラットフォームを含める必要があります。</p>
 
-    <h2>投資配分：どこに集中すべきか</h2>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📖 百度知道</span>
+      <span class="platform-pill baidu">📚 百度百科</span>
+      <span class="platform-pill baidu">💬 百度貼吧</span>
+      <span class="platform-pill baidu">💡 知乎</span>
+    </div>
+
+    <div class="callout callout-insight">
+      <strong>ポイント</strong>
+      <p>百度のGEO戦略はGoogleとは異なり、百度知道・百度百科・百度貼吧・知乎などの自社プロパティを含める必要がある。</p>
+    </div>
+
+    <h2>📊 投資配分：どこに集中すべきか</h2>
 
     <p>中国市場をターゲットにする海外広告主との経験に基づくと、最適化の重点は以下の通りです：</p>
 
@@ -380,6 +399,13 @@
 
 </ul>
 
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-number">50%</div><div class="stat-label">SEO — 主要なリード獲得手段</div></div>
+      <div class="stat-card"><div class="stat-number">30%</div><div class="stat-label">AEO — AI要約での比較増加</div></div>
+      <div class="stat-card"><div class="stat-number">20%</div><div class="stat-label">GEO — エンタープライズAIリスト</div></div>
+    </div>
+    <p class="stat-caption">B2Bメーカー向けの推奨配分（BPPクライアントの大半）。SaaS・テクノロジー企業はGEOに約40%を割く傾向があります。</p>
+
     <p><strong>SaaS・テクノロジー企業向け：</strong></p>
 
     <ul>
@@ -392,7 +418,7 @@
 
 </ul>
 
-    <h2>海外広告主への影響</h2>
+    <h2>🌐 海外広告主への影響</h2>
 
     <p>BPPの視点：3つのレイヤーすべてに中国語コンテンツと中国のインターネットエコシステムでの存在感が必要です。ここがほとんどの海外企業が壁にぶつかる場所です。</p>
 
@@ -434,11 +460,11 @@
 
     <p>各レイヤーは前のレイヤーの上に構築されます。SEOなしにAEOはできません。両方なしにGEOはできません。</p>
 
-    <h2>実践プレイブック</h2>
+    <h2>🗺️ 実践プレイブック</h2>
 
     <p>中国市場をターゲットにする海外広告主として、以下を実行してください：</p>
 
-    <p><strong>ステップ1：基本を押さえる（SEO）</strong></p>
+    <p><strong>1️⃣ ステップ1：基本を押さえる（SEO）</strong></p>
 
     <ul>
 
@@ -450,7 +476,7 @@
 
 </ul>
 
-    <p><strong>ステップ2：回答用に構造化する（AEO）</strong></p>
+    <p><strong>2️⃣ ステップ2：回答用に構造化する（AEO）</strong></p>
 
     <ul>
 
@@ -462,7 +488,7 @@
 
 </ul>
 
-    <p><strong>ステップ3：権威シグナルを構築する（GEO）</strong></p>
+    <p><strong>3️⃣ ステップ3：権威シグナルを構築する（GEO）</strong></p>
 
     <ul>
 
@@ -476,7 +502,7 @@
 
 </ul>
 
-    <h2>BPPが各レイヤーでできること</h2>
+    <h2>🤝 BPPが各レイヤーでできること</h2>
 
     <p>BPPのコアサービスは百度PPC広告です——中国のバイヤーの前に出る最速の方法です。ただし、オーガニック基盤の構築もサポートします：</p>
 
@@ -497,12 +523,22 @@
     <p>BPPのチームが、業界、予算、目標に合わせた現実的な選択肢をご案内します。高圧的ではなく、実直に。</p>
 
     <p>→ <a href="https://baidumarketing.com/ja/contact">BPPチームに問い合わせる</a></p>
+
+    <div class="takeaway-box">
+      <h3>📝 重要ポイント</h3>
+      <ul>
+        <li>SEO・AEO・GEOは重なり合う3層の検索最適化である</li>
+        <li>百度ではAI要約が自社エコシステム（百度知道・百科・貼吧・知乎）と連動する</li>
+        <li>海外広告主には中国語コンテンツと中国プラットフォームへの展開が必須</li>
+        <li>PPCで即時集客しながら、SEO→AEO→GEOを段階的に構築する</li>
+      </ul>
+    </div>
       </article>
     </div>
   </section>
 
   <div class="cta-box">
-        <h3>2026年に百度を製造業ビジネスに活用する準備はできていますか？</h3>
+        <h3>2026年に百度の検索最適化戦略を活用する準備はできていますか？</h3>
         <p>BPPのチームが、業界、予算、目標に合わせた現実的な選択肢をご案内します。</p>
         <a href="/ja/contact" class="cta-btn">BPPチームに問い合わせる</a>
       </div>
@@ -511,7 +547,7 @@
 
   <section class="related-section">
     <div class="container">
-      <h2>関連記事</h2>
+      <h2>📚 関連記事</h2>
       <div class="related-grid"><a href="/ja/blog/why-b2b-baidu-search" class="related-card">
           <span>B2B</span><h4>なぜ百度検索はB2Bに最も過小評価されているチャネルなのか</h4>
           <p>百度検索広告が中国でソーシャルメディアより高品質なB2Bリードを生む理由を解説。</p>
@@ -565,7 +601,7 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 無断転載を禁じます</div>
-            <div class="footer-lang"><a href="/blog/aeo-vs-seo-vs-geo-china">English</a> | <a href="/ja/blog/aeo-vs-seo-vs-geo-china">日本語</a> | <a href="/ko/blog/aeo-vs-seo-vs-geo-china">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

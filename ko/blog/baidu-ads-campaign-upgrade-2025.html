@@ -54,6 +54,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .logo-pro { color: #2932E1; }
     [data-theme="dark"] .logo-pro { color: #818CF8; }
 .nav-links { display: flex; gap: 28px; font-size: .9rem; color: #4B5563; }
+html[lang="ko"] .nav-links { gap: 12px; font-size: .8rem; }
+html[lang="ko"] .nav-links a { white-space: nowrap; }
+
 .nav-links a { position: relative; transition: color .2s; }
 .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: #2932E1; border-radius: 1px; transition: width .4s cubic-bezier(.16,1,.3,1), left .4s cubic-bezier(.16,1,.3,1); }
 .nav-links a:hover { color: #2932E1; }
@@ -126,8 +129,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 /* Callout — Enhanced */
 .callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; font-size: .95rem; line-height: 1.7; display: flex; gap: 14px; align-items: flex-start; transition: transform .2s, box-shadow .2s; }
 .callout:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
-.callout.tip { background: #EEF0FF; border-left: 4px solid #2932E1; }
-.callout.warning { background: #FEF3C7; border-left: 4px solid #F59E0B; }
+.callout.tip { background: #EEF0FF; border: 1px solid #2932E1; }
+.callout.warning { background: #FEF3C7; border: 1px solid #F59E0B; }
 .callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 .callout-stacked { flex-direction: column; align-items: center; text-align: center; }
 .callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
@@ -254,7 +257,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
       <h1 class="article-title">바이두 광고 캠페인 관리 업그레이드 2025: 실제로 바뀐 3가지</h1>
           <div class="article-meta">
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2025년 10월 16일</span>
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 약 5분</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>약 5분</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 플랫폼</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro 팀</span>
     </div>
@@ -271,9 +274,9 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 
 <p>이 글에서는 바이두 2025년 10월 프로덕트 업데이트의 3가지 핵심 개선 사항을 설명하고, 해외 광고주에게 중요한 포인트를 짚어봅니다.</p>
 
-<p><div class="callout tip"></p>
+<div class="callout tip">
 <p><strong>💡 BPP 시각:</strong> 이 업그레이드들은 실무적으로 유용하지만, 유효한 바이두 계정이 있어야 의미가 있습니다. 해외 기업의 최대 장벽은 여전히 계정 개설입니다. BPP가 이 부분을 대행합니다.</p>
-<p></div></p>
+</div>
 
 
 <h2>업그레이드 1: 유닛 레벨 캠페인 생성 프로세스 간소화</h2>
@@ -296,9 +299,9 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 
 <p>클릭 수 감소, 추측 감소, 캠페인 구조 시인성 향상. 수십 개의 유닛을 포함한 여러 캠페인을 관리하는 경우, 네비게이션 개선만으로도 가치가 있습니다.</p>
 
-<p><div class="callout tip"></p>
+<div class="callout tip">
 <p><strong>📌 대상 범위:</strong> 리드 획득, 로컬 스토어, 웹사이트 링크, 이커머스 스토어 4개 마케팅 목표가 대상입니다. 앱 프로모션, 상품 카탈로그, 바이자하오 프로모션은 향후 예정입니다.</p>
-<p></div></p>
+</div>
 
 
 <h2>업그레이드 2: AI 카피라이팅 도구 업그레이드</h2>
@@ -321,9 +324,9 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 
 <p>이번 업그레이드부터 <strong>광고 제목에 추가할 수 있는 키워드 와일드카드는 1개만 허용</strong>됩니다 (해당하는 경우 지역 와일드카드 1개 추가 가능). 기존에 2개의 키워드 와일드카드를 사용하던 광고는 이전 규칙대로 계속 표시됩니다. 단, 기존 광고를 편집할 때는 저장 전 1개 와일드카드 제한이 적용됩니다.</p>
 
-<p><div class="callout warning"></p>
+<div class="callout warning">
 <p><strong>⚠️ 와일드카드 주의:</strong> 현재 1개 제목에 2개 키워드 와일드카드를 사용 중인 경우, 바이두가 저장 시 경고를 표시합니다. 기존 광고는 그대로 유지되나, 편집 시 새 제한이 적용됩니다.</p>
-<p></div></p>
+</div>
 
 <p><strong>광고주에게 의미하는 것:</strong></p>
 
@@ -362,23 +365,23 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 
 <p>BPP가 계정 개설 전체를 대행합니다 — 중국 사업자등록증 불필요, 현지 법인 불필요. 계정이 가동되면 이 3가지 업그레이드를 포함한 바이두의 모든 플랫폼 업데이트 혜택을 자동으로 받을 수 있습니다.</p>
 
-<p><div class="stats-grid"></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🔒</div></p>
-<p><div class="stat-number">0</div></p>
-<p><div class="stat-label">BPP면 중국 라이선스 불필요</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🌐</div></p>
-<p><div class="stat-number">1</div></p>
-<p><div class="stat-label">BPP가 일괄 관리하는 계정</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🚀</div></p>
-<p><div class="stat-number">전부</div></p>
-<p><div class="stat-label">바이두 전체 업그레이드 이용 가능</div></p>
-<p></div></p>
-<p></div></p>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">🔒</div>
+<div class="stat-number">0</div>
+<div class="stat-label">BPP면 중국 라이선스 불필요</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">🌐</div>
+<div class="stat-number">1</div>
+<div class="stat-label">BPP가 일괄 관리하는 계정</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">🚀</div>
+<div class="stat-number">전부</div>
+<div class="stat-label">바이두 전체 업그레이드 이용 가능</div>
+</div>
+</div>
 
 
 <h2>결론</h2>
@@ -407,23 +410,24 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
 
 <section class="related-section">
   <div class="container">
-    <h2>📚 You May Also Like</h2>
-    <h2>블로그 다른 글</h2>
+    
+    
+      <h2>관련 기사</h2>
       <div class="related-grid">
-      <a href="baidu-ad-creation-workflow-simplified-creative-upgrade" class="related-card">
+      <a href="/ko/blog/baidu-ad-creation-workflow-simplified-creative-upgrade" class="related-card">
         <span>플랫폼</span>
-        <h4>Baidu's Simplified Creative Upgrade: What Changed and Why It Matters</h4>
-        <p>Baidu replaced the legacy ad creation flow with a streamlined unit-level workflow.</p>
+        <h4>바이두, 광고 작성 워크플로우 간소화——시간 단축과 소재 품질 향상의 3가지 업그레이드</h4>
+        <p>바이두가 2025년 10월 16일 광고 작성 플랫폼 3가지 업그레이드를 출시했습니다. 캠페인 설정 속도, 광고 문구 작성, 헤드라인 포맷 규칙의 pain point를 해결합니다.</p>
       </a>
-      <a href="baidu-feed-ads-history-operation-records-upgrade" class="related-card">
+      <a href="/ko/blog/baidu-feed-ads-history-operation-records-upgrade" class="related-card">
         <span>플랫폼</span>
-        <h4>Baidu History Operation Records: Track Every Change in Your Account</h4>
-        <p>Audit trail for campaigns. Filter by time, object, and action type.</p>
+        <h4>바이두 피드 광고: 업그레이드된 히스토리 기록으로 모든 변경 사항 추적</h4>
+        <p>바이두 피드 광고의 운영 기록 기능이 업그레이드되어 캠페인 변경 이력을 효율적으로 추적할 수 있게 되었습니다.</p>
       </a>
-      <a href="baidu-custom-form-retirement" class="related-card">
+      <a href="/ko/blog/baidu-custom-form-retirement" class="related-card">
         <span>플랫폼</span>
-        <h4>Baidu Retires Custom Form Creative Components</h4>
-        <p>The Custom Form creative component is being phased out. Here is what to do.</p>
+        <h4>바이두 커스텀 폼 크리에이티브 컴포넌트 폐지: 광고주가 알아야 할 것</h4>
+        <p>바이두가 커스텀 폼 광고 소재 구성요소를 2024년 7월에 단계적으로 폐지합니다. 사용 중인 광고주의 대응 방법을 안내합니다.</p>
       </a>
     </div>
   </div>
@@ -466,7 +470,7 @@ footer { background: #1F2937; color: #D1D5DB; padding: 56px 0 24px; }
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
-      <div class="footer-lang"><a href="/blog/baidu-ads-campaign-upgrade-2025">🇺🇸 English</a> | <a href="/ja/blog/baidu-ads-campaign-upgrade-2025">日本語</a> | <a href="/ko/blog/baidu-ads-campaign-upgrade-2025">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

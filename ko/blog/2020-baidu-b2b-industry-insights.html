@@ -140,6 +140,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
     [data-theme="dark"] .logo-pro { color: #818CF8; }
 .nav-logo svg{flex-shrink:0}
 .nav-links{display:flex;gap:28px;font-size:.9rem;color:var(--gray-600)}
+html[lang="ko"] .nav-links { gap: 12px; font-size: .8rem; }
+html[lang="ko"] .nav-links a { white-space: nowrap; }
+
 .nav-links a{position:relative;transition:color var(--transition-base)}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:50%;width:0;height:2px;background:var(--blue);border-radius:1px;transition:width var(--transition-smooth),left var(--transition-smooth)}
 .nav-links a:hover{color:var(--blue)}
@@ -374,7 +377,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
     </div>
     <div class="nav-right-group">
       <div class="lang-switch">
-        <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="언어">🇺🇸 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+        <button class="lang-switch-btn" onclick="toggleLangMenu()" aria-label="언어">🇰🇷 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="lang-switch-menu" id="langSwitchMenu">
           <a href="/ko/" lang="en" class="lang-switch-item">🇺🇸 English</a>
           <a href="../ja/index" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
@@ -633,11 +636,23 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
 <section class="related-section">
   <div class="container">
     <h2>관련 기사</h2>
-    <h2>블로그 다른 글</h2>
+    
       <div class="related-grid">
-      <a href="baidu-mcc-account-guide" class="related-card"><h4>Baidu MCC Account Guide</h4><p>Manage multiple Baidu accounts from one dashboard.</p></a>
-      <a href="baidu-search-ad-video-format-guide" class="related-card"><h4>Baidu Search Ad Video Formats</h4><p>Video ad types and specs for Baidu search campaigns.</p></a>
-      <a href="baidu-ppc-terms-explained" class="related-card"><h4>Baidu PPC Terms Explained</h4><p>Common Baidu terminology explained for newcomers.</p></a>
+      <a href="/blog/baidu-mcc-account-guide" class="related-card">
+        <span>플랫폼</span>
+        <h4>🗂️ 바이두 MCC 계정: 여러 바이두 PPC 계정을 한 곳에서 관리하는 완전 가이드</h4>
+        <p>바이두 MCC(마이 클라이언트 센터)는 하나의 대시보드에서 여러 PPC 계정을 관리하는 플랫폼입니다. 가입 방법, 계정 유형, 최대 계정 수, 자동 충전, 자주 겪는 가입 문제를 설명합니다.</p>
+      </a>
+      <a href="/blog/baidu-search-ad-video-format-guide" class="related-card">
+        <span>검색광고</span>
+        <h4>🎬 바이두 검색 광고 비디오 포맷 가이드: 규격, 설정, 모범 사례</h4>
+        <p>바이두 검색 광고는 정지 이미지보다 비디오 포맷을 우선합니다. 비디오 규격, 계정/캠페인/광고 그룹 설정, 바이두 무료 비디오 라이브러리, 그리고 비디오 CTR이 빅 이미지보다 높은 이유를 정리했습니다.</p>
+      </a>
+      <a href="/blog/baidu-ppc-terms-explained" class="related-card">
+        <span>검색광고</span>
+        <h4>📘 바이두 PPC 용어 설명: 품질 점수, 순위, 입찰, CPC</h4>
+        <p>바이두 PPC 핵심 용어인 품질 점수, 광고 순위 공식(QS × 입찰가), 입찰가와 실제 CPC의 차이, CPC 공식의 작동 원리를 이해합니다. 모든 광고주를 위한 필수 지식입니다.</p>
+      </a>
 
     </div>
   </div>
@@ -691,7 +706,7 @@ footer{background:var(--gray-800);color:#D1D5DB;padding:56px 0 24px}
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
-      <div class="footer-lang"><a href="/blog/2020-baidu-b2b-industry-insights">🇺🇸 English</a> | <a href="/ja/blog/2020-baidu-b2b-industry-insights">日本語</a> | <a href="/ko/blog/2020-baidu-b2b-industry-insights">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

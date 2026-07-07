@@ -268,14 +268,14 @@ html[lang="ja"] .nav-links { gap: 12px; font-size: .8rem; }
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Blockquote (article-content) */
-.article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
+.article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
@@ -362,7 +362,7 @@ html[lang="ja"] .nav-links { gap: 12px; font-size: .8rem; }
 </div>
       <div class="nav-right-group">
       <div class="lang-switch">
-        <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="Language">&#x1f1fa;&#x1f1f8;#x1f1ef;&#x1f1fa;&#x1f1f8;#x1f1f5;<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+        <button class="lang-switch-btn" onclick="event.stopPropagation();toggleLangMenu()" aria-label="Language">&#x1f1ef;&#x1f1f5;<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="lang-switch-menu" id="langSwitchMenu">
             <a href="/blog/baidu-keyword-zero-impression-diagnosis-tool" lang="en" class="lang-switch-item">🇺🇸 English</a>
             <a href="/ja/blog/baidu-keyword-zero-impression-diagnosis-tool" lang="ja" class="lang-switch-item">🇯🇵 日本語</a>
@@ -650,7 +650,7 @@ window.addEventListener('scroll', () => { document.getElementById('backToTop').c
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
-      <div class="footer-lang"><a href="/blog/baidu-keyword-zero-impression-diagnosis-tool">English</a> | <a href="/ja/blog/baidu-keyword-zero-impression-diagnosis-tool">日本語</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

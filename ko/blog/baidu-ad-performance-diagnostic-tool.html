@@ -272,7 +272,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
@@ -297,7 +297,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .takeaway-box ul li strong { color: #111827; font-weight: 700; }
 
 /* Blockquote (article-content) */
-.article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
+.article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
@@ -407,7 +407,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <h1 class="article-title">바이두 광고 성과 진단 도구: 캠페인이 갑자기 하락한 이유를 찾아드립니다</h1>
           <div class="article-meta">
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2022년 6월 24일</span>
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 약 3분</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>약 3분</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 검색 광고</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro 팀</span>
     </div>
@@ -427,23 +427,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>바이두의 검색 프로모션 플랫폼에 전 트래픽 대상 <strong>이상 변동 진단 도구</strong>가 추가되었습니다. 수동으로 리포트를 탐색할 필요 없이, 도구가 캠페인을 분석하고 60초 이내에 명확하고 구조화된 답변을 제공합니다.</p>
 
-<p><div class="stats-grid"></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🔍</div></p>
-<p><div class="stat-number">4개 근본 원인 카테고리</div></p>
-<p><div class="stat-label">계정 변경, 경쟁, 트래픽, 설정</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">⏱️</div></p>
-<p><div class="stat-number">30〜60초</div></p>
-<p><div class="stat-label">1분 이내에 진단 완료</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">📊</div></p>
-<p><div class="stat-number">3단계 분석</div></p>
-<p><div class="stat-label">트리거 → 입찰 → 노출/클릭</div></p>
-<p></div></p>
-<p></div></p>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">🔍</div>
+<div class="stat-number">4개 근본 원인 카테고리</div>
+<div class="stat-label">계정 변경, 경쟁, 트래픽, 설정</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">⏱️</div>
+<div class="stat-number">30〜60초</div>
+<div class="stat-label">1분 이내에 진단 완료</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">📊</div>
+<div class="stat-number">3단계 분석</div>
+<div class="stat-label">트리거 → 입찰 → 노출/클릭</div>
+</div>
+</div>
 
 <p><strong>작동 방식:</strong></p>
 <ul>
@@ -454,7 +454,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p><strong>분석되는 3단계:</strong></p>
 
-<p><table class="comparison-table"></p>
+<table class="comparison-table">
 <p><thead></p>
 <p><tr><th>단계</th><th>확인 내용</th><th>일반적인 수정</th></tr></p>
 <p></thead></p>
@@ -463,7 +463,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><tr><td>입찰 랭킹</td><td>경매에서 이겼나? (품질 × 입찰 경쟁력)</td><td>입찰 인상; 광고 관련성 개선</td></tr></p>
 <p><tr><td>노출 및 클릭</td><td>사용자가 참여했나? (CTR 추세)</td><td>크리에이티브 갱신; 새 카피 테스트</td></tr></p>
 <p></tbody></p>
-<p></table></p>
+</table>
 
 <h2>각 진단 도구의 올바른 활용</h2>
 
@@ -471,9 +471,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>| <strong>이상 변동 진단</strong> | <strong>갑자기 노출/소비가 변동한 경우</strong> |</p>
 
-<p><div class="callout tip"></p>
+<div class="callout tip">
 <p><strong>💡 실전 조언:</strong> 변경을 가하기 전에 먼저 진단을 실행하세요. 가장 흔한 실수는 입찰, 키워드, 타겟팅을 동시에 허둥지둥 조정하는 것입니다. 이는 원래 문제를 숨기고 향후 진단을 더 어렵게 만듭니다.</p>
-<p></div></p>
+</div>
 
 <h2>해외 브랜드가 직면한 장벽</h2>
 
@@ -488,15 +488,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <h2>BPP가 진단을 액션으로 바꾸는 방법</h2>
 
-<p><div class="takeaway"></p>
-<p><h4>🎯 BPP의 솔루션</h4></p>
-<p><ul></p>
-<p><li>✅ BPP는 매주 귀하의 캠페인에서 바이두 진단 도구를 실행——문제가 되기 전에 이상을 감지</li></p>
-<p><li>✅ 중국어 진단 리포트를 영어 액션 아이템으로 번역——추측이 아닌 결론을 제공</li></p>
-<p><li>✅ 근본 원인을 트리아지: 설정 수정이라면 즉시 적용; 경쟁 변화라면 입찰 전략 조정</li></p>
-<p><li>✅ 모든 변동과 수정을 문서화——캠페인 이력이 시간이 지남에 따라 지능을 구축</li></p>
-<p></ul></p>
-<p></div></p>
+<div class="takeaway">
+<h4>🎯 BPP의 솔루션</h4>
+<ul>
+<li>✅ BPP는 매주 귀하의 캠페인에서 바이두 진단 도구를 실행——문제가 되기 전에 이상을 감지</li>
+<li>✅ 중국어 진단 리포트를 영어 액션 아이템으로 번역——추측이 아닌 결론을 제공</li>
+<li>✅ 근본 원인을 트리아지: 설정 수정이라면 즉시 적용; 경쟁 변화라면 입찰 전략 조정</li>
+<li>✅ 모든 변동과 수정을 문서화——캠페인 이력이 시간이 지남에 따라 지능을 구축</li>
+</ul>
+</div>
 
 <p><strong>바이두 캠페인 성과가 왜 변동했는지, 그리고 무엇을 해야 하는지 알고 싶으신가요?</strong></p>
 
@@ -556,7 +556,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
-      <div class="footer-lang"><a href="/blog/baidu-ad-performance-diagnostic-tool">🇺🇸 English</a> | <a href="/ja/blog/baidu-ad-performance-diagnostic-tool">日本語</a> | <a href="/ko/blog/baidu-ad-performance-diagnostic-tool">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

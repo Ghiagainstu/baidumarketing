@@ -113,8 +113,8 @@
     [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
     [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
     [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
-    [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-    [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
@@ -190,11 +190,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
     .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
-    .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
-    .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
-    .takeaway-box-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
-    .takeaway-box-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
-    .takeaway-box-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
     .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
     .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
@@ -221,7 +221,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .case-study {
       background: linear-gradient(135deg, var(--blue-subtle) 0%, #F0F9FF 100%);
       border: 1px solid var(--gray-200);
-      border-left: 4px solid var(--blue);
+      border: 1px solid var(--blue);
       border-radius: 0 var(--radius) var(--radius) 0;
       padding: 24px;
       margin: 24px 0;
@@ -346,7 +346,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
@@ -362,7 +362,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .takeaway-box ul li strong { color: #fff !important; }
 
 /* Blockquote (article-content) */
-.article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
+.article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
@@ -434,7 +434,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     <h1 class="article-title">2026년 바이두에서의 고객 획득 — 주목해야 할 새로운 기회</h1>
         <div class="article-meta">
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2026년 5월 10일</span>
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 약 8분</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>약 8분</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 플랫폼</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro 팀</span>
     </div>
@@ -454,7 +454,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <div class="stat-card"><div class="stat-value">600+</div><div class="stat-label">B2B 리드 사례</div></div>
       </div>
 
-<h2>들어가며</h2>
+<h2>🌟 들어가며</h2>
 
 <p>새해 시기에는 언제나 두 가지 온화한 감정이 SNS를 휩쓸게 됩니다. 하나는 모두가 서로에게 "올해도 만사 순조롭게"라고 기원하는 모습이고, 다른 하나는 마치 오랜 친구에게 하듯 자신에게 "너를 사랑하자"라고 말하는 트렌드입니다. 이 두 가지 내외의 집단 감정 뒤에는 같은 갈망이 있습니다: 우리 모두는 미래의 길에 장애물이 적고, 더 많은 확신이 있기를 바랍니다.</p>
 
@@ -467,7 +467,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>오늘은 바이두 마케팅 플랫폼이 2026년에 주목해야 할 주요 새로운 기회들을 정리해 드립니다.</p>
 
 
-<h2>1. 로컬 비즈니스의 "순풍" — 고객의 검색에서 시작된다</h2>
+<h2>🏪 1. 로컬 비즈니스의 "순풍" — 고객의 검색에서 시작된다</h2>
 
 <p>로컬 비즈니스에게 가장 큰 고민은 잠재 고객이 3km 이내에 있는데 온라인에서 발견되지 않는 것입니다. 고객이 지도 앱에서 "근처 인테리어 업체"나 "치과"를 검색할 때, 당신의 가게는 그저 평범한 랜드마크인가요, 아니면 전문적이고 신뢰할 수 있는 프리미엄 스토어 이미지로 눈에 띄나요?</p>
 
@@ -487,10 +487,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><strong>적합한 업종과 사례:</strong></p>
 <p>이 모델은 지역 고객과 신뢰 구축에 의존하는 업종에 특히 효과적입니다. 인테리어, 열쇠 수리, 자동차 서비스 등 모든 로컬 서비스업에 적합합니다.</p>
 
+<div class="callout callout-insight">
+<span class="callout-icon">📊</span>
+<div>
 <p><strong>사례:</strong> 광저우 화천 치과는 바이두 스토어 멤버십에 가입한 후, 온라인에서 자격, 가격, 사례를 투명하게 공개하여 환자의 의사결정 장벽을 크게 낮췄습니다. 단 한 달 만에 스토어는 300회 이상의 정밀 노출을 획득했고, 54명이 내비게이션으로 방문했으며, 75건의 전화 리드를 받아 전통적인 방문 영업에서 온라인 정밀 고객 획득으로 성공적으로 전환했습니다.</p>
+</div>
+</div>
 
 
-<h2>2. 이커머스 라이브커머스 — 레드오션에서 경쟁하기보다 새 플랫폼에서 "선점"</h2>
+<h2>🛒 2. 이커머스 라이브커머스 — 레드오션에서 경쟁하기보다 새 플랫폼에서 "선점"</h2>
 
 <p>이커머스 사업자 여러분, 아직도 치열하게 경쟁 중인가요? 트래픽 비용이 상품 대금보다 비싸고, 호스트의 체력엔 한계가 있고, 라이브가 중단되면 주문도 중단되는 딜레마에 있지 않나요?</p>
 
@@ -516,10 +521,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><strong>적합한 업종과 사례:</strong></p>
 <p>이 기회는 표준화된 기능이나 강력한 비주얼 전시 속성을 가진 상품에 특히 적합합니다. 3C 디지털, 가전, 의류, 식품, 홈리빙 등 모든 이커머스 카테고리에 적용됩니다.</p>
 
+<div class="callout callout-insight">
+<span class="callout-icon">📊</span>
+<div>
 <p><strong>사례:</strong> "푸위에더 할랄 소고기 양고기 만두"는 다른 플랫폼에서 검증된 이커머스 모델을 바이두 이커머스에 빠르게 복제했습니다. "실제 호스트 라이브 + 대량 소재" 조합과 공식 파트너십을 통해 단 4일 만에 콜드스타트를 완료했고, 일일 매출 1만5천 위안 이상을 안정적으로 달성했습니다. ROI는 장기간 1:1.5 이상의 건전한 수준을 유지하며 완전히 새로운 증분 시장을 개척했습니다.</p>
+</div>
+</div>
 
 
-<h2>3. B2B 비즈니스 — "문의 대기"에서 "비즈니스 기회 선점"으로</h2>
+<h2>🏭 3. B2B 비즈니스 — "문의 대기"에서 "비즈니스 기회 선점"으로</h2>
 
 <p>무역 박람회 방문객의 감소, 팀원들의 출장 비용 증가에도 효과적인 비즈니스 기회를 찾기 어렵고, B2B 비즈니스의 성장은 천장에 도달한 것처럼 보입니다. 전통적인 "시장 방문 + 전시회 개최" 모델은 높은 투자와 낮은 효율로 지속 가능한 성장을 지탱하기 어렵습니다.</p>
 
@@ -547,10 +557,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><strong>적합한 업종과 사례:</strong></p>
 <p>기업 조달이 포함된 거의 모든 업종에 적용됩니다. 특히 기계 장비, 원자재, 금속 공구, 화학, 전자 부품 등에 적합합니다.</p>
 
+<div class="callout callout-insight">
+<span class="callout-icon">📊</span>
+<div>
 <p><strong>사례:</strong> 국가 하이테크 센서 기업인 선전 신웨이 테크놀로지는 아이차이거우 플랫폼에 깊이 진입하여 스토어 콘텐츠와 랭킹을 지속 최적화했고, 5년간 600개 이상의 정밀 영업 리드를 축적하여 전문 콘텐츠로 신뢰를 구축함으로써 장기 성장을 이끌어낼 수 있음을 검증했습니다.</p>
+</div>
+</div>
 
 
-<h2>4. 전 업종 효율화 — AI가 마케팅 전체 퍼널을 재구축</h2>
+<h2>🤖 4. 전 업종 효율화 — AI가 마케팅 전체 퍼널을 재구축</h2>
 
 <p>캠페인 구성을 모르겠다? 소재를 만들 수 없다? 계정 최적화에 시간이 너무 많이 걸리고, 전문 마케팅 운영 인력 비용이 너무 높다? 모든 규모의 기업, 특히 중소기업에게 마케팅의 궁극적 과제는 비용을 통제하면서 효과를 극대화하는 것입니다. 이러한 현실적 고민은 효율적 마케팅을 요원하게 만듭니다.</p>
 
@@ -574,7 +589,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>이는 마케팅이 "노동집약적 작업"에서 "지능집약적 의사결정"으로 전환하고 있음을 의미합니다. 이제 "할 수 있느냐 없느냐"의 문제가 아니라 "할 것이냐 말 것이냐"의 선택입니다. 이전에는 월급 1만5천 위안 이상의 시니어 매체 바이어가 수행하던 광고 최적화 업무를, 이제는 초보자가 AI 시스템의 도움으로 며칠 내에 동등한 효과를 달성할 수 있습니다. 도구는 "전문 역량"을 "보편적 자원"으로 전환하며, 소규모 팀의 모든 예산이 더 스마트하게 쓰이게 합니다. 경쟁사가 AI를 활용해 더 낮은 비용으로 24시간 쉬지 않고 고객을 가로챌 때, 수작업 최적화의 속도 격차는 직접 시장 점유율 격차로 이어집니다.</p>
 
 
-<h2>결론</h2>
+<h2>🚀 결론</h2>
 
 <p>우리 모두 앞길의 순조로움을 기원합니다. 하지만 비즈니스의 진정한 "순풍"은 올바른 내비게이션을 선택하는 것에서 시작됩니다.</p>
 
@@ -662,7 +677,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
-      <div class="footer-lang"><a href="/blog/baidu-2026-new-opportunities">🇺🇸 English</a> | <a href="/ja/blog/baidu-2026-new-opportunities">日本語</a> | <a href="/ko/blog/baidu-2026-new-opportunities">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

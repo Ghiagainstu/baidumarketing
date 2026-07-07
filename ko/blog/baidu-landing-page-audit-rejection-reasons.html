@@ -251,14 +251,14 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
 .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Blockquote (article-content) */
-.article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
+.article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
@@ -384,7 +384,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <h1 class="article-title">바이두 랜딩 페이지 심사: 페이지가 거부된 정확한 이유 표시</h1>
           <div class="article-meta">
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2021년 1월 6일</span>
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 약 3분</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>약 3분</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> landing</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro 팀</span>
     </div>
@@ -411,23 +411,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <li>문제가 있는 섹션을 편집하기 위한 다이렉트 링크</li>
 </ul>
 
-<p><div class="stats-grid"></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🔍</div></p>
-<p><div class="stat-number">정확한 위치</div></p>
-<p><div class="stat-label">페이지 미리보기에서 위반 사항 하이라이트</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">⚡</div></p>
-<p><div class="stat-number">더 빠른 수정</div></p>
-<p><div class="stat-label">어떤 요소가 실패했는지 추측할 필요 없음</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">📱</div></p>
-<p><div class="stat-number">모든 페이지 유형</div></p>
-<p><div class="stat-label">스마트 페이지, 스토어 페이지, 앱 다운로드, 비디오 페이지</div></p>
-<p></div></p>
-<p></div></p>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">🔍</div>
+<div class="stat-number">정확한 위치</div>
+<div class="stat-label">페이지 미리보기에서 위반 사항 하이라이트</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">⚡</div>
+<div class="stat-number">더 빠른 수정</div>
+<div class="stat-label">어떤 요소가 실패했는지 추측할 필요 없음</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">📱</div>
+<div class="stat-number">모든 페이지 유형</div>
+<div class="stat-label">스마트 페이지, 스토어 페이지, 앱 다운로드, 비디오 페이지</div>
+</div>
+</div>
 
 <p><strong>지원되는 페이지 유형:</strong></p>
 <ul>
@@ -441,9 +441,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>랜딩 페이지가 '거부' 상태로 있는 하루하루는 성과가 낮은 페이지에 예산을 태우는 하루——아니면 전혀 지출하지 않는 하루입니다.</p>
 
-<p><div class="callout tip"></p>
+<div class="callout tip">
 <p><strong>💡 실전 조언:</strong> 기목어 페이지를 심사에 제출하기 전에, 모든 이미지에 적절한 라이선스가 있는지, 모든 주장이 뒷받침되었는지, 카피에 경쟁 브랜드명이 없는지 확인하십시오. 가장 일반적인 거부 이유는 오해를 유발하는 주장과 라이선스가 없는 저작권 이미지입니다.</p>
-<p></div></p>
+</div>
 
 <h2>해외 브랜드가 직면한 장벽</h2>
 
@@ -458,15 +458,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <h2>BPP가 랜딩 페이지 컴플라이언스를 처리하는 방법</h2>
 
-<p><div class="takeaway"></p>
-<p><h4>🎯 BPP의 솔루션</h4></p>
-<p><ul></p>
-<p><li>✅ 기목어 랜딩 페이지를 생성 및 관리——중국어로 작성, 첫날부터 컴플라이언스 준수</li></p>
-<p><li>✅ 제출 전 바이두 심사 규칙에 대조하여 페이지를 사전 점검하여 거부율을 대폭 감소</li></p>
-<p><li>✅ 페이지가 거부된 경우, 즉시 수정 (중국어 거부 이유를 읽을 수 있습니다) 하고 24시간 이내 재제출</li></p>
-<p><li>✅ 무엇을 변경했는지, 왜 변경했는지에 대한 영문 요약 제공</li></p>
-<p></ul></p>
-<p></div></p>
+<div class="takeaway">
+<h4>🎯 BPP의 솔루션</h4>
+<ul>
+<li>✅ 기목어 랜딩 페이지를 생성 및 관리——중국어로 작성, 첫날부터 컴플라이언스 준수</li>
+<li>✅ 제출 전 바이두 심사 규칙에 대조하여 페이지를 사전 점검하여 거부율을 대폭 감소</li>
+<li>✅ 페이지가 거부된 경우, 즉시 수정 (중국어 거부 이유를 읽을 수 있습니다) 하고 24시간 이내 재제출</li>
+<li>✅ 무엇을 변경했는지, 왜 변경했는지에 대한 영문 요약 제공</li>
+</ul>
+</div>
 
 <p><strong>중국 법인이나 바이두 심사 규칙을 직접 배우지 않고도, 고전환 바이두 랜딩 페이지를 원하시나요?</strong></p>
 
@@ -493,22 +493,22 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
   <section class="related-section">
     <div class="container">
       <h2>관련 기사</h2>
-      <h2>블로그 다른 글</h2>
+      
       <div class="related-grid">
-        <a href="/ko/blog/baidu-brand-zone-material-pre-review" class="related-card">
+      <a href="/blog/baidu-brand-zone-material-pre-review" class="related-card">
           <span>전략</span>
-          <h4>🛡️ Baidu Brand Zone Material Pre-Review</h4>
-          <p>How to prepare brand zone materials that pass Baidu's pre-review process.</p>
+          <h4>🛡️ 바이두 브랜드 존, 소재 사전 심사 도입: 제출 전 컴플라이언스 문제를 미리 잡는다</h4>
+          <p>바이두 브랜드 존에 자동 소재 사전 심사가 도입되었습니다. 시스템이 정식 제출 전 컴플라이언스 문제를 스캔하여, 해외 광고주의 재제출 주기를 줄여줍니다.</p>
         </a>
-        <a href="/ko/blog/baidu-2026-international-brands" class="related-card">
+      <a href="/ko/blog/baidu-2026-international-brands" class="related-card">
           <span>시장 인사이트</span>
-          <h4>🚀 Baidu's 2026 Upgrades for International Brands</h4>
-          <p>What changed and how to adapt your Baidu PPC strategy for 2026.</p>
+          <h4>바이두의 2026년 업그레이드: 해외 브랜드에 기회는 더 커졌지만, 진입은 더 어려워진 이유</h4>
+          <p>2026년 바이두 플랫폼에서 국제 브랜드가 직면하는 기회와 도전, 그리고 효과적인 중국 시장 진출 전략을 분석합니다.</p>
         </a>
-        <a href="/ko/blog/how-much-does-baidu-ppc-cost" class="related-card">
-          <span>요금</span>
-          <h4>💰 How Much Does Baidu PPC Cost?</h4>
-          <p>The CPC formula and how Quality Score directly impacts your actual cost per click.</p>
+      <a href="/blog/how-much-does-baidu-ppc-cost" class="related-card">
+          <span>검색광고</span>
+          <h4>💰 바이두 PPC 비용은? 요금, CPC, 예산 가이드</h4>
+          <p>바이두 PPC는 최소 충전액 ¥2,400(약 $330)부터 시작하는 선불 모델입니다. CPC 계산 방식, 실제로 지불하는 비용, 예산 관리, 악의적 클릭 자동 차단 기능을 알아봅니다.</p>
         </a>
       </div>
     </div>
@@ -551,7 +551,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
-      <div class="footer-lang"><a href="/blog/baidu-landing-page-audit-rejection-reasons">🇺🇸 English</a> | <a href="/ja/blog/baidu-landing-page-audit-rejection-reasons">日本語</a> | <a href="/ko/blog/baidu-landing-page-audit-rejection-reasons">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

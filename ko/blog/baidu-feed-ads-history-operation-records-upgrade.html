@@ -98,8 +98,8 @@
     [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
     [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
     [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
-    [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-    [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
@@ -172,11 +172,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
     .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
-    .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
-    .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
-    .takeaway-box-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
-    .takeaway-box-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
-    .takeaway-box-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
     /* Comparison Table - Enhanced */
 .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 40px 0; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(41,50,225,.1); }
@@ -322,7 +322,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
@@ -337,7 +337,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
-.article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
+.article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
@@ -445,7 +445,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <h1 class="article-title">바이두 피드 광고: 업그레이드된 히스토리 기록으로 모든 변경 사항 추적</h1>
           <div class="article-meta">
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2020년 11월 30일</span>
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 약 3분</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>약 3분</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 피드 광고</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro 팀</span>
     </div>
@@ -465,23 +465,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>바이두 피드 광고 플랫폼의 히스토리 작업 기록 기능(历史操作记录)이 대폭 업그레이드되었습니다. 시간, 오브젝트, 액션 유형별로 필터링하여 모든 변경 사항을 추적할 수 있습니다——깔끔하고 사용하기 쉬운 인터페이스로.</p>
 
-<p><div class="stats-grid"></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">📊</div></p>
-<p><div class="stat-number">최대 5,000건</div></p>
-<p><div class="stat-label">한 번에 최대 5,000건의 작업 기록 표시</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🕐</div></p>
-<p><div class="stat-number">3개월</div></p>
-<p><div class="stat-label">최대 3개월 분의 히스토리 조회</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🔍</div></p>
-<p><div class="stat-number">복합 필터</div></p>
-<p><div class="stat-label">시간, 오브젝트, 액션 유형으로 필터</div></p>
-<p></div></p>
-<p></div></p>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">📊</div>
+<div class="stat-number">최대 5,000건</div>
+<div class="stat-label">한 번에 최대 5,000건의 작업 기록 표시</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">🕐</div>
+<div class="stat-number">3개월</div>
+<div class="stat-label">최대 3개월 분의 히스토리 조회</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">🔍</div>
+<div class="stat-number">복합 필터</div>
+<div class="stat-label">시간, 오브젝트, 액션 유형으로 필터</div>
+</div>
+</div>
 
 <p><strong>확인 장소 (3개 진입점):</strong></p>
 <ul>
@@ -499,7 +499,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <h2>중요한 이유</h2>
 
-<p><table class="comparison-table"></p>
+<table class="comparison-table">
 <p><thead></p>
 <p><tr><th>시나리오</th><th>히스토리 기록 없음</th><th>히스토리 기록 있음</th></tr></p>
 <p></thead></p>
@@ -508,11 +508,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><tr><td>팀 협업</td><td>누가 무엇을 변경했는지 기록 없음</td><td>전 팀 액션의 완전한 감사 추적</td></tr></p>
 <p><tr><td>클라이언트 리포팅</td><td>"최적화를 수행했습니다" (모호함)</td><td>"11월 28일 12개 키워드 입찰가 +15% 조정" (구체적)</td></tr></p>
 <p></tbody></p>
-<p></table></p>
+</table>
 
-<p><div class="callout tip"></p>
+<div class="callout tip">
 <p><strong>💡 실전 조언:</strong> 큰 최적화를 가하기 전에 히스토리 기록을 확인하는 습관을 드세요. 성과가 변하고 이유를 모르겠다면, 답은 아마도 지난 7일간의 작업 기록에 있습니다. 내보내기하여 확인하세요.</p>
-<p></div></p>
+</div>
 
 <h2>해외 브랜드가 직면한 장벽</h2>
 
@@ -527,15 +527,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <h2>BPP가 히스토리를 액션으로 바꾸는 방법</h2>
 
-<p><div class="takeaway"></p>
-<p><h4>🎯 BPP의 솔루션</h4></p>
-<p><ul></p>
-<p><li>✅ 바이두 캠페인의 주간 작업 로그 유지——중국어가 아닌 영어로</li></p>
-<p><li>✅ 성과가 변했을 때, 지난 14일간 수행된 모든 변경 사항을 추적하고 근본 원인 특정</li></p>
-<p><li>✅ 월간 "변경 내용과 이유" 리포트 제공——무엇이 발생했는지 항상 파악</li></p>
-<p><li>✅ 히스토리 기록을 내보내기하여 성과 데이터와 교차 참조하고 최적화 판단 검증</li></p>
-<p></ul></p>
-<p></div></p>
+<div class="takeaway">
+<h4>🎯 BPP의 솔루션</h4>
+<ul>
+<li>✅ 바이두 캠페인의 주간 작업 로그 유지——중국어가 아닌 영어로</li>
+<li>✅ 성과가 변했을 때, 지난 14일간 수행된 모든 변경 사항을 추적하고 근본 원인 특정</li>
+<li>✅ 월간 "변경 내용과 이유" 리포트 제공——무엇이 발생했는지 항상 파악</li>
+<li>✅ 히스토리 기록을 내보내기하여 성과 데이터와 교차 참조하고 최적화 판단 검증</li>
+</ul>
+</div>
 
 <p><strong>바이두 캠페인에서 수행된 모든 변경 사항을 완전히 가시화하고 싶으신가요?</strong></p>
 
@@ -595,7 +595,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
-      <div class="footer-lang"><a href="/blog/baidu-feed-ads-history-operation-records-upgrade">🇺🇸 English</a> | <a href="/ja/blog/baidu-feed-ads-history-operation-records-upgrade">日本語</a> | <a href="/ko/blog/baidu-feed-ads-history-operation-records-upgrade">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

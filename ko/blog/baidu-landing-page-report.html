@@ -98,8 +98,8 @@
     [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
     [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
     [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
-    [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-    [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
+    [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
+    [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-color: var(--gray-200); color: var(--gray-600); }
@@ -172,11 +172,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
     .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
-    .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
-    .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
-    .takeaway-box-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
-    .takeaway-box-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
-    .takeaway-box-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
+    .takeaway-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
+    .takeaway-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
     .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
     .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
@@ -252,7 +252,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-no { color: #EF4444; }
 
 /* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
+.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
 .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
 .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
 .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
@@ -267,7 +267,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .takeaway-box ul li { color: #fff !important; margin-bottom: 6px; }
 
 /* Blockquote (article-content) */
-.article-content blockquote { margin: 30px 0; padding: 20px 24px; border-left: 4px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
+.article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
 .article-content blockquote p { margin-bottom: 0 !important; font-style: italic; color: var(--gray-700) !important; font-size: 1.05rem !important; }
 .article-content blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: .85rem; color: var(--gray-400); }
 
@@ -375,7 +375,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <h1 class="article-title">바이두 랜딩 페이지 리포트: 스마트한 최적화를 위한 퍼널 전체 데이터</h1>
           <div class="article-meta">
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2021년 3월 31일</span>
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 약 3분</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>약 3분</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> landing</span>
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Baidu PPC Pro 팀</span>
     </div>
@@ -397,23 +397,23 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>2021년 3월부터, 바이두 검색 프로모션 데이터 리포트에 새로운 <strong>랜딩 페이지 리포트</strong> 모듈이 추가되었습니다. 전체 저니를 추적합니다.</p>
 
-<p><div class="stats-grid"></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">🖱️</div></p>
-<p><div class="stat-number">클릭</div></p>
-<p><div class="stat-label">광고 클릭 데이터</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">📄</div></p>
-<p><div class="stat-number">도착</div></p>
-<p><div class="stat-label">페이지 도착 추적</div></p>
-<p></div></p>
-<p><div class="stat-card"></p>
-<p><div class="stat-icon">✅</div></p>
-<p><div class="stat-number">전환</div></p>
-<p><div class="stat-label">엔드투엔드 퍼널</div></p>
-<p></div></p>
-<p></div></p>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">🖱️</div>
+<div class="stat-number">클릭</div>
+<div class="stat-label">광고 클릭 데이터</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">📄</div>
+<div class="stat-number">도착</div>
+<div class="stat-label">페이지 도착 추적</div>
+</div>
+<div class="stat-card">
+<div class="stat-icon">✅</div>
+<div class="stat-number">전환</div>
+<div class="stat-label">엔드투엔드 퍼널</div>
+</div>
+</div>
 
 <p><strong>제공되는 데이터:</strong></p>
 <ul>
@@ -426,7 +426,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <h2>이 데이터를 사용하는 방법</h2>
 
-<p><table class="comparison-table"></p>
+<table class="comparison-table">
 <p><thead></p>
 <p><tr><th>지표</th><th>알려주는 것</th><th>액션</th></tr></p>
 <p></thead></p>
@@ -435,11 +435,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><tr><td>체류 시간</td><td>사용자 참여 수준</td><td>참여도가 낮은 페이지 카피 다시 작성</td></tr></p>
 <p><tr><td>랜딩 페이지별 전환</td><td>실제로 전환을 일으키는 페이지</td><td>예산을 고전환 페이지로 이동</td></tr></p>
 <p></tbody></p>
-<p></table></p>
+</table>
 
-<p><div class="callout tip"></p>
+<div class="callout tip">
 <p><strong>💡 실전 조언:</strong> 도착률이 낮은 것은 추적 코드 문제이거나, 중국 내 모바일 네트워크에서 극도로 느리게 로드되는 랜딩 페이지가 원인인 경우가 많습니다. 둘 다 수정 가능합니다. 그러나 보이지 않는 것은 수정할 수 없습니다.</p>
-<p></div></p>
+</div>
 
 <h2>해외 브랜드가 직면한 장벽</h2>
 
@@ -454,15 +454,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <h2>BPP가 이 격차를 메우는 방법</h2>
 
-<p><div class="takeaway"></p>
-<p><h4>🎯 BPP의 솔루션</h4></p>
-<p><ul></p>
-<p><li>✅ 첫날부터 바이두 계정을 설정하고 전환 추적을 구성합니다</li></p>
-<p><li>✅ 랜딩 페이지 리포트 데이터를 실행 가능한 인사이트로 (영어로) 번역하고 해석합니다</li></p>
-<p><li>✅ 어떤 랜딩 페이지가 성과가 부족한지, 그 이유를 식별합니다</li></p>
-<p><li>✅ 구체적인 수정을 권장합니다: 카피 다시 쓰기, 모바일 로드 속도 개선, CTA 배치 조정</li></p>
-<p></ul></p>
-<p></div></p>
+<div class="takeaway">
+<h4>🎯 BPP의 솔루션</h4>
+<ul>
+<li>✅ 첫날부터 바이두 계정을 설정하고 전환 추적을 구성합니다</li>
+<li>✅ 랜딩 페이지 리포트 데이터를 실행 가능한 인사이트로 (영어로) 번역하고 해석합니다</li>
+<li>✅ 어떤 랜딩 페이지가 성과가 부족한지, 그 이유를 식별합니다</li>
+<li>✅ 구체적인 수정을 권장합니다: 카피 다시 쓰기, 모바일 로드 속도 개선, CTA 배치 조정</li>
+</ul>
+</div>
 
 <p><strong>중국 내 법인 없이, 바이두 캠페인에서 퍼널 전체의 가시성을 얻고 싶으신가요?</strong></p>
 
@@ -522,7 +522,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 무단 복제를 금합니다.</div>
-      <div class="footer-lang"><a href="/blog/baidu-landing-page-report">🇺🇸 English</a> | <a href="/ja/blog/baidu-landing-page-report">日本語</a> | <a href="/ko/blog/baidu-landing-page-report">한국어</a></div>
+
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>
