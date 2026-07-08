@@ -706,7 +706,7 @@
 
 <script>
   document.body.style.opacity='0';document.body.style.transition='opacity .5s ease';requestAnimationFrame(()=>{requestAnimationFrame(()=>{document.body.style.opacity='1'})});
-    let mobileNavOpen=false;function toggleMobileNav(){const links=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');h.style.display='none';c.style.display='block';o.classList.add('active');document.body.style.overflow='hidden'}else{links.classList.remove('open');h.style.display='block';c.style.display='none';o.classList.remove('active');document.body.style.overflow=''}}
+    function toggleMobileNav(){const links=document.getElementById('navLinks'),h=document.querySelector('.hamburger-icon'),c=document.querySelector('.close-icon'),o=document.getElementById('navOverlay');mobileNavOpen=!mobileNavOpen;if(mobileNavOpen){links.classList.add('open');h.style.display='none';c.style.display='block';o.classList.add('active');document.body.style.overflow='hidden'}else{links.classList.remove('open');h.style.display='block';c.style.display='none';o.classList.remove('active');document.body.style.overflow=''}}
   function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!isOpen)item.classList.add('open')}
   const sO=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';sO.unobserve(en.target)}})},{threshold:.05});
   document.querySelectorAll('.section-header,.faq-list').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)';sO.observe(el)});
@@ -742,5 +742,6 @@
 
 </script>
 
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>
