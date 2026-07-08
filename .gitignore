@@ -4,6 +4,12 @@
 # Temp files from docx processing
 temp_*/
 
+# Audit / scratch / deploy clutter (removed 2026-07-08; not for production)
+codex audit/
+tmp/
+public/
+lang-test.html
+
 # Utility scripts
 enhance-batch.mjs
 fix-footer-batch.mjs
