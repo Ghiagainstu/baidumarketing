@@ -19,3 +19,25 @@ fix-takeaway-batch.mjs
 Thumbs.db
 .DS_Store
 node_modules/
+
+# Inspection / QA scratch artifacts (headless Chrome CDP, validators) — keep locally, never deploy
+.cdp-*/
+.chrome-*/
+inspect_*
+inspect-*
+verify_*
+verify-*
+quick_check.mjs
+fix_mobile_nav.py
+inspect-shots/
+
+# Misc scratch/diagnostic scripts & notes
+.diag_*.py
+.validate_*.py
+.regen_*.py
+.fix_*.py
+.finalize_*.py
+.ko_translation_spec.md
+ko_missing.txt
+inspect.log
+verify.log
