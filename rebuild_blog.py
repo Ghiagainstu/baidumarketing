@@ -631,6 +631,12 @@ def rebuild(template_path, md_path, output_path, lang, slug):
             # Only translate links pointing to this language prefix
             result = result.replace(f'>{en_text}</a>', f'>{tr_text}</a>')
 
+        # Special case: "Why Baidu PPC Pro" has inner <span> tag that breaks simple matching
+        if lang == 'ja':
+            result = result.replace('>Why Baidu PPC <span class="logo-pro">Pro</span>', '>Baidu PPC <span class="logo-pro">Pro</span>とは')
+        elif lang == 'ko':
+            result = result.replace('>Why Baidu PPC <span class="logo-pro">Pro</span>', '>Baidu PPC <span class="logo-pro">Pro</span> 소개')
+
     # 12. Footer headers
     if lang in FOOTER_HEADERS:
         for en_h, tr_h in FOOTER_HEADERS[lang].items():
