@@ -182,7 +182,7 @@
     .stat-card:nth-child(2) { border-top: 4px solid #4F46E5; }
     .stat-card:nth-child(3) { border-top: 4px solid #7C3AED; }
     .stat-card:nth-child(4) { border-top: 4px solid #2563EB; }
-    .stat-number { font-size: 1.8rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
+    .stat-number { font-size: 1.4rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
     .stat-label { font-size: .82rem; color: var(--gray-600); margin-top: 6px; }
     [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
     [data-theme="dark"] .stat-card:hover { box-shadow: 0 12px 24px rgba(0,0,0,.3); }
@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.deepseek { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.tongyi { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.wenxin { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.wenxin { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
   </style>
 </head>
 <body>
@@ -305,7 +316,14 @@
 
     <p>이들은 관련된 사건이 아닙니다. 규제는 4월에 5개 정부 부처가 초안을 작성했습니다. DeepSeek은 독자적으로 출시일을 정했습니다. 플랫폼 에이전트 중단은 상업적 결정이었습니다. 그러나 단일 날짜——7월 15일 화요일——로의 수렴은 시장 사이클에서 한 번 일어나는 종류의 정렬입니다. 이는 중국 AI 플랫폼에서의 오래된 운영 방식이 끝나고 새로운 방식이 시작되고 있음을 신호합니다.</p>
 
-    <h2>7월 15일에 무슨 일이 일어나는가</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">📅 7월 15일 집중 사건</div></div>
+      <div class="stat-card"><div class="stat-number">128K</div><div class="stat-label">🧠 DeepSeek V4 컨텍스트</div></div>
+      <div class="stat-card"><div class="stat-number">0.5원/M</div><div class="stat-label">💡 오프피크 토큰 가격</div></div>
+      <div class="stat-card"><div class="stat-number">800만+</div><div class="stat-label">🔒 중단되는 에이전트</div></div>
+    </div>
+
+    <h2>📅 7월 15일에 무슨 일이 일어나는가</h2>
 
     <p>세 가지. 각각 단독으로도 중요합니다. 함께일 때, 지형을 재설정합니다.</p>
 
@@ -317,7 +335,7 @@
 
     <p>이 세 가지 사건의 한 날로의 정렬은 일정의 우연이 아닙니다. 규제 신호, 플랫폼 대응, 기술 업그레이드——모두 같은 날에 착지하는 수렴입니다.</p>
 
-    <h2>이 수렴이 중요한 이유</h2>
+    <h2>⚡ 이 수렴이 중요한 이유</h2>
 
     <p>중국 AI 시장은 2026년 상반기 내내 일련의 규제 신호를 흡수해 왔습니다. 2월 AIIA GEO 안전 서약. 3월 CCTV 315 AI 오염 폭로. 6월 GEO 레드북. AI 의인화 규제는 4월에 공포되어 7월에 발효됩니다.</p>
 
@@ -331,7 +349,7 @@
 
     <p><strong>브랜드 존재감의 표면적이 축소되고 이동하고 있다.</strong> 더우바오와 통이첸원 사용자 에이전트의 중단은 한 세트의 브랜드 접점을 제거합니다. DeepSeek V4의 출시는 새로운 접점을 창출합니다——모델의 확장된 컨텍스트 윈도우와 낮은 비용은 더 정교한 AI 구동 브랜드 경험을 가능하게 합니다. 그러나 경험은 다를 것입니다: 더 많은 수동적 AI 가시성, 더 적은 능동적 AI 참여. 우리가 이번 달 내내 다뤄온 GEO 프레임워크——구조화 콘텐츠, 신뢰할 수 있는 소스, 지속적 모니터링——는 7월 15일 이후 환경이 보상하는 기술 세트입니다.</p>
 
-    <h2>7월 15일 이후의 주</h2>
+    <h2>📊 7월 15일 이후의 주</h2>
 
     <p>7월 15일이 앵커입니다. 그러나 그 다음 주에는 그 중요성을 복합적으로 높이는 두 가지 이벤트가 이어집니다:</p>
 
@@ -357,7 +375,7 @@
 
     <p>7월 15일이 창을 엽니다. 7월 17일이 창이 가리키는 방향을 확인합니다. 7월 31일까지, 규제 후 AI 지형은 7월 1일과 눈에 띄게 다를 것입니다.</p>
 
-    <h2>BPP가 이에 대해 하는 일</h2>
+    <h2>✅ BPP가 이에 대해 하는 일</h2>
 
     <p>BPP는 DeepSeek API 고객이 아니며 AI 에이전트를 구축하지 않습니다. 그러나 해외 브랜드와 중국 AI 생태계의 교차점에서 운영되며, 7월 15일과 같은 수렴 이벤트는 바로 우리가 추적하는 종류의 신호입니다.</p>
 
@@ -374,6 +392,14 @@
 </ul>
 
     <p>7월 15일은 경보의 원인이 아닙니다. 주의의 원인입니다. 6월에 광고했던 플랫폼은 8월에 광고할 플랫폼과 동일하지 않습니다. 규제, 기술, 플랫폼 대응이 단일 날짜로 수렴하는 것은 드뭅니다. 그런 일이 일어날 때, 이해할 가치가 있습니다.</p>
+
+    <div class="callout callout-insight">
+      <strong>인사이트: 하루. 세 가지 변혁.</strong> 규제가 규칙을 정의합니다. 플랫폼 에이전트가 브랜드가 사용할 수 있는 표면적을 정의합니다. 모델 업그레이드가 AI 콘텐츠의 경제성을 정의합니다. 7월 15일, 세 가지 모두 동시에 변화합니다. 이 수렴을 이해하는 브랜드는 이벤트 후가 아니라 그 전에 전략을 구축했습니다.
+    </div>
+
+    <div class="takeaway-box">
+      <strong>핵심 요점:</strong> 7월 15일은 중국 AI 생태계의 수렴점: DeepSeek V4 피크밸리 가격제 출시(128K 컨텍스트, 40% 빠름, 30% 저렴), AI 의인화 규제 발효, 더우바오/통이첸원 에이전트 중단 완료. 실무적 의미: AI 콘텐츠 제작 비용 변화, 컴플라이언스 하드 데드라인, 브랜드 존재감이 능동적 에이전트에서 수동적 AI 가시성으로 전환. 전략 적응까지 7일 남음.
+    </div>
       </article>
     </div>
   </section>

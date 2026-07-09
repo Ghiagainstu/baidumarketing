@@ -182,7 +182,7 @@
     .stat-card:nth-child(2) { border-top: 4px solid #4F46E5; }
     .stat-card:nth-child(3) { border-top: 4px solid #7C3AED; }
     .stat-card:nth-child(4) { border-top: 4px solid #2563EB; }
-    .stat-number { font-size: 1.8rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
+    .stat-number { font-size: 1.4rem; font-weight: 900; color: var(--blue); line-height: 1.1; }
     .stat-label { font-size: .82rem; color: var(--gray-600); margin-top: 6px; }
     [data-theme="dark"] .stat-card { background: var(--gray-100); border-color: var(--gray-200); }
     [data-theme="dark"] .stat-card:hover { box-shadow: 0 12px 24px rgba(0,0,0,.3); }
@@ -261,6 +261,17 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.deepseek { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    .platform-pill.doubao { background: #FFF7ED; border-color: #FDBA74; color: #9A3412; }
+    .platform-pill.tongyi { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.wenxin { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    [data-theme="dark"] .platform-pill.deepseek { background: rgba(91,33,182,.15); border-color: #8B5CF6; color: #C4B5FD; }
+    [data-theme="dark"] .platform-pill.doubao { background: rgba(154,52,18,.15); border-color: #F97316; color: #FDBA74; }
+    [data-theme="dark"] .platform-pill.tongyi { background: rgba(6,95,70,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.wenxin { background: rgba(55,48,163,.15); border-color: #6366F1; color: #A5B4FC; }
   </style>
 </head>
 <body>
@@ -331,6 +342,13 @@
     <p>What was missing until this week was the platform-level response. DeepSeek V4's launch on July 15 converts an abstract policy change into concrete operational signals: the AI model that most GEO tools and AI marketing platforms depend on is changing its pricing structure and capability set on the same day the regulatory framework goes live.</p>
 
     <p>For overseas brands using or planning to use AI platforms in China, the convergence means three things:</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill deepseek">🧠 DeepSeek</span>
+      <span class="platform-pill doubao">🤖 Doubao</span>
+      <span class="platform-pill tongyi">📚 Tongyi Qianwen</span>
+      <span class="platform-pill wenxin">🔍 Wenxin Yiyan</span>
+    </div>
 
     <p><strong>The cost structure for AI content production is changing.</strong> DeepSeek's peak-valley pricing means AI content tools that run on its API will see different economics depending on time of day. Content generation during off-peak hours becomes cheaper. Real-time AI responses during peak business hours become more expensive. Brands that schedule AI content workflows around the pricing curve will have a cost advantage over those that do not.</p>
 
