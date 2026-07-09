@@ -118,7 +118,7 @@ CATEGORY_LABELS = {
     'ko': {
         'insights': '시장 인사이트', 'search': '검색 광고', 'feed': '피드 광고',
         'strategy': '전략', 'platform': '플랫폼', 'landing': '랜딩 페이지',
-        'pricing': '요금 모델',
+        'pricing': '요금',
     },
 }
 
