@@ -17,6 +17,8 @@ import os
 import sys
 import argparse
 import html as html_module
+import shutil
+from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from md_to_html import md_to_html
@@ -490,6 +492,16 @@ def translate_components(html, lang):
     return html
 
 
+def is_summary_stub(md_path):
+    """Return True if the MD source is a `type: summary` stub rather than a full article."""
+    try:
+        with open(md_path, 'r', encoding='utf-8', errors='ignore') as f:
+            head = ''.join(f.readline() for _ in range(30))
+        return 'type: summary' in head.lower()
+    except OSError:
+        return False
+
+
 def rebuild(template_path, md_path, output_path, lang, slug):
     with open(template_path, 'r', encoding='utf-8') as f:
         tpl = f.read()
@@ -678,6 +690,15 @@ def rebuild(template_path, md_path, output_path, lang, slug):
             # Only replace href attributes, not already-prefixed ones
             result = result.replace(f'href="{path}"', f'href="{prefix}{path}"')
 
+    # ── SAFETY: backup existing live HTML before overwrite (defense-in-depth) ──
+    if os.path.exists(output_path):
+        backup_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.rebuild_backups')
+        os.makedirs(backup_dir, exist_ok=True)
+        ts = datetime.now().strftime('%Y%m%d-%H%M%S')
+        bak_name = f'{lang}_{slug}_{ts}.html.bak'
+        shutil.copy2(output_path, os.path.join(backup_dir, bak_name))
+        print(f'BACKUP {lang}: previous live HTML saved -> .rebuild_backups/{bak_name}')
+
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(result)
     print(f'OK {lang}: {output_path}')
@@ -687,6 +708,8 @@ def main():
     parser = argparse.ArgumentParser(description='Rebuild blog HTML from Obsidian MD')
     parser.add_argument('slug', help='Blog slug (e.g. baidu-ads-b2b-manufacturers)')
     parser.add_argument('--lang', default='all', help='Language: en, ja, ko, or all')
+    parser.add_argument('--force', action='store_true',
+                        help='Bypass the summary-stub guard (NOT recommended: may overwrite live full content with a stub)')
     args = parser.parse_args()
 
     base = os.path.dirname(os.path.abspath(__file__))
@@ -712,6 +735,8 @@ def main():
         print(f'ERROR: slug "{args.slug}" not found in any Obsidian category dir')
         sys.exit(1)
 
+    blocked = 0
+    rebuilt = 0
     for lang in langs:
         md_path = os.path.join(slug_dir, f'{args.slug}-{lang}.md')
         if lang == 'en':
@@ -723,7 +748,24 @@ def main():
             print(f'SKIP {lang}: {md_path} not found')
             continue
 
+        # ── SAFETY GUARD: refuse to rebuild from a `type: summary` stub ──
+        # A stub would overwrite the live full HTML with a teaser and cause a
+        # content regression. Translate the source to full first, or pass
+        # --force only if you intentionally want to rebuild from the stub.
+        if not args.force and is_summary_stub(md_path):
+            print(f'BLOCKED {lang}: source is a SUMMARY STUB ({md_path}).\n'
+                  f'         Refusing to overwrite the live full HTML. '
+                  f'Translate the source to full first, or pass --force to override.')
+            blocked += 1
+            continue
+
         rebuild(template, md_path, out_path, lang, args.slug)
+        rebuilt += 1
+
+
+    if blocked:
+        print(f'\nGUARD SUMMARY: {blocked} language(s) blocked (stub source), {rebuilt} rebuilt.')
+        print('  Live full content was NOT modified for blocked languages.')
 
 
 if __name__ == '__main__':

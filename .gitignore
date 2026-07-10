@@ -31,6 +31,9 @@ quick_check.mjs
 fix_mobile_nav.py
 inspect-shots/
 
+# Rebuild safety backups (defense-in-depth; never deploy)
+.rebuild_backups/
+
 # Misc scratch/diagnostic scripts & notes
 .diag_*.py
 .validate_*.py
