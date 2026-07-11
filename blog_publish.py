@@ -70,9 +70,34 @@ LANG_CONFIG = {
 # 卡片模板
 # ============================================================
 
+def truncate_excerpt(text, limit=120):
+    """将卡片摘要截断到 limit 字符内（CJK 按字、英文按词边界），超出加省略号。
+
+    用于发布时自动兜底，确保写入列表页的摘要永远 ≤ limit，
+    避免手工传入过长 excerpt 导致 validate 失败。
+    """
+    if not text:
+        return ""
+    text = text.strip()
+    if len(text) <= limit:
+        return text
+    has_cjk = bool(re.search(r'[\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7a3]', text))
+    if has_cjk:
+        cut = limit - 1
+        trunc = text[:cut]
+    else:
+        cut = text.rfind(' ', 0, limit - 1)
+        if cut <= 0:
+            cut = limit - 1
+        trunc = text[:cut]
+    trunc = trunc.rstrip(' .,。、!?！？;:；：')
+    return trunc + '…'
+
+
 def create_card_html(lang, slug, category, title, excerpt, date, read_time):
     """创建 blog 卡片 HTML"""
     read_more = LANG_CONFIG[lang]["read_more"]
+    excerpt = truncate_excerpt(excerpt, 120)
 
     # 确定链接路径（相对路径，不带语言前缀）
     if lang == "en":

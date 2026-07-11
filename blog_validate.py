@@ -262,10 +262,10 @@ def check_excerpt_length(html, result):
     long_excerpts = []
     for exc in excerpts:
         clean = re.sub(r'<[^>]+>', '', exc).strip()
-        if len(clean) > 130:
+        if len(clean) > 120:
             long_excerpts.append(len(clean))
     result.add("卡片摘要长度 (≤120字符)", len(long_excerpts) == 0,
-               f"{len(long_excerpts)} 个摘要超过 130 字符" if long_excerpts else "")
+               f"{len(long_excerpts)} 个摘要超过 120 字符" if long_excerpts else "")
 
 
 # ============================================================
