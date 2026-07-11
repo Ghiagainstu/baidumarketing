@@ -293,6 +293,70 @@ def check_comparison_table_tag(html, result):
                f"发现 {bad} 个用 <div> 的 comparison-table" if bad else "")
 
 
+def check_stat_number_overflow(html, result):
+    """检查 stats-grid 中 .stat-number 文本是否过长（>8 字符建议缩到 1.2rem）。
+
+    非阻断警告：始终通过，仅在详情提示，由 blog-enhance 增强步骤落实缩小。
+    """
+    blocks = re.findall(r'class="stat-number"[^>]*>(.*?)</', html, re.DOTALL)
+    long_ones = []
+    for b in blocks:
+        text = re.sub(r"<[^>]+>", "", b).strip()
+        if len(text) > 8:
+            long_ones.append(text)
+    if long_ones:
+        result.add("stat-number 溢出警告(>8字符, 建议1.2rem)", True,
+                   f"{len(long_ones)} 个过长: {', '.join(long_ones[:5])}... 建议 font-size:1.2rem")
+    else:
+        result.add("stat-number 溢出警告(>8字符, 建议1.2rem)", True)
+
+
+# ============================================================
+# 列表页专项检查（分类本地化 / emoji / 导航翻译）
+# ============================================================
+
+# 英文分类词（用于检测 JA/KO 列表页是否残留英文分类标签）
+EN_CATEGORY_WORDS = [
+    "Market Insights", "Search Ads", "Feed Ads", "Strategy",
+    "Platform", "Landing Page", "Pricing Models",
+]
+EMOJI_RE = re.compile(
+    "[\U0001F000-\U0001FAFF\U00002600-\U000027BF\U0001F300-\U0001F5FF\U00002B00-\U00002BFF]"
+)
+
+
+def check_listing_category_localized(html, lang, result):
+    """检查 JA/KO 列表页分类标签是否本地化（不得含英文分类词）"""
+    if lang == "en":
+        return
+    found = [w for w in EN_CATEGORY_WORDS if w in html]
+    result.add(f"分类标签本地化 ({lang})", len(found) == 0,
+               f"发现英文分类词: {found}" if found else "均为本地语言")
+
+
+def check_listing_title_emoji(html, lang, result):
+    """检查列表卡片标题是否带 emoji 前缀"""
+    titles = re.findall(r'class="blog-card-title"[^>]*>(.*?)</h3>', html, re.DOTALL)
+    if not titles:
+        return
+    missing = 0
+    for t in titles:
+        text = re.sub(r"<[^>]+>", "", t).strip()
+        if not text or not EMOJI_RE.match(text[0]):
+            missing += 1
+    result.add(f"列表标题 emoji 前缀 ({lang})", missing == 0,
+               f"{missing}/{len(titles)} 个标题缺 emoji" if missing else "全部带 emoji")
+
+
+def check_listing_nav_translated(html, lang, result):
+    """检查列表页导航是否已翻译（不得残留英文 Why Baidu PPC Pro）"""
+    if lang == "en":
+        return
+    untranslated = "Why Baidu PPC Pro" in html
+    result.add(f"导航已翻译 ({lang})", not untranslated,
+               "导航仍含英文 'Why Baidu PPC Pro'" if untranslated else "导航已本地化")
+
+
 # ============================================================
 # 主验证流程
 # ============================================================
@@ -350,6 +414,7 @@ def validate_blog(slug, lang="en"):
     if "article-content" in html:
         check_visual_components(html, result)
         check_comparison_table_tag(html, result)
+        check_stat_number_overflow(html, result)
 
     # === 输出报告 ===
     return result.report()
@@ -384,6 +449,11 @@ def validate_blog_listing(lang="en"):
     # 检查卡片排序（通过日期）
     dates = re.findall(r'<span>([^<]+)</span>', html)
     # 这里只做基本检查，不验证完整排序
+
+    # 列表页专项：分类本地化 / 标题 emoji / 导航翻译
+    check_listing_category_localized(html, lang, result)
+    check_listing_title_emoji(html, lang, result)
+    check_listing_nav_translated(html, lang, result)
 
     return result.report()
 

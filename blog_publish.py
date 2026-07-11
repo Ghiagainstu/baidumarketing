@@ -309,24 +309,32 @@ def git_commit_and_push(slug):
         print(f"❌ git commit 失败: {e}")
         return False
 
-    # Git push
-    try:
-        result = subprocess.run(
-            ["git", "push"],
-            cwd=PROJECT_ROOT,
-            capture_output=True,
-            text=True,
-            timeout=60
-        )
-        if result.returncode == 0:
-            print("✅ git push 完成")
-            return True
-        else:
-            print(f"❌ git push 失败: {result.stderr}")
-            return False
-    except Exception as e:
-        print(f"❌ git push 异常: {e}")
-        return False
+    # Git push（自动走代理，根治代理环境 push 失败丢 commit 的坑）
+    # 代理来源：环境变量 GIT_PROXY，未设置则默认本机 10808 代理
+    proxy = os.environ.get("GIT_PROXY", "http://127.0.0.1:10808")
+    push_cmds = [
+        ["git", "-c", f"http.proxy={proxy}", "-c", f"https.proxy={proxy}", "push"],
+        ["git", "push"],  # 兜底：代理不可用（如代理未启动）时裸 push
+    ]
+    last_err = ""
+    for cmd in push_cmds:
+        try:
+            result = subprocess.run(
+                cmd,
+                cwd=PROJECT_ROOT,
+                capture_output=True,
+                text=True,
+                timeout=90
+            )
+            if result.returncode == 0:
+                via = "代理" if "--push" not in cmd else "直连"
+                print(f"✅ git push 完成 ({via})")
+                return True
+            last_err = result.stderr.strip()
+        except Exception as e:
+            last_err = str(e)
+    print(f"❌ git push 失败: {last_err}")
+    return False
 
 
 # ============================================================
