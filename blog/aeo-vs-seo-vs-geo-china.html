@@ -255,6 +255,12 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .stat-caption { font-size: .82rem; color: var(--gray-600); margin: -8px 0 24px; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.12); border-color: var(--gray-200); color: #C7D2FE; }
+    [data-theme="dark"] .stat-caption { color: var(--gray-400); }
   </style>
 </head>
 <body>
@@ -301,11 +307,11 @@
 
     <p>Here's what SEO, AEO, and GEO actually mean — and how they work together on Baidu.</p>
 
-    <h2>The Three Layers of Modern Search</h2>
+    <h2>🧭 The Three Layers of Modern Search</h2>
 
     <p>Think of search optimization as a stack with three layers. Each one targets a different part of how buyers find information.</p>
 
-    <h3>SEO: Search Engine Optimization</h3>
+    <h3>1⃣ SEO: Search Engine Optimization</h3>
 
     <p>The classic. You optimize your website so search engines rank your pages high in the results.</p>
 
@@ -315,7 +321,7 @@
 
     <p><strong>Best for:</strong> Buyers who still click through to websites — which is most B2B buyers researching suppliers, comparing prices, or evaluating options.</p>
 
-    <h3>AEO: Answer Engine Optimization</h3>
+    <h3>2⃣ AEO: Answer Engine Optimization</h3>
 
     <p>This is about being the answer, not just a result. When Baidu shows an AI-generated summary or a featured snippet at the top of the page, AEO determines whether your content gets quoted in that answer.</p>
 
@@ -325,7 +331,7 @@
 
     <p><strong>Best for:</strong> Informational queries where Baidu now answers directly in the SERP — "how to," "what is," "best [category]" queries.</p>
 
-    <h3>GEO: Generative Engine Optimization</h3>
+    <h3>3⃣ GEO: Generative Engine Optimization</h3>
 
     <p>This is the newest layer. GEO targets the citations inside AI-generated responses — not just on Baidu, but on ChatGPT, Perplexity, Gemini, and China's own ERNIE Bot (文心一言), DeepSeek, and Tongyi Qianwen.</p>
 
@@ -335,7 +341,7 @@
 
     <p><strong>Best for:</strong> B2B buyers who use AI tools to shortlist vendors — which is increasingly common in enterprise purchasing.</p>
 
-    <h2>How This Works on Baidu (vs Google)</h2>
+    <h2>🔍 How This Works on Baidu (vs Google)</h2>
 
     <p>The concepts are the same globally, but Baidu's implementation has some important differences:</p>
 
@@ -361,7 +367,19 @@
 
     <p>The key difference: Baidu's AI search is more tightly integrated with its own ecosystem. When ERNIE generates an answer, it pulls heavily from Baidu's own properties — Baidu Zhidao, Baidu Baike, Baidu Tieba, and Zhihu. This means your GEO strategy for Baidu needs to include these platforms.</p>
 
-    <h2>The Investment Split: Where to Focus</h2>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📖 Baidu Zhidao</span>
+      <span class="platform-pill baidu">📚 Baidu Baike</span>
+      <span class="platform-pill baidu">💬 Baidu Tieba</span>
+      <span class="platform-pill baidu">💡 Zhihu</span>
+    </div>
+
+    <div class="callout callout-insight">
+      <strong>Key point</strong>
+      <p>Unlike Google, Baidu's GEO strategy must include its own properties — Baidu Zhidao, Baike, Tieba, and Zhihu.</p>
+    </div>
+
+    <h2>📊 The Investment Split: Where to Focus</h2>
 
     <p>Based on our experience with overseas advertisers targeting China, here's how to weight your optimization efforts:</p>
 
@@ -375,7 +393,12 @@
 
       <li>GEO: 20% — Enterprise buyers are starting to use ERNIE and DeepSeek for vendor shortlisting</li>
 
-</ul>
+<div class="stats-grid">
+      <div class="stat-card"><div class="stat-number">50%</div><div class="stat-label">SEO — Primary lead driver</div></div>
+      <div class="stat-card"><div class="stat-number">30%</div><div class="stat-label">AEO — More AI-summary comparison</div></div>
+      <div class="stat-card"><div class="stat-number">20%</div><div class="stat-label">GEO — Enterprise AI shortlisting</div></div>
+    </div>
+    <p class="stat-caption">Recommended split for B2B manufacturers (most BPP clients). SaaS/tech firms tend to allocate ~40% to GEO.</p>
 
     <p><strong>For SaaS and technology companies:</strong></p>
 
@@ -401,7 +424,7 @@
 
 </ul>
 
-    <h2>What This Means for Overseas Advertisers</h2>
+    <h2>🌐 What This Means for Overseas Advertisers</h2>
 
     <p>Here's the BPP angle: all three layers require Chinese-language content and a presence on China's internet ecosystem. This is where most foreign companies hit a wall.</p>
 
@@ -443,7 +466,7 @@
 
     <p>Each layer builds on the previous one. You can't do AEO without SEO. You can't do GEO without both.</p>
 
-    <h2>The Practical Playbook</h2>
+    <h2>🗺️ The Practical Playbook</h2>
 
     <p>If you're an overseas advertiser targeting China, here's what to do:</p>
 
@@ -485,7 +508,7 @@
 
 </ul>
 
-    <h2>What BPP Does for Each Layer</h2>
+    <h2>🤝 What BPP Does for Each Layer</h2>
 
     <p>BPP's core service is Baidu PPC advertising — that's the fastest way to get in front of Chinese buyers. But we also help with the organic foundation:</p>
 
@@ -506,6 +529,16 @@
     <p>Talk to the BPP team. We'll walk you through the realistic options for your industry, your budget, and your goals — no pressure, no fluff.</p>
 
     <p>→ <a href="https://www.baidumarketing.com/contact">Contact BPP</a></p>
+
+    <div class="takeaway-box">
+      <h3>📝 Key Takeaways</h3>
+      <ul>
+        <li>SEO, AEO, and GEO are three overlapping layers of search optimization</li>
+        <li>On Baidu, AI summaries are tied to its own ecosystem (Baidu Zhidao, Baike, Tieba, Zhihu)</li>
+        <li>Overseas advertisers need Chinese-language content and a presence on Chinese platforms</li>
+        <li>Start with PPC for immediate traffic, then build SEO → AEO → GEO in stages</li>
+      </ul>
+    </div>
       </article>
     </div>
   </section>
