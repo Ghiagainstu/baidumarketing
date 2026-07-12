@@ -716,24 +716,20 @@ def main():
     base = os.path.dirname(os.path.abspath(__file__))
     template = os.path.join(base, 'blog', '_template-en.html')
 
-    # Search across all Obsidian category dirs for the slug
+    # Search across ALL Obsidian subdirs for the slug (recursive, not limited
+    # to a hardcoded category list — many slugs live outside the 7 core dirs).
     obsidian_base = 'E:/Obsidian/Baidu'
-    category_dirs = [
-        '01-Market-Insights', '02-Platform', '03-Search-Ads',
-        '04-Feed-Ads', '05-Strategy', '06-Landing-Page', '07-Pricing-Models'
-    ]
 
     langs = ['en', 'ja', 'ko'] if args.lang == 'all' else [args.lang]
 
-    # Find which category dir contains the slug
+    # Find which dir contains the slug (first match wins)
     slug_dir = None
-    for cat in category_dirs:
-        candidate = os.path.join(obsidian_base, cat, args.slug)
-        if os.path.isdir(candidate):
-            slug_dir = candidate
+    for root, dirs, _ in os.walk(obsidian_base):
+        if args.slug in dirs:
+            slug_dir = os.path.join(root, args.slug)
             break
     if not slug_dir:
-        print(f'ERROR: slug "{args.slug}" not found in any Obsidian category dir')
+        print(f'ERROR: slug "{args.slug}" not found under {obsidian_base}')
         sys.exit(1)
 
     blocked = 0
