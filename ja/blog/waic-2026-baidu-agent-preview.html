@@ -36,6 +36,10 @@
     @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}}
     @media(max-width:768px){.article-hero{padding:56px 0 32px}.cta-box{padding:32px 24px}.nav-links{display:none}.nav-cta{display:none}.nav-links.open{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;width:100%;padding:8px 0;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-md);z-index:100;background:#fff}.nav-links.open a{display:block;padding:14px 24px;color:var(--gray-800);border-bottom:1px solid var(--gray-100)}.nav-links.open a:hover{background:var(--blue-subtle);color:var(--blue)}.footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}.related-grid{grid-template-columns:1fr}}
     [data-theme="dark"] .nav-links.open{background:#0B0F1A}[data-theme="dark"] .nav-links.open a{color:var(--gray-700)}.nav-mobile-panel{display:none}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin:24px 0}.stat-card{background:var(--gray-50);border-radius:12px;padding:20px;text-align:center;border:1px solid var(--gray-200)}.stat-number{font-size:1.4rem;font-weight:800;color:var(--blue)}.stat-label{font-size:.8rem;color:var(--gray-600);margin-top:4px}[data-theme="dark"] .stat-card{background:var(--gray-100);border-color:var(--gray-200)}
+    .platform-pills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.platform-pill{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;font-size:.8rem;font-weight:600;border:1px solid}.platform-pill.agent{background:#EEF0FF;border-color:#A5B4FC;color:#3730A3}.platform-pill.cloud{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}.platform-pill.chip{background:#EFF6FF;border-color:#93C5FD;color:#1E40AF}.platform-pill.model{background:#F5F3FF;border-color:#C4B5FD;color:#5B21B6}.platform-pill.dev{background:#FFF1F2;border-color:#FDA4AF;color:#9F1239}
+    .callout{border-radius:12px;padding:20px 24px;margin:24px 0;border-top:5px solid}[data-theme="dark"] .callout{background:rgba(99,102,241,.06)!important}.callout-insight{background:linear-gradient(180deg,rgba(41,50,225,.08) 0%,#FFFFFF 100%);border-color:#2932E1}.callout-tip{background:linear-gradient(180deg,#D1FAE5 0%,#FFFFFF 100%);border-color:#2932E1}
+    @media(max-width:640px){.stats-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -68,6 +72,13 @@
   <main><section class="article-section"><div class="container"><article class="article-content">
 <p>7月17日、WAIC 2026が上海で開幕します。4日間にわたり中国の主要AI企業が最新技術を発表する中、百度は<strong>AIエージェント製品ファミリー</strong>の全容と「芯雲模体」アーキテクチャのアップグレードを発表予定です。海外広告主が注目すべきポイントを解説します。</p>
 
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-number">📅 7/17–20</div><div class="stat-label">WAIC 2026 開催日</div></div>
+  <div class="stat-card"><div class="stat-number">🏢 上海</div><div class="stat-label">開催地</div></div>
+  <div class="stat-card"><div class="stat-number">90%</div><div class="stat-label">エージェント関与の仕事</div></div>
+  <div class="stat-card"><div class="stat-number">🤖 5+</div><div class="stat-label">出展エージェント数</div></div>
+</div>
+
 <h2>🤖 百度の出展内容</h2>
 <table class="comparison-table">
   <thead><tr><th>出展エリア</th><th>見どころ</th></tr></thead>
@@ -79,6 +90,23 @@
   </tbody>
 </table>
 <p>沈抖EVP（7月11日、成都）：<em>「未来の仕事の90%にエージェントが深く関与する。百度はエージェント時代の水・電気・石炭インフラを構築した。」</em></p>
+
+<div class="platform-pills">
+  <span class="platform-pill agent">🤖 商家智能体</span>
+  <span class="platform-pill agent">🎨 ブランドエージェント</span>
+  <span class="platform-pill dev">🛠️ 搭子企業版</span>
+  <span class="platform-pill model">🧠 文心モデル</span>
+  <span class="platform-pill cloud">☁️ AI Cloud</span>
+  <span class="platform-pill chip">💻 昆侖チップ</span>
+</div>
+
+<div class="callout callout-insight">
+  <strong>💡 インサイト：</strong> 「モデルパラメータ競争」から「エージェント能力競争」への戦略的転換は、広告主にとっての価値が「どのAIがより良く答えるか」から「どのAIがより良く<em>仕事をするか</em>」へと移行していることを意味します。百度の賭けは、PPCキャンペーン、ブランドプレゼンス、顧客対応を管理するエージェントが検索エンジンそのものよりも価値ある存在になることです。
+</div>
+
+<div class="callout callout-tip">
+  <strong>✅ プロのヒント：</strong> 百度のWAICプレスリリースページをブックマークし、<em>Baidu PPC Pro</em>をフォローして発表のリアルタイム分析を受け取りましょう。初日と2日目（7月17日〜18日）に最も市場関連性の高い製品発表が集中する傾向があります。
+</div>
 
 <div class="takeaway-box">
   <h3>🎯 WAIC期間中に追跡すべき発表（7月17日〜20日）</h3>

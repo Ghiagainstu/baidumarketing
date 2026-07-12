@@ -37,6 +37,10 @@
     @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}}
     @media(max-width:768px){.article-hero{padding:56px 0 32px}.cta-box{padding:32px 24px}.nav-links{display:none}.nav-cta{display:none}.nav-links.open{display:flex!important;flex-direction:column;position:absolute;top:64px;left:0;width:100%;padding:8px 0;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-md);z-index:100;background:#fff}.nav-links.open a{display:block;padding:14px 24px;color:var(--gray-800);border-bottom:1px solid var(--gray-100)}.nav-links.open a:hover{background:var(--blue-subtle);color:var(--blue)}.footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}.related-grid{grid-template-columns:1fr}}
     [data-theme="dark"] .nav-links.open{background:#0B0F1A}[data-theme="dark"] .nav-links.open a{color:var(--gray-700)}.nav-mobile-panel{display:none}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin:24px 0}.stat-card{background:var(--gray-50);border-radius:12px;padding:20px;text-align:center;border:1px solid var(--gray-200)}.stat-number{font-size:1.4rem;font-weight:800;color:var(--blue)}.stat-label{font-size:.8rem;color:var(--gray-600);margin-top:4px}[data-theme="dark"] .stat-card{background:var(--gray-100);border-color:var(--gray-200)}
+    .platform-pills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.platform-pill{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;font-size:.8rem;font-weight:600;border:1px solid}.platform-pill.agent{background:#EEF0FF;border-color:#A5B4FC;color:#3730A3}.platform-pill.cloud{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}.platform-pill.chip{background:#EFF6FF;border-color:#93C5FD;color:#1E40AF}.platform-pill.model{background:#F5F3FF;border-color:#C4B5FD;color:#5B21B6}.platform-pill.dev{background:#FFF1F2;border-color:#FDA4AF;color:#9F1239}
+    .callout{border-radius:12px;padding:20px 24px;margin:24px 0;border-top:5px solid}[data-theme="dark"] .callout{background:rgba(99,102,241,.06)!important}.callout-insight{background:linear-gradient(180deg,rgba(41,50,225,.08) 0%,#FFFFFF 100%);border-color:#2932E1}.callout-tip{background:linear-gradient(180deg,#D1FAE5 0%,#FFFFFF 100%);border-color:#2932E1}
+    @media(max-width:640px){.stats-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -70,6 +74,13 @@
 <p>On July 17, WAIC 2026 opens in Shanghai. For four days, every major Chinese AI company will present their latest capabilities. Baidu's presence is particularly significant — the company plans to unveil its full <strong>AI Agent product family</strong> and announce upgrades to its "Chip-Cloud-Model-Agent" architecture. Here is what international advertisers should watch.</p>
 
 <h2>🤖 What Baidu Will Showcase</h2>
+
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-number">📅 Jul 17–20</div><div class="stat-label">WAIC 2026 Dates</div></div>
+  <div class="stat-card"><div class="stat-number">🏢 Shanghai</div><div class="stat-label">Venue</div></div>
+  <div class="stat-card"><div class="stat-number">90%</div><div class="stat-label">Work with Agent Participation</div></div>
+  <div class="stat-card"><div class="stat-number">🤖 5+</div><div class="stat-label">Agent Types Showcased</div></div>
+</div>
 <table class="comparison-table">
   <thead><tr><th>Showcase Area</th><th>What to Expect</th></tr></thead>
   <tbody>
@@ -81,6 +92,19 @@
 </table>
 <p>Baidu EVP Shen Dou (July 11, Chengdu): <em>"90% of work will have agents participating deeply. Baidu has built the water-electricity-coal infrastructure for the Agent era."</em></p>
 
+<div class="platform-pills">
+  <span class="platform-pill agent">🤖 Merchant Agent</span>
+  <span class="platform-pill agent">🎨 Brand Agent</span>
+  <span class="platform-pill dev">🛠️ Dazi Enterprise</span>
+  <span class="platform-pill model">🧠 Wenxin Models</span>
+  <span class="platform-pill cloud">☁️ AI Cloud</span>
+  <span class="platform-pill chip">💻 Kunlun Chips</span>
+</div>
+
+<div class="callout callout-insight">
+  <strong>💡 Insight:</strong> The strategic shift from "competing on model parameters" to "competing on Agent capabilities" means the value for advertisers is no longer in which AI answers questions better — it is in which AI <em>does work</em> better. Baidu's bet is that the Agent that manages your PPC campaigns, brand presence, and customer interactions will become more valuable than the search engine itself.
+</div>
+
 <h2>📊 The Full-Stack Advantage</h2>
 <table class="comparison-table">
   <thead><tr><th>Layer</th><th>Upgrade</th><th>Impact</th></tr></thead>
@@ -91,6 +115,10 @@
     <tr><td><strong>Agent</strong></td><td>Unified platform</td><td>Single interface for campaigns</td></tr>
   </tbody>
 </table>
+
+<div class="callout callout-tip">
+  <strong>✅ Pro Tip:</strong> Bookmark Baidu's WAIC press releases page and follow <em>Baidu PPC Pro</em> for real-time analysis as announcements drop. The first two days (July 17–18) typically have the most market-relevant product announcements.
+</div>
 
 <div class="takeaway-box">
   <h3>🎯 What to Track During WAIC (July 17–20)</h3>
