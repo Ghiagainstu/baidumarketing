@@ -362,6 +362,46 @@ def git_commit_and_push(slug):
     return False
 
 
+def fix_article_meta(slug, lang, date_str, read_time_str):
+    """在 article HTML 中替换 article-meta 的日期和阅读时间"""
+    lang_dir = {"en": "blog", "ja": "ja/blog", "ko": "ko/blog"}
+    path = PROJECT_ROOT / lang_dir[lang] / f"{slug}.html"
+    if not path.exists():
+        print(f"⚠️  {path} 不存在，跳过")
+        return True
+
+    with open(path, 'r', encoding='utf-8') as f:
+        html = f.read()
+
+    # 定位 article-meta HTML 块
+    meta_start = html.find('<div class="article-meta">')
+    if meta_start == -1:
+        print(f"⚠️  {path} 未找到 article-meta")
+        return True
+    meta_end = html.find('</div>', meta_start)
+    meta_block = html[meta_start:meta_end]
+
+    # meta_block 中有 4 个 <span>：日期、阅读时间、分类、作者
+    spans = re.findall(r'<span>.*?</span>', meta_block, re.DOTALL)
+    if len(spans) >= 2:
+        # 第1个span = 日期，第2个span = 阅读时间
+        old_date_span = spans[0]
+        old_time_span = spans[1]
+        # 替换日期内容（SVG后 > 之后到 </span> 之前的内容）
+        new_date_span = re.sub(r'(<svg.*?</svg>)>.*?</span>', rf'\1> {date_str}</span>', old_date_span, flags=re.DOTALL)
+        new_time_span = re.sub(r'(<svg.*?</svg>)>.*?</span>', rf'\1> {read_time_str}</span>', old_time_span, flags=re.DOTALL)
+
+        html = html.replace(old_date_span, new_date_span)
+        html = html.replace(old_time_span, new_time_span)
+
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f"✅  {path} article-meta 已更新 ({date_str}, {read_time_str})")
+    else:
+        print(f"⚠️  {path} article-meta span 数量不足 ({len(spans)})")
+    return True
+
+
 # ============================================================
 # 验证调用
 # ============================================================
@@ -454,6 +494,7 @@ def main():
         args.date, args.read_time
     ):
         sys.exit(1)
+    fix_article_meta(args.slug, "en", args.date, args.read_time)
 
     # JA 卡片
     if not insert_and_sort_cards(
@@ -462,6 +503,7 @@ def main():
         args.date_ja, args.read_time_ja
     ):
         sys.exit(1)
+    fix_article_meta(args.slug, "ja", args.date_ja, args.read_time_ja)
 
     # KO 卡片（可选）
     if args.title_ko and args.excerpt_ko and args.date_ko and args.read_time_ko:
@@ -471,6 +513,7 @@ def main():
             args.date_ko, args.read_time_ko
         ):
             sys.exit(1)
+        fix_article_meta(args.slug, "ko", args.date_ko, args.read_time_ko)
 
     # Step 3: 更新 sitemap
     print("\n" + "=" * 60)
