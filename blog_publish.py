@@ -388,8 +388,8 @@ def fix_article_meta(slug, lang, date_str, read_time_str):
         old_date_span = spans[0]
         old_time_span = spans[1]
         # 替换日期内容（SVG后 > 之后到 </span> 之前的内容）
-        new_date_span = re.sub(r'(<svg.*?</svg>)>.*?</span>', rf'\1> {date_str}</span>', old_date_span, flags=re.DOTALL)
-        new_time_span = re.sub(r'(<svg.*?</svg>)>.*?</span>', rf'\1> {read_time_str}</span>', old_time_span, flags=re.DOTALL)
+        new_date_span = re.sub(r'(<svg.*?</svg>)\s*.*?</span>', rf'\1 {date_str}</span>', old_date_span, flags=re.DOTALL)
+        new_time_span = re.sub(r'(<svg.*?</svg>)\s*.*?</span>', rf'\1 {read_time_str}</span>', old_time_span, flags=re.DOTALL)
 
         html = html.replace(old_date_span, new_date_span)
         html = html.replace(old_time_span, new_time_span)
