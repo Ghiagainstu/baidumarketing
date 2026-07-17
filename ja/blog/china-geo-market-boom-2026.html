@@ -261,6 +261,18 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: #1E1B4B; border-color: #4338CA; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: #052E2B; border-color: #065F46; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.alipay { background: #0C2747; border-color: #1E40AF; color: #93C5FD; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: #3B0718; border-color: #9F1239; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.douyin { background: #1E1B4B; border-color: #5B21B6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -307,9 +319,22 @@
 
     <p>GEOは中国に到来しました。そして、ほとんどの海外広告主が認識しているよりもはるかに速いスピードで動いています。</p>
 
-    <h2>数字で見る：中国で最も急成長するマーケティング分野</h2>
+    <div class="callout callout-insight">
+      <strong>💡 インサイト:</strong> 中国企業はGEOを実験としてではなく扱っています。数千万元規模の調達契約は、AI回答での可視性がすでに予算化された競争的必要性であることを示しており、海外ブランドはまだこの競争に加わっていません。
+    </div>
+
+    <h2>📊 数字で見る：中国で最も急成長するマーケティング分野</h2>
 
     <p>2026年の中国GEO市場について、3つの独立した調査機関がデータを発表しています。新しいカテゴリーとしては異例なほど、数字の方向性は一致しています。</p>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-number">2,860億元</div><div class="stat-label">📊 CAICT GEO市場推計</div></div>
+      <div class="stat-card"><div class="stat-number">9,420億元</div><div class="stat-label">📈 IDC予測（中国）</div></div>
+      <div class="stat-card"><div class="stat-number">+125%</div><div class="stat-label">🚀 前年比成長率</div></div>
+      <div class="stat-card"><div class="stat-number">71%</div><div class="stat-label">🏢 企業GEO導入率</div></div>
+      <div class="stat-card"><div class="stat-number">70%+</div><div class="stat-label">👥 AI検索利用消費者</div></div>
+      <div class="stat-card"><div class="stat-number">68%</div><div class="stat-label">🤝 B2B購買意図（AI影響）</div></div>
+    </div>
 
     <ul>
 
@@ -329,11 +354,19 @@
 
     <p>AIの回答が検索結果に取って代わりつつあります。その回答に何が表示されるかをめぐる競争はすでに始まっており、中国企業は積極的に資金を投下しています。</p>
 
-    <h2>これが海外ブランドにとって重要な理由</h2>
+    <h2>🌐 これが海外ブランドにとって重要な理由</h2>
 
     <p>海外ブランドにとって、中国のGEO競争は西洋のGEO議論とは決定的に異なる三つの要素を持ちます。</p>
 
     <p><strong>プラットフォームが異なる。</strong> 世界のGEO議論はChatGPT、Perplexity、Google AI Overviewsを中心に展開されています。中国のAI検索ランドスケープは、百度（文心＋百度AI検索）、ByteDance（豆包）、Tencent（元宝）、Moonshot（Kimi）、DeepSeekという別のプラットフォーム群が支配しています。各プラットフォームは引用の優先基準、コンテンツ取り込みパイプライン、権威性評価シグナルが異なります。ニューヨークでChatGPT向けに最適化された戦略が、北京で文心向けに機能する保証はありません。</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 百度文心</span>
+      <span class="platform-pill douyin">📱 豆包</span>
+      <span class="platform-pill wechat">💬 元宝</span>
+      <span class="platform-pill xiaohongshu">🧠 Kimi</span>
+      <span class="platform-pill alipay">⚡ DeepSeek</span>
+    </div>
 
     <p><strong>データ基盤が異なる。</strong> 中国のAIモデルは圧倒的に中国語のソースから情報を取得します。百度百科（2,000万件以上のエントリーを持つ中国版Wikipedia）、知乎（専門家認証付きの中国版Quora）、WeChat公式アカウント、36Krや虎嗅（Huxiu）といった業界専門プラットフォームです。優れた英語の技術コンテンツを持つ国際ブランドでも、このエコシステム内でのプレゼンスはほぼゼロである可能性があります。なぜなら、それらの英語ソースは中国AIモデルの検索パイプラインに入力されないからです。</p>
 
@@ -341,7 +374,7 @@
 
     <p>これは調達データにすでに表れています。大型GEO契約は、百分点科技（Baifendian）、智推時代（GenOptima）、藍色光標（BlueFocus）といった中国国内企業に流れています。これらの企業は中国ブランド向けに体系的なGEO最適化パイプラインを構築中です。彼らがAI回答内で最適化したポジションがデフォルトの回答になります——国際競合が同じプラットフォームで自社のGEOプレゼンスを構築しない限り。</p>
 
-    <h2>GEOとSEOの違い：海外ブランドが陥る最大の誤解</h2>
+    <h2>⚖️ GEOとSEOの違い：海外ブランドが陥る最大の誤解</h2>
 
     <p>国際マーケティングチームからよく聞かれる反応：「当社はすでにSEOに投資しています。GEOはAI向けSEOの延長では？」</p>
 
@@ -369,11 +402,13 @@
 
     </table>
 
-    <p>最も危険な前提：優れた英語SEOが中国AIプラットフォームでのGEO可視性に転換されるという思い込み。これは事実ではありません。百度文心の学習コーパスとRAG（検索拡張生成）パイプラインは、中国プラットフォーム上で検証された権威を持つ中国語ソースを圧倒的に優遇します。適切に最適化された英語の.comサイトと技術文書を持つ国際的なB2Bメーカーでも、その製品カテゴリーに関する文心の回答で引用される可能性はほぼゼロです——それらのソースはモデルの検索パイプラインに投入されないからです。</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ 警告:</strong> 優れた英語SEOは中国AIプラットフォームでのGEO可視性に直結しません。百度文心の学習コーパスとRAGパイプラインは、中国プラットフォーム上で検証された権威を持つ中国語ソースを圧倒的に優遇します。適切に最適化された英語の.comサイトと技術文書を持つ国際的なB2Bメーカーでも、その製品カテゴリーに関する文心の回答で引用される可能性はほぼゼロです——それらの英語ソースはモデルの検索パイプラインに投入されないからです。
+    </div>
 
     <p>これはプラットフォームの欠陥ではありません。アーキテクチャ上の現実です。AIモデルの役割は、クエリに対して最も権威があり文脈的に関連性の高い情報を見つけることです。ブランドの権威的情報がモデルの取り込み対象外のプラットフォーム上に英語でのみ存在する場合、モデルはあなたを引用できません。回答枠は、モデルが見つけられる中国語の権威を構築したブランドに渡ります。</p>
 
-    <h2>百度AIエコシステム上でGEOプレゼンスを構築する方法</h2>
+    <h2>🧭 百度AIエコシステム上でGEOプレゼンスを構築する方法</h2>
 
     <p>推測的なフレームワークではなく観測されたプラットフォーム挙動に基づく、百度のAIスタック上で測定可能なGEO成果を生み出す具体的アクションです。</p>
 
@@ -397,7 +432,7 @@
 
     <p>文心、豆包、Kimiでブランド名と主要製品カテゴリーをテストしてください。モデルがどのブランドを引用しているか、そして引用していないかを確認します。自社ブランドが本来表示されるべき回答に競合が一貫して登場する場合、その競合はより強固なGEO特化型アセットを構築しています。監視なしでは、最適化の努力も的外れになります。</p>
 
-    <h2>本当の障壁——そしてそれを越える道</h2>
+    <h2>🚧 本当の障壁——そしてそれを越える道</h2>
 
     <p>海外広告主にとって、百度におけるGEOの機会は本物です。このプラットフォームは6.8億の月間アクティブユーザーにAI検索を提供しています。Apple Intelligenceとの提携後は、中国で行われるすべてのSiriクエリにも百度AI検索が応答します。百度エコシステム上で中国語のGEOプレゼンスを構築したブランドが、中国の消費者と中国のAIに認識され推奨されるブランドになります。</p>
 

@@ -261,6 +261,18 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: #1E1B4B; border-color: #4338CA; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: #052E2B; border-color: #065F46; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.alipay { background: #0C2747; border-color: #1E40AF; color: #93C5FD; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: #3B0718; border-color: #9F1239; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.douyin { background: #1E1B4B; border-color: #5B21B6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -307,9 +319,22 @@
 
     <p>GEO has arrived in China. And it is moving faster than most international advertisers realize.</p>
 
-    <h2>The Numbers: GEO Is China's Fastest-Growing Marketing Segment</h2>
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> Chinese enterprises are no longer treating GEO as an experiment. Procurement contracts worth tens of millions of RMB signal that AI-answer visibility is now a budgeted, competitive necessity — and international brands are not yet in the race.
+    </div>
+
+    <h2>📊 The Numbers: GEO Is China's Fastest-Growing Marketing Segment</h2>
 
     <p>Three independent research institutions have released 2026 GEO market data for China. The numbers are unusually aligned for a new category:</p>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-number">¥286B</div><div class="stat-label">📊 CAICT GEO market est.</div></div>
+      <div class="stat-card"><div class="stat-number">¥942B</div><div class="stat-label">📈 IDC projection (China)</div></div>
+      <div class="stat-card"><div class="stat-number">+125%</div><div class="stat-label">🚀 YoY market growth</div></div>
+      <div class="stat-card"><div class="stat-number">71%</div><div class="stat-label">🏢 Enterprise GEO adoption</div></div>
+      <div class="stat-card"><div class="stat-number">70%+</div><div class="stat-label">👥 Consumers using AI search</div></div>
+      <div class="stat-card"><div class="stat-number">68%</div><div class="stat-label">🤝 B2B intent from AI answers</div></div>
+    </div>
 
     <ul>
 
@@ -329,11 +354,19 @@
 
     <p>The AI answer has become the new search result. The competition for what appears in that answer has already begun — and Chinese companies are funding it aggressively.</p>
 
-    <h2>Why This Matters for International Brands in China</h2>
+    <h2>🌐 Why This Matters for International Brands in China</h2>
 
     <p>For overseas brands, the GEO race in China presents dynamics that differ from Western GEO discussions in three critical ways:</p>
 
     <p><strong>The platforms are different.</strong> Global GEO conversations center on ChatGPT, Perplexity, and Google AI Overviews. China's AI search landscape is dominated by a separate set of platforms: Baidu (Wenxin + Baidu AI Search), ByteDance (Doubao), Tencent (Yuanbao), Moonshot (Kimi), and DeepSeek. Each platform has different citation preferences, different content ingestion pipelines, and different authority ranking signals. An optimization strategy that works for ChatGPT answers in New York will not necessarily work for Wenxin answers in Beijing.</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 Baidu Wenxin</span>
+      <span class="platform-pill douyin">📱 Doubao</span>
+      <span class="platform-pill wechat">💬 Yuanbao</span>
+      <span class="platform-pill xiaohongshu">🧠 Kimi</span>
+      <span class="platform-pill alipay">⚡ DeepSeek</span>
+    </div>
 
     <p><strong>The data infrastructure is different.</strong> Chinese AI models pull overwhelmingly from Chinese-language sources: Baidu Baike (the Chinese Wikipedia equivalent with over 20 million entries), Zhihu (the Chinese Quora with expert-verified answers), WeChat Official Accounts, and industry vertical platforms like 36Kr and Huxiu. An international brand with excellent English-language technical content may have near-zero presence in this ecosystem — because none of those English sources feed the Chinese AI model's retrieval pipeline.</p>
 
@@ -341,7 +374,7 @@
 
     <p>This is already visible in the procurement data. Major GEO contracts are going to Chinese domestic firms like Baifendian (百分点科技), GenOptima (智推时代), and BlueFocus (蓝色光标). These firms are building systematic GEO optimization pipelines for Chinese brands. The brand positions they optimize in AI answers will be the default answers — unless international competitors build their own GEO presence on the same platforms.</p>
 
-    <h2>GEO vs. SEO: The Biggest Misconception for Overseas Brands</h2>
+    <h2>⚖️ GEO vs. SEO: The Biggest Misconception for Overseas Brands</h2>
 
     <p>A common response from international marketing teams: "We already invest in SEO. Isn't GEO just SEO for AI?"</p>
 
@@ -369,11 +402,13 @@
 
     </table>
 
-    <p>The most dangerous assumption: that strong English-language SEO translates to GEO visibility on Chinese AI platforms. It does not. Baidu Wenxin's training corpus and retrieval-augmented generation (RAG) pipeline overwhelmingly favor Chinese-language sources with verified authority on Chinese platforms. An international B2B manufacturer with a well-optimized .com site and English-language technical documentation will likely generate zero citations in a Wenxin-generated answer about their product category — because none of those sources enter the model's retrieval pipeline.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> Strong English-language SEO does not translate to GEO visibility on Chinese AI platforms. Baidu Wenxin's training corpus and RAG pipeline overwhelmingly favor Chinese-language sources with verified authority on Chinese platforms. An international B2B manufacturer with a well-optimized .com site and English technical docs will likely generate zero citations in a Wenxin answer about their category — because none of those English sources enter the model's retrieval pipeline.
+    </div>
 
     <p>This is not a platform flaw. It is an architectural reality. The AI model's job is to find the most authoritative, contextually relevant information for a query. If your brand's authoritative information exists only in English on platforms the model does not ingest, the model cannot cite you. The answer slot goes to whoever built the Chinese-language authority that the model can find.</p>
 
-    <h2>How to Build GEO Presence on Baidu's AI Ecosystem</h2>
+    <h2>🧭 How to Build GEO Presence on Baidu's AI Ecosystem</h2>
 
     <p>Based on observed platform behavior rather than speculative frameworks, here are the concrete actions that produce measurable GEO results on Baidu's AI stack:</p>
 
@@ -397,7 +432,7 @@
 
     <p>Test your brand name and key product categories in Wenxin, Doubao, and Kimi. Check which brands the models are citing — and which they are not. If a competitor consistently appears in answers where your brand should show up, that competitor has built stronger GEO-specific assets. Without monitoring, you are optimizing blind.</p>
 
-    <h2>The Real Barrier — and a Path Through It</h2>
+    <h2>🚧 The Real Barrier — and a Path Through It</h2>
 
     <p>For international advertisers, the GEO opportunity on Baidu is genuine. The platform powers AI search for 680 million monthly active users. After the Apple Intelligence partnership, it will also power every Siri query made in China. The brands that build Chinese-language GEO presence on Baidu's ecosystem will be the brands that Chinese consumers — and Chinese AI — recognize and recommend.</p>
 

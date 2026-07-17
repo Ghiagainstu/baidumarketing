@@ -261,6 +261,18 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: #1E1B4B; border-color: #4338CA; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: #052E2B; border-color: #065F46; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.alipay { background: #0C2747; border-color: #1E40AF; color: #93C5FD; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: #3B0718; border-color: #9F1239; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.douyin { background: #1E1B4B; border-color: #5B21B6; color: #C4B5FD; }
   </style>
 </head>
 <body>
@@ -307,9 +319,22 @@
 
     <p>GEO는 중국에 도래했습니다. 그리고 대부분의 해외 광고주가 인식하는 것보다 훨씬 빠르게 움직이고 있습니다.</p>
 
-    <h2>숫자로 보는 현실: 중국에서 가장 빠르게 성장하는 마케팅 분야</h2>
+    <div class="callout callout-insight">
+      <strong>💡 인사이트:</strong> 중국 기업은 GEO를 실험이 아닌 필수로 다루고 있습니다. 수천만 위안 규모의 조달 계약은 AI 답변 가시성이 이미 예산화된 경쟁적 필요임을 보여주며, 해외 브랜드는 아직 이 경쟁에 뛰어들지 않았습니다.
+    </div>
+
+    <h2>📊 숫자로 보는 현실: 중국에서 가장 빠르게 성장하는 마케팅 분야</h2>
 
     <p>2026년 중국 GEO 시장에 대해 3개의 독립 조사기관이 데이터를 발표했습니다. 신생 카테고리로서는 이례적으로 방향성이 일치합니다.</p>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-number">2,860억</div><div class="stat-label">📊 CAICT GEO 시장 추산</div></div>
+      <div class="stat-card"><div class="stat-number">9,420억</div><div class="stat-label">📈 IDC 전망(중국)</div></div>
+      <div class="stat-card"><div class="stat-number">+125%</div><div class="stat-label">🚀 전년 대비 성장</div></div>
+      <div class="stat-card"><div class="stat-number">71%</div><div class="stat-label">🏢 기업 GEO 도입률</div></div>
+      <div class="stat-card"><div class="stat-number">70%+</div><div class="stat-label">👥 AI 검색 이용 소비자</div></div>
+      <div class="stat-card"><div class="stat-number">68%</div><div class="stat-label">🤝 B2B 구매 의도(AI 영향)</div></div>
+    </div>
 
     <ul>
 
@@ -329,11 +354,19 @@
 
     <p>AI 답변이 검색 결과를 대체하고 있습니다. 그 답변에 무엇이 표시될지를 둘러싼 경쟁은 이미 시작되었으며, 중국 기업들은 공격적으로 자금을 투입하고 있습니다.</p>
 
-    <h2>이것이 해외 브랜드에 중요한 이유</h2>
+    <h2>🌐 이것이 해외 브랜드에 중요한 이유</h2>
 
     <p>해외 브랜드에게 중국의 GEO 경쟁은 서구의 GEO 논의와 결정적으로 다른 세 가지 요소를 갖습니다.</p>
 
     <p><strong>플랫폼이 다릅니다.</strong> 글로벌 GEO 논의는 ChatGPT, Perplexity, Google AI Overviews를 중심으로 전개됩니다. 중국의 AI 검색 환경은 바이두(원신 + 바이두 AI 검색), ByteDance(더우바오), Tencent(위안바오), Moonshot(Kimi), DeepSeek라는 별개의 플랫폼군이 지배합니다. 각 플랫폼은 인용 우선 기준, 콘텐츠 수집 파이프라인, 권위 평가 신호가 다릅니다. 뉴욕에서 ChatGPT에 최적화된 전략이 베이징에서 원신에 작동한다는 보장은 없습니다.</p>
+
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔍 바이두 원신</span>
+      <span class="platform-pill douyin">📱 더우바오</span>
+      <span class="platform-pill wechat">💬 위안바오</span>
+      <span class="platform-pill xiaohongshu">🧠 Kimi</span>
+      <span class="platform-pill alipay">⚡ DeepSeek</span>
+    </div>
 
     <p><strong>데이터 인프라가 다릅니다.</strong> 중국 AI 모델은 압도적으로 중국어 소스에서 정보를 가져옵니다. 바이두 백과(2,000만 건 이상의 항목을 보유한 중국판 Wikipedia), 즈후(전문가 인증 답변을 갖춘 중국판 Quora), WeChat 공식 계정, 36Kr과 후슈(Huxiu) 같은 업계 전문 플랫폼입니다. 우수한 영어 기술 콘텐츠를 보유한 국제 브랜드도 이 생태계 내 존재감은 거의 제로일 수 있습니다. 왜냐하면 그 영어 소스들은 중국 AI 모델의 검색 파이프라인에 입력되지 않기 때문입니다.</p>
 
@@ -341,7 +374,7 @@
 
     <p>이는 조달 데이터에 이미 나타나고 있습니다. 대형 GEO 계약은 바이펀디안(百分点科技), GenOptima(智推時代), 블루포커스(藍色光標) 같은 중국 국내 기업에 흘러가고 있습니다. 이 기업들은 중국 브랜드를 위해 체계적인 GEO 최적화 파이프라인을 구축 중입니다. 그들이 AI 답변 내에서 최적화한 포지션이 기본 답변이 됩니다 — 국제 경쟁자가 동일한 플랫폼에서 자체 GEO 존재감을 구축하지 않는 한.</p>
 
-    <h2>GEO와 SEO의 차이: 해외 브랜드가 빠지는 최대 오해</h2>
+    <h2>⚖️ GEO와 SEO의 차이: 해외 브랜드가 빠지는 최대 오해</h2>
 
     <p>국제 마케팅 팀에서 자주 듣는 반응: "우리는 이미 SEO에 투자하고 있습니다. GEO는 AI용 SEO의 연장 아닌가요?"</p>
 
@@ -369,11 +402,13 @@
 
     </table>
 
-    <p>가장 위험한 전제: 우수한 영어 SEO가 중국 AI 플랫폼에서의 GEO 가시성으로 전환된다는 믿음. 이는 사실이 아닙니다. 바이두 원신의 학습 코퍼스와 RAG(검색 증강 생성) 파이프라인은 중국 플랫폼에서 검증된 권위를 가진 중국어 소스를 압도적으로 선호합니다. 최적화된 영어 .com 사이트와 기술 문서를 갖춘 국제 B2B 제조업체도, 해당 제품 카테고리에 관한 원신의 답변에서 인용될 가능성은 거의 제로입니다 — 그 소스들은 모델의 검색 파이프라인에 투입되지 않기 때문입니다.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ 경고:</strong> 우수한 영어 SEO는 중국 AI 플랫폼에서의 GEO 가시성으로 직결되지 않습니다. 바이두 원신의 학습 코퍼스와 RAG 파이프라인은 중국 플랫폼에서 검증된 권위를 가진 중국어 소스를 압도적으로 선호합니다. 최적화된 영어 .com 사이트와 기술 문서를 갖춘 국제 B2B 제조업체도, 해당 제품 카테고리에 관한 원신의 답변에서 인용될 가능성은 거의 제로입니다 — 그 영어 소스들은 모델의 검색 파이프라인에 투입되지 않기 때문입니다.
+    </div>
 
     <p>이는 플랫폼 결함이 아닙니다. 아키텍처적 현실입니다. AI 모델의 역할은 쿼리에 가장 권위 있고 맥락적으로 관련성 높은 정보를 찾는 것입니다. 브랜드의 권위적 정보가 모델의 수집 대상 외 플랫폼에 영어로만 존재한다면, 모델은 귀하를 인용할 수 없습니다. 답변 슬롯은 모델이 찾을 수 있는 중국어 권위를 구축한 브랜드에게 돌아갑니다.</p>
 
-    <h2>바이두 AI 생태계에서 GEO 존재감을 구축하는 방법</h2>
+    <h2>🧭 바이두 AI 생태계에서 GEO 존재감을 구축하는 방법</h2>
 
     <p>추측적 프레임워크가 아닌 관측된 플랫폼 동작에 기반하여, 바이두 AI 스택에서 측정 가능한 GEO 성과를 내는 구체적 조치입니다.</p>
 
@@ -397,7 +432,7 @@
 
     <p>원신, 더우바오, Kimi에서 브랜드명과 주요 제품 카테고리를 테스트하십시오. 모델이 어떤 브랜드를 인용하고 있는지, 그리고 인용하지 않는지를 확인합니다. 자사 브랜드가 표시되어야 할 답변에 경쟁사가 일관되게 등장한다면, 그 경쟁사는 더 강력한 GEO 특화 자산을 구축한 것입니다. 모니터링 없이는 최적화 노력도 허사가 됩니다.</p>
 
-    <h2>진짜 장벽 — 그리고 그것을 넘는 길</h2>
+    <h2>🚧 진짜 장벽 — 그리고 그것을 넘는 길</h2>
 
     <p>해외 광고주에게 바이두에서의 GEO 기회는 진짜입니다. 이 플랫폼은 6.8억 월간 활성 사용자에게 AI 검색을 제공합니다. Apple Intelligence 파트너십 이후에는 중국에서 이루어지는 모든 Siri 쿼리에도 바이두 AI 검색이 응답합니다. 바이두 생태계에서 중국어 GEO 존재감을 구축한 브랜드가 중국 소비자와 중국 AI에 인식되고 추천되는 브랜드가 됩니다.</p>
 
