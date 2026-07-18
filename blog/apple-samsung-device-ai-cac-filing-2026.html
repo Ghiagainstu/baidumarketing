@@ -261,7 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+      .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(16,185,129,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(59,130,246,.15); border-color: #3B82F6; color: #93C5FD; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(244,63,94,.15); border-color: #F43F5E; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(139,92,246,.15); border-color: #8B5CF6; color: #C4B5FD; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -304,6 +317,15 @@
     <p>On July 15, 2026, China's Cyberspace Administration published a notice that reshapes the competitive landscape for AI visibility in China. Seven mobile on-device generative AI services received filing approval — including Apple Intelligence and Samsung Galaxy AI. It was the largest single batch of on-device AI approvals in China's regulatory history, and the first time a separate filing category was created for system-level AI agents embedded in smartphone operating systems.</p>
 
     <p>The list: Apple Intelligence, Samsung Galaxy AI, Huawei Xiaoyi, OPPO AndesGPT, vivo BlueHeart, Xiaomi Surge AI, and Nubia (Doubao-powered). Seven brands. One filing class. One common thread running through the two most internationally relevant names — Apple and Samsung — is Baidu AI Search.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">Apple Intelligence</span>
+      <span class="platform-pill wechat">Samsung Galaxy AI</span>
+      <span class="platform-pill alipay">Huawei Xiaoyi</span>
+      <span class="platform-pill xiaohongshu">OPPO AndesGPT</span>
+      <span class="platform-pill douyin">vivo BlueHeart</span>
+      <span class="platform-pill baidu">Xiaomi Surge AI</span>
+      <span class="platform-pill wechat">Nubia (Doubao)</span>
+    </div>
 
     <p>This is not a partnership announcement. The Apple-Baidu and Samsung-Baidu partnerships were already public. This is the regulatory green light that turns those partnerships from announced intentions into products with a legal path to Chinese consumers. The filing marks the transition from "Baidu will power Apple's AI search in China" to "Baidu is now the system-level AI search engine inside every compliant iPhone and Galaxy device sold in China."</p>
 
@@ -320,7 +342,7 @@
       <div class="stat-card"><div class="stat-number">1st</div><div class="stat-label">🏛️ System-level AI filing category</div></div>
     </div>
 
-    <h2>What the Filing Actually Means</h2>
+    <h2>📋 What the Filing Actually Means</h2>
 
     <p>The CAC's new "mobile on-device generative AI service" filing category is itself a signal. It acknowledges that AI is no longer just a cloud service or a standalone app — it is becoming a feature of the operating system. The seven approved services are not apps that users download. They are baked into the phone. For Apple users, the AI stack will appear as a suite of native capabilities: writing tools, AI photo editing, an upgraded Siri, natural language search, and cross-app task orchestration. For Samsung users, it means "circle to search," an AI-powered notes assistant, and a Bixby voice assistant rebuilt on Baidu's AI search and knowledge graph.</p>
 
@@ -330,7 +352,7 @@
 
     <p>That division is worth stating plainly: when a China iPhone user asks Siri a question that requires search, Baidu's AI search stack provides the answer. When a China iPhone user asks Siri to find information about a product, a brand, or a service, Baidu's AI search is the retrieval and ranking engine behind that response.</p>
 
-    <h2>Device-Level GEO: Why This Changes the Calculation for Overseas Brands</h2>
+    <h2>🤖 Device-Level GEO: Why This Changes the Calculation for Overseas Brands</h2>
 
     <p>For the past year, the GEO conversation in China has focused on web-based AI search — Baidu Wenxin, Doubao, Kimi, DeepSeek. Brands optimized for citation in AI-generated answers on these platforms. That framework remains relevant, but the CAC filing introduces a new dimension: device-level GEO.</p>
 
@@ -342,7 +364,7 @@
 
     <p>For an overseas brand selling into China, the implication is straightforward: being cited in Baidu AI Search answers now determines whether your brand appears in Siri results, Bixby results, and on-device AI search results for hundreds of millions of Chinese consumers. GEO on Baidu is no longer just about web-based AI search. It is about device-native AI visibility — and the CAC filing has accelerated the timeline from "eventually" to "imminently."</p>
 
-    <h2>What Overseas Brands Need to Do — Specifically</h2>
+    <h2>🎯 What Overseas Brands Need to Do — Specifically</h2>
 
     <p>The regulatory milestone does not automatically create GEO coverage for international brands. It creates the channel. Whether a brand appears in that channel depends on whether it has built the assets that Baidu AI Search can find, verify, and cite.</p>
 
@@ -357,8 +379,11 @@
     <p><strong>4. Cross-platform brand consistency.</strong> Baidu's AI search cross-references multiple Chinese-language sources when generating answers. If your brand name, product names, or specifications differ between your Baidu Baike entry, your Chinese website, and third-party Chinese media mentions, the model's confidence in citing your brand drops. Consistency across every Chinese-language surface is a prerequisite for citation, not an optimization tactic.</p>
 
     <p><strong>5. A Baidu advertising account.</strong> To build a verified presence on Baidu's ecosystem — Baike entry, structured data verification, content publishing, brand authentication — an overseas company needs access to Baidu's platform. That requires a verified Baidu advertising account, which in turn requires a Chinese business license, a Chinese bank account for settlement, and Chinese-language operational capability. These are not assets most international marketing teams maintain in-house.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> A verified Baidu advertising account, a Chinese business license, and a local settlement bank account are not optional extras — they are the gate to the entire device-level GEO channel. Most international teams do not hold these in-house. The window is open now, but the brands that lock in Chinese-language GEO assets first are the ones China's AI will cite when on-device search goes live.
+    </div>
 
-    <h2>The Window Is Open — But Not Indefinitely</h2>
+    <h2>⏳ The Window Is Open — But Not Indefinitely</h2>
 
     <p>The CAC filing creates a defined before-and-after moment. Before July 15, 2026, device-level AI search visibility on iPhones and Galaxy phones in China was a conceptual future. After July 15, it is a compliance-cleared, hardware-mapped, execution-tracked reality.</p>
 

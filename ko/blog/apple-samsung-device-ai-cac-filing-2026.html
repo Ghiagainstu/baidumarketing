@@ -261,7 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+      .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(16,185,129,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(59,130,246,.15); border-color: #3B82F6; color: #93C5FD; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(244,63,94,.15); border-color: #F43F5E; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(139,92,246,.15); border-color: #8B5CF6; color: #C4B5FD; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -303,7 +316,16 @@
       <article class="article-content">
     <p>2026년 7월 15일, 중국 사이버공간관리국(CAC)은 스마트폰 OS에 내장된 AI의 중국 시장 전개를 근본적으로 바꾸는 공고를 발표했습니다. 7개의 모바일 온디바이스 생성형 AI 서비스가 신고 승인을 획득했습니다 — Apple Intelligence와 Samsung Galaxy AI를 포함한, 중국 규제 역사상 최대 규모의 온디바이스 AI 일괄 승인이며, OS 내장형 시스템급 AI 에이전트에 대해 독립적인 신고 카테고리가 최초로 신설되었습니다.</p>
 
-    <p>대상은 Apple Intelligence, Samsung Galaxy AI, Huawei 샤오이, OPPO AndesGPT, vivo 블루하트, Xiaomi 펑파이AI, Nubia(더우바오 기반)의 7개 제품입니다. 7개 브랜드. 1개의 신고 카테고리. 이 중 해외 광고주에게 가장 중요한 2개사 — Apple과 Samsung — 를 관통하는 공통 기반이 바로 바이두 AI 검색입니다.</p>
+    <p>대상은 Apple Intelligence, Samsung Galaxy AI, Huawei 샤오이, OPPO AndesGPT, vivo 블루하트, Xiaomi 펑파이AI, Nubia(더우바오 기반)의 7개 제품입니다. 7개 브랜드. 1개의 신고 카테고리. 이 중 해외 광고주에게 가장 중요한 2개사 — Apple과 Samsung — 를 관통하는 공통 기반이 바로 바이두 AI 검색입니다.</p>    <div class="platform-pills">
+      <span class="platform-pill baidu">Apple Intelligence</span>
+      <span class="platform-pill wechat">Samsung Galaxy AI</span>
+      <span class="platform-pill alipay">Huawei 새오이</span>
+      <span class="platform-pill xiaohongshu">OPPO AndesGPT</span>
+      <span class="platform-pill douyin">vivo 블루하트</span>
+      <span class="platform-pill baidu">Xiaomi 페파이AI</span>
+      <span class="platform-pill wechat">Nubia(더우바오 기반)</span>
+    </div>
+
 
     <p>이것은 파트너십 발표가 아닙니다. Apple-바이두, Samsung-바이두 제휴는 이미 공표되었습니다. 이것은 그 제휴를 '발표된 의도'에서 '중국 소비자에게 전달할 법적 경로를 가진 제품'으로 전환하는 규제상의 청신호입니다. 이 신고는 '바이두가 중국에서 판매되는 적합 iPhone 및 Galaxy 기기의 시스템급 AI 검색 엔진이 된다'라는 상태로의 이행을 의미합니다.</p>
 
@@ -320,7 +342,7 @@
       <div class="stat-card"><div class="stat-number">최초</div><div class="stat-label">🏛️ 시스템급 AI 신고 카테고리</div></div>
     </div>
 
-    <h2>이번 승인이 실제로 의미하는 것</h2>
+    <h2>📋 이번 승인이 실제로 의미하는 것</h2>
 
     <p>CAC가 신설한 '모바일 온디바이스 생성형 AI 서비스' 신고 카테고리는 그 자체로 시그널입니다. AI가 더 이상 클라우드 서비스나 독립형 앱이 아니라, OS의 기능이 되고 있음을 규제 당국이 공식적으로 인정했음을 의미합니다. 승인된 7개 서비스는 사용자가 다운로드하는 앱이 아닙니다. 기기에 내장되어 있습니다. Apple 사용자에게 이 AI 스택은 문서 작성 도구, AI 사진 편집, 업그레이드된 Siri, 자연어 검색, 앱 간 작업 실행으로 제공됩니다. Samsung 사용자에게는 화면을 동그라미 치면 즉시 검색하는 '서클 투 서치', AI 기반 노트 어시스턴트, 바이두 AI 검색과 지식 그래프로 재구축된 Bixby 음성 어시스턴트를 의미합니다.</p>
 
@@ -330,7 +352,7 @@
 
     <p>이 역할 분담을 명확히 할 가치가 있습니다. 중국 iPhone 사용자가 Siri에 검색이 필요한 질문을 했을 때, 바이두 AI 검색 스택이 답변을 제공합니다. 중국 iPhone 사용자가 Siri에 제품, 브랜드, 서비스에 관한 정보를 물었을 때, 그 응답 배후의 검색·랭킹 엔진은 바이두 AI 검색입니다.</p>
 
-    <h2>디바이스 레벨 GEO: 해외 브랜드의 계산식이 달라지는 이유</h2>
+    <h2>🤖 디바이스 레벨 GEO: 해외 브랜드의 계산식이 달라지는 이유</h2>
 
     <p>지난 1년간 중국의 GEO 논의는 웹 기반 AI 검색 — 바이두 원신, 더우바오, Kimi, DeepSeek — 에 집중되어 왔습니다. 브랜드는 이러한 플랫폼의 AI 생성 답변에서 인용을 획득하기 위해 최적화를 진행해 왔습니다. 그 프레임워크는 여전히 유효하지만, 이번 CAC 승인은 새로운 차원을 도입합니다: 디바이스 레벨 GEO입니다.</p>
 
@@ -342,7 +364,7 @@
 
     <p>중국 시장에 진출하는 해외 브랜드에게 이 함의는 명확합니다. 바이두 AI 검색의 답변에 인용되느냐 마느냐가 수억 명의 중국 소비자의 Siri 결과, Bixby 결과, 온디바이스 AI 검색 결과에 브랜드가 표시되느냐 마느냐를 결정합니다. 바이두에서의 GEO는 더 이상 웹 기반 AI 검색만의 이야기가 아닙니다. 디바이스 네이티브 AI 가시성의 이야기이며, CAC 승인은 그 타임라인을 '언젠가'에서 '곧'으로 가속화했습니다.</p>
 
-    <h2>해외 브랜드가 지금 해야 할 일 — 구체적으로</h2>
+    <h2>🎯 해외 브랜드가 지금 해야 할 일 — 구체적으로</h2>
 
     <p>이 규제상의 이정표는 국제 브랜드에 GEO 커버리지를 자동으로 제공하지 않습니다. 채널을 창출하는 것입니다. 브랜드가 그 채널에 표시되느냐 마느냐는 바이두 AI 검색이 찾고, 검증하고, 인용할 수 있는 자산을 구축했느냐에 달려 있습니다.</p>
 
@@ -356,9 +378,12 @@
 
     <p><strong>4. 크로스플랫폼 브랜드 일관성.</strong> 바이두 AI 검색은 답변 생성 시 여러 중국어 소스를 상호 참조합니다. 브랜드명, 제품명, 사양이 바이두 백과 항목, 중국어 웹사이트, 중국 미디어의 제3자 언급 간에 다를 경우, 모델이 브랜드를 인용하는 신뢰도가 떨어집니다. 모든 중국어 접점에서의 일관성은 최적화 기법이 아니라 인용의 전제 조건입니다.</p>
 
-    <p><strong>5. 바이두 광고 계정.</strong> 바이두 생태계에서 검증된 존재감 — 백과 항목, 구조화 데이터 검증, 콘텐츠 게시, 브랜드 인증 — 을 구축하려면 해외 기업은 바이두 플랫폼에 대한 접근이 필요합니다. 여기에는 검증된 바이두 광고 계정이 필요하며, 다시 중국 사업자 등록증, 정산용 중국 은행 계좌, 중국어 운영 능력이 요구됩니다. 이는 대부분의 국제 마케팅 팀이 사내에서 유지하지 않는 자산입니다.</p>
+    <p><strong>5. 바이두 광고 계정.</strong> 바이두 생태계에서 검증된 존재감 — 백과 항목, 구조화 데이터 검증, 콘텐츠 게시, 브랜드 인증 — 을 구축하려면 해외 기업은 바이두 플랫폼에 대한 접근이 필요합니다. 여기에는 검증된 바이두 광고 계정이 필요하며, 다시 중국 사업자 등록증, 정산용 중국 은행 계좌, 중국어 운영 능력이 요구됩니다. 이는 대부분의 국제 마케팅 팀이 사내에서 유지하지 않는 자산입니다.</p>    <div class="callout callout-warning">
+      <strong>⚠️ 경고:</strong> 검증된 바이두 광고 계정, 중국 사업자 등록증, 현지 정산 은행 계좌는 선택 사항이 아니라 디바이스 레벨 GEO 채널 전체로 들어가는 관문입니다. 대부분의 국제 팀은 이를 사내에 보유하고 있지 않습니다. 창은 지금 열려 있지만, 가장 먼저 중국어 GEO 자산을 확보한 브랜드만이 온디바이스 검색 본격 가동 시 중국 AI에 인용되는 브랜드가 됩니다.
+    </div>
 
-    <h2>창은 열려 있다 — 그러나 무기한은 아니다</h2>
+
+    <h2>⏳ 창은 열려 있다 — 그러나 무기한은 아니다</h2>
 
     <p>CAC 승인은 명확한 비포애프터의 순간을 창출했습니다. 2026년 7월 15일 이전, 중국의 iPhone 및 Galaxy 기기에서의 디바이스 레벨 AI 검색 가시성은 개념적인 미래였습니다. 7월 15일 이후, 그것은 컴플라이언스 승인 완료, 하드웨어 매핑 완료, 실행 관리 완료의 현실입니다.</p>
 

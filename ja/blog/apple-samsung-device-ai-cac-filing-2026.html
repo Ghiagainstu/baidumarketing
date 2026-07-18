@@ -261,7 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+      .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(99,102,241,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(16,185,129,.15); border-color: #10B981; color: #6EE7B7; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(59,130,246,.15); border-color: #3B82F6; color: #93C5FD; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(244,63,94,.15); border-color: #F43F5E; color: #FDA4AF; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(139,92,246,.15); border-color: #8B5CF6; color: #C4B5FD; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -303,7 +316,16 @@
       <article class="article-content">
     <p>2026年7月15日、中国サイバースペース管理局（CAC）は、スマートフォンOSに組み込まれたAIの中国市場での展開を根本的に変える公告を発表しました。7件のモバイル端末側生成AIサービスが届出承認を取得——Apple IntelligenceとSamsung Galaxy AIを含む、中国の規制史上最大規模のオンデバイスAI一括承認であり、OS組み込み型のシステム級AIエージェントに対して独立した届出区分が初めて設けられました。</p>
 
-    <p>対象はApple Intelligence、Samsung Galaxy AI、Huawei小芸、OPPO AndesGPT、vivo藍心、Xiaomi澎湃AI、Nubia（豆包ベース）の7製品。7ブランド。1つの届出区分。この中で海外広告主にとって最も重要な2社——AppleとSamsung——を貫く共通の基盤が、百度AI検索です。</p>
+    <p>対象はApple Intelligence、Samsung Galaxy AI、Huawei小芸、OPPO AndesGPT、vivo藍心、Xiaomi澎湃AI、Nubia（豆包ベース）の7製品。7ブランド。1つの届出区分。この中で海外広告主にとって最も重要な2社——AppleとSamsung——を貫く共通の基盤が、百度AI検索です。</p>    <div class="platform-pills">
+      <span class="platform-pill baidu">Apple Intelligence</span>
+      <span class="platform-pill wechat">Samsung Galaxy AI</span>
+      <span class="platform-pill alipay">Huawei小芸</span>
+      <span class="platform-pill xiaohongshu">OPPO AndesGPT</span>
+      <span class="platform-pill douyin">vivo蓝心</span>
+      <span class="platform-pill baidu">Xiaomi潮源AI</span>
+      <span class="platform-pill wechat">Nubia（豆包ベース）</span>
+    </div>
+
 
     <p>これはパートナーシップ発表ではありません。Apple-百度、Samsung-百度の提携はすでに公表済みです。これは、その提携を「発表された意図」から「中国消費者に届ける法的経路を持つ製品」へと転換する、規制上の青信号です。この届出は「百度は中国で販売される準拠iPhoneおよびGalaxyデバイスのシステム級AI検索エンジンとなる」という状態への移行を示しています。</p>
 
@@ -320,7 +342,7 @@
       <div class="stat-card"><div class="stat-number">初</div><div class="stat-label">🏛️ システム級AI届出区分</div></div>
     </div>
 
-    <h2>今回の届出が実際に意味するもの</h2>
+    <h2>📋 今回の届出が実際に意味するもの</h2>
 
     <p>CACが新設した「モバイル端末側生成AIサービス」届出区分は、それ自体がシグナルです。AIがもはやクラウドサービスやスタンドアロンアプリではなく、OSの機能になりつつあることを規制当局が正式に認めたことを意味します。承認された7サービスは、ユーザーがダウンロードするアプリではありません。端末に組み込まれています。Appleユーザーにとって、このAIスタックは作文ツール、AI写真編集、アップグレードされたSiri、自然言語検索、アプリ横断的なタスク実行という形で提供されます。Samsungユーザーにとっては、画面をなぞって即座に検索する「かこって検索」、AI搭載ノートアシスタント、百度AI検索と知識グラフで再構築されたBixby音声アシスタントを意味します。</p>
 
@@ -330,7 +352,7 @@
 
     <p>この役割分担を明確にしておく価値があります。中国のiPhoneユーザーがSiriに検索を必要とする質問をしたとき、百度AI検索スタックが回答を提供します。中国のiPhoneユーザーがSiriに製品、ブランド、サービスに関する情報を尋ねたとき、その応答の背後にある検索・ランキングエンジンは百度AI検索です。</p>
 
-    <h2>デバイスレベルGEO：海外ブランドの計算式が変わる理由</h2>
+    <h2>🤖 デバイスレベルGEO：海外ブランドの計算式が変わる理由</h2>
 
     <p>この1年間、中国におけるGEOの議論はウェブベースのAI検索——百度文心、豆包、Kimi、DeepSeek——に集中していました。ブランドはこれらのプラットフォームのAI生成回答における引用獲得を目指して最適化を進めてきました。その枠組みは依然として有効ですが、今回のCAC届出は新たな次元を導入します：デバイスレベルGEOです。</p>
 
@@ -342,7 +364,7 @@
 
     <p>中国市場に参入する海外ブランドにとって、この含意は明確です。百度AI検索の回答に引用されるかどうかが、数億人の中国消費者のSiriの結果、Bixbyの結果、オンデバイスAI検索の結果にブランドが表示されるかどうかを決定します。百度におけるGEOはもはやウェブベースのAI検索だけの話ではありません。デバイスネイティブなAI可視性の話であり、CAC届出はそのタイムラインを「いずれ」から「間もなく」へと加速させました。</p>
 
-    <h2>海外ブランドが今すべきこと——具体的に</h2>
+    <h2>🎯 海外ブランドが今すべきこと——具体的に</h2>
 
     <p>この規制上の節目は、国際ブランドにGEOカバレッジを自動的に提供するものではありません。チャネルを創出するものです。ブランドがそのチャネルに表示されるかどうかは、百度AI検索が見つけ、検証し、引用できる資産を構築しているかどうかにかかっています。</p>
 
@@ -356,9 +378,12 @@
 
     <p><strong>4. クロスプラットフォームでのブランド一貫性。</strong> 百度AI検索は回答生成時に複数の中国語ソースをクロスリファレンスします。ブランド名、製品名、仕様が百度百科エントリ、中国語ウェブサイト、中国メディアの第三者言及間で異なる場合、モデルがブランドを引用する信頼度は低下します。すべての中国語接点における一貫性は、最適化手法ではなく引用の前提条件です。</p>
 
-    <p><strong>5. 百度広告アカウント。</strong> 百度エコシステム上で検証済みのプレゼンス——百科エントリ、構造化データ検証、コンテンツ公開、ブランド認証——を構築するには、海外企業は百度プラットフォームへのアクセスが必要です。それには検証済みの百度広告アカウントが必要であり、さらに中国の営業許可証、決済用の中国銀行口座、中国語での運用能力が求められます。これらはほとんどの国際マーケティングチームが社内に維持していない資産です。</p>
+    <p><strong>5. 百度広告アカウント。</strong> 百度エコシステム上で検証済みのプレゼンス——百科エントリ、構造化データ検証、コンテンツ公開、ブランド認証——を構築するには、海外企業は百度プラットフォームへのアクセスが必要です。それには検証済みの百度広告アカウントが必要であり、さらに中国の営業許可証、決済用の中国銀行口座、中国語での運用能力が求められます。これらはほとんどの国際マーケティングチームが社内に維持していない資産です。</p>    <div class="callout callout-warning">
+      <strong>⚠️ 警告:</strong> 検証済みの百度広告アカウント、中国の営業許可証、現地決溻銀行口帳は「オプション」ではなく、デバイスレベルGEOチャネル全体への入り口です。多くの国際チームはこれらを社内に持っていません。窓は今開いていますが、最初に中国語GEO資産を確保したブランドこそが、オンデバイス検索本格体動時に中国のAIに引用されるブランドとなります。
+    </div>
 
-    <h2>窓は開いている——しかし無期限ではない</h2>
+
+    <h2>⏳ 窓は開いている——しかし無期限ではない</h2>
 
     <p>CAC届出は明確なビフォーアフターの瞬間を創出しました。2026年7月15日以前、中国のiPhoneおよびGalaxy端末におけるデバイスレベルAI検索可視性は概念的な未来でした。7月15日以降、それはコンプライアンス承認済み、ハードウェアマッピング済み、実行管理済みの現実です。</p>
 
