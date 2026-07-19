@@ -261,7 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+  
+.platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+.platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+.platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+.platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+.platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+.platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+[data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #A5B4FC; color: #C7D2FE; }
+[data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.15); border-color: #6EE7B7; color: #6EE7B7; }
+[data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.15); border-color: #93C5FD; color: #93C5FD; }
+[data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.15); border-color: #FDA4AF; color: #FDA4AF; }
+[data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.15); border-color: #C4B5FD; color: #C4B5FD; }
+@media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .72rem; padding: 5px 10px; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -316,7 +330,7 @@
 </div>
 
 
-    <h2>'양의 시대'는 끝났다 — 무엇이 그 자리를 대체했는가</h2>
+    <h2>⚖️ '양의 시대'는 끝났다 — 무엇이 그 자리를 대체했는가</h2>
 
     <p>2024년부터 2026년 중반까지, 중국 GEO의 주류 전술은 단순명료했습니다. AI로 콘텐츠를 대량 생성하고, Q&A 플랫폼과 미디어 사이트에 흩뿌린 다음, 그 물량으로 원신, 더우바오 등 중국 LLM의 인용을 획득하는 것입니다. 이것이 한동안 통했습니다.</p>
 
@@ -337,7 +351,7 @@
 
     <p>GEO의 핵심 KPI가 바뀌었습니다. '답변에 포함되어 있는가'가 아니라, '모델이 당신을 인용할 만큼 신뢰하는가'입니다.</p>
 
-    <h2>이것이 해외 브랜드에게 실제로 좋은 소식인 이유</h2>
+    <h2>🛡️ 이것이 해외 브랜드에게 실제로 좋은 소식인 이유</h2>
 
     <p>겉으로 보기에 규제 강화는 더 많은 장벽처럼 보입니다. 바이두에서 광고를 운영하는 해외 브랜드에게는 그 반대입니다.</p>
 
@@ -363,7 +377,7 @@
 
     <p>요약은 간단합니다. 권위를 위조하는 것이 어려워질수록, 진짜 권위의 가치는 높아집니다.</p>
 
-    <h2>해외 광고주가 지금 당장 해야 할 일 — 구체적으로</h2>
+    <h2>🎯 해외 광고주가 지금 당장 해야 할 일 — 구체적으로</h2>
 
     <p>규제 변화는 '아무것도 하지 않아도 글로벌 브랜드가 자동으로 바이두 AI 검색에 랭크된다'는 의미가 아닙니다. 플레이북이 바뀌었다는 의미입니다. 다음은 업데이트된 5가지 체크리스트입니다.</p>
 
@@ -387,7 +401,9 @@
 
     <p>활성화되고 검증된 바이두 광고 계정은 그 자체로 바이두 생태계 내 신뢰성 신호입니다. 귀사가 검증된 사업자 등록증을 가진 공인된 상업 엔티티임을 확인합니다(BPP가 대리 처리 — 중국 사업자 등록증 불필요). GEO 가시성과 광고 계정 상태는 바이두의 AI 검색 랭킹 로직에서 점점 더 상관관계를 보이고 있습니다. 별개의 시스템이지만, 동일한 엔티티 검증 레이어에서 도출됩니다.</p>
 
-    <h2>변하지 않은 장벽</h2>
+    <div class="platform-pills"><span class="platform-pill baidu">바이두 백과</span><span class="platform-pill wechat">바이두 지다오</span><span class="platform-pill alipay">바이자하오</span><span class="platform-pill xiaohongshu">바이두 웨쿠</span><span class="platform-pill douyin">검증된 미디어</span><span class="platform-pill baidu">공식 웹사이트</span></div>
+
+    <h2>🚧 변하지 않은 장벽</h2>
 
     <p>규제도 업계 표준도 다루지 않은 구조적 장벽이 하나 있습니다. <strong>바이두 생태계 접근에는 바이두 계정, 중국어 콘텐츠, 현지 엔티티 검증이 필요하며, 이는 모두 대부분의 해외 브랜드가 보유하지 않은 중국 내 법적 프레즌스를 전제로 합니다.</strong></p>
 
@@ -406,6 +422,9 @@
     <p>이것들은 전형적인 해외 마케팅 팀이 사내에 보유한 기술이 아닙니다. 그리고 규제 변화로 해결되는 것도 아닙니다. 오히려 그 변화로부터 이익을 얻기 위한 전제 조건입니다.</p>
 
     <p>좋은 소식: 장벽은 명확히 정의되어 있으며, 보상은 그 어느 때보다 높습니다. 나쁜 소식: 그것은 여전히 장벽입니다. 선도 진입자를 위한 창은 열려 있지만, 무기한 열려 있지는 않을 것입니다. 해외 경쟁사들이 동일한 역학을 인식하고 중국 신뢰성 인프라를 먼저 구축하려 움직일 것이기 때문입니다.</p>
+      <div class="callout callout-warning">
+<p><strong>⚠️ 경고:</strong> 창은 열려 있지만 영원하지 않다. 더 많은 해외 경쟁사가 이 역학을 인식하고 자사의 중국 신뢰 인프라를 먼저 구축하기 시작하면 선발자 우위는 줄어든다. 이번 분기에 검증된 바이두 백과 항목과 바이두 광고 계정 구축부터 시작하라.</p></div>
+
       </article>
     </div>
   </section>

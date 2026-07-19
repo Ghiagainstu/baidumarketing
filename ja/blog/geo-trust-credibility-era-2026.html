@@ -261,7 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+  
+.platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+.platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+.platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+.platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+.platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+.platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+[data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #A5B4FC; color: #C7D2FE; }
+[data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.15); border-color: #6EE7B7; color: #6EE7B7; }
+[data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.15); border-color: #93C5FD; color: #93C5FD; }
+[data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.15); border-color: #FDA4AF; color: #FDA4AF; }
+[data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.15); border-color: #C4B5FD; color: #C4B5FD; }
+@media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .72rem; padding: 5px 10px; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -316,7 +330,7 @@
 </div>
 
 
-    <h2>「量の時代」は終わった — 何がそれに取って代わったのか</h2>
+    <h2>⚖️ 「量の時代」は終わった — 何がそれに取って代わったのか</h2>
 
     <p>2024年から2026年半ばまで、中国のGEOの主流戦術は単純明快でした。AIでコンテンツを大量生成し、Q&Aプラットフォームやメディアサイトにばら撒き、その物量で文心や豆包などの中国LLMからの引用を獲得する。これが通用していたのです。</p>
 
@@ -337,7 +351,7 @@
 
     <p>GEOの核心KPIが変わりました。「回答に含まれているか」ではなく、「モデルがあなたを引用するに足ると信頼しているか」です。</p>
 
-    <h2>これが海外ブランドにとって実は朗報である理由</h2>
+    <h2>🛡️ これが海外ブランドにとって実は朗報である理由</h2>
 
     <p>一見すると、規制強化は障壁の増加に見えます。百度で広告を展開する海外ブランドにとっては、逆です。</p>
 
@@ -363,7 +377,7 @@
 
     <p>要約はシンプルです。権威性を偽造することが難しくなればなるほど、本物の権威性の価値は高まります。</p>
 
-    <h2>海外広告主が今すぐ行うべきこと — 具体的に</h2>
+    <h2>🎯 海外広告主が今すぐ行うべきこと — 具体的に</h2>
 
     <p>規制の変化は「何もしなくてもグローバルブランドが自動的に百度AI検索でランクインする」という意味ではありません。戦術が変わったという意味です。以下が更新された5つのチェックリストです。</p>
 
@@ -387,7 +401,9 @@
 
     <p>アクティブで検証済みの百度広告アカウントは、それ自体が百度エコシステム内での信頼性シグナルです。あなたの会社が、検証済みの事業ライセンスを持つ認知された商業エンティティであることを確認します（BPPが代理で処理します — 中国の事業ライセンスは不要です）。GEOの可視性と広告アカウントの状態は、百度のAI検索ランキングロジックにおいてますます相関しています。別々のシステムですが、同じエンティティ検証レイヤーから引き出されています。</p>
 
-    <h2>変わっていない障壁</h2>
+    <h2>🚧 <div class="platform-pills"><span class="platform-pill baidu">百度百科</span><span class="platform-pill wechat">百度知道</span><span class="platform-pill alipay">百家号</span><span class="platform-pill xiaohongshu">百度文库</span><span class="platform-pill douyin">権威メディア</span><span class="platform-pill baidu">公式サイト</span></div>
+
+    変わっていない障壁</h2>
 
     <p>規制も業界標準も対処していない、構造的な障壁が1つあります。<strong>百度エコシステムへのアクセスには、百度アカウント、中国語コンテンツ、現地エンティティ検証が必要であり、これらはすべて、ほとんどの海外ブランドが持っていない中国での法的プレゼンスを前提としています。</strong></p>
 
@@ -406,6 +422,9 @@
     <p>これらは、典型的な海外マーケティングチームが社内に持っているスキルではありません。そして、規制の変化によって解決されるものでもありません。それらは、その変化から利益を得るための前提条件なのです。</p>
 
     <p>良いニュース：障壁は明確に定義されており、見返りはかつてないほど高い。悪いニュース：それは依然として障壁である。早期参入者の窓は開いていますが、無期限に開いたままではありません。海外の競合他社が同じ力学を認識し、先に中国の信頼性インフラを構築しようと動き出すからです。</p>
+      <div class="callout callout-warning">
+<p><strong>⚠️ 警告:</strong> 窓口は開いているが、永遠ではない。より多くの海外競合がこの構図に気づき、自社の中国での信頼インフラを先に筱き始めれば、先発者効果は薄れる。今四半期に、標準的な百度百科エントリと百度広告アカウントの筑きから始めよう。</p></div>
+
       </article>
     </div>
   </section>
