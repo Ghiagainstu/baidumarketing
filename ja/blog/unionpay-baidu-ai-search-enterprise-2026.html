@@ -261,7 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+  
+.platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+.platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+.platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+.platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+.platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+.platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+[data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #A5B4FC; color: #C7D2FE; }
+[data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.15); border-color: #6EE7B7; color: #6EE7B7; }
+[data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.15); border-color: #93C5FD; color: #93C5FD; }
+[data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.15); border-color: #FDA4AF; color: #FDA4AF; }
+[data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.15); border-color: #C4B5FD; color: #C4B5FD; }
+@media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .72rem; padding: 5px 10px; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -307,7 +321,7 @@
 
     <p>百度AI検索は「消費者向け製品」から「エンタープライズインフラ」へと公式に一線を越えた。中国市場に参入する海外B2Bブランドにとって、これは百度上での可視性が意味するものを根本的に変える。</p>
 
-    <h2>具体的に何が締結されたのか</h2>
+    <h2>🤝 具体的に何が締結されたのか</h2>
 
     <p>銀聯・百度提携は1つではなく、4層にわたる：</p>
 
@@ -321,7 +335,9 @@
 
     <p>この提携の範囲は「銀聯アプリにAIチャットボットを試してみよう」ではない。銀聯がAI検索、リサーチ、エージェントインフラを百度に賭けているのだ。中国の決済清算システムの運営者がその賭けをするとき、発せられるシグナルは1つ：百度AI検索はエンタープライズ級になった。</p>
 
-    <h2>これがB2BにとってGEOの意味を変える理由</h2>
+    <div class="platform-pills"><span class="platform-pill baidu">百度AI検索</span><span class="platform-pill wechat">DeepResearch</span><span class="platform-pill alipay">百度搭子</span><span class="platform-pill xiaohongshu">伐谋エンジニアリング</span><span class="platform-pill douyin">千帆プラットフォーム</span></div>
+
+    <h2>🏢 これがB2BにとってGEOの意味を変える理由</h2>
 
     <p>この1年、百度上のGEO（生成エンジン最適化）に関する議論は消費者シナリオに焦点を当ててきた：「ユーザーが最適なCRMソフトウェアについて尋ねたとき、文心はあなたのブランドを引用するか？」その問いは依然として有効だ。しかし銀聯提携は、2つ目の、おそらくより重要な問いを追加する：</p>
 
@@ -343,7 +359,7 @@
 
     <p>これらはもはや仮定の話ではない。インフラは構築されつつある。問われているのは、海外ブランドがその中で可視的になれるかどうかだ。</p>
 
-    <h2>これを構造的転換にしている数字</h2>
+    <h2>📊 これを構造的転換にしている数字</h2>
 
     <p>銀聯提携は孤立した出来事ではない。2026年を通じて積み上がってきたパターンの上に位置している：</p>
 <div class="stats-grid">
@@ -364,7 +380,7 @@
 
     <p>銀聯の調印はこのトレンドの頂点であり、始まりではない。百度AI検索は18ヶ月にわたり静かにエンタープライズの信頼を築いてきた。銀聯提携がそれを公式のものにした。</p>
 
-    <h2>海外B2Bブランドが今すぐ行うべきこと — 具体的に</h2>
+    <h2>🎯 海外B2Bブランドが今すぐ行うべきこと — 具体的に</h2>
 
     <p>インフラは敷設されつつある。GEOの機会は「消費者発見可能性」から「エンタープライズ引用可能性」へと移行している。海外B2Bブランド向けの更新されたチェックリスト：</p>
 
@@ -388,13 +404,17 @@
 
     <p>アクティブで検証済みの百度広告アカウントは、それ自体が百度エコシステム内での信頼性シグナルである。あなたの会社が検証済みの営業許可証を持つ認定商業エンティティであることを確認する——エンタープライズAI検索が多くの入力シグナルの1つとして使用するステータスだ。BPPがこれを代行する：中国の営業許可証は不要。</p>
 
-    <h2>変わっていない1つの障壁</h2>
+    <h2>🚧 変わっていない1つの障壁</h2>
 
     <p>銀聯提携も広範な市場トレンドも対処していない構造的障壁が1つある：<strong>百度のエンタープライズAIエコシステムへのアクセスには、百度アカウント、中国語コンテンツ、現地エンティティ検証が必要であり、これらはすべて、ほとんどの海外B2Bブランドが持っていない中国での法的・運営的プレゼンスを前提としている。</strong></p>
 
     <p>良いニュース：障壁は明確に定義されており、それを越えた場合の見返りはますます具体的になっている。百度AI検索は中国におけるデフォルトのエンタープライズAIインターフェースになりつつあり——今その信頼性インフラを内部に構築したブランドが、調達の意思決定が行われるときに引用されるブランドになる。</p>
 
     <p>悪いニュース：障壁は依然として存在する。そしてより多くの海外競合が銀聯提携のシグナル——百度AI検索が消費者ユーティリティからエンタープライズインフラへと卒業したこと——を認識するにつれて、先発者の窓は狭まる。</p>
+      <div class="callout callout-warning">
+<p><strong>⚠️ 警告:</strong> 障壁は依然として存在する。しかし<em>今四半期</em>に中国での信頼性インフラの構築を始めたブランド、つまり検証済みの百度百科エントリ、企業百家号アカウント、中国語構造化データが2027年に企業調達決定が百度AI検索で検証されるときに引用されるブランドになる。インフラは今庥かれつつある。その中での可視性は予測ではなく、決断である。</p>
+</div>
+
       </article>
     </div>
   </section>
