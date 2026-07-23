@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -303,7 +318,7 @@
       <article class="article-content">
     <p>Last week, we covered the story of Apple and Samsung filing their AI features with China's CAC — a regulatory milestone that confirmed Baidu as the default AI search backbone for foreign device makers in China. This week, the picture sharpened considerably. Apple is not just complying with Chinese regulations. It is building AI search for its Chinese iPhone users on Baidu's infrastructure.</p>
 
-    <h2>The Announcement: Baidu Will Power iPhone AI Search in China</h2>
+    <h2>📱 The Announcement: Baidu Will Power iPhone AI Search in China</h2>
 
     <p>On July 22, the state-backed Science and Technology Innovation Board Daily reported that Apple and Baidu had reached an agreement: Baidu will develop core AI search functionality for Chinese iPhone users as part of Apple Intelligence. The scope covers both image and text processing, and the integration includes an upgrade to the Chinese version of Siri.</p>
 
@@ -321,7 +336,7 @@
       <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">🚫 Ad Slots in Device AI Search</div></div>
     </div>
 
-    <h2>From Regulatory Filing to Product Integration — What Changed</h2>
+    <h2>🔄 From Regulatory Filing to Product Integration — What Changed</h2>
 
     <p>Three weeks ago, the CAC filing felt like a compliance story. Apple and Samsung submitted their AI services for government review. Foreign brands that followed Baidu marketing news noted the development but did not see immediate implications for their advertising strategy. The rationale was straightforward: Apple and Samsung had to file. Baidu was the natural partner. Business as usual.</p>
 
@@ -329,7 +344,7 @@
 
     <p>This distinction matters because it speaks to <strong>durability</strong>. A regulatory requirement can change. A product integration that delivers a better user experience does not switch easily. Apple's decision to embed Baidu AI into Siri for 200 million users signals that this partnership is structural, not tactical.</p>
 
-    <h2>What This Means: One AI Engine, 200+ Million Devices</h2>
+    <h2>🌐 What This Means: One AI Engine, 200+ Million Devices</h2>
 
     <p>The practical implication is straightforward but underappreciated: there is now a single AI decision layer sitting between Chinese iPhone users and the commercial information they seek.</p>
 
@@ -339,9 +354,13 @@
 
     <p>For advertisers, this concentration is both an opportunity and a risk. The opportunity: a single platform now controls the attention of China's most commercially active mobile user base, and a well-executed Baidu strategy compounds across paid and AI-earned visibility. The risk: if your brand is absent from Baidu's AI knowledge graph, it is absent from the iPhone search experience entirely.</p>
 
-    <h2>The Invisible Risk for Overseas Brands</h2>
+    <h2>⚠️ The Invisible Risk for Overseas Brands</h2>
 
     <p>Chinese domestic brands — large manufacturers, established service providers, companies with years of digital presence in China — have invested heavily in building their Baidu ecosystem coverage. They have official websites indexed by Baidu. They maintain Baidu Baike entries with verified product specifications. Their technical certifications, case studies, and industry whitepapers are structured in formats that Baidu's crawling and AI systems can parse. They appear in industry portal directories and trade publications that feed Baidu's knowledge base.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> Device-level AI search (Siri) has <strong>zero ad slots</strong>. The bidding logic that powers traditional Baidu PPC simply does not exist there. You cannot buy the "top spot" in an iPhone AI answer — the only way in is being cited by Baidu's AI as a trusted source.
+    </div>
+
 
     <p>Most overseas brands operate in China with significantly thinner digital footprints. They may have a localized Chinese website, but it often lacks the structured product data that Baidu's AI uses for citation. They rarely maintain Baidu Baike entries — the Chinese equivalent of a Wikipedia page that carries strong authority signals for AI models. Their press coverage in Chinese-language media is sparse. Their technical documentation exists in English and lives on servers that Baidu's crawler may not index efficiently.</p>
 
@@ -349,9 +368,26 @@
 
     <p>That compensation mechanism weakens when AI search moves to the device level. Siri does not show three paid ad slots. It returns one answer. If your brand is not in that answer, there is no backup position to bid for. The conversion happens — or does not happen — before the user ever sees a traditional search results page.</p>
 
-    <h2>The BPP Perspective: Being Seen Where It Matters</h2>
+    
+    <div class="takeaway-box">
+      <h3>✅ What Overseas Brands Should Do Now</h3>
+      <ul>
+        <li>One AI engine now sits behind 200M+ iPhones in China — visibility is centralized.</li>
+        <li>Siri's AI answers have zero ad slots; being cited is the only entry.</li>
+        <li>Start building Baidu-citable assets now — before competitors lock in the answer.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective: Being Seen Where It Matters</h2>
 
     <p>Every overseas brand with a commercial interest in the Chinese market should be asking one question: <strong>When a Chinese iPhone user asks Siri about my product category, does Baidu's AI mention my brand?</strong></p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🌐 Official Website</span>
+      <span class="platform-pill wechat">📖 Baidu Baike</span>
+      <span class="platform-pill alipay">✍️ Baijiahao</span>
+      <span class="platform-pill xiaohongshu">📰 News Sources</span>
+      <span class="platform-pill douyin">🏛️ Industry Portals</span>
+    </div>
+
 
     <p>Answering that question requires three things. First, your company needs structured, authoritative content across Baidu's ecosystem — official website, Baidu Baike, industry portals, and Chinese-language press. Second, that content must be formatted in a way that Baidu's AI crawling and retrieval systems can parse and cite, not just index. Third, you need a Baidu advertising account to complement AI-earned visibility with paid reinforcement when it matters — because AI answers are not the entire picture, and paid visibility remains critical for high-intent commercial queries.</p>
 

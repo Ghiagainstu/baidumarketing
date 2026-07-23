@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -303,7 +318,7 @@
       <article class="article-content">
     <p>先週、私たちはAppleとSamsungが中国のCAC（国家インターネット信息弁公室）にAI機能の届出を行ったニュースを取り上げました。海外デバイスメーカーにとって、百度が中国市場におけるAI検索の標準的な基盤になることを確定させた、規制上のマイルストーンでした。今週、その構図はさらに鮮明になりました。Appleは単に中国の規制に対応しているのではありません。同社は中国のiPhoneユーザー向けAI検索を、百度のインフラ上で構築しています。</p>
 
-    <h2>発表の内容：百度が中国のiPhone AI検索を担う</h2>
+    <h2>📱 発表の内容：百度が中国のiPhone AI検索を担う</h2>
 
     <p>7月22日、国営系メディアの科創板日報は、Appleと百度が合意に達したと報じました。百度は、Apple Intelligenceの一環として、中国のiPhoneユーザー向けに中核的なAI検索機能を開発します。対象は画像処理とテキスト処理の両方で、中国版Siriのアップグレードも含まれます。</p>
 
@@ -321,7 +336,7 @@
       <div class="stat-card"><div class="stat-number">0枠</div><div class="stat-label">🚫 デバイスAI検索の広告枠</div></div>
     </div>
 
-    <h2>規制対応から製品統合へ ── 何が変わったのか</h2>
+    <h2>🔄 規制対応から製品統合へ ── 何が変わったのか</h2>
 
     <p>3週間前、CAC届出はコンプライアンスの話に見えました。AppleとSamsungはAIサービスを政府審査に提出しました。百度マーケティングの動向を追っていた海外ブランドは、この展開を認識しつつも、自社の広告戦略への即時的影響は見出していませんでした。理屈は明快でした。AppleとSamsungは届出が必要であり、百度が自然なパートナーである。日常業務の延長線上だと。</p>
 
@@ -329,7 +344,7 @@
 
     <p>この違いが重要なのは、<strong>持続性</strong>に関わるからです。規制要件は変わり得ます。優れたユーザー体験をもたらす製品統合は、簡単には切り替えられません。Appleが2億人のユーザー向けにSiriへの百度AI組み込みを決定したことは、この提携が戦術的ではなく構造的であることを示しています。</p>
 
-    <h2>これが意味すること：1つのAIエンジン、2億台超のデバイス</h2>
+    <h2>🌐 これが意味すること：1つのAIエンジン、2億台超のデバイス</h2>
 
     <p>実務的な含意は明快ですが、十分に認識されていません。中国のiPhoneユーザーと彼らが求める商業情報との間に、単一のAI判断レイヤーが存在することになったのです。</p>
 
@@ -339,9 +354,13 @@
 
     <p>広告主にとって、この集中は機会であると同時にリスクでもあります。機会：単一のプラットフォームが中国で最も商業的に活発なモバイルユーザーベースの注目を掌握し、適切に実行された百度戦略は有料とAI獲得の両方の可視性にわたって複利効果を生みます。リスク��あなたのブランドが百度のAI知識グラフに存在しなければ、iPhoneの検索体験から完全に姿を消すということです。</p>
 
-    <h2>海外ブランドにとっての見えないリスク</h2>
+    <h2>⚠️ 海外ブランドにとっての見えないリスク</h2>
 
     <p>中国の国内ブランド ── 大手メーカー、確立されたサービスプロバイダー、長年の中国デジタルプレゼンスを持つ企業 ── は、百度エコシステムのカバレッジ構築に多大な投資をしてきました。百度にインデックスされた公式サイトを持っています。検証済みの製品仕様を掲載した百度百科のエントリーを維持しています。技術認証、事例研究、業界白書が百度のクローリングとAIシステムが解析できる形式で構造化されています。業界ポータルのディレクトリや業界誌に掲載され、百度の知識ベースに情報が流入しています。</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ 警告:</strong> デバイス側AI検索（Siri）には<strong>広告枠が存在しない</strong>。従来の百度PPCを支える入札ロジックは、そこにはそもそも存在しない。iPhoneのAI回答で「1位」を買うことはできない——入り口は百度AIに信頼できる情報源として引用されることだけだ。
+    </div>
+
 
     <p>ほとんどの海外ブランドは、はるかに薄いデジタルフットプリントで中国市場に参入しています。中国語のローカライズされたウェブサイトを持っていても、百度のAIが引用に使う構造化された製品データが不足していることが多いのです。AIモデルにとって強い権威シグナルを持つ百度百科のエントリーを維持していることは稀です。中国語メディアでのプレス掲載はまばらです。技術文書は英語で存在し、百度のクローラーが効率的にインデックスできないサーバー上にあります。</p>
 
@@ -349,9 +368,26 @@
 
     <p>この補償メカニズムは、AI検索がデバイスレベルに移行すると弱まります。Siriは3つの有料広告枠を表示しません。1つの回答だけを返します。あなたのブランドがその回答に入っていなければ、入札できるバックアップポジションは存在しません。ユーザーが従来の検索結果ページを見る前に、コンバージョンは成立するか、しないかです。</p>
 
-    <h2>BPPの視点：重要な場所で見られること</h2>
+    
+    <div class="takeaway-box">
+      <h3>✅ 海外ブランドが今すべきこと</h3>
+      <ul>
+        <li>中国の2億台超iPhoneの裏に1つのAIエンジンが居座る——可視性は集中化された。</li>
+        <li>SiriのAI回答には広告枠ゼロ。引用されることのみが唯一の入り口。</li>
+        <li>競合が「答え」を独占する前に、百度に引用される資産づくりを始める。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点：重要な場所で見られること</h2>
 
     <p>中国市場に商業的関心を持つすべての海外ブランドは、一つの問いを自らに課すべきです。<strong>中国のiPhoneユーザーがSiriに自社の製品カテゴリーについて尋ねたとき、百度のAIはあなたのブランドに言及するか。</strong></p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🌐 公式サイト</span>
+      <span class="platform-pill wechat">📖 百度百科</span>
+      <span class="platform-pill alipay">✍️ 百家号</span>
+      <span class="platform-pill xiaohongshu">📰 ニュースソース</span>
+      <span class="platform-pill douyin">🏛️ 業界ポータル</span>
+    </div>
+
 
     <p>この問いに答えるには、三つの要素が必要です。第一に、百度エコシステム全体にわたる構造化された権威あるコンテンツ ── 公式サイト、百度百科、業界ポータル、中国語プレス ── が必要です。第二に、そのコンテンツは百度のAIクローリングと検索システムが単にインデックスするだけでなく、解析して引用できる形式でなければなりません。第三に、AIで獲得した可視性を重要な場面で有料の補強と組み合わせるための百度広告アカウントが必要です。AI回答がすべてではなく、高意図の商業クエリでは有料の可視性が依然として重要だからです。</p>
 
