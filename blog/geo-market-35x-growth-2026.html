@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>That is a 35x increase in three years. Not linear growth. Not a trend. A structural shift in how Chinese consumers discover brands — and a market that is professionalizing at speed.</p>
 
-    <h2>From ¥250 Million to ¥9 Billion — The Numbers</h2>
+    <h2>📊 From ¥250 Million to ¥9 Billion — The Numbers</h2>
 
     <p>The headline figure is dramatic, but the underlying metrics are where the signal lies.</p>
 
@@ -330,7 +345,7 @@
       <div class="stat-card"><div class="stat-number">60%</div><div class="stat-label">AI Search Penetration</div></div>
       <div class="stat-card"><div class="stat-number">80%</div><div class="stat-label">Users Only Read Top 3</div></div>
     </div>
-<h2>Three Forces Driving the Explosion</h2>
+<h2>🚀 Three Forces Driving the Explosion</h2>
 
     <p>The 35x surge did not happen in a vacuum. Three forces converged in 2026 to create it.</p>
 
@@ -340,7 +355,7 @@
 
     <p><strong>Third, the E-E-A-T authority premium made professional execution mandatory.</strong> CAICT research shows that content optimized for Experience, Expertise, Authoritativeness, and Trustworthiness has a <strong>40 percentage point higher citation rate</strong> in mainstream AI models than generic marketing content. An authoritative third-party citation now carries roughly <strong>3x the weight of a traditional backlink</strong>. Brands quickly discovered that GEO is not a content-volume game — it is an authority-engineering discipline — and that discovery pushed them toward specialized providers.</p>
 
-    <h2>The Industry Grows Up — The Evaluation System</h2>
+    <h2>🏛️ The Industry Grows Up — The Evaluation System</h2>
 
     <p>On July 19, 2026, the GEO service provider industry took a step most young markets avoid for years: it created a formal evaluation system.</p>
 
@@ -352,9 +367,13 @@
 
     <p>Two, it marks a shift from chaos to order. The GEO industry in 2024 was a Wild West of repackaged SEO agencies claiming AI expertise. By mid-2026, the top three providers (CR3) control <strong>68% of the market</strong>, and the evaluation system provides a mechanism to separate them from the noise. This is the same arc that SEO, SEM, and programmatic advertising followed — just compressed into two years instead of ten.</p>
 
-    <h2>The Top-3 Lock-In Problem for Overseas Brands</h2>
+    <h2>⚠️ The Top-3 Lock-In Problem for Overseas Brands</h2>
 
     <p>Here is the part of the data that directly affects an overseas brand's China strategy: <strong>80% of AI search users never scroll past the third recommendation.</strong></p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> Once an AI model decides which three brands are the authoritative answers for a given category, reversing that decision takes far more effort than outranking a competitor on a traditional SERP. With 80% of users never scrolling past the third recommendation, the brands that enter the AI&#39;s reference set first effectively own the category&#39;s default answer.
+    </div>
+
 
     <p>This matters because AI answers, unlike traditional search rankings, are sticky. A traditional search engine re-ranks results for every query based on a combination of relevance, authority, and freshness. An AI model's answer, by contrast, is a synthesis that draws from a fixed set of trusted sources for a given query category. Once the model has decided which three brands are the authoritative references for "best enterprise SaaS platform in China," changing that answer takes significantly more effort than outranking a competitor on a traditional SERP.</p>
 
@@ -362,9 +381,26 @@
 
     <p>An overseas brand that enters this environment without Baidu Baike, without Baijiahao, without news-source coverage, and without consistent cross-platform brand information is not competing at a disadvantage. It is attempting to play a game it is structurally excluded from.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 GEO&#39;s Three Urgent Signals for Your Brand</h3>
+      <ul>
+        <li>The market grew 35x in three years — your competitors are already building citable AI assets.</li>
+        <li>80% of consumers only read the AI&#39;s top 3 picks — if you&#39;re not in them, you&#39;re invisible.</li>
+        <li>Domestic brands have 4,100 GEO providers optimizing their presence. You need the same foundation — Baike, Baijiahao, verified sources.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The GEO market's 35x growth contains a paradox for overseas brands. On one hand, it validates what BPP has been telling our clients since early 2026: AI search visibility in China is no longer a forward-looking bet — it is the current operating environment. On the other hand, the speed of that growth means that <strong>the window for establishing a brand's AI presence before the answer hardens is closing faster than most international marketing calendars can accommodate.</strong></p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🌐 Baidu Baike</span>
+      <span class="platform-pill wechat">📖 Baijiahao</span>
+      <span class="platform-pill alipay">📰 News Sources</span>
+      <span class="platform-pill xiaohongshu">🏛️ Official Website (ICP)</span>
+      <span class="platform-pill douyin">🎯 Industry Portals</span>
+    </div>
+
 
     <p>The structural barrier is unchanged: building the citable assets that GEO requires — verified Baidu Baike, active Baijiahao, cross-referenced news coverage — demands a Chinese business entity. Most overseas brands do not have one. Most domestic competitors do.</p>
 

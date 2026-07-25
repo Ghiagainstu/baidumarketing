@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>3年で35倍。線形成長ではありません。トレンドでもありません。中国の消費者がブランドを発見する方法の構造的転換であり、驚異的なスピードで専門化が進む市場です。</p>
 
-    <h2>2.5億から90億へ——数字で見る実態</h2>
+    <h2>📊 2.5億から90億へ——数字で見る実態</h2>
 
     <p>見出しの数字は劇的ですが、真のシグナルはその下にある指標群にあります。</p>
 
@@ -330,7 +345,7 @@
       <div class="stat-card"><div class="stat-number">60%</div><div class="stat-label">AI検索浸透率</div></div>
       <div class="stat-card"><div class="stat-number">80%</div><div class="stat-label">上位3位のみ閲覧</div></div>
     </div>
-<h2>爆発を駆動する三つの力</h2>
+<h2>🚀 爆発を駆動する三つの力</h2>
 
     <p>35倍の急増は真空の中で起こったわけではありません。2026年に三つの力が収束し、これを創出しました。</p>
 
@@ -340,7 +355,7 @@
 
     <p><strong>第三に、E-E-A-T権威プレミアムが専門的実行を必須にした。</strong> 信通院の調査によると、Experience（経験）、Expertise（専門性）、Authoritativeness（権威性）、Trustworthiness（信頼性）に最適化されたコンテンツは、一般的なマーケティングコンテンツと比較して主流AIモデルでの<strong>引用率が40ポイント高い</strong>ことが示されています。権威ある第三者引用は、現在従来のバックリンクの<strong>約3倍の重み</strong>を持ちます。ブランドはすぐに発見しました：GEOはコンテンツ量のゲームではない——権威エンジニアリングの規律である——と。その発見が彼らを専門プロバイダーへと駆り立てました。</p>
 
-    <h2>業界の成熟——評価制度の始動</h2>
+    <h2>🏛️ 業界の成熟——評価制度の始動</h2>
 
     <p>2026年7月19日、GEOサービス事業者業界は、ほとんどの若い市場が何年も回避する一歩を踏み出しました：正式な評価制度の創設です。</p>
 
@@ -352,9 +367,13 @@
 
     <p>二つは、混沌から秩序への移行を示すこと。2024年のGEO業界は、AI専門知識を主張するSEO代理店の焼き直しが跋扈する無法地帯でした。2026年央までに、上位3社（CR3）が<strong>市場の68%</strong> を支配し、評価制度はノイズから彼らを分離するメカニズムを提供します。これはSEO、SEM、プログラマティック広告がたどったのと同じ弧です——ただ10年ではなく2年に圧縮されただけです。</p>
 
-    <h2>海外ブランドの「トップ3ロックイン」問題</h2>
+    <h2>⚠️ 海外ブランドの「トップ3ロックイン」問題</h2>
 
     <p>データの中で海外ブランドの中国戦略に直接影響する部分がここです：<strong>AI検索ユーザーの80%は3番目の推薦を超えてスクロールしない。</strong></p>
+    <div class="callout callout-warning">
+      <strong>⚠️ 警告:</strong> AIモデルが一度あるカテゴリの権威的参照先として3つのブランドを決定すると、その回答を変えるには従来のSERPで競合を上回るよりもはるかに多くの労力が必要です。80%のユーザーが3番目の推薦を超えてスクロールしない中、最初にAIの参照セットに入ったブランドが事実上カテゴリのデフォルト回答を所有します。
+    </div>
+
 
     <p>これが問題なのは、AI回答が従来の検索ランキングと異なり、粘着的だからです。従来の検索エンジンは、関連性・権威性・新鮮さの組み合わせに基づき、クエリごとに結果を再ランキングします。対照的に、AIモデルの回答は合成物であり、特定のクエリカテゴリに対して固定された信頼ソースのセットから引き出されます。一度モデルが「中国で最高のエンタープライズSaaSプラットフォーム」の権威的参照先として3つのブランドを決定すると、その回答を変えるには従来のSERPで競合を上回るよりもはるかに多くの労力が必要です。</p>
 
@@ -362,9 +381,26 @@
 
     <p>百度百科なし、百家号なし、ニュースソースカバレッジなし、プラットフォーム横断的なブランド情報の一貫性なしでこの環境に参入する海外ブランドは、不利な状況で競争しているのではありません。構造的に参加を排除されているゲームをプレイしようとしているのです。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 GEOが示す三つの緊急シグナル</h3>
+      <ul>
+        <li>市場は3年で35倍に成長——競合はすでに引用可能なAI資産を構築している。</li>
+        <li>80%の消費者はAIのトップ3のみを閲覧——そこに入れなければ不可視だ。</li>
+        <li>国内ブランドは4,100社のGEO事業者に最適化されている。同じ基盤——百科、百家号、検証済みソース——が必要。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>GEO市場の35倍成長は、海外ブランドにとってパラドックスを含んでいます。一方で、BPPが2026年初頭からクライアントに伝えてきたことを検証します：中国でのAI検索可視性はもはや先見的な賭けではない——現在の事業環境であると。他方で、その成長の速度は、<strong>答えが固まる前にブランドのAIプレゼンスを確立するための窓が、ほとんどの国際マーケティングカレンダーが対応できるよりも速く閉じている</strong>ことを意味します。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🌐 百度百科</span>
+      <span class="platform-pill wechat">📖 百家号</span>
+      <span class="platform-pill alipay">📰 ニュースソース</span>
+      <span class="platform-pill xiaohongshu">🏛️ 公式サイト（ICP）</span>
+      <span class="platform-pill douyin">🎯 業界ポータル</span>
+    </div>
+
 
     <p>構造的障壁は変わっていません：GEOが必要とする引用可能資産——検証済み百度��科、アクティブな百家号、相互参照されたニュースカバレッジ——の構築には中国の事業主体が必要です。ほとんどの海外ブランドはそれを持っていません。ほとんどの国内競合は持っています。</p>
 

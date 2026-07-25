@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>3년 만에 35배. 선형 성장이 아닙니다. 트렌드도 아닙니다. 중국 소비자가 브랜드를 발견하는 방식의 구조적 전환이며, 놀라운 속도로 전문화되는 시장입니다.</p>
 
-    <h2>2.5억에서 90억까지 — 숫자로 보는 실태</h2>
+    <h2>📊 2.5억에서 90억까지 — 숫자로 보는 실태</h2>
 
     <p>헤드라인 수치는 극적이지만, 진정한 신호는 그 아래의 지���들에 있습니다.</p>
 
@@ -330,7 +345,7 @@
       <div class="stat-card"><div class="stat-number">60%</div><div class="stat-label">AI 검색 침투율</div></div>
       <div class="stat-card"><div class="stat-number">80%</div><div class="stat-label">상위 3위만 열람</div></div>
     </div>
-<h2>폭발을 추동하는 세 가지 힘</h2>
+<h2>🚀 폭발을 추동하는 세 가지 힘</h2>
 
     <p>35배 급증은 진공 속에서 일어나지 않았습니다. 2026년에 세 가지 힘이 수렴하여 이를 창출했습니다.</p>
 
@@ -340,7 +355,7 @@
 
     <p><strong>셋째, E-E-A-T 권위 프리미엄이 전문적 실행을 필수로 만들었다.</strong> 信通院 조사에 따르면, Experience(경험), Expertise(전문성), Authoritativeness(권위성), Trustworthiness(신뢰성)에 최적화된 콘텐츠는 일반 마케팅 콘텐츠와 비교해 주류 AI 모델에서의 <strong>인용률이 40%포인트 높은</strong> 것으로 나타났습니다. 권위 있는 제3자 인용은 현재 전통적인 백링크의 <strong>약 3배 가중치</strong>를 가집니다. 브랜드는 곧 발견했습니다: GEO는 콘텐츠 양의 게임이 아니다 — 권위 엔지니어링의 규율이다 — 라는 것을. 그 발견이 그들을 전문 프로바이더로 이끌었습니다.</p>
 
-    <h2>업계의 성숙 — 평가 제도의 시동</h2>
+    <h2>🏛️ 업계의 성숙 — 평가 제도의 시동</h2>
 
     <p>2026년 7월 19일, GEO 서비스 사업자 업계는 대부분의 젊은 시장이 수년간 회피하는 한 걸음을 내디뎠습니다: 공식 평가 제도의 창설입니다.</p>
 
@@ -352,9 +367,13 @@
 
     <p>둘은, 혼돈에서 질서로의 이행을 나타낸다는 점. 2024년의 GEO 업계는 AI 전문성을 주장하는 SEO 대행사의 재포장이 횡행하는 무법지대였습니다. 2026년 중반까지, 상위 3사(CR3)가 <strong>시장의 68%</strong> 를 지배하고, 평가 제도는 노이즈로부터 그들을 분리하는 메커니즘을 제공합니다. 이는 SEO, SEM, 프로그래매틱 광고가 걸었던 것과 동일한 호입니다 — 다만 10년이 아닌 2년으로 압축되었을 뿐입니다.</p>
 
-    <h2>해외 브랜드의 '톱3 록인' 문제</h2>
+    <h2>⚠️ 해외 브랜드의 '톱3 록인' 문제</h2>
 
     <p>데이터 중에서 해외 브랜드의 중국 전략에 직접 영향을 미치는 부분이 여기 있습니다: <strong>AI 검색 사용자의 80%는 세 번째 추천을 넘어 스크롤하지 않는다.</strong></p>
+    <div class="callout callout-warning">
+      <strong>⚠️ 경고:</strong> AI 모델이 한 번 특정 카테고리의 권위적 참조처로 3개 브랜드를 결정하면, 그 답변을 바꾸는 데는 전통적인 SERP에서 경쟁사를 앞지르는 것보다 훨씬 많은 노력이 필요합니다. 80%의 사용자가 세 번째 추천을 넘어 스크롤하지 않는 상황에서, 처음으로 AI의 참조 세트에 진입한 브랜드가 사실상 카테고리의 기본 답변을 소유합니다.
+    </div>
+
 
     <p>이것이 문제인 이유는, AI 답변이 전통적인 검색 랭킹과 달리 점착적이기 때문입니다. 전통적인 검색 엔진은 관련성·권위성·신선도의 조합에 기반하여 쿼리마다 결과를 재랭킹합니다. 대조적으로, AI 모델의 답변은 합성물이며, 특정 쿼리 카테고리에 대해 고정��� 신뢰 소스 세트로부터 도출됩니다. 한 번 모델이 "중국 최고의 엔터프라이즈 SaaS 플랫폼"의 권위적 참조처로서 3개 브랜드를 결정하면, 그 답변을 바꾸는 데는 전통적인 SERP에서 경쟁사를 앞지르는 것보다 훨씬 더 많은 노력이 필요합니다.</p>
 
@@ -362,9 +381,26 @@
 
     <p>바이두 백과 없이, 百家号 없이, 뉴스 소스 커버리지 없이, 플랫폼 횡단적 브랜드 정보 일관성 없이 이 환경에 진입하는 해외 브랜드는, 불리한 상황에서 경쟁하는 것이 아닙니다. 구조적으로 참여가 배제된 게임을 플레이하려는 것입니다.</p>
 
-    <h2>BPP의 시각</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 GEO가 보내는 세 가지 긴급 신호</h3>
+      <ul>
+        <li>시장이 3년 만에 35배 성장했다 — 경쟁사는 이미 인용 가능한 AI 자산을 구축 중이다.</li>
+        <li>80%의 소비자는 AI의 톱3만 열람한다 — 그 안에 없으면 보이지 않는다.</li>
+        <li>국내 브랜드는 4,100곳의 GEO 사업자가 최적화하고 있다. 같은 기반 — 백과, 바이쟈하오, 검증된 출처 — 가 필요하다.</li>
+      </ul>
+    </div>
+<h2>🏢 BPP의 시각</h2>
 
     <p>GEO 시장의 35배 성장은 해외 브랜드에게 패러독스를 포함하고 있습니다. 한편으로, BPP가 2026년 초부터 클라이언트에게 전해온 것을 검증합니다: 중국에서의 AI 검색 가시성은 더 이상 선견적 베팅이 아니다 — 현재의 사업 환경이다 — 라는 것. 다른 한편으로, 그 성장의 속도는 <strong>답변이 굳어지기 전에 브랜드의 AI 프레즌스를 확립하기 위한 창이, 대부분의 국제 마케팅 캘린더가 대응할 수 있는 것보다 빠르게 닫히고 있다</strong>는 것을 의미합니다.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🌐 바이두 백과</span>
+      <span class="platform-pill wechat">📖 바이쟈하오</span>
+      <span class="platform-pill alipay">📰 뉴스 소스</span>
+      <span class="platform-pill xiaohongshu">🏛️ 공식 웹사이트(ICP)</span>
+      <span class="platform-pill douyin">🎯 업계 포털</span>
+    </div>
+
 
     <p>구조적 장벽은 변하지 않았습니다: GEO가 필요로 하는 인용 가능 자산 — 검증된 바이두 백과, 액티브한 百家号, 상호 참조된 뉴스 커버리지 — 의 구축에는 중국 사업 주체가 필요합니다. 대부분의 해외 브랜드는 그것을 갖고 있지 않습니다. 대부분의 국내 경쟁사는 갖고 있습니다.</p>
 
