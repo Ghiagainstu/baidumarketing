@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,9 +320,13 @@
 
     <p>중국에 진출했거나 진출을 계획하는 해외 브랜드에게, 이 3개 조항은 국제 광고가 단순히 용인되는 것이 아니라 <strong>적극적으로 지원되고 있음</strong>을 보여주는, 최근 수년간 가장 강력한 정책 신호입니다.</p>
 
-    <h2>의견의 구체적 내용</h2>
+    <h2>📜 의견의 구체적 내용</h2>
 
     <p>제5장은 세 가지 구체적인 정책 포지션을 전개하고 있습니다.</p>
+    <div class="callout callout-insight">
+      <strong>💡 핵심 시사점:</strong> 시장 규제, 인터넷 콘텐츠 관리, 산업 정책을 관장하는 6개 기관이 공동으로 의견을 발표하는 것은 정부 최고위층의 정합성을 의미한다. 이 문서는 중국에서 국제 광고의 지위를 <strong>묵인된 불확실성에서 적극적 지원으로</strong> 격상시키며, 역사적으로 서구 이사회에서 중국 시장 진입을 어려운 논의로 만들어온 정책 리스크를 낮춘다.
+    </div>
+
 
     <p><strong>제12조: 광고 기업의 하이레벨 해외 진출 추진.</strong> 정부는 "국제 경쟁력을 갖춘 중국 광고 브랜드 클러스터를 육성"하고 "광고 기업의 해외 전개 가속화, 서비스 무역과 대외 투자를 통한 글로벌 산업 체인 편입"을 지원합니다. 더 나아가 "커스터마이즈된 다국어 광고 서비스"와 "국제 미디어 플랫폼을 포함한 다양한 전파 채널 확대"를 명시적으로 요구하고 있습니다.</p>
 
@@ -322,7 +341,7 @@
       <div class="stat-card"><div class="stat-number">22</div><div class="stat-label">정책 조항</div></div>
       <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">대외개방 조항</div></div>
     </div>
-<h2>왜 지금 중요한가</h2>
+<h2>🔑 왜 지금 중요한가</h2>
 
     <p>중국의 정부 의견은 보도자료가 아닙니다. 그것은 하류 기관들이 예산을 배분하고, 집행 프레임워크를 만들고, 업계 행동을 지도하기 위해 사용하는 정책 방향성의 공식적 표명입니다. 6개 기관 — 시장 행동을 규제하고, 인터넷 콘텐츠를 관리하며, 산업 정책을 감독하는 기관 — 이 공동으로 문서를 발표할 때, 그것은 최상위 수준에서의 정합성을 의미합니다.</p>
 
@@ -334,7 +353,7 @@
 
     <p><strong>인프라 수준에서는</strong>, 제14조의 크로스보더 자금 결제 개선과 인지된 해외 광고 대행사 리스트의 약속은, 중국의 국제 광고주에게 가장 지속적인 운영 마찰 두 가지 — 결제 마찰과 서비스 프로바이더 신뢰 — 에 대처하는 것입니다.</p>
 
-    <h2>정책에서 실무로 — 실제로 무엇이 변하는가</h2>
+    <h2>🔄 정책에서 실무로 — 실제로 무엇이 변하는가</h2>
 
     <p>의견은 법률이 아니며, 실행에는 시간이 걸립니다. 그러나 방향성은 명확하고, 이미 가시적인 변화도 있습니다.</p>
 
@@ -342,7 +361,7 @@
 
     <p>의견은 업계 수준의 국제 협력 플랫폼 창설도 요구하고 있습니다. 이 플랫폼의 형태는 아직 미확정이지만, 그 존재가 의견에 명기되어 있다는 것은 BPP와 같은 — 이미 해외 브랜드와 중국의 광고 인프라 간 갭을 브리지하고 있는 기관이 — 자사의 기능을 공식적으로 인정하고 지원하는 정책 환경 하에서 사업을 수행하고 있음을 의미합니다.</p>
 
-    <h2>해외 브랜드에 의미하는 것</h2>
+    <h2>🌏 해외 브랜드에 의미하는 것</h2>
 
     <p>중국 진출 전략을 평가하는 해외 마케팅 디렉터에게, 이 의견의 실천적 함의는 세 가지로 요약됩니다.</p>
 
@@ -352,9 +371,26 @@
 
     <p><strong>셋째, 조기 참여자가 정책과 플랫폼의 정합성에서 이익을 얻는다.</strong> 정부 정책과 플랫폼 제품 업데이트가 같은 방향을 가리키고 있을 때 — 현재 바이두의 국제용 기능 전개가 그러하듯 — 이미 프레즌스를 확립한 브랜드가 시장이 혼잡해지기 전에 효율성 이익을 획득합니다.</p>
 
-    <h2>BPP의 시각</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 6개 부처 의견이 실무적으로 의미하는 것</h3>
+      <ul>
+        <li>중국 광고의 정책 리스크가 측정 가능하게 낮아졌다 — 공식적인 다수 기관의 지원이 모호함을 대체했다.</li>
+        <li>운영 마찰(크로스보더 결제, 사업자 검증)이 정부의 해결 과제 어젠더에 올랐다.</li>
+        <li>지금 바이두 프레즌스를 확립하는 브랜드가, 정책 지원 인프라가 성숙하고 시장이 혼잡해지기 전에 효율성 이익을 획득한다.</li>
+      </ul>
+    </div>
+<h2>🏢 BPP의 시각</h2>
 
     <p>해외 브랜드의 구조적 현실은 변하지 않았습니다: 바이두에서의 광고에는 여전히, 원래 중국 국내 기업용으로 설계된 생태계에서의 계정 설정, 결제 시스템, 콘텐츠 컴플라이언스, 오디언스 타겟팅의 내비게이션이 필요합니다.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🌐 바이두 계정 설정</span>
+      <span class="platform-pill wechat">💳 크로스보더 결제</span>
+      <span class="platform-pill alipay">✅ 콘텐츠 컴플라이언스</span>
+      <span class="platform-pill xiaohongshu">🎯 오디언스 타겟팅</span>
+      <span class="platform-pill douyin">🏛️ 현지 플랫폼 전문성</span>
+    </div>
+
 
     <p>변한 것은 정책 상의 천장입니다. 6개 부처 의견은, 이전에 존재했던 암묵적 천장 — 중국의 광고 생태계는 그 규모와 정교함에도 불구하고, 기본적으로는 국제 참가에 대한 제도적 지원이 제한된 국내 시장이라는 암묵적 전제 — 을 제거했습니다.</p>
 

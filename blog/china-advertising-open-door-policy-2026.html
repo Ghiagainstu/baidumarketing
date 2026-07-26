@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,9 +320,13 @@
 
     <p>For overseas brands operating in or entering China, these three articles represent the strongest policy signal in years that international advertising is not just tolerated — it is actively supported.</p>
 
-    <h2>What the Directive Actually Says</h2>
+    <h2>📜 What the Directive Actually Says</h2>
 
     <p>The document is comprehensive — covering everything from industrial layout planning to AI-driven ad technology to talent development. But the section that matters for our audience is Section V, which lays out three concrete policy positions.</p>
+    <div class="callout callout-insight">
+      <strong>💡 Key Insight:</strong> When six agencies — including market regulators, internet content authorities, and industrial policy bodies — jointly issue a directive, it signals alignment at the highest levels of government. This document moves the status of international advertising in China from <strong>tolerated uncertainty</strong> to <strong>actively supported</strong>, reducing the policy risk that has historically made China market entry a difficult conversation in Western boardrooms.
+    </div>
+
 
     <p><strong>Article 12: Support advertising enterprises going global.</strong> The government will "cultivate a cluster of Chinese advertising brands with international competitiveness" and "support advertising enterprises to accelerate overseas deployment, embed in global industrial chains through service trade and outbound investment, and coordinate with China's competitive industries and brands to go overseas." It explicitly calls for "customized multilingual advertising services" and "expansion of diverse communication channels including international media platforms."</p>
 
@@ -322,7 +341,7 @@
       <div class="stat-card"><div class="stat-number">22</div><div class="stat-label">Policy Articles</div></div>
       <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Opening-Up Clauses</div></div>
     </div>
-<h2>Why This Matters Now</h2>
+<h2>🔑 Why This Matters Now</h2>
 
     <p>Government directives in China are not press releases. They are the formal articulation of policy direction that downstream agencies then use to allocate budgets, create enforcement frameworks, and guide industry behavior. When six agencies — including the ones that regulate market behavior, control internet content, and oversee industrial policy — jointly release a document, it signals alignment at the highest levels.</p>
 
@@ -334,7 +353,7 @@
 
     <p>Second, on the <strong>infrastructure level</strong>: Article 14's promise of improved cross-border capital settlement and a recognized list of overseas advertising agencies addresses two of the most persistent operational frictions for international advertisers in China: payment friction and service provider trust.</p>
 
-    <h2>From Policy to Practice — What Actually Changes</h2>
+    <h2>🔄 From Policy to Practice — What Actually Changes</h2>
 
     <p>A directive is not law, and implementation takes time. But the direction is clear, and some changes are already visible.</p>
 
@@ -342,7 +361,7 @@
 
     <p>The document also calls for the creation of an industry-level international cooperation platform. While the form this platform will take is still undefined, its existence in the directive means that agencies like BPP — which already bridge the gap between overseas brands and China's advertising infrastructure — are now operating in a policy environment that officially recognizes and supports their function.</p>
 
-    <h2>What This Means for Overseas Brands</h2>
+    <h2>🌏 What This Means for Overseas Brands</h2>
 
     <p>For an overseas marketing director evaluating a China entry strategy, the practical implications of this directive can be summarized in three points.</p>
 
@@ -352,9 +371,26 @@
 
     <p><strong>Three: early movers benefit from the alignment of policy and platform.</strong> When government policy and platform product updates point in the same direction — as they do now with Baidu's international-friendly feature rollouts — the brands that have already established their presence will capture the efficiency gains before the market becomes crowded.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 What the Six-Agency Directive Means in Practice</h3>
+      <ul>
+        <li>Policy risk of advertising in China has measurably decreased — formal multi-agency support replaces ambiguity.</li>
+        <li>Operational friction (cross-border payments, provider verification) is now on the government&#39;s agenda to solve.</li>
+        <li>Brands that establish their Baidu presence now capture efficiency gains before the policy-backed infrastructure matures and the market gets crowded.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The structural reality for overseas brands has not changed: advertising on Baidu still requires navigating account setup, payment systems, content compliance, and audience targeting in an ecosystem that was originally designed for domestic Chinese companies.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🌐 Baidu Account Setup</span>
+      <span class="platform-pill wechat">💳 Cross-Border Payments</span>
+      <span class="platform-pill alipay">✅ Content Compliance</span>
+      <span class="platform-pill xiaohongshu">🎯 Audience Targeting</span>
+      <span class="platform-pill douyin">🏛️ Local Platform Expertise</span>
+    </div>
+
 
     <p>What has changed is the policy ceiling. The six-agency directive removes the implicit ceiling that previously existed — the unspoken assumption that China's advertising ecosystem, for all its size and sophistication, was fundamentally a domestic market with limited institutional support for international participation.</p>
 

@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,9 +320,13 @@
 
     <p>中国に進出済み、あるいは進出を計画する海外ブランドにとって、この3条は国際広告が単に許容されているのではなく、<strong>積極的に支援されている</strong>ことを示す、ここ数年で最も強力な政策シグナルです。</p>
 
-    <h2>意見の具体的な内容</h2>
+    <h2>📜 意見の具体的な内容</h2>
 
     <p>第5章は三つの具体的な政策ポジションを展開しています。</p>
+    <div class="callout callout-insight">
+      <strong>💡 重要な示唆:</strong> 市場規制、インターネットコンテンツ管理、産業政策を所管する6機関が共同で意見を発表することは、政府の最高レベルでの整合性を意味する。この文書は中国における国際広告の地位を<strong>黙認された不確実性から積極的支援へ</strong>と引き上げ、歴史的に欧米の取締役会で中国市場参入を困難な議論にしてきた政策リスクを低減する。
+    </div>
+
 
     <p><strong>第12条：広告企業のハイレベルな海外展開の推進。</strong> 政府は「国際競争力を持つ中国広告ブランド群の育成」と「広告企業の海外展開の加速、サービス貿易や対外投資を通じたグローバル産業チェーンへの組み込み」を支援します。さらに「カスタマイズされた多言語広告サービス」と「国際メディアプラットフォームを含む多様な伝播チャネルの拡大」を明示的に求めています。</p>
 
@@ -322,7 +341,7 @@
       <div class="stat-card"><div class="stat-number">22</div><div class="stat-label">政策条項</div></div>
       <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">対外開放条項</div></div>
     </div>
-<h2>なぜこれが今重要なのか</h2>
+<h2>🔑 なぜこれが今重要なのか</h2>
 
     <p>中国の政府意見はプレスリリースではありません。それは下流の機関が予算を配分し、執行枠組みを作り、業界行動を指導するために使用する政策方向性の公式な表明です。六つの機関——市場行動を規制し、インターネットコンテンツを管理し、産業政策を監督する機関——が共同で文書を発表するとき、それはトップレベルでの整合性を意味します。</p>
 
@@ -334,7 +353,7 @@
 
     <p><strong>インフラのレベルでは</strong>、第14条のクロスボーダー資金決済の改善と認知された海外広告代理店リストの約束は、中国の国際広告主にとって最も持続的な運用摩擦の二つ——支払い摩擦とサービスプロバイダー信頼——に対処するものです。</p>
 
-    <h2>政策から実務へ——実際に何が変わるのか</h2>
+    <h2>🔄 政策から実務へ——実際に何が変わるのか</h2>
 
     <p>意見は法律ではなく、実施には時間がかかります。しかし方向性は明確で、すでに可視的な変化もあります。</p>
 
@@ -342,7 +361,7 @@
 
     <p>意見は業界レベルの国際協力プラットフォームの創設も求めています。このプラットフォームの形態はまだ未確定ですが、その存在が意見に明記されているということは、BPPのような——すでに海外ブランドと中国の広告インフラのギャップを橋渡ししている機関が——自社の機能を公式に認識し支援する政策環境の下で事業を行っていることを意味します。</p>
 
-    <h2>海外ブランドにとっての意味</h2>
+    <h2>🌏 海外ブランドにとっての意味</h2>
 
     <p>中国参入戦略を評価する海外のマーケティングディレクターにとって、この意見の実践的な含意は三点に要約できます。</p>
 
@@ -352,9 +371,26 @@
 
     <p><strong>第三に、早期参入者が政策とプラットフォームの整合性から利益を得る。</strong> 政府の政策とプラットフォームのプロダクトアップデートが同じ方向を指しているとき——現在の百度の国際向け機能展開がそうであるように——すでにプレゼンスを確立しているブランドが、市場が混雑する前に効率性の利益を獲得します。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 六部門意見が実務的に意味すること</h3>
+      <ul>
+        <li>中国での広告の政策リスクが測定可能に低下 — 正式な複数機関の支援が曖昧さを置き換えた。</li>
+        <li>運用摩擦（クロスボーダー決済、事業者検証）が政府の解決課題アジェンダに載った。</li>
+        <li>今バイドゥプレゼンスを確立するブランドが、政策支援のインフラが成熟し市場が混雑する前に効率性利益を獲得する。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>海外ブランドの構造的現実は変わっていません：百度での広告には依然として、元々中国国内企業向けに設計されたエコシステムにおけるアカウント設定、支払いシステム、コンテンツコンプライアンス、オーディエンスターゲティングのナビゲーションが必要です。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🌐 百度アカウント設定</span>
+      <span class="platform-pill wechat">💳 クロスボーダー決済</span>
+      <span class="platform-pill alipay">✅ コンテンツコンプライアンス</span>
+      <span class="platform-pill xiaohongshu">🎯 オーディエンスターゲティング</span>
+      <span class="platform-pill douyin">🏛️ 現地プラットフォーム知見</span>
+    </div>
+
 
     <p>変わったのは政策上の天井です。六部門意見は、以前に存在した暗黙の天井——中国の広告エコシステムはその規模と洗練さにもかかわらず、基本的には国際参加への制度的支援が限られた国内市場であるという暗黙の前提——を取り除きました。</p>
 
