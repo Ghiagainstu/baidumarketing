@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>7月26日、文心一言のソース権威アーキテクチャに関する詳細な分析が中国のGEOフォーラムで公開されました。プラットフォーム文書、検索行動テスト、そして最近アップグレードされた百度Master Agentエンジンの基盤ロジックに基づくものです。初めて、システムが明示的な10段階の階層にマッピングされました。これは海外ブランドが自社の百度プレゼンスについて考える方法を変えます。</p>
 
-    <h2>10段階ソース権威階層</h2>
+    <h2>🪜 10段階ソース権威階層</h2>
 
     <p>文心一言はすべてのソースを平等に扱いません。各段階の上昇が線形ではなく幾何級数的な引用確率の増加をもたらす階梯でランク付けします。</p>
 
@@ -338,7 +353,7 @@
       <div class="stat-card"><div class="stat-number">T8-10</div><div class="stat-label">引用ほぼゼロゾーン</div></div>
       <div class="stat-card"><div class="stat-number">3段階</div><div class="stat-label">検証プロセス</div></div>
     </div>
-<h2>三重検証システム——AIが信頼を判断する方法</h2>
+<h2>🔍 三重検証システム——AIが信頼を判断する方法</h2>
 
     <p>10段階の階層は静的なランキングではありません。継続的に実行される三段階の検証プロセスによって強制されています。</p>
 
@@ -348,9 +363,13 @@
 
     <p><strong>第三段階：リアルタイム監視と修正。</strong> AIはソース評価を継続的に再インデックス化し更新します。古くなったコンテンツ——高位階層のソースであっても——はフラグが立てられます。かつて正確だったが現在は時代遅れのコンテンツは、更新されない限り時間とともに権威を失います。これは権威が一度限りの達成ではなく、継続的なメンテナンスプロセスであることを意味します。</p>
 
-    <h2>海外ブランドが位置する場所——そしてなぜそれが問題か</h2>
+    <h2>⚠️ 海外ブランドが位置する場所——そしてなぜそれが問題か</h2>
 
     <p>この階層を、中国に参入する典型的な海外ブランドに適用してみましょう。</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ 致命的なギャップ:</strong> 百度百科（T2）、ICP届出済み公式サイト（T3）、百家号アカウント（T5）がなければ、三重検証システムには相互参照する材料がほとんどなく——T8-10で既にゼロに近い引用確率は、<strong>存在する限られたソース間のデータ不一致ごとにさらに低下する</strong>。
+    </div>
+
 
     <ul>
 
@@ -368,7 +387,7 @@
 
     <p>これはランキング上の不利ではありません。AIのソースプールからの構造的排除です。</p>
 
-    <h2>階梯を登る方法——機能する3つの動き</h2>
+    <h2>🧭 階梯を登る方法——機能する3つの動き</h2>
 
     <p>階層は進むべき道を異常なほど明確にします。海外ブランドは第8-10階層から第2-5階層に移動する必要があり、順序が重要です。</p>
 
@@ -378,9 +397,26 @@
 
     <p><strong>動き3：第4/6階層の相互参照を生成——ニュースと業界報道。</strong> 三重検証システムは複数の階層にわたって一貫して現れるソースを報酬付けします。認知された中国メディアポータル——業界特化型のものであっても——でのニュース報道は、第3階層のウェブサイトをAIの評価において第2階層検証済みエンティティに変える相互参照を提供します。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 10段階権威の梯子——今すべきこと</h3>
+      <ul>
+        <li><strong>自社の階層を知れ。</strong> ほとんどの海外ブランドはT8-10に位置し、バイドゥAIに対して構造的に不可視である。</li>
+        <li><strong>最初にT2-3に錨を下ろせ。</strong> バイドゥ百科＋ICP届出済み公式サイトが、すべての下位階層コンテンツの価値を複利化する基盤である。</li>
+        <li><strong>T5を活性化し、次にT4/6へ。</strong> 百家号発信＋ニュース報道が、T3エンティティをAIの評価において相互検証済みのT2相当に変える。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>10段階の階層は、これまで公に利用可能だった中で最も透明性の高い、百度AIの意思決定の地図です。海外ブランドにとって、これはBPPが2026年を通じて主張してきたことを確認します：中国のAI検索における可視性はコンテンツの問題ではない。アイデンティティインフラの問題であると。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📖 百度百科 (T2)</span>
+      <span class="platform-pill wechat">🌐 ICP公式サイト (T3)</span>
+      <span class="platform-pill alipay">✍️ 百家号 (T5)</span>
+      <span class="platform-pill xiaohongshu">📰 ニュース報道 (T4/6)</span>
+      <span class="platform-pill douyin">🔍 相互検証層</span>
+    </div>
+
 
     <p>構造的障壁は今や明示的です。第2階層と第3階層——AIの可視性が意味を持ち始める階層——は、中国の事業主体なしでは作成できない資産を必要とします。ICP届出にはライセンスが必要。百度百科の検証にはライセンスが必要。百家号には現地文書が必要です。</p>
 

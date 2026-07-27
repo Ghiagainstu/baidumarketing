@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>On July 26, a detailed analysis of Wenxin Yiyan's source authority architecture went public on Chinese GEO forums, drawing from platform documentation, search behavior testing, and the underlying logic of Baidu's recently upgraded Master Agent engine. For the first time, the system has been mapped into an explicit, 10-tier hierarchy. And it changes how overseas brands should think about their Baidu presence.</p>
 
-    <h2>The 10-Tier Source Authority Hierarchy</h2>
+    <h2>🪜 The 10-Tier Source Authority Hierarchy</h2>
 
     <p>Wenxin Yiyan does not treat all sources equally. It ranks them on a ladder where each step upward produces a geometric — not linear — increase in citation probability.</p>
 
@@ -338,7 +353,7 @@
       <div class="stat-card"><div class="stat-number">T8-10</div><div class="stat-label">Near-Zero Citation Zone</div></div>
       <div class="stat-card"><div class="stat-number">3x</div><div class="stat-label">Verification Stages</div></div>
     </div>
-<h2>The Triple Verification System — How the AI Judges What to Trust</h2>
+<h2>🔍 The Triple Verification System — How the AI Judges What to Trust</h2>
 
     <p>The 10-tier hierarchy is not a static ranking. It is enforced by a three-stage verification process that runs continuously.</p>
 
@@ -348,9 +363,13 @@
 
     <p><strong>Stage 3: Real-Time Monitoring & Correction.</strong> The AI continuously re-indexes and updates its source evaluation. Stale content — even from high-tier sources — gets flagged. Content that was once accurate but is now outdated loses authority over time unless refreshed. This means that authority is not a one-time achievement but an ongoing maintenance process.</p>
 
-    <h2>Where Overseas Brands Land — and Why It's a Problem</h2>
+    <h2>⚠️ Where Overseas Brands Land — and Why It's a Problem</h2>
 
     <p>Now apply this hierarchy to the typical overseas brand entering China.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Critical Gap:</strong> Without Baidu Baike (Tier 2), an ICP-filed official website (Tier 3), or a Baijiahao account (Tier 5), the triple verification system has almost nothing to cross-reference — and citation probability, already near zero at Tiers 8-10, <strong>drops further with every data inconsistency</strong> across the limited sources that do exist.
+    </div>
+
 
     <ul>
 
@@ -368,7 +387,7 @@
 
     <p>This is not a ranking disadvantage. It is a structural exclusion from the AI's source pool.</p>
 
-    <h2>How to Climb the Ladder — Three Moves That Work</h2>
+    <h2>🧭 How to Climb the Ladder — Three Moves That Work</h2>
 
     <p>The hierarchy makes the path forward unusually clear. Overseas brands need to move from Tier 8-10 to Tier 2-5, and the sequence matters.</p>
 
@@ -378,9 +397,26 @@
 
     <p><strong>Move 3: Generate Tier 4/6 Cross-Referencing — News and Industry Coverage.</strong> The triple verification system rewards sources that appear consistently across multiple tiers. News coverage on recognized Chinese media portals — even industry-specific ones — provides the cross-referencing that turns a Tier 3 website into a Tier 2-verified entity in the AI's assessment.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 The 10-Tier Authority Ladder — What to Do Now</h3>
+      <ul>
+        <li><strong>Find your tier.</strong> Most overseas brands sit at T8-10 — structurally invisible to Baidu AI.</li>
+        <li><strong>Anchor at T2-3 first.</strong> Baidu Baike + ICP-filed official website are the foundation that makes all lower-tier content compound in value.</li>
+        <li><strong>Activate T5, then T4/6.</strong> Baijiahao publishing + news coverage turn a T3 entity into a cross-verified T2-equivalent in the AI's assessment.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The 10-tier hierarchy is the most transparent map of Baidu AI's decision-making that has ever been publicly available. For overseas brands, it confirms what BPP has been saying throughout 2026: visibility in China's AI search is not a content problem. It is an identity infrastructure problem.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📖 Baidu Baike (T2)</span>
+      <span class="platform-pill wechat">🌐 ICP Official Site (T3)</span>
+      <span class="platform-pill alipay">✍️ Baijiahao (T5)</span>
+      <span class="platform-pill xiaohongshu">📰 News Coverage (T4/6)</span>
+      <span class="platform-pill douyin">🔍 Cross-Verification Layer</span>
+    </div>
+
 
     <p>The structural barrier is explicit now. Tiers 2 and 3 — the tiers where AI visibility begins to become meaningful — require assets that cannot be created without a Chinese business entity. ICP filing requires a license. Baidu Baike verification requires a license. Baijiahao requires local documentation.</p>
 
