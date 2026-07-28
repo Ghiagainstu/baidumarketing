@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>직관적인 해석은 바이두의 광고 사업이 구조적 후퇴에 있다는 것입니다. 그러나 해외 브랜드에게 더 유용한 해석은, <strong>이 후퇴가 더 조용하고 경쟁이 적은 광고 환경을 만들어내고 있다</strong>는 것입니다 — 바로 AI 검색 가시성이 더 중요한 게임이 되고 있는 시점에.</p>
 
-    <h2>Q1 숫자 — 데이터가 보여주는 것</h2>
+    <h2>📊 Q1 숫자 — 데이터가 보여주는 것</h2>
 
     <p>헤드라인 수치는 이렇습니다. 온라인 마케팅: 2026년 Q1 1,260억 위안, 전년 동기 대비 22% 감소, 처음으로 바이두 핵심 수익의 50%를 밑돌았습니다. 전통적인 검색 및 피드 광고만으로는 1,020억 위안, 29% 감소. 2024년 Q2부터 2026년 Q1까지, 광고 사업은 중단 없이 6분기 연속 감소했습니다.</p>
 
@@ -322,7 +337,7 @@
       <div class="stat-card"><div class="stat-number">6Q</div><div class="stat-label">연속 광고 감소</div></div>
       <div class="stat-card"><div class="stat-number">345억</div><div class="stat-label">순이익 (-55% YoY)</div></div>
     </div>
-<h2>광고 축소의 이유 — 작동하는 세 가지 힘</h2>
+<h2>🔻 광고 축소의 이유 — 작동하는 세 가지 힘</h2>
 
     <p>감소는 미스터리가 아닙니다. 세 가지 힘이 같은 방향으로 밀고 있습니다.</p>
 
@@ -332,9 +347,13 @@
 
     <p><strong>셋째, 바이두 자체가 AI로 재중량화하고 있다.</strong> 회사는 더 이상 전통 광고를 독립 세그먼트로 보고하지 않습니다. 광고 수익을 더 넓은 카테고리로 통합하고, 내부 인센티브를 AI 클라우드, 엔터프라이즈 에이전트, 昆仑芯 사업으로 전환했습니다. 광고는 더 이상 성장 서사가 아닙니다.</p>
 
-    <h2>역설적 기회</h2>
+    <h2>💡 역설적 기회</h2>
 
     <p>중국 시장 진입을 평가하는 해외 브랜드에게, 이 숫자들은 경고처럼 보일 수 있습니다. "바이두 광고가 축소되고 있다 — 아마 손대지 않는 게 낫다."</p>
+    <div class="callout callout-insight">
+      <strong>💡 진짜 스토리:</strong> 6분기 연속 광고주 이탈은 <strong>키워드당 입찰자가 줄고 있다</strong>는 것 — 그리고 잔류하는 브랜드에게는 CPC 하락을 의미한다. 6억 5,500만 월간 활성 사용자가 여전히 바이두에서 의사결정을 하는 가운데, 경쟁 감소는 경고가 아니다. 대부분의 경쟁사가 놓치고 있는 가격 기회다.
+    </div>
+
 
     <p>데이터는 반대 결론을 지지합니다.</p>
 
@@ -342,7 +361,7 @@
 
     <p>동시에, 바이두의 AI 측은 성숙해지고 있습니다. 文心一言의 AI 답변은 현재 검색 결과의 과반수에 표시됩니다. 7월 하순에 처음으로 문서화된 10단계 소스 권위 계층은, 바이두 인용 가능 자산을 구축한 브랜드를 보상합니다. 게임은 "최상위 광고 슬롯을 구매하는 것"에서 "AI가 인용하는 소스가 되는 것"으로 이동하고 있습니다. 신규 진입자에게, 이것은 수년간 키워드 입찰 이력을 가진 기존 국내 광고주와 경쟁하는 것보다 더 공평한 경쟁 환경입니다.</p>
 
-    <h2>새로운 진입 포인트 — 두 가지 게임, 하나의 플랫폼</h2>
+    <h2>🎯 새로운 진입 포인트 — 두 가지 게임, 하나의 플랫폼</h2>
 
     <p>Q1 데이터는 한 가지를 명시적으로 만듭니다: 2026년 바이두에서의 광고는 하나의 전략이 아닙니다. 두 가지입니다.</p>
 
@@ -352,9 +371,26 @@
 
     <p>첫 번째 게임만 플레이하는 브랜드는 축소되는 채널을 최적화하고 있습니다. 두 번째 게임만 플레이하는 브랜드는 전환 메커니즘 없이 가시성을 구축하고 있습니다. 두 가지 모두를 플레이하는 브랜드는, 플랫폼이 실제로 진화하고 있는 방식으로 바이두를 사용하고 있습니다 — 의도 캡처를 위한 유료 검색, 카테고리 프레즌스를 위한 AI 가시성.</p>
 
-    <h2>BPP의 시각</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 바이두 Q1 2026 — 지금 취해야 할 세 가지 행동</h3>
+      <ul>
+        <li><strong>지금 낮은 CPC를 고정하라.</strong> 6분기 광고주 이탈이 유료 검색 진입의 드문 가격 창을 만들었다.</li>
+        <li><strong>병행하여 AI 가시성을 구축하라.</strong> 경쟁사가 GEO가 중요한지 논쟁하는 동안, 文心一言이 인용할 백과·바이쟈하오·ICP 자산을 구축한다.</li>
+        <li><strong>두 게임을 모두 플레이하라.</strong> 의도 캡처의 유료 검색 + 카테고리 프레즌스의 AI 가시성이, 플랫폼 진화가 보상하는 전략이다.</li>
+      </ul>
+    </div>
+<h2>🏢 BPP의 시각</h2>
 
     <p>해외 브랜드의 구조적 현실은 Q1 숫자로 변하지 않았습니다: 바이두에서 어느 게임에 접근하려면, 중국 국내 기업용으로 설계된 생태계에서의 계정 설정, 결제 시스템, 콘텐츠 컴플라이언스의 내비게이션이 여전히 필요합니다.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🎯 유료 검색 (의도 캡처)</span>
+      <span class="platform-pill wechat">🤖 AI 가시성 (GEO)</span>
+      <span class="platform-pill alipay">📖 바이두 백과 (권위)</span>
+      <span class="platform-pill xiaohongshu">✍️ 바이쟈하오 (발신)</span>
+      <span class="platform-pill douyin">📰 상호 참조</span>
+    </div>
+
 
     <p>변한 것은 시장 컨텍스트입니다. 6분기간의 광고주 이탈로 구동된 광고 경쟁 감소는, 지금 진입하는 해외 브랜드가 지난 2년 중 어느 시점보다도 덜 붐비고 저비용인 유료 검색 환경에 직면하고 있음을 의미합니다. 동시에, AI 가시성 게임은 아직 초기 이닝에 있으며, 바이두의 10단계 권위 계층이 최근에야 공개되었고, 대다수 국내 경쟁사는 여전히 GEO가 아닌 전통 SEO에 최적화하고 있습니다.</p>
 
