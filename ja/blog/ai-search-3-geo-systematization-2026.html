@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>同時期のタイミングは調整されたものではありませんが、メッセージは統一されています：量産型GEOの時代——似たような記事を何千本も書いてAIがどれか一つを拾うのを願うアプローチ——は終わったのです。IDCによれば、従来のSEOコンテンツの62%がAI生成回答で引用を獲得できていません。プラットフォームは業界がAI検索3.0と呼ぶ段階に入りました。</p>
 
-    <h2>7月に何が変わったか——3.0シフト</h2>
+    <h2>⚡ 7月に何が変わったか——3.0シフト</h2>
 
     <p>アップグレードは3.0時代を定義する三つの特性を共有しています。</p>
 
@@ -322,7 +337,7 @@
       <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">GEO再形成トレンド</div></div>
       <div class="stat-card"><div class="stat-number">350億</div><div class="stat-label">2026年GEO市場規模</div></div>
     </div>
-<h2>GEOを再形成する三つのトレンド——量から体系へ</h2>
+<h2>📈 GEOを再形成する三つのトレンド——量から体系へ</h2>
 
     <p>これらの技術的変化は、GEOの実践方法——そしてブランドがそれについて考える必要がある方法——の三つの構造的シフトを推進しています。</p>
 
@@ -332,15 +347,19 @@
 
     <p><strong>トレンド3：野蛮な成長から標準化へ。</strong> 中国広告協会は三つのGEO業界標準を策定中です。GEOサービス事業者評価制度が7月19日に開始されました。業界規範が成文化されつつあり——これは体系的なGEOなしで運営するブランドが、単に最適化不足であるだけでなく、コンテンツの真正性とソース検証可能性に関する新興基準にますます不適合になっていることを意味します。</p>
 
-    <h2>従来のSEOコンテンツの62%が失敗する理由</h2>
+    <h2>❌ 従来のSEOコンテンツの62%が失敗する理由</h2>
 
     <p>IDCの数字——AI Q&Aシナリオにおける従来のSEOコンテンツの62%の失敗率——は、この分析で最も実用的な数字です。これは、3.0以前の前提の下で生産されたコンテンツの大部分が、AI回答から静かにフィルターされていることを意味します。</p>
+    <div class="callout callout-insight">
+      <strong>💡 3.0シフト:</strong> 失敗率はコンテンツ品質の問題ではない——<strong>アイデンティティインフラの問題</strong>である。AIは現在、三つのレベルでコンテンツをフィルターする：取り込み（エンティティの一貫性）、検証（ソース追跡）、鮮度（メンテナンス）。三つすべてを通過するブランドは引用される。一つでも失敗するブランドは排除される——そして従来のSEOコンテンツの62%が少なくとも一つで失敗している。
+    </div>
+
 
     <p>失敗は三つのレベルで発生します。第一に、取り込みレベル：プラットフォーム間でエンティティの一貫性を欠くコンテンツは、認識可能なブランドに属するものとしてインデックスされません。第二に、検証レベル：プラットフォームの権威階層で上位層のソースに遡れない主張は、合成された回答から除外されます。第三に、鮮度レベル：メンテナンスされていないコンテンツは、関連性が減衰しているものとして扱われます。</p>
 
     <p>これら三つのレベル——構造化された知識ベース、相互参照されたソースネットワーク、継続的なコンテンツメンテナンス——に投資してきたブランドは、競合の率が低下する中でAI引用率が上昇するのを目の当たりにしています。これは段階的なシフトではありません。すべてのクエリで動作するフィルタリングメカニズムです。</p>
 
-    <h2>海外ブランドにとっての意味</h2>
+    <h2>🌏 海外ブランドにとっての意味</h2>
 
     <p>海外ブランドにとって、3.0シフトは課題と構造的優位性の両方をもたらします——適切な基盤を構築したかどうかによって。</p>
 
@@ -348,9 +367,26 @@
 
     <p>構造的優位性は、62%の失敗率が主に中国国内の競合が使用してきた量ベースのアプローチに適用されることです。体系化されたアプローチ——知識グラフ資産の構築、クロスプラットフォームの一貫性の確立、鮮度の維持——で今市場に参入するブランドは、古い戦術が能動的にフィルターされている競争環境で競争しています。AI検索アルゴリズムにおける品質重視へのシフトは、国際ブランドが他の市場で実行することに慣れている、まさにその種の計画的で資産構築型の戦略に有利です。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3.0フィルターを生き残る3ステップ</h3>
+      <ul>
+        <li><strong>取り込みフィルターを通過せよ。</strong> ブランド名、エンティティデータ、プラットフォームプレゼンスを百度百科、公式サイト、第三者PF間で100%一致させる。</li>
+        <li><strong>検証フィルターを通過せよ。</strong> 重要なブランド主張にはすべて、AIが相互参照できる追跡可能なソース——業界レポート、ニュース引用、公式届出——が必要。</li>
+        <li><strong>鮮度フィルターを通過せよ。</strong> 最近の更新タイムスタンプがないコンテンツは減衰として扱われる。コア資産を月次でメンテナンスせよ。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>3.0シフトは、BPPが過去6ヶ月間に構築してきたアプローチを検証します。7月のプラットフォームアップグレードが展開されたとき、すでに百度百科エントリと百家号チャネルを持っていたブランドは、AI可視性を維持または改善しました。依然として量ベースのコンテンツ配信に依存していたブランドは低下を見ました。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📖 百度百科 (エンティティ)</span>
+      <span class="platform-pill wechat">✍️ 百家号 (発信)</span>
+      <span class="platform-pill alipay">🌐 ICPサイト (検証)</span>
+      <span class="platform-pill xiaohongshu">📰 ニュース (相互参照)</span>
+      <span class="platform-pill douyin">🔄 メンテナンス (鮮度)</span>
+    </div>
+
 
     <p>構造的障壁は変わっていません：3.0 GEOが必要とする体系化された資産——検証済み百科、アクティブな百家号、相互参照されたニュースカバレッジ——の構築には中国の事業主体が必要です。ほとんどの海外ブランドはそれを持っていません。</p>
 

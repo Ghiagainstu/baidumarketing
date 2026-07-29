@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>The simultaneous timing was not coordinated, but the message was unified: the era of bulk-content GEO — the approach of writing thousands of similar articles and hoping the AI picks one up — is over. According to IDC, 62% of traditional SEO content now fails to generate any citation in AI-generated answers. The platforms have entered what the industry is calling AI Search 3.0.</p>
 
-    <h2>What Changed in July — The 3.0 Shift</h2>
+    <h2>⚡ What Changed in July — The 3.0 Shift</h2>
 
     <p>The upgrades share three characteristics that define the 3.0 era.</p>
 
@@ -322,7 +337,7 @@
       <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">GEO Trends Reshaping</div></div>
       <div class="stat-card"><div class="stat-number">¥35B</div><div class="stat-label">2026 GEO Market Size</div></div>
     </div>
-<h2>Three Trends Reshaping GEO — From Volume to System</h2>
+<h2>📈 Three Trends Reshaping GEO — From Volume to System</h2>
 
     <p>These technical changes are driving three structural shifts in how GEO is practiced — and how brands need to think about it.</p>
 
@@ -332,15 +347,19 @@
 
     <p><strong>Trend 3: From wild growth to standardization.</strong> The China Advertising Association is developing three GEO industry standards. The GEO service provider evaluation system launched on July 19. Industry norms are being codified — which means that brands operating without systematic GEO are not just under-optimized. They are increasingly non-compliant with emerging standards on content authenticity and source verifiability.</p>
 
-    <h2>Why 62% of Traditional SEO Content Fails</h2>
+    <h2>❌ Why 62% of Traditional SEO Content Fails</h2>
 
     <p>IDC's figure — 62% failure rate of traditional SEO content in AI Q&A scenarios — is the most actionable number in this analysis. It means that the majority of content produced under pre-3.0 assumptions is being silently filtered out of AI answers.</p>
+    <div class="callout callout-insight">
+      <strong>💡 The 3.0 Shift:</strong> The failure rate is not a content quality problem — it is an <strong>identity infrastructure problem</strong>. The AI now filters content at three levels: ingestion (entity consistency), verification (source tracing), and freshness (maintenance). Brands that pass all three are cited. Brands that fail any one are excluded — and 62% of traditional SEO content fails at least one.
+    </div>
+
 
     <p>The failure occurs at three levels. First, at the ingestion level: content that lacks entity consistency across platforms is not indexed as belonging to a recognizable brand. Second, at the verification level: claims that cannot be traced to higher-tier sources in the platform's authority hierarchy are excluded from synthesized answers. Third, at the freshness level: content that has not been maintained is treated as decaying in relevance.</p>
 
     <p>The brands that have invested in these three levels — structured knowledge bases, cross-referenced source networks, and ongoing content maintenance — are seeing their AI citation rates increase while competitors' rates decline. This is not a gradual shift. It is a filtering mechanism that operates on every query.</p>
 
-    <h2>What This Means for Overseas Brands</h2>
+    <h2>🌏 What This Means for Overseas Brands</h2>
 
     <p>For an overseas brand, the 3.0 shift presents both a challenge and a structural advantage — depending on whether you have built the right foundation.</p>
 
@@ -348,9 +367,26 @@
 
     <p>The structural advantage is that the 62% failure rate applies primarily to the volume-based approach that domestic Chinese competitors have been using. Brands that enter the market now with a systematized approach — building the knowledge graph assets, establishing cross-platform consistency, and maintaining freshness — are competing on a playing field where the old tactics are actively being filtered out. The quality-over-quantity shift in AI search algorithms favors precisely the kind of deliberate, asset-building strategy that international brands are accustomed to executing in other markets.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3 Steps to Survive the 3.0 Filter</h3>
+      <ul>
+        <li><strong>Pass the ingestion filter.</strong> Ensure your brand name, entity data, and platform presence are 100% consistent across Baidu Baike, official website, and third-party platforms.</li>
+        <li><strong>Pass the verification filter.</strong> Every key brand claim needs a traceable source — industry report, news citation, or official filing — that the AI can cross-reference.</li>
+        <li><strong>Pass the freshness filter.</strong> Content without a recent update timestamp is treated as decaying. Maintain core assets monthly.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The 3.0 shift validates the approach BPP has built over the past six months. When the July platform upgrades rolled out, the brands that already had Baidu Baike entries and Baijiahao channels maintained or improved their AI visibility. The brands that were still relying on volume-based content distribution saw declines.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📖 Baidu Baike (Entity)</span>
+      <span class="platform-pill wechat">✍️ Baijiahao (Publish)</span>
+      <span class="platform-pill alipay">🌐 ICP Website (Verify)</span>
+      <span class="platform-pill xiaohongshu">📰 News (Cross-Ref)</span>
+      <span class="platform-pill douyin">🔄 Maintain (Freshness)</span>
+    </div>
+
 
     <p>The structural barrier remains the same: building the systematized assets that 3.0 GEO requires — verified Baike, active Baijiahao, cross-referenced news coverage — demands a Chinese business entity. Most overseas brands do not have one.</p>
 
