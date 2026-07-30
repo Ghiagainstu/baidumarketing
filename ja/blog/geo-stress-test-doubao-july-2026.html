@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +322,7 @@
 
     <p>結果は曖昧ではありません。これはGEO業界が生み出した証明に最も近いものです。</p>
 
-    <h2>クラッシュ——7月13日-17日</h2>
+    <h2>📉 クラッシュ——7月13日-17日</h2>
 
     <p>モニタリングデータは同期した崩壊を示しています。7月11日頃から、ブランド言及率がすべてのモニタリングシナリオで低下し始めました。7月12日は短い反発。その後7月13日から17日——連続5日間——教育とメンタルヘルスサービスの2業界にわたるすべてのモニタリングシナリオが同時に谷に落ち込みました。</p>
 
@@ -320,9 +335,13 @@
       <div class="stat-card"><div class="stat-number">388 vs 58</div><div class="stat-label">軟文 vs コンテンツ勝利</div></div>
       <div class="stat-card"><div class="stat-number">98-100%</div><div class="stat-label">資産回復率</div></div>
     </div>
-<h2>回復——誰が戻り、誰が戻らなかったか</h2>
+<h2>♻️ 回復——誰が戻り、誰が戻らなかったか</h2>
 
     <p>7月18日以降、データは分裂しました。</p>
+    <div class="callout callout-insight">
+      <strong>💡 核心的発見:</strong> 388回の軟文引用——回復ゼロ。競合の自社業界ガイドからの58回の引用——全期間安定した可視性。アルゴリズム変更はコンテンツ品質フィルターではなかった。<strong>ソースアイデンティティフィルター</strong>だった。豆包は自媒体プラットフォームを権威あるものとして扱うのをやめ、それらに依存していたすべてのブランドの可視性が失われた。
+    </div>
+
 
     <p>回復したブランド——そしてほとんどの場合、月末までに98-100%に達しクラッシュ前の言及率を上回った——は共通の構造を持っていました。プラットフォームにインデックスされた公式ウェブサイトのコンテンツページを持っていました。業界ポータルにプレゼンスがありました。AIモデルが権威ある参考資料として引用できる「ハウツー」や「選び方ガイド」コンテンツを持っていました。</p>
 
@@ -330,7 +349,7 @@
 
     <p>対照はこれ以上なく明確です。388回の軟文引用——回復ゼロ。競合の業界ガイドコンテンツからの58回の引用——全期間を通じて安定した可視性。アルゴリズム変更はコンテンツ品質フィルターではありませんでした。ソースアイデンティティフィルターでした。AIは自媒体プラットフォームを権威あるものとして扱うのをやめ、それらに依存していたすべてのブランドの可視性が失われました。</p>
 
-    <h2>テストが証明したこと——そして証明しなかったこと</h2>
+    <h2>🔬 テストが証明したこと——そして証明しなかったこと</h2>
 
     <p>データから三つの結論が、GEO業界がこれまでに提供できなかったレベルの確信をもって浮かび上がります。</p>
 
@@ -340,7 +359,7 @@
 
     <p><strong>第三に、モニタリングは最適化と同じくらい重要である。</strong> ブランド戦略とは無関係なデータ中の発見：苦���プラットフォーム——黒猫苦情、12315（政府消費者保護）、企査査（企業登記）——がテスト期間中にAI回答に7回登場し、そのうち6回が実質的に否定的な結論（連続赤字、規制警告）を示しました。ブランド評判の戦場は検索エンジン結果ページからAI回答テキストに移っています。AIがあなたのブランドについて何を言っているかをモニタリングしていなければ、あなたは自社の評判リスクに対して不可視です。</p>
 
-    <h2>海外ブランドにとっての意味</h2>
+    <h2>🌏 海外ブランドにとっての意味</h2>
 
     <p>ストレステストデータは、GEOの有効性に関してこれまで公開された中で最も実用的な情報です。中国のAI検索戦略を評価する海外ブランドにとって、三つの具体的な必須事項に変換されます。</p>
 
@@ -350,9 +369,26 @@
 
     <p><strong>第三に、コンテンツよりも先にインフラが必要である。</strong> ストレステストを生き残ったすべてのブランドは同じ基盤を持っていました：公式デジタルアイデンティティ（百科）、自社発信チャネル（百家号）、相互参照された権威シグナル（Schemaマーク付きウェブサイト、ニュース引用）。その基盤の構築には、ほとんどの海外ブランドが参入時に欠いているもの——中国の事業主体——が必要です。この構造的問題を最初に解決するブランドは、他のすべてを堅固な地盤の上に構築します。それをスキップして発信を始めるブランドは、砂の上に構築します。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 ストレステストがすべての海外ブランドに教えること</h3>
+      <ul>
+        <li><strong>レンタルランドに見えるところを建てるな。</strong> 軟文掲載はPFがソースルールを変えた瞬間に消える。自社コンテンツを所有せよ——公式サイト、百科、百家号。</li>
+        <li><strong>質は量に決定的に勝つ。</strong> 1本のよく構造化された業界ガイド（58引用）が388回の軟文掲載を上回った。計算は決着した。</li>
+        <li><strong>コンテンツより先にインフラを。</strong> 生き残ったすべてのブランドは同じ基盤を持っていた：検証済みデジタルアイデンティティ、自社発信チャネル、相互参照された権威。それを先に構築せよ。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>7月のストレステストは、BPPのアプローチが外部ソースから受けた最も強力な検証です。6ヶ月間、私たちは海外ブランドに同じことを伝えてきました：中国でのAI可視性は、レンタルするコンテンツではなく、所有する資産にかかっていると。ストレステストが今、実証的証拠を提供しました。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📖 自社コンテンツを所有</span>
+      <span class="platform-pill wechat">🛡️ 権威を構築</span>
+      <span class="platform-pill alipay">📊 AI回答を監視</span>
+      <span class="platform-pill xiaohongshu">🏗️ インフラを先行</span>
+      <span class="platform-pill douyin">🔄 鮮度を維持</span>
+    </div>
+
 
     <p>それらの資産を構築する窓は無期限ではありません。豆包は10月15日までにすべてのCレベルユーザー作成智能体データを消去すると発表しました——おそらく次のソースルール調整と重なる日付です。プラットフォームはほとんどの国際マーケティングカレンダーが対応できるよりも速く反復しています。今、所有し、検証され、相互参照されたデジタルアイデンティティを確立するブランドが、次のアルゴリズム変更を生き残る可視性を持つことになります。</p>
 

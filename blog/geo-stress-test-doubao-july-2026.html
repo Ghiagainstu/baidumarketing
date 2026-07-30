@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +322,7 @@
 
     <p>The results are not ambiguous. They are the closest thing to proof that the GEO industry has produced.</p>
 
-    <h2>The Crash — July 13-17</h2>
+    <h2>📉 The Crash — July 13-17</h2>
 
     <p>The monitoring data shows a synchronized collapse. Beginning around July 11, brand mention rates began to decline across all monitored scenarios. July 12 saw a brief rebound. Then July 13 through 17 — five consecutive days — every monitored scenario across two industries (education and mental health services) fell into a simultaneous trough.</p>
 
@@ -320,9 +335,13 @@
       <div class="stat-card"><div class="stat-number">388 vs 58</div><div class="stat-label">Soft-PR vs Content Wins</div></div>
       <div class="stat-card"><div class="stat-number">98-100%</div><div class="stat-label">Asset Recovery Rate</div></div>
     </div>
-<h2>The Recovery — Who Came Back and Who Didn't</h2>
+<h2>♻️ The Recovery — Who Came Back and Who Didn't</h2>
 
     <p>Starting July 18, the data split.</p>
+    <div class="callout callout-insight">
+      <strong>💡 The Key Finding:</strong> 388 soft-article citations — zero recovery. 58 citations from a competitor&#39;s owned industry guide — stable visibility throughout. The algorithm change was not a content quality filter. It was a <strong>source identity filter</strong>. Doubao stopped treating self-media platforms as authoritative, and every brand whose visibility depended on them lost it.
+    </div>
+
 
     <p>The brands that recovered — and in most cases surpassed their pre-crash mention rates, reaching 98-100% by month-end — shared a common structure. They had official website content pages indexed by the platform. They had presence on vertical industry portals. They had "how-to" and "selection guide" content that AI models could cite as authoritative reference material.</p>
 
@@ -330,7 +349,7 @@
 
     <p>The contrast could not be clearer. 388 soft-article citations — zero recovery. 58 citations from a single competitor's industry guide content — stable visibility throughout. The algorithm change was not a content quality filter. It was a source identity filter. The AI stopped treating self-media platforms as authoritative, and every brand whose visibility depended on them lost it.</p>
 
-    <h2>What the Test Proved — and What It Didn't</h2>
+    <h2>🔬 What the Test Proved — and What It Didn't</h2>
 
     <p>Three conclusions emerge from the data with a level of confidence that the GEO industry has never been able to offer before.</p>
 
@@ -340,7 +359,7 @@
 
     <p><strong>Three: the monitoring matters as much as the optimization.</strong> One finding in the data that had nothing to do with brand strategy: complaint platforms — 黑猫投诉 (consumer complaints), 12315 (government consumer protection), 企查查 (business registry) — appeared in AI answers 7 times during the test period, with 6 instances showing substantively negative conclusions (consecutive losses, regulatory warnings). The battlefield for brand reputation has moved from search engine result pages to AI answer text. If you are not monitoring what the AI says about your brand, you are invisible to your own reputation risk.</p>
 
-    <h2>What This Means for Overseas Brands</h2>
+    <h2>🌏 What This Means for Overseas Brands</h2>
 
     <p>The stress-test data is the most actionable intelligence on GEO effectiveness that has ever been publicly available anywhere. For an overseas brand evaluating its China AI search strategy, it translates into three specific imperatives.</p>
 
@@ -350,9 +369,26 @@
 
     <p><strong>Third, you need the infrastructure before you need the content.</strong> Every brand that survived the stress test had the same foundation: official digital identity (Baike), owned publishing channel (Baijiahao), and cross-referenced authority signals (schema-marked website, news citations). Building that foundation requires what most overseas brands lack at entry — a Chinese business entity. The brands that solve this structural problem first will build everything else on solid ground. The brands that skip it and start publishing will build on sand.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 What the Stress Test Teaches Every Overseas Brand</h3>
+      <ul>
+        <li><strong>Don&#39;t build visibility on rented land.</strong> Soft-article placements disappear when platforms change source rules. Own your content — official site, Baike, Baijiahao.</li>
+        <li><strong>Quality beats quantity, decisively.</strong> One well-structured industry guide (58 citations) outperformed 388 soft-article placements. The math is settled.</li>
+        <li><strong>Infrastructure before content.</strong> Every brand that survived had the same foundation: verified digital identity, owned publishing channel, cross-referenced authority. Build that first.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The July stress test is the strongest validation BPP's approach has received from an external source. For six months, we have been telling overseas brands the same thing: your AI visibility in China depends on the assets you own, not the content you rent. The stress test has now provided the empirical proof.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📖 Own Your Content</span>
+      <span class="platform-pill wechat">🛡️ Build Authority</span>
+      <span class="platform-pill alipay">📊 Monitor AI Answers</span>
+      <span class="platform-pill xiaohongshu">🏗️ Infrastructure First</span>
+      <span class="platform-pill douyin">🔄 Maintain Freshness</span>
+    </div>
+
 
     <p>The window for building those assets is not indefinite. Doubao has announced it will clear all C-level user-created intelligent agent data by October 15 — a date that likely coincides with another round of source rule adjustments. The platforms are iterating faster than most international marketing calendars can accommodate. The brands that establish their owned, verified, cross-referenced digital identity now will be the ones whose visibility survives the next algorithm change.</p>
 
