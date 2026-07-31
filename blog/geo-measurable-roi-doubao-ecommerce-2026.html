@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,9 +320,13 @@
 
     <p>On July 15, 2026, that changed. Douyin e-commerce updated its backend rules. A new independent order source tag appeared in merchant dashboards: "豆包" — Doubao, ByteDance's 600-million-user AI platform. AI-recommended purchases now had their own transaction column, alongside Douyin's main shopping feed. GEO had become a measured channel.</p>
 
-    <h2>The Pivot — AI Search as a Transaction Layer</h2>
+    <h2>💵 The Pivot — AI Search as a Transaction Layer</h2>
 
     <p>The Doubao order tag is not a cosmetic update. It means that when a consumer asks Doubao "which running shoes are best for flat feet" and receives an AI-generated recommendation with product links, and clicks through to purchase, that purchase is now attributed specifically to Doubao AI as the originating channel. The brand can see it. The finance team can verify it. The channel has its own line item.</p>
+    <div class="callout callout-insight">
+      <strong>💡 The Infrastructure Shift:</strong> The Doubao order tag is not an algorithmic change. It is a <strong>platform architecture change</strong>. AI search is being reconstructed as a transaction layer inside its parent company&#39;s commerce ecosystem — just as Tongyi Qianwen did with Taobao/Tmall in May, Yuanbao with JD in July, and Wenxin Yiyan (Baidu) is expected to do next. GEO just moved from a brand conversation to a revenue conversation.
+    </div>
+
 
     <p>The numbers from early adopters are consistent with what happens when a new attribution channel opens. One merchant crossed 5,000 monthly Doubao orders. June saw 7x month-over-month growth. These are early-stage figures — the channel has existed for two weeks — but the trajectory matches the adoption curves of Douyin's original shopping feed when it first received independent attribution.</p>
 
@@ -322,7 +341,7 @@
       <div class="stat-card"><div class="stat-number">¥2B+</div><div class="stat-label">2026 GEO Market</div></div>
       <div class="stat-card"><div class="stat-number">4</div><div class="stat-label">Platforms with E-Com Links</div></div>
     </div>
-<h2>Why This Answers GEO's Biggest Question</h2>
+<h2>✅ Why This Answers GEO's Biggest Question</h2>
 
     <p>Before July 15, the conversation about GEO effectiveness was missing its most important variable. A brand could know its AI mention rate. It could track citation volume. It could monitor sentiment. What it could not do — and what every CFO and procurement team wanted it to do — was connect AI visibility to revenue.</p>
 
@@ -330,7 +349,7 @@
 
     <p>The implication for budget allocation is direct. When a channel cannot demonstrate ROI, it competes for experimental budget — the small allocation reserved for things that might work. When a channel can demonstrate ROI, it competes for performance budget — the large allocation tied to measured outcomes. The Doubao order tag moves GEO from the first category to the second.</p>
 
-    <h2>What This Means — Four Immediacies</h2>
+    <h2>⚡ What This Means — Four Immediacies</h2>
 
     <p><strong>First, build your GEO assets before the channel becomes expensive.</strong> The Doubao order attribution channel is two weeks old. The early merchants capturing 5,000+ monthly orders are doing so in an environment where most competitors have not yet built AI-citable content. As more brands establish Doubao AI visibility, the same CPC and CPA inflation dynamics that affect every other performance channel will apply. The window for low-cost entry is open. It will not stay open.</p>
 
@@ -340,9 +359,26 @@
 
     <p><strong>Fourth, Baidu is the gap — and the opportunity.</strong> Wenxin Yiyan currently supports third-party redirects for transactions but has not yet built a native in-dialog purchase experience. For overseas brands that use Baidu as their primary China entry point, this means the same content that drives Baidu AI visibility today will be positioned to capture transaction value when the native purchase layer arrives — and it will. Every major AI platform is converging on this architecture. Baidu's version of the Doubao order tag is not a question of if. It is a question of when.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 GEO&#39;s ROI Era — What to Do Now</h3>
+      <ul>
+        <li><strong>Build AI-citable assets before the channel gets expensive.</strong> The Doubao order channel is 2 weeks old. Early merchants are capturing 5,000+ monthly orders with low competition.</li>
+        <li><strong>Position for the Baidu closing.</strong> Wenxin Yiyan will get a native purchase layer. Content driving Baidu AI visibility today captures transaction value tomorrow.</li>
+        <li><strong>Reframe GEO as performance, not brand.</strong> The meeting about GEO is now a meeting about independently tracked GMV. The decision-makers and budget pools are different.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The Doubao order tag validates, in the most concrete way possible, what BPP has been telling overseas brands throughout 2026: GEO is not a parallel universe to performance marketing. It is becoming performance marketing.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔗 Doubao → Douyin</span>
+      <span class="platform-pill wechat">🔗 Tongyi → Taobao</span>
+      <span class="platform-pill alipay">🔗 Yuanbao → JD</span>
+      <span class="platform-pill xiaohongshu">⏳ Wenxin → Coming</span>
+      <span class="platform-pill douyin">📊 Track Your ROI</span>
+    </div>
+
 
     <p>The structural barrier for overseas brands remains the same: building the assets that drive AI visibility — Baidu Baike, Baijiahao, ICP-filed official website, cross-referenced news coverage — requires the China business entity that most overseas companies lack. But the cost of not having those assets has just been recalculated. When GEO could not show ROI, the cost of delaying was abstract. When GEO can show ROI — as of July 15, with independent order attribution — the cost of delaying is measured in orders per month that your competitors are capturing in a channel you have not yet entered.</p>
 

@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,9 +320,13 @@
 
     <p>2026年7月15日、それが変わりました。抖音ECがバックエンドルールを更新。加盟店ダッシュボードに新しい独立した受注ソースタグが登場しました：「豆包」——ByteDanceの6億ユーザーAIプラットフォーム。AI推奨による購入が、抖音のメインショッピングフィードと並ぶ独自の取引カラムを持つようになりました。GEOが測定可能なチャネルになったのです。</p>
 
-    <h2>転換点——取引レイヤーとしてのAI検索</h2>
+    <h2>💵 転換点——取引レイヤーとしてのAI検索</h2>
 
     <p>豆包の受注タグは表面的なアップデートではありません。消費者が豆包に「扁平足に最適なランニングシューズは？」と質問し、商品リンク付きのAI生成推奨を受け取り、クリックして購入した場合、その購入は豆包AIを発信チャネルとして特定帰属されるようになったことを意味します。ブランドはそれを確認できる。財務チームはそれを検証できる。チャネルは独自の科目を持つ。</p>
+    <div class="callout callout-insight">
+      <strong>💡 インフラの変化:</strong> 豆包の注文タグはアルゴリズム変更ではない。<strong>プラットフォームアーキテクチャの変更</strong>である。AI検索は親会社のコマースエコシステム内の取引レイヤーとして再構築されている——通義千問が5月に淘宝/天猫で、元宝が7月に京東で行ったのと同じように、そして文心一言（百度）が次に行うと予想されるように。GEOはブランド会話から収益会話に移行した。
+    </div>
+
 
     <p>早期導入者の数字は、新しい帰属チャネルが開いたときに起こることと一致しています。ある加盟店は月間5,000件の豆包経由注文を突破。6月は前月比7倍の成長。これらは初期段階の数字です——チャネルは2週間しか存在していない——しかし軌道は、抖音のオリジナルショッピングフィードが初めて独立帰属を受けたときの採用曲線と一致しています。</p>
 
@@ -322,7 +341,7 @@
       <div class="stat-card"><div class="stat-number">20億+</div><div class="stat-label">2026年GEO市場</div></div>
       <div class="stat-card"><div class="stat-number">4</div><div class="stat-label">EC連携PF数</div></div>
     </div>
-<h2>なぜこれがGEO最大の質問に答えるのか</h2>
+<h2>✅ なぜこれがGEO最大の質問に答えるのか</h2>
 
     <p>7月15日以前、GEOの有効性に関する会話には最も重要な変数が欠けていました。ブランドはAI言及率を知ることができた。引用量を追跡できた。感情をモニタリングできた。できなかったこと——そしてすべてのCFOと調達チームがそれを望んでいたこと——は、AI可視性を収益に結びつけることでした。</p>
 
@@ -330,7 +349,7 @@
 
     <p>予算配分への含意は直接的です。チャネルがROIを示せないとき、それは実験予算——うまくいくかもしれないものに割り当てられる小さな枠——を争います。チャネルがROIを示せるとき、それはパフォーマンス予算——測定された成果に結びついた大きな枠——を争います。豆包の受注タグはGEOを前者から後者に移動させます。</p>
 
-    <h2>これが意味すること——四つの即時事項</h2>
+    <h2>⚡ これが意味すること——四つの即時事項</h2>
 
     <p><strong>第一に、チャネルが高くなる前にGEO資産を構築せよ。</strong> 豆包の受注帰属チャネルは2週間の歴史しかない。月間5,000件以上の注文を獲得している初期加盟店は、ほとんどの競合がまだAI引用可能なコンテンツを構築していない環境でそうしています。より多くのブランドが豆包AI可視性を確立するにつれて、他のすべてのパフォーマンスチャネルに影響するのと同じCPC・CPAインフレダイナミクスが適用されます。低コスト参入の窓は開いています。それは開いたままではないでしょう。</p>
 
@@ -340,9 +359,26 @@
 
     <p><strong>第四に、百度がギャップ——そして機会——である。</strong> 文心一言は現在、取引に第三者リダイレクトをサポートしていますが、ネイティブなダイアログ内購入体験はまだ構築していません。百度を主要な中国参入ポイントとして使用する海外ブランドにとって、これは今日百度AI可視性を駆動するのと同じコンテンツが、ネイティブ購入レイヤーが到着したときに取引価値を獲得するポジションにあることを意味します——そしてそれは来ます。すべての主要AIプラットフォームがこのアーキテクチャに収束しています。百度版の豆包受注タグは「来るかどうか」の問題ではありません。「いつ来るか」の問題です。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 GEOのROI時代——今すべきこと</h3>
+      <ul>
+        <li><strong>チャネルが高くなる前にAI引用可能資産を構築せよ。</strong> 豆包注文チ��ネルは2週間の歴史。初期加盟店は低競争で月間5,000件超を獲得中。</li>
+        <li><strong>百度の閉鎖にポジションを取れ。</strong> 文心一言はネイティブ購入レイヤーを獲得する。今日百度AI可視性を駆動するコンテンツが明日の取引価値を獲得する。</li>
+        <li><strong>GEOをブランドではなくパフォーマンスとして再構築せよ。</strong> GEOについての会議は今や独立追跡GMVについての会議だ。意思決定者も予算プールも異なる。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>豆包の受注タグは、BPPが2026年を通じて海外ブランドに伝えてきたことを、最も具体的な形で検証します：GEOはパフォーマンスマーケティングの並行宇宙ではない。それはパフォーマンスマーケティングになりつつある。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔗 豆包 → 抖音</span>
+      <span class="platform-pill wechat">🔗 千問 → 淘宝</span>
+      <span class="platform-pill alipay">🔗 元宝 → 京東</span>
+      <span class="platform-pill xiaohongshu">⏳ 文心 → 近日</span>
+      <span class="platform-pill douyin">📊 ROIを追跡</span>
+    </div>
+
 
     <p>海外ブランドの構造的障壁は変わりません：AI可視性を駆動する資産——百度百科、百家号、ICP届出済み公式サイト、相互参照されたニュースカバレッジ——の構築には、ほとんどの海外企業が欠いている中国事業主体が必要です。しかし、それらの資産を持たないことのコストが再計算されたばかりです。GEOがROIを示せなかったとき、遅延のコストは抽象的でした。GEOがROIを示せるようになったとき——7月15日以降、独立した受注帰属をもって——遅延のコストは、競合があなたがまだ参入していないチャネルで獲得している月間注文件数で測定されます。</p>
 
