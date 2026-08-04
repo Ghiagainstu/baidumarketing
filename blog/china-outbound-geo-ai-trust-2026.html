@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>On the surface, this is a China-outbound story: a media group helping Chinese brands win trust inside ChatGPT, Claude, and Gemini. But read it the other way, and it becomes the clearest explanation yet of why your brand is invisible inside Baidu's AI answers — and why the window to fix it is closing faster than you think.</p>
 
-    <h2>What the Signing Really Signals</h2>
+    <h2>🏛️ What the Signing Really Signals</h2>
 
     <p>Three signals come out of this agreement, and only one of them is about Chinese brands going abroad.</p>
 
@@ -315,7 +330,7 @@
 
     <p><strong>Signal three: the mirror.</strong> Chinese brands are systematically building AI-citable assets in foreign markets right now. When those same brands compete at home, they bring the same playbook to Baidu's ecosystem. Your seat in China's AI answers is being squeezed from both directions — by domestic competitors who already have Baike, Baijiahao, and news citations, and by outbound-savvy brands returning with a proven asset-building methodology.</p>
 
-    <h2>The Mirror Problem</h2>
+    <h2>🪞 The Mirror Problem</h2>
 
     <p>The core finding of the Global Times partnership is worth quoting directly: many Chinese export brands are "top sellers in their Amazon category, with hundreds of thousands of TikTok followers and decent ad metrics — but when foreign consumers ask AI 'which brand in this category is worth buying,' the answer does not contain their name."</p>
 
@@ -327,7 +342,11 @@
 
     <p>The problem is not your product. It is your source infrastructure. The same structural gap that hides Chinese brands inside ChatGPT hides overseas brands inside Wenxin Yiyan.</p>
 
-    <h2>What AI Actually Cites</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> The same structural gap that hides Chinese brands inside ChatGPT hides overseas brands inside Wenxin Yiyan. It is not a product problem — it is a source-infrastructure problem.
+    </div>
+<h2>🔍 What AI Actually Cites</h2>
 
     <p>AI answer engines do not rank brands the way search engines rank pages. The citation logic is built on three things:</p>
 
@@ -352,7 +371,7 @@
 
     <p>The scale of this shift is not speculative. CNNIC data shows China's generative AI user base reached 602 million by December 2025; QuestMobile puts AI-native app users at 446 million by March 2026. When hundreds of millions of Chinese consumers ask AI before they decide, the citation network is where brand preference is actually formed.</p>
 
-    <h2>The Asset Gap, in One Table</h2>
+    <h2>📊 The Asset Gap, in One Table</h2>
 
     <p>The Global Times story is a perfect mirror because the gaps are symmetrical:</p>
 
@@ -377,10 +396,27 @@
     </table>
 
     <p>Both gaps share one trait: neither can be closed by buying ads. Both require <strong>identity anchors</strong> — platforms where a verified entity stands behind brand information — and both require a <strong>local entity</strong> to build them. Chinese brands need an overseas corporate presence to build foreign trust assets; overseas brands need a Chinese business entity to create Baike entries, run a Baijiahao account, and get cited by Chinese media.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔤 Baidu Baike</span>
+      <span class="platform-pill wechat">✍️ Baijiahao</span>
+      <span class="platform-pill alipay">📰 Chinese News</span>
+      <span class="platform-pill xiaohongshu">🌐 ICP-Filed Site</span>
+      <span class="platform-pill douyin">🔗 Cross-Verify</span>
+    </div>
+
 
     <p>That entity requirement is the real barrier, and it is exactly where the game is decided before content strategy even begins.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 The Three-Step Sequence</h3>
+      <ul>
+        <li><strong>Establish identity anchors first</strong> — Baike entry + ICP-filed official presence.</li>
+        <li><strong>Activate Baijiahao and Chinese news channels</strong> — what Baidu's AI reads and cross-verifies.</li>
+        <li><strong>Run paid search in parallel</strong> — capture intent while the citation layer compounds.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>Here is what this signing changes for overseas brands — not in theory, but in timing.</p>
 

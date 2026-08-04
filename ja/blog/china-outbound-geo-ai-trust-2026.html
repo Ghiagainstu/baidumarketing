@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>表面だけ見れば、これは中国ブランドの海外進出の話です。ChatGPT、Claude、Geminiの中で中国ブランドの信頼を勝ち取るための取り組み。しかし、読み方を反転させると、これこそが「なぜあなたのブランドが百度のAI回答の中で見えないのか」を最も明確に説明するニュースになり、その修正の窓が思っているより早く閉じようとしていることを示しています。</p>
 
-    <h2>この提携が本当に意味すること</h2>
+    <h2>🏛️ この提携が本当に意味すること</h2>
 
     <p>この提携からは3つのシグナルが読み取れます。そのうち中国ブランドの海外進出に関係するのは1つだけです。</p>
 
@@ -315,7 +330,7 @@
 
     <p><strong>シグナル3：鏡像。</strong> 中国ブランドは今まさに、海外市場でAIに引用される資産を体系的に構築しています。その同じブランドたちは国内市場でも同じ手法を百度エコシステムに持ち込みます。あなたの中国AI回答における席は、両方向から圧迫されているのです——すでに百科・百家号・ニュース引用を持つ国内競合と、実証済みの資産構築手法を持ち帰る海外展開経験ブランドによって。</p>
 
-    <h2>鏡像問題</h2>
+    <h2>🪞 鏡像問題</h2>
 
     <p>環球時報の提携の核心的な発見は、そのまま引用する価値があります。多くの中国輸出ブランドは「アマゾンのカテゴリーで上位セラー、TikTokフォロワー数十万、広告指標も悪くない。しかし海外の消費者がAIに『このカテゴリーで買う価値のあるブランドは？』と尋ねると、回答にその名前が含まれない」という状況にあります。</p>
 
@@ -327,7 +342,11 @@
 
     <p>問題は製品ではなく、ソース基盤です。中国ブランドをChatGPTの内部で見えなくしている構造的なギャップは、海外ブランドを文心一言の内部でも見えなくしています。</p>
 
-    <h2>AIが実際に引用するもの</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 中国ブランドをChatGPTの中で見えなくしている構造的なギャップは、海外ブランドを文心一言の中でも見えなくしています。製品の問題ではなく、ソース基盤の問題です。
+    </div>
+<h2>🔍 AIが実際に引用するもの</h2>
 
     <p>AI回答エンジンは、検索エンジンがページをランキングするのと同じ方法でブランドを評価しません。引用ロジックは次の3つで構成されています。</p>
 
@@ -352,7 +371,7 @@
 
     <p>この変化の規模は推測ではありません。CNNICのデータによると、中国の生成AIユーザーは2025年12月時点で6億200万人に達しました。QuestMobileはAIネイティブアプリのユーザーを2026年3月時点で4億4,600万人としています。数億人の中国消費者が決定の前にAIに尋ねる時代、ブランド選好が実際に形成されるのは引用ネットワークの中なのです。</p>
 
-    <h2>資産ギャップ——1つの表で見る</h2>
+    <h2>📊 資産ギャップ——1つの表で見る</h2>
 
     <p>環球時報の報道が完璧な鏡であるのは、ギャップが対称的だからです。</p>
 
@@ -377,10 +396,27 @@
     </table>
 
     <p>両者のギャップには共通点が1つあります。どちらも広告を購入するだけでは埋められないということです。どちらも<strong>アイデンティティアンカー</strong>——検証済みのエンティティがブランド情報の背後に立つプラットフォーム——と、それを構築するための<strong>現地エンティティ</strong>が必要です。中国ブランドは海外の信頼資産を築くために海外の法人が必要であり、海外ブランドは百科項目の作成、百家号アカウントの運用、中国メディアでの引用のために中国の事業主体が必要です。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔤 百度百科</span>
+      <span class="platform-pill wechat">✍️ 百家号</span>
+      <span class="platform-pill alipay">📰 中国ニュース</span>
+      <span class="platform-pill xiaohongshu">🌐 ICP届出サイト</span>
+      <span class="platform-pill douyin">🔗 相互検証</span>
+    </div>
+
 
     <p>このエンティティ要件こそが本当の障壁であり、コンテンツ戦略が始まる前に勝負が決まる場所です。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3つのステップ</h3>
+      <ul>
+        <li><strong>まずアイデンティティアンカーを確立</strong> — 百科の項目＋ICP届出済みサイト。</li>
+        <li><strong>百家号と中国ニュースを活性化</strong> — 百度のAIが読み、相互検証するチャネル。</li>
+        <li><strong>並行して検索広告を運用</strong> — 意図を捕捉しつつ引用層を複利で育てる。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>この提携が海外ブランドにとって変えるものは、理論ではなく「タイミング」です。</p>
 

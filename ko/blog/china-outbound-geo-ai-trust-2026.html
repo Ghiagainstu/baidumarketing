@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -305,7 +320,7 @@
 
     <p>표면적으로 보면 이는 중국 브랜드의 해외 진출 이야기입니다. ChatGPT, Claude, Gemini 안에서 중국 브랜드의 신뢰를 확보하는 작업입니다. 그러나 읽는 방향을 반대로 뒤집으면, 이것이야말로 "왜 당신의 브랜드가 바이두의 AI 답변 속에서 보이지 않는가"를 가장 명확하게 설명하는 뉴스가 되며, 그 문제를 고칠 수 있는 창이 생각보다 빠르게 닫히고 있음을 보여줍니다.</p>
 
-    <h2>이 제휴가 실제로 의미하는 것</h2>
+    <h2>🏛️ 이 제휴가 실제로 의미하는 것</h2>
 
     <p>이번 제휴에서 세 가지 신호를 읽을 수 있습니다. 그중 중국 브랜드의 해외 진출과 관련된 것은 단 하나뿐입니다.</p>
 
@@ -315,7 +330,7 @@
 
     <p><strong>신호 3: 거울.</strong> 중국 브랜드들은 지금 바로 이 순간, 해외 시장에서 AI에 인용될 자산을 체계적으로 구축하고 있습니다. 그 동일한 브랜드들은 국내 시장에서도 같은 전략을 바이두 생태계에 들여옵니다. 중국 AI 답변에서 당신의 자리는 양방향으로 압박받고 있습니다 — 이미 바이두백과, 바이자하오, 뉴스 인용을 보유한 국내 경쟁자와, 검증된 자산 구축 방법론을 갖고 돌아오는 해외 진출 경험 브랜드에 의해서요.</p>
 
-    <h2>거울 문제</h2>
+    <h2>🪞 거울 문제</h2>
 
     <p>환구시보 제휴의 핵심 발견은 그대로 인용할 가치가 있습니다. 많은 중국 수출 브랜드는 "아마존 카테고리 상위 판매자, TikTok 팔로워 수십만 명, 광고 지표도 나쁘지 않다. 그러나 해외 소비자가 AI에게 '이 카테고리에서 살 가치가 있는 브랜드는?'이라고 물으면 답변에 그 이름이 포함되지 않는다"는 상황에 처해 있습니다.</p>
 
@@ -327,7 +342,11 @@
 
     <p>문제는 제품이 아니라 소스 인프라입니다. 중국 브랜드를 ChatGPT 안에서 보이지 않게 만드는 구조적 격차는, 해외 브랜드를 원신이언 안에서도 동일하게 보이지 않게 만듭니다.</p>
 
-    <h2>AI가 실제로 인용하는 것</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 중국 브랜드를 ChatGPT 안에서 보이지 않게 만드는 구조적 격차는 해외 브랜드를 원신이언 안에서도 보이지 않게 만듭니다. 제품 문제가 아니라 소스 인프라 문제입니다.
+    </div>
+<h2>🔍 AI가 실제로 인용하는 것</h2>
 
     <p>AI 답변 엔진은 검색 엔진이 페이지를 랭킹하는 방식으로 브랜드를 평가하지 않습니다. 인용 로직은 다음 세 가지로 구성됩니다.</p>
 
@@ -352,7 +371,7 @@
 
     <p>이 변화의 규모는 추측이 아닙니다. CNNIC 데이터에 따르면 중국의 생성형 AI 사용자는 2025년 12월 기준 6억 200만 명에 달했습니다. QuestMobile은 AI 네이티브 앱 사용자를 2026년 3월 기준 4억 4,600만 명으로 집계합니다. 수억 명의 중국 소비자가 결정 전에 AI에게 묻는 시대에, 브랜드 선호가 실제로 형성되는 곳은 인용 네트워크 안입니다.</p>
 
-    <h2>자산 격차 — 하나의 표로 보기</h2>
+    <h2>📊 자산 격차 — 하나의 표로 보기</h2>
 
     <p>환구시보 보도가 완벽한 거울인 이유는 격차가 대칭적이기 때문입니다.</p>
 
@@ -377,10 +396,27 @@
     </table>
 
     <p>두 격차에는 공통점이 하나 있습니다. 어느 쪽도 광고를 구매하는 것만으로는 해결할 수 없다는 것입니다. 둘 다 <strong>아이덴티티 앵커</strong> — 검증된 엔티티가 브랜드 정보 뒤에 서는 플랫폼 — 와 그것을 구축하기 위한 <strong>현지 법인</strong>이 필요합니다. 중국 브랜드는 해외 신뢰 자산을 쌓기 위해 해외 법인이 필요하며, 해외 브랜드는 백과 항목 생성, 바이자하오 계정 운영, 중국 미디어 인용을 위해 중국 사업 주체가 필요합니다.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔤 바이두백과</span>
+      <span class="platform-pill wechat">✍️ 바이자하오</span>
+      <span class="platform-pill alipay">📰 중국 뉴스</span>
+      <span class="platform-pill xiaohongshu">🌐 ICP 신고 사이트</span>
+      <span class="platform-pill douyin">🔗 교차 검증</span>
+    </div>
+
 
     <p>이 법인 요건이야말로 진짜 장벽이며, 콘텐츠 전략이 시작되기 전에 승부가 결정되는 지점입니다.</p>
 
-    <h2>BPP의 관점</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3단계 순서</h3>
+      <ul>
+        <li><strong>먼저 아이덴티티 앵커 확립</strong> — 백과 항목 + ICP 신고 공식 사이트.</li>
+        <li><strong>바이자하오와 중국 뉴스 채널 활성화</strong> — 바이두 AI가 읽고 교차 검증하는 채널.</li>
+        <li><strong>병렬로 검색 광고 운영</strong> — 의도를 포착하면서 인용 레이어를 복리로 성장시킨다.</li>
+      </ul>
+    </div>
+<h2>🏢 BPP의 관점</h2>
 
     <p>이번 제휴가 해외 브랜드에게 바꾸는 것은 이론이 아니라 "타이밍"입니다.</p>
 
