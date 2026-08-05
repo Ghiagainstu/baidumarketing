@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -309,7 +324,7 @@
 
     <p>The answer is counterintuitive: the more chaotic the war becomes, the more value there is in the one entry point that still connects to everything.</p>
 
-    <h2>The Numbers Behind the War</h2>
+    <h2>📊 The Numbers Behind the War</h2>
 
     <p>The scale of this shift is measurable, and the numbers are not speculative:</p>
 
@@ -331,7 +346,7 @@
 
     <p>These numbers describe one fact: the information entry point has moved. It is no longer "search then click." It is "ask then decide." And the brands that appear inside the answer are the ones that get chosen.</p>
 
-    <h2>Six Players, Six Strategies</h2>
+    <h2>⚔️ Six Players, Six Strategies</h2>
 
     <p>China's AI search market is not a monolith. Six contenders with fundamentally different strategies now divide the traffic:</p>
 
@@ -363,7 +378,11 @@
 
     <p>For overseas brands, the immediate implication is that "optimize for Baidu" is no longer the only question. But neither is "optimize for six engines." The real question is which entry point gives you both reach and a business model.</p>
 
-    <h2>The Two-Window Moment</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> "Optimize for six engines" is the wrong question. The right question is which entry point gives you both reach and a business model.
+    </div>
+<h2>🪟 The Two-Window Moment</h2>
 
     <p>Here is the number most overseas brand teams miss: <strong>38.7% penetration means 61.3% of Chinese users still get their information the traditional way.</strong></p>
 
@@ -375,7 +394,11 @@
 
     <p>The window closes when penetration crosses the majority threshold and traditional search volume collapses — which Gartner's 25% decline suggests is underway. Brands that build both lanes now capture the transition; brands that wait for clarity will find the AI lane already locked.</p>
 
-    <h2>Why Baidu Remains the Only Full-Stack Entry</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> The window closes when penetration crosses the majority threshold. Gartner's 25% decline forecast suggests that transition is already underway.
+    </div>
+<h2>🎯 Why Baidu Remains the Only Full-Stack Entry</h2>
 
     <p>Among the six contenders, one structural fact stands out for overseas brands: Baidu is the only player that connects the traditional auction, the AI answer layer, and a complete commercial ecosystem in one place.</p>
 
@@ -393,9 +416,26 @@
 
     <p>This is not a statement that Baidu is the "best" engine. It is a statement about entry points: when you are an overseas brand with limited resources and no Chinese entity, you need one door that leads to both lanes. Baidu is that door.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 The Three-Step Sequence</h3>
+      <ul>
+        <li><strong>Start paid search immediately</strong> — the traditional lane still holds the majority of users.</li>
+        <li><strong>Build AI-citable assets in parallel</strong> — Baike, ICP site, Baijiahao, news sources.</li>
+        <li><strong>Let the two lanes compound</strong> — capture intent today while the citation layer locks the AI default answer for tomorrow.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The practical sequence for an overseas brand entering China right now:</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">💻 Paid Search</span>
+      <span class="platform-pill wechat">🤖 AI Answer</span>
+      <span class="platform-pill alipay">🔤 Baike</span>
+      <span class="platform-pill xiaohongshu">✍️ Baijiahao</span>
+      <span class="platform-pill douyin">📰 News</span>
+    </div>
+
 
     <ol>
 

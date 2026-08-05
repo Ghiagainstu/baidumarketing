@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -309,7 +324,7 @@
 
     <p>その答えは逆説的です。戦争が混乱すればするほど、すべてにつながる唯一のエントリーポイントの価値は高まります。</p>
 
-    <h2>戦争の数字</h2>
+    <h2>📊 戦争の数字</h2>
 
     <p>この変化の規模は測定可能であり、数字は推測ではありません。</p>
 
@@ -331,7 +346,7 @@
 
     <p>これらの数字が示す事実は一つです。情報の入口が移動したということ。「検索してクリック」ではなく、「質問して決定」になったのです。そして回答の中に登場するブランドが選ばれています。</p>
 
-    <h2>6つの競合、6つの戦略</h2>
+    <h2>⚔️ 6つの競合、6つの戦略</h2>
 
     <p>中国のAI検索市場は一枚岩ではありません。根本的に異なる戦略を持つ6つの競合が、いまトラフィックを分け合っています。</p>
 
@@ -363,7 +378,11 @@
 
     <p>海外ブランドにとっての直接の含意は、「百度に最適化する」だけが唯一の問いではなくなったことです。しかし「6つのエンジンすべてに最適化する」でもありません。本当の問いは、リーチとビジネスモデルの両方を与えてくれる入口がどれかということです。</p>
 
-    <h2>二重の窓</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 「6つのエンジンすべてに最適化する」は誤った問いです。正しい問いは、リーチとビジネスモデルの両方を与えてくれる入口はどれかということです。
+    </div>
+<h2>🪟 二重の窓</h2>
 
     <p>海外ブランドチームのほとんどが見落としている数字があります。<strong>38.7%の浸透率は、61.3%の中国ユーザーが今も従来の方法で情報を得ていることを意味します。</strong></p>
 
@@ -375,7 +394,11 @@
 
     <p>窓は、浸透率が過半数の閾値を超え、従来検索の量が崩壊するとき閉じます——Gartnerの25%減少予測は、それが進行中であることを示唆しています。両方のレーンを今構築するブランドが移行期を捉え、明確化を待つブランドは、AIレーンがすでにロックされたことに気づくでしょう。</p>
 
-    <h2>百度が唯一のフルスタック入口である理由</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 窓は浸透率が過半数の閾値を超えるとき閉じます。Gartnerの25%減少予測は、その移行がすでに進行中であることを示しています。
+    </div>
+<h2>🎯 百度が唯一のフルスタック入口である理由</h2>
 
     <p>6つの競合の中で、海外ブランドにとって際立つ構造的事実が一つあります。<strong>百度は、従来のオークション、AI回答レイヤー、完全な商業エコシステムを一つの場所でつなぐ唯一のプレイヤーです。</strong></p>
 
@@ -393,9 +416,26 @@
 
     <p>これは百度が「最良の」エンジンだという主張ではありません。入口についての主張です。限られたリソースと中国法人を持たない海外ブランドには、両方のレーンにつながる一つの扉が必要です。百度がその扉です。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3つのステップ</h3>
+      <ul>
+        <li><strong>すぐに検索広告を開始</strong> — 従来レーンにはまだ大多数のユーザーがいます。</li>
+        <li><strong>並行してAI引用資産を構築</strong> — 百科、ICPサイト、百家号、ニュースソース。</li>
+        <li><strong>2つのレーンを複利で機能させる</strong> — 今日の意図を捉えつつ、引用レイヤーが明日のAIデフォルト回答をロックします。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>今、中国市場に入る海外ブランドの実践的な順序は次の通りです。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">💻 検索広告</span>
+      <span class="platform-pill wechat">🤖 AI回答</span>
+      <span class="platform-pill alipay">🔤 百科</span>
+      <span class="platform-pill xiaohongshu">✍️ 百家号</span>
+      <span class="platform-pill douyin">📰 ニュース</span>
+    </div>
+
 
     <ol>
 
