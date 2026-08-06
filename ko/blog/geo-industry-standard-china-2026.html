@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +322,7 @@
 
     <p>이것은 틈새 규제의 세부사항이 아닙니다. 중국에서 3개월 만에 착지하는 세 번째 GEO 표준이며, 통일된 업계 잣대로 설계된 첫 번째 것입니다. 중국 GEO 예산을 누구에게 맡길지 결정하는 해외 브랜드에게 이것이 의미하는 바를 설명합니다.</p>
 
-    <h2>3개월 만에 3개 표준</h2>
+    <h2>📜 3개월 만에 3개 표준</h2>
 
     <p>중국의 GEO 표준화는 업계 관측자들의 예상보다 훨씬 빠르게 진행되고 있습니다. 세 개의 서로 다른 문서가 잇달아 착지했습니다.</p>
 
@@ -329,7 +344,7 @@
 
     <p>각 표준은 상거래, 기술, 마케팅이라는 서로 다른 각도에서 GEO에 접근합니다. 합쳐서 명확한 신호를 형성합니다. 중국 시장은 GEO를 규제되지 않는 유행으로 방치하지 않기로 결정했다는 것입니다. 벤더가 좋아하든 싫어하든, 표준화되고 측정되고 감사되는 산업이라는 뜻입니다.</p>
 
-    <h2>초안이 실제로 다루는 것</h2>
+    <h2>📋 초안이 실제로 다루는 것</h2>
 
     <p>CAAC 초안은 세 가지 중 가장 실무적으로 관련성이 높으며, 벤더 선정을 위험하게 만드는 불만을 직접 겨냥합니다.</p>
 
@@ -356,7 +371,11 @@
 
     <p>해외 브랜드로서 이 목록을 읽으면 한 가지가 분명해집니다. 그 모든 항목은 현재 중국 밖에서는 검증할 수 없는 것들이라는 것입니다.</p>
 
-    <h2>해외 브랜드에게 중요한 이유</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 초안의 5개 영역 항목 모두는 현재 중국 밖에서는 검증할 수 없는 것들입니다. 바로 그것이 이 표준이 당신에게 중요한 이유입니다.
+    </div>
+<h2>⚠️ 해외 브랜드에게 중요한 이유</h2>
 
     <p>표준 자체만큼 맥락이 중요합니다. 중국 GEO 시장에는 현재 <strong>500곳 이상</strong>의 등록 서비스 사업자가 있지만, 자체 개발 기술과 공인 자격을 모두 갖춘 곳은 <strong>15% 미만</strong>입니다. 나머지는 흔히 리셀러, 템플릿 공방, AI 플랫폼에 블랙햇 SEO 기법을 조용히 적용하는 대행사입니다.</p>
 
@@ -376,7 +395,11 @@
 
     <p>CAAC 표준은 그 모든 것을 해결하지는 않습니다. 그러나 이전에는 없던 것을 줍니다. <strong>공적이고 제3자적인 잣대</strong>입니다. 그 잣대에 대해 어떤 벤더든 점검할 수 있습니다. 표준 제정 참여, 문서화된 진입 기준, 측정 가능한 효과 지표는 벤더의 자기 주장이 아니라 공개적으로 검증 가능한 신호가 됩니다.</p>
 
-    <h2>표준화가 바꾸는 것</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 벤더의 블랙햇 수법이 적발되면 페널티는 벤더가 아니라 당신의 브랜드에 떨어집니다.
+    </div>
+<h2>🔄 표준화가 바꾸는 것</h2>
 
     <p>표준이 시행되면 해외 브랜드에게 세 가지 구체적인 것이 바뀝니다.</p>
 
@@ -388,9 +411,26 @@
 
     <p>이것들은 벤더 선정을 쉽게 만들지는 않지만, 가능하게 만듭니다. 그것이 진짜 변화입니다.</p>
 
-    <h2>BPP의 관점</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3단계 순서</h3>
+      <ul>
+        <li><strong>지금 당장 표준을 벤더 필터로 사용하십시오</strong> — 모든 후보에게 3가지 스크리닝 질문을 합니다.</li>
+        <li><strong>표준은 벤더를 규제하지, 브랜드 자산은 규제하지 않습니다</strong> — 백과·바이자하오·ICP에는 여전히 중국 사업 주체가 필요합니다.</li>
+        <li><strong>의견 수렴을 타이밍 신호로 취급하십시오</strong> — 8월 30일에 마감됩니다.</li>
+      </ul>
+    </div>
+<h2>🏢 BPP의 관점</h2>
 
     <p>해외 브랜드를 위한 실용적인 순서는 다음과 같습니다.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📜 표준 제정 참여</span>
+      <span class="platform-pill wechat">🔍 납품 추적 가능성</span>
+      <span class="platform-pill alipay">📊 효과 측정 방법론</span>
+      <span class="platform-pill xiaohongshu">🛡️ 공인 자격</span>
+      <span class="platform-pill douyin">📝 문서화된 진입 기준</span>
+    </div>
+
 
     <ol>
 

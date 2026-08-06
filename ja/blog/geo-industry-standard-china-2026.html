@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +322,7 @@
 
     <p>これはニッチな規制の細部ではありません。中国で3ヶ月間に着地する3つ目のGEO標準であり、統一された業界の物差しとして設計された最初のものです。中国のGEO予算を誰に託すかを決める海外ブランドにとって、これが意味することを説明します。</p>
 
-    <h2>3ヶ月で3つの標準</h2>
+    <h2>📜 3ヶ月で3つの標準</h2>
 
     <p>中国のGEO標準化は、業界の観測者が予想したよりもはるかに速く進んでいます。3つの異なる文書が矢継ぎ早に着地しました。</p>
 
@@ -329,7 +344,7 @@
 
     <p>各標準は商取引、技術、マーケティングと異なる角度からGEOにアプローチしています。合わせて、明確なシグナルを形成しています。中国市場はGEOを規制されない流行として放置しないと決めたのです。ベンダーが好むと好まざるとにかかわらず、標準化され、測定され、監査される産業なのです。</p>
 
-    <h2>草案が実際にカバーするもの</h2>
+    <h2>📋 草案が実際にカバーするもの</h2>
 
     <p>CAAC草案は3つのうち最も実務的に関連性が高く、ベンダー選定をリスクにする不満を直接ターゲットにしています。</p>
 
@@ -356,7 +371,11 @@
 
     <p>海外ブランドとしてこのリストを読むと、一つ明確になります。そのすべての項目は、現在あなたが中国国外からは検証できないものだということです。</p>
 
-    <h2>海外ブランドにとっての重要性</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 草案の5領域のすべての項目は、現在あなたが中国国外からは検証できないものです。それこそが、この標準があなたにとって重要な理由です。
+    </div>
+<h2>⚠️ 海外ブランドにとっての重要性</h2>
 
     <p>標準そのものと同じくらい文脈が重要です。中国のGEO市場には現在<strong>500社以上</strong>の登録サービス事業者がいますが、自社開発技術と公認資格の両方を持つのは<strong>15%未満</strong>です。残りはしばしばリセラー、テンプレート工房、AIプラットフォームにブラックハットSEO手法を静かに適用する代理店です。</p>
 
@@ -376,7 +395,11 @@
 
     <p>CAAC標準はそのすべてを解決するわけではありません。しかし、これまでなかったものを与えます。<strong>公的で第三者による物差し</strong>です。それに対してあらゆるベンダーをチェックできます。標準策定への参加、文書化された参入基準、測定可能な効果指標は、ベンダーの自己主張ではなく、公に検証可能なシグナルになります。</p>
 
-    <h2>標準化が変えるもの</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> ベンダーのブラックハット手法がフラグされれば、ペナルティはベンダーではなくあなたのブランドに落ちます。
+    </div>
+<h2>🔄 標準化が変えるもの</h2>
 
     <p>標準が施行されると、海外ブランドにとって3つの具体的なことが変わります。</p>
 
@@ -388,9 +411,26 @@
 
     <p>これらはベンダー選定を簡単にするわけではありませんが、可能にします。それが本当の変化です。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3つのステップ</h3>
+      <ul>
+        <li><strong>今すぐ標準をベンダーフィルターとして使う</strong> — すべての候補に3つのスクリーニング質問をします。</li>
+        <li><strong>標準はベンダーを規制するもので、ブランド資産は規制しない</strong> — 百科・百家号・ICPには依然として中国の事業主体が必要です。</li>
+        <li><strong>意見募集をタイミングのシグナルとして扱う</strong> — 8月30日に締め切ります。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>海外ブランドのための実践的な順序は次の通りです。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">📜 標準策定参加</span>
+      <span class="platform-pill wechat">🔍 納品のトレーサビリティ</span>
+      <span class="platform-pill alipay">📊 効果測定の方法論</span>
+      <span class="platform-pill xiaohongshu">🛡️ 公認資格</span>
+      <span class="platform-pill douyin">📝 文書化された参入基準</span>
+    </div>
+
 
     <ol>
 
