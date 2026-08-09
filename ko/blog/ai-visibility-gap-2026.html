@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -309,7 +324,7 @@
 
     <p>이 격차에는 이름이 있습니다. <strong>AI 가시성 격차</strong>입니다. 브랜드는 전통 검색에서 좋은 순위를 차지하지만, 생성형 AI 답변 안에는 거의 존재하지 않습니다. 왜 일어나고, 무엇으로 실제로 고쳐지는지 설명합니다.</p>
 
-    <h2>아무도 계획하지 않은 격차</h2>
+    <h2>👁️ 아무도 계획하지 않은 격차</h2>
 
     <p>전통 검색 엔진과 생성형 AI는 근본적으로 다른 인용 로직을 사용합니다. 검색 엔진은 키워드 매칭과 페이지 랭킹을 합니다. AI 시스템은 질문을 이해하고, 답변을 구성하고, 출처를 인용합니다. "신뢰할 수 있고, 구조화되고, 맥락이 있는 정보 노드"로 AI에게 이해되지 않는 브랜드는 단순히 답변에 나타나지 않습니다.</p>
 
@@ -329,7 +344,7 @@
 
     <p>전통 검색 순위는 더 이상 AI 가시성을 보장하지 않습니다. 둘은 같은 신뢰 모델을 공유하지 않습니다. 바이두 PPC에서 모든 경쟁자를 제치고 지출해도 AI 답변에는 없을 수 있습니다 — 답변 레이어는 경매가 아니라 인용 네트워크에서 끌어오기 때문입니다.</p>
 
-    <h2>브랜드가 보이지 않게 되는 4가지 이유</h2>
+    <h2>🚫 브랜드가 보이지 않게 되는 4가지 이유</h2>
 
     <p>업계 분석은 AI 답변 속에서 브랜드가 사라지는 4가지 구조적 이유를 지적합니다 — 어느 것도 광고비를 늘리면 해결되지 않습니다.</p>
 
@@ -343,7 +358,11 @@
 
     <p>네 가지 모두에 해당한다면, 당신은 57% 안에 있습니다.</p>
 
-    <h2>57%가 해외 브랜드에게 더 중요한 이유</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 4가지 이유 중 어느 것도 광고비를 늘리면 해결되지 않습니다 — AI 답변 레이어는 경매가 아니라 인용 네트워크에서 끌어오기 때문입니다.
+    </div>
+<h2>⚠️ 57%가 해외 브랜드에게 더 중요한 이유</h2>
 
     <p>57%라는 숫자는 국내 광고주에게도 불편합니다. 해외 브랜드에게는 상황이 구조적으로 더 나쁩니다 — 세 가지 추가 레이어가 문제를 복합화합니다.</p>
 
@@ -355,7 +374,11 @@
 
     <p>57%는 모든 사람에게 경종입니다. 해외 브랜드에게는 동시에 경쟁 기회이기도 합니다. 대부분의 광고주가 보이지 않는 동안, 격차를 메운 자만이 카테고리 내 AI 기본 답변을 얻습니다.</p>
 
-    <h2>실제로 고치는 데 필요한 것</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 광고주 57%가 보이지 않는 동안, 정밀 트래픽은 이미 격차를 메운 경쟁자에게 흘러갑니다. 보이는 43%가 AI 기본 답변을 얻습니다.
+    </div>
+<h2>🛠️ 실제로 고치는 데 필요한 것</h2>
 
     <p>해결책은 신비롭지 않지만 체계적입니다. 순서대로 4가지 행동.</p>
 
@@ -380,9 +403,26 @@
 
     <p>벤더 선정 시에는 검증 가능한 4가지 기준을 사용합니다. 검증 가능한 기술 기반, 플랫폼 적응 콘텐츠 역량, 측정 가능한 효과(순위를 약속하는 벤더는 제외 — AI 인용은 보장할 수 없습니다), 명확한 컴플라이언스 기준입니다.</p>
 
-    <h2>BPP의 관점</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3단계 순서</h3>
+      <ul>
+        <li><strong>대다수가 전통 검색에 있는 동안 검색 광고 운영</strong> — 오늘의 의도를 포착합니다.</li>
+        <li><strong>병렬로 AI 인용 자산 스택 구축</strong> — 백과, ICP 사이트, 바이자하오, 중국 뉴스.</li>
+        <li><strong>월간 모니터링 루프를 닫기</strong> — 인용 빈도와 점유율이 효과를 알려줍니다.</li>
+      </ul>
+    </div>
+<h2>🏢 BPP의 관점</h2>
 
     <p>해외 브랜드에게 순서는 명확하지만, 국내 광고주가 직면하지 않는 추가 단계가 하나 있습니다.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔤 바이두백과</span>
+      <span class="platform-pill wechat">✍️ 바이자하오</span>
+      <span class="platform-pill alipay">📰 중국 뉴스</span>
+      <span class="platform-pill xiaohongshu">🌐 ICP 신고 사이트</span>
+      <span class="platform-pill douyin">🔗 교차 검증</span>
+    </div>
+
 
     <ol>
 

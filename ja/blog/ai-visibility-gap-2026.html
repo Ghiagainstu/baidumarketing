@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -309,7 +324,7 @@
 
     <p>このギャップには名前があります。<strong>AI可視性ギャップ</strong>です。ブランドは従来検索では良い順位を取るのに、生成AIの回答の中にはほとんど存在しません。なぜ起こるのか、そして何で実際に直るのかを説明します。</p>
 
-    <h2>誰も計画しなかったギャップ</h2>
+    <h2>👁️ 誰も計画しなかったギャップ</h2>
 
     <p>従来の検索エンジンと生成AIは、根本的に異なる引用ロジックを使います。検索エンジンはキーワードマッチングとページランキングを行います。AIシステムは質問を理解し、回答を組織し、ソースを引用します。「信頼できる、構造化された、文脈のある情報ノード」としてAIに理解されないブランドは、単純に回答の中に現れません。</p>
 
@@ -329,7 +344,7 @@
 
     <p>従来の検索順位は、もはやAI可視性を保証しません。両者は同じ信頼モデルを共有していません。百度PPCで全競合を上回る支出をしても、AI回答には登場しない可能性があります——回答レイヤーはオークションではなく引用ネットワークから引き出されるからです。</p>
 
-    <h2>ブランドが不可視になる4つの理由</h2>
+    <h2>🚫 ブランドが不可視になる4つの理由</h2>
 
     <p>業界分析は、AI回答の中でブランドが消える4つの構造的理由を指摘しています——いずれも広告費を増やせば解決するものではありません。</p>
 
@@ -343,7 +358,11 @@
 
     <p>4つすべてに心当たりがあれば、あなたは57%の中にいます。</p>
 
-    <h2>57%が海外ブランドにとってより重要である理由</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 4つの理由のいずれも、広告費を増やせば解決するものではありません——AI回答レイヤーはオークションではなく引用ネットワークから引き出されるからです。
+    </div>
+<h2>⚠️ 57%が海外ブランドにとってより重要である理由</h2>
 
     <p>57%という数字は国内広告主にも居心地の悪いものです。海外ブランドにとっては、状況は構造的により悪く——3つの追加レイヤーが問題を複合させます。</p>
 
@@ -355,7 +374,11 @@
 
     <p>57%はすべての人への警鐘です。海外ブランドにとっては、同時に競争機会でもあります。ほとんどの広告主が見えないままの間に、ギャップを埋めた者だけがカテゴリー内のAIデフォルト回答を獲得します。</p>
 
-    <h2>実際に直すために必要なこと</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 広告主の57%が見えないままの間、精緻なトラフィックはすでにギャップを埋めた競合に流れます。見えている43%がAIデフォルト回答を勝ち取ります。
+    </div>
+<h2>🛠️ 実際に直すために必要なこと</h2>
 
     <p>修正方法は神秘的ではありませんが、体系的です。順序に沿った4つのアクション。</p>
 
@@ -380,9 +403,26 @@
 
     <p>ベンダー選定時には、検証可能な4つの基準を使います。検証可能な技術基盤、プラットフォーム適応コンテンツ能力、測定可能な効果（順位を約束するベンダーは除外——AI引用は保証できません）、明確なコンプライアンス基準です。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>📋 3つのステップ</h3>
+      <ul>
+        <li><strong>大多数が従来検索にいる間に検索広告を運営</strong> — 今日の意図を捕捉します。</li>
+        <li><strong>並行してAI引用資産スタックを構築</strong> — 百科、ICPサイト、百家号、中国ニュース。</li>
+        <li><strong>月次モニタリングループを閉じる</strong> — 引用頻度とシェア・オブ・ボイスが効果を教えます。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>海外ブランドにとって、順序は明確ですが、国内広告主が直面しない追加ステップが一つあります。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔤 百度百科</span>
+      <span class="platform-pill wechat">✍️ 百家号</span>
+      <span class="platform-pill alipay">📰 中国ニュース</span>
+      <span class="platform-pill xiaohongshu">🌐 ICP届出サイト</span>
+      <span class="platform-pill douyin">🔗 相互検証</span>
+    </div>
+
 
     <ol>
 
