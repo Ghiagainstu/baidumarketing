@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +322,7 @@
 
     <p>Here is why this matters to your brand, even if you have never touched the DeepSeek API: <strong>Baidu's Wenxin assistant already runs DeepSeek's V4 family.</strong> On August 7, Baidu connected Wenxin assistant to DeepSeek-V4, merging the model's reasoning with Baidu's own search and knowledge systems. When V4-Pro officially lands inside that engine, the AI answers Chinese consumers receive about your category just got harder to earn — and harder to fake.</p>
 
-    <h2>The Engine That Just Became Default</h2>
+    <h2>🧠 The Engine That Just Became Default</h2>
 
     <p>The connection between DeepSeek and Baidu is not speculative. On August 7, Chinese state media reported that Baidu's Wenxin assistant had completed deployment of DeepSeek-V4, free for all users — a "check the box to experience" integration that fuses DeepSeek's model capability with Baidu's proprietary search and knowledge graph.</p>
 
@@ -315,7 +330,7 @@
 
     <p>This is the second model-layer upgrade to touch Baidu's ecosystem in a week. The pattern is now clear: Baidu's AI answers run on increasingly capable engines, and every upgrade makes the citation layer stricter.</p>
 
-    <h2>What V4-Pro Actually Delivers</h2>
+    <h2>📊 What V4-Pro Actually Delivers</h2>
 
     <p>The official release brings measurable changes:</p>
 
@@ -345,7 +360,11 @@
 
     <p>The price structure is where the disruption is most visible. Output runs at RMB 6 per million tokens; with peak/off-peak pricing effective August 17 (off-peak = half of peak), the economics favor large-scale deployment. The founder of a major Chinese VC firm put it bluntly: performance close to the frontier, at roughly <strong>1/57th of the price</strong>. When a model this capable is this cheap, it becomes infrastructure — and infrastructure gets embedded everywhere.</p>
 
-    <h2>The Agent Layer Changes Everything</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> At 1/57th the price of a comparable frontier model, V4-Pro stops being a product and becomes infrastructure — and infrastructure gets embedded everywhere.
+    </div>
+<h2>🤖 The Agent Layer Changes Everything</h2>
 
     <p>The official release's most consequential feature is not the benchmarks — it is the tool layer. V4-Pro natively supports the OpenAI Responses API and has dedicated Codex adaptation. In practice, that means it speaks both the OpenAI and Anthropic API dialects, so agent tooling built for either ecosystem can connect directly.</p>
 
@@ -353,7 +372,7 @@
 
     <p>For brand visibility, the implication is direct: the standard is moving from "be citable" to "be callable." Structured, machine-readable brand information — clear entity definitions, consistent product data, standard schemas — becomes the new currency. Loose marketing prose loses value; structured, verifiable data gains it.</p>
 
-    <h2>What This Means for Overseas Brands</h2>
+    <h2>🌏 What This Means for Overseas Brands</h2>
 
     <p>Put the three changes together and the picture for overseas brands is specific:</p>
 
@@ -365,9 +384,30 @@
 
     <p>None of this is abstract. It is what a frontier-class, near-free engine, embedded in the search system where Chinese consumers make decisions, does to the competitive field.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> The citation bar has already risen. Baidu's AI answers now run on a frontier-class engine — verify your Chinese sources before the new standard is fully enforced.
+    </div>
+
+    <div class="takeaway-box">
+      <h3>📋 The Three-Step Sequence</h3>
+      <ul>
+        <li><strong>Verify your existing Chinese sources now</strong> — survive frontier-class cross-verification before it is fully enforced.</li>
+        <li><strong>Start structuring your data</strong> — schema-aligned product pages and brand info are what the agent layer will call.</li>
+        <li><strong>Lock the category position early</strong> — a cheaper, more capable engine means more competitors will optimize.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>For an overseas brand, the sequence is the same as it was before — only the urgency has changed:</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔤 Baidu Baike</span>
+      <span class="platform-pill wechat">✍️ Baijiahao</span>
+      <span class="platform-pill alipay">📰 Chinese News</span>
+      <span class="platform-pill xiaohongshu">🌐 ICP-Filed Site</span>
+      <span class="platform-pill douyin">🔗 Cross-Verify</span>
+    </div>
+
 
     <ol>
 

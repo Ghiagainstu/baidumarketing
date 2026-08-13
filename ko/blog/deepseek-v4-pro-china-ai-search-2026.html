@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +322,7 @@
 
     <p>당신이 DeepSeek API를 만져본 적이 없어도, 이것이 브랜드와 관련되는 이유는 분명합니다. <strong>바이두의 원신이언 어시스턴트는 이미 DeepSeek V4 제품군을 탑재하고 있습니다.</strong> 8월 7일, 바이두는 원신이언 어시스턴트를 DeepSeek-V4에 연결해 모델의 추론 능력을 바이두 자체 검색·지식 체계와 융합했습니다. V4-Pro가 그 엔진 내부에 정식으로 탑재되면, 중국 소비자가 당신의 카테고리에 대해 받는 AI 답변은 얻기가 더 어려워지고 위조도 더 어려워집니다.</p>
 
-    <h2>기본이 된 엔진</h2>
+    <h2>🧠 기본이 된 엔진</h2>
 
     <p>DeepSeek와 바이두의 연결은 추측이 아닙니다. 8월 7일, 중국 국영 언론이 바이두의 원신이언 어시스턴트가 DeepSeek-V4 도입을 완료하고 전 사용자에게 무료로 공개했다고 보도했습니다. 체크박스로 체험할 수 있는 통합이며, DeepSeek의 모델 능력과 바이두 독자적 검색·지식 그래프를 융합합니다.</p>
 
@@ -315,7 +330,7 @@
 
     <p>이것은 일주일 만에 바이두 생태계에 영향을 준 두 번째 모델 레이어 업그레이드입니다. 패턴은 분명합니다. 바이두의 AI 답변은 점점 더 고성능 엔진 위에서 작동하고, 업그레이드 때마다 인용 레이어는 더 엄격해집니다.</p>
 
-    <h2>V4-Pro가 실제로 제공하는 것</h2>
+    <h2>📊 V4-Pro가 실제로 제공하는 것</h2>
 
     <p>정식 버전은 측정 가능한 변화를 가져옵니다.</p>
 
@@ -345,7 +360,11 @@
 
     <p>가격 구조야말로 파괴가 가장 가시화되는 부분입니다. 출력은 100만 토큰당 6위안. 8월 17일부터 적용되는 피크/오프피크 가격(오프피크는 피크의 절반)으로 대규모 도입에 유리한 경제성이 생깁니다. 중국의 한 대형 VC 펀드 창업자는 솔직하게 말했습니다. 최첨단에 가까운 성능으로, 가격은 약 <strong>57분의 1</strong>이라고. 이토록 성능이 높고 저렴한 모델은 인프라가 되고, 인프라는 모든 곳에 내장됩니다.</p>
 
-    <h2>에이전트 레이어가 모든 것을 바꾼다</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 비슷한 최첨단 모델의 57분의 1 가격으로 V4-Pro는 제품이 아니라 인프라가 됩니다 — 그리고 인프라는 모든 곳에 내장됩니다.
+    </div>
+<h2>🤖 에이전트 레이어가 모든 것을 바꾼다</h2>
 
     <p>정식 버전의 가장 중요한 기능은 벤치마크가 아니라 도구 레이어입니다. V4-Pro는 OpenAI의 Responses API를 네이티브 지원하고 Codex 전용 적응을 갖췄습니다. 실제로는 OpenAI와 Anthropic 양쪽의 API 방식을 모두 구사하므로, 어느 생태계용으로 만들어진 에이전트 도구도 직접 연결할 수 있습니다.</p>
 
@@ -353,7 +372,7 @@
 
     <p>브랜드 가시성에 대한 함의는 직접적입니다. 기준은 "인용 가능"에서 "호출 가능"으로 이동하고 있습니다. 구조화되고 기계가 읽을 수 있는 브랜드 정보 — 명확한 엔티티 정의, 일관된 제품 데이터, 표준 스키마 — 가 새로운 통화가 됩니다. 느슨한 마케팅 문구는 가치를 잃고, 구조화·검증 가능한 데이터가 가치를 얻습니다.</p>
 
-    <h2>해외 브랜드에게 의미하는 것</h2>
+    <h2>🌏 해외 브랜드에게 의미하는 것</h2>
 
     <p>세 가지 변화를 합치면 해외 브랜드에 대한 그림은 구체적입니다.</p>
 
@@ -365,9 +384,30 @@
 
     <p>이 중 어느 것도 추상적이지 않습니다. 최첨단급이면서 거의 무료인 엔진이, 중국 소비자가 의사결정하는 검색 시스템에 내장되는 것이 경쟁 구도에 무엇을 하는지의 이야기입니다.</p>
 
-    <h2>BPP의 관점</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 인용 기준은 이미 올라갔습니다. 바이두의 AI 답변은 최첨단급 엔진에서 작동합니다 — 새 기준이 완전히 적용되기 전에 중국어 소스를 검증하십시오.
+    </div>
+
+    <div class="takeaway-box">
+      <h3>📋 3단계 순서</h3>
+      <ul>
+        <li><strong>지금 당장 기존 중국어 소스 검증</strong> — 최첨단급 교차 검증이 완전히 적용되기 전에 견딜 수 있게 합니다.</li>
+        <li><strong>데이터 구조화 시작</strong> — 스키마 정합 제품 페이지와 브랜드 정보는 에이전트 레이어가 호출할 자산입니다.</li>
+        <li><strong>카테고리 포지션 조기 락</strong> — 더 저렴하고 고성능인 엔진은 더 많은 경쟁자가 최적화함을 의미합니다.</li>
+      </ul>
+    </div>
+<h2>🏢 BPP의 관점</h2>
 
     <p>해외 브랜드에게 순서는 이전과 같지만, 긴급함만 바뀌었습니다.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔤 바이두백과</span>
+      <span class="platform-pill wechat">✍️ 바이자하오</span>
+      <span class="platform-pill alipay">📰 중국 뉴스</span>
+      <span class="platform-pill xiaohongshu">🌐 ICP 신고 사이트</span>
+      <span class="platform-pill douyin">🔗 교차 검증</span>
+    </div>
+
 
     <ol>
 

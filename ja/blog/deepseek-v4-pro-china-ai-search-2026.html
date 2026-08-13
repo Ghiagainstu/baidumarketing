@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -307,7 +322,7 @@
 
     <p>あなたがDeepSeek APIに触れたことがなくても、これがブランドに関係する理由は明確です。<strong>百度の文心助手はすでにDeepSeekのV4ファミリーを搭載しています。</strong> 8月7日、百度は文心助手をDeepSeek-V4に接続し、モデルの推論能力を百度独自の検索・知識体系と融合させました。V4-Proがそのエンジン内部に正式に搭載されれば、中国の消費者があなたのカテゴリーについて受け取るAI回答は、獲得がより難しく、偽造もより難しくなります。</p>
 
-    <h2>デフォルトになったエンジン</h2>
+    <h2>🧠 デフォルトになったエンジン</h2>
 
     <p>DeepSeekと百度のつながりは推測ではありません。8月7日、中国の国営メディアが、百度の文心助手がDeepSeek-V4の導入を完了し、全ユーザーに無料開放されたと報じました。チェックボックスで体験できる統合であり、DeepSeekのモデル能力と百度独自の検索・知識グラフを融合させます。</p>
 
@@ -315,7 +330,7 @@
 
     <p>これは1週間のうちに百度エコシステムに影響を与えた2つ目のモデルレイヤーアップグレードです。パターンは明確です。百度のAI回答はますます高性能なエンジン上で動作し、アップグレードのたびに引用レイヤーはより厳格になります。</p>
 
-    <h2>V4-Proが実際にもたらすもの</h2>
+    <h2>📊 V4-Proが実際にもたらすもの</h2>
 
     <p>正式版は測定可能な変化をもたらします。</p>
 
@@ -345,7 +360,11 @@
 
     <p>価格構造こそ、破壊が最も可視化される部分です。出力は100万トークンあたり6元。8月17日から適用されるピーク/オフピーク価格（オフピークはピークの半分）により、大規模導入に有利な経済性が生まれます。中国の大手VCファンド創業者は率直に言いました。最先端に近い性能で、価格はおよそ<strong>57分の1</strong>だと。これほど能力が高く安価なモデルはインフラになり、インフラはあらゆる場所に埋め込まれます。</p>
 
-    <h2>エージェントレイヤーがすべてを変える</h2>
+    
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 同等の最先端モデルの57分の1の価格で、V4-Proは製品ではなくインフラになります——そしてインフラはあらゆる場所に埋め込まれます。
+    </div>
+<h2>🤖 エージェントレイヤーがすべてを変える</h2>
 
     <p>正式版の最も重要な機能はベンチマークではなく、ツールレイヤーです。V4-ProはOpenAIのResponses APIをネイティブサポートし、Codexへの専用適応を備えます。実際には、OpenAIとAnthropicの両方のAPI方言を話すため、どちらのエコシステム向けに作られたエージェントツールも直接接続できます。</p>
 
@@ -353,7 +372,7 @@
 
     <p>ブランド可視性への含意は直接的です。基準は「引用可能」から「呼び出し可能」へ移行しています。構造化され、機械可読なブランド情報——明確なエンティティ定義、一貫した製品データ、標準スキーマ——が新たな通貨になります。緩いマーケティング文面は価値を失い、構造化・検証可能なデータが価値を獲得します。</p>
 
-    <h2>海外ブランドにとっての意味</h2>
+    <h2>🌏 海外ブランドにとっての意味</h2>
 
     <p>3つの変化を合わせると、海外ブランドへの像は具体的になります。</p>
 
@@ -365,9 +384,30 @@
 
     <p>これらのどれも抽象論ではありません。最先端クラスでほぼ無料のエンジンが、中国の消費者が意思決定する検索システムに埋め込まれることが、競争の場に何をするかの話です。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 引用基準はすでに上がっています。百度のAI回答は最先端クラスのエンジンで動作しています——新基準が完全に適用される前に、中国語ソースを検証してください。
+    </div>
+
+    <div class="takeaway-box">
+      <h3>📋 3つのステップ</h3>
+      <ul>
+        <li><strong>今すぐ既存の中国語ソースを検証</strong> — 最先端クラスのクロス検証が完全に適用される前に耐えられるようにします。</li>
+        <li><strong>データの構造化を始める</strong> — スキーマ整合の製品ページとブランド情報は、エージェントレイヤーが呼び出す資産です。</li>
+        <li><strong>カテゴリーのポジションを早期にロック</strong> — より安価で高性能なエンジンは、より多くの競合が最適化することを意味します。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>海外ブランドにとって、順序は以前と同じですが、緊急性だけが変わりました。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baidu">🔤 百度百科</span>
+      <span class="platform-pill wechat">✍️ 百家号</span>
+      <span class="platform-pill alipay">📰 中国ニュース</span>
+      <span class="platform-pill xiaohongshu">🌐 ICP届出サイト</span>
+      <span class="platform-pill douyin">🔗 相互検証</span>
+    </div>
+
 
     <ol>
 
