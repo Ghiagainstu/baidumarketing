@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.icp { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>해외 브랜드에게 이것은 중국 AI 기업 한 곳의 공급 측 이야기가 아닙니다. <strong>중국의 AI 인용 레이어가 실제로 수익화된 시장이 되고 있다</strong>는 가장 명확한 증거이며, 누가 인용되고 왜 인용되는지의 경제학을 바꾸는 사건입니다.</p>
 
-    <h2>가격 스토리 — 8월 17일에 무엇이 바뀌는가</h2>
+    <h2>💸 가격 스토리 — 8월 17일에 무엇이 바뀌는가</h2>
 
     <p>새 요금제는 8월 17일 0시부터 적용되는 3단계 구조입니다.</p>
 
@@ -327,7 +341,11 @@
 
     <p>이것은 작은 조정이 아닙니다. 플래그십 모델의 출력 가격을 350% 올리고 캐시 히트를 12배로 올린 것은 명확한 전략 전환을 뜻합니다 — <strong>규모에 대한 보조금을 멈추고 가치의 수익화로 방향을 돌린 것.</strong> 글로벌 경쟁사를 57분의 1 가격으로 무너뜨린 '가격 도살자'는 적어도 중국 AI 검색의 최전선을 담당하는 모델에서는 칼을 내려놓았습니다.</p>
 
-    <h2>가격 도살자가 왜 돌아섰나</h2>
+    <h2>🔪 가격 도살자가 왜 돌아섰나</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 350% 인상은 비용 문제가 아니라 성숙 신호입니다. 실제로 돈을 받는 인용 레이어는 인프라처럼 행동합니다 — 신뢰할 수 있고 문서화되며 검증 비용이 낮은 소스를 선호합니다.
+    </div>
+
 
     <p>이 전환에는 세 가지 힘이 작용했으며, 어느 것도 우연이 아닙니다.</p>
 
@@ -348,7 +366,7 @@
     </div>
 
 
-    <h2>수익화가 AI 레이어에 의미하는 것</h2>
+    <h2>🏗️ 수익화가 AI 레이어에 의미하는 것</h2>
 
     <p>"중국 AI 검색이 비싸졌으니 기회가 줄었다"고 읽는 해외 마케터도 있을 것입니다. 그러나 진실은 오히려 반대에 가깝습니다.</p>
 
@@ -362,7 +380,11 @@
 
 </ul>
 
-    <h2>해외 브랜드에게 의미하는 것</h2>
+    <h2>🌏 해외 브랜드에게 의미하는 것</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 유료화된 AI 레이어는 검증 비용을 최적화합니다. 백과 엔트리, 검증된 뉴스, ICP 등록 사이트가 없는 브랜드는 '비싼 선택지'가 되며, 답변 엔진은 조용히 비용이 낮은 경쟁자를 선택합니다.
+    </div>
+
 
     <p>중국 시장에 진입하는 해외 브랜드에게 가격 전환은 세 가지 계산을 바꿉니다.</p>
 
@@ -376,9 +398,26 @@
 
 </ol>
 
-    <h2>BPP의 관점</h2>
+    <div class="takeaway-box">
+      <h3>📌 수익화 시장이 성숙하기 전의 3단계</h3>
+      <ul>
+        <li>검증 가능한 중국어 자산 스택 구축 — 백과, ICP 사이트, 뉴스 인용, 운영 중인 바이자하오.</li>
+        <li>에이전트 레이어를 위한 데이터 구조화 — 수익화된 모델은 기계가 읽을 수 있고 검증된 소스를 '호출'합니다.</li>
+        <li>창이 닫히기 전에 행동 — 카테고리 기본 답변을 선점한 자가 그것을 유지합니다.</li>
+      </ul>
+    </div>
+
+<h2>🏢 BPP의 관점</h2>
 
     <p>지난 이틀의 서사가 완성됩니다 — 어제는 엔진이 강해졌고(1M 컨텍스트, 프런티어급 에이전트 성능), 오늘은 엔진이 실제 돈을 받기 시작했습니다. <strong>해외 브랜드에게 전하는 메시지는 분명합니다. 중국의 AI 인용 레이어는 이제 실제 경제를 가진 진짜 시장이 되었으며 — 진짜 시장은 지름길이 아니라 자산에 보상합니다.</strong></p>
+<div class="platform-pills">
+      <span class="platform-pill baike">📖 백과 엔트리</span>
+      <span class="platform-pill icp">🏛️ ICP 등록 사이트</span>
+      <span class="platform-pill baijiahao">✍️ 운영 중인 바이자하오</span>
+      <span class="platform-pill news">📰 뉴스 인용</span>
+      <span class="platform-pill verify">🔁 교차 검증</span>
+    </div>
+
 
     <p>해외 브랜드의 행동 순서는 변하지 않지만, 새로운 근거가 추가되었습니다.</p>
 

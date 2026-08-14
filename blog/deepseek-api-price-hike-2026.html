@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.icp { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>For overseas brands, this is not a supply-side story about one Chinese AI company. It is the clearest evidence yet that <strong>China's AI reference layer is becoming a real, monetized market</strong> — which changes the economics of who gets cited, and why.</p>
 
-    <h2>The Price Story — What Changes on August 17</h2>
+    <h2>💸 The Price Story — What Changes on August 17</h2>
 
     <p>The new pricing, effective 00:00 August 17, is a three-tier structure:</p>
 
@@ -327,7 +341,11 @@
 
     <p>This is not a small adjustment. A 350% jump on the flagship model's output price, paired with a 12x cache-hit increase, signals a deliberate strategy shift: <strong>stop subsidizing scale, start monetizing value.</strong> The "price butcher" that undercut every global competitor by 57x is putting the knife down — at least for the model that now powers the frontier tier of Chinese AI search.</p>
 
-    <h2>Why the Price Butcher Turned</h2>
+    <h2>🔪 Why the Price Butcher Turned</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> The 350% hike is not a cost problem — it is a maturity signal. A citation layer that charges real money behaves like infrastructure: reliable, documented, and biased toward sources that are cheap to verify.
+    </div>
+
 
     <p>Three forces explain the reversal, and none of them are random:</p>
 
@@ -348,7 +366,7 @@
     </div>
 
 
-    <h2>What Commercialization Means for the AI Layer</h2>
+    <h2>🏗️ What Commercialization Means for the AI Layer</h2>
 
     <p>Some overseas marketers might read this as "AI search in China is getting more expensive, so the opportunity is shrinking." The opposite is closer to the truth:</p>
 
@@ -362,7 +380,11 @@
 
 </ul>
 
-    <h2>What This Means for Overseas Brands</h2>
+    <h2>🌏 What This Means for Overseas Brands</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> A paid AI layer optimizes for verification cost. Brands without Baike entries, verified news, and ICP-registered sites become the expensive option — and the answer engine will quietly choose competitors who are not.
+    </div>
+
 
     <p>For an overseas brand entering China, the pricing shift changes three calculations:</p>
 
@@ -376,9 +398,26 @@
 
 </ol>
 
-    <h2>The BPP Perspective</h2>
+    <div class="takeaway-box">
+      <h3>📌 Three Steps Before the Monetized Market Matures</h3>
+      <ul>
+        <li>Build the verifiable Chinese-language asset stack — Baike, ICP site, news citations, active Baijiahao.</li>
+        <li>Structure data for the agent layer — monetized models will "call" machine-readable, verified sources.</li>
+        <li>Act before the window closes — first movers on a category's default answer keep it.</li>
+      </ul>
+    </div>
+
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The narrative arc of the last two days completes itself: yesterday, the engine got stronger (1M context, agent scores at frontier level). Today, the engine started charging real money. <strong>The message for overseas brands is that China's AI reference layer is now a real market with real economics</strong> — and real markets reward assets, not shortcuts.</p>
+<div class="platform-pills">
+      <span class="platform-pill baike">📖 Baike Entry</span>
+      <span class="platform-pill icp">🏛️ ICP-Registered Site</span>
+      <span class="platform-pill baijiahao">✍️ Active Baijiahao</span>
+      <span class="platform-pill news">📰 News Citations</span>
+      <span class="platform-pill verify">🔁 Cross-Verification</span>
+    </div>
+
 
     <p>For overseas brands, the sequence remains the same, with one new justification:</p>
 
