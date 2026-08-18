@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.own { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.cite { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.risk { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.audit { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.standard { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.own { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.cite { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.risk { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.audit { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.standard { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>이 숫자가 해외 브랜드에게 중요한 이유는 중국 언론 보도에서 거의 다뤄지지 않습니다. 같은 정리 과정에서 드러난 것이 <strong>'마트료시카형' 리셀러 모델</strong> — 라이선스 비용이 약 1,000위안인 소프트웨어가 3~4개 층의 리셀을 거쳐 최종 고객에게 10,000~20,000위안에 팔리는 — 구조입니다. 납품 기준도, 효과 보장도, 사후 서비스도 없으며, 리셀러는 대금을 받고 사라지고 고객이 손실을 떠안습니다. 이 구조가 특히 해외 브랜드를 노리는 이유는, 계약서를 읽을 수 없고 사무실을 방문할 수 없으며 주장을 검증할 수 없기 때문입니다.</p>
 
-    <h2>정리 조치의 숫자</h2>
+    <h2>🚫 정리 조치의 숫자</h2>
 
     <p>이번 정리는 GEO의 짧은 역사에서 가장 큰 집행 사건입니다. 규모는 다음과 같습니다.</p>
 
@@ -348,7 +362,11 @@
     </div>
 
 
-    <h2>'마트료시카형' 비즈니스 모델</h2>
+    <h2>🪆 '마트료시카형' 비즈니스 모델</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 4가지 처분 범주는 해외 브랜드가 중국 벤더에게서 듣는 영업 멘트에 그대로 대응됩니다. '1,000개 기사'(AI 콘텐츠 더미), '검증된 프로필'(허위 등록), '참여도 확대'(조작), '준비된 계정'(암시장 거래). 영업 멘트가 처분 범주와 일치한다면 그것은 서비스가 아니라 부채입니다.
+    </div>
+
 
     <p>해외 브랜드에게 가장 중요해야 할 폭로는 GEO 서비스 시장의 큰 비중을 차지하는 리셀러 구조입니다. 마트료시카 인형처럼 층으로 작동합니다.</p>
 
@@ -364,7 +382,7 @@
 
     <p>리셀러 간 가격 경쟁이 상황을 악화시킵니다. 같은 지역의 대리점들이 서로 값을 깎아 이윤이 사라지고 서비스 품질이 무너지며, 고객은 지불한 금액보다 더 나쁜 것을 받습니다. 소프트웨어 제작사를 제외한 모든 사람이 손해를 봅니다.</p>
 
-    <h2>이번 정리가 중요한 이유</h2>
+    <h2>⚖️ 이번 정리가 중요한 이유</h2>
 
     <p>이번 정리는 무작위 집행이 아닙니다. 5개월 흐름의 최종 단계입니다.</p>
 
@@ -384,7 +402,11 @@
 
     <p>이 흐름을 한 문장으로 읽으면 — <strong>GEO는 5개월도 안 돼서 진입 장벽이 낮은 그레이 마켓에서 규제된 전문 산업으로 바뀌었습니다.</strong> 표준 초안 이후에도 남아 있던 블랙햇 공간은 집행에 의해 닫히고 있습니다. 싼 소프트웨어를 사서 10배에 리셀하는 비즈니스 모델은 설 자리가 없습니다.</p>
 
-    <h2>해외 브랜드의 함정</h2>
+    <h2>⚠️ 해외 브랜드의 함정</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 블랙햇 콘텐츠가 감지되면 처벌은 *브랜드 엔터티* — 당신의 백과 엔트리, 인용 자격 — 에 내려집니다. 벤더가 아니라. 리셀러는 이미 대금을 받고 떠났습니다. 컴플라이언스 리스크는 구매자의 리스크입니다.
+    </div>
+
 
     <p>해외 브랜드는 구조적으로 이 시장에서 가장 노출이 큰 구매자입니다. 세 가지 이유 때문입니다.</p>
 
@@ -400,9 +422,26 @@
 
     <p>정리가 확인해 준 불편한 진실: 해외 브랜드는 검증 불가능한 주장, 불투명한 납품물, 언어 장벽이라는 세 가지 조건이 모두 갖춰지기 때문에 마트료시카 모델에게 이상적인 고객입니다.</p>
 
-    <h2>BPP의 관점</h2>
+    <div class="takeaway-box">
+      <h3>📌 정리가 확인한 세 가지</h3>
+      <ul>
+        <li>마트료시카형 리셀러 모델은 해외 브랜드를 노리는 최상위 사기입니다 — 검증 불가능한 주장, 불투명한 납품물, 언어 장벽.</li>
+        <li>컴플라이언스는 나쁜 벤더로부터 보호하지만 자산을 구축하지는 않습니다 — 백과, ICP 사이트, 뉴스, 바이자하오는 여전히 중국 사업 주체가 필요합니다.</li>
+        <li>서명 전에 다섯 가지 선별 질문을 — 표준(8월 6일)은 선택 방법을, 정리(8월 18일)는 선택하지 않았을 때의 결말을 보여줍니다.</li>
+      </ul>
+    </div>
+
+<h2>🏢 BPP의 관점</h2>
 
     <p>업계는 이제 해외 브랜드에게 함정을 피하는 데 필요한 모든 것을 제공했습니다 — 벤더를 평가할 표준(8월 6일), 그리고 피해야 할 벤더에게 무슨 일이 일어나는지 보여주는 정리(8월 18일). 남은 것은 검증 단계 그 자체이며, 중국에 거점이 없는 브랜드가 단독으로 할 수 없는 일입니다.</p>
+<div class="platform-pills">
+      <span class="platform-pill own">🖥️ 자체 게시인가 소프트웨어 라이선스인가?</span>
+      <span class="platform-pill cite">📑 납품=인용 수, 게시 수 아님</span>
+      <span class="platform-pill risk">⚖️ 컴플라이언스 리스크 서면화</span>
+      <span class="platform-pill audit">🔍 정보원 감사 추적</span>
+      <span class="platform-pill standard">📜 업계 표준 적용 대상인가?</span>
+    </div>
+
 
     <p>이번 정리가 폭로한 내용에 기반한, 해외 브랜드가 GEO 벤더에게 물어야 할 다섯 가지 질문.</p>
 

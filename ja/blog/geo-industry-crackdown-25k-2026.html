@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.own { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.cite { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.risk { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.audit { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.standard { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.own { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.cite { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.risk { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.audit { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.standard { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>この数字が海外ブランドにとって重要な理由は、中国メディアの報道ではほとんど触れられません。同じ清退で露見したのが<strong>「マトリョーシカ型」転売モデル</strong>——ライセンス費用が約1,000元のソフトウェアが、3〜4層の転売を経てエンド顧客に10,000〜20,000元で売られる——という仕組みです。納品基準も効果保証もアフターサービスもなく、転売業者は料金を回収し、顧客が損失を被ります。この構造が特に海外ブランドを狙うのは、契約書を読めず、事務所を訪問できず、主張を検証できないからです。</p>
 
-    <h2>清退の数字</h2>
+    <h2>🚫 清退の数字</h2>
 
     <p>この清退は、GEOの短い歴史の中で最大の執行イベントです。規模は以下の通りです。</p>
 
@@ -348,7 +362,11 @@
     </div>
 
 
-    <h2>「マトリョーシカ型」ビジネスモデル</h2>
+    <h2>🪆 「マトリョーシカ型」ビジネスモデル</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 4つの処分カテゴリーは、海外ブランドが中国のベンダーから聞く営業トークにそのまま対応します。「1,000本の記事」（AIコンテンツの山）、「認証済みプロフィール」（虚偽登録）、「エンゲージメント拡大」（操作）、「準備済みアカウント」（闇取引）。営業トークが処分カテゴリーに一致するなら、それはサービスではなく負債です。
+    </div>
+
 
     <p>海外ブランドに最も重要であるべき露見は、GEOサービス市場の大きなシェアの背後にある転売構造です。マトリョーシカ人形のように層状に機能します。</p>
 
@@ -364,7 +382,7 @@
 
     <p>転売業者間の価格競争が状況を悪化させます。同地域の代理店が互いに値下げし合い、利益が消え、サービス品質が崩壊し、顧客は支払った金額以上の損失を被ります。ソフトウェア製作者以外は全員が損をします。</p>
 
-    <h2>この清退が重要な理由</h2>
+    <h2>⚖️ この清退が重要な理由</h2>
 
     <p>この清退は無作為の執行ではありません。5ヶ月の流れの最終段階です。</p>
 
@@ -384,7 +402,11 @@
 
     <p>この流れを一文で読むと——<strong>GEOは5ヶ月足らずで、参入障壁の低いグレーマーケットから規制された専門業界へ変わりました。</strong> 標準草案後に残っていたブラックハットの余地は、執行によって閉じられつつあります。安いソフトウェアを買って10倍で転売するビジネスモデルには、もう居場所がありません。</p>
 
-    <h2>海外ブランドへの罠</h2>
+    <h2>⚠️ 海外ブランドへの罠</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> ブラックハットコンテンツが検出されると、罰則は*ブランドエンティティ*——あなたの百科エントリ、引用資格——に下ります。ベンダーではなく。転売業者はすでに支払いを受けて去っています。コンプライアンスリスクは買い手のリスクなのです。
+    </div>
+
 
     <p>海外ブランドは、構造的にこの市場で最も露出度の高い買い手です。理由は3つあります。</p>
 
@@ -400,9 +422,26 @@
 
     <p>清退が確認した不都合な真実：海外ブランドは、検証不能な主張・不透明な納品物・言語の壁という3つの条件が揃うため、マトリョーシカモデルにとって理想的な顧客なのです。</p>
 
-    <h2>BPPの視点</h2>
+    <div class="takeaway-box">
+      <h3>📌 清退が確認した3つのこと</h3>
+      <ul>
+        <li>マトリョーシカ型転売モデルは、海外ブランドを狙う最上位の詐欺です——検証不能な主張、不透明な納品物、言語の壁。</li>
+        <li>コンプライアンスは悪いベンダーから守りますが、資産は構築しません——百科、ICPサイト、ニュース、百家号は依然として中国の事業主体が必要です。</li>
+        <li>署名前に5つの選別質問を——標準（8月6日）は選び方を、清退（8月18日）は選ばなかった場合の結末を示します。</li>
+      </ul>
+    </div>
+
+<h2>🏢 BPPの視点</h2>
 
     <p>業界は今、海外ブランドに罠を回避するために必要なすべてを提供しました——ベンダーを評価する標準（8月6日）、そして避けるべきベンダーに何が起きるかを示す清退（8月18日）。残るは検証ステップそのものであり、それは中国に拠点を持たないブランドが単独ではできないことです。</p>
+<div class="platform-pills">
+      <span class="platform-pill own">🖥️ 自社公開かソフトライセンスか？</span>
+      <span class="platform-pill cite">📑 納品=引用数、公開数ではない</span>
+      <span class="platform-pill risk">⚖️ コンプライアンスリスクを書面で</span>
+      <span class="platform-pill audit">🔍 情報源の監査証跡</span>
+      <span class="platform-pill standard">📜 業界標準の対象か？</span>
+    </div>
+
 
     <p>今回の清退が暴露した内容に基づく、海外ブランドがGEOベンダーに尋ねるべき5つの質問。</p>
 

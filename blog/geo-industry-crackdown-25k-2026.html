@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.own { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.cite { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.risk { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.audit { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.standard { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.own { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.cite { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.risk { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.audit { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.standard { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>That number matters to overseas brands for a reason most Chinese coverage does not mention: the same purge exposed the <strong>"matryoshka" reseller model</strong> — software that costs about 1,000 yuan to license being resold to end customers for 10,000–20,000 yuan, through three or four layers of resellers, with no delivery standard, no effect guarantee, and no after-sales service. The pattern is the same one that targets international brands specifically, because they cannot read the contract, cannot visit the office, and cannot verify the claims.</p>
 
-    <h2>The Numbers Behind the Crackdown</h2>
+    <h2>🚫 The Numbers Behind the Crackdown</h2>
 
     <p>The purge is the largest enforcement event in GEO's short history. The scale:</p>
 
@@ -348,7 +362,11 @@
     </div>
 
 
-    <h2>The "Matryoshka" Business Model</h2>
+    <h2>🪆 The "Matryoshka" Business Model</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> Each of the four ban categories maps to a sales pitch overseas brands hear from Chinese vendors: "1,000 articles" (AI content piles), "verified profiles" (fake registrations), "engagement boost" (manipulation), "ready account" (black-market trading). If a pitch matches a ban category, it is not a service — it is a liability.
+    </div>
+
 
     <p>The expose that should matter most to overseas brands is the reseller structure behind a large share of the GEO services market. It works in layers, like a matryoshka doll:</p>
 
@@ -364,7 +382,7 @@
 
     <p>The price war among resellers makes it worse. Agents in the same region undercut each other until margins vanish, service quality collapses, and the customer is left with something worse than what they paid for. Both sides lose — except the software maker.</p>
 
-    <h2>Why This Crackdown Matters</h2>
+    <h2>⚖️ Why This Crackdown Matters</h2>
 
     <p>The purge is not a random enforcement action. It is the final step in a five-month arc:</p>
 
@@ -384,7 +402,11 @@
 
     <p>Read that arc as a single sentence: <strong>GEO went from a low-barrier gray market to a regulated, professional industry in under five months.</strong> The black-hat space that still existed after the standard was drafted is now being closed by enforcement. The business model of buying cheap software and reselling it at ten times the price has no room left.</p>
 
-    <h2>The Overseas Brand Trap</h2>
+    <h2>⚠️ The Overseas Brand Trap</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> When black-hat content is detected, the penalty lands on the brand entity — your Baike entry, your citation eligibility — not on the vendor. The reseller has already been paid and moved on. Compliance risk is the buyer's risk.
+    </div>
+
 
     <p>Overseas brands are structurally the most exposed buyers in this market, for three reasons:</p>
 
@@ -400,9 +422,26 @@
 
     <p>This is the uncomfortable truth the purge confirms: the overseas brand is the ideal customer for the matryoshka model, because it combines three conditions — unverifiable claims, opaque deliverables, and a language barrier — that make the scam safe for the seller.</p>
 
-    <h2>The BPP Perspective</h2>
+    <div class="takeaway-box">
+      <h3>📌 Three Things the Purge Confirms</h3>
+      <ul>
+        <li>The matryoshka reseller model is the top scam targeting overseas brands — unverifiable claims, opaque deliverables, language barrier.</li>
+        <li>Compliance protects you from bad vendors, but it does not build your assets — Baike, ICP site, news, Baijiahao still need a Chinese entity.</li>
+        <li>Ask the five screening questions before signing; the standard (Aug 6) tells you how to choose, the purge (Aug 18) shows what happens if you do not.</li>
+      </ul>
+    </div>
+
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The industry has now given overseas brands everything needed to avoid the trap: a standard to judge vendors by (August 6), and now a purge to show what happens to the vendors who should be avoided (August 18). What remains is the verification step itself — and that is exactly what a brand without a China operation cannot do alone.</p>
+<div class="platform-pills">
+      <span class="platform-pill own">🖥️ Own Content or Licensed Software?</span>
+      <span class="platform-pill cite">📑 Delivery = Citations, Not Counts</span>
+      <span class="platform-pill risk">⚖️ Compliance Risk in Writing</span>
+      <span class="platform-pill audit">🔍 Source Audit Trails</span>
+      <span class="platform-pill standard">📜 Subject to Industry Standard?</span>
+    </div>
+
 
     <p>Five questions every overseas brand should ask a GEO vendor, based on what this crackdown exposed:</p>
 
