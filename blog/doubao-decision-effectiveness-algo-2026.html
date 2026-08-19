@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.icp { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>For overseas brands, this is not a Chinese-platform trivia update. It is the clearest statement yet of what AI search actually rewards — and the gap between that standard and how most international marketing content is written.</p>
 
-    <h2>The Flip — From "Who Published It" to "Does It Help Decide"</h2>
+    <h2>⚖️ The Flip — From "Who Published It" to "Does It Help Decide"</h2>
 
     <p>The old Doubao logic was simple: content on high-weight platforms (Baidu Baike, portals, official accounts) got cited almost regardless of quality. That logic is gone. The new core ranking metric is <strong>decision effectiveness</strong> — whether content genuinely reduces a user's decision cost and solves a real problem. Platform weight no longer decides placement.</p>
 
@@ -313,7 +327,11 @@
 
     <p>That is the new algorithm in one example: <strong>it rewards content that makes a decision easier, not content that comes from a big name.</strong></p>
 
-    <h2>The Two Rules That Reshaped Everything</h2>
+    <h2>📊 The Two Rules That Reshaped Everything</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> The objectivity rule is the most consequential change: content that openly states who the product fits, which scenarios it does not fit, and its known limitations gets a 60% higher citation probability. The algorithm now rewards the specification-sheet style, not the press-release style.
+    </div>
+
 
     <p>Beyond the philosophical flip, two concrete mechanisms are now enforced:</p>
 
@@ -334,7 +352,7 @@
 
     <p>The combined effect: roughly 40% of old content that relied on high-authority platform placement has been removed from recommendation pools. Domain-wide batch publishing on Baijiahao and media blast-distribution reportedly lost about 70% of their effect overnight.</p>
 
-    <h2>What "Objective" Actually Means for Content</h2>
+    <h2>📋 What "Objective" Actually Means for Content</h2>
 
     <p>The objectivity rule is the one that will most change how overseas brands write for Chinese AI search. Three elements the algorithm looks for:</p>
 
@@ -352,7 +370,11 @@
 
     <p>The irony for overseas brands: the hardest adjustment for domestic content farms is writing honest limitation sections — because their entire business model was volume. For a manufacturer with real engineering constraints and real test data, this is the easiest part of the job.</p>
 
-    <h2>Why This Matters More for Overseas Brands</h2>
+    <h2>🌏 Why This Matters More for Overseas Brands</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> Translated marketing copy is hard-sell by default. A typical international campaign page in Chinese reads as pure promotion — all strengths, no boundaries — which is exactly the profile the new objectivity recognition demotes. The content that ranks is not more polished; it is more honest.
+    </div>
+
 
     <p>Three reasons this algorithm shift hits international brands harder than local ones:</p>
 
@@ -366,9 +388,26 @@
 
 </ol>
 
-    <h2>The BPP Perspective</h2>
+    <div class="takeaway-box">
+      <h3>📌 Three Actions Before Domestic Volume Players Adapt</h3>
+      <ul>
+        <li>Run an objectivity audit of your Chinese content — add fit groups, non-fit scenarios, and known limits to every AI-facing page.</li>
+        <li>Keep the asset stack running in parallel — decision-effectiveness ranks among assets; you still need the verified base to be in the pool.</li>
+        <li>Act before domestic content farms retrain on honesty — the 40% that left the pool freed ranking space for this quarter.</li>
+      </ul>
+    </div>
+
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The narrative arc of the last three weeks completes itself: the stress test showed who survives (July 30), the 10-tier source system showed where brands rank (July 27), and now the ranking logic itself shows what content must be (August 17). <strong>The answer is the same at every layer: build verifiable assets, publish objective content, and let the algorithm find you.</strong></p>
+<div class="platform-pills">
+      <span class="platform-pill baike">📖 Baike Entry</span>
+      <span class="platform-pill icp">🏛️ ICP-Registered Site</span>
+      <span class="platform-pill baijiahao">✍️ Active Baijiahao</span>
+      <span class="platform-pill news">📰 News Citations</span>
+      <span class="platform-pill verify">🔁 Cross-Verification</span>
+    </div>
+
 
     <p>For overseas brands, three actions follow:</p>
 
@@ -441,7 +480,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. Part of <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a>. All rights reserved.</div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

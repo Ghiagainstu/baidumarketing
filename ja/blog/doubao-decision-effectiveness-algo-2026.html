@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.icp { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>海外ブランドにとって、これは中国プラットフォームの些細な更新ではありません。AI検索が実際に何に報いるのか——そして、その基準と国際的なマーケティングコンテンツの書き方との間にあるギャップが、これまでで最も明確に示された出来事です。</p>
 
-    <h2>転換——「誰が発信したか」から「意思決定に役立つか」へ</h2>
+    <h2>⚖️ 転換——「誰が発信したか」から「意思決定に役立つか」へ</h2>
 
     <p>旧豆包のロジックは単純でした——高権重プラットフォーム（百度百科、ポータル、公式アカウント）のコンテンツは、品質に関係なく引用されました。そのロジックは消えました。新しいコアのランキング指標は<strong>意思決定有効性</strong>です——コンテンツがユーザーの意思決定コストを本当に減らし、実際の問題を解決するかどうか。プラットフォームの権重はもはや順位を決めません。</p>
 
@@ -313,7 +327,11 @@
 
     <p>これが新アルゴリズムを一言で表しています——<strong>意思決定を容易にするコンテンツに報い、有名な発信元のコンテンツには報いない。</strong></p>
 
-    <h2>すべてを変えた2つのルール</h2>
+    <h2>📊 すべてを変えた2つのルール</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 客観性ルールこそ最も重要な変化です——製品が誰に合うか、どのシナリオに合わないか、既知の制限を明示するコンテンツは、引用確率が60%高くなります。アルゴリズムは現在、プレスリリースのスタイルではなく仕様書のスタイルに報います。
+    </div>
+
 
     <p>哲学的な転換に加えて、2つの具体的なメカニズムが現在施行されています。</p>
 
@@ -334,7 +352,7 @@
 
     <p>複合的な効果として、高権威プラットフォーム掲載頼みだった旧コンテンツの約40%が推薦プールから外れました。百家号での大量発稿やメディアへの一斉配信は、一夜で効果が約70%失われたと報告されています。</p>
 
-    <h2>「客観的」がコンテンツにとって実際に意味すること</h2>
+    <h2>📋 「客観的」がコンテンツにとって実際に意味すること</h2>
 
     <p>客観性ルールこそ、海外ブランドの中国AI検索向けコンテンツの書き方を最も変えるものです。アルゴリズムが求める3つの要素：</p>
 
@@ -352,7 +370,11 @@
 
     <p>海外ブランドにとっての皮肉：国内のコンテンツファームにとって最も難しい調整は、正直な制限セクションを書くことです——なぜなら彼らのビジネスモデル全体が量だからです。実際のエンジニアリング制約とテストデータを持つメーカーにとって、これは仕事の中で最も簡単な部分です。</p>
 
-    <h2>海外ブランドにとって重要な理由</h2>
+    <h2>🌏 海外ブランドにとって重要な理由</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 翻訳されたマーケティング文は、デフォルトで硬広です。典型的な国際キャンペーンページの中国語訳は、純粋なプロモーション——強みばかりで境界なし——として読まれ、新しい客観性識別がまさに降格するプロファイルに該当します。上位に来るコンテンツは、より洗練されているのではなく、より正直なのです。
+    </div>
+
 
     <p>このアルゴリズム転換が海外ブランドに国内勢より強く影響する理由は3つあります。</p>
 
@@ -366,9 +388,26 @@
 
 </ol>
 
-    <h2>BPPの視点</h2>
+    <div class="takeaway-box">
+      <h3>📌 国内の量産プレイヤーが適応する前の3つのアクション</h3>
+      <ul>
+        <li>中国語コンテンツの客観性監査を実施する——すべてのAI向けページに適合層、不適合シナリオ、既知の制限を追加する。</li>
+        <li>資産スタックを並行して維持する——意思決定有効性ランキングは資産の中から選びます。プールに入るためには検証済みの基盤が依然として必要です。</li>
+        <li>国内のコンテンツファームが正直さで再訓練する前に動く——プールを去った40%が今期の順位余地を解放しました。</li>
+      </ul>
+    </div>
+
+<h2>🏢 BPPの視点</h2>
 
     <p>この3週間の物語が完結します——ストレステストは誰が生き残るかを示し（7月30日）、10段階の信源体系はブランドがどこにランクされるかを示し（7月27日）、そして今、ランキングロジック自体がコンテンツがどうあるべきかを示しました（8月17日）。<strong>答えはどの層でも同じです——検証可能な資産を構築し、客観的なコンテンツを公開し、アルゴリズムにあなたを見つけてもらう。</strong></p>
+<div class="platform-pills">
+      <span class="platform-pill baike">📖 百科エントリ</span>
+      <span class="platform-pill icp">🏛️ ICP登録サイト</span>
+      <span class="platform-pill baijiahao">✍️ 稼働中の百家号</span>
+      <span class="platform-pill news">📰 ニュース引用</span>
+      <span class="platform-pill verify">🔁 クロス検証</span>
+    </div>
+
 
     <p>海外ブランドには3つのアクションがあります。</p>
 
@@ -441,7 +480,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. 無断転載を禁じます</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>
