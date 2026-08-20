@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.icp { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>해외 브랜드에게 이 뉴스의 요점은 '테슬라가 바이트댄스를 골랐다'는 것이 아닙니다. 요점은 <strong>중국에서 AI 추천의 진입점이 물리화되고 있다</strong>는 것입니다 — 스마트폰 화면에서 운전대로. 운전자가 차량 시스템에 "어떤 브랜드의 공기청정기가 최고인가"라고 묻으면, 답변은 중국 AI 모델이 중국어 정보원 풀을 인용해 생성합니다. 당신의 브랜드가 그 풀에 없다면, 차 안에서도 보이지 않는 존재가 되는 것입니다.</p>
 
-    <h2>물리화의 순간</h2>
+    <h2>🚗 물리화의 순간</h2>
 
     <p>10년 동안 'AI 검색'은 검색창이나 앱을 의미했습니다. 테슬라의 통합은 진입점이 물리적이고 주의도가 높은 맥락 — 차량 — 으로 이동한 순간을 보여줍니다. 이 변화를 정의하는 세 가지 사실이 있습니다.</p>
 
@@ -327,7 +341,7 @@
 
     <p>테슬라의 해외 차종은 머스크 자신의 Grok을 사용합니다. 중국어 의미론과 현지 컴플라이언스 요건 때문에 중국에는 이식되지 않았습니다. 화산엔진과의 계약은 기술 계약부터 컴플라이언스 신고, 제품 출시까지 약 1년이 걸렸습니다 — 이 기간은 중국 AI 배포를 둘러싼 컴플라이언스 레이어를 모든 이해관계자가 얼마나 진지하게 다루는지를 보여줍니다.</p>
 
-    <h2>차량용 시스템이 진입점을 바꾸는 이유</h2>
+    <h2>🎙️ 차량용 시스템이 진입점을 바꾸는 이유</h2>
 
     <p>자동차 콕핏은 단순한 또 하나의 화면이 아닙니다. 그것은 <strong>의사결정의 장</strong>입니다 — 운전자와 탑승자는 이동 중에 브랜드, 제품, 로컬 서비스에 대해 질문하고, 종종 행동할 의도를 가지고 있습니다. 스마트폰과의 차이는 세 가지입니다.</p>
 
@@ -350,7 +364,11 @@
 
     <p>GEO에게 이것은 전장을 검색창에서, 주행 중인 차량 내부의 의사결정 루프로 확장하는 것을 의미합니다.</p>
 
-    <h2>듀얼 모델의 신호</h2>
+    <h2>🤖 듀얼 모델의 신호</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 듀얼 모델 구성은 멀티 엔진 논점을 지금까지 가장 강력하게 뒷받침합니다 — 단일 AI 엔진에서의 브랜드 존재는 더 이상 충분하지 않습니다. 콕핏은 두 개의 엔진을 실행하고, 스마트폰은 그보다 더 많은 것을 실행합니다. 당신의 인용 풀은 실제로 질문에 답하는 엔진 전체로 확장되어야 합니다.
+    </div>
+
 
     <p>차량 제어에 豆包, 대화에 DeepSeek Chat이라는 구성 자체가 이 블로그 시리즈의 핵심 주장을 보강하는 신호입니다.</p>
 
@@ -364,7 +382,11 @@
 
 </ul>
 
-    <h2>해외 브랜드에게 의미하는 것</h2>
+    <h2>🌏 해외 브랜드에게 의미하는 것</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 콕핏은 음성 우선이고 두 번째 화면이 없습니다. 운전자가 "어떤 브랜드가 최고인가"라고 묻으면 AI의 음성 답변이 결과의 전부입니다 — 인용되는 소스인 것*자체가* 답인 것입니다. 인용 풀 밖의 브랜드는 차 안에서도 보이지 않습니다.
+    </div>
+
 
     <p>중국 AI 가시성을 계획하는 해외 브랜드에게 세 가지 귀결이 있습니다.</p>
 
@@ -378,9 +400,26 @@
 
 </ol>
 
-    <h2>BPP의 관점</h2>
+    <div class="takeaway-box">
+      <h3>📌 물리적 진입점이 포화되기 전의 3가지 행동</h3>
+      <ul>
+        <li>검증 가능한 중국어 자산 스택을 구축하십시오 — 검색 앱이든 콕핏이든 모든 AI 엔진이 인용하는 것과 같은 정보원입니다.</li>
+        <li>객관적이고 의사결정에 유용한 콘텐츠를 게시하십시오 — 豆包의 검색 답변을 지배하는 객관성 규칙은 차량 내 답변도 지배합니다.</li>
+        <li>스마트폰, 검색, 차량 모두에서 동시에 인용 점유율을 얻으십시오 — 풀은 공유되고, 벽은 움직이지 않았습니다.</li>
+      </ul>
+    </div>
+
+<h2>🏢 BPP의 관점</h2>
 
     <p>이 블로그 시리즈의 패턴이 완성됩니다 — 가시성 격차가 문제를 정의하고(8월 9일), 알고리즘이 규칙을 정의하고(8월 17일), 그리고 테슬라의 콕핏이 새로운 전장을 정의합니다 — <strong>AI 추천은 물리적이고 주의도가 높은 맥락으로 이동하고 있으며, 같은 인용 풀이 그 모든 곳에 공급됩니다.</strong></p>
+<div class="platform-pills">
+      <span class="platform-pill baike">📖 백과 엔트리</span>
+      <span class="platform-pill icp">🏛️ ICP 등록 사이트</span>
+      <span class="platform-pill baijiahao">✍️ 운영 중인 바이자하오</span>
+      <span class="platform-pill news">📰 뉴스 인용</span>
+      <span class="platform-pill verify">🔁 교차 검증</span>
+    </div>
+
 
     <p>해외 브랜드의 행동 순서는 변하지 않지만, 정당성은 확대되었습니다.</p>
 

@@ -261,6 +261,20 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.icp { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
   </style>
 </head>
 <body>
@@ -305,7 +319,7 @@
 
     <p>海外ブランドにとって、このニュースの要点は「テスラがバイトダンスを選んだ」ことではありません。要点は<strong>中国におけるAIレコメンドの入口が物理化しつつある</strong>ことです——スマホ画面からハンドルへ。ドライバーが車載システムに「どのブランドの空気清浄機が最適か」と尋ねると、答えは中国のAIモデルが中国語の情報源プールを引用して生成します。あなたのブランドがそのプールになければ、車の中でも見えない存在になるのです。</p>
 
-    <h2>物理化の瞬間</h2>
+    <h2>🚗 物理化の瞬間</h2>
 
     <p>10年にわたり、「AI検索」は検索ボックスやアプリを意味していました。テスラの統合は、入口が物理的で注意度の高い文脈——車両——に移った瞬間を示します。この変化を定義する3つの事実があります。</p>
 
@@ -327,7 +341,7 @@
 
     <p>テスラの海外車種はマスク氏自身のGrokを採用しています。中国語の意味論と現地のコンプライアンス要件のため、中国には移植されませんでした。火山引擎との契約は、技術契約からコンプライアンス届出、製品投入まで約1年かかりました——この期間は、中国におけるAI展開を取り巻くコンプライアンス層を、すべての関係者がいかに真剣に扱っているかを示しています。</p>
 
-    <h2>車載がエントリーポイントを変える理由</h2>
+    <h2>🎙️ 車載がエントリーポイントを変える理由</h2>
 
     <p>車のコックピットは、単なるもう一つの画面ではありません。それは<strong>意思決定の場</strong>です——ドライバーと乗客は移動中にブランド、製品、ローカルサービスについて質問し、しばしば行動する意図を持っています。スマホとの違いは3つあります。</p>
 
@@ -350,7 +364,11 @@
 
     <p>GEOにとって、これは戦場を検索ボックスから、走行中の車内の意思決定ループへと拡張することを意味します。</p>
 
-    <h2>デュアルモデルのシグナル</h2>
+    <h2>🤖 デュアルモデルのシグナル</h2>
+<div class="callout callout-insight">
+      <strong>💡 Insight:</strong> デュアルモデル構成は、マルチエンジン論をこれまでで最も強く裏付けるものです——単一のAIエンジンへのブランド存在はもはや十分ではありません。コックピットは2つのエンジンを実行し、スマホはさらに複数を実行します。あなたの引用プールは、実際に質問に答えるエンジン全体に広がっていなければなりません。
+    </div>
+
 
     <p>車両制御に豆包、会話にDeepSeek Chatという構成自体が、本ブログシリーズの中核的な主張を補強するシグナルです。</p>
 
@@ -364,7 +382,11 @@
 
 </ul>
 
-    <h2>海外ブランドへの意味</h2>
+    <h2>🌏 海外ブランドへの意味</h2>
+<div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> コックピットは音声ファーストで、第二の画面がありません。ドライバーが「どのブランドが最適か」と尋ねると、AIの音声回答が結果のすべてです——引用されるソースであること*自体が*答えであることなのです。引用プールの外のブランドは、車の中でも見えません。
+    </div>
+
 
     <p>中国のAI可視性を計画する海外ブランドには、3つの帰結があります。</p>
 
@@ -378,9 +400,26 @@
 
 </ol>
 
-    <h2>BPPの視点</h2>
+    <div class="takeaway-box">
+      <h3>📌 物理的入口が飽和する前の3つのアクション</h3>
+      <ul>
+        <li>検証可能な中国語資産スタックを構築する——検索アプリでもコックピットでも、すべてのAIエンジンが引用するのと同じ情報源です。</li>
+        <li>客観的で意思決定に役立つコンテンツを公開する——豆包の検索回答を支配する客観性ルールは、車内の回答も支配します。</li>
+        <li>スマホ、検索、車両のすべてで同時に引用シェアを獲得する——プールは共有され、壁は動いていません。</li>
+      </ul>
+    </div>
+
+<h2>🏢 BPPの視点</h2>
 
     <p>本ブログシリーズのパターンが完結します——可視性ギャップが問題を定義し（8月9日）、アルゴリズムがルールを定義し（8月17日）、そしてテスラのコックピットが新しい戦場を定義します——<strong>AIレコメンドは物理的で注意度の高い文脈へと移行し、同じ引用プールがそのすべてに供給される</strong>のです。</p>
+<div class="platform-pills">
+      <span class="platform-pill baike">📖 百科エントリ</span>
+      <span class="platform-pill icp">🏛️ ICP登録サイト</span>
+      <span class="platform-pill baijiahao">✍️ 稼働中の百家号</span>
+      <span class="platform-pill news">📰 ニュース引用</span>
+      <span class="platform-pill verify">🔁 クロス検証</span>
+    </div>
+
 
     <p>海外ブランドの行動順序は変わりませんが、正当性は拡大しました。</p>
 
