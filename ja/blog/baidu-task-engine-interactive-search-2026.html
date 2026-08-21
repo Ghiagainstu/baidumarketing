@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.icp { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -303,7 +318,7 @@
       <article class="article-content">
     <p>百度の検索結果は、もはや「ページ」ではありません。8月20日の百度AI Dayで、同じ方向を指す2つの変更が発表されました。複数ステップの作業を最初から最後まで実行するタスクエンジン2.0と、検索クエリを動作するコンポーネントに変える「全ページインタラクティブ」な結果形式です。同じ週にGoogleもほぼ同じアップグレードを公開しました。これは実験ではなく、業界全体の方向性です。海外ブランドにとって、可視性の戦場は「引用されること」から「インタラクティブなコンポーネントに組み込まれること」へと移動しました。</p>
 
-    <h2>ページはもはやページではない</h2>
+    <h2>🖥️ ページはもはやページではない</h2>
 
     <p>8月20日の百度AI Dayで、文心アシスタントにタスクエンジン2.0が搭載されました。情報を集めてリンクを渡すのではなく、依頼を最初から最後まで処理します。情報源の収集、統合、成果物の納品までを一貫して実行します。オフィス業務、クリエイティブ、リサーチ、アプリ開発に対応し、完全無料です。アシスタントの日次アクティブ利用は前年比83%増となっています。</p>
 
@@ -318,23 +333,31 @@
       <div class="stat-card"><div class="stat-number">初</div><div class="stat-label">🌐 全ページインタラクティブSERP</div></div>
       <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">🤝 収束するエンジン（百度+Google）</div></div>
     </div>
-<h2>「引用されること」と「組み込まれること」</h2>
+<h2>🧩 「引用されること」と「組み込まれること」</h2>
 
     <p>この1年間、GEOの議論は「引用されること」、つまりブランドをAI回答に入れてもらうことに集中してきました。インタラクティブページはその基準を引き上げます。検索結果が比較コンポーネント、設定可能な仕様カード、意思決定ウィジェットを返すとき、ブランド情報は引用されるのではなく、動作する成果物に組み立てられます。</p>
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 引用ゲームは権威に報い、統合ゲームは計算可能性に報います。製品を称賛するマーケティング段落は比較ウィジェットには役立ちません——クリーンでバージョン管理された仕様シートこそが役立ちます。
+    </div>
+
 
     <p>それに必要なのは何でしょうか。コンポーネントが計算できる、構造化された機械可読なデータです。製品を称賛する段落は比較ウィジェットには役立ちません。クリーンな仕様シート、エンティティ名の一貫性、バージョン管理された製品データが役立ちます。引用ゲームは権威に報い、統合ゲームは計算可能性に報います。</p>
 
     <p>これは8月にコンテンツを再形成したルールと同じものです。8月17日の豆包アルゴリズム更新の客観性レイヤーも、7月27日の文心の10段階ソース体系も、検証可能で構造化された情報を選別します。インタラクティブページは、その見えないパイプラインの目に見える終点です。</p>
 
-    <h2>Googleの並行性こそがシグナル</h2>
+    <h2>🌐 Googleの並行性こそがシグナル</h2>
 
     <p>Googleも同じ週に同様のアップグレードを公開しました。インタラクティブな検索結果とAI教師モードです。インフラを一切共有しない2つの検索企業が、同時に同じ目的地に到達しました。この収束こそ、海外ブランドが読むべきシグナルです。</p>
 
     <p>西洋の支配的なエンジンと中国の支配的なエンジンの両方が同じ検索行動を採用するとき、それは実験ではなく構造的なものと判断してよいでしょう。インタラクティブな結果は、比較の多いクエリ——製品選定、ベンダー評価、仕様マッチング——でデフォルトになります。それらはまさに、B2Bブランドが中国で案件を勝ち取るかどうかを左右するクエリです。</p>
 
-    <h2>海外ブランドへの意味</h2>
+    <h2>🌏 海外ブランドへの意味</h2>
 
     <p>3つの帰結があります。</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> エントリーポイントのマトリクスは、壁が動く速度よりも速く拡大しています。1週間経過するごとに、より多くの中国競合が構造化製品ページを完成させ、あなたのカテゴリのインタラクティブ回答が形成されつつあります。
+    </div>
+
 
     <p>第一に、引用のために構築してきた資産スタック——百科事典、ICP登録サイト、百家号、ニュースソース——は現在、第二の役割を持ちます。インタラクティブなコンポーネントにデータを供給する役割です。引用を獲得する構造化データは、比較ウィジェットにも電力を供給できます。</p>
 
@@ -342,9 +365,26 @@
 
     <p>第三に、エントリーポイントのマトリクスは、壁が動く速度よりも速く拡大しています。今月だけで、検索ページがインタラクティブになり、車載AIが登場し（テスラのコックピットで豆包が稼働）、微信AI検索も展開中です。すべての新エントリーポイントは同じ引用プールからデータを引き出します。検証可能な中国語資産を持つブランドはすべてに登場し、持たないブランドはどこにも登場しません。</p>
 
-    <h2>BPPの視点</h2>
+    
+    <div class="takeaway-box">
+      <h3>✅ 入口が飽和する前の3ステップ</h3>
+      <ul>
+        <li><strong>まず構造化資産スタックを構築</strong>——百科、ICPサイト、百家号、ニュースソースは現在、引用とインタラクティブコンポーネントの両方に供給します。</li>
+        <li><strong>客観的で仕様書スタイルの中国語コンテンツを公開</strong>——客観性フィルターが報い、比較ウィジェットは散文ではなく比較可能な単位を必要とします。</li>
+        <li><strong>今すぐ動く</strong>——遅延する1週間ごとに、競合があなたのカテゴリのデフォルトのインタラクティブ回答をロックします。</li>
+      </ul>
+    </div>
+<h2>🏢 BPPの視点</h2>
 
     <p>道筋は今月ずっと書いてきた3ステップと同じですが、優先順位が変わりました。</p>
+    <div class="platform-pills">
+      <span class="platform-pill baike">📖 百度百科</span>
+      <span class="platform-pill icp">🏢 ICP登録サイト</span>
+      <span class="platform-pill baijiahao">✍️ 百家号</span>
+      <span class="platform-pill news">📰 ニュースソース</span>
+      <span class="platform-pill verify">🔗 クロス検証</span>
+    </div>
+
 
     <p>まず構造化資産スタックを構築してください——百科事典、ICPサイト、百家号、ニュースソース——それは現在、引用とインタラクティブコンポーネントの両方に供給するからです。次に、客観性フィルターが報いる客観的で仕様書スタイルの中国語コンテンツを公開します。そして、エントリーポイントが飽和する前に動いてください。1週間経過するごとに、より多くの中国競合が構造化ページを完成させ、あなたのカテゴリのインタラクティブ回答が形成される前に先手を打つ必要があります。</p>
 

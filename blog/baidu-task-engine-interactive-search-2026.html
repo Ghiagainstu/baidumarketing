@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.icp { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -303,7 +318,7 @@
       <article class="article-content">
     <p>Search results on Baidu have stopped being pages. On August 20, Baidu AI Day shipped two changes that point in the same direction: Task Engine 2.0, which executes multi-step work end to end, and a "fully interactive page" result format that turns a query into a working component. The same day, Google showed a nearly identical upgrade. This is not an experiment — it is the direction of the whole industry. For overseas brands, the visibility battlefield just moved from "being cited" to "being integrated into an interactive component."</p>
 
-    <h2>The Page Is No Longer a Page</h2>
+    <h2>🖥️ The Page Is No Longer a Page</h2>
 
     <p>Baidu AI Day on August 20 introduced Task Engine 2.0 inside Wenxin Assistant. Instead of collecting information and handing you links, the engine takes a request from start to finish: gathering sources, synthesizing them, and delivering a finished output. It covers office work, creative work, research, and app development, and it is completely free. Daily active usage of the assistant is up 83% year over year.</p>
 
@@ -318,23 +333,31 @@
       <div class="stat-card"><div class="stat-number">1st</div><div class="stat-label">🌐 Fully Interactive SERP</div></div>
       <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">🤝 Engines Converging (Baidu+Google)</div></div>
     </div>
-<h2>Being Cited vs. Being Integrated</h2>
+<h2>🧩 Being Cited vs. Being Integrated</h2>
 
     <p>For the past year, the GEO conversation has been about being cited — getting your brand into the AI answer. The interactive page raises the bar. When a query returns a comparison component, a configurable spec card, or a decision widget, brand information is no longer quoted; it is assembled into a working artifact.</p>
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> The citation game rewards authority; the integration game rewards computability. A marketing paragraph praising your product does not help an interactive comparison widget — a clean, versioned spec sheet does.
+    </div>
+
 
     <p>What does that require? Structured, machine-readable data that a component can compute with. A paragraph praising your product does not help a comparison widget. A clean spec sheet, entity-consistent naming, and versioned product data do. The citation game rewarded authority; the integration game rewards computability.</p>
 
     <p>This is the same rule that reshaped content in August: the objectivity layer from Doubao's algorithm update (August 17) and the 10-tier source system from Wenxin (July 27) both filter for verifiable, structured information. The interactive page is the visible endpoint of that invisible pipeline.</p>
 
-    <h2>The Google Parallel Is the Signal</h2>
+    <h2>🌐 The Google Parallel Is the Signal</h2>
 
     <p>Google shipped a similar upgrade the same week: interactive search results and an AI teacher mode. Two search companies with zero shared infrastructure arrived at the same destination at the same time. That convergence is the signal overseas brands should read.</p>
 
     <p>When a search behavior is shared by both the dominant Western engine and the dominant Chinese engine, it is safe to treat it as structural, not experimental. Interactive results will become the default for comparison-heavy queries — product selection, vendor evaluation, spec matching. Those are exactly the queries that decide whether a B2B brand wins a deal in China.</p>
 
-    <h2>What This Means for Overseas Brands</h2>
+    <h2>🌏 What This Means for Overseas Brands</h2>
 
     <p>Three consequences follow.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> The entry-point matrix is expanding faster than the wall is moving. Every week, more Chinese competitors finish structured product pages while your category's interactive answers are still being formed.
+    </div>
+
 
     <p>First, the asset stack you may already be building for citation — Baike, ICP-registered site, Baijiahao, news sources — now has a second job: feeding interactive components. The same structured data that earns citations can power comparison widgets.</p>
 
@@ -342,9 +365,26 @@
 
     <p>Third, the entry-point matrix is expanding faster than the wall is moving. This month alone: search pages became interactive, in-car AI arrived (Tesla cockpit running Doubao), and WeChat AI search is rolling out. Every new entry point draws from the same citation pools — the brands with verifiable Chinese-language assets appear in all of them; the brands without them appear in none.</p>
 
-    <h2>The BPP Perspective</h2>
+    
+    <div class="takeaway-box">
+      <h3>✅ Three Steps Before the Entry Points Saturate</h3>
+      <ul>
+        <li><strong>Build the structured asset stack first</strong> — Baike, ICP site, Baijiahao, news sources now feed both citation and interactive components.</li>
+        <li><strong>Publish objective, spec-style Chinese content</strong> — the objectivity filters reward it, and comparison widgets need comparable units, not prose.</li>
+        <li><strong>Move now</strong> — every week of delay lets competitors lock the default interactive answer in your category.</li>
+      </ul>
+    </div>
+<h2>🏢 The BPP Perspective</h2>
 
     <p>The path is the same three steps we have written all month, but the priority order has shifted.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baike">📖 Baidu Baike</span>
+      <span class="platform-pill icp">🏢 ICP-Registered Site</span>
+      <span class="platform-pill baijiahao">✍️ Baijiahao</span>
+      <span class="platform-pill news">📰 News Sources</span>
+      <span class="platform-pill verify">🔗 Cross-Verification</span>
+    </div>
+
 
     <p>Build the structured asset stack first — Baike, ICP site, Baijiahao, news sources — because it now feeds both citation and interactive components. Then publish objective, spec-style content in Chinese that the objectivity filters reward. Then move before the entry points saturate: every week that passes, more Chinese competitors finish their structured pages while your category's interactive answers are still being formed.</p>
 

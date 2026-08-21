@@ -261,6 +261,21 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+      /* PLATFORM-PILLS-CSS */
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baike { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.icp { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.baijiahao { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.news { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.verify { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baike { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.icp { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.baijiahao { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.news { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.verify { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
   </style>
 </head>
 <body>
@@ -303,7 +318,7 @@
       <article class="article-content">
     <p>바이두의 검색 결과는 더 이상 '페이지'가 아닙니다. 8월 20일 바이두 AI Day에서 같은 방향을 가리키는 두 가지 변화가 발표되었습니다. 여러 단계의 작업을 처음부터 끝까지 실행하는 태스크 엔진 2.0과, 검색 쿼리를 작동하는 컴포넌트로 바꾸는 '전체 페이지 인터랙티브' 결과 형식입니다. 같은 주에 Google도 거의 동일한 업그레이드를 공개했습니다. 이것은 실험이 아니라 업계 전체의 방향입니다. 해외 브랜드에게 가시성의 전장은 '인용되는 것'에서 '인터랙티브 컴포넌트에 통합되는 것'으로 이동했습니다.</p>
 
-    <h2>페이지는 더 이상 페이지가 아니다</h2>
+    <h2>🖥️ 페이지는 더 이상 페이지가 아니다</h2>
 
     <p>8월 20일 바이두 AI Day에서 원신 어시스턴트에 태스크 엔진 2.0이 탑재되었습니다. 정보를 모아 링크를 전달하는 대신, 요청을 처음부터 끝까지 처리합니다. 소스 수집, 종합, 완성된 결과물 전달까지 일관되게 실행합니다. 사무 업무, 창의 작업, 리서치, 앱 개발을 지원하며 완전 무료입니다. 어시스턴트의 일간 활성 사용은 전년 대비 83% 증가했습니다.</p>
 
@@ -318,23 +333,31 @@
       <div class="stat-card"><div class="stat-number">최초</div><div class="stat-label">🌐 전체 페이지 인터랙티브 SERP</div></div>
       <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">🤝 수렴하는 엔진 (바이두+Google)</div></div>
     </div>
-<h2>'인용되는 것'과 '통합되는 것'</h2>
+<h2>🧩 '인용되는 것'과 '통합되는 것'</h2>
 
     <p>지난 1년 동안 GEO 논의는 '인용되는 것', 즉 브랜드를 AI 답변에 들어가게 하는 데 집중되어 왔습니다. 인터랙티브 페이지는 그 기준을 끌어올립니다. 검색 결과가 비교 컴포넌트, 설정 가능한 사양 카드, 의사결정 위젯을 반환할 때, 브랜드 정보는 인용되는 것이 아니라 작동하는 결과물로 조립됩니다.</p>
+    <div class="callout callout-insight">
+      <strong>💡 Insight:</strong> 인용 게임은 권위에 보상하고, 통합 게임은 계산 가능성에 보상합니다. 제품을 칭송하는 마케팅 문단은 비교 위젯에 도움이 되지 않습니다 — 깨끗하고 버전 관리된 사양 시트가 도움이 됩니다.
+    </div>
+
 
     <p>무엇이 필요할까요. 컴포넌트가 계산할 수 있는 구조화된 기계 판독 데이터입니다. 제품을 칭송하는 문단은 비교 위젯에 도움이 되지 않습니다. 깨끗한 사양 시트, 엔티티 이름의 일관성, 버전 관리된 제품 데이터가 도움이 됩니다. 인용 게임은 권위에 보상하고, 통합 게임은 계산 가능성에 보상합니다.</p>
 
     <p>이것은 8월에 콘텐츠를 재형성한 규칙과 같습니다. 8월 17일 豆包 알고리즘 업데이트의 객관성 레이어도, 7월 27일 文心의 10단계 소스 체계도 검증 가능하고 구조화된 정보를 선별합니다. 인터랙티브 페이지는 그 보이지 않는 파이프라인의 눈에 보이는 종착점입니다.</p>
 
-    <h2>Google의 평행성이야말로 신호</h2>
+    <h2>🌐 Google의 평행성이야말로 신호</h2>
 
     <p>Google도 같은 주에 유사한 업그레이드를 공개했습니다. 인터랙티브 검색 결과와 AI 교사 모드입니다. 인프라를 전혀 공유하지 않는 두 검색 기업이 동시에 같은 목적지에 도달했습니다. 이 수렴이야말로 해외 브랜드가 읽어야 할 신호입니다.</p>
 
     <p>서양의 지배적 엔진과 중국의 지배적 엔진이 동시에 같은 검색 행동을 채택할 때, 그것은 실험이 아니라 구조적인 것으로 판단해도 좋습니다. 인터랙티브 결과는 비교가 많은 쿼리 — 제품 선정, 벤더 평가, 사양 매칭 — 에서 기본값이 됩니다. 그것은 바로 B2B 브랜드가 중국에서 계약을 따내는지 결정하는 쿼리입니다.</p>
 
-    <h2>해외 브랜드에게 의미하는 것</h2>
+    <h2>🌏 해외 브랜드에게 의미하는 것</h2>
 
     <p>세 가지 귀결이 있습니다.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Warning:</strong> 진입점 매트릭스는 벽이 움직이는 속도보다 빠르게 확장되고 있습니다. 한 주가 지날 때마다 더 많은 중국 경쟁사가 구조화 제품 페이지를 완성하고, 당신의 카테고리 인터랙티브 답변이 형성되고 있습니다.
+    </div>
+
 
     <p>첫째, 인용을 위해 구축해 온 자산 스택 — 바이두 백과, ICP 등록 사이트, 바이자하오, 뉴스 소스 — 은 이제 두 번째 역할을 갖습니다. 인터랙티브 컴포넌트에 데이터를 공급하는 역할입니다. 인용을 얻는 구조화 데이터는 비교 위젯에도 전력을 공급할 수 있습니다.</p>
 
@@ -342,9 +365,26 @@
 
     <p>셋째, 진입점 매트릭스는 벽이 움직이는 속도보다 빠르게 확장되고 있습니다. 이번 달만 해도 검색 페이지가 인터랙티브해졌고, 차량용 AI가 등장했으며(테슬라 콕핏에서 豆包 가동), 위챗 AI 검색도 출시 중입니다. 모든 새 진입점은 같은 인용 풀에서 데이터를 끌어옵니다. 검증 가능한 중국어 자산을 가진 브랜드는 모든 곳에 등장하고, 없는 브랜드는 어디에도 등장하지 않습니다.</p>
 
-    <h2>BPP의 관점</h2>
+    
+    <div class="takeaway-box">
+      <h3>✅ 진입점이 포화되기 전 3단계</h3>
+      <ul>
+        <li><strong>먼저 구조화 자산 스택을 구축</strong> — 백과, ICP 사이트, 바이자하오, 뉴스 소스는 이제 인용과 인터랙티브 컴포넌트 양쪽에 공급합니다.</li>
+        <li><strong>객관적이고 사양서 스타일의 중국어 콘텐츠를 공개</strong> — 객관성 필터가 보상하고, 비교 위젯은 산문이 아닌 비교 가능한 단위를 필요로 합니다.</li>
+        <li><strong>지금 움직이십시오</strong> — 지연되는 매주, 경쟁사가 당신의 카테고리 기본 인터랙티브 답변을 잠급니다.</li>
+      </ul>
+    </div>
+<h2>🏢 BPP의 관점</h2>
 
     <p>경로는 이번 달 내내 써 온 3단계와 같지만, 우선순위가 바뀌었습니다.</p>
+    <div class="platform-pills">
+      <span class="platform-pill baike">📖 바이두 백과</span>
+      <span class="platform-pill icp">🏢 ICP 등록 사이트</span>
+      <span class="platform-pill baijiahao">✍️ 바이자하오</span>
+      <span class="platform-pill news">📰 뉴스 소스</span>
+      <span class="platform-pill verify">🔗 교차 검증</span>
+    </div>
+
 
     <p>먼저 구조화 자산 스택을 구축하십시오 — 백과, ICP 사이트, 바이자하오, 뉴스 소스 — 그것은 이제 인용과 인터랙티브 컴포넌트 양쪽에 공급하기 때문입니다. 다음으로 객관성 필터가 보상하는 객관적이고 사양서 스타일의 중국어 콘텐츠를 공개합니다. 그리고 진입점이 포화되기 전에 움직이십시오. 한 주가 지날 때마다 더 많은 중국 경쟁사가 구조화 페이지를 완성하고, 당신의 카테고리 인터랙티브 답변이 형성되기 전에 선제 대응해야 합니다.</p>
 
