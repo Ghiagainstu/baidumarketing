@@ -261,7 +261,32 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+      /* BPP-ENHANCE: timeline + platform-pills */
+    .timeline { display: flex; flex-direction: column; margin: 20px 0 24px; position: relative; padding-left: 28px; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: #E5E7EB; border-radius: 1px; }
+    .timeline-item { position: relative; padding-bottom: 18px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot { position: absolute; left: -26px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #2932E1; border: 2px solid #fff; box-shadow: 0 0 0 2px #2932E1; }
+    .timeline-date { font-weight: 600; font-size: .8rem; color: #2932E1; }
+    .timeline-text { font-size: .9rem; color: #374151; line-height: 1.5; }
+    [data-theme="dark"] .timeline::before { background: rgba(255,255,255,.18); }
+    [data-theme="dark"] .timeline-dot { border-color: #111827; box-shadow: 0 0 0 2px #6366F1; }
+    [data-theme="dark"] .timeline-text { color: #D1D5DB; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
+    </style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -308,6 +333,13 @@
     <p>That one sentence changes the economics of a China GEO program. If your brand only exists at tier C, no amount of content volume will carry you into an AI answer with the same authority as a tier-A or tier-B source. The standard was drafted by Xinhua-affiliated laboratories, not by marketing vendors, and it is already being read as a reference for enforcement. Here is what an overseas operator needs to understand, and what to do about it.</p>
 
     <h2>✅ The Standard Is Already in Force</h2>
+<div class="timeline">
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Apr 10</div><div class="timeline-text">Project approval</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Aug 9</div><div class="timeline-text">Expert review passed</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Aug 11</div><div class="timeline-text">Standard published</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Aug 12</div><div class="timeline-text">Took effect</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Aug 27</div><div class="timeline-text">Re-released at HICOOL 2026</div></div>
+    </div>
 
     <p>Three dates matter. The draft passed its expert review on August 9, was published on August 11, and took effect on August 12. On August 27 it was re-released as a forum outcome at HICOOL 2026, Beijing's global entrepreneurship summit.</p>
 
@@ -378,6 +410,13 @@
     <p>For an overseas brand, these are clauses you can actually enforce. Ask a vendor whether its delivery is independently auditable, whether each core claim carries its nine evidence fields, and how fast it can stop a bad citation. A vendor that cannot answer is out of step with the standard's own terms.</p>
 
     <h2>🚀 Climbing from C to B</h2>
+<div class="platform-pills">
+      <span class="platform-pill baidu">🌐 ICP-filed site</span>
+      <span class="platform-pill wechat">📚 Baidu Baike</span>
+      <span class="platform-pill alipay">📝 Baijiahao</span>
+      <span class="platform-pill xiaohongshu">💬 Zhihu</span>
+      <span class="platform-pill douyin">📰 Media coverage</span>
+    </div>
 
     <p>The standard regulates vendors, but the source ladder is really about your assets. The way out of tier C is to build the sources the standard itself treats as tier B: an ICP-filed Chinese website, a Baidu Baike entry, an institutional Zhihu or Baijiahao presence, and — over time — original coverage by Chinese mainstream media and industry associations.</p>
 

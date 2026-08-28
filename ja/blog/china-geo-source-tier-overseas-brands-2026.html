@@ -261,7 +261,32 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+      /* BPP-ENHANCE: timeline + platform-pills */
+    .timeline { display: flex; flex-direction: column; margin: 20px 0 24px; position: relative; padding-left: 28px; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: #E5E7EB; border-radius: 1px; }
+    .timeline-item { position: relative; padding-bottom: 18px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot { position: absolute; left: -26px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #2932E1; border: 2px solid #fff; box-shadow: 0 0 0 2px #2932E1; }
+    .timeline-date { font-weight: 600; font-size: .8rem; color: #2932E1; }
+    .timeline-text { font-size: .9rem; color: #374151; line-height: 1.5; }
+    [data-theme="dark"] .timeline::before { background: rgba(255,255,255,.18); }
+    [data-theme="dark"] .timeline-dot { border-color: #111827; box-shadow: 0 0 0 2px #6366F1; }
+    [data-theme="dark"] .timeline-text { color: #D1D5DB; }
+    .platform-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid; }
+    .platform-pill.baidu { background: #EEF0FF; border-color: #A5B4FC; color: #3730A3; }
+    .platform-pill.wechat { background: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+    .platform-pill.alipay { background: #EFF6FF; border-color: #93C5FD; color: #1E40AF; }
+    .platform-pill.xiaohongshu { background: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+    .platform-pill.douyin { background: #F5F3FF; border-color: #C4B5FD; color: #5B21B6; }
+    [data-theme="dark"] .platform-pill.baidu { background: rgba(165,180,252,.15); border-color: #6366F1; color: #C7D2FE; }
+    [data-theme="dark"] .platform-pill.wechat { background: rgba(110,231,183,.12); border-color: #10B981; color: #A7F3D0; }
+    [data-theme="dark"] .platform-pill.alipay { background: rgba(147,197,253,.12); border-color: #3B82F6; color: #BFDBFE; }
+    [data-theme="dark"] .platform-pill.xiaohongshu { background: rgba(253,164,175,.12); border-color: #F43F5E; color: #FECDD3; }
+    [data-theme="dark"] .platform-pill.douyin { background: rgba(196,181,253,.12); border-color: #8B5CF6; color: #DDD6FE; }
+    @media (max-width: 640px) { .platform-pills { gap: 6px; } .platform-pill { font-size: .75rem; padding: 5px 10px; } }
+
+    </style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -308,6 +333,13 @@
     <p>この一文が、中国におけるGEO施策の経済性を変えます。自社ブランドがCにしか存在しないなら、どれだけコンテンツを量産しても、AやBの情報源と同じ重みでAIの回答に入ることはできません。この標準はマーケティング業者ではなく新華社系の研究機関が起草し、すでに執行の参照として読まれています。海外の事業者が理解すべきこと、そして取るべき行動を整理します。</p>
 
     <h2>✅ 標準はすでに施行されている</h2>
+<div class="timeline">
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">4月10日</div><div class="timeline-text">立項承認</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">8月9日</div><div class="timeline-text">専門家審査を通過</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">8月11日</div><div class="timeline-text">標準を公表</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">8月12日</div><div class="timeline-text">施行</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">8月27日</div><div class="timeline-text">HICOOL 2026で再発表</div></div>
+    </div>
 
     <p>重要な日付は3つです。草案は8月9日に専門家審査を通過し、8月11日に公表、8月12日に施行されました。8月27日には、北京のグローバル起業サミット「HICOOL 2026」でフォーラム成果として再発表されています。</p>
 
@@ -378,6 +410,13 @@
     <p>海外ブランドにとって、これらは実際に執行できる契約条項です。業者に、納品物が独立監査可能か、各核心的主張に9つの証拠要素が紐づいているか、誤った引用をどれだけ早く止められるかを問いましょう。答えられない業者は、標準の条件からすでに外れています。</p>
 
     <h2>🚀 CからBへ上る方法</h2>
+<div class="platform-pills">
+      <span class="platform-pill baidu">🌐 ICP届出サイト</span>
+      <span class="platform-pill wechat">📚 百度百科</span>
+      <span class="platform-pill alipay">📝 百家号</span>
+      <span class="platform-pill xiaohongshu">💬 知乎</span>
+      <span class="platform-pill douyin">📰 メディア報道</span>
+    </div>
 
     <p>標準は業者を規制するものですが、情報源ランクは本質的に自社の資産の問題です。Cから抜け出す道は、標準自身がB級とみなす情報源を築くことです。ICP届出済みの中国語サイト、百度百科の項目、知乎や百家号の機関アカウント、そして時間をかけて築く中国の主要メディアや業界団体による独自報道です。</p>
 
