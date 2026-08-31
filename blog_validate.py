@@ -311,6 +311,24 @@ def check_stat_number_overflow(html, result):
         result.add("stat-number 溢出警告(>8字符, 建议1.2rem)", True)
 
 
+# 模板 stats-grid 占位值（规则#27）。三语 value 一致，仅标签本地化，故按 value 检测。
+PLACEHOLDER_STAT_VALUES = {"¥1–5", "60–80%", "500M+", "¥6,980"}
+
+
+def check_stats_grid_placeholder(html, result):
+    """检查 stats-grid 是否残留模板占位数据（¥1–5/60–80%/500M+/¥6,980）。
+
+    规则#27：rebuild_blog.py 对 MD 未含 stats-grid 的文章注入默认占位 4 卡
+    （¥1–5 Avg CPC / 60–80% cost / 500M+ users / ¥6,980 Aicgou）。占位值三语
+    一致（标签本地化：JA「愛採購年会費」/ KO「애채구 연간 회비」），故必须按
+    stat-number 的**值**检测，而非 grep 标签文字（Aicgou 仅 EN 标签命中会漏 JA/KO）。
+    """
+    nums = re.findall(r'class="stat-number"[^>]*>([^<]+)<', html)
+    hit = [n.strip() for n in nums if n.strip() in PLACEHOLDER_STAT_VALUES]
+    result.add("stats-grid 无占位数据", len(hit) == 0,
+               f"占位残留: {sorted(set(hit))}" if hit else "")
+
+
 # ============================================================
 # 列表页专项检查（分类本地化 / emoji / 导航翻译）
 # ============================================================
@@ -415,6 +433,7 @@ def validate_blog(slug, lang="en"):
         check_visual_components(html, result)
         check_comparison_table_tag(html, result)
         check_stat_number_overflow(html, result)
+        check_stats_grid_placeholder(html, result)
 
     # === 输出报告 ===
     return result.report()
