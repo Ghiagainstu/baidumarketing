@@ -225,14 +225,14 @@
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-bottom-color: var(--gray-200); color: var(--gray-600); background: var(--gray-100); }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    [data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+    [data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+    [data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -370,9 +370,7 @@
     <h2>현지 브랜드보다 해외 브랜드에 더 중요한 이유</h2>
 
     <div class="callout callout-insight">
-      <span class="callout-icon">💡</span>
-      <div><strong>시차 문제는 실제입니다.</strong> 광저우에서 현지 시간 오후 3시에 들어온 B2B 문의는 뉴욕에서는 오전 3시에 도착합니다. 휴먼 핸드오프가 없다면, AI가 일반적인 답변을 내놓거나(리드가 식어버림) 아니면 귀하의 팀이 깰 때까지 미답변 상태로 남습니다(그 사이 리드는 다른 곳에 연락합니다).</div>
-    </div>
+      <strong>💡 시차 문제는 실제입니다.</strong> 광저우에서 현지 시간 오후 3시에 들어온 B2B 문의는 뉴욕에서는 오전 3시에 도착합니다. 휴먼 핸드오프가 없다면, AI가 일반적인 답변을 내놓거나(리드가 식어버림) 아니면 귀하의 팀이 깰 때까지 미답변 상태로 남습니다(그 사이 리드는 다른 곳에 연락합니다).</div>
 
     <p>현지 중국 기업에게 이 기능은 있으면 좋은 정도입니다. 그러나 해외 브랜드에게는 리드를 확보하느냐 완전히 잃느냐를 가르는 결정적 차이입니다.</p>
 
@@ -463,9 +461,7 @@
     <h2>함정: 여전히 중국어가 필요합니다</h2>
 
     <div class="callout callout-warning">
-      <span class="callout-icon">⚠️</span>
-      <div><strong>Merchant Agent는 전적으로 중국어로 작동합니다.</strong> 에스컬레이션된 대화를 받는 핸드오프 팀은 중국어 역량이 필요합니다. AI가 초기 필터링을 담당하지만, 실제로 계약을 맺는 것은 여전히 중국어로 진행해야 합니다.</div>
-    </div>
+      <strong>⚠️ Merchant Agent는 전적으로 중국어로 작동합니다.</strong> 에스컬레이션된 대화를 받는 핸드오프 팀은 중국어 역량이 필요합니다. AI가 초기 필터링을 담당하지만, 실제로 계약을 맺는 것은 여전히 중국어로 진행해야 합니다.</div>
 
     <p>이는 대부분의 해외 브랜드가 직면하는 구조적 장벽입니다. AI를 설정하고, 트리거를 구성하며, 핸드오프 흐름을 최적화할 수 있지만, 귀하 팀(혹은 파트너 팀) 중 누군가는 전화를 받고 중국어로 대화해야 합니다.</p>
 
@@ -534,7 +530,7 @@
 
     <section class="related-section">
     <div class="container">
-      <h2>블로그 다른 글</h2>
+      <h2>관련 기사</h2>
       <div class="related-grid">
         <a href="/ko/blog/baidu-merchant-agent-crm-handoff-2026" class="related-card">
           <span>플랫폼</span>
