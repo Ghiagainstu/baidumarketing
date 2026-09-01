@@ -110,9 +110,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -181,11 +178,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -265,12 +257,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -314,15 +300,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
 
-    /* Callout */
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
 
     /* Process Steps */
     .process-steps { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
@@ -375,6 +352,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .cta-box p { font-size: 1rem; margin-bottom: 24px; opacity: .9; color: #fff; }
     .cta-btn { display: inline-block; background: #fff; color: var(--blue) !important; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none !important; transition: transform var(--transition-base), box-shadow var(--transition-base); }
     .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 </head>
 <body>
@@ -454,10 +440,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><strong>SEO(검색 엔진 최적화):</strong> 콘텐츠, 기술 구조, 권위 신호를 통해 웹사이트의 오가닉 순위를 개선합니다. 더디지만 한 번 자리 잡으면 지속적인 무료 트래픽을 생성합니다.</p>
 <p>중국 시장에 진입하는 대부분의 B2B 브랜드에는 SEM이 현실적인 출발점입니다. SEO는 6~12개월이 걸리며 아직 보유하지 않았을 수 있는 콘텐츠 자산이 필요합니다.</p>
 
-<div class="callout tip">
-  <span class="callout-icon">💡</span>
-  <p><strong>핵심 인사이트:</strong> 중국 시장에 진입하는 대부분의 B2B 브랜드에는 SEM이 현실적인 출발점입니다. SEO는 6~12개월이 걸리며 아직 보유하지 않았을 수 있는 콘텐츠 자산이 필요합니다.</p>
-</div>
+<div class="callout callout-tip"> <p><strong>💡 핵심 인사이트:</strong> 중국 시장에 진입하는 대부분의 B2B 브랜드에는 SEM이 현실적인 출발점입니다. SEO는 6~12개월이 걸리며 아직 보유하지 않았을 수 있는 콘텐츠 자산이 필요합니다.</p> </div>
 <p>바이두의 검색 광고는 B2B 특화 기능을 제공합니다: 검색 결과에 내장된 제품 사양표, 클릭 없이 볼 수 있는 동영상 쇼케이스, CRM으로 직접 제출되는 리드 캡처 폼. 이것들이 리서치 단계의 마찰을 줄입니다.</p>
 <h2>3단계: 결정을 움직이는 콘텐츠 제작</h2>
 <p>B2B 구매는 신뢰를 필요로 합니다. 신뢰는 전문성을 시연하고, 능력을 증명하며, 이의를 다루는 콘텐츠로 구축됩니다.</p>
@@ -516,7 +499,29 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 </div>
 </article>
   </main>
-  <footer>
+    <section class="related-section">
+    <div class="container">
+      <h2>관련 기사</h2>
+      <div class="related-grid">
+        <a href="/ko/blog/baidu-keyword-match-types-guide" class="related-card">
+          <span>시장 인사이트</span>
+          <h4>바이두 키워드 매치 타입: 왜 이렇게 많은 유사 키워드가 필요한가요?</h4>
+          <p>바이두는 Exact, Phrase, Core Phrase, Broad 등 5가지 매치 타입을 제공하며 Google과 달리 BMM이 없습니다. CPC를 낮추기 위한 매치 타입 전략과 유사 키워드가 필요한 이유를 알아봅니다.</p>
+        </a>
+        <a href="/ko/blog/how-much-does-baidu-ppc-cost" class="related-card">
+          <span>시장 인사이트</span>
+          <h4>바이두 PPC 비용은 얼마인가요? 가격, CPC, 예산 가이드</h4>
+          <p>바이두 PPC는 선불 모델로 최소 충전액 ¥2,400(~$330)부터 시작합니다. CPC 계산 방식, 실제 과금 항목, 예산 통제, 그리고 바이두의 악성 클릭 자동 필터링을 알아보세요.</p>
+        </a>
+        <a href="/ko/blog/baidu-vs-google-ppc-differences" class="related-card">
+          <span>시장 인사이트</span>
+          <h4>바이두 vs 구글: PPC 광고의 7가지 핵심 차이점</h4>
+          <p>바이두와 구글 PPC 광고는 서로 다른 시장을 위해 만들어졌습니다. Brand Zone, 광고 형식, 컴플라이언스, 계정 개설, 피드 광고, 기기 타겟팅, 접속 제한 등 해외 광고주가 알아야 할 7가지 핵심 차이점을 확인하세요.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+<footer>
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
@@ -552,7 +557,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단 복제를 금합니다.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단전재를 금지합니다.</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

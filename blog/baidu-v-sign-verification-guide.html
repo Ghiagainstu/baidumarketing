@@ -105,9 +105,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -174,11 +171,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -291,12 +283,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
 .takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
@@ -368,6 +354,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .v-level-card:last-child { border-left: 4px solid #F59E0B; }
 [data-theme="dark"] .v-level-card { background: var(--gray-100); border-color: var(--gray-200); }
 [data-theme="dark"] .v-level-info h4 { color: var(--gray-900); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 <script type="application/ld+json">
   {
@@ -542,9 +537,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
           </ul>
 
           <div class="callout callout-insight">
-            <span class="callout-icon">💡</span>
-            <div><strong>Why It Works</strong><p>The V sign addresses a specific problem in the Chinese market: consumers have been burned by fake products and scam listings. A Baidu-verified badge signals that a real company stands behind the result. For foreign brands without local recognition, this is one of the fastest ways to earn initial trust.</p></div>
-          </div>
+      <strong>💡 Why It Works</strong>
+      <p>The V sign addresses a specific problem in the Chinese market: consumers have been burned by fake products and scam listings. A Baidu-verified badge signals that a real company stands behind the result. For foreign brands without local recognition, this is one of the fastest ways to earn initial trust.</p>
+    </div>
 
           <h2>Annual Renewal: What You Need to Know</h2>
 
@@ -556,17 +551,17 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
           <p>The critical deadline: submit the new documents at least <strong>30 days before</strong> the expiration date. When Baidu processes the renewal of your Business Registration Certificate, it triggers a special approval process. If you miss the deadline, your account will be <strong>rejected</strong>, and all account activities will be paused on the expiry date. Once the authentication is approved, the account resumes normal operation. The process typically takes 3 to 5 business days, though in practice it often completes in 1 to 3 days.</p>
 
           <div class="callout callout-warning">
-            <span class="callout-icon">⚠️</span>
-            <div><strong>Critical</strong><p>Your account cannot have a zero balance when the renewal process runs. Make sure there is sufficient funds before the authentication deadline hits. A zero balance will block the process entirely.</p></div>
-          </div>
+      <strong>⚠️ Critical</strong>
+      <p>Your account cannot have a zero balance when the renewal process runs. Make sure there is sufficient funds before the authentication deadline hits. A zero balance will block the process entirely.</p>
+    </div>
 
           <h3>Registrations with No Expiration Date</h3>
           <p>For business registrations that never expire, Baidu still requires annual censorship of your account. The difference: you do not need to submit any documents. You simply ask Baidu to start the annual review process. Your account will be paused on the anniversary date until the review passes, then it resumes. The same 3 to 5 business day timeline applies.</p>
 
           <div class="callout callout-tip">
-            <span class="callout-icon">✅</span>
-            <div><strong>From Experience</strong><p>The annual renewal process often completes faster than the stated timeline. We have seen most renewals go through in 1 to 3 business days instead of the standard 5. But we always recommend starting 30 days early to account for any document issues.</p></div>
-          </div>
+      <strong>✅ From Experience</strong>
+      <p>The annual renewal process often completes faster than the stated timeline. We have seen most renewals go through in 1 to 3 business days instead of the standard 5. But we always recommend starting 30 days early to account for any document issues.</p>
+    </div>
 
           <h2>The Cost</h2>
           <p>The V sign verification costs <strong>CNY 600 per year</strong>. At roughly $85 USD, it is a small price for the trust and compliance it provides. Compare that to the cost of having your account paused for missing the deadline — the annual fee looks like a bargain.</p>

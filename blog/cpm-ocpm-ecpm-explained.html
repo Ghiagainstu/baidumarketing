@@ -105,9 +105,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -174,11 +171,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -258,12 +250,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
 .takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
@@ -314,6 +300,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
   <script type="application/ld+json">
   {
@@ -325,6 +320,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     "image": "https://www.baidumarketing.com/assets/og-brand-default.png",
     "datePublished": "2026-05-02",
     "dateModified": "2026-05-02",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro Team"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Baidu PPC Pro",
@@ -434,9 +433,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </div>
 
         <div class="callout callout-insight">
-          <span class="callout-icon">🎯</span>
-          <div><strong>Bottom line:</strong> You bid via oCPM, the engine ranks by eCPM, and the market price surfaces as CPM. Get this chain right and you stop guessing why your traffic costs what it does.</div>
-        </div>
+      <strong>🎯 Bottom line:</strong>
+      You bid via oCPM, the engine ranks by eCPM, and the market price surfaces as CPM. Get this chain right and you stop guessing why your traffic costs what it does.
+    </div>
 
         <h2>🔵 CPM: Not Just "How Expensive Traffic Is"</h2>
 
@@ -447,9 +446,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <p>What you need to know: CPM is an <strong>outcome</strong>, not a lever you pull. You don't "set CPM" — the market calculates it. Trying to optimize CPM directly is like trying to control room temperature by staring at a thermometer.</p>
 
         <div class="callout callout-warning">
-          <span class="callout-icon">⚠️</span>
-          <div><strong>Common mistake:</strong> "My CPM is too high, I need to lower it." That's like saying your speedometer is too high. CPM is a signal. The question is <em>why</em> it's high — your bid, your targeting, or your ad quality.</div>
-        </div>
+      <strong>⚠️ Common mistake:</strong>
+      "My CPM is too high, I need to lower it." That's like saying your speedometer is too high. CPM is a signal. The question is <em>why</em> it's high — your bid, your targeting, or your ad quality.
+    </div>
 
         <h2>🟣 oCPM: Your Conversation With the System</h2>
 
@@ -460,9 +459,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <p>Think of oCPM as the input. It's your <strong>bidding strategy</strong>, not a cost metric. If you're running lead-gen or ecommerce campaigns on Baidu, this is likely the model you should be using.</p>
 
         <div class="callout callout-tip">
-          <span class="callout-icon">✅</span>
-          <div><strong>Pro tip:</strong> oCPM works best when you have enough conversion data (30+ conversions per week per ad group). Without that, the system doesn't have enough signal to optimize effectively.</div>
-        </div>
+      <strong>✅ Pro tip:</strong>
+      oCPM works best when you have enough conversion data (30+ conversions per week per ad group). Without that, the system doesn't have enough signal to optimize effectively.
+    </div>
 
         <h2>🟡 eCPM: The Engine Nobody Sees</h2>
 
@@ -473,9 +472,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <p>eCPM is the <strong>unseen ranking system</strong>. You never "set" eCPM — it's calculated by the platform in real time for every single auction. And it's the single biggest factor in whether your ad shows up at all.</p>
 
         <div class="callout callout-warning">
-          <span class="callout-icon">⚡</span>
-          <div><strong>This is where most optimization effort should go.</strong> Instead of obsessing over CPM, focus on improving your quality score — relevant ad copy, tight keyword targeting, good landing pages. That's what pushes eCPM up and your actual cost down.</div>
-        </div>
+      <strong>⚡ This is where most optimization effort should go.</strong>
+      Instead of obsessing over CPM, focus on improving your quality score — relevant ad copy, tight keyword targeting, good landing pages. That's what pushes eCPM up and your actual cost down.
+    </div>
 
         <h2>🔁 How They Connect</h2>
 

@@ -136,11 +136,6 @@
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -204,12 +199,6 @@
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 
 /* Blockquote (article-content) */
@@ -288,11 +277,6 @@
 
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Article Meta Enhancement */
 .article-meta { display: flex; align-items: center; gap: 16px; font-size: .85rem; color: #9CA3AF; flex-wrap: wrap; margin-top: 16px; }
@@ -319,10 +303,6 @@
 .process-step:hover::before { opacity: 1; }
 
 /* Callout Stacked (vertical) */
-.callout-stacked { flex-direction: column; align-items: center; text-align: center; }
-.callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
-.callout-stacked .callout-content strong { display: block; font-size: 1.05rem; margin-bottom: 8px; color: #111827; }
-.callout-stacked .callout-content p { font-size: .9rem; color: #6B7280; line-height: 1.7; margin: 0; }
 
 /* Platform Pills Enhancement */
 .platform-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
@@ -394,6 +374,15 @@
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 /* ===== End Enhanced Visual Styles ===== */
 
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
   <script type="application/ld+json">
   {
@@ -405,6 +394,10 @@
     "image": "https://www.baidumarketing.com/assets/og-brand-default.png",
     "datePublished": "2026-05-03",
     "dateModified": "2026-05-03",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro チーム"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Baidu PPC Pro",
@@ -505,9 +498,9 @@
         </table>
 
         <div class="callout callout-insight">
-          <span class="callout-icon">💡</span>
-          <div><strong>ブランド訴求型＝認知への課金。</strong>成果重視型＝<strong>成果への課金。</strong>これら2つは異なる課金モデルを必要とします。誤った課金モデルを使用することは、百度で予算を無駄にする最も早い方法の1つです。</div>
-        </div>
+      <strong>💡 ブランド訴求型＝認知への課金。</strong>
+      成果重視型＝<strong>成果への課金。</strong>これら2つは異なる課金モデルを必要とします。誤った課金モデルを使用することは、百度で予算を無駄にする最も早い方法の1つです。
+    </div>
 
         <h2>📋 各モデルを詳しく解説</h2>
 
@@ -520,9 +513,9 @@
         <p><strong>向いている用途：</strong>検索意図を捉えたリード獲得、クリックから成果への導線が明確なキャンペーン。</p>
 
         <div class="callout callout-warning">
-          <span class="callout-icon">⚠️</span>
-          <div><strong>注意：</strong>低品質なクリックはクリック単価（ CPC）を上昇させます。ターゲティングの範囲が広がりすぎたり、クリエイティブが誤解を招く内容だったりすると、コンバージョンにつながらないクリックにも費用を支払うことになります。CPCキャンペーンには必ず否認キーワードリストとオーディエンス除外を組み合わせてください。</div>
-        </div>
+      <strong>⚠️ 注意：</strong>
+      低品質なクリックはクリック単価（ CPC）を上昇させます。ターゲティングの範囲が広がりすぎたり、クリエイティブが誤解を招く内容だったりすると、コンバージョンにつながらないクリックにも費用を支払うことになります。CPCキャンペーンには必ず否認キーワードリストとオーディエンス除外を組み合わせてください。
+    </div>
 
         <h3>oCPM（Optimized CPM／最適化クリック単価）</h3>
         <p>目標費用を設定すると、百度のシステムがリアルタイムで入札を調整し、その費用内でコンバージョンを最大化します。oCPMは百度の成果重視型フィードキャンペーンで最も主流のモデルです。システムが十分に学習できるだけのコンバージョンデータがある場合（広告グループあたり週30件以上）に最も効果を発揮します。</p>
@@ -580,9 +573,9 @@
         </table>
 
         <div class="callout callout-tip">
-          <span class="callout-icon">✅</span>
-          <div><strong>経験則：</strong>コンバージョンを正確にトラッキングできない場合は、手動CPCを続けてください。トラッキング可能でデータ量も十分な場合は、oCPMまたはoCPCに移行しましょう。imp数だけがKPIの場合は、成果重視型キャンペーンをCPMで実施しないでください。</div>
-        </div>
+      <strong>✅ 経験則：</strong>
+      コンバージョンを正確にトラッキングできない場合は、手動CPCを続けてください。トラッキング可能でデータ量も十分な場合は、oCPMまたはoCPCに移行しましょう。imp数だけがKPIの場合は、成果重視型キャンペーンをCPMで実施しないでください。
+    </div>
 
         <h2>🔄 ブランド訴求とパフォーマンスを組み合わせる落とし穴</h2>
 
@@ -622,7 +615,7 @@
 
 <section class="related-section">
   <div class="container">
-    <h2>📚 おすすめの記事</h2>
+    <h2>関連記事</h2>
     <div class="related-grid">
       <a href="/ja/blog/cpm-ocpm-ecpm-explained" class="related-card">
         <span>料金モデル</span>
@@ -679,7 +672,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

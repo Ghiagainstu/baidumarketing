@@ -196,14 +196,6 @@
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -255,7 +247,16 @@
     html[lang="ko"] .nav-links { gap: 12px; font-size: .8rem; }
     html[lang="ko"] .nav-links a { white-space: nowrap; }
     html[lang="ko"] .nav-cta { font-size: .82rem; padding: 8px 18px; }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -306,17 +307,15 @@
         <p>'키워드 노출 0 진단' 도구는 귀하의 키워드가 광고를 노출하지 않는 이유를 분석합니다. 진단은 5개 차원으로 진행됩니다.</p>
 
         <div class="callout callout-insight">
-          <span class="callout-icon">💡</span>
-          <div><strong>5가지 진단 차원:</strong>
-            <ol style="margin:10px 0 0;padding-left:20px;">
+      <strong>💡 5가지 진단 차원:</strong>
+      <ol style="margin:10px 0 0;padding-left:20px;">
               <li>작업 생성 및 쿼리 설정</li>
               <li>상세 진단 결과</li>
               <li>구체적인 최적화 권장 사항</li>
               <li>기본 계정 정보</li>
               <li>고객 운영 분석</li>
             </ol>
-          </div>
-        </div>
+    </div>
 
         <p>이 도구는 광고 게재 파이프라인의 모든 단계에 걸쳐 키워드를 진단합니다.</p>
         <ul>
@@ -392,7 +391,7 @@
 
   <section class="related-section">
     <div class="container">
-      <h2>블로그 다른 글</h2>
+      <h2>관련 기사</h2>
       <div class="related-grid">
         <a href="/ko/blog/baidu-ad-performance-diagnostic-tool" class="related-card">
           <span>검색 광고</span>

@@ -136,17 +136,12 @@
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
     .takeaway-box-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
     .takeaway-box-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
-    .takeaway-box-box ul li::before { content: '¹3'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .takeaway-box-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
     .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
     .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
@@ -204,12 +199,6 @@
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 
 /* Blockquote (article-content) */
@@ -288,11 +277,6 @@
 
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Article Meta Enhancement */
 .article-meta { display: flex; align-items: center; gap: 16px; font-size: .85rem; color: #9CA3AF; flex-wrap: wrap; margin-top: 16px; }
@@ -319,10 +303,6 @@
 .process-step:hover::before { opacity: 1; }
 
 /* Callout Stacked (vertical) */
-.callout-stacked { flex-direction: column; align-items: center; text-align: center; }
-.callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
-.callout-stacked .callout-content strong { display: block; font-size: 1.05rem; margin-bottom: 8px; color: #111827; }
-.callout-stacked .callout-content p { font-size: .9rem; color: #6B7280; line-height: 1.7; margin: 0; }
 
 /* Platform Pills Enhancement */
 .platform-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
@@ -466,6 +446,15 @@
   .scenario-metrics { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
   <script type="application/ld+json">
   {
@@ -477,6 +466,10 @@
     "image": "https://www.baidumarketing.com/assets/og-brand-default.png",
     "datePublished": "2026-05-03",
     "dateModified": "2026-05-03",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro チーム"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Baidu PPC Pro",
@@ -591,9 +584,9 @@
         <p>CPMは28から36に上昇しました。この数字だけを切り取って見ると、確かにトラフィックは高くなりました。しかし他のすべての指標は正しい方向に動きました。コンバージョン率は49%向上し、獲得単価は40%低下しました。</p>
 
         <div class="callout callout-insight">
-          <span class="callout-icon">🎯</span>
-          <div><strong>重要なポイント：</strong>高いCPMと高いコンバージョン率の組み合わせは、システムがより質の高いトラフィックプールに広告を配信していることを意味します。インプレッションコストの上昇は、それ自体でペイしているのです。</div>
-        </div>
+      <strong>🎯 重要なポイント：</strong>
+      高いCPMと高いコンバージョン率の組み合わせは、システムがより質の高いトラフィックプールに広告を配信していることを意味します。インプレッションコストの上昇は、それ自体でペイしているのです。
+    </div>
 
         <h2>📉 CPM上昇が悪いサインであるケース</h2>
 
@@ -637,9 +630,9 @@
         </div>
 
         <div class="callout callout-warning">
-          <span class="callout-icon">⚠️</span>
-          <div><strong>CPMを単独で判断してはいけません。</strong>一つの指標だけでパニックになることは、実際には機能しているキャンペーンを潰す最も早い方法です。判断を下す前に、必ずCPMとCTR、CVR、CPAを組み合わせて評価しましょう。</div>
-        </div>
+      <strong>⚠️ CPMを単独で判断してはいけません。</strong>
+      一つの指標だけでパニックになることは、実際には機能しているキャンペーンを潰す最も早い方法です。判断を下す前に、必ずCPMとCTR、CVR、CPAを組み合わせて評価しましょう。
+    </div>
 
         <h2>🔍 実際に効果のあった改善策</h2>
 
@@ -742,7 +735,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

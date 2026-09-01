@@ -138,11 +138,6 @@
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -206,12 +201,6 @@
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 
 /* Blockquote (article-content) */
@@ -290,11 +279,6 @@
 
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Article Meta Enhancement */
 .article-meta { display: flex; align-items: center; gap: 16px; font-size: .85rem; color: #9CA3AF; flex-wrap: wrap; margin-top: 16px; }
@@ -340,10 +324,6 @@
 .process-step-content p { font-size: .9rem; color: #6B7280; margin: 0; line-height: 1.6; }
 
 /* Callout Stacked (vertical) */
-.callout-stacked { flex-direction: column; align-items: center; text-align: center; }
-.callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
-.callout-stacked .callout-content strong { display: block; font-size: 1.05rem; margin-bottom: 8px; color: #111827; }
-.callout-stacked .callout-content p { font-size: .9rem; color: #6B7280; line-height: 1.7; margin: 0; }
 
 /* Platform Pills Enhancement */
 .platform-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
@@ -446,6 +426,15 @@
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 /* ===== End Enhanced Visual Styles ===== */
 
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 </head>
 <body>
@@ -541,9 +530,9 @@
 <p>海外ブランドにとって、これは一見大きなメリットに見えます。かつては百度の専門家が必要だった技術的な最適化作業の多くを、プラットフォーム自身が担えるようになったからです。</p>
 
 <div class="callout callout-insight">
-  <span class="callout-icon">💡</span>
-  <div><strong>重要な洞察：</strong>プラットフォームが力を発揮する前提として、アカウントが最初から正しく構成されていなければなりません。コンバージョントラッキングが正確に設定され、ビジネスデータが適切に入力されていることが条件です。AIは強力ですが、正しい入力があって初めて機能します。</div>
-</div>
+      <strong>💡 重要な洞察：</strong>
+      プラットフォームが力を発揮する前提として、アカウントが最初から正しく構成されていなければなりません。コンバージョントラッキングが正確に設定され、ビジネスデータが適切に入力されていることが条件です。AIは強力ですが、正しい入力があって初めて機能します。
+    </div>
 
 <h3>2️⃣ 2. B2B発見プラットフォームの拡張</h3>
 
@@ -598,9 +587,9 @@
 <p>ほとんどの海外企業は、これらを一つも持っていません。たとえWFOEや合弁会社を通じて持っていたとしても、完全に中国語の管理画面を、時差を超え、現地のコンプライアンス要件を満たしながら運用する複雑さは相当です。</p>
 
 <div class="callout callout-tip">
-  <span class="callout-icon">✅</span>
-  <div><strong>BPPのソリューション：</strong>BPPがアカウントを保有し、インフラを管理します。お客様はキャンペーンと成果を手に入れる。まず中国法人を設立する必要はありません。</div>
-</div>
+      <strong>✅ BPPのソリューション：</strong>
+      BPPがアカウントを保有し、インフラを管理します。お客様はキャンペーンと成果を手に入れる。まず中国法人を設立する必要はありません。
+    </div>
 
 
 <h2>なぜ2026年は待てないのか</h2>
@@ -765,7 +754,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

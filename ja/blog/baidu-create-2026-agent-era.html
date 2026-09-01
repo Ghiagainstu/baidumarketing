@@ -136,11 +136,6 @@
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -224,9 +219,6 @@
 .comparison-table tr:last-child td { border-bottom: none; }
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; border-top: 5px solid; display: flex; gap: 16px; align-items: flex-start; }
-.callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
-.callout div { flex: 1; }
 
 /* Article Meta Enhancement */
 .article-meta { display: flex; align-items: center; gap: 16px; font-size: .85rem; color: #9CA3AF; flex-wrap: wrap; margin-top: 16px; }
@@ -248,7 +240,16 @@
   .comparison-table { font-size: .85rem; }
   .comparison-table th, .comparison-table td { padding: 10px 12px; }
 }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -315,9 +316,9 @@
 <p>DuMateはデスクトップとモバイルの両方で利用可能で、デバイス間でリアルタイム同期されます。ベンチマークテストでは、複数の国際評価で最先端の結果を達成しました。</p>
 
 <div class="callout callout-insight">
-  <span class="callout-icon">💡</span>
-  <div><strong>インサイト：</strong>DuMateはチャットボットではありません。タスクを完了するエージェントです——市場調査、競合分析、レポート作成を、ユーザーが手動で結果をつなぎ合わせる必要なく実行します。海外の広告主にとって、中国のバイヤーが検索広告をクリックする前にAIエージェントを使って製品をリサーチ・比較する時代が近づいていることを意味します。</div>
-</div>
+      <strong>💡 インサイト：</strong>
+      DuMateはチャットボットではありません。タスクを完了するエージェントです——市場調査、競合分析、レポート作成を、ユーザーが手動で結果をつなぎ合わせる必要なく実行します。海外の広告主にとって、中国のバイヤーが検索広告をクリックする前にAIエージェントを使って製品をリサーチ・比較する時代が近づいていることを意味します。
+    </div>
 
 <h2>🎬 その他の3つのエージェント製品</h2>
 
@@ -349,9 +350,9 @@
 <p>百度クラウドは「大規模エージェントアプリケーション向けの新フルスタックAIクラウド」に再定位されました。プラットフォームがエージェントワークロードに最適化されることを意味し——広告の配信方法、リード獲得方法、キャンペーン最適化に影響します。</p>
 
 <div class="callout callout-warning">
-  <span class="callout-icon">⚠️</span>
-  <div><strong>注意：</strong>これらのエージェント機能は百度の広告エコシステムに統合されています。DuMateによる市場調査、一鏡によるデジタルヒューマンコンテンツ、エージェント最適化キャンペーンを利用するには、適切な中国の事業資格を持つ百度アカウントが必要です。</div>
-</div>
+      <strong>⚠️ 注意：</strong>
+      これらのエージェント機能は百度の広告エコシステムに統合されています。DuMateによる市場調査、一鏡によるデジタルヒューマンコンテンツ、エージェント最適化キャンペーンを利用するには、適切な中国の事業資格を持つ百度アカウントが必要です。
+    </div>
 
 <h2>🚧 海外企業の障壁</h2>
 
@@ -459,7 +460,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

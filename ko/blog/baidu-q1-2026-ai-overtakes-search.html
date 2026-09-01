@@ -192,14 +192,6 @@
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-bottom-color: var(--gray-200); color: var(--gray-600); background: var(--gray-100); }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -251,7 +243,16 @@
     html[lang="ko"] .nav-links { gap: 12px; font-size: .8rem; }
     html[lang="ko"] .nav-links a { white-space: nowrap; }
     html[lang="ko"] .nav-cta { font-size: .82rem; padding: 8px 18px; }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -323,9 +324,9 @@
 <h2>🧠 광고주에게 미치는 영향</h2>
 
 <div class="callout callout-insight">
-  <span class="callout-icon">💡</span>
-  <div><strong>핵심 인사이트:</strong> 검색 광고는 감소하고 있지만 사라지는 것은 아닙니다. 한 분기에만 1,260억 위안의 매출을 올렸습니다. 변하고 있는 것은 바이두의 전략적 우선순위입니다. 이제 AI 제품이 핵심이며, 광고 기능은 점점 AI 인프라를 기반으로 구축될 것입니다.</div>
-</div>
+      <strong>💡 핵심 인사이트:</strong>
+      검색 광고는 감소하고 있지만 사라지는 것은 아닙니다. 한 분기에만 1,260억 위안의 매출을 올렸습니다. 변하고 있는 것은 바이두의 전략적 우선순위입니다. 이제 AI 제품이 핵심이며, 광고 기능은 점점 AI 인프라를 기반으로 구축될 것입니다.
+    </div>
 
 <h3>1. AI 기반 광고 도구에 더 많은 투자가 이루어질 것</h3>
 
@@ -342,9 +343,9 @@
 <h2>💰 해외 브랜드를 위한 비용 관점</h2>
 
 <div class="callout callout-warning">
-  <span class="callout-icon">⚠️</span>
-  <div><strong>리얼리티 체크:</strong> 바이두의 AI 전환은 광고를 위한 기본 요건을 바꾸지 않습니다. 여전히 중국 법인, 중국어 광고 카피, 중국 은행 계좌가 필요합니다. 변하는 것은 진입 후 사용할 수 있는 도구의 품질입니다.</div>
-</div>
+      <strong>⚠️ 리얼리티 체크:</strong>
+      바이두의 AI 전환은 광고를 위한 기본 요건을 바꾸지 않습니다. 여전히 중국 법인, 중국어 광고 카피, 중국 은행 계좌가 필요합니다. 변하는 것은 진입 후 사용할 수 있는 도구의 품질입니다.
+    </div>
 
 <p>Kunlun(쿤룬) 칩 P800의 배포와 Tianchi(톈츠) 256카드 슈퍼 노드(2026년 6월 출시 예정)는 바이두가 AI 추론을 더 저렴하고 빠르게 수행할 수 있음을 의미합니다. 광고주에게는 AI 생성 광고 변형당 비용 절감, 더 반응성이 뛰어난 Merchant Agent 대화, 더 나은 실시간 입찰 최적화로 이어질 것입니다.</p>
 
@@ -384,7 +385,7 @@
 
   <section class="related-section">
     <div class="container">
-      <h2>블로그 다른 글</h2>
+      <h2>관련 기사</h2>
       <div class="related-grid">
         <a href="/ko/blog/baidu-ernie-5-1-release" class="related-card">
           <span>플랫폼</span>

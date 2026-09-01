@@ -138,11 +138,6 @@
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -206,12 +201,6 @@
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 
 /* Blockquote (article-content) */
@@ -290,11 +279,6 @@
 
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Article Meta Enhancement */
 .article-meta { display: flex; align-items: center; gap: 16px; font-size: .85rem; color: #9CA3AF; flex-wrap: wrap; margin-top: 16px; }
@@ -333,10 +317,6 @@
 .stats-grid-3 { grid-template-columns: repeat(3, 1fr); }
 
 /* Callout Stacked (vertical) */
-.callout-stacked { flex-direction: column; align-items: center; text-align: center; }
-.callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
-.callout-stacked .callout-content strong { display: block; font-size: 1.05rem; margin-bottom: 8px; color: #111827; }
-.callout-stacked .callout-content p { font-size: .9rem; color: #6B7280; line-height: 1.7; margin: 0; }
 
 /* Platform Pills Enhancement */
 .platform-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
@@ -420,6 +400,15 @@
 .funnel-stage:nth-child(3) { border-top: 4px solid #10B981; }
 @media (max-width: 640px) { .funnel-stages { grid-template-columns: 1fr; } }
 
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 </head>
 <body>
@@ -497,9 +486,9 @@
 <p>これらの答えがなければ、広告は間違った人に届きます。</p>
 
 <div class="callout callout-insight">
-  <span class="callout-icon">💡</span>
-  <div><strong>具体例：</strong>私たちが支援したある機械メーカーは、当初製造業全般に広くターゲティングしていました。百度のオーディエンス分析ツールで顧客データを分析した結果、広東省の中規模電子機器組立工場の調達担当者で「自動検査装置」を検索している層に絞り込みました。3ヶ月で適格リード単価が<strong>45%低下</strong>しました。</div>
-</div>
+      <strong>💡 具体例：</strong>
+      私たちが支援したある機械メーカーは、当初製造業全般に広くターゲティングしていました。百度のオーディエンス分析ツールで顧客データを分析した結果、広東省の中規模電子機器組立工場の調達担当者で「自動検査装置」を検索している層に絞り込みました。3ヶ月で適格リード単価が<strong>45%低下</strong>しました。
+    </div>
 
 <p>顧客プロファイリングは一回限りの作業ではありません。市場は変化し、2年後の理想顧客は今日の理想顧客とは異なるかもしれません。定期的な見直しと改善のプロセスを組み込みましょう。</p>
 
@@ -556,9 +545,9 @@
 <p>コンテンツ制作はリソースを消費します。</p>
 
 <div class="callout callout-tip">
-  <span class="callout-icon">✅</span>
-  <div><strong>ツールのヒント：</strong>百度のAIコンテンツ生成ツールが制作を加速できます。あるクライアントは擎舵（QingDuo）を使って製品マーケティング画像と仕様表を生成し、クリエイティブ制作時間を<strong>70%削減</strong>しながら品質を維持しています。</div>
-</div>
+      <strong>✅ ツールのヒント：</strong>
+      百度のAIコンテンツ生成ツールが制作を加速できます。あるクライアントは擎舵（QingDuo）を使って製品マーケティング画像と仕様表を生成し、クリエイティブ制作時間を<strong>70%削減</strong>しながら品質を維持しています。
+    </div>
 
 
 <h2>ステップ4：データループを閉じる</h2>
@@ -574,9 +563,9 @@
 <p>閉じたループがなければ、どのキャンペーンが機能しているか推測しているだけです。あれば、最適化しているのです。</p>
 
 <div class="callout callout-warning">
-  <span class="callout-icon">⚠️</span>
-  <div><strong>閉じたループなしでは</strong>、どのキャンペーンが機能しているか推測しているだけです。あれば、最適化しているのです。この差は時間とともに複利的に拡大します。</div>
-</div>
+      <strong>⚠️ 閉じたループなしでは</strong>
+      、どのキャンペーンが機能しているか推測しているだけです。あれば、最適化しているのです。この差は時間とともに複利的に拡大します。
+    </div>
 
 
 <h2>ステップ5：自社のデジタルペースを見つける</h2>
@@ -675,7 +664,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

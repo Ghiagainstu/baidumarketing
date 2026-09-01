@@ -109,9 +109,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -180,11 +177,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -292,12 +284,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway - keep light gradient style */
 .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
@@ -422,6 +408,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 </head>
 <body>
@@ -488,9 +483,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>중국 외부에 본사를 둔 기업의 마케팅 디렉터가 이 숫자를 보고 탐색하기로 결정합니다. 몇 주를 조사하며 계정을 어떻게 운영할지 파악하려고 합니다. 중국 사업자 등록 요건, 본토 은행 계좌, 중국 전화번호, 그리고 완전히 중국어로 된 대시보드 사이에서 프로젝트가 정체됩니다. 6개월 후, 아무것도 출시되지 않습니다.</p>
 
 <div class="callout callout-warning">
-  <span class="callout-icon">⚠️</span>
-  <div><strong>흔한 함정:</strong> 대부분의 국제 브랜드는 자격 증명 장벽을 과소평가합니다. 적절한 중국 사업 문서 없이는 가장 유망한 캠페인도 출시에 실패합니다.</div>
-</div>
+      <strong>⚠️ 흔한 함정:</strong>
+      대부분의 국제 브랜드는 자격 증명 장벽을 과소평가합니다. 적절한 중국 사업 문서 없이는 가장 유망한 캠페인도 출시에 실패합니다.
+    </div>
 
 <p>한편, 진입 방법을 찾은 경쟁사들은 조용히 저경쟁 키워드를 확보하고, 7억 중국 소비자가 매일 사용하는 검색 엔진에서 브랜드 존재감을 구축하고 있습니다.</p>
 
@@ -517,9 +512,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>국제 브랜드에게 이것은 겉보기에 중요합니다. 바이두 전문가가 필요했던 많은 기술적 최적화 작업을 이제 플랫폼 자체가 처리할 수 있음을 의미합니다.</p>
 
 <div class="callout callout-insight">
-  <span class="callout-icon">💡</span>
-  <div><strong>핵심 인사이트:</strong> 플랫폼은 계정이 처음부터 올바르게 구조화되어 있고, 정확한 전환 추적과 정확한 비즈니스 데이터가 있을 때만 제대로 작동할 수 있습니다. AI는 강력하지만, 좋은 입력이 있을 때만 그렇습니다.</div>
-</div>
+      <strong>💡 핵심 인사이트:</strong>
+      플랫폼은 계정이 처음부터 올바르게 구조화되어 있고, 정확한 전환 추적과 정확한 비즈니스 데이터가 있을 때만 제대로 작동할 수 있습니다. AI는 강력하지만, 좋은 입력이 있을 때만 그렇습니다.
+    </div>
 
 <h3>2️⃣ 2. B2B 디스커버리 플랫폼 확장</h3>
 
@@ -528,9 +523,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>B2B 브랜드—산업 장비 제조업체, 부품 공급업체, 특수 소재 생산업체—에게 이것은 주소 가능한 수요의 의미 있는 확장입니다.</p>
 
 <div class="callout callout-warning">
-  <span class="callout-icon">🔒</span>
-  <div><strong>자격 증명 요건:</strong> AiCaiGou는 중국 사업 자격 증명이 필요합니다. 현지 법인이나 신뢰할 수 있는 계정 보유자가 없으면 리스팅할 수 없습니다.</div>
-</div>
+      <strong>🔒 자격 증명 요건:</strong>
+      AiCaiGou는 중국 사업 자격 증명이 필요합니다. 현지 법인이나 신뢰할 수 있는 계정 보유자가 없으면 리스팅할 수 없습니다.
+    </div>
 
 <h3>3️⃣ 3. 수요 채널로서의 전자상거래</h3>
 
@@ -573,9 +568,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 </div>
 
 <div class="callout callout-tip">
-  <span class="callout-icon">✅</span>
-  <div><strong>BPP 솔루션:</strong> 우리가 계정을 보유합니다. 인프라를 관리합니다. 귀하는 중국 법적 법인을 먼저 구축할 필요 없이 캠페인과 결과를 얻습니다.</div>
-</div>
+      <strong>✅ BPP 솔루션:</strong>
+      우리가 계정을 보유합니다. 인프라를 관리합니다. 귀하는 중국 법적 법인을 먼저 구축할 필요 없이 캠페인과 결과를 얻습니다.
+    </div>
 
 <p>대부분의 국제 기업은 이 중 어느 것도 갖고 있지 않습니다. 그리고 WFOE나 합작 투자를 통해 갖고 있다 해도, 완전히 중국어로 된 대시보드에서 시간대를跨越하고 현지 컴플라이언스 요구 사항과 함께 계정을 관리하는 운영 복잡성은 상당합니다.</p>
 <h2>💡 왜 2026년이 이것을 더 긴급하게 만드는가</h2>
@@ -658,9 +653,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>중국 외부에 본사를 둔 마케팅 디렉터나 대행사 대표로서 바이두에 관심이 있지만 자격 증명 벽에 계속 부딪히고 있다면—우리가 이야기해야 합니다.</p>
 
 <div class="callout callout-insight">
-  <span class="callout-icon">🎯</span>
-  <div><strong>이미 바이두 캠페인을 운영하고 계신가요?</strong> 다른 대행사나 현지 파트너를 사용하고 있고 성과가 적절한지 확실하지 않다면—우리가 이야기해야 합니다. 현재 설정을 감사하고 최적화 기회를 식별할 수 있습니다.</div>
-</div>
+      <strong>🎯 이미 바이두 캠페인을 운영하고 계신가요?</strong>
+      다른 대행사나 현지 파트너를 사용하고 있고 성과가 적절한지 확실하지 않다면—우리가 이야기해야 합니다. 현재 설정을 감사하고 최적화 기회를 식별할 수 있습니다.
+    </div>
 
 <p>2026년 업그레이드는 바이두를 그 어느 때보다 강력한 채널로 만들었습니다. 또한 실제 전문 지식 없이는 잘 운영하기 어렵게 만들었습니다. 시장이 움직이고 있습니다. 질문은 귀하의 브랜드가 함께 움직이느냐입니다.</p>
 
@@ -681,7 +676,29 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       </div>
     </section>
   </main>
-  <footer>
+    <section class="related-section">
+    <div class="container">
+      <h2>관련 기사</h2>
+      <div class="related-grid">
+        <a href="/ko/blog/baidu-keyword-match-types-guide" class="related-card">
+          <span>시장 인사이트</span>
+          <h4>바이두 키워드 매치 타입: 왜 이렇게 많은 유사 키워드가 필요한가요?</h4>
+          <p>바이두는 Exact, Phrase, Core Phrase, Broad 등 5가지 매치 타입을 제공하며 Google과 달리 BMM이 없습니다. CPC를 낮추기 위한 매치 타입 전략과 유사 키워드가 필요한 이유를 알아봅니다.</p>
+        </a>
+        <a href="/ko/blog/how-much-does-baidu-ppc-cost" class="related-card">
+          <span>시장 인사이트</span>
+          <h4>바이두 PPC 비용은 얼마인가요? 가격, CPC, 예산 가이드</h4>
+          <p>바이두 PPC는 선불 모델로 최소 충전액 ¥2,400(~$330)부터 시작합니다. CPC 계산 방식, 실제 과금 항목, 예산 통제, 그리고 바이두의 악성 클릭 자동 필터링을 알아보세요.</p>
+        </a>
+        <a href="/ko/blog/baidu-vs-google-ppc-differences" class="related-card">
+          <span>시장 인사이트</span>
+          <h4>바이두 vs 구글: PPC 광고의 7가지 핵심 차이점</h4>
+          <p>바이두와 구글 PPC 광고는 서로 다른 시장을 위해 만들어졌습니다. Brand Zone, 광고 형식, 컴플라이언스, 계정 개설, 피드 광고, 기기 타겟팅, 접속 제한 등 해외 광고주가 알아야 할 7가지 핵심 차이점을 확인하세요.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+<footer>
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
@@ -717,7 +734,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단 복제를 금합니다.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단전재를 금지합니다.</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

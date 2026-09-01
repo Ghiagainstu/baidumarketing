@@ -195,14 +195,6 @@
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-bottom-color: var(--gray-200); color: var(--gray-600); background: var(--gray-100); }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout strong { display: block; margin-bottom: 4px; }
-    [data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
-    [data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
-    [data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 
     .takeaway-box {
       background: linear-gradient(180deg, #FFFFFF 0%, #EEF0FF 100%);
@@ -261,7 +253,16 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -407,8 +408,8 @@
       </ul>
 
     <div class="callout callout-insight">
-    <span class="callout-icon">💡</span>
-    <div><strong>なぜ効果があるのか</strong><p>Vサインは中国市場の特定の問題に対処します。消費者は偽物や詐欺リスティングに悩まされてきました。百度認証バッジは、実在する企業がその結果の背後にいることを示します。現地での認知度がない海外ブランドにとって、これは初期の信頼を得る最も速い方法の一つです。</p></div>
+      <strong>💡 なぜ効果があるのか</strong>
+      <p>Vサインは中国市場の特定の問題に対処します。消費者は偽物や詐欺リスティングに悩まされてきました。百度認証バッジは、実在する企業がその結果の背後にいることを示します。現地での認知度がない海外ブランドにとって、これは初期の信頼を得る最も速い方法の一つです。</p>
     </div>
 
     <h2>年次更新：知っておくべきこと</h2>
@@ -422,8 +423,8 @@
     <p>重要な期限：新しい書類は有効期限の<strong>30日前までに</strong>提出してください。百度が事業登録証明書の更新を処理する際、特別な承認プロセスがトリガーされます。期限を過ぎると、アカウントは<strong>拒否</strong>され、有効期限日にすべてのアカウント活動が停止されます。認証が承認されると、アカウントは通常運用を再開します。プロセスには通常3〜5営業日かかりますが、実際には1〜3日で完了することが多いです。</p>
 
     <div class="callout callout-warning">
-    <span class="callout-icon">⚠️</span>
-    <div><strong>重要</strong><p>更新プロセス実行時にアカウント残高がゼロであってはいけません。認証期限前に十分な残高があることを確認してください。残高ゼロはプロセス全体をブロックします。</p></div>
+      <strong>⚠️ 重要</strong>
+      <p>更新プロセス実行時にアカウント残高がゼロであってはいけません。認証期限前に十分な残高があることを確認してください。残高ゼロはプロセス全体をブロックします。</p>
     </div>
 
     <h3>有効期限のない登録</h3>
@@ -431,8 +432,8 @@
     <p>無期限の事業登録の場合でも、百度はアカウントの年次審査を要求します。違いは、書類の提出が不要なことです。百度に年次審査プロセスの開始を依頼するだけです。審査が通過するまで、アカウントは記念日に停止され、その後再開します。同じ3〜5営業日のタイムラインが適用されます。</p>
 
     <div class="callout callout-tip">
-    <span class="callout-icon">✅</span>
-    <div><strong>実務経験より</strong><p>年次更新プロセスは、記載されているタイムラインよりも早く完了することが多いです。標準の5日ではなく、1〜3営業日で更新が完了するケースがほとんどです。ただし、書類の問題に備えて、常に30日前からの着手を推奨します。</p></div>
+      <strong>✅ 実務経験より</strong>
+      <p>年次更新プロセスは、記載されているタイムラインよりも早く完了することが多いです。標準の5日ではなく、1〜3営業日で更新が完了するケースがほとんどです。ただし、書類の問題に備えて、常に30日前からの着手を推奨します。</p>
     </div>
 
     <h2>費用</h2>

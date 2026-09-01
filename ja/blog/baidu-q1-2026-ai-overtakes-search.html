@@ -116,9 +116,6 @@
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-bottom-color: var(--gray-200); color: var(--gray-600); background: var(--gray-100); }
     [data-theme="dark"] .comparison-table tr:nth-child(even) { background: var(--gray-50); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box { background: var(--gray-100); border-color: var(--gray-200); }
     [data-theme="dark"] .article-content li { background: var(--gray-100); border-color: var(--gray-200); color: var(--gray-600); }
     [data-theme="dark"] .article-content li strong { color: #F9FAFB; }
@@ -227,13 +224,6 @@
       .comparison-table th, .comparison-table td { padding: 10px 12px; }
     }
 
-    /* Callout */
-    .callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; border-top: 5px solid; display: flex; gap: 16px; align-items: flex-start; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
-    .callout div { flex: 1; }
 
     /* Takeaway Box */
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
@@ -274,7 +264,16 @@
       .footer-top { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -348,9 +347,9 @@
 <h2>🧠 広告主にとっての意味</h2>
 
 <div class="callout callout-insight">
-  <span class="callout-icon">💡</span>
-  <div><strong>重要なポイント：</strong>検索広告は減少していますが、消滅しているわけではありません。1四半期で1,260億元を生み出しています。変化しているのは百度の戦略的優先順位です。AI製品が焦点となり、広告機能はますますAIインフラの上に構築されていきます。</div>
-</div>
+      <strong>💡 重要なポイント：</strong>
+      検索広告は減少していますが、消滅しているわけではありません。1四半期で1,260億元を生み出しています。変化しているのは百度の戦略的優先順位です。AI製品が焦点となり、広告機能はますますAIインフラの上に構築されていきます。
+    </div>
 
 <h3>1. AI駆動の広告ツールへの投資が加速</h3>
 
@@ -367,9 +366,9 @@
 <h2>💰 海外ブランドにとってのコスト面</h2>
 
 <div class="callout callout-warning">
-  <span class="callout-icon">⚠️</span>
-  <div><strong>現実的な注意：</strong>百度のAI変革は、広告出稿の基本要件を変更しません。中国の事業体、中国語の広告コピー、中国の銀行口座は依然として必要です。変化するのは、参入後に利用できるツールの品質です。</div>
-</div>
+      <strong>⚠️ 現実的な注意：</strong>
+      百度のAI変革は、広告出稿の基本要件を変更しません。中国の事業体、中国語の広告コピー、中国の銀行口座は依然として必要です。変化するのは、参入後に利用できるツールの品質です。
+    </div>
 
 <p>昆侖チップP800の展開と天池256カードスーパーノード（2026年6月ローンチ）により、百度はAI推論をより低コスト・高速で実行できるようになります。広告主にとって、AI生成広告バリエーションの単位コスト低下、より応答性の高い商家智能体会話、より優れたリアルタイム入札最適化への波及が期待されます。</p>
 
@@ -463,7 +462,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

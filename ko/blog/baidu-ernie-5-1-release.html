@@ -192,14 +192,6 @@
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-bottom-color: var(--gray-200); color: var(--gray-600); background: var(--gray-100); }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -251,7 +243,16 @@
       html[lang="ko"] .nav-links { gap: 12px; font-size: .8rem; }
     html[lang="ko"] .nav-links a { white-space: nowrap; }
     html[lang="ko"] .nav-cta { font-size: .82rem; padding: 8px 18px; }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -318,8 +319,8 @@
     <p>이 모델은 AIME26 수학 벤치마크에서 99.6점(도구 사용)을 기록하여 Gemini 3.1 Pro 바로 뒤에 위치했습니다. 광고주에게 더 관련성 높은 점: "표면적 요청을 관통하여 핵심 의도를 포착"하는 능력은 바이두의 광고 매칭 엔진이 검색자가 입력한 내용뿐만 아니라 실제로 원하는 것을 더 잘 이해할 수 있음을 의미합니다.</p>
 
     <div class="callout callout-insight">
-    <span class="callout-icon">💡</span>
-    <div><strong>인사이트:</strong> 더 나은 의도 이해는 낭비되는 클릭이 줄어든다는 것을 의미합니다. 바이두 AI가 "산업용 펌프 공급업체"(구매 준비)와 "산업용 펌프 작동 원리"(조사 중)를 구분할 수 있게 되면, 귀하의 광고가 올바른 오디언스에게 더 자주 도달합니다. 이는 시간이 지남에 따라 전환율을 개선할 것입니다.</div>
+      <strong>💡 인사이트:</strong>
+      더 나은 의도 이해는 낭비되는 클릭이 줄어든다는 것을 의미합니다. 바이두 AI가 "산업용 펌프 공급업체"(구매 준비)와 "산업용 펌프 작동 원리"(조사 중)를 구분할 수 있게 되면, 귀하의 광고가 올바른 오디언스에게 더 자주 도달합니다. 이는 시간이 지남에 따라 전환율을 개선할 것입니다.
     </div>
 
     <h3>2. 크리에이티브 콘텐츠 생성</h3>
@@ -423,7 +424,7 @@
 
   <section class="related-section">
     <div class="container">
-      <h2>블로그 다른 글</h2>
+      <h2>관련 기사</h2>
       <div class="related-grid">
         <a href="/ko/blog/baidu-industry-insights-tool-guide" class="related-card">
           <span>시장 인사이트</span>
@@ -480,7 +481,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단 복제를 금합니다.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단전재를 금지합니다.</div>
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
       </div>

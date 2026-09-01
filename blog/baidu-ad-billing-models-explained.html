@@ -105,9 +105,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -174,11 +171,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -258,12 +250,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
 .takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
@@ -314,6 +300,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
   <script type="application/ld+json">
   {
@@ -325,6 +320,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     "image": "https://www.baidumarketing.com/assets/og-brand-default.png",
     "datePublished": "2026-05-03",
     "dateModified": "2026-05-03",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro Team"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Baidu PPC Pro",
@@ -427,9 +426,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </table>
 
         <div class="callout callout-insight">
-          <span class="callout-icon">💡</span>
-          <div><strong>Brand ads = paying for awareness.</strong> Performance ads = <strong>paying for results.</strong> They require different billing models. Using the wrong one is the single fastest way to waste budget on Baidu.</div>
-        </div>
+      <strong>💡 Brand ads = paying for awareness.</strong>
+      Performance ads = <strong>paying for results.</strong> They require different billing models. Using the wrong one is the single fastest way to waste budget on Baidu.
+    </div>
 
         <h2>📋 The Models, One by One</h2>
 
@@ -442,9 +441,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         <p><strong>Best for:</strong> Search intent campaigns, lead gen with clear click-to-convert paths.</p>
 
         <div class="callout callout-warning">
-          <span class="callout-icon">⚠️</span>
-          <div><strong>Watch out:</strong> Low-quality clicks inflate CPC costs. If your targeting is too broad or your creative is misleading, you will pay for clicks that never convert. Always pair CPC campaigns with negative keyword lists and audience exclusions.</div>
-        </div>
+      <strong>⚠️ Watch out:</strong>
+      Low-quality clicks inflate CPC costs. If your targeting is too broad or your creative is misleading, you will pay for clicks that never convert. Always pair CPC campaigns with negative keyword lists and audience exclusions.
+    </div>
 
         <h3>oCPM (Optimized CPM)</h3>
         <p>You set a target cost, and Baidu's system adjusts bids in real time to maximize conversions at that cost. oCPM is the dominant model for performance-driven feed campaigns on Baidu. It works best when you have enough conversion data (30+ per week per ad group) for the system to learn from.</p>
@@ -502,9 +501,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
         </table>
 
         <div class="callout callout-tip">
-          <span class="callout-icon">✅</span>
-          <div><strong>Rule of thumb:</strong> If you cannot track conversions reliably, stay on CPC. If you can track them and have volume, move to oCPM or oCPC. Never run a performance campaign on CPM unless your only KPI is impressions.</div>
-        </div>
+      <strong>✅ Rule of thumb:</strong>
+      If you cannot track conversions reliably, stay on CPC. If you can track them and have volume, move to oCPM or oCPC. Never run a performance campaign on CPM unless your only KPI is impressions.
+    </div>
 
         <h2>🔄 The Brand + Performance Trap</h2>
 

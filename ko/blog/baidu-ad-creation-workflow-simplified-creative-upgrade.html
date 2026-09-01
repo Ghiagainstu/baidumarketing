@@ -94,9 +94,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -165,11 +162,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -251,12 +243,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
 .takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
@@ -338,11 +324,21 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .rules-callout { background: var(--gray-100); border-color: var(--gray-200); }
     [data-theme="dark"] .rules-header { color: var(--gray-800); }
     [data-theme="dark"] .rules-list li { color: var(--gray-600); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 
   <meta property="og:title" content="바이두 광고 작성 워크플로우 간소화: 시간을 절약하고 소재 품질을 높이는 3가지 업그레이드" />
   <meta property="og:description" content="바이두가 2025년 10월 16일 광고 작성 플랫폼 3가지 업그레이드를 출시했습니다. 캠페인 설정 속도, 광고 문구 작성, 헤드라인 포맷 규칙의 pain point를 해결합니다." />
-  <meta property="og:type" content="article" />
+  <meta <meta property="og:site_name" content="Baidu PPC Pro">
+  property="og:type" content="article" />
   <meta property="og:url" content="https://www.baidumarketing.com/ko/blog/baidu-ad-creation-workflow-simplified-creative-upgrade" />
   <meta property="og:image" content="https://www.baidumarketing.com/assets/og-brand-default.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -359,6 +355,10 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     "image": "https://www.baidumarketing.com/assets/og-brand-default.png",
     "datePublished": "2025-10-16",
     "dateModified": "2025-10-16",
+    "author": {
+      "@type": "Organization",
+      "name": "Baidu PPC Pro 팀"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Baidu PPC Pro",
@@ -423,17 +423,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p>새 워크플로우:</p>
 
 <div class="callout callout-tip">
-  <span class="callout-icon">💡</span>
-  <div><strong>개선된 점:</strong>
-    <ul>
+      <strong>💡 개선된 점:</strong>
+      <ul>
       <li>✅ 유닛 생성 전에 마케팅 목표와 입찰 방법으로 플랜 필터링</li>
       <li>✅ 새로운 전용 페이지(사이드 패널이 아님)—더 깨끗한 뷰, 플랜 상태 표시</li>
       <li>✅ 유닛 생성 중 크리에이티브 추천 자동 제안</li>
       <li>✅ 바로가기를 통해 고급 스타일 접근—별도 탐색 불필요</li>
       <li>✅ 랜딩 페이지 설정 간소화—추적 URL 접미사가 필수 필드에서 제거됨</li>
     </ul>
-  </div>
-</div>
+    </div>
 
 <p><strong>핵심:</strong> 클릭 수 감소, 오류 공간 감소, 더 빠른 출시.</p>
 
@@ -496,14 +494,12 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 </div>
 
 <div class="callout callout-warning">
-  <span class="callout-icon">📋</span>
-  <div><strong>새 규칙:</strong>
-    <ul>
+      <strong>📋 새 규칙:</strong>
+      <ul>
       <li>새 크리에이티브: 키워드 와일드카드 최대 1개. 시스템이 2개 이상의 헤드라인 저장을 방지합니다.</li>
       <li>기존 크리에이티브: 이전처럼 계속 표시되지만, 편집 시 1개 와일드카드 제한이 적용됩니다.</li>
     </ul>
-  </div>
-</div>
+    </div>
 
 <p>이것은 더 깨끗한 헤드라인을 강제합니다. 더 이상 키워드로 가득 찬 제목은 없습니다.</p>
 
@@ -513,8 +509,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
 <p>BPP는 이 도구들을 매일 사용합니다:</p>
 
-<div class="comparison-table">
-  <table>
+<table class="comparison-table">
     <thead>
       <tr>
         <th>🔧 도구</th>
@@ -536,7 +531,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       </tr>
     </tbody>
   </table>
-</div>
 
 <p>헤드라인 하나, 키워드 와일드카드 하나, 지리적 와일드카드 하나. 이것이 새로운 공식입니다. BPP는 플랫폼이 강제할 때뿐만 아니라 첫날부터 이를 따르는 광고 계정을 구축합니다.</p>
 
@@ -555,7 +549,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     <div class="container">
       <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;color:var(--gray-900);">관련 기사</h2>
       <p style="color:var(--gray-600);font-size:.95rem;margin-bottom:24px;">바이두 광고 및 계정 관리에 대한 더 많은 인사이트</p>
-      <h2>블로그 다른 글</h2>
+      <h2>관련 기사</h2>
       <div class="related-grid">
         <a href="/blog/baidu-brand-protection-guide" class="related-card">
           <h4>🛡️ 바이두 PPC에서 브랜드 보호하는 방법</h4>
@@ -609,7 +603,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단 복제를 금합니다.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단전재를 금지합니다.</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="이메일"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
@@ -676,7 +670,8 @@ function toggleMobileNav() {
     document.body.style.overflow = '';
   }
 }
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.nav-links a').forEach(link =>
+  <meta name="color-scheme" content="light dark"> {
   link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
 });
 

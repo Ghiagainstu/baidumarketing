@@ -129,9 +129,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -199,11 +196,6 @@
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -275,12 +267,6 @@
     .stat-card:nth-child(4) .stat-number { color: #10B981; }
     .stat-label { font-size: .85rem; color: var(--gray-600); line-height: 1.5; font-weight: 500; }
 
-    /* Callout */
-    .callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-    .callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-    .callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     /* Takeaway */
     .takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
@@ -325,7 +311,16 @@
     .highlight-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: var(--radius); padding: 16px 20px; margin: 16px 0; text-align: center; font-size: 1.05rem; color: var(--gray-700); }
     .highlight-box em { font-style: italic; color: var(--gray-600); }
     [data-theme="dark"] .highlight-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -429,9 +424,9 @@
           <p>업데이트 이전에는 'brand.com'이나 영문 브랜드명을 그냥 보여줄 수 있었습니다. 업데이트 이후 기본값이 그 전체 법인명으로 바뀌었습니다. 중국 파트너와 함께하거나 대리 등록을 이용하는 경우, 표시되는 이름에 귀하의 브랜드가 아예 포함되지 않을 수도 있습니다.</p>
 
           <div class="callout callout-warning">
-            <span class="callout-icon">⚠️</span>
-            <div><strong>주의</strong><p>사업자 등록명이 15자(중국어 기준)를 초과하면, 바이두는 광고 표시에서 이를 잘라냅니다. 잘린 법인명은 전문적이지 않아 보이고 잠재 고객을 혼란스럽게 할 수 있습니다. 캠페인을 시작하기 전에 귀하의 이름이 어떻게 표시되는지 반드시 확인하세요.</p></div>
-          </div>
+      <strong>⚠️ 주의</strong>
+      <p>사업자 등록명이 15자(중국어 기준)를 초과하면, 바이두는 광고 표시에서 이를 잘라냅니다. 잘린 법인명은 전문적이지 않아 보이고 잠재 고객을 혼란스럽게 할 수 있습니다. 캠페인을 시작하기 전에 귀하의 이름이 어떻게 표시되는지 반드시 확인하세요.</p>
+    </div>
 
           <h2>바이두가 실제로 변경한 것</h2>
 
@@ -538,9 +533,9 @@
           <p>여기서 브랜드 정보 기능이 필수가 됩니다. 커스텀 브랜드명을 설정하고(승인을 받아) 등록명을 더 짧고 알아보기 쉬운 것으로 대체할 수 있습니다. 대가로 브랜드 소유를 증명할 상표권 서류가 필요할 수 있습니다.</p>
 
           <div class="callout callout-insight">
-            <span class="callout-icon">💡</span>
-            <div><strong>실전 인사이트</strong><p>고객이 표시명으로 4~8자 중국어 브랜드명을 사용할 때 가장 좋은 결과를 봤습니다. 광고에 깔끔하게 들어갈 만큼 짧으면서도, 중국 소비자에게 의미가 통할 만큼 깁니다. 영문 브랜드를 직접 번역할 수 있다면 보통 가장 효과적입니다.</p></div>
-          </div>
+      <strong>💡 실전 인사이트</strong>
+      <p>고객이 표시명으로 4~8자 중국어 브랜드명을 사용할 때 가장 좋은 결과를 봤습니다. 광고에 깔끔하게 들어갈 만큼 짧으면서도, 중국 소비자에게 의미가 통할 만큼 깁니다. 영문 브랜드를 직접 번역할 수 있다면 보통 가장 효과적입니다.</p>
+    </div>
 
           <h2>광고 그룹 수준 제어: 숨겨진 장점</h2>
 

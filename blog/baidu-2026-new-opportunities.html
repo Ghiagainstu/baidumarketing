@@ -106,9 +106,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -178,11 +175,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -339,12 +331,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
 .takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
@@ -399,10 +385,21 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
   <script type="application/ld+json">
   {"@type":"Organization","name":"Baidu PPC Pro","url":"https://www.baidumarketing.com","logo":{"@type":"ImageObject","url":"https://www.baidumarketing.com/assets/og-brand-default.png","width":1200,"height":630}}
   </script>
+
+  <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "New Opportunities for Customer Acquisition on Baidu in 2026", "description": "Baidu's 2026 upgrades: Maps Store Membership, HuiBoXing AI digital human streaming, AiCaiGou B2B platform, Merchant AI Agent — new customer acquisition channels for every industry.", "url": "https://www.baidumarketing.com/blog/baidu-2026-new-opportunities", "image": "https://www.baidumarketing.com/assets/og-brand-default.png", "datePublished": "2026-05-10", "dateModified": "2026-05-10", "author": { "@type": "Organization", "name": "Baidu PPC Pro Team" }, "publisher": { "@type": "Organization", "name": "Baidu PPC Pro", "url": "https://www.baidumarketing.com" } }</script>
 </head>
 <body>
 <nav><div class="container nav-inner">
@@ -484,9 +481,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
       <p><strong>What's new:</strong> Baidu's e-commerce ecosystem is in a period of rapid growth with active resource support — including traffic and rebate incentives. The accompanying <strong>"HuiBoXing" AI digital human streaming tool</strong> revolutionizes the cost and labor ceiling of traditional streaming. Merchants can achieve 24/7 brand presentation and product sales through AI digital humans, without the high costs of human hosts, equipment, or venues.</p>
 
       <div class="callout callout-tip">
-        <span class="callout-icon">🤖</span>
-        <div><strong>Zero-cost AI streaming:</strong> No complex equipment or expensive host required. Provide a 3-5 minute product presentation recording, and HuiBoXing creates an AI digital human avatar. Once live, the digital human adjusts its pitch in real time, proactively guiding users to place orders — enabling 24/7 brand exposure and sales at a fraction of traditional costs.</div>
-      </div>
+      <strong>🤖 Zero-cost AI streaming:</strong>
+      No complex equipment or expensive host required. Provide a 3-5 minute product presentation recording, and HuiBoXing creates an AI digital human avatar. Once live, the digital human adjusts its pitch in real time, proactively guiding users to place orders — enabling 24/7 brand exposure and sales at a fraction of traditional costs.
+    </div>
       <h3>How to use it</h3>
       <ul>
         <li><strong>Full-funnel content seeding:</strong> Leverage Baidu's big data and precision audience tags to intelligently recommend your products through information feeds to high-potential users who might be interested, completing early-stage seeding. Products can also be displayed in live streams, creating a "recommendation seeding + live conversion" traffic loop.</li>

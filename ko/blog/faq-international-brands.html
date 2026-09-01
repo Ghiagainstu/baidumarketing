@@ -30,7 +30,8 @@
   <meta property="og:description" content="해외 브랜드가 바이두 광고를 시작할 때 자주 묻는 질문과 답변을 정리했습니다. 계정 개설부터 캠페인 운영까지." />
   <meta property="og:image" content="https://www.baidumarketing.com/assets/og-brand-default.png" />
   <meta property="og:url" content="https://www.baidumarketing.com/ko/blog/faq-international-brands" />
-  <meta property="og:type" content="article" />
+  <meta <meta property="og:site_name" content="Baidu PPC Pro">
+  property="og:type" content="article" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
   <style>
     /*  Language switcher  */
@@ -101,9 +102,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box ul li { color: var(--gray-600); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -172,11 +170,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -257,12 +250,6 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Takeaway */
 .takeaway-box { background: var(--gradient-brand); color: #fff; padding: 28px 32px; border-radius: var(--radius-lg); margin: 40px 0; }
@@ -306,6 +293,15 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 
   <script type="application/ld+json">
@@ -340,6 +336,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="해외 브랜드를 위한 바이두 광고 FAQ: 자주 묻는 질문과 답변" />
   <meta name="twitter:description" content="해외 브랜드가 바이두 광고를 시작할 때 자주 묻는 질문과 답변을 정리했습니다. 계정 개설부터 캠페인 운영까지." />
+  <meta name="twitter:image" content="https://www.baidumarketing.com/assets/og-brand-default.png">
 
 </head>
 <body>
@@ -392,11 +389,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 <p><strong>방법 1 — 직접 개설:</strong> 해외 기업이 직접 바이두에 신청하는 경우 중국 본토 사업자등록증(营业执照)이 필요합니다. 이 방법은 중국 내 등록 기업을 위한 것입니다.</p>
 
 <div class="callout callout-tip">
-<span class="callout-icon">✅</span>
-<div>
-<p><strong>방법 2 — 공인 파트너 경유(권장):</strong> 바이두의 서비스 계약은 에이전시 참여를 명시적으로 허용합니다. 공인된 바이두 파트너를 통해 해외 기업은 <strong>자국의 사업자 등록 서류</strong>(미국 LLC, 영국 Ltd, EU GmbH 등)를 사용하여 광고 계정을 개설할 수 있습니다. 일부 규제 업종(금융, 의료, 교육, 식품)은 추가 서류가 필요할 수 있지만, 대부분의 B2B 및 소비자 브랜드에게는 문제없는 방법입니다.</p>
-</div>
-</div>
+      <strong>✅</strong>
+      <p><strong>방법 2 — 공인 파트너 경유(권장):</strong> 바이두의 서비스 계약은 에이전시 참여를 명시적으로 허용합니다. 공인된 바이두 파트너를 통해 해외 기업은 <strong>자국의 사업자 등록 서류</strong>(미국 LLC, 영국 Ltd, EU GmbH 등)를 사용하여 광고 계정을 개설할 수 있습니다. 일부 규제 업종(금융, 의료, 교육, 식품)은 추가 서류가 필요할 수 있지만, 대부분의 B2B 및 소비자 브랜드에게는 문제없는 방법입니다.</p>
+    </div>
 
 <p><strong>BPP의 처리 방식:</strong> 바이두의 공인 파트너 프레임워크를 통해 고객사의 해외 기업 명의로 계정을 개설합니다. 고객사는 100% 소유권과 전체 관리자 액세스 권한을 보유합니다. 고객사 측에서 중국 법인을 설립할 필요가 없습니다.</p>
 
@@ -466,11 +461,9 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 </ul>
 
 <div class="callout callout-insight">
-<span class="callout-icon">🛡️</span>
-<div>
-<p><strong>컴플라이언스는 BPP가 전담합니다.</strong> BPP는 Managed Service의 일부로 컴플라이언스를 관리합니다. 고객이 혼자 대응할 필요가 없습니다.</p>
-</div>
-</div>
+      <strong>🛡️</strong>
+      <p><strong>컴플라이언스는 BPP가 전담합니다.</strong> BPP는 Managed Service의 일부로 컴플라이언스를 관리합니다. 고객이 혼자 대응할 필요가 없습니다.</p>
+    </div>
 
 <p><strong>계정이 플래그되거나 정지되면 어떻게 됩니까?</strong></p>
 
@@ -634,7 +627,8 @@ function toggleMobileNav() {
     document.body.style.overflow = '';
   }
 }
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.nav-links a').forEach(link =>
+  <meta name="color-scheme" content="light dark"> {
   link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
 });
 

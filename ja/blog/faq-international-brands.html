@@ -29,7 +29,8 @@
   <meta property="og:description" content="海外ブランド向け百度広告 よくある質問（2026年版） 口座開設について 百度に広告を出すには、中国の法人が必要ですか？ 必ずしも必要ではありません。 2つの方法があります。 方法1 — 直接開設： 外国企業として直接百度に申請する場合、中国本土の事業許可証（営業許可証）が必要となります。この方法は中国国内で" />
   <meta property="og:image" content="https://www.baidumarketing.com/assets/og-brand-default.png" />
   <meta property="og:url" content="https://www.baidumarketing.com/ja/blog/faq-international-brands" />
-  <meta property="og:type" content="article" />
+  <meta <meta property="og:site_name" content="Baidu PPC Pro">
+  property="og:type" content="article" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232932E1'/><stop offset='100%25' stop-color='%234F46E5'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><text x='16' y='21.5' text-anchor='middle' font-family='system-ui' font-size='13' font-weight='800' fill='white' letter-spacing='.5'>BPP</text></svg>" />
   <style>
 /* Language switcher */
@@ -130,17 +131,12 @@
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
     .takeaway-box-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 0; margin: 0; }
     .takeaway-box-box ul li { font-size: .9rem; line-height: 1.6; padding-left: 20px; position: relative; }
-    .takeaway-box-box ul li::before { content: '¹3'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .takeaway-box-box ul li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
     .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; margin: 24px 0; font-size: .9rem; }
     .comparison-table th { background: var(--blue-light); color: var(--blue-dark); font-weight: 600; padding: 14px 18px; text-align: left; }
@@ -198,12 +194,6 @@
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 
 /* Blockquote (article-content) */
@@ -282,11 +272,6 @@
 
 
 /* Callout Enhancement */
-.callout { padding: 20px 24px; border-radius: 12px; margin: 28px 0; border-top: 5px solid; }
-.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-.callout-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Article Meta Enhancement */
 .article-meta { display: flex; align-items: center; gap: 16px; font-size: .85rem; color: #9CA3AF; flex-wrap: wrap; margin-top: 16px; }
@@ -313,10 +298,6 @@
 .process-step:hover::before { opacity: 1; }
 
 /* Callout Stacked (vertical) */
-.callout-stacked { flex-direction: column; align-items: center; text-align: center; }
-.callout-stacked .callout-icon { font-size: 2rem; margin-bottom: 8px; }
-.callout-stacked .callout-content strong { display: block; font-size: 1.05rem; margin-bottom: 8px; color: #111827; }
-.callout-stacked .callout-content p { font-size: .9rem; color: #6B7280; line-height: 1.7; margin: 0; }
 
 /* Platform Pills Enhancement */
 .platform-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
@@ -388,6 +369,15 @@
 .serve-no { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEE2E2; color: #991B1B; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 /* ===== End Enhanced Visual Styles ===== */
 
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 <script type="application/ld+json">
   {
@@ -414,6 +404,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="海外ブランド向け百度広告 よくある質問（2026年版） — Baidu PPC Pro Blog" />
   <meta name="twitter:description" content="海外ブランド向け百度広告 よくある質問（2026年版） 口座開設について 百度に広告を出すには、中国の法人が必要ですか？ 必ずしも必要ではありません。 2つの方法があります。 方法1 — 直接開設： 外国企業として直接百度に申請する場合、中国本土の事業許可証（営業許可証）が必要となります。この方法は中国国内で" />
+  <meta name="twitter:image" content="https://www.baidumarketing.com/assets/og-brand-default.png">
 
 </head>
 <body>
@@ -485,18 +476,18 @@
 <p>oCPC（Optimized Cost Per Click）は、百度のAI駆動の入札システムです。各クリックのコンバージョン確率をリアルタイムで評価し、それに応じて入札額を調整します——コンバージョンしそうなクリックには高く、そうでないものには低く。十分なコンバージョンデータ（週20回以上）がある場合、oCPCは手動CPC入札と比較して通常20%〜40%低い獲得単価を実現します。百度の2026年プラットフォームアップグレードにより、AI入札が例外ではなく標準になりつつあるため、この重要性は高まっています。 </p>
 
 <div class="callout callout-insight">
-  <span class="callout-icon">💡</span>
-  <div><strong>インサイト：</strong>oCPCが効果的に機能するには、週20回以上のコンバージョンが必要です。十分なコンバージョン量を確保できるよう、初期予算を計画してください。</div>
-</div>
+      <strong>💡 インサイト：</strong>
+      oCPCが効果的に機能するには、週20回以上のコンバージョンが必要です。十分なコンバージョン量を確保できるよう、初期予算を計画してください。
+    </div>
 <p><strong>中国の特定の都市や地域をターゲットにできますか？</strong></p>
 <p>はい。百度は都市単位での地域ターゲティングに対応しています。これは、産業集積地をターゲットにするB2Bブランドに特に有効です——広東省（製造業）、上海（金融）、深セン（テクノロジー）。キャンペーン予算は、選択した地域からのトラフィックに対してのみ消費されます。 </p>
 <p><strong>百度とGoogle 広告の違いは何ですか？</strong></p>
 <p>国際ブランドにとって重要な構造的な違いは次の5つです： 1. 資格要件（中国事業体が必要） 2. 言語（管理画面がすべて中国語） 3. 広告フォーマット（検索結果ページあたりのフォーマット数が多い） 4. AI入札の成熟度（oCPCは中国市場においてGoogleのスマート入札より進んでいる） 5. コンプライアンスがより厳格で、海外からは不透明 </p>
 
 <div class="callout callout-warning">
-  <span class="callout-icon">⚠️</span>
-  <div><strong>注意：</strong>百度のコンプライアンス要件はGoogleよりも厳格です。アカウント停止を避けるため、経験豊富なパートナーと協力してください。</div>
-</div>
+      <strong>⚠️ 注意：</strong>
+      百度のコンプライアンス要件はGoogleよりも厳格です。アカウント停止を避けるため、経験豊富なパートナーと協力してください。
+    </div>
 <p><strong>AiCaiGouとは何ですか？使うべきですか？</strong></p>
 <p>AiCaiGouは、百度のB2Bマーケットプレイス兼リード生成プラットフォームです。調達発見エンジンとして機能し、中国企業が機械、部品、原材料、工業製品の供給元を探すために利用しています。中国企業に販売するB2Bブランドであれば、AiCaiGouは検討に値します。BPPが検索広告口座と合わせてAiCaiGouの設定・管理を行います。 </p>
 <p><strong>海外から百度のキャンペーンを自分で運用できますか？</strong></p>
@@ -589,7 +580,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
@@ -651,7 +642,8 @@ function toggleMobileNav() {
     document.body.style.overflow = '';
   }
 }
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.nav-links a').forEach(link =>
+  <meta name="color-scheme" content="light dark"> {
   link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
 });
 

@@ -195,14 +195,6 @@
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-bottom-color: var(--gray-200); color: var(--gray-600); background: var(--gray-100); }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
-    .callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
-    .callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
-    .callout strong { display: block; margin-bottom: 4px; }
-    [data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
-    [data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
-    [data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 
     .takeaway-box {
       background: linear-gradient(180deg, #FFFFFF 0%, #EEF0FF 100%);
@@ -261,7 +253,16 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -308,11 +309,10 @@
     <p>最も簡潔に言えば：広告主はoCPMで入札し、プラットフォームはeCPMで広告をランク付けし、実際に支払う金額はCPMとして表示されます。3つの異なるレイヤー、1つの価格表示。それぞれを分解していきましょう。</p>
 
     <div class="callout callout-tip">
-    <span class="callout-icon">💡</span>
-    <div><strong>一文まとめ</strong>
-    <p>CPM = あなたが支払うもの（目に見えるコスト）<br>
+      <strong>💡 一文まとめ</strong>
+      <p>CPM = あなたが支払うもの（目に見えるコスト）<br>
     oCPM = あなたが入札するもの（システムに伝えるもの）<br>
-    eCPM = システムが使うもの（広告のランク付け方法）</p></div>
+    eCPM = システムが使うもの（広告のランク付け方法）</p>
     </div>
 
     <h2>📊 3つのレイヤー</h2>
@@ -344,8 +344,8 @@
       </div>
 
     <div class="callout callout-insight">
-    <span class="callout-icon">🎯</span>
-    <div><strong>結論</strong><p>あなたはoCPMで入札し、エンジンはeCPMでランク付けし、市場価格がCPMとして表面化します。この連鎖を正しく理解すれば、トラフィックのコストがなぜその金額になるのか推測する必要がなくなります。</p></div>
+      <strong>🎯 結論</strong>
+      <p>あなたはoCPMで入札し、エンジンはeCPMでランク付けし、市場価格がCPMとして表面化します。この連鎖を正しく理解すれば、トラフィックのコストがなぜその金額になるのか推測する必要がなくなります。</p>
     </div>
 
     <h2>🔵 CPM：単なる「トラフィックの高さ」ではない</h2>
@@ -357,8 +357,8 @@
     <p>知っておくべきこと：CPMは結果であり、あなたが操作するレバーではありません。CPMを「設定」するのではなく、市場が計算するのです。CPMを直接最適化しようとするのは、温度計を睨みながら室温をコントロールしようとするようなものです。</p>
 
     <div class="callout callout-warning">
-    <span class="callout-icon">⚠️</span>
-    <div><strong>よくある間違い</strong><p>「CPMが高すぎるから下げなければ」。これは速度計が高すぎると言っているようなものです。CPMはシグナルです。問うべきは、なぜ高いのか——入札額なのか、ターゲティングなのか、広告品質なのか、です。</p></div>
+      <strong>⚠️ よくある間違い</strong>
+      <p>「CPMが高すぎるから下げなければ」。これは速度計が高すぎると言っているようなものです。CPMはシグナルです。問うべきは、なぜ高いのか——入札額なのか、ターゲティングなのか、広告品質なのか、です。</p>
     </div>
 
     <h2>🟣 oCPM：システムとの対話</h2>
@@ -370,8 +370,8 @@
     <p>oCPMはインプットだと考えてください。それはコスト指標ではなく、入札戦略です。百度でリード獲得やECキャンペーンを運用しているなら、これがおそらく使用すべきモデルです。</p>
 
     <div class="callout callout-tip">
-    <span class="callout-icon">✅</span>
-    <div><strong>プロのヒント</strong><p>oCPMは十分なコンバージョンデータ（広告グループあたり週30件以上）があるときに最も効果を発揮します。これがないと、システムに効果的な最適化を行うための十分なシグナルがありません。</p></div>
+      <strong>✅ プロのヒント</strong>
+      <p>oCPMは十分なコンバージョンデータ（広告グループあたり週30件以上）があるときに最も効果を発揮します。これがないと、システムに効果的な最適化を行うための十分なシグナルがありません。</p>
     </div>
 
     <h2>🟡 eCPM：誰も見えないエンジン</h2>
@@ -383,8 +383,8 @@
     <p>eCPMは目に見えないランキングシステムです。eCPMを「設定」することは決してありません——すべてのオークションでプラットフォームがリアルタイムに計算します。そして、広告が表示されるかどうかを決める最大の要因です。</p>
 
     <div class="callout callout-insight">
-    <span class="callout-icon">⚡</span>
-    <div><strong>ここに最適化努力を集中すべきです</strong><p>CPMに執着する代わりに、品質スコアの向上に集中してください——関連性の高い広告文、緻密なキーワードターゲティング、優れたランディングページ。これらがeCPMを押し上げ、実際のコストを下げます。</p></div>
+      <strong>⚡ ここに最適化努力を集中すべきです</strong>
+      <p>CPMに執着する代わりに、品質スコアの向上に集中してください——関連性の高い広告文、緻密なキーワードターゲティング、優れたランディングページ。これらがeCPMを押し上げ、実際のコストを下げます。</p>
     </div>
 
     <h2>🔁 3つの指標のつながり</h2>

@@ -110,9 +110,6 @@
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb { color: var(--gray-400); }
     [data-theme="dark"] .breadcrumb a { color: var(--blue); }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box { background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.2); }
     [data-theme="dark"] .takeaway-box ul li { color: var(--gray-700); }
     [data-theme="dark"] .comparison-table { background: var(--gray-100); }
@@ -183,11 +180,6 @@ html[lang="ja"] .nav-links { gap: 12px; font-size: .8rem; }
     .article-content ul, .article-content ol { margin: 12px 0 20px; padding-left: 24px; }
     .article-content li { font-size: 1rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3, .takeaway-box h4 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -267,12 +259,6 @@ html[lang="ja"] .nav-links { gap: 12px; font-size: .8rem; }
 .check-yes { color: #10B981; }
 .check-no { color: #EF4444; }
 
-/* Callout */
-.callout { padding: 20px 24px; border-radius: var(--radius); margin: 30px 0; border: 1px solid; display: flex; gap: 14px; align-items: flex-start; }
-.callout-tip { background: #D1FAE5; border-color: #6EE7B7; }
-.callout-warning { background: #FEF3C7; border-color: #FCD34D; }
-.callout-insight { background: rgba(41,50,225,.06); border-color: rgba(41,50,225,.18); }
-.callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
 
 /* Blockquote (article-content) */
 .article-content blockquote { margin: 30px 0; padding: 20px 24px; border: 1px solid var(--blue); background: var(--gray-50); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -352,6 +338,15 @@ html[lang="ja"] .nav-links { gap: 12px; font-size: .8rem; }
     [data-theme="dark"] .article-content h2 { color: var(--gray-900); }
     [data-theme="dark"] .article-content h3 { color: var(--gray-700); }
     [data-theme="dark"] .article-meta { color: var(--gray-400); }
+/* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
 </style>
 </head>
 <body>
@@ -376,7 +371,7 @@ html[lang="ja"] .nav-links { gap: 12px; font-size: .8rem; }
 <div class="nav-overlay" id="navOverlay" onclick="toggleMobileNav()" style="display:none"></div>
 
 <main>
-  <section class="article-hero">
+<section class="article-hero">
       <div class="container">
         <div class="breadcrumb"><a href="/ja/">ホーム</a> / <a href="/ja/blog">ブログ</a></div>
       <h1 class="article-title">バイデュの「新・キーワードゼロ表示診断ツール」——機能と使用条件を解説</h1>
@@ -392,24 +387,22 @@ html[lang="ja"] .nav-links { gap: 12px; font-size: .8rem; }
   <div class="container">
     <article class="article-content">
       <p>キーワードが表示されない——これは検索広告で最もフラストレーションの高い問題だ。広告承認済み、入札競争力あり、なのにゼロ表示。どこが悪かったのか、データもない。</p>
-      <p>バイデュはこの問題を解決する専用ツールを追加した：「キーワードゼロ表示診断」（关键词无展现）。现已提供。</p>
+      <p>バイデュはこの問題を解決する専用ツールを追加した：「キーワードゼロ表示診断」（关键词无展现）。現在利用可能です。</p>
       <p>本稿では、このツールできること、そして国内広告主と海外広告主にとっての意味を解説する。</p>
 
       <h2>ツールできること</h2>
       <p>キーワードが広告表示されない原因を5つの次元で診断する：</p>
 
       <div class="callout callout-insight">
-        <span class="callout-icon">💡</span>
-        <div><strong>5つの診断次元：</strong>
-          <ol style="margin:10px 0 0;padding-left:20px;">
+      <strong>💡 5つの診断次元：</strong>
+      <ol style="margin:10px 0 0;padding-left:20px;">
             <li>タスク作成とクエリ設定</li>
             <li>診断詳細結果</li>
             <li>具体的な最適化レコメンデーション</li>
             <li>基本アカウント情報</li>
             <li>クライアント操作分析</li>
           </ol>
-        </div>
-      </div>
+    </div>
 
       <p>バイデュ広告配信パイプラインの全ステージを診断：</p>
       <ul>
@@ -589,6 +582,8 @@ window.addEventListener('scroll', () => { document.getElementById('backToTop').c
 </button>
 
   
+  </main>
+
 <section class="related-section">
   <div class="container">
     <h2>📚 関連記事</h2>
@@ -649,7 +644,7 @@ window.addEventListener('scroll', () => { document.getElementById('backToTop').c
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。All rights reserved.</div>
+      <div class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます</div>
 
       <div class="footer-social">
         <a href="#" class="obf-email-icon" data-u="baidu" data-d="baidumarketing.com" aria-label="メール"><svg viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>

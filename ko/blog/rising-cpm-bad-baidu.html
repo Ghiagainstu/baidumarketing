@@ -192,14 +192,6 @@
     [data-theme="dark"] .comparison-table th { background: var(--gray-200); color: var(--gray-800); }
     [data-theme="dark"] .comparison-table td { border-bottom-color: var(--gray-200); color: var(--gray-600); background: var(--gray-100); }
 
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
-    .callout-warning { background: #FEF3C7; border: 1px solid #FCD34D; }
-    .callout-tip { background: #D1FAE5; border: 1px solid #6EE7B7; }
-    .callout-insight { background: rgba(41,50,225,.06); border: 1px solid rgba(41,50,225,.18); }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.6; }
-    [data-theme="dark"] .callout-warning { background: rgba(251,191,36,.12); border-color: rgba(251,191,36,.3); }
-    [data-theme="dark"] .callout-tip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-    [data-theme="dark"] .callout-insight { background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.2); }
 
     .takeaway-box { background: linear-gradient(135deg, #EEF0FF 0%, #F5F3FF 100%); border: 1px solid #C7D2FE; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .takeaway-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--blue); display: flex; align-items: center; gap: 8px; }
@@ -320,7 +312,16 @@
       .scenario-card { grid-template-columns: 1fr; }
       .scenario-metrics { grid-template-columns: repeat(2, 1fr); }
     }
-  </style>
+  /* Callout */
+.callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-top: 5px solid; }
+.callout-warning { background: linear-gradient(180deg, #FEF3C7 0%, #FFFFFF 100%); border-color: #F59E0B; }
+.callout-tip { background: linear-gradient(180deg, #D1FAE5 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.08) 0%, #FFFFFF 100%); border-color: #2932E1; }
+.callout strong { display: block; margin-bottom: 4px; }
+[data-theme="dark"] .callout-warning { background: linear-gradient(180deg, rgba(245,158,11,.15) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-tip { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+[data-theme="dark"] .callout-insight { background: linear-gradient(180deg, rgba(41,50,225,.12) 0%, rgba(17,24,39,1) 100%); }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -418,9 +419,9 @@
         <p>CPM은 28에서 36으로 올랐습니다. 이 수치만 떼어놓고 보면 맞습니다 — 트래픽이 더 비싸졌죠. 하지만 다른 모든 지표는 올바른 방향으로 움직였습니다. 전환율은 49% 뛰었고, 전환당 비용(CPA)은 40% 줄었습니다.</p>
 
         <div class="callout callout-insight">
-          <span class="callout-icon">🎯</span>
-          <div><strong>핵심 인사이트:</strong> CPM 상승과 함께 전환율 상승이 나타난다는 건, 시스템이 더 높은 품질의 트래픽 풀(pool)로 광고를 보내고 있다는 뜻입니다. 높아진 노출 단가는 그만한 가치를 하고 있습니다.</div>
-        </div>
+      <strong>🎯 핵심 인사이트:</strong>
+      CPM 상승과 함께 전환율 상승이 나타난다는 건, 시스템이 더 높은 품질의 트래픽 풀(pool)로 광고를 보내고 있다는 뜻입니다. 높아진 노출 단가는 그만한 가치를 하고 있습니다.
+    </div>
 
         <h2>📉 CPM 상승이 나쁜 신호일 때</h2>
 
@@ -464,9 +465,9 @@
         </div>
 
         <div class="callout callout-warning">
-          <span class="callout-icon">⚠️</span>
-          <div><strong>절대 CPM을 단독으로 읽지 마세요.</strong> 한 가지 지표만 보고 당황하는 건, 실제로 잘 돌아가는 캠페인을 가장 빠르게 망치는 방법입니다. 결정을 내리기 전에는 반드시 CPM을 CTR, CVR, CPA와 함께 봐야 합니다.</div>
-        </div>
+      <strong>⚠️ 절대 CPM을 단독으로 읽지 마세요.</strong>
+      한 가지 지표만 보고 당황하는 건, 실제로 잘 돌아가는 캠페인을 가장 빠르게 망치는 방법입니다. 결정을 내리기 전에는 반드시 CPM을 CTR, CVR, CPA와 함께 봐야 합니다.
+    </div>
 
         <h2>🔍 실제로 효과 있는 실천적 수정들</h2>
 
@@ -514,7 +515,7 @@
 
   <section class="related-section">
     <div class="container">
-      <h2>블로그 다른 글</h2>
+      <h2>관련 기사</h2>
       <div class="related-grid">
         <a href="/ko/blog/cpm-ocpm-ecpm-explained" class="related-card">
           <span>요금</span>
