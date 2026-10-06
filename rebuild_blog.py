@@ -75,17 +75,38 @@ BREADCRUMB = {
     'ko': '<a href="/ko/">홈</a> / <a href="/ko/blog">블로그</a>',
 }
 
-DATE_DISPLAY = {
-    'en': {'2026-06-21': 'Jun 21, 2026'},
-    'ja': {'2026-06-21': '2026年6月21日'},
-    'ko': {'2026-06-21': '2026년 6월 21일'},
-}
+_EN_MONTHS = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-READ_TIME_DISPLAY = {
-    'en': {'9 min': '9 min', '11 min': '11 min', '10 min': '10 min'},
-    'ja': {'9 min': '約11分', '11 min': '約11分', '10 min': '約10分'},
-    'ko': {'9 min': '약10분', '11 min': '약11분', '10 min': '약10분'},
-}
+
+def format_date(date_str, lang):
+    """Localize an ISO date (YYYY-MM-DD) per language.
+
+    en -> 'Oct 6, 2026' | ja -> '2026年10月6日' | ko -> '2026년 10월 6일'
+    Falls back to the raw string if the format is unrecognised.
+    """
+    try:
+        y, m, d = (int(x) for x in str(date_str).split('-'))
+    except (ValueError, TypeError):
+        return date_str
+    if lang == 'ja':
+        return f'{y}年{m}月{d}日'
+    if lang == 'ko':
+        return f'{y}년 {m}월 {d}일'
+    return f'{_EN_MONTHS[m]} {d}, {y}'
+
+
+def format_read_time(rtime, lang):
+    """Localize the reading-time label. Keeps the numeric value, swaps the unit."""
+    m = re.search(r'(\d+)', str(rtime))
+    if not m:
+        return rtime
+    n = m.group(1)
+    if lang == 'ja':
+        return f'約{n}分'
+    if lang == 'ko':
+        return f'약 {n}분'
+    return f'{n} min'
 
 CTA_TEXT = {
     'en': {
@@ -566,12 +587,13 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     result = re.sub(r'<meta name="twitter:description" content="[^"]*"', f'<meta name="twitter:description" content="{desc}"', result)
 
     # 4. JSON-LD
-    jl = f'{{"@context":"https://schema.org","@type":"BlogPosting","headline":"{title}","description":"{desc}","datePublished":"{date}","dateModified":"{date}","author":{{"@type":"Organization","name":"{author}"}},"publisher":{{"@type":"Organization","name":"Baidu PPC Pro"}},"mainEntityOfPage":{{"@type":"WebPage","@id":"https://www.baidumarketing.com{lang_prefix}/blog/{slug}"}}}}'
+    canonical_url = f"https://www.baidumarketing.com{lang_prefix}/blog/{slug}"
+    jl = f'{{"@context":"https://schema.org","@type":"BlogPosting","url":"{canonical_url}","headline":"{title}","description":"{desc}","datePublished":"{date}","dateModified":"{date}","author":{{"@type":"Organization","name":"{author}"}},"publisher":{{"@type":"Organization","name":"Baidu PPC Pro"}},"mainEntityOfPage":{{"@type":"WebPage","@id":"{canonical_url}"}}}}'
     result = re.sub(r'<script type="application/ld\+json">.*?</script>', f'<script type="application/ld+json">\n  {jl}\n  </script>', result, flags=re.DOTALL)
 
     # 5. Article meta (with SVG icons)
-    dd = DATE_DISPLAY.get(lang, DATE_DISPLAY['en']).get(date, date)
-    rt = READ_TIME_DISPLAY.get(lang, READ_TIME_DISPLAY['en']).get(rtime, rtime)
+    dd = format_date(date, lang)
+    rt = format_read_time(rtime, lang)
     cat_label = CATEGORY_LABELS.get(lang, {}).get(category, CATEGORY_LABELS.get(category, category))
     meta_html = f'''<div class="article-meta">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> {dd}</span>
