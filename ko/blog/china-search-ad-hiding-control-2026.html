@@ -261,6 +261,54 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    /* bpp-dgm-enh -- inline diagram blocks. Colours use the template's CSS
+       variables, whose dark-mode block remaps them, so no per-component dark
+       overrides are needed except for the amber accent. */
+    .dgm { margin: 28px 0; padding: 22px 24px; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); background: var(--gray-50); }
+    .dgm-title { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 18px; }
+    .dgm-note { font-size: .78rem; line-height: 1.55; color: var(--gray-600); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
+    .dgm-note strong { color: var(--gray-800); }
+
+    /* timeline */
+    .tl { display: flex; flex-direction: column; gap: 18px; }
+    .tl-item { display: grid; grid-template-columns: 18px 1fr; gap: 14px; align-items: start; position: relative; }
+    .tl-item::before { content: ''; width: 11px; height: 11px; border-radius: 50%; background: var(--blue); margin-top: 5px; z-index: 1; }
+    .tl-item::after { content: ''; position: absolute; left: 4.5px; top: 16px; bottom: -18px; width: 2px; background: var(--gray-300); }
+    .tl-item:last-child::after { display: none; }
+    .tl-text { min-width: 0; }
+    .tl-date { display: block; font-size: .82rem; font-weight: 700; color: var(--gray-900); }
+    .tl-desc { display: block; font-size: .82rem; line-height: 1.55; color: var(--gray-600); margin-top: 3px; }
+
+    /* scope comparison */
+    .sc { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .sc-col { border-radius: var(--radius); padding: 16px 18px; border: 1.2px solid; }
+    .sc-hide { background: linear-gradient(180deg, #FEF3C7 0%, var(--gray-50) 100%); border-color: #F59E0B; }
+    .sc-keep { background: linear-gradient(180deg, var(--blue-light) 0%, var(--gray-50) 100%); border-color: var(--blue); }
+    .sc-h { font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 10px; }
+    .sc-hide .sc-h { color: #B45309; }
+    .sc-keep .sc-h { color: var(--blue); }
+    .sc-b { font-size: .9rem; font-weight: 700; color: var(--gray-900); }
+    .sc-s { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+    .article-content .sc-list { list-style: none !important; padding-left: 0 !important; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+    .article-content .sc-list li { font-size: .85rem; font-weight: 600; color: var(--gray-900); padding-left: 16px; position: relative; margin: 0; }
+    .article-content .sc-list li::before { content: ''; position: absolute; left: 2px; top: .48em; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+    [data-theme="dark"] .sc-hide { background: linear-gradient(180deg, rgba(245,158,11,.14) 0%, var(--gray-50) 100%); }
+    [data-theme="dark"] .sc-hide .sc-h { color: #FBBF24; }
+
+    @media (max-width: 900px) {
+      .dgm { padding: 20px 20px; }
+    }
+    @media (max-width: 720px) {
+      .sc { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .dgm { padding: 16px 14px; margin: 22px 0; border-radius: var(--radius); }
+      .tl { gap: 16px; }
+      .tl-date, .tl-desc { font-size: .78rem; }
+      .dgm-note { font-size: .74rem; }
+    }
+
   </style>
 </head>
 <body>
@@ -316,6 +364,18 @@
       <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">📄 독립 출처</div></div>
       <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">📊 공표된 효과 수치</div></div>
     </div>
+
+
+    <div class="dgm">
+      <div class="dgm-title">보도된 경과</div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">2026년 5월</span><span class="tl-desc">바이두, 웹·모바일 검색과 어시스턴트 최적화 조사 시작</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">2026년 8월 20일</span><span class="tl-desc">바이두 앱 검색 결과 페이지에 페이지 전체를 조작하는 카드 도입</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">2026년 9월</span><span class="tl-desc">바이두와 Sogou 웹 버전이 광고 숨기기 조작 추가. 바이두는 그레이스케일로 보도</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">2026년 10월</span><span class="tl-desc">Bing 중국어 웹 버전이 같은 조작 추가. 보도는 10월 12일 공개</span></div></div>
+      </div>
+      <div class="dgm-note">2026년 10월 12일 BrandPaper가 보도한 경과입니다. 바이두의 일반 공개 시점은 발표되지 않았습니다.</div>
+    </div>
 <h2 data-bpp-enh="1">📄 무엇이 보도되었고, 누가 보도했는가</h2>
 
     <p>이 글은 단일 원기사에 의존합니다. BrandPaper가 10월 12일 공개한 업계 논평이며, 같은 날 텐센트 뉴스가 전재하고 다른 곳에서도 2차 형태로 다뤄졌습니다. <strong>검색엔진 각사는 이 기능을 발표하지 않았습니다.</strong> 바이두, Sogou, 마이크로소프트 모두 확인 가능한 범위에서 공식 문서를 내지 않았고, 독립 매체의 뒷받침도 없습니다.</p>
@@ -341,6 +401,22 @@
     <p>Bing 서술에는 지나치게 읽지 않는 선에서 지적할 수 있는 패턴이 있습니다. 숨기기 대상에서 빠진 지면은 정의된 브랜드 위치를 차지하거나 주변 콘텐츠에 녹아드는 지면입니다. 숨기기 대상에 포함된 것은 스스로 광고라고 밝히는 블록입니다. 그 밝힘을 이용자가 거절할 수 있게 하면서, 아무것도 밝히지 않는 지면은 그대로 두는 인터페이스는 이 두 무리의 상대적 위치를 바꿉니다.</p>
 
     
+    <div class="dgm">
+      <div class="dgm-title">접기가 닿는 범위</div>
+      <div class="sc">
+        <div class="sc-col sc-hide">
+          <div class="sc-h">숨길 수 있음</div>
+          <div class="sc-b">결과 페이지 상단 광고 블록</div>
+          <div class="sc-s">이용자가 접을 수 있음</div>
+        </div>
+        <div class="sc-col sc-keep">
+          <div class="sc-h">숨기기 대상 아님</div>
+          <ul class="sc-list"><li>브랜드 존</li><li>페이지 내 이미지 광고</li><li>하단 텍스트 링크 광고</li></ul>
+        </div>
+      </div>
+      <div class="dgm-note"><strong>Bing에 대해서만</strong> 보도된 범위입니다. 바이두나 Sogou에 대해 동등한 범위는 공표되지 않았고, 이 그림도 그것을 전제하지 않습니다.</div>
+    </div>
+
     <div class="callout callout-warning"><strong>🧪 자사 지면이 숨길 수 있는 대상인지 확인합니다</strong><p>Bing에 대해서는 제외되는 지면이 보도되었습니다. 브랜드 존, 페이지 내 이미지 광고, 하단 텍스트 링크 광고입니다. 바이두에 대해서는 확인 가능한 범위에서 범위가 어디에도 공표되지 않았습니다. 따라서 이것은 블로그 글이 아니라 계정 담당자에게 물을 질문이며, 자사 캠페인이 클릭 한 번의 접기 안쪽에 남는지 바깥쪽에 남는지를 결정하는 유일한 질문입니다.</p></div>
 <h2 data-bpp-enh="1">⚙️ 광고 숨기기 기능이 유료 지면에 하는 일</h2>
 

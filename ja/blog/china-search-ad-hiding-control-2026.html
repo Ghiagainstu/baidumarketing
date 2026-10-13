@@ -261,6 +261,54 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    /* bpp-dgm-enh -- inline diagram blocks. Colours use the template's CSS
+       variables, whose dark-mode block remaps them, so no per-component dark
+       overrides are needed except for the amber accent. */
+    .dgm { margin: 28px 0; padding: 22px 24px; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); background: var(--gray-50); }
+    .dgm-title { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 18px; }
+    .dgm-note { font-size: .78rem; line-height: 1.55; color: var(--gray-600); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
+    .dgm-note strong { color: var(--gray-800); }
+
+    /* timeline */
+    .tl { display: flex; flex-direction: column; gap: 18px; }
+    .tl-item { display: grid; grid-template-columns: 18px 1fr; gap: 14px; align-items: start; position: relative; }
+    .tl-item::before { content: ''; width: 11px; height: 11px; border-radius: 50%; background: var(--blue); margin-top: 5px; z-index: 1; }
+    .tl-item::after { content: ''; position: absolute; left: 4.5px; top: 16px; bottom: -18px; width: 2px; background: var(--gray-300); }
+    .tl-item:last-child::after { display: none; }
+    .tl-text { min-width: 0; }
+    .tl-date { display: block; font-size: .82rem; font-weight: 700; color: var(--gray-900); }
+    .tl-desc { display: block; font-size: .82rem; line-height: 1.55; color: var(--gray-600); margin-top: 3px; }
+
+    /* scope comparison */
+    .sc { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .sc-col { border-radius: var(--radius); padding: 16px 18px; border: 1.2px solid; }
+    .sc-hide { background: linear-gradient(180deg, #FEF3C7 0%, var(--gray-50) 100%); border-color: #F59E0B; }
+    .sc-keep { background: linear-gradient(180deg, var(--blue-light) 0%, var(--gray-50) 100%); border-color: var(--blue); }
+    .sc-h { font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 10px; }
+    .sc-hide .sc-h { color: #B45309; }
+    .sc-keep .sc-h { color: var(--blue); }
+    .sc-b { font-size: .9rem; font-weight: 700; color: var(--gray-900); }
+    .sc-s { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+    .article-content .sc-list { list-style: none !important; padding-left: 0 !important; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+    .article-content .sc-list li { font-size: .85rem; font-weight: 600; color: var(--gray-900); padding-left: 16px; position: relative; margin: 0; }
+    .article-content .sc-list li::before { content: ''; position: absolute; left: 2px; top: .48em; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+    [data-theme="dark"] .sc-hide { background: linear-gradient(180deg, rgba(245,158,11,.14) 0%, var(--gray-50) 100%); }
+    [data-theme="dark"] .sc-hide .sc-h { color: #FBBF24; }
+
+    @media (max-width: 900px) {
+      .dgm { padding: 20px 20px; }
+    }
+    @media (max-width: 720px) {
+      .sc { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .dgm { padding: 16px 14px; margin: 22px 0; border-radius: var(--radius); }
+      .tl { gap: 16px; }
+      .tl-date, .tl-desc { font-size: .78rem; }
+      .dgm-note { font-size: .74rem; }
+    }
+
   </style>
 </head>
 <body>
@@ -316,6 +364,18 @@
       <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">📄 独立した情報源</div></div>
       <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">📊 公表された効果数値</div></div>
     </div>
+
+
+    <div class="dgm">
+      <div class="dgm-title">報じられた経緯</div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">2026年5月</span><span class="tl-desc">百度がウェブ版・モバイル版の検索と文心助手の最適化調査を開始</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">2026年8月20日</span><span class="tl-desc">百度Appの検索結果ページに、ページ全体を操作できるカードを実装</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">2026年9月</span><span class="tl-desc">百度とSogouのウェブ版が広告を隠す操作を追加。百度はグレースケールと報道</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">2026年10月</span><span class="tl-desc">Bing中国語版ウェブが同操作を追加。報道は10月12日に公開</span></div></div>
+      </div>
+      <div class="dgm-note">2026年10月12日に BrandPaper が報じた経緯です。百度の一般公開の時期は発表されていません。</div>
+    </div>
 <h2 data-bpp-enh="1">📄 何が報じられ、誰が報じたのか</h2>
 
     <p>本記事が依拠するのは、単一の原記事です。新品牌BrandPaper が10月12日に公開した業界論評で、同日に騰訊新聞が転載し、他でも二次的な形で扱われています。<strong>検索エンジン各社はこの機能を発表していません。</strong> 百度、Sogou、マイクロソフトのいずれも、当方が確認できる範囲で公表文書を出しておらず、独立した媒体による裏づけもありません。</p>
@@ -341,6 +401,22 @@
     <p>Bing の記述には、読み込みすぎない範囲で指摘できる型があります。隠す対象から外れた枠は、定義されたブランドの位置を占めるか、周囲のコンテンツに溶け込むかのどちらかです。隠す対象に含まれたのは、自ら広告だと名乗るブロックです。名乗りを利用者が断れるようにしつつ、何も名乗らない枠はそのまま残すインターフェースは、この2群の相対的な位置を変えます。</p>
 
     
+    <div class="dgm">
+      <div class="dgm-title">畳み込みが届く範囲</div>
+      <div class="sc">
+        <div class="sc-col sc-hide">
+          <div class="sc-h">隠す対象</div>
+          <div class="sc-b">結果ページ上部の広告ブロック</div>
+          <div class="sc-s">利用者が畳める</div>
+        </div>
+        <div class="sc-col sc-keep">
+          <div class="sc-h">隠す対象外</div>
+          <ul class="sc-list"><li>ブランドゾーン</li><li>ページ内画像広告</li><li>下部テキストリンク広告</li></ul>
+        </div>
+      </div>
+      <div class="dgm-note"><strong>Bing についてのみ</strong>報じられた範囲です。百度や Sogou について同等の範囲は公表されておらず、本図もそれを前提にしていません。</div>
+    </div>
+
     <div class="callout callout-warning"><strong>🧪 自社の枠が隠せる対象かを確認する</strong><p>Bing については、除外される枠が報じられています。ブランドゾーン、ページ内画像広告、下部テキストリンク広告です。百度については、当方が確認できる限り、その範囲はどこにも公表されていません。したがってこれはブログ記事ではなくアカウント担当者に尋ねる問いであり、そして自社のキャンペーンがワンクリックの畳み込みの内側に入るか外側かにとどまるかを決める唯一の問いです。</p></div>
 <h2 data-bpp-enh="1">⚙️ 広告を隠す機能が有料枠に何をするか</h2>
 

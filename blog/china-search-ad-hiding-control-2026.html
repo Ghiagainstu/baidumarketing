@@ -261,6 +261,54 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    /* bpp-dgm-enh -- inline diagram blocks. Colours use the template's CSS
+       variables, whose dark-mode block remaps them, so no per-component dark
+       overrides are needed except for the amber accent. */
+    .dgm { margin: 28px 0; padding: 22px 24px; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); background: var(--gray-50); }
+    .dgm-title { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 18px; }
+    .dgm-note { font-size: .78rem; line-height: 1.55; color: var(--gray-600); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
+    .dgm-note strong { color: var(--gray-800); }
+
+    /* timeline */
+    .tl { display: flex; flex-direction: column; gap: 18px; }
+    .tl-item { display: grid; grid-template-columns: 18px 1fr; gap: 14px; align-items: start; position: relative; }
+    .tl-item::before { content: ''; width: 11px; height: 11px; border-radius: 50%; background: var(--blue); margin-top: 5px; z-index: 1; }
+    .tl-item::after { content: ''; position: absolute; left: 4.5px; top: 16px; bottom: -18px; width: 2px; background: var(--gray-300); }
+    .tl-item:last-child::after { display: none; }
+    .tl-text { min-width: 0; }
+    .tl-date { display: block; font-size: .82rem; font-weight: 700; color: var(--gray-900); }
+    .tl-desc { display: block; font-size: .82rem; line-height: 1.55; color: var(--gray-600); margin-top: 3px; }
+
+    /* scope comparison */
+    .sc { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .sc-col { border-radius: var(--radius); padding: 16px 18px; border: 1.2px solid; }
+    .sc-hide { background: linear-gradient(180deg, #FEF3C7 0%, var(--gray-50) 100%); border-color: #F59E0B; }
+    .sc-keep { background: linear-gradient(180deg, var(--blue-light) 0%, var(--gray-50) 100%); border-color: var(--blue); }
+    .sc-h { font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 10px; }
+    .sc-hide .sc-h { color: #B45309; }
+    .sc-keep .sc-h { color: var(--blue); }
+    .sc-b { font-size: .9rem; font-weight: 700; color: var(--gray-900); }
+    .sc-s { font-size: .8rem; color: var(--gray-600); margin-top: 4px; }
+    .article-content .sc-list { list-style: none !important; padding-left: 0 !important; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+    .article-content .sc-list li { font-size: .85rem; font-weight: 600; color: var(--gray-900); padding-left: 16px; position: relative; margin: 0; }
+    .article-content .sc-list li::before { content: ''; position: absolute; left: 2px; top: .48em; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+    [data-theme="dark"] .sc-hide { background: linear-gradient(180deg, rgba(245,158,11,.14) 0%, var(--gray-50) 100%); }
+    [data-theme="dark"] .sc-hide .sc-h { color: #FBBF24; }
+
+    @media (max-width: 900px) {
+      .dgm { padding: 20px 20px; }
+    }
+    @media (max-width: 720px) {
+      .sc { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .dgm { padding: 16px 14px; margin: 22px 0; border-radius: var(--radius); }
+      .tl { gap: 16px; }
+      .tl-date, .tl-desc { font-size: .78rem; }
+      .dgm-note { font-size: .74rem; }
+    }
+
   </style>
 </head>
 <body>
@@ -316,6 +364,18 @@
       <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">📄 Independent source</div></div>
       <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">📊 Effect figures published</div></div>
     </div>
+
+
+    <div class="dgm">
+      <div class="dgm-title">Reported sequence</div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">May 2026</span><span class="tl-desc">Baidu begins research on its web and mobile search and the ERNIE assistant</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">20 Aug 2026</span><span class="tl-desc">Baidu App results page gains a card that makes the whole page interactive</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">Sept 2026</span><span class="tl-desc">Baidu and Sogou web versions add ad-hiding controls; Baidu described as grayscale</span></div></div>
+        <div class="tl-item"><div class="tl-text"><span class="tl-date">Oct 2026</span><span class="tl-desc">Bing Chinese web version adds the control; the report published 12 October</span></div></div>
+      </div>
+      <div class="dgm-note">Sequence as reported by BrandPaper on 12 October 2026. Baidu's general rollout date has not been announced.</div>
+    </div>
 <h2 data-bpp-enh="1">📄 What is reported, and by whom</h2>
 
     <p>This article rests on a single originating source: an industry commentary published by New Brand Paper on 12 October, republished the same day by Tencent News and carried in derivative form elsewhere. <strong>No search engine has announced the feature.</strong> Baidu, Sogou and Microsoft have not published anything on it that we could find, and no independent outlet has corroborated the account.</p>
@@ -341,6 +401,22 @@
     <p>There is a pattern in the Bing detail worth pointing out without overreading it. The formats excluded from hiding are the ones that either occupy a defined branded position or blend into surrounding content. The format included is the block that announces itself as advertising. An interface that lets users decline the announcement, while leaving the placements that do not announce anything, changes the relative standing of those two groups.</p>
 
     
+    <div class="dgm">
+      <div class="dgm-title">What a collapse reaches</div>
+      <div class="sc">
+        <div class="sc-col sc-hide">
+          <div class="sc-h">CAN BE HIDDEN</div>
+          <div class="sc-b">Top-of-page ad block</div>
+          <div class="sc-s">A user can collapse it</div>
+        </div>
+        <div class="sc-col sc-keep">
+          <div class="sc-h">NOT IN THE HIDEABLE RANGE</div>
+          <ul class="sc-list"><li>Brand zone</li><li>In-page image ads</li><li>Bottom link ads</li></ul>
+        </div>
+      </div>
+      <div class="dgm-note">Hideable scope as reported for <strong>Bing only</strong>. No equivalent scope has been published for Baidu or Sogou, and none is assumed here.</div>
+    </div>
+
     <div class="callout callout-warning"><strong>🧪 Ask what your format's hideable status is</strong><p>For Bing, the excluded formats are reported: brand zone, in-page image ads and bottom link ads. For Baidu, the scope has not been published anywhere we could find. That makes it a question for your account team rather than for a blog post &mdash; and it is the one question that determines whether your campaign sits inside or outside a one-click collapse.</p></div>
 <h2 data-bpp-enh="1">⚙️ What an ad-hiding control does to a paid placement</h2>
 
