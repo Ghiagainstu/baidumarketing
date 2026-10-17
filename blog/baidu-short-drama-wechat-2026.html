@@ -261,6 +261,36 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    /* bpp-dgm-enh -- inline structural diagram (variable-driven, dark-mode safe) */
+    .dgm { margin: 28px 0; padding: 22px 24px; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); background: var(--gray-50); }
+    .dgm-title { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 18px; }
+    .dgm-note { font-size: .78rem; line-height: 1.55; color: var(--gray-600); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
+    .dgm-note strong { color: var(--gray-800); }
+
+    .dp { display: grid; grid-template-columns: 1fr 26px 1fr 26px 1fr; align-items: stretch; }
+    .dp-step { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: var(--radius); border: 1.2px solid var(--gray-300); background: var(--gray-100); }
+    .dp-step.is-capture { border-color: var(--blue); background: var(--blue-light); }
+    .dp-h { font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--gray-600); }
+    .dp-b { font-size: .85rem; font-weight: 700; line-height: 1.35; color: var(--gray-900); }
+    .dp-m { font-size: .74rem; line-height: 1.4; color: var(--gray-600); margin-top: 2px; }
+    .dp-step.is-capture .dp-h { color: var(--blue); }
+    .dp-step.is-capture .dp-m { color: var(--blue); opacity: .9; }
+    .dp-arrow { display: flex; align-items: center; justify-content: center; color: var(--gray-400); font-size: 1rem; }
+
+    @media (max-width: 900px) {
+      .dgm { padding: 20px 20px; }
+    }
+    @media (max-width: 720px) {
+      .dp { grid-template-columns: 1fr; }
+      .dp-arrow { padding: 6px 0; transform: rotate(90deg); }
+    }
+    @media (max-width: 640px) {
+      .dgm { padding: 16px 14px; margin: 22px 0; border-radius: var(--radius); }
+      .dgm-note { font-size: .74rem; }
+      .dp-b { font-size: .8rem; }
+    }
+
   </style>
 </head>
 <body>
@@ -358,7 +388,20 @@
 
     <p>For advertisers the implication is not that Baidu is about to sell you short-drama inventory. It is that even the strongest owner of the capture layer is hedging toward the creation layer, because capture alone is being commoditised — by platform service cards that answer queries in place, by AI assistants that absorb research, by the sheer volume of content that now manufactures demand before anyone searches.</p>
 
-    <h2 data-bpp-enh="1">🎯 What this means for an overseas brand's China plan</h2>
+    
+
+    <div class="dgm">
+      <div class="dgm-title">The path the industry describes</div>
+      <div class="dp">
+        <div class="dp-step"><div class="dp-h">CREATE</div><div class="dp-b">Emotional hook, cliffhanger</div><div class="dp-m">Baidu bought into this layer</div></div>
+        <div class="dp-arrow" aria-hidden="true">→</div>
+        <div class="dp-step is-capture"><div class="dp-h">CAPTURE</div><div class="dp-b">The search</div><div class="dp-m">Baidu's core business</div></div>
+        <div class="dp-arrow" aria-hidden="true">→</div>
+        <div class="dp-step"><div class="dp-h">PURCHASE</div><div class="dp-b">The transaction</div><div class="dp-m">Where the money moves</div></div>
+      </div>
+      <div class="dgm-note">The industry's own description of the sequence is emotional resonance, then search, then purchase. The layer labels and the reading of Baidu's position are this article's framing, not a quotation.</div>
+    </div>
+<h2 data-bpp-enh="1">🎯 What this means for an overseas brand's China plan</h2>
 
     <p>Three readings, in descending order of confidence.</p>
 

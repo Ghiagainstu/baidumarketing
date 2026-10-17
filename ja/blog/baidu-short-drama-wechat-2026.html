@@ -261,6 +261,36 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
+  
+    /* bpp-dgm-enh -- inline structural diagram (variable-driven, dark-mode safe) */
+    .dgm { margin: 28px 0; padding: 22px 24px; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); background: var(--gray-50); }
+    .dgm-title { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 18px; }
+    .dgm-note { font-size: .78rem; line-height: 1.55; color: var(--gray-600); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
+    .dgm-note strong { color: var(--gray-800); }
+
+    .dp { display: grid; grid-template-columns: 1fr 26px 1fr 26px 1fr; align-items: stretch; }
+    .dp-step { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: var(--radius); border: 1.2px solid var(--gray-300); background: var(--gray-100); }
+    .dp-step.is-capture { border-color: var(--blue); background: var(--blue-light); }
+    .dp-h { font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--gray-600); }
+    .dp-b { font-size: .85rem; font-weight: 700; line-height: 1.35; color: var(--gray-900); }
+    .dp-m { font-size: .74rem; line-height: 1.4; color: var(--gray-600); margin-top: 2px; }
+    .dp-step.is-capture .dp-h { color: var(--blue); }
+    .dp-step.is-capture .dp-m { color: var(--blue); opacity: .9; }
+    .dp-arrow { display: flex; align-items: center; justify-content: center; color: var(--gray-400); font-size: 1rem; }
+
+    @media (max-width: 900px) {
+      .dgm { padding: 20px 20px; }
+    }
+    @media (max-width: 720px) {
+      .dp { grid-template-columns: 1fr; }
+      .dp-arrow { padding: 6px 0; transform: rotate(90deg); }
+    }
+    @media (max-width: 640px) {
+      .dgm { padding: 16px 14px; margin: 22px 0; border-radius: var(--radius); }
+      .dgm-note { font-size: .74rem; }
+      .dp-b { font-size: .8rem; }
+    }
+
   </style>
 </head>
 <body>
@@ -358,7 +388,20 @@
 
     <p>広告主にとっての含意は、百度がまもなくショートドラマの広告枠を売り始めるということではありません。<strong>捕捉の層を最も強く持つ企業でさえ、創出の層へヘッジしている</strong>ということです。捕捉だけではコモディティ化が進んでいるからです。問いをその場で答えるプラットフォームのサービスカード、調査を吸収する AI アシスタント、そして誰かが検索する前に需要を製造する大量のコンテンツによって。</p>
 
-    <h2 data-bpp-enh="1">🎯 海外ブランドの中国計画にとって何を意味するか</h2>
+    
+
+    <div class="dgm">
+      <div class="dgm-title">業界が説明する経路</div>
+      <div class="dp">
+        <div class="dp-step"><div class="dp-h">創出</div><div class="dp-b">感情の引っかけ、続きを見たくなる切断</div><div class="dp-m">百度が今この層に買った</div></div>
+        <div class="dp-arrow" aria-hidden="true">→</div>
+        <div class="dp-step is-capture"><div class="dp-h">捕捉</div><div class="dp-b">検索</div><div class="dp-m">百度の本業</div></div>
+        <div class="dp-arrow" aria-hidden="true">→</div>
+        <div class="dp-step"><div class="dp-h">購入</div><div class="dp-b">取引</div><div class="dp-m">資金が動く場所</div></div>
+      </div>
+      <div class="dgm-note">業界自身の説明は「感情の共鳴、次に検索、そして購入」です。層の名称と百度の位置づけは本記事の整理であり、引用ではありません。</div>
+    </div>
+<h2 data-bpp-enh="1">🎯 海外ブランドの中国計画にとって何を意味するか</h2>
 
     <p>三つの読みを、確度の高い順に挙げます。</p>
 
