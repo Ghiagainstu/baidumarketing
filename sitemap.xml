@@ -1454,14 +1454,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/blog/_template-en</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/_template-en" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/_template-en" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/_template-en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/_template-en" />
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.baidumarketing.com/ja</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja" />
     <priority>0.8</priority>
@@ -2890,14 +2882,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.baidumarketing.com/ja/blog/_template-ja</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/_template-ja" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/_template-ja" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/_template-ja" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/_template-ja" />
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.baidumarketing.com/ko</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko" />
     <priority>0.8</priority>
@@ -4323,14 +4307,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/why-b2b-baidu-search" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/why-b2b-baidu-search" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/why-b2b-baidu-search" />
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.baidumarketing.com/ko/blog/_template-ko</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.baidumarketing.com/blog/_template-ko" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.baidumarketing.com/ja/blog/_template-ko" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.baidumarketing.com/ko/blog/_template-ko" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.baidumarketing.com/blog/_template-ko" />
     <priority>0.6</priority>
   </url>
 </urlset>

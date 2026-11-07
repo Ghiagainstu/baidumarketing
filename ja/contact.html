@@ -463,19 +463,7 @@
     "@id": "https://www.baidumarketing.com/#website"
   }
 }
-    // FAQ Toggle
-  function toggleFaq(btn) {
-    const item = btn.closest(".faq-item");
-    const isOpen = item.classList.contains("open");
-    document.querySelectorAll(".faq-item.open").forEach(el => {
-      if (el !== item) el.classList.remove("open");
-    });
-    item.classList.toggle("open", !isOpen);
-  }
-  document.querySelectorAll(".faq-question").forEach(function(btn) {
-    btn.addEventListener("click", function() { toggleFaq(this); });
-  });
-</script>
+  </script>
 </head>
 <body>
 

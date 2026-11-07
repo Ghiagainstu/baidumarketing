@@ -635,11 +635,12 @@ def rebuild(template_path, md_path, output_path, lang, slug):
             else:
                 ctae += len('</div>\n    </div>')
         result = result[:ctas] + f'''<div class="cta-box">
-        <h3>{cta["title"]}</h3>
-        <p>{cta["text"]}</p>
-        <a href="{cta["link"]}" class="cta-btn">{cta["btn"]}</a>
-      </div>
+    <div class="container">
+      <h3>{cta["title"]}</h3>
+      <p>{cta["text"]}</p>
+      <a href="{cta["link"]}" class="cta-btn">{cta["btn"]}</a>
     </div>
+  </div>
   </main>''' + result[ctae:]
 
     # 9. Related section (dynamically generated from listing page)
