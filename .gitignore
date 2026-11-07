@@ -37,6 +37,7 @@ inspect-shots/
 # Misc scratch/diagnostic scripts & notes
 .diag_*.py
 .validate_*.py
+.probe_*.py
 .regen_*.py
 .fix_*.py
 .finalize_*.py
