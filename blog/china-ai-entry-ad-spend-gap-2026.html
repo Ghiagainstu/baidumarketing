@@ -261,7 +261,16 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+  
+/* bpp-qm-pills */
+.qm-pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 0; }
+.qm-pill { border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 16px; background: var(--gray-50); }
+.qm-pill-name { font-size: .82rem; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
+.qm-pill-desc { font-size: .84rem; line-height: 1.6; color: var(--gray-600); }
+.qm-note { font-size: .78rem; line-height: 1.6; color: var(--gray-500); border-top: 1px solid var(--gray-200); padding-top: 10px; margin-top: 4px; }
+@media (max-width: 900px) { .qm-pills { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .qm-pills { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -375,7 +384,11 @@
 
     <p>One figure that is sometimes read as evidence of a broader trend should stay narrow: 23.591 million university students used AI apps in September, tied to the back-to-school marketing window. It is a seasonal node measurement, not a demographic forecast.</p>
 
-    <h2>🚫 What the report does not say</h2>
+    <div class="qm-pills">
+<div class="qm-pill"><div class="qm-pill-name">Doubao</div><div class="qm-pill-desc">Cutting back references to improve efficiency</div></div><div class="qm-pill"><div class="qm-pill-name">Qwen</div><div class="qm-pill-desc">Cutting back references to improve efficiency</div></div><div class="qm-pill"><div class="qm-pill-name">Yuanbao</div><div class="qm-pill-desc">Steady iteration</div></div><div class="qm-pill"><div class="qm-pill-name">DeepSeek</div><div class="qm-pill-desc">Steady iteration</div></div><div class="qm-pill"><div class="qm-pill-name">Kimi</div><div class="qm-pill-desc">Widening coverage</div></div><div class="qm-pill"><div class="qm-pill-name">Wenxin</div><div class="qm-pill-desc">Balanced expansion</div></div>
+</div>
+<div class="qm-note">Source: QuestMobile 2026 China Mobile Internet Autumn Report, section 2.8. These are the report's own descriptions of citation behaviour, written in the report text — not chart figures reported by press coverage.</div>
+<h2>🚫 What the report does not say</h2>
 
     <p>The report does not describe any change to ad formats, ad positions or ad pricing. It is a consumer-side and market-level report. AI-native app users, device-maker AI applications and system-level AI applications are user-side categories, not advertising inventory. A reader who concludes that Baidu's ad products changed because AI usage grew would be adding a claim the source does not carry.</p>
 

@@ -261,7 +261,16 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+  
+/* bpp-qm-pills */
+.qm-pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 0; }
+.qm-pill { border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 16px; background: var(--gray-50); }
+.qm-pill-name { font-size: .82rem; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
+.qm-pill-desc { font-size: .84rem; line-height: 1.6; color: var(--gray-600); }
+.qm-note { font-size: .78rem; line-height: 1.6; color: var(--gray-500); border-top: 1px solid var(--gray-200); padding-top: 10px; margin-top: 4px; }
+@media (max-width: 900px) { .qm-pills { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .qm-pills { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -375,7 +384,11 @@
 
     <p>広い傾向の根拠として読まれがちな数字も、範囲を狭く保つべきです。9月にAIアプリを利用した大学生は2,359.1万人でした。新学期の販促期にひもづく季節的な計測であり、属性別の将来予測ではありません。</p>
 
-    <h2>🚫 報告書が述べていないこと</h2>
+    <div class="qm-pills">
+<div class="qm-pill"><div class="qm-pill-name">Doubao</div><div class="qm-pill-desc">効率向上のため参照を絞る</div></div><div class="qm-pill"><div class="qm-pill-name">Qwen</div><div class="qm-pill-desc">効率向上のため参照を絞る</div></div><div class="qm-pill"><div class="qm-pill-name">Yuanbao</div><div class="qm-pill-desc">着実な改良</div></div><div class="qm-pill"><div class="qm-pill-name">DeepSeek</div><div class="qm-pill-desc">着実な改良</div></div><div class="qm-pill"><div class="qm-pill-name">Kimi</div><div class="qm-pill-desc">範囲を広げる</div></div><div class="qm-pill"><div class="qm-pill-name">Wenxin</div><div class="qm-pill-desc">均等に拡張</div></div>
+</div>
+<div class="qm-note">出典：QuestMobile「2026中国モバイルインターネット秋季大報告」第2.8節。引用挙動に関する報告書本文の記述であり、報道が伝えた図表数値ではありません。</div>
+<h2>🚫 報告書が述べていないこと</h2>
 
     <p>報告書は広告形式・広告枠・広告価格の変更について一切述べていません。利用者側と市場全体を扱う報告書です。AIネイティブアプリの利用者、端末メーカーのAIアプリ、システム級AIアプリはいずれも利用者側の分類であり、広告枠ではありません。AI利用が伸びたからBaiduの広告商品も変わった、と結論づけるのは、出典が持たない主張を付け足すことになります。</p>
 

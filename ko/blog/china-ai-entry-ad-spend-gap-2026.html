@@ -261,7 +261,16 @@
     [data-theme="dark"] .nav-links.open a { color: var(--gray-700); border-bottom-color: var(--gray-200); white-space: nowrap; }
     [data-theme="dark"] .nav-links.open a:hover, [data-theme="dark"] .nav-links.open a:active { background: rgba(99,102,241,.12); color: var(--blue); }
     .nav-mobile-panel { display: none; }
-  </style>
+  
+/* bpp-qm-pills */
+.qm-pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 0; }
+.qm-pill { border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 16px; background: var(--gray-50); }
+.qm-pill-name { font-size: .82rem; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
+.qm-pill-desc { font-size: .84rem; line-height: 1.6; color: var(--gray-600); }
+.qm-note { font-size: .78rem; line-height: 1.6; color: var(--gray-500); border-top: 1px solid var(--gray-200); padding-top: 10px; margin-top: 4px; }
+@media (max-width: 900px) { .qm-pills { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .qm-pills { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
   <nav><div class="container nav-inner">
@@ -375,7 +384,11 @@
 
     <p>더 넓은 흐름의 근거로 읽히기 쉬운 수치도 범위를 좁혀 두어야 합니다. 9월에 AI 앱을 쓴 대학생은 2,359.1만 명이었습니다. 새 학기 판촉 시점에 묶인 계절적 측정이며, 집단별 장기 예측이 아닙니다.</p>
 
-    <h2>🚫 보고서가 밝히지 않은 것</h2>
+    <div class="qm-pills">
+<div class="qm-pill"><div class="qm-pill-name">Doubao</div><div class="qm-pill-desc">효율 향상을 위해 참조를 줄임</div></div><div class="qm-pill"><div class="qm-pill-name">Qwen</div><div class="qm-pill-desc">효율 향상을 위해 참조를 줄임</div></div><div class="qm-pill"><div class="qm-pill-name">Yuanbao</div><div class="qm-pill-desc">꾸준한 개선</div></div><div class="qm-pill"><div class="qm-pill-name">DeepSeek</div><div class="qm-pill-desc">꾸준한 개선</div></div><div class="qm-pill"><div class="qm-pill-name">Kimi</div><div class="qm-pill-desc">범위 확대</div></div><div class="qm-pill"><div class="qm-pill-name">Wenxin</div><div class="qm-pill-desc">고른 확장</div></div>
+</div>
+<div class="qm-note">출처: QuestMobile 「2026 중국 모바일 인터넷 가을 보고서」 제2.8절. 인용 행동에 관한 보고서 본문의 서술이며, 보도가 전한 도표 수치가 아닙니다.</div>
+<h2>🚫 보고서가 밝히지 않은 것</h2>
 
     <p>보고서는 광고 형식·광고 위치·광고 가격의 변화에 대해 전혀 언급하지 않습니다. 이용자 측과 시장 전체를 다루는 보고서입니다. AI 네이티브 앱 이용자, 단말 제조사 AI 앱, 시스템 수준 AI 앱은 모두 이용자 측 분류이며 광고 지면이 아닙니다. AI 이용이 늘었으니 Baidu의 광고 상품도 달라졌다고 결론짓는 것은, 출처에 없는 주장을 덧붙이는 일입니다.</p>
 
