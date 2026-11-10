@@ -53,7 +53,7 @@ function generateCard(blog) {
   return `      <!-- NEW: ${blog.slug} -->
       <div class="blog-card" data-category="${blog.category}">
         <span class="blog-card-tag ${blog.category}">${blog.category.charAt(0).toUpperCase() + blog.category.slice(1)}</span>
-        <h3 class="blog-card-title"><a href="blog/${blog.slug}">${blog.title}</a></h3>
+        <h3 class="blog-card-title"><a href="/blog/${blog.slug}">${blog.title}</a></h3>
         <p class="blog-card-excerpt">${blog.excerpt}</p>
         <div class="blog-card-meta"><span>${dateStr}</span><span class="read-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ${blog.readTime} min</span></div>
       </div>\n`;

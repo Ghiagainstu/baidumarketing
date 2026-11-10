@@ -30,7 +30,7 @@ def process(path):
 
     def repl(m):
         block = m.group(0)
-        href_m = re.search(r'href="blog/([^"]+)"', block)
+        href_m = re.search(r'href="/?(?:ja/|ko/)?blog/([^"]+)"', block)
         if not href_m:
             return block
         slug = href_m.group(1)

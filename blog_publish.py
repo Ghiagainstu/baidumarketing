@@ -99,12 +99,14 @@ def create_card_html(lang, slug, category, title, excerpt, date, read_time):
     read_more = LANG_CONFIG[lang]["read_more"]
     excerpt = truncate_excerpt(excerpt, 120)
 
-    # 确定链接路径（相对路径，不带语言前缀）
-    if lang == "en":
-        link_path = f"blog/{slug}"
+    # 绝对根路径 + 语言前缀。相对路径 blog/slug 在带尾斜杠的列表页 URL
+    # (/blog/、/ja/blog/) 下会解析成 /blog/blog/slug，产生 GSC 404 拼接 URL。
+    if lang == "ja":
+        link_path = f"/ja/blog/{slug}"
+    elif lang == "ko":
+        link_path = f"/ko/blog/{slug}"
     else:
-        # JA/KO 用相对路径 blog/slug（不是 ja/blog/slug）
-        link_path = f"blog/{slug}"
+        link_path = f"/blog/{slug}"
 
     card = f'''<article class="blog-card" data-category="{category}">
         <a href="{link_path}" class="blog-card-link">
