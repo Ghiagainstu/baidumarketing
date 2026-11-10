@@ -428,27 +428,23 @@ function generateSitemap() {
 
   for (const page of LANG_CFG.pages) {
     const pageName = page === 'index' ? '' : page;
-    
-    // English version (default)
-    const enURL = pageName ? `${baseURL}/${pageName}` : baseURL;
-    
-    // Build alternates for each active language
-    const alternates = LANG_CFG.languages
-      .filter(l => l.active)
-      .map(l => {
-        const altName = page === 'index' ? '' : page;
-        const altURL = l.dir ? `${baseURL}/${l.dir}/${altName}` : enURL;
-        return `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${altURL}" />`;
-      })
-      .join('\n');
+    const corePath = pageName ? `/${pageName}` : '';
+    const enURL = pageName ? `${baseURL}${corePath}` : `${baseURL}/`;
+    const jaURL = pageName ? `${baseURL}/ja${corePath}` : `${baseURL}/ja/`;
+    const koURL = pageName ? `${baseURL}/ko${corePath}` : `${baseURL}/ko/`;
 
-    const urlLine = pageName ? `${baseURL}/${pageName}` : baseURL;
+    // Full reciprocal 4-link set (en/ja/ko/x-default). Home locs keep the
+    // directory-root trailing slash so sitemap matches the HTML canonical.
+    const alternates = [
+      `      <xhtml:link rel="alternate" hreflang="en" href="${enURL}" />`,
+      `      <xhtml:link rel="alternate" hreflang="ja" href="${jaURL}" />`,
+      `      <xhtml:link rel="alternate" hreflang="ko" href="${koURL}" />`,
+      `      <xhtml:link rel="alternate" hreflang="x-default" href="${enURL}" />`
+    ].join('\n');
 
     lines.push(`  <url>`);
-    lines.push(`    <loc>${urlLine}</loc>`);
+    lines.push(`    <loc>${enURL}</loc>`);
     lines.push(alternates);
-    // Get priority for this page
-    const lang = LANG_CFG.languages.find(l => l.code === 'en');
     lines.push(`    <priority>${page === 'index' ? '1.0' : '0.8'}</priority>`);
     lines.push(`  </url>`);
   }
@@ -456,7 +452,7 @@ function generateSitemap() {
   // Blog posts in English
   const blogDir = path.join(ROOT, 'blog');
   if (fs.existsSync(blogDir)) {
-    const posts = fs.readdirSync(blogDir).filter(f => f.endsWith('.html'));
+    const posts = fs.readdirSync(blogDir).filter(f => f.endsWith('.html') && !f.startsWith('_template'));
     for (const post of posts) {
       const slug = post.replace('.html', '');
       lines.push(`  <url>`);
@@ -476,10 +472,16 @@ function generateSitemap() {
     const jaFilePath = page === 'index' ? path.join(jaDir, 'index.html') : path.join(jaDir, `${page}.html`);
     if (fs.existsSync(jaFilePath)) {
       const pageName = page === 'index' ? '' : page;
-      const urlLine = pageName ? `${baseURL}/ja/${pageName}` : `${baseURL}/ja`;
+      const corePath = pageName ? `/${pageName}` : '';
+      const enURL = pageName ? `${baseURL}${corePath}` : `${baseURL}/`;
+      const jaURL = pageName ? `${baseURL}/ja${corePath}` : `${baseURL}/ja/`;
+      const koURL = pageName ? `${baseURL}/ko${corePath}` : `${baseURL}/ko/`;
       lines.push(`  <url>`);
-      lines.push(`    <loc>${urlLine}</loc>`);
-      lines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${urlLine}" />`);
+      lines.push(`    <loc>${jaURL}</loc>`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${enURL}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${jaURL}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${koURL}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${enURL}" />`);
       lines.push(`    <priority>0.8</priority>`);
       lines.push(`  </url>`);
     }
@@ -488,7 +490,7 @@ function generateSitemap() {
   // Japanese blog posts
   const jaBlogDir = path.join(ROOT, 'ja', 'blog');
   if (fs.existsSync(jaBlogDir)) {
-    const posts = fs.readdirSync(jaBlogDir).filter(f => f.endsWith('.html'));
+    const posts = fs.readdirSync(jaBlogDir).filter(f => f.endsWith('.html') && !f.startsWith('_template'));
     for (const post of posts) {
       const slug = post.replace('.html', '');
       lines.push(`  <url>`);
@@ -508,10 +510,16 @@ function generateSitemap() {
     const koFilePath = page === 'index' ? path.join(koDir, 'index.html') : path.join(koDir, `${page}.html`);
     if (fs.existsSync(koFilePath)) {
       const pageName = page === 'index' ? '' : page;
-      const urlLine = pageName ? `${baseURL}/ko/${pageName}` : `${baseURL}/ko`;
+      const corePath = pageName ? `/${pageName}` : '';
+      const enURL = pageName ? `${baseURL}${corePath}` : `${baseURL}/`;
+      const jaURL = pageName ? `${baseURL}/ja${corePath}` : `${baseURL}/ja/`;
+      const koURL = pageName ? `${baseURL}/ko${corePath}` : `${baseURL}/ko/`;
       lines.push(`  <url>`);
-      lines.push(`    <loc>${urlLine}</loc>`);
-      lines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${urlLine}" />`);
+      lines.push(`    <loc>${koURL}</loc>`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${enURL}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${jaURL}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${koURL}" />`);
+      lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${enURL}" />`);
       lines.push(`    <priority>0.8</priority>`);
       lines.push(`  </url>`);
     }
@@ -520,7 +528,7 @@ function generateSitemap() {
   // Korean blog posts
   const koBlogDir = path.join(ROOT, 'ko', 'blog');
   if (fs.existsSync(koBlogDir)) {
-    const posts = fs.readdirSync(koBlogDir).filter(f => f.endsWith('.html'));
+    const posts = fs.readdirSync(koBlogDir).filter(f => f.endsWith('.html') && !f.startsWith('_template'));
     for (const post of posts) {
       const slug = post.replace('.html', '');
       lines.push(`  <url>`);
