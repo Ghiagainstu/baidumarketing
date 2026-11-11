@@ -13,6 +13,7 @@ rebuild_blog.py — 从 Obsidian MD + 模板生成完整博客 HTML
 - JA/KO footer 列标题翻译
 """
 import re
+import json
 import os
 import sys
 import argparse
@@ -586,10 +587,42 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     result = re.sub(r'<meta name="twitter:title" content="[^"]*"', f'<meta name="twitter:title" content="{title}"', result)
     result = re.sub(r'<meta name="twitter:description" content="[^"]*"', f'<meta name="twitter:description" content="{desc}"', result)
 
-    # 4. JSON-LD
+    # 4. JSON-LD：BlogPosting + BreadcrumbList，全部归入 <head>
+    # 用 json.dumps 构造，避免标题/摘要里的引号破坏 JSON；并同步站点结构化数据规范。
     canonical_url = f"https://www.baidumarketing.com{lang_prefix}/blog/{slug}"
-    jl = f'{{"@context":"https://schema.org","@type":"BlogPosting","url":"{canonical_url}","headline":"{title}","description":"{desc}","datePublished":"{date}","dateModified":"{date}","author":{{"@type":"Organization","name":"{author}"}},"publisher":{{"@type":"Organization","name":"Baidu PPC Pro"}},"mainEntityOfPage":{{"@type":"WebPage","@id":"{canonical_url}"}}}}'
-    result = re.sub(r'<script type="application/ld\+json">.*?</script>', f'<script type="application/ld+json">\n  {jl}\n  </script>', result, flags=re.DOTALL)
+    jl_obj = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "url": canonical_url,
+        "headline": title,
+        "description": desc,
+        "datePublished": date,
+        "dateModified": date,
+        "author": {"@type": "Organization", "name": author},
+        "publisher": {"@type": "Organization", "name": "Baidu PPC Pro"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical_url},
+        "isPartOf": {"@type": "WebSite", "@id": "https://www.baidumarketing.com/#website"},
+    }
+    home_labels = {"en": "Home", "ja": "ホーム", "ko": "홈"}
+    blog_labels = {"en": "Blog", "ja": "ブログ", "ko": "블로그"}
+    home_url = "https://www.baidumarketing.com" + (lang_prefix + "/" if lang_prefix else "/")
+    blog_url = "https://www.baidumarketing.com" + lang_prefix + "/blog"
+    bc_obj = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": home_labels.get(lang, "Home"), "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": blog_labels.get(lang, "Blog"), "item": blog_url},
+            {"@type": "ListItem", "position": 3, "name": title, "item": canonical_url},
+        ],
+    }
+    blocks = "\n".join(
+        '  <script type="application/ld+json">\n' + json.dumps(o, ensure_ascii=False, indent=2) + '\n  </script>'
+        for o in (jl_obj, bc_obj)
+    )
+    # 先清掉模板里所有 ld+json（含可能位于 body 的），再统一插入 head，避免重复/回退
+    result = re.sub(r'\s*<script[^>]*type="application/ld\+json"[^>]*>.*?</script>', '', result, flags=re.DOTALL)
+    result = result.replace('</head>', '\n' + blocks + '\n</head>', 1)
 
     # 5. Article meta (with SVG icons)
     dd = format_date(date, lang)

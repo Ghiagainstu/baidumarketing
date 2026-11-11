@@ -1,0 +1,48 @@
+# Baidu PPC Pro
+
+> Baidu PPC Pro helps international agencies and companies access China's $100B digital advertising market. Baidu SEM account setup, top-up, and management.
+
+Canonical site: https://www.baidumarketing.com/
+Sitemap: https://www.baidumarketing.com/sitemap.xml
+
+Languages:
+- English: https://www.baidumarketing.com/
+- Japanese: https://www.baidumarketing.com/ja/
+- Korean: https://www.baidumarketing.com/ko/
+
+## English — core pages
+
+- [Why Baidu PPC Pro](https://www.baidumarketing.com/why-baidu-ppc-pro)
+- [Services](https://www.baidumarketing.com/features)
+- [Pricing](https://www.baidumarketing.com/pricing)
+- [Clients](https://www.baidumarketing.com/clients)
+- [FAQ](https://www.baidumarketing.com/faq)
+- [About](https://www.baidumarketing.com/about)
+- [Blog](https://www.baidumarketing.com/blog)
+- [China GEO (Generative Engine Optimization)](https://www.baidumarketing.com/china-geo)
+- [Contact](https://www.baidumarketing.com/contact)
+
+## 日本語 — 主要ページ
+
+- [選ばれる理由](https://www.baidumarketing.com/ja/why-baidu-ppc-pro)
+- [サービス](https://www.baidumarketing.com/ja/features)
+- [料金](https://www.baidumarketing.com/ja/pricing)
+- [導入事例](https://www.baidumarketing.com/ja/clients)
+- [よくある質問](https://www.baidumarketing.com/ja/faq)
+- [会社概要](https://www.baidumarketing.com/ja/about)
+- [ブログ](https://www.baidumarketing.com/ja/blog)
+- [お問い合わせ](https://www.baidumarketing.com/ja/contact)
+
+## 한국어 — 주요 페이지
+
+- [바이두 PPC Pro란](https://www.baidumarketing.com/ko/why-baidu-ppc-pro)
+- [서비스](https://www.baidumarketing.com/ko/features)
+- [요금](https://www.baidumarketing.com/ko/pricing)
+- [도입 사례](https://www.baidumarketing.com/ko/clients)
+- [자주 묻는 질문](https://www.baidumarketing.com/ko/faq)
+- [회사 소개](https://www.baidumarketing.com/ko/about)
+- [블로그](https://www.baidumarketing.com/ko/blog)
+- [문의하기](https://www.baidumarketing.com/ko/contact)
+
+Article indexes: https://www.baidumarketing.com/blog , https://www.baidumarketing.com/ja/blog , https://www.baidumarketing.com/ko/blog
+All published URLs are listed in the sitemap linked above.
