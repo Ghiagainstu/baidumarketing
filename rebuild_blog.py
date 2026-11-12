@@ -50,9 +50,17 @@ FOOTER_BRAND_DESC = {
     'ko': '해외 에이전시와 브랜드가 컴플라이언스와 투명성을 갖춘 중국 1000억 달러 규모의 디지털 광고 시장에 접근할 수 있도록 지원합니다.',
 }
 
-COPYRIGHT_TEXT = {
-    'ja': '無断転載を禁じます',
-    'ko': '무단전재를 금지합니다.',
+# footer-copy 权威范本，与 blog/_template-{en,ja,ko}.html 完全一致
+# 必须整段替换；仅替换 "All rights reserved." 会残留 "Part of TMG." 或缺失句号
+FOOTER_COPY = {
+    'en': '© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. Part of <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a>. All rights reserved.',
+    'ja': '© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> のグループ企業です。無断転載を禁じます。',
+    'ko': '© <script>document.write(new Date().getFullYear())</script> Baidu PPC Pro. <a href="https://www.tuyuesouxin.cn/" target="_blank" rel="noopener">TMG</a> 계열사입니다。무단전재를 금지합니다.',
+}
+DEFAULT_AUTHOR = {
+    'en': 'Baidu PPC Pro Team',
+    'ja': 'Baidu PPC Pro チーム',
+    'ko': 'Baidu PPC Pro 팀',
 }
 
 STATS_TRANSLATIONS = {
@@ -535,7 +543,7 @@ def rebuild(template_path, md_path, output_path, lang, slug):
     desc = meta.get('description', '')
     date = meta.get('date', '2026-06-21')
     rtime = meta.get('reading_time', '9 min')
-    author = meta.get('author', 'Baidu PPC Pro Team')
+    author = meta.get('author', DEFAULT_AUTHOR.get(lang, DEFAULT_AUTHOR['en']))
     category = meta.get('category', '')
 
     # Build enhanced HTML content
@@ -721,9 +729,10 @@ def rebuild(template_path, md_path, output_path, lang, slug):
             p_tag_end = result.find('</p>', p_start) + 4
             result = result[:p_tag_start] + f'<p>{FOOTER_BRAND_DESC[lang]}</p>' + result[p_tag_end:]
 
-    # 14. Copyright
-    if lang in COPYRIGHT_TEXT:
-        result = result.replace('All rights reserved.', COPYRIGHT_TEXT[lang])
+    # 14. Copyright — 整段 footer-copy 统一为语言模板，避免英文残留/句号差异
+    result = re.sub(r'(<div class="footer-copy">).*?(</div>)',
+                    lambda m: m.group(1) + FOOTER_COPY[lang] + m.group(2),
+                    result, count=1, flags=re.DOTALL)
 
     # 11b. Language switcher button flag
     FLAG_MAP = {
