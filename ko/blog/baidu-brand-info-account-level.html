@@ -16,6 +16,8 @@
   </script>
 
   <meta charset="UTF-8">
+  <meta name="theme-color" content="#1a56db">
+  <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>바이두, 브랜드 정보를 계정 수준으로 통합——광고 관련성과 CTR에 미치는 영향 — Baidu PPC Pro 블로그</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -305,8 +307,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
   <meta property="og:title" content="바이두 브랜드 정보 계정 수준 적용: 검색 결과에서 브랜드 신뢰도 강화" />
   <meta property="og:description" content="바이두 브랜드 정보 기능이 계정 수준으로 확대되었습니다. 검색 결과에서 브랜드 신뢰도를 높이는 방법을 안내합니다." />
-  <meta <meta property="og:site_name" content="Baidu PPC Pro">
-  property="og:type" content="article" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baidu PPC Pro">
   <meta property="og:url" content="https://www.baidumarketing.com/ko/blog/baidu-brand-info-account-level" />
   <meta property="og:image" content="https://www.baidumarketing.com/assets/og-brand-default.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -656,8 +658,7 @@ function toggleMobileNav() {
     document.body.style.overflow = '';
   }
 }
-document.querySelectorAll('.nav-links a').forEach(link =>
-  <meta name="color-scheme" content="light dark"> {
+document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
 });
 

@@ -13,6 +13,8 @@
   </script>
 
   <meta charset="UTF-8">
+  <meta name="theme-color" content="#1a56db">
+  <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baidu Moves Brand Info to Account Level: Why It Matters for Ad Relevance and CTR — Baidu PPC Pro — Baidu PPC Pro Blog</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -299,8 +301,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
   <meta property="og:title" content="Baidu Moves Brand Info to Account Level: Why It Matters for Ad Relevance and CTR — Baidu PPC Pro" />
   <meta property="og:description" content="Baidu moved brand info from unit/plan level to account level starting Dec 2024. Learn why this matters for ad relevance and CTR." />
-  <meta <meta property="og:site_name" content="Baidu PPC Pro">
-  property="og:type" content="article" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baidu PPC Pro">
   <meta property="og:url" content="https://www.baidumarketing.com/blog/baidu-brand-info-account-level" />
   <meta property="og:image" content="https://www.baidumarketing.com/assets/og-brand-default.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -617,8 +619,7 @@ function toggleMobileNav() {
     document.body.style.overflow = '';
   }
 }
-document.querySelectorAll('.nav-links a').forEach(link =>
-  <meta name="color-scheme" content="light dark"> {
+document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
 });
 

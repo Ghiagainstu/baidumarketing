@@ -16,6 +16,8 @@
   </script>
 
   <meta charset="UTF-8">
+  <meta name="theme-color" content="#1a56db">
+  <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>바이두, 광고 작성 워크플로우 간소화——시간 단축과 소재 품질 향상의 3가지 업그레이드 — Baidu PPC Pro Blog</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -337,8 +339,8 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92);
 
   <meta property="og:title" content="바이두 광고 작성 워크플로우 간소화: 시간을 절약하고 소재 품질을 높이는 3가지 업그레이드" />
   <meta property="og:description" content="바이두가 2025년 10월 16일 광고 작성 플랫폼 3가지 업그레이드를 출시했습니다. 캠페인 설정 속도, 광고 문구 작성, 헤드라인 포맷 규칙의 pain point를 해결합니다." />
-  <meta <meta property="og:site_name" content="Baidu PPC Pro">
-  property="og:type" content="article" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baidu PPC Pro">
   <meta property="og:url" content="https://www.baidumarketing.com/ko/blog/baidu-ad-creation-workflow-simplified-creative-upgrade" />
   <meta property="og:image" content="https://www.baidumarketing.com/assets/og-brand-default.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -705,8 +707,7 @@ function toggleMobileNav() {
     document.body.style.overflow = '';
   }
 }
-document.querySelectorAll('.nav-links a').forEach(link =>
-  <meta name="color-scheme" content="light dark"> {
+document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => { if (mobileNavOpen) toggleMobileNav(); });
 });
 
