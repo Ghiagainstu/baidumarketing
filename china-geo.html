@@ -256,7 +256,9 @@
     .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin: 32px 0; }
     .geo-platform-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 28px 24px; transition: box-shadow var(--transition-smooth), transform var(--transition-smooth); }
     .geo-platform-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-    .geo-platform-card .platform-icon { font-size: 2rem; margin-bottom: 12px; }
+    .geo-platform-card .platform-icon { font-size: 2rem; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .geo-platform-card .platform-logo { width: 44px; height: 44px; object-fit: contain; background: #fff; border: 1px solid var(--gray-200); border-radius: 10px; padding: 5px; flex-shrink: 0; }
+    [data-theme="dark"] .geo-platform-card .platform-logo { background: #fff; border-color: var(--gray-200); }
     .geo-platform-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
     .geo-platform-card .platform-company { font-size: .82rem; color: var(--gray-400); margin-bottom: 10px; }
     .geo-platform-card .geo-platform-stat { font-size: 1.6rem; font-weight: 800; color: var(--blue); }
@@ -475,7 +477,7 @@
         </div>
 
         <p style="font-size:.8rem;color:var(--gray-400);margin:0 0 16px;">
-          Data: QuestMobile China Internet Report 2026 Autumn (Sep 2026); CNNIC Generative AI Report 2026; China Small &amp; Medium Commercial Enterprises Association 2026 Q2. Baidu App Wenxin Assistant figure from QuestMobile 2025 China Internet Value List (Jan 2026).
+          Data: QuestMobile China Internet Report 2026 Autumn (Sep 2026); CNNIC Generative AI Report 2026; China Small &amp; Medium Commercial Enterprises Association 2026 Q2. Baidu App Wenxin Assistant figure (347M) is an in-app AI metric from QuestMobile 2025-2026 Core Trends Report (Sep 2025), not a standalone app figure.
         </p>
 
         <!-- Stats Grid -->
@@ -550,7 +552,7 @@
 
         <div class="platform-grid">
           <div class="geo-platform-card">
-            <div class="platform-icon">🥇</div>
+            <div class="platform-icon">🥇<img class="platform-logo" src="https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/doubao_avatar_red_favicon.png" alt="Doubao logo" loading="lazy" onerror="this.style.display='none'"></div>
             <h3>Doubao (豆包)</h3>
             <div class="platform-company">ByteDance</div>
             <div class="geo-platform-stat">419M</div>
@@ -558,15 +560,15 @@
             <p>ByteDance's flagship assistant, integrated with Douyin (TikTok China). China's largest standalone AI app, optimized for <strong>entertainment</strong>, <strong>lifestyle</strong>, and <strong>shopping</strong> queries. Voice interaction is a key differentiator.</p>
           </div>
           <div class="geo-platform-card">
-            <div class="platform-icon">🥈</div>
+            <div class="platform-icon">🥈<img class="platform-logo" src="https://www.baidu.com/favicon.ico" alt="Baidu App Wenxin Assistant logo" loading="lazy" onerror="this.style.display='none'"></div>
             <h3>Baidu App Wenxin Assistant (文心助手)</h3>
             <div class="platform-company">Baidu, Inc. - built into Baidu App</div>
-            <div class="geo-platform-stat">200M+</div>
-            <div class="geo-platform-stat-label">Monthly Active Users (Jan 2026)</div>
-            <p>Built into the Baidu App and backed by Baidu Search data. Best for <strong>brand awareness</strong> and <strong>purchase intent</strong> queries. Note: this is the in-app assistant; the standalone Wenxin app is a separate, much smaller product.</p>
+            <div class="geo-platform-stat">347M</div>
+            <div class="geo-platform-stat-label">Monthly Active Users (in-app, Sep 2025)</div>
+            <p>Built into the Baidu App and backed by Baidu Search data — China's largest in-app AI assistant. Best for <strong>brand awareness</strong> and <strong>purchase intent</strong> queries. Note: this is an in-app figure; the standalone Wenxin app is a separate product with under 5M MAU.</p>
           </div>
           <div class="geo-platform-card">
-            <div class="platform-icon">🥉</div>
+            <div class="platform-icon">🥉<img class="platform-logo" src="https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png" alt="Qianwen logo" loading="lazy" onerror="this.style.display='none'"></div>
             <h3>Qianwen (千问 / Qwen)</h3>
             <div class="platform-company">Alibaba Group</div>
             <div class="geo-platform-stat">158M</div>
@@ -574,7 +576,7 @@
             <p>Alibaba's multimodal assistant, integrated with Taobao, Tmall and Alipay. Uniquely positioned for <strong>product discovery</strong> and <strong>e-commerce</strong> queries. Formerly branded Tongyi Qianwen.</p>
           </div>
           <div class="geo-platform-card">
-            <div class="platform-icon">4️⃣</div>
+            <div class="platform-icon">4️⃣<img class="platform-logo" src="https://deepseek.com/favicon.ico" alt="DeepSeek logo" loading="lazy" onerror="this.style.display='none'"></div>
             <h3>DeepSeek</h3>
             <div class="platform-company">DeepSeek (Independent)</div>
             <div class="geo-platform-stat">123M</div>
@@ -606,7 +608,7 @@
               <tr>
                 <td>Baidu App Wenxin Assistant</td>
                 <td>Baidu (in-app)</td>
-                <td>200M+</td>
+                <td>347M</td>
                 <td>Brand awareness, purchase intent</td>
                 <td>Factual, authoritative, structured data</td>
               </tr>
